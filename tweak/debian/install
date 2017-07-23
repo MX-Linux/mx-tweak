@@ -6,3 +6,4 @@ license.html            usr/share/doc/mx-tweak
 firefox			usr/local/bin
 hexchat.conf            usr/share/mx-tweak
 mx-tweak.png		usr/share/pixmaps
+mx.tweak.template usr/share/mx-tweak-data

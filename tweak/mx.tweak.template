@@ -1,0 +1,34 @@
+#mx-tweak theme file template
+
+Name=Name Here, may contain spaces
+
+#panel_settings
+#affects all panels
+
+#panel color
+#panel color must be in the 4 numeral format...see xfconf-settings editor for values
+background-color=4065,5962,9045,65535
+
+#full path to background image
+background-image=none
+
+#background style settings
+#2 = background image (takes system color if not specified, as in 0)
+#1 = set color
+#0 = set panel color by system gtk theme
+
+background-style=0
+
+#xsettings - settings as in the Xfce Appearance app
+
+xsettings_gtk_theme=Greybird-mx16-thick-grip
+xsettings_icon_theme=Papirus-GTK
+
+#xfwm4 - borders, title bar color, etc...
+
+xfwm4_window_decorations=Arc-Dark
+
+
+
+
+
