@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if [ -a /home/$USER/.config/FirefoxDarkThemeOverride.check ]; then
+    if [ -e /usr/bin/firefox.real ]; then
+        echo "Dark Theme Override"
+        env GTK_THEME=Adwaita /usr/bin/firefox.real "$@"
+    else
+        echo "Dark Theme Override"
+        env GTK_THEME=Adwaita /usr/bin/firefox "$@"
+    fi
+else
+    if [ -e /usr/bin/firefox.real ]; then
+        /usr/bin/firefox.real "$@"
+    else
+        /usr/bin/firefox "$@"
+    fi
+fi
