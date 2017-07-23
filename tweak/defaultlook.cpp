@@ -48,14 +48,7 @@ void defaultlook::setup()
 {
     this->setWindowTitle(tr("MX Tweak"));
     this->adjustSize();
-    ui->buttonApply->setEnabled(false);
-    if (ui->buttonApply->icon().isNull()) {
-        ui->buttonApply->setIcon(QIcon(":/icons/dialog-ok.svg"));
-    }
-    ui->buttonThemeApply->setEnabled(false);
-    if (ui->buttonThemeApply->icon().isNull()) {
-        ui->buttonThemeApply->setIcon(QIcon(":/icons/dialog-ok.svg"));
-    }
+
     checkXFCE();
     whichpanel();
     message_flag = false;
@@ -70,6 +63,8 @@ void defaultlook::setup()
     setupComboTheme();
     //setup panel tab
     setuppanel();
+    //setup etc tab;
+    setupEtc();
     //set panel tab as default
     ui->tabWidget->setCurrentIndex(0);
 
@@ -651,6 +646,11 @@ void defaultlook::on_comboboxHorzPostition_currentIndexChanged(const QString &ar
 
 void defaultlook::setuppanel()
 {
+    ui->buttonApply->setEnabled(false);
+    if (ui->buttonApply->icon().isNull()) {
+        ui->buttonApply->setIcon(QIcon(":/icons/dialog-ok.svg"));
+    }
+
     //reset all checkboxes to unchecked
 
     ui->checkVert->setChecked(false);
@@ -692,8 +692,60 @@ void defaultlook::setuppanel()
 
 }
 
+void defaultlook::setupEtc()
+{
+    ui->ButtonApplyEtc->setEnabled(false);
+    if (ui->ButtonApplyEtc->icon().isNull()) {
+        ui->ButtonApplyEtc->setIcon(QIcon(":/icons/dialog-ok.svg"));
+    }
+    //set values for checkboxes
+
+    //check compositor status
+
+    QString test;
+    test = runCmd("xfconf-query -c xfwm4 -p /general/use_compositing").output;
+    qDebug() << "etc test is "<< test;
+    if (test == "true") {
+        ui->checkBoxXfceCompositor->setChecked(true);
+    } else {
+        ui->checkBoxXfceCompositor->setChecked(false);
+    }
+
+    //check single click status
+
+    test = runCmd("xfconf-query  -c xfce4-desktop -p /desktop-icons/single-click").output;
+    if ( test == "true") {
+        ui->checkBoxSingleClick->setChecked(true);
+    } else {
+        ui->checkBoxSingleClick->setChecked(false);
+    }
+
+    //check single click thunar status
+
+    test = runCmd("xfconf-query  -c thunar -p /misc-single-click").output;
+    if ( test == "true") {
+        ui->checkBoxThunarSingleClick->setChecked(true);
+    } else {
+        ui->checkBoxThunarSingleClick->setChecked(false);
+    }
+
+    //check systray frame status
+
+    pluginidsystray = runCmd("cat ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml |grep systray |cut -d '=' -f2 | cut -d '' -f1| cut -d '\"' -f2").output;
+    test = runCmd("xfconf-query -c xfce4-panel -p /plugins/" + pluginidsystray + "/show-frame").output;
+    if ( test == "true") {
+        ui->checkBoxSystrayFrame->setChecked(true);
+    } else {
+        ui->checkBoxSystrayFrame->setChecked(false);
+    }
+}
+
 void defaultlook::setuptheme()
 {
+    ui->buttonThemeApply->setEnabled(false);
+    if (ui->buttonThemeApply->icon().isNull()) {
+        ui->buttonThemeApply->setIcon(QIcon(":/icons/dialog-ok.svg"));
+    }
     //reset all checkboxes to unchecked
 
     ui->checkFirefox->setChecked(false);
@@ -885,4 +937,55 @@ void defaultlook::on_buttonThemeApply_clicked()
 
     // reset gui
     setuptheme();
+}
+
+void defaultlook::on_ButtonApplyEtc_clicked()
+{
+    ui->ButtonApplyEtc->setEnabled(false);
+
+    if (ui->checkBoxXfceCompositor->isChecked()) {
+        runCmd("xfconf-query -c xfwm4 -p /general/use_compositing -s true");
+    }else{
+        runCmd("xfconf-query -c xfwm4 -p /general/use_compositing -s false");
+    }
+
+    if (ui->checkBoxSingleClick->isChecked()) {
+        runCmd("xfconf-query  -c xfce4-desktop -p /desktop-icons/single-click -s true");
+    }else {
+        runCmd("xfconf-query  -c xfce4-desktop -p /desktop-icons/single-click -s false");
+    }
+
+    if (ui->checkBoxThunarSingleClick->isChecked()) {
+        runCmd("xfconf-query  -c thunar -p /misc-single-click -s true");
+    } else {
+        runCmd("xfconf-query  -c thunar -p /misc-single-click -s false");
+    }
+
+    if (ui->checkBoxSystrayFrame->isChecked()) {
+        runCmd("xfconf-query -c xfce4-panel -p /plugins/" + pluginidsystray + "/show-frame -s true");
+    } else {
+        runCmd("xfconf-query -c xfce4-panel -p /plugins/" + pluginidsystray + "/show-frame -s false");
+    }
+    //reset gui
+    setupEtc();
+}
+
+void defaultlook::on_checkBoxXfceCompositor_clicked()
+{
+    ui->ButtonApplyEtc->setEnabled(true);
+}
+
+void defaultlook::on_checkBoxSingleClick_clicked()
+{
+    ui->ButtonApplyEtc->setEnabled(true);
+}
+
+void defaultlook::on_checkBoxThunarSingleClick_clicked()
+{
+    ui->ButtonApplyEtc->setEnabled(true);
+}
+
+void defaultlook::on_checkBoxSystrayFrame_clicked()
+{
+    ui->ButtonApplyEtc->setEnabled(true);
 }
