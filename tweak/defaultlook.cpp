@@ -72,6 +72,16 @@ void defaultlook::setup()
     setuppanel();
     //set panel tab as default
     ui->tabWidget->setCurrentIndex(0);
+
+    //copy template file to ~/.local/share/mx-tweak-data if it doesn't exist
+    QString home_path = QDir::homePath();
+    QDir userdir(home_path + "/.local/share/mx-tweak-data");
+    if (userdir.exists()){
+        runCmd("cp /usr/share/mx-tweak-data/mx.tweak.template " + userdir.absolutePath());
+    } else {
+        runCmd("mkdir -p " + userdir.absolutePath());
+        runCmd("cp /usr/share/mx-tweak-data/mx.tweak.template " + userdir.absolutePath());
+    }
 }
 
 // Util function for getting bash command output and error code
