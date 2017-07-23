@@ -60,12 +60,13 @@ public:
     QString panel;
     bool message_flag;
     QHash<QString, QString>  theme_info;
-
+    QString pluginidsystray;
 
     void setup();
     void setupuiselections();
     void setuppanel();
     void setuptheme();
+    void setupEtc();
     void setupComboTheme();
     void fliptohorizontal();
     void fliptovertical();
@@ -120,6 +121,16 @@ private slots:
     void on_buttonThemeApply_clicked();
 
     void on_comboTheme_activated(const QString &arg1);
+
+    void on_ButtonApplyEtc_clicked();
+
+    void on_checkBoxXfceCompositor_clicked();
+
+    void on_checkBoxSingleClick_clicked();
+
+    void on_checkBoxThunarSingleClick_clicked();
+
+    void on_checkBoxSystrayFrame_clicked();
 
 private:
     Ui::defaultlook *ui;
