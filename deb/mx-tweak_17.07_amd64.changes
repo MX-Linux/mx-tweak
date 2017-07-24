@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Sat, 21 Jun 2017 10:20:12 -0400
+Source: mx-tweak
+Binary: mx-tweak
+Architecture: source amd64
+Version: 17.07
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: dolphinoracle <dolphinoracle@gmail.com>
+Description:
+ mx-tweak   - MX Tweak
+Changes:
+ mx-tweak (17.07) mx; urgency=medium
+ .
+   * initial commit
+Checksums-Sha1:
+ 65c693efe9addc233e7c4a4ba95e49b5dcd2a60c 594 mx-tweak_17.07.dsc
+ 51d06d2469b96162fab126ec775c12b5887732bd 31276 mx-tweak_17.07.tar.xz
+ 7e2bf46e9c9ea2a39bafd14e1136fd966997f9e5 54074 mx-tweak_17.07_amd64.deb
+Checksums-Sha256:
+ 92ed7dcdb11d8e5ce828f2e788de39b048152f4395b0f8f1557473b9a563b231 594 mx-tweak_17.07.dsc
+ 095219bb4bd6d70c1b199eb47e110805b1d0ab0d81de603131feba635a60f20b 31276 mx-tweak_17.07.tar.xz
+ 4739ddb44ce808c8d637249a575b538cabcb59eef0971fc111e17c15b2e35d93 54074 mx-tweak_17.07_amd64.deb
+Files:
+ b4a9423e7f0807d78c2846ddae5fbafb 594 admin optional mx-tweak_17.07.dsc
+ e0232321095400e4b5174f7b7fdd92aa 31276 admin optional mx-tweak_17.07.tar.xz
+ a3106a95b1f42b9c382dab53fe5d294e 54074 admin optional mx-tweak_17.07_amd64.deb
