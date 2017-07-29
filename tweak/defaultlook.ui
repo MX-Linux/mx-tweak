@@ -252,7 +252,7 @@
        <enum>QTabWidget::North</enum>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="Panel">
        <attribute name="title">
@@ -281,20 +281,6 @@
             </property>
            </widget>
           </item>
-          <item row="2" column="1">
-           <widget class="QComboBox" name="comboboxHorzPostition">
-            <item>
-             <property name="text">
-              <string>Bottom</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Top</string>
-             </property>
-            </item>
-           </widget>
-          </item>
           <item row="7" column="0" colspan="2">
            <widget class="QCheckBox" name="radioRestoreBackup">
             <property name="text">
@@ -318,7 +304,14 @@
              </font>
             </property>
             <property name="text">
-             <string>Affects 1st panel</string>
+             <string>Affects Panel 1</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QCheckBox" name="checkVert">
+            <property name="text">
+             <string>Display panel vertically</string>
             </property>
            </widget>
           </item>
@@ -336,11 +329,32 @@
             </property>
            </widget>
           </item>
-          <item row="3" column="0">
-           <widget class="QCheckBox" name="checkVert">
-            <property name="text">
-             <string>Display panel vertically</string>
-            </property>
+          <item row="2" column="1">
+           <widget class="QComboBox" name="comboboxHorzPostition">
+            <item>
+             <property name="text">
+              <string>Bottom</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Top</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QComboBox" name="comboboxVertpostition">
+            <item>
+             <property name="text">
+              <string>Left</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Right</string>
+             </property>
+            </item>
            </widget>
           </item>
          </layout>
@@ -506,7 +520,9 @@
              <string>Apply</string>
             </property>
             <property name="icon">
-             <iconset theme="dialog-ok"/>
+             <iconset theme="dialog-ok">
+              <normaloff/>
+             </iconset>
             </property>
            </widget>
           </item>
