@@ -731,7 +731,7 @@ void defaultlook::setupEtc()
 
     //check systray frame status
 
-    pluginidsystray = runCmd("cat ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml |grep systray |cut -d '=' -f2 | cut -d '' -f1| cut -d '\"' -f2").output;
+    pluginidsystray = runCmd("cat ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml | grep \'systray\'|cut -d '=' -f2 | cut -d '' -f1| cut -d '\"' -f2").output;
     test = runCmd("xfconf-query -c xfce4-panel -p /plugins/" + pluginidsystray + "/show-frame").output;
     if ( test == "true") {
         ui->checkBoxSystrayFrame->setChecked(true);
@@ -894,7 +894,32 @@ void defaultlook::on_buttonThemeApply_clicked()
         if (backgroundColor != "") {
             runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-color -t int -t int -t int -t int -s " + color1 + " -s " + color2 + " -s " + color3 + " -s " + color4 + " --create");
         }
+
+
+
     }
+
+    //set whisker themeing
+    QString home_path = QDir::homePath();
+    QFileInfo whisker_check(home_path + "/.gtkrc-2.0");
+    if (whisker_check.exists()) {
+        qDebug() << "existing gtkrc-2.0 found";
+        QString cmd = "cat " + home_path + "/.gtkrc-2.0 |grep -q mx-tweak-data";
+        if (system(cmd.toUtf8()) == 0 ) {
+            qDebug() << "include statement found";
+        } else {
+            qDebug() << "adding include statement";
+            QString cmd = "echo include \".local/share/mx-tweak-data/whisker-tweak.rc\" > " + home_path + "/.gtkrc-2.0";
+            system(cmd.toUtf8());
+        }
+    }else {
+        qDebug() << "creating simple gtkrc-2.0 file";
+        QString cmd = "echo 'include \".local/share/mx-tweak-data/whisker-tweak.rc\"' > " + home_path + "/.gtkrc-2.0";
+        system(cmd.toUtf8());
+    }
+
+   //add whisker info
+    runCmd("awk '/<begin_gtk_whisker_theme_code>/{flag=1;next}/<end_gtk_whisker_theme_code>/{flag=0}flag' \"" +fileinfo.absoluteFilePath() +"\" > " + home_path + "/.local/share/mx-tweak-data/whisker-tweak.rc");
 
     //restart xfce4-panel
 
@@ -909,7 +934,6 @@ void defaultlook::on_buttonThemeApply_clicked()
     }
 
     //deal with hexchat
-    QString home_path = QDir::homePath();
     QFileInfo file_hexchat(home_path + "/.config/hexchat/hexchat.conf");
     if (ui->checkHexchat->isChecked()) {
         if (file_hexchat.exists()) {

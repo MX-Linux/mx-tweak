@@ -1,4 +1,5 @@
 #mx-tweak theme file template
+#save file with a ".tweak" extention
 
 Name=Name Here, may contain spaces
 
@@ -27,6 +28,24 @@ xsettings_icon_theme=Papirus-GTK
 #xfwm4 - borders, title bar color, etc...
 
 xfwm4_window_decorations=Arc-Dark
+
+#whiskermenu themeing
+#place between the code tags below
+#sample code below turns whisker menu purple
+
+<begin_gtk_whisker_theme_code>
+
+style "purple"
+{
+   bg[NORMAL] = "#854C6E"
+   bg[ACTIVE] = "#854C6E"
+   bg[PRELIGHT] = "#854C6E"
+}
+widget "whiskermenu-window*" style "purple"
+
+<end_gtk_whisker_theme_code>
+
+
 
 
 
