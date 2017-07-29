@@ -71,11 +71,16 @@ void defaultlook::setup()
     //copy template file to ~/.local/share/mx-tweak-data if it doesn't exist
     QString home_path = QDir::homePath();
     QDir userdir(home_path + "/.local/share/mx-tweak-data");
-    if (userdir.exists()){
-        runCmd("cp /usr/share/mx-tweak-data/mx.tweak.template " + userdir.absolutePath());
+    QFileInfo template_file(home_path + "/.local/share/mx-tweak-data/mx.tweak.template");
+    if (template_file.exists()) {
+        qDebug() << "template file found";
     } else {
-        runCmd("mkdir -p " + userdir.absolutePath());
-        runCmd("cp /usr/share/mx-tweak-data/mx.tweak.template " + userdir.absolutePath());
+        if (userdir.exists()){
+            runCmd("cp /usr/share/mx-tweak-data/mx.tweak.template " + userdir.absolutePath());
+        } else {
+            runCmd("mkdir -p " + userdir.absolutePath());
+            runCmd("cp /usr/share/mx-tweak-data/mx.tweak.template " + userdir.absolutePath());
+        }
     }
 }
 
@@ -118,7 +123,7 @@ void defaultlook::fliptohorizontal()
 
     // figure out systrayID, and tasklistID
 
-    QString systrayID = runCmd("grep systray ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
+    QString systrayID = runCmd("grep \\\"systray\\\" ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
     systrayID=systrayID.remove("\"").section("-",1,1).section(" ",0,0);
     qDebug() << "systray: " << systrayID;
 
@@ -247,7 +252,7 @@ void defaultlook::fliptovertical()
 
     // figure out moving the systray, if it exists
 
-    QString systrayID = runCmd("grep systray ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
+    QString systrayID = runCmd("grep \\\"systray\\\" ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
     systrayID=systrayID.remove("\"").section("-",1,1).section(" ",0,0);
     qDebug() << "systray: " << systrayID;
 
@@ -731,7 +736,8 @@ void defaultlook::setupEtc()
 
     //check systray frame status
 
-    pluginidsystray = runCmd("cat ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml | grep \'systray\'|cut -d '=' -f2 | cut -d '' -f1| cut -d '\"' -f2").output;
+    pluginidsystray = runCmd("cat ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml | grep \\\"systray\\\"|cut -d '=' -f2 | cut -d '' -f1| cut -d '\"' -f2").output;
+    qDebug() << "systray is " << pluginidsystray;
     test = runCmd("xfconf-query -c xfce4-panel -p /plugins/" + pluginidsystray + "/show-frame").output;
     if ( test == "true") {
         ui->checkBoxSystrayFrame->setChecked(true);

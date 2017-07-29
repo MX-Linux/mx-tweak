@@ -15,8 +15,8 @@ Changes:
  .
    * initial commit
 Checksums-Sha1:
- 18b47fdc96b487174cfd10d12c7d436318ae8285 55700 mx-tweak_17.07_i386.deb
+ 5248f719882b943d31bfdbf3393bdde0bcc0d0a0 56202 mx-tweak_17.07_i386.deb
 Checksums-Sha256:
- 7693a6b4337c503bfa9987fc90112fd10500b30d10f3b69caa3ffde1b38b6bfd 55700 mx-tweak_17.07_i386.deb
+ 8fff6c22022156877c435235fce527e3cee1ad5261b8515926047248fc3daa81 56202 mx-tweak_17.07_i386.deb
 Files:
- bb73169fd7f4bc18240efa31c7065aa0 55700 admin optional mx-tweak_17.07_i386.deb
+ ff5d6d1d43a3fb408a5b2ff7b248b425 56202 admin optional mx-tweak_17.07_i386.deb
