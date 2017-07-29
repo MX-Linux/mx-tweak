@@ -79,6 +79,7 @@ public:
     void restoreBackup();
 
     void top_or_bottom();
+    void left_or_right();
     void message2();
 
 
@@ -131,6 +132,8 @@ private slots:
     void on_checkBoxThunarSingleClick_clicked();
 
     void on_checkBoxSystrayFrame_clicked();
+
+    void on_comboboxVertpostition_currentIndexChanged(const QString &arg1);
 
 private:
     Ui::defaultlook *ui;

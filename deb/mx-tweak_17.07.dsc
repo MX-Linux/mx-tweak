@@ -10,8 +10,8 @@ Build-Depends: qt5-qmake, debhelper (>= 7.0.50~)
 Package-List:
  mx-tweak deb admin optional arch=any
 Checksums-Sha1:
- f60557e8674e1009cb5afb3698a9ba57138eb1a7 31640 mx-tweak_17.07.tar.xz
+ 0f9461ea95788ccd44026d5b36ba077e04838b9a 31796 mx-tweak_17.07.tar.xz
 Checksums-Sha256:
- 189cccf595300fc5036cf7b926c898d19b830d5fd6e3730e85ed0e8177dc04b9 31640 mx-tweak_17.07.tar.xz
+ 8c52298dd5ac73dc7cd85318efd16e323801af8ee5b25474aa5ec7ecee683306 31796 mx-tweak_17.07.tar.xz
 Files:
- ea0af04ba5bbf62ca5629d8f43229191 31640 mx-tweak_17.07.tar.xz
+ b73520d68b246930b56dc22c3382eeb3 31796 mx-tweak_17.07.tar.xz
