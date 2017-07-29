@@ -15,14 +15,14 @@ Changes:
  .
    * initial commit
 Checksums-Sha1:
- f49482e0c4d236bf8d1dc64f15173fac8e48394a 594 mx-tweak_17.07.dsc
- 08b05fda9f211a9dca5c1283a9b5fd32a1680190 31608 mx-tweak_17.07.tar.xz
- cdd526c4efb453020808acec0d08334621b42fe0 54954 mx-tweak_17.07_amd64.deb
+ 52a91b3066569daa86c884930bcbb34fcc9df45b 594 mx-tweak_17.07.dsc
+ f60557e8674e1009cb5afb3698a9ba57138eb1a7 31640 mx-tweak_17.07.tar.xz
+ 5bee405671b18572c1e1b1336b7ce6e8d609ed1c 55336 mx-tweak_17.07_amd64.deb
 Checksums-Sha256:
- 243f27b3c23fd7b097acc06085df5bd97f1b599faa5f73ea38c81757d6099ebd 594 mx-tweak_17.07.dsc
- 6717eaeef7653c44f36d87e486aee8c9cebac11f629abc324811a636e24dee68 31608 mx-tweak_17.07.tar.xz
- f305e2b816c17e0f603bfe20c324b97f24219e47147a0e5fff2955a1ccc7ab86 54954 mx-tweak_17.07_amd64.deb
+ 214df031f352188857782879aba4962c266c1366d2dd41b2bb68c6e1bd2d48b7 594 mx-tweak_17.07.dsc
+ 189cccf595300fc5036cf7b926c898d19b830d5fd6e3730e85ed0e8177dc04b9 31640 mx-tweak_17.07.tar.xz
+ 4193d451e1f90b17318645c23bd8aa818ea25d8244f3e4fca29ff5daa0aed79f 55336 mx-tweak_17.07_amd64.deb
 Files:
- 752f84520a2f2c950d41af064b2bd5be 594 admin optional mx-tweak_17.07.dsc
- 7e7563b561b86f3b84e87fb36b3c3d52 31608 admin optional mx-tweak_17.07.tar.xz
- 53a8337410ea4ef88e658d3a772ae04b 54954 admin optional mx-tweak_17.07_amd64.deb
+ e536bf75851a7d75126934d4038b7701 594 admin optional mx-tweak_17.07.dsc
+ ea0af04ba5bbf62ca5629d8f43229191 31640 admin optional mx-tweak_17.07.tar.xz
+ f25c72e9b815371e69368987bc578114 55336 admin optional mx-tweak_17.07_amd64.deb
