@@ -386,6 +386,9 @@ void defaultlook::fliptovertical()
         runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + tasklistID + "/show-labels -s false");
     }
 
+    //determine left_or_right placement
+    left_or_right();
+
     //restart xfce4-panel
 
     system("xfce4-panel --restart");
@@ -607,6 +610,26 @@ void defaultlook::top_or_bottom()
 
 }
 
+void defaultlook::left_or_right()
+{
+    //move to user selected top or bottom border per mx-16 defaults  p=5 is left, p=1 is right
+
+    QString left_right;
+    if (ui->comboboxVertpostition->currentIndex() == 0) {
+        left_right = "5";
+    }
+
+    if (ui->comboboxVertpostition->currentIndex() == 1) {
+        left_right = "1";
+    }
+
+    qDebug() << "position index is : " << ui->comboboxVertpostition->currentIndex();
+    qDebug() << "position is :" << left_right;
+
+    runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel + "/position -s 'p=" + left_right + ";x=0;y=0'");
+
+}
+
 void defaultlook::message2()
 {
     QMessageBox::information(0, tr("Panel settings"),
@@ -640,7 +663,7 @@ void defaultlook::on_comboboxHorzPostition_currentIndexChanged(const QString &ar
 {
     qDebug() << "top or bottom output " << ui->comboboxHorzPostition->currentText();
     QString test = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/mode").output;
-    qDebug() << "test value, blank or 0 runs top_or_bottom" << test;
+    qDebug() << "test value, blank or 0 runs left_or_right" << test;
     if (test == "") {
         top_or_bottom();
     }
@@ -649,6 +672,19 @@ void defaultlook::on_comboboxHorzPostition_currentIndexChanged(const QString &ar
     }
 }
 
+
+void defaultlook::on_comboboxVertpostition_currentIndexChanged(const QString &arg1)
+{
+    qDebug() << "left or right output " << ui->comboboxVertpostition->currentText();
+    QString test = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/mode").output;
+    qDebug() << "test value, 1 or 2 runs top_or_bottom" << test;
+    if (test == "1") {
+        left_or_right();
+    }
+    if (test == "2") {
+        left_or_right();
+    }
+}
 void defaultlook::setuppanel()
 {
     ui->buttonApply->setEnabled(false);
@@ -1019,3 +1055,4 @@ void defaultlook::on_checkBoxSystrayFrame_clicked()
 {
     ui->ButtonApplyEtc->setEnabled(true);
 }
+
