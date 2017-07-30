@@ -48,7 +48,6 @@ void defaultlook::setup()
 {
     this->setWindowTitle(tr("MX Tweak"));
     this->adjustSize();
-
     checkXFCE();
     whichpanel();
     message_flag = false;
@@ -57,6 +56,7 @@ void defaultlook::setup()
         backupPanel();
         message2();
     }
+
     //setup theme tab
     setuptheme();
     //setup theme combo box
@@ -67,6 +67,7 @@ void defaultlook::setup()
     setupEtc();
     //set panel tab as default
     ui->tabWidget->setCurrentIndex(0);
+    ui->buttonThemeUndo->setEnabled(false);
 
     //copy template file to ~/.local/share/mx-tweak-data if it doesn't exist
     QString home_path = QDir::homePath();
@@ -863,7 +864,10 @@ void defaultlook::on_comboTheme_activated(const QString &arg1)
 
 void defaultlook::on_buttonThemeApply_clicked()
 {
+
+    savethemeundo();
     ui->buttonThemeApply->setEnabled(false);
+    ui->buttonThemeUndo->setEnabled(true);
     QString themename = theme_info[ui->comboTheme->currentText()];
     QFileInfo fileinfo(themename);
     //initialize variables
@@ -1055,4 +1059,127 @@ void defaultlook::on_checkBoxSystrayFrame_clicked()
 {
     ui->ButtonApplyEtc->setEnabled(true);
 }
+
+void defaultlook::savethemeundo()
+{
+    QString home_path = QDir::homePath();
+    system("rm -f undo.txt");
+    QString undovalue;
+    QStringListIterator changeIterator(panelIDs);
+    QString undocommand;
+    QString whiskeriterator = QString::number(undotheme.count());
+    qDebug() << "whisker interator is " << whiskeriterator;
+
+    while (changeIterator.hasNext()) {
+        QString value = changeIterator.next();
+
+
+        //backup panel background mode
+        if (runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-style").exitCode == 0) {
+            undovalue = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-style").output;
+            //runCmd("echo xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-style -s " + undovalue + " >> undo.txt");
+            undocommand = undocommand + "xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-style -s "+ undovalue + " ; ";
+        }else{
+            //runCmd("echo xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-style -r >> undo.txt");
+            undocommand = undocommand + "xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-style -r ; ";
+        }
+
+        //backup panel background image
+
+        if (runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-image").exitCode == 0) {
+            undovalue = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-image").output;
+            //runCmd("echo xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-image -s " + undovalue + " >> undo.txt");
+            undocommand = undocommand + "xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-image -s " + undovalue +" ; ";
+        }else{
+            //runCmd("echo xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-image -r >> undo.txt");
+            undocommand = undocommand + " xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-image -r ; ";
+        }
+
+        //backup panel color
+
+        if (runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-color").exitCode == 0) {
+            undovalue = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-color |cut -d ':' -f2").output.trimmed();
+            undovalue.replace("\n", ",");
+            qDebug() << "backup color test" << undovalue;
+            QString color1 = undovalue.section(",",0,0);
+            QString color2 = undovalue.section(",", 1, 1);
+            QString color3 = undovalue.section(",",2,2);
+            QString color4 = undovalue.section(",",3,3);
+            qDebug() << "sep colors" << color1 << color2 << color3 << color4;
+            //runCmd("echo xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-color -s " + color1 + " -s " + color2 + " -s " + color3 + " -s " + color4 + " >> undo.txt");
+            undocommand = undocommand + "xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-color -s " + color1 + " -s " + color2 + " -s " + color3 + " -s " + color4 + " ; ";
+        } else {
+            //runCmd("echo xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-color -r >> undo.txt");
+            undocommand = undocommand + "xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-color -r ; ";
+        }
+    }
+
+    //backup theme settings for xfwm4 and xsettings
+
+    // gtk theme
+    if (runCmd("xfconf-query -c xsettings -p /Net/ThemeName").exitCode == 0) {
+        undovalue = runCmd("xfconf-query -c xsettings -p /Net/ThemeName").output;
+        //runCmd("echo xfconf-query -c xsettings -p /Net/ThemeName -s " + undovalue + " >> undo.txt");
+        undocommand = undocommand + "xfconf-query -c xsettings -p /Net/ThemeName -s " + undovalue + " ; ";
+    }else{
+        //runCmd("echo xfconf-query -c xsettings -p /Net/ThemeName -r >> undo.txt");
+        undocommand = undocommand + "xfconf-query -c xsettings -p /Net/ThemeName -r ; ";
+    }
+
+    // xfwm4 theme
+    if (runCmd("xfconf-query -c xfwm4 -p /general/theme").exitCode == 0) {
+        undovalue = runCmd("xfconf-query -c xfwm4 -p /general/theme").output;
+        //runCmd("echo xfconf-query -c xfwm4 -p /general/theme -s " + undovalue + " >> undo.txt");
+        undocommand = undocommand + "xfconf-query -c xfwm4 -p /general/theme -s " + undovalue + " ; ";
+    }else{
+        runCmd("echo xfconf-query -c xfwm4 -p /general/theme -r >> undo.txt");
+        undocommand = undocommand + "xfconf-query -c xfwm4 -p /general/theme -r ; ";
+    }
+
+    // icon theme
+    if (runCmd("xfconf-query -c xsettings -p /Net/IconThemeName").exitCode == 0) {
+        undovalue = runCmd("xfconf-query -c xsettings -p /Net/IconThemeName").output;
+        //runCmd("echo xfconf-query -c xsettings -p /Net/IconThemeName -s " + undovalue + " >> undo.txt");
+        undocommand = undocommand + "xfconf-query -c xsettings -p /Net/IconThemeName -s " + undovalue + " ; ";
+    }else{
+        //runCmd("echo xfconf-query -c xsettings -p /Net/IconThemeName -r >> undo.txt");
+        undocommand = undocommand + "xfconf-query -c xsettings -p /Net/IconThemeName -r ; ";
+    }
+
+    //backup whiskermenu changes
+    // if whisker-tweak.rc exists, back it up
+    QFileInfo fileinfo(home_path + "/.local/share/mx-tweak-data/whisker-tweak.rc");
+    if (fileinfo.exists()) {
+        runCmd("cp " + home_path + "/.local/share/mx-tweak-data/whisker-tweak.rc /tmp/whisker-tweak.rc.undo." + whiskeriterator);
+        //runCmd("echo cp " + home_path + "/.local/share/mx-tweak-data/whisker-tweak.rc.undo " + fileinfo.absoluteFilePath() + " >> undo.txt");
+        undocommand = undocommand + "cp /tmp/whisker-tweak.rc.undo." + whiskeriterator + " " + fileinfo.absoluteFilePath();
+    } else {
+        // delete the file
+        //runCmd("echo rm -f " + fileinfo.absoluteFilePath() + " >> undo.txt" );
+        undocommand = undocommand + "rm -f " + fileinfo.absoluteFilePath();
+    }
+qDebug() << "undo command is " << undocommand;
+
+undotheme << undocommand;
+
+qDebug () << "undo command list is " << undotheme;
+
+}
+
+void defaultlook::themeundo()
+{
+   QString cmd = undotheme.last();
+   system(cmd.toUtf8());
+   undotheme.removeLast();
+}
+
+void defaultlook::on_buttonThemeUndo_clicked()
+{
+    themeundo();
+    runCmd("xfce4-panel --restart");
+    if (undotheme.isEmpty()) {
+        ui->buttonThemeUndo->setEnabled(false);
+    }
+}
+
 
