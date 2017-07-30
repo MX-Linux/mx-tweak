@@ -61,6 +61,7 @@ public:
     bool message_flag;
     QHash<QString, QString>  theme_info;
     QString pluginidsystray;
+    QStringList undotheme;
 
     void setup();
     void setupuiselections();
@@ -81,6 +82,8 @@ public:
     void top_or_bottom();
     void left_or_right();
     void message2();
+    void savethemeundo();
+    void themeundo();
 
 
 public slots:
@@ -134,6 +137,8 @@ private slots:
     void on_checkBoxSystrayFrame_clicked();
 
     void on_comboboxVertpostition_currentIndexChanged(const QString &arg1);
+
+    void on_buttonThemeUndo_clicked();
 
 private:
     Ui::defaultlook *ui;
