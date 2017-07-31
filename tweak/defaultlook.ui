@@ -252,7 +252,7 @@
        <enum>QTabWidget::North</enum>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="Panel">
        <attribute name="title">
@@ -502,7 +502,7 @@
       </widget>
       <widget class="QWidget" name="etcTab">
        <attribute name="title">
-        <string>etc...</string>
+        <string>Other</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_8">
         <item row="0" column="0">
