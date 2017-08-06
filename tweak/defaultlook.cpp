@@ -63,8 +63,10 @@ void defaultlook::setup()
     setupComboTheme();
     //setup panel tab
     setuppanel();
-    //setup etc tab;
+    //setup other tab;
     setupEtc();
+    //setup compositor tab
+    setupCompositor();
     //set panel tab as default
     ui->tabWidget->setCurrentIndex(0);
     ui->buttonThemeUndo->setEnabled(false);
@@ -742,19 +744,9 @@ void defaultlook::setupEtc()
     }
     //set values for checkboxes
 
-    //check compositor status
-
-    QString test;
-    test = runCmd("xfconf-query -c xfwm4 -p /general/use_compositing").output;
-    qDebug() << "etc test is "<< test;
-    if (test == "true") {
-        ui->checkBoxXfceCompositor->setChecked(true);
-    } else {
-        ui->checkBoxXfceCompositor->setChecked(false);
-    }
 
     //check single click status
-
+    QString test;
     test = runCmd("xfconf-query  -c xfce4-desktop -p /desktop-icons/single-click").output;
     if ( test == "true") {
         ui->checkBoxSingleClick->setChecked(true);
@@ -780,6 +772,15 @@ void defaultlook::setupEtc()
         ui->checkBoxSystrayFrame->setChecked(true);
     } else {
         ui->checkBoxSystrayFrame->setChecked(false);
+    }
+
+    plugintasklist = runCmd("cat ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml | grep \\\"tasklist\\\"|cut -d '=' -f2 | cut -d '' -f1| cut -d '\"' -f2").output;
+    qDebug() << "tasklist is " << plugintasklist;
+    test = runCmd("xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/include-all-workspaces").output;
+    if ( test == "true") {
+        ui->checkBoxShowAllWorkspaces->setChecked(true);
+    } else {
+        ui->checkBoxShowAllWorkspaces->setChecked(false);
     }
 }
 
@@ -815,6 +816,77 @@ void defaultlook::setuptheme()
         }
     }
 }
+
+void defaultlook::setupCompositor()
+{
+    ui->buttonCompositorApply->setEnabled(false);
+    if (ui->buttonCompositorApply->icon().isNull()) {
+        ui->buttonCompositorApply->setIcon(QIcon(":/icons/dialog-ok.svg"));
+    }
+    ui->buttonConfigureCompton->setEnabled(false);
+    ui->buttonConfigureXfwm->setEnabled(false);
+    ui->buttonEditComptonConf->setEnabled(false);
+
+    // check to see if compton is enabled
+    QString home_path = QDir::homePath();
+    qDebug() << "Home Path =" << home_path;
+    QFileInfo file_start(home_path + "/.config/autostart/zcompton.desktop");
+    //check to see if compton.desktop startup file exists
+    if (file_start.exists()) {
+        qDebug() << "compton startup file exists";
+    } else {
+        //copy in a startup file, startup initially disabled
+        runCmd("cp /usr/share/mx-tweak/zcompton.desktop " + file_start.absoluteFilePath());
+    }
+
+    //check to see if existing compton.conf file
+    QFileInfo file_conf(home_path + "/.config/compton.conf");
+    if (file_conf.exists()) {
+        qDebug() << "Found existing conf file";
+    } else {
+        runCmd("cp /usr/share/mx-tweak/compton.conf " + file_conf.absoluteFilePath());
+    }
+
+   CheckComptonRunning();
+}
+
+void defaultlook::CheckComptonRunning()
+{
+    //Index for combo box:  0=none, 1=xfce, 2=compton
+
+    if ( system("ps -ax -o comm,pid |grep -w ^compton") == 0 ) {
+        qDebug() << "Compton is running";
+        ui->comboBoxCompositor->setCurrentIndex(2);
+    } else {
+        qDebug() << "Compton is NOT running";
+        //check if xfce compositor is enabled
+        QString test;
+        test = runCmd("xfconf-query -c xfwm4 -p /general/use_compositing").output;
+        qDebug() << "etc test is "<< test;
+        if (test == "true") {
+            ui->comboBoxCompositor->setCurrentIndex(1);
+        }else{
+            ui->comboBoxCompositor->setCurrentIndex(0);
+        }
+    }
+}
+
+void defaultlook::CheckAptNotifierRunning()
+{
+    if ( system("ps -aux |grep -v grep| grep python |grep --quiet apt-notifier") == 0 ) {
+        qDebug() << "apt-notifier is running";
+        //check if icon is supposed to be hidden by user
+        if ( system("cat /home/$USER/.config/apt-notifierrc |grep --quiet DontShowIcon") == 0 ) {
+            qDebug() << "apt-notifier set to hide icon, do not restart";
+        } else {
+            qDebug() << "unhide apt-notifier icon";
+            system("/usr/bin/apt-notifier-unhide-Icon");
+        }
+    } else {
+        qDebug() << "apt-notifier not running, do NOT restart";
+    }
+}
+
 
 void defaultlook::setupComboTheme()
 {
@@ -1013,10 +1085,10 @@ void defaultlook::on_ButtonApplyEtc_clicked()
 {
     ui->ButtonApplyEtc->setEnabled(false);
 
-    if (ui->checkBoxXfceCompositor->isChecked()) {
-        runCmd("xfconf-query -c xfwm4 -p /general/use_compositing -s true");
-    }else{
-        runCmd("xfconf-query -c xfwm4 -p /general/use_compositing -s false");
+    if (ui->checkBoxShowAllWorkspaces->isChecked()) {
+        runCmd("xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/include-all-workspaces -s true");
+    } else {
+        runCmd("xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/include-all-workspaces -s false");
     }
 
     if (ui->checkBoxSingleClick->isChecked()) {
@@ -1038,11 +1110,6 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     }
     //reset gui
     setupEtc();
-}
-
-void defaultlook::on_checkBoxXfceCompositor_clicked()
-{
-    ui->ButtonApplyEtc->setEnabled(true);
 }
 
 void defaultlook::on_checkBoxSingleClick_clicked()
@@ -1183,3 +1250,94 @@ void defaultlook::on_buttonThemeUndo_clicked()
 }
 
 
+
+void defaultlook::on_buttonConfigureCompton_clicked()
+{
+    system("compton-conf &");
+}
+
+void defaultlook::on_buttonCompositorApply_clicked()
+{
+
+    //disable apply button
+    ui->buttonCompositorApply->setEnabled(false);
+
+    if (ui->comboBoxCompositor->currentIndex() == 2) {
+        //turn off xfce compositor
+        runCmd("xfconf-query -c xfwm4 -p /general/use_compositing -s false");
+        //launch compton
+        system("pkill -x compton");
+        system("compton-launch.sh");
+        //restart apt-notifier if necessary
+        CheckAptNotifierRunning();
+    }
+    if (ui->comboBoxCompositor->currentIndex() == 1) {
+        //turn off compton
+        system("pkill -x compton");
+        //launch xfce compositor
+        runCmd("xfconf-query -c xfwm4 -p /general/use_compositing -s true");
+        //restart apt-notifier if necessary
+        CheckAptNotifierRunning();
+    }
+    if (ui->comboBoxCompositor->currentIndex() == 0) {
+        //turn off compton and xfce compositor
+        //turn off xfce compositor
+        runCmd("xfconf-query -c xfwm4 -p /general/use_compositing -s false");
+        system("pkill -x compton");
+
+    }
+
+    //figure out whether to autostart compton or not
+    //if compton is configured in the combo box, then enable.  otherwise disable
+
+    QString home_path = QDir::homePath();
+    QFileInfo file_start(home_path + "/.config/autostart/zcompton.desktop");
+    if (ui->comboBoxCompositor->currentIndex() == 2) {
+        runCmd("sed -i -r s/Hidden=.*/Hidden=false/ " + file_start.absoluteFilePath());
+    } else {
+        runCmd("sed -i -r s/Hidden=.*/Hidden=true/ " + file_start.absoluteFilePath());
+    }
+    qDebug() << "autostart set to " << runCmd("grep Hidden= " + file_start.absoluteFilePath()).output;
+}
+
+
+void defaultlook::on_buttonEditComptonConf_clicked()
+{
+    QString home_path = QDir::homePath();
+        QFileInfo file_conf(home_path + "/.config/compton.conf");
+        runCmd("xdg-open " + file_conf.absoluteFilePath());
+}
+
+void defaultlook::on_comboBoxCompositor_currentIndexChanged(const QString &arg1)
+{
+    if (ui->comboBoxCompositor->currentIndex() == 0) {
+        ui->buttonCompositorApply->setEnabled(true);
+        ui->buttonConfigureCompton->setEnabled(false);
+        ui->buttonConfigureXfwm->setEnabled(false);
+        ui->buttonEditComptonConf->setEnabled(false);
+    }
+
+    if (ui->comboBoxCompositor->currentIndex() == 1) {
+        ui->buttonCompositorApply->setEnabled(true);
+        ui->buttonConfigureCompton->setEnabled(false);
+        ui->buttonConfigureXfwm->setEnabled(true);
+        ui->buttonEditComptonConf->setEnabled(false);
+    }
+
+    if (ui->comboBoxCompositor->currentIndex() == 2) {
+        ui->buttonCompositorApply->setEnabled(true);
+        ui->buttonConfigureCompton->setEnabled(true);
+        ui->buttonConfigureXfwm->setEnabled(false);
+        ui->buttonEditComptonConf->setEnabled(true);
+    }
+}
+
+void defaultlook::on_buttonConfigureXfwm_clicked()
+{
+    runCmd("(xfwm4-tweaks-settings &) && sleep .5 && xdotool key Left");
+}
+
+void defaultlook::on_checkBoxShowAllWorkspaces_clicked()
+{
+    ui->ButtonApplyEtc->setEnabled(true);
+}
