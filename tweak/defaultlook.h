@@ -61,6 +61,7 @@ public:
     bool message_flag;
     QHash<QString, QString>  theme_info;
     QString pluginidsystray;
+    QString plugintasklist;
     QStringList undotheme;
 
     void setup();
@@ -74,6 +75,9 @@ public:
     void whichpanel();
     void message();
     void checkXFCE();
+    void CheckComptonRunning();
+    void setupCompositor();
+    void CheckAptNotifierRunning();
 
     void backupPanel();
     void restoreDefaultPanel();
@@ -128,8 +132,6 @@ private slots:
 
     void on_ButtonApplyEtc_clicked();
 
-    void on_checkBoxXfceCompositor_clicked();
-
     void on_checkBoxSingleClick_clicked();
 
     void on_checkBoxThunarSingleClick_clicked();
@@ -139,6 +141,18 @@ private slots:
     void on_comboboxVertpostition_currentIndexChanged(const QString &arg1);
 
     void on_buttonThemeUndo_clicked();
+
+    void on_buttonConfigureCompton_clicked();
+
+    void on_buttonCompositorApply_clicked();
+
+    void on_buttonEditComptonConf_clicked();
+
+    void on_comboBoxCompositor_currentIndexChanged(const QString &arg1);
+
+    void on_buttonConfigureXfwm_clicked();
+
+    void on_checkBoxShowAllWorkspaces_clicked();
 
 private:
     Ui::defaultlook *ui;
