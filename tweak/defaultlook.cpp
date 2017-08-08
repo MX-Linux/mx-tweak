@@ -29,6 +29,7 @@
 #include <QDirIterator>
 #include <QFileDialog>
 #include <QHash>
+#include "xfwm_compositor_settings.h"
 
 defaultlook::defaultlook(QWidget *parent) :
     QMainWindow(parent),
@@ -1253,7 +1254,9 @@ void defaultlook::on_buttonThemeUndo_clicked()
 
 void defaultlook::on_buttonConfigureCompton_clicked()
 {
-    system("compton-conf &");
+    this->hide();
+    system("compton-conf");
+    this->show();
 }
 
 void defaultlook::on_buttonCompositorApply_clicked()
@@ -1284,6 +1287,7 @@ void defaultlook::on_buttonCompositorApply_clicked()
         //turn off xfce compositor
         runCmd("xfconf-query -c xfwm4 -p /general/use_compositing -s false");
         system("pkill -x compton");
+        CheckAptNotifierRunning();
 
     }
 
@@ -1334,7 +1338,9 @@ void defaultlook::on_comboBoxCompositor_currentIndexChanged(const QString &arg1)
 
 void defaultlook::on_buttonConfigureXfwm_clicked()
 {
-    runCmd("(xfwm4-tweaks-settings &) && sleep .5 && xdotool key Left");
+   xfwm_compositor_settings fred;
+   fred.setModal(true);
+   fred.exec();
 }
 
 void defaultlook::on_checkBoxShowAllWorkspaces_clicked()

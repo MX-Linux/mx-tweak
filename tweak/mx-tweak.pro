@@ -13,11 +13,14 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        defaultlook.cpp
+        defaultlook.cpp \
+    xfwm_compositor_settings.cpp
 
-HEADERS  += defaultlook.h
+HEADERS  += defaultlook.h \
+    xfwm_compositor_settings.h
 
-FORMS    += defaultlook.ui
+FORMS    += defaultlook.ui \
+    xfwm_compositor_settings.ui
 
 TRANSLATIONS += translations/mx-tweak_ca.ts \
                 translations/mx-tweak_cs.ts \
