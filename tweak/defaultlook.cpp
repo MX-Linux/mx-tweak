@@ -783,6 +783,14 @@ void defaultlook::setupEtc()
     } else {
         ui->checkBoxShowAllWorkspaces->setChecked(false);
     }
+
+    //setup udisks option
+    QFileInfo fileinfo("/etc/tweak-udisks.chk");
+    if (fileinfo.exists()) {
+        ui->checkBoxMountInternalDrivesNonRoot->setChecked(true);
+    } else {
+        ui->checkBoxMountInternalDrivesNonRoot->setChecked(false);
+    }
 }
 
 void defaultlook::setuptheme()
@@ -1109,6 +1117,23 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     } else {
         runCmd("xfconf-query -c xfce4-panel -p /plugins/" + pluginidsystray + "/show-frame -s false");
     }
+
+    //deal with udisks option
+    QFileInfo fileinfo("/etc/polkit-1/localauthority/50-local.d/50-udisks.pkla");
+    QString cmd;
+    if (ui->checkBoxMountInternalDrivesNonRoot->isChecked()) {
+        if (fileinfo.absoluteDir().exists()) {
+            cmd = "gksu 'cp /usr/share/mx-tweak/50-udisks.pkla /etc/polkit-1/localauthority/50-local.d/50-udisks.pkla ;touch /etc/tweak-udisks.chk'";
+            system(cmd.toUtf8());
+        } else {
+            cmd = "gksu 'mkdir -p /etc/polkit-1/localauthority/50-local.d ;cp /usr/share/mx-tweak/50-udisks.pkla /etc/polkit-1/localauthority/50-local.d/50-udisks.pkla ;touch /etc/tweak-udisks.chk'";
+            system(cmd.toUtf8());
+        }
+    } else {
+        cmd = "gksu 'rm -f /etc/polkit-1/localauthority/50-local.d/50-udisks.pkla; rm -f /etc/tweak-udisks.chk'";
+        system(cmd.toUtf8());
+    }
+
     //reset gui
     setupEtc();
 }
@@ -1344,6 +1369,11 @@ void defaultlook::on_buttonConfigureXfwm_clicked()
 }
 
 void defaultlook::on_checkBoxShowAllWorkspaces_clicked()
+{
+    ui->ButtonApplyEtc->setEnabled(true);
+}
+
+void defaultlook::on_checkBoxMountInternalDrivesNonRoot_clicked()
 {
     ui->ButtonApplyEtc->setEnabled(true);
 }
