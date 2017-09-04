@@ -154,6 +154,8 @@ private slots:
 
     void on_checkBoxShowAllWorkspaces_clicked();
 
+    void on_checkBoxMountInternalDrivesNonRoot_clicked();
+
 private:
     Ui::defaultlook *ui;
 };
