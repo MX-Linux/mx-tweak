@@ -1,0 +1,22 @@
+Format: 1.8
+Date: Mon, 04 Sep 2017 11:05:12 -0400
+Source: mx-tweak
+Binary: mx-tweak
+Architecture: i386
+Version: 17.07.02
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: dolphinoracle <dolphinoracle@gmail.com>
+Description:
+ mx-tweak   - MX Tweak
+Changes:
+ mx-tweak (17.07.02) mx; urgency=medium
+ .
+   * misc. changes
+Checksums-Sha1:
+ ab20805244b51e6d34393d28cb829393c14a4e60 75088 mx-tweak_17.07.02_i386.deb
+Checksums-Sha256:
+ 0877e54009d686b523ac86112048c2c50bcff4d29f40ef60054457592d4d8563 75088 mx-tweak_17.07.02_i386.deb
+Files:
+ 39c89a936c2d989ad7d94a2c8464d2d8 75088 admin optional mx-tweak_17.07.02_i386.deb
