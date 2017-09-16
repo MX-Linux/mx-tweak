@@ -1119,19 +1119,27 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     }
 
     //deal with udisks option
-    QFileInfo fileinfo("/etc/polkit-1/localauthority/50-local.d/50-udisks.pkla");
+    QFileInfo fileinfo("/etc/tweak-udisks.chk");
     QString cmd;
     if (ui->checkBoxMountInternalDrivesNonRoot->isChecked()) {
-        if (fileinfo.absoluteDir().exists()) {
+        if (fileinfo.exists()) {
+            qDebug() << "no change to internal drive mount settings";
+        } else {
+            if (fileinfo.absoluteDir().exists()) {
             cmd = "gksu 'cp /usr/share/mx-tweak/50-udisks.pkla /etc/polkit-1/localauthority/50-local.d/50-udisks.pkla ;touch /etc/tweak-udisks.chk'";
             system(cmd.toUtf8());
-        } else {
+            } else {
             cmd = "gksu 'mkdir -p /etc/polkit-1/localauthority/50-local.d ;cp /usr/share/mx-tweak/50-udisks.pkla /etc/polkit-1/localauthority/50-local.d/50-udisks.pkla ;touch /etc/tweak-udisks.chk'";
             system(cmd.toUtf8());
+            }
         }
     } else {
+        if (fileinfo.exists()) {
         cmd = "gksu 'rm -f /etc/polkit-1/localauthority/50-local.d/50-udisks.pkla; rm -f /etc/tweak-udisks.chk'";
         system(cmd.toUtf8());
+        } else {
+            qDebug() << "no change to internal drive mount settings";
+        }
     }
 
     //reset gui
