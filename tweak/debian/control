@@ -2,8 +2,7 @@ Source: mx-tweak
 Section: admin
 Priority: optional
 Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
-Build-Depends: qt5-qmake,
-	debhelper (>=7.0.50~)
+Build-Depends:  qt5-default, qttools5-dev-tools, debhelper (>=7.0.50~)
 Standards-Version: 3.9.5
 Vcs-Git: git://github.com/mxlinux/mx-tweak.git
 
