@@ -33,7 +33,7 @@
          <enum>QTabWidget::North</enum>
         </property>
         <property name="currentIndex">
-         <number>3</number>
+         <number>2</number>
         </property>
         <widget class="QWidget" name="Panel">
          <attribute name="title">
@@ -178,8 +178,7 @@
             </property>
             <property name="icon">
              <iconset theme="dialog-ok">
-              <normaloff/>
-             </iconset>
+              <normaloff>.</normaloff>.</iconset>
             </property>
             <property name="shortcut">
              <string/>
@@ -282,8 +281,7 @@
               </property>
               <property name="icon">
                <iconset theme="dialog-ok">
-                <normaloff/>
-               </iconset>
+                <normaloff>.</normaloff>.</iconset>
               </property>
               <property name="shortcut">
                <string/>
@@ -343,8 +341,7 @@
               </property>
               <property name="icon">
                <iconset theme="wmtweaks">
-                <normaloff/>
-               </iconset>
+                <normaloff>.</normaloff>.</iconset>
               </property>
              </widget>
             </item>
@@ -447,8 +444,7 @@
               </property>
               <property name="icon">
                <iconset theme="dialog-ok">
-                <normaloff/>
-               </iconset>
+                <normaloff>.</normaloff>.</iconset>
               </property>
               <property name="shortcut">
                <string/>
@@ -512,8 +508,7 @@
               </property>
               <property name="icon">
                <iconset theme="dialog-ok">
-                <normaloff/>
-               </iconset>
+                <normaloff>.</normaloff>.</iconset>
               </property>
              </widget>
             </item>
@@ -598,8 +593,7 @@
           </property>
           <property name="icon">
            <iconset theme="xfce4-panel">
-            <normaloff/>
-           </iconset>
+            <normaloff>.</normaloff>.</iconset>
           </property>
          </widget>
         </item>
@@ -633,8 +627,7 @@
           </property>
           <property name="icon">
            <iconset theme="xfwm4">
-            <normaloff/>
-           </iconset>
+            <normaloff>.</normaloff>.</iconset>
           </property>
          </widget>
         </item>
@@ -668,8 +661,7 @@
           </property>
           <property name="icon">
            <iconset theme="preferences-desktop-theme">
-            <normaloff/>
-           </iconset>
+            <normaloff>.</normaloff>.</iconset>
           </property>
          </widget>
         </item>
@@ -758,8 +750,7 @@
           </property>
           <property name="icon">
            <iconset theme="help-about">
-            <normaloff/>
-           </iconset>
+            <normaloff>.</normaloff>.</iconset>
           </property>
          </widget>
         </item>
@@ -770,8 +761,7 @@
           </property>
           <property name="icon">
            <iconset theme="help-contents">
-            <normaloff/>
-           </iconset>
+            <normaloff>.</normaloff>.</iconset>
           </property>
          </widget>
         </item>
@@ -791,8 +781,7 @@
           </property>
           <property name="icon">
            <iconset theme="window-close">
-            <normaloff/>
-           </iconset>
+            <normaloff>.</normaloff>.</iconset>
           </property>
           <property name="shortcut">
            <string>Alt+N</string>
