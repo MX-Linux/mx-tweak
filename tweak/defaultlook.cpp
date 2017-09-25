@@ -828,35 +828,40 @@ void defaultlook::setuptheme()
 
 void defaultlook::setupCompositor()
 {
-    ui->buttonCompositorApply->setEnabled(false);
-    if (ui->buttonCompositorApply->icon().isNull()) {
-        ui->buttonCompositorApply->setIcon(QIcon(":/icons/dialog-ok.svg"));
-    }
-    ui->buttonConfigureCompton->setEnabled(false);
-    ui->buttonConfigureXfwm->setEnabled(false);
-    ui->buttonEditComptonConf->setEnabled(false);
-
-    // check to see if compton is enabled
-    QString home_path = QDir::homePath();
-    qDebug() << "Home Path =" << home_path;
-    QFileInfo file_start(home_path + "/.config/autostart/zcompton.desktop");
-    //check to see if compton.desktop startup file exists
-    if (file_start.exists()) {
-        qDebug() << "compton startup file exists";
+    QString cmd = "ps -aux |grep -v grep |grep -q compiz";
+    if (system(cmd.toUtf8()) == 0) {
+        ui->tabWidget->removeTab(2);
     } else {
-        //copy in a startup file, startup initially disabled
-        runCmd("cp /usr/share/mx-tweak/zcompton.desktop " + file_start.absoluteFilePath());
+        ui->buttonCompositorApply->setEnabled(false);
+        if (ui->buttonCompositorApply->icon().isNull()) {
+            ui->buttonCompositorApply->setIcon(QIcon(":/icons/dialog-ok.svg"));
+        }
+        ui->buttonConfigureCompton->setEnabled(false);
+        ui->buttonConfigureXfwm->setEnabled(false);
+        ui->buttonEditComptonConf->setEnabled(false);
+
+        // check to see if compton is enabled
+        QString home_path = QDir::homePath();
+        qDebug() << "Home Path =" << home_path;
+        QFileInfo file_start(home_path + "/.config/autostart/zcompton.desktop");
+        //check to see if compton.desktop startup file exists
+        if (file_start.exists()) {
+            qDebug() << "compton startup file exists";
+        } else {
+            //copy in a startup file, startup initially disabled
+            runCmd("cp /usr/share/mx-tweak/zcompton.desktop " + file_start.absoluteFilePath());
+        }
+
+        //check to see if existing compton.conf file
+        QFileInfo file_conf(home_path + "/.config/compton.conf");
+        if (file_conf.exists()) {
+            qDebug() << "Found existing conf file";
+        } else {
+            runCmd("cp /usr/share/mx-tweak/compton.conf " + file_conf.absoluteFilePath());
+        }
+        CheckComptonRunning();
     }
 
-    //check to see if existing compton.conf file
-    QFileInfo file_conf(home_path + "/.config/compton.conf");
-    if (file_conf.exists()) {
-        qDebug() << "Found existing conf file";
-    } else {
-        runCmd("cp /usr/share/mx-tweak/compton.conf " + file_conf.absoluteFilePath());
-    }
-
-   CheckComptonRunning();
 }
 
 void defaultlook::CheckComptonRunning()
