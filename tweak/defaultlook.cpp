@@ -455,15 +455,15 @@ void defaultlook::on_buttonAbout_clicked()
 {
     this->hide();
     QMessageBox msgBox(QMessageBox::NoIcon,
-                       tr("About MX Default Look"), "<p align=\"center\"><b><h2>" +
-                       tr("MX Default Look") + "</h2></b></p><p align=\"center\">" + tr("Version: ") + version + "</p><p align=\"center\"><h3>" +
-                       tr("App for quick default ui theme changes") +
+                       tr("About MX Tweak"), "<p align=\"center\"><b><h2>" +
+                       tr("MX Tweak") + "</h2></b></p><p align=\"center\">" + tr("Version: ") + version + "</p><p align=\"center\"><h3>" +
+                       tr("App for quick default ui theme changes and tweaks") +
                        "</h3></p><p align=\"center\"><a href=\"http://mxlinux.org\">http://mxlinux.org</a><br /></p><p align=\"center\">" +
                        tr("Copyright (c) MX Linux") + "<br /><br /></p>", 0, this);
     msgBox.addButton(tr("License"), QMessageBox::AcceptRole);
     msgBox.addButton(tr("Cancel"), QMessageBox::NoRole);
     if (msgBox.exec() == QMessageBox::AcceptRole) {
-        system("mx-viewer file:///usr/share/doc/mx-defaultlook/license.html '" + tr("MX Default Look").toUtf8() + " " + tr("License").toUtf8() + "'");
+        system("mx-viewer file:///usr/share/doc/mx-tweak/license.html '" + tr("MX Tweak").toUtf8() + " " + tr("License").toUtf8() + "'");
     }
     this->show();
 }
@@ -472,7 +472,7 @@ void defaultlook::on_buttonAbout_clicked()
 void defaultlook::on_buttonHelp_clicked()
 {
     this->hide();
-    QString cmd = QString("mx-viewer https://mxlinux.org/wiki/help-files/help-mx-default-look '%1'").arg(tr("MX Default Look"));
+    QString cmd = QString("mx-viewer https://mxlinux.org/wiki/help-files/help-mx-tweak '%1'").arg(tr("MX Tweak"));
     system(cmd.toUtf8());
     this->show();
 }
