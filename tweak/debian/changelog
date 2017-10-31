@@ -1,3 +1,15 @@
+mx-tweak (17.10.03) mx; urgency=medium
+
+  * added option for long file names on desktop
+  
+ -- dolphinoracle <dolphinoracle@gmail.com>  Thu, 19 Oct 2017 19:55:12 -0400
+
+mx-tweak (17.10.02) mx; urgency=medium
+
+  * new icon
+
+ -- dolphinoracle <dolphinoracle@gmail.com>  Fri, 13 Oct 2017 21:46:12 -0400
+
 mx-tweak (17.10.01) mx; urgency=medium
 
   * smaller icon

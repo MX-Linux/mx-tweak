@@ -156,6 +156,8 @@ private slots:
 
     void on_checkBoxMountInternalDrivesNonRoot_clicked();
 
+    void on_checkboxNoEllipse_clicked();
+
 private:
     Ui::defaultlook *ui;
 };
