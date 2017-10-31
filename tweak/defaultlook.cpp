@@ -739,6 +739,7 @@ void defaultlook::setuppanel()
 
 void defaultlook::setupEtc()
 {
+    QString home_path = QDir::homePath();
     ui->ButtonApplyEtc->setEnabled(false);
     if (ui->ButtonApplyEtc->icon().isNull()) {
         ui->ButtonApplyEtc->setIcon(QIcon(":/icons/dialog-ok.svg"));
@@ -790,6 +791,14 @@ void defaultlook::setupEtc()
         ui->checkBoxMountInternalDrivesNonRoot->setChecked(true);
     } else {
         ui->checkBoxMountInternalDrivesNonRoot->setChecked(false);
+    }
+
+    //setup no-ellipse option
+    QFileInfo fileinfo2(home_path + "/.local/share/mx-tweak-data/no-ellipse-desktop-filenames.rc");
+    if (fileinfo2.exists()) {
+        ui->checkboxNoEllipse->setChecked(true);
+    } else {
+        ui->checkboxNoEllipse->setChecked(false);
     }
 }
 
@@ -1036,17 +1045,17 @@ void defaultlook::on_buttonThemeApply_clicked()
     QFileInfo whisker_check(home_path + "/.gtkrc-2.0");
     if (whisker_check.exists()) {
         qDebug() << "existing gtkrc-2.0 found";
-        QString cmd = "cat " + home_path + "/.gtkrc-2.0 |grep -q mx-tweak-data";
+        QString cmd = "cat " + home_path + "/.gtkrc-2.0 |grep -q whisker-tweak.rc";
         if (system(cmd.toUtf8()) == 0 ) {
             qDebug() << "include statement found";
         } else {
             qDebug() << "adding include statement";
-            QString cmd = "echo include \".local/share/mx-tweak-data/whisker-tweak.rc\" > " + home_path + "/.gtkrc-2.0";
+            QString cmd = "echo include \".local/share/mx-tweak-data/whisker-tweak.rc\" >> " + home_path + "/.gtkrc-2.0";
             system(cmd.toUtf8());
         }
     }else {
         qDebug() << "creating simple gtkrc-2.0 file";
-        QString cmd = "echo 'include \".local/share/mx-tweak-data/whisker-tweak.rc\"' > " + home_path + "/.gtkrc-2.0";
+        QString cmd = "echo 'include \".local/share/mx-tweak-data/whisker-tweak.rc\"' >> " + home_path + "/.gtkrc-2.0";
         system(cmd.toUtf8());
     }
 
@@ -1147,6 +1156,39 @@ void defaultlook::on_ButtonApplyEtc_clicked()
         }
     }
 
+    //deal with no-ellipse-filenames option
+    QString home_path = QDir::homePath();
+    if (ui->checkboxNoEllipse->isChecked()) {
+        //set desktop themeing
+        QFileInfo gtk_check(home_path + "/.gtkrc-2.0");
+        if (gtk_check.exists()) {
+            qDebug() << "existing gtkrc-2.0 found";
+            QString cmd = "cat " + home_path + "/.gtkrc-2.0 |grep -q no-ellipse-desktop-filenames.rc";
+            if (system(cmd.toUtf8()) == 0 ) {
+                qDebug() << "include statement found";
+            } else {
+                qDebug() << "adding include statement";
+                QString cmd = "echo 'include \".local/share/mx-tweak-data/no-ellipse-desktop-filenames.rc\"' >> " + home_path + "/.gtkrc-2.0";
+                system(cmd.toUtf8());
+            }
+        }else {
+            qDebug() << "creating simple gtkrc-2.0 file";
+            QString cmd = "echo 'include \"/.local/share/mx-tweak-data/no-ellipse-desktop-filenames.rc\"' >> " + home_path + "/.gtkrc-2.0";
+            system(cmd.toUtf8());
+        }
+        //add modification config
+        runCmd("cp /usr/share/mx-tweak/no-ellipse-desktop-filenames.rc " + home_path + "/.local/share/mx-tweak-data/no-ellipse-desktop-filenames.rc ");
+
+        //restart xfdesktop by with xfdesktop --quite && xfdesktop &
+
+        system("xfdesktop --quit && sleep .5 && xfdesktop &");
+    }else {
+        QFileInfo noellipse_check(home_path + "/.local/share/mx-tweak-data/no-ellipse-desktop-filenames.rc");
+        if (noellipse_check.exists())
+            runCmd("rm -f " + home_path + "/.local/share/mx-tweak-data/no-ellipse-desktop-filenames.rc");
+            system("xfdesktop --quit && sleep .5 && xfdesktop &");
+    }
+
     //reset gui
     setupEtc();
 }
@@ -1162,6 +1204,11 @@ void defaultlook::on_checkBoxThunarSingleClick_clicked()
 }
 
 void defaultlook::on_checkBoxSystrayFrame_clicked()
+{
+    ui->ButtonApplyEtc->setEnabled(true);
+}
+
+void defaultlook::on_checkboxNoEllipse_clicked()
 {
     ui->ButtonApplyEtc->setEnabled(true);
 }
@@ -1390,3 +1437,5 @@ void defaultlook::on_checkBoxMountInternalDrivesNonRoot_clicked()
 {
     ui->ButtonApplyEtc->setEnabled(true);
 }
+
+
