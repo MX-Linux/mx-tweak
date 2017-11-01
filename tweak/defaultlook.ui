@@ -33,7 +33,7 @@
          <enum>QTabWidget::North</enum>
         </property>
         <property name="currentIndex">
-         <number>3</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="Panel">
          <attribute name="title">
@@ -85,7 +85,7 @@
                </font>
               </property>
               <property name="text">
-               <string>Affects 1st Panel</string>
+               <string>Affects 1st panel</string>
               </property>
              </widget>
             </item>
