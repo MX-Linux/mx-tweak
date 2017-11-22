@@ -511,16 +511,16 @@ void defaultlook::backupPanel()
 void defaultlook::restoreDefaultPanel()
 {
     // copy template files
-    runCmd("pkill xfconfd; rm -Rf ~/.config/xfce4/panel; cp -Rf /usr/local/share/appdata/panels/vertical/panel ~/.config/xfce4; \
-           cp -f /usr/local/share/appdata/panels/vertical/xfce4-panel.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml; \
-             xfconfd; sleep 2; xfce4-panel --restart");
+    runCmd("xfce4-panel --quit;pkill xfconfd; rm -Rf ~/.config/xfce4/panel; cp -Rf /etc/skel/.config/xfce4/panel ~/.config/xfce4; sleep 1; \
+           cp -f /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml; \
+             sleep 5; xfce4-panel");
 }
 
 void defaultlook::restoreBackup()
 {
-    runCmd("pkill xfconfd; rm -Rf ~/.config/xfce4/panel; cp -Rf ~/.restore/.config/xfce4/panel ~/.config/xfce4; \
+    runCmd("xfce4-panel --quit; pkill xfconfd; rm -Rf ~/.config/xfce4/panel; cp -Rf ~/.restore/.config/xfce4/panel ~/.config/xfce4; sleep 1; \
            cp -f ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml; \
-            xfconfd; sleep 2; xfce4-panel --restart");
+            sleep 5; xfce4-panel ");
 }
 
 void defaultlook::on_checkHorz_clicked()
