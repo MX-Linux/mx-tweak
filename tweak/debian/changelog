@@ -1,3 +1,10 @@
+mx-tweak (17.11.01) mx; urgency=medium
+
+  * fix for backup, restore, and restore defualt options
+  * fix tooltip on Xfce compositor (thanks Old Giza)
+  
+ -- dolphinoracle <dolphinoracle@gmail.com>  Tue, 21 Oct 2017 21:26:52 -0400
+ 
 mx-tweak (17.10.03) mx; urgency=medium
 
   * added option for long file names on desktop

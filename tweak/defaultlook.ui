@@ -33,7 +33,7 @@
          <enum>QTabWidget::North</enum>
         </property>
         <property name="currentIndex">
-         <number>0</number>
+         <number>2</number>
         </property>
         <widget class="QWidget" name="Panel">
          <attribute name="title">
@@ -334,7 +334,7 @@
             <item row="4" column="0" colspan="4">
              <widget class="QPushButton" name="buttonConfigureXfwm">
               <property name="toolTip">
-               <string>Launch compton-conf configuration tool</string>
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce Compositor Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
               <property name="text">
                <string>Xfwm Settings</string>
