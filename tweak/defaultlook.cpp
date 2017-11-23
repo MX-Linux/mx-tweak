@@ -808,6 +808,8 @@ void defaultlook::setuptheme()
     if (ui->buttonThemeApply->icon().isNull()) {
         ui->buttonThemeApply->setIcon(QIcon(":/icons/dialog-ok.svg"));
     }
+
+    ui->pushButtonPreview->setEnabled(false);
     //reset all checkboxes to unchecked
 
     ui->checkFirefox->setChecked(false);
@@ -954,6 +956,7 @@ void defaultlook::on_comboTheme_activated(const QString &arg1)
 {
     if (ui->comboTheme->currentIndex() != 0) {
         ui->buttonThemeApply->setEnabled(true);
+        ui->pushButtonPreview->setEnabled(true);
     }
 }
 
@@ -1028,6 +1031,8 @@ void defaultlook::on_buttonThemeApply_clicked()
 
         if (image.exists()) {
             runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-image -t string -s " + background_image + " --create");
+        } else {
+            runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-image --reset");
         }
 
         //set panel color
@@ -1439,3 +1444,12 @@ void defaultlook::on_checkBoxMountInternalDrivesNonRoot_clicked()
 }
 
 
+
+void defaultlook::on_pushButtonPreview_clicked()
+{
+    QString themename = theme_info[ui->comboTheme->currentText()];
+    QFileInfo fileinfo(themename);
+    //initialize variables
+    QString preview = runCmd("cat '" + fileinfo.absoluteFilePath() + "' |grep screenshot=").output.section("=" , 1,1);
+
+}
