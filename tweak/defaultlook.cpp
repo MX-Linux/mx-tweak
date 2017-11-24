@@ -455,15 +455,15 @@ void defaultlook::on_buttonAbout_clicked()
 {
     this->hide();
     QMessageBox msgBox(QMessageBox::NoIcon,
-                       tr("About MX Default Look"), "<p align=\"center\"><b><h2>" +
-                       tr("MX Default Look") + "</h2></b></p><p align=\"center\">" + tr("Version: ") + version + "</p><p align=\"center\"><h3>" +
-                       tr("App for quick default ui theme changes") +
+                       tr("About MX Tweak"), "<p align=\"center\"><b><h2>" +
+                       tr("MX Tweak") + "</h2></b></p><p align=\"center\">" + tr("Version: ") + version + "</p><p align=\"center\"><h3>" +
+                       tr("App for quick default ui theme changes and tweaks") +
                        "</h3></p><p align=\"center\"><a href=\"http://mxlinux.org\">http://mxlinux.org</a><br /></p><p align=\"center\">" +
                        tr("Copyright (c) MX Linux") + "<br /><br /></p>", 0, this);
     msgBox.addButton(tr("License"), QMessageBox::AcceptRole);
     msgBox.addButton(tr("Cancel"), QMessageBox::NoRole);
     if (msgBox.exec() == QMessageBox::AcceptRole) {
-        system("mx-viewer file:///usr/share/doc/mx-defaultlook/license.html '" + tr("MX Default Look").toUtf8() + " " + tr("License").toUtf8() + "'");
+        system("mx-viewer file:///usr/share/doc/mx-tweak/license.html '" + tr("MX Tweak").toUtf8() + " " + tr("License").toUtf8() + "'");
     }
     this->show();
 }
@@ -472,7 +472,7 @@ void defaultlook::on_buttonAbout_clicked()
 void defaultlook::on_buttonHelp_clicked()
 {
     this->hide();
-    QString cmd = QString("mx-viewer https://mxlinux.org/wiki/help-files/help-mx-default-look '%1'").arg(tr("MX Default Look"));
+    QString cmd = QString("mx-viewer https://mxlinux.org/wiki/help-files/help-mx-tweak '%1'").arg(tr("MX Tweak"));
     system(cmd.toUtf8());
     this->show();
 }
@@ -493,7 +493,7 @@ void defaultlook::checkXFCE()
     QString test = runCmd("echo $XDG_CURRENT_DESKTOP").output;
     qDebug() << test;
     if ( test != "XFCE") {
-        QMessageBox::information(0, tr("MX Default Look"),
+        QMessageBox::information(0, tr("MX Tweak"),
                                  tr("This app is Xfce-only"));
         qApp->quit();
     }
@@ -511,16 +511,16 @@ void defaultlook::backupPanel()
 void defaultlook::restoreDefaultPanel()
 {
     // copy template files
-    runCmd("pkill xfconfd; rm -Rf ~/.config/xfce4/panel; cp -Rf /usr/local/share/appdata/panels/vertical/panel ~/.config/xfce4; \
-           cp -f /usr/local/share/appdata/panels/vertical/xfce4-panel.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml; \
-             xfconfd; sleep 2; xfce4-panel --restart");
+    runCmd("xfce4-panel --quit;pkill xfconfd; rm -Rf ~/.config/xfce4/panel; cp -Rf /etc/skel/.config/xfce4/panel ~/.config/xfce4; sleep 1; \
+           cp -f /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml; \
+             sleep 5; xfce4-panel");
 }
 
 void defaultlook::restoreBackup()
 {
-    runCmd("pkill xfconfd; rm -Rf ~/.config/xfce4/panel; cp -Rf ~/.restore/.config/xfce4/panel ~/.config/xfce4; \
+    runCmd("xfce4-panel --quit; pkill xfconfd; rm -Rf ~/.config/xfce4/panel; cp -Rf ~/.restore/.config/xfce4/panel ~/.config/xfce4; sleep 1; \
            cp -f ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml; \
-            xfconfd; sleep 2; xfce4-panel --restart");
+            sleep 5; xfce4-panel ");
 }
 
 void defaultlook::on_checkHorz_clicked()
@@ -739,6 +739,7 @@ void defaultlook::setuppanel()
 
 void defaultlook::setupEtc()
 {
+    QString home_path = QDir::homePath();
     ui->ButtonApplyEtc->setEnabled(false);
     if (ui->ButtonApplyEtc->icon().isNull()) {
         ui->ButtonApplyEtc->setIcon(QIcon(":/icons/dialog-ok.svg"));
@@ -783,6 +784,22 @@ void defaultlook::setupEtc()
     } else {
         ui->checkBoxShowAllWorkspaces->setChecked(false);
     }
+
+    //setup udisks option
+    QFileInfo fileinfo("/etc/tweak-udisks.chk");
+    if (fileinfo.exists()) {
+        ui->checkBoxMountInternalDrivesNonRoot->setChecked(true);
+    } else {
+        ui->checkBoxMountInternalDrivesNonRoot->setChecked(false);
+    }
+
+    //setup no-ellipse option
+    QFileInfo fileinfo2(home_path + "/.local/share/mx-tweak-data/no-ellipse-desktop-filenames.rc");
+    if (fileinfo2.exists()) {
+        ui->checkboxNoEllipse->setChecked(true);
+    } else {
+        ui->checkboxNoEllipse->setChecked(false);
+    }
 }
 
 void defaultlook::setuptheme()
@@ -791,6 +808,8 @@ void defaultlook::setuptheme()
     if (ui->buttonThemeApply->icon().isNull()) {
         ui->buttonThemeApply->setIcon(QIcon(":/icons/dialog-ok.svg"));
     }
+
+    ui->pushButtonPreview->setEnabled(false);
     //reset all checkboxes to unchecked
 
     ui->checkFirefox->setChecked(false);
@@ -820,35 +839,40 @@ void defaultlook::setuptheme()
 
 void defaultlook::setupCompositor()
 {
-    ui->buttonCompositorApply->setEnabled(false);
-    if (ui->buttonCompositorApply->icon().isNull()) {
-        ui->buttonCompositorApply->setIcon(QIcon(":/icons/dialog-ok.svg"));
-    }
-    ui->buttonConfigureCompton->setEnabled(false);
-    ui->buttonConfigureXfwm->setEnabled(false);
-    ui->buttonEditComptonConf->setEnabled(false);
-
-    // check to see if compton is enabled
-    QString home_path = QDir::homePath();
-    qDebug() << "Home Path =" << home_path;
-    QFileInfo file_start(home_path + "/.config/autostart/zcompton.desktop");
-    //check to see if compton.desktop startup file exists
-    if (file_start.exists()) {
-        qDebug() << "compton startup file exists";
+    QString cmd = "ps -aux |grep -v grep |grep -q compiz";
+    if (system(cmd.toUtf8()) == 0) {
+        ui->tabWidget->removeTab(2);
     } else {
-        //copy in a startup file, startup initially disabled
-        runCmd("cp /usr/share/mx-tweak/zcompton.desktop " + file_start.absoluteFilePath());
+        ui->buttonCompositorApply->setEnabled(false);
+        if (ui->buttonCompositorApply->icon().isNull()) {
+            ui->buttonCompositorApply->setIcon(QIcon(":/icons/dialog-ok.svg"));
+        }
+        ui->buttonConfigureCompton->setEnabled(false);
+        ui->buttonConfigureXfwm->setEnabled(false);
+        ui->buttonEditComptonConf->setEnabled(false);
+
+        // check to see if compton is enabled
+        QString home_path = QDir::homePath();
+        qDebug() << "Home Path =" << home_path;
+        QFileInfo file_start(home_path + "/.config/autostart/zcompton.desktop");
+        //check to see if compton.desktop startup file exists
+        if (file_start.exists()) {
+            qDebug() << "compton startup file exists";
+        } else {
+            //copy in a startup file, startup initially disabled
+            runCmd("cp /usr/share/mx-tweak/zcompton.desktop " + file_start.absoluteFilePath());
+        }
+
+        //check to see if existing compton.conf file
+        QFileInfo file_conf(home_path + "/.config/compton.conf");
+        if (file_conf.exists()) {
+            qDebug() << "Found existing conf file";
+        } else {
+            runCmd("cp /usr/share/mx-tweak/compton.conf " + file_conf.absoluteFilePath());
+        }
+        CheckComptonRunning();
     }
 
-    //check to see if existing compton.conf file
-    QFileInfo file_conf(home_path + "/.config/compton.conf");
-    if (file_conf.exists()) {
-        qDebug() << "Found existing conf file";
-    } else {
-        runCmd("cp /usr/share/mx-tweak/compton.conf " + file_conf.absoluteFilePath());
-    }
-
-   CheckComptonRunning();
 }
 
 void defaultlook::CheckComptonRunning()
@@ -932,6 +956,7 @@ void defaultlook::on_comboTheme_activated(const QString &arg1)
 {
     if (ui->comboTheme->currentIndex() != 0) {
         ui->buttonThemeApply->setEnabled(true);
+        ui->pushButtonPreview->setEnabled(true);
     }
 }
 
@@ -1006,6 +1031,8 @@ void defaultlook::on_buttonThemeApply_clicked()
 
         if (image.exists()) {
             runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-image -t string -s " + background_image + " --create");
+        } else {
+            runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-image --reset");
         }
 
         //set panel color
@@ -1023,17 +1050,17 @@ void defaultlook::on_buttonThemeApply_clicked()
     QFileInfo whisker_check(home_path + "/.gtkrc-2.0");
     if (whisker_check.exists()) {
         qDebug() << "existing gtkrc-2.0 found";
-        QString cmd = "cat " + home_path + "/.gtkrc-2.0 |grep -q mx-tweak-data";
+        QString cmd = "cat " + home_path + "/.gtkrc-2.0 |grep -q whisker-tweak.rc";
         if (system(cmd.toUtf8()) == 0 ) {
             qDebug() << "include statement found";
         } else {
             qDebug() << "adding include statement";
-            QString cmd = "echo include \".local/share/mx-tweak-data/whisker-tweak.rc\" > " + home_path + "/.gtkrc-2.0";
+            QString cmd = "echo include \".local/share/mx-tweak-data/whisker-tweak.rc\" >> " + home_path + "/.gtkrc-2.0";
             system(cmd.toUtf8());
         }
     }else {
         qDebug() << "creating simple gtkrc-2.0 file";
-        QString cmd = "echo 'include \".local/share/mx-tweak-data/whisker-tweak.rc\"' > " + home_path + "/.gtkrc-2.0";
+        QString cmd = "echo 'include \".local/share/mx-tweak-data/whisker-tweak.rc\"' >> " + home_path + "/.gtkrc-2.0";
         system(cmd.toUtf8());
     }
 
@@ -1109,6 +1136,64 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     } else {
         runCmd("xfconf-query -c xfce4-panel -p /plugins/" + pluginidsystray + "/show-frame -s false");
     }
+
+    //deal with udisks option
+    QFileInfo fileinfo("/etc/tweak-udisks.chk");
+    QString cmd;
+    if (ui->checkBoxMountInternalDrivesNonRoot->isChecked()) {
+        if (fileinfo.exists()) {
+            qDebug() << "no change to internal drive mount settings";
+        } else {
+            if (fileinfo.absoluteDir().exists()) {
+            cmd = "gksu 'cp /usr/share/mx-tweak/50-udisks.pkla /etc/polkit-1/localauthority/50-local.d/50-udisks.pkla ;touch /etc/tweak-udisks.chk'";
+            system(cmd.toUtf8());
+            } else {
+            cmd = "gksu 'mkdir -p /etc/polkit-1/localauthority/50-local.d ;cp /usr/share/mx-tweak/50-udisks.pkla /etc/polkit-1/localauthority/50-local.d/50-udisks.pkla ;touch /etc/tweak-udisks.chk'";
+            system(cmd.toUtf8());
+            }
+        }
+    } else {
+        if (fileinfo.exists()) {
+        cmd = "gksu 'rm -f /etc/polkit-1/localauthority/50-local.d/50-udisks.pkla; rm -f /etc/tweak-udisks.chk'";
+        system(cmd.toUtf8());
+        } else {
+            qDebug() << "no change to internal drive mount settings";
+        }
+    }
+
+    //deal with no-ellipse-filenames option
+    QString home_path = QDir::homePath();
+    if (ui->checkboxNoEllipse->isChecked()) {
+        //set desktop themeing
+        QFileInfo gtk_check(home_path + "/.gtkrc-2.0");
+        if (gtk_check.exists()) {
+            qDebug() << "existing gtkrc-2.0 found";
+            QString cmd = "cat " + home_path + "/.gtkrc-2.0 |grep -q no-ellipse-desktop-filenames.rc";
+            if (system(cmd.toUtf8()) == 0 ) {
+                qDebug() << "include statement found";
+            } else {
+                qDebug() << "adding include statement";
+                QString cmd = "echo 'include \".local/share/mx-tweak-data/no-ellipse-desktop-filenames.rc\"' >> " + home_path + "/.gtkrc-2.0";
+                system(cmd.toUtf8());
+            }
+        }else {
+            qDebug() << "creating simple gtkrc-2.0 file";
+            QString cmd = "echo 'include \"/.local/share/mx-tweak-data/no-ellipse-desktop-filenames.rc\"' >> " + home_path + "/.gtkrc-2.0";
+            system(cmd.toUtf8());
+        }
+        //add modification config
+        runCmd("cp /usr/share/mx-tweak/no-ellipse-desktop-filenames.rc " + home_path + "/.local/share/mx-tweak-data/no-ellipse-desktop-filenames.rc ");
+
+        //restart xfdesktop by with xfdesktop --quite && xfdesktop &
+
+        system("xfdesktop --quit && sleep .5 && xfdesktop &");
+    }else {
+        QFileInfo noellipse_check(home_path + "/.local/share/mx-tweak-data/no-ellipse-desktop-filenames.rc");
+        if (noellipse_check.exists())
+            runCmd("rm -f " + home_path + "/.local/share/mx-tweak-data/no-ellipse-desktop-filenames.rc");
+            system("xfdesktop --quit && sleep .5 && xfdesktop &");
+    }
+
     //reset gui
     setupEtc();
 }
@@ -1124,6 +1209,11 @@ void defaultlook::on_checkBoxThunarSingleClick_clicked()
 }
 
 void defaultlook::on_checkBoxSystrayFrame_clicked()
+{
+    ui->ButtonApplyEtc->setEnabled(true);
+}
+
+void defaultlook::on_checkboxNoEllipse_clicked()
 {
     ui->ButtonApplyEtc->setEnabled(true);
 }
@@ -1346,4 +1436,20 @@ void defaultlook::on_buttonConfigureXfwm_clicked()
 void defaultlook::on_checkBoxShowAllWorkspaces_clicked()
 {
     ui->ButtonApplyEtc->setEnabled(true);
+}
+
+void defaultlook::on_checkBoxMountInternalDrivesNonRoot_clicked()
+{
+    ui->ButtonApplyEtc->setEnabled(true);
+}
+
+
+
+void defaultlook::on_pushButtonPreview_clicked()
+{
+    QString themename = theme_info[ui->comboTheme->currentText()];
+    QFileInfo fileinfo(themename);
+    //initialize variables
+    QString preview = runCmd("cat '" + fileinfo.absoluteFilePath() + "' |grep screenshot=").output.section("=" , 1,1);
+
 }

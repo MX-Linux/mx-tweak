@@ -10,3 +10,5 @@ mx.tweak.template usr/share/mx-tweak-data
 zcompton.desktop		usr/share/mx-tweak
 *.conf			usr/share/mx-tweak
 *.sh			usr/local/bin
+50-udisks.pkla 	usr/share/mx-tweak
+no-ellipse-desktop-filenames.rc usr/share/mx-tweak
