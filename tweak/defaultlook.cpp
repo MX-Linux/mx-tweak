@@ -29,6 +29,7 @@
 #include <QDirIterator>
 #include <QFileDialog>
 #include <QHash>
+
 #include "xfwm_compositor_settings.h"
 
 defaultlook::defaultlook(QWidget *parent) :
@@ -1449,7 +1450,14 @@ void defaultlook::on_pushButtonPreview_clicked()
 {
     QString themename = theme_info[ui->comboTheme->currentText()];
     QFileInfo fileinfo(themename);
+
     //initialize variables
-    QString preview = runCmd("cat '" + fileinfo.absoluteFilePath() + "' |grep screenshot=").output.section("=" , 1,1);
+    QString file_name = runCmd("cat '" + fileinfo.absoluteFilePath() + "' |grep screenshot=").output.section("=" , 1,1);
+    QString path = fileinfo.absolutePath();
+    QString full_file_path = path + "/" + file_name;
+
+    QMessageBox preview_box(QMessageBox::NoIcon, file_name, "" , QMessageBox::Close, this);
+    preview_box.setIconPixmap(QPixmap(full_file_path));
+    preview_box.exec();
 
 }
