@@ -1,3 +1,9 @@
+mx-tweak (17.11.02) mx; urgency=medium
+
+  * add theme preview feature
+  
+ -- dolphinoracle <dolphinoracle@gmail.com>  Fri, 24 Nov 2017 20:43:17 -0400
+
 mx-tweak (17.11.01) mx; urgency=medium
 
   * fix for backup, restore, and restore defualt options
