@@ -158,6 +158,8 @@ private slots:
 
     void on_checkboxNoEllipse_clicked();
 
+    void on_pushButtonPreview_clicked();
+
 private:
     Ui::defaultlook *ui;
 };
