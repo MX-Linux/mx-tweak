@@ -45,6 +45,10 @@ widget "whiskermenu-window*" style "purple"
 
 <end_gtk_whisker_theme_code>
 
+#preview screenshot place screenshot in same folder as tweak file
+screenshot=nichi-vert.jpg
+
+
 
 
 
