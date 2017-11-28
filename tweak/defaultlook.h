@@ -160,6 +160,8 @@ private slots:
 
     void on_pushButtonPreview_clicked();
 
+    void on_checkBoxHibernate_clicked();
+
 private:
     Ui::defaultlook *ui;
 };
