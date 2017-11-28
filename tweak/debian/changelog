@@ -1,3 +1,9 @@
+mx-tweak (17.11.03) mx; urgency=medium
+
+  * add hibernate switch
+  
+ -- dolphinoracle <dolphinoracle@gmail.com>  Mon, 27 Nov 2017 21:15:24 -0400
+
 mx-tweak (17.11.02) mx; urgency=medium
 
   * add theme preview feature
