@@ -801,6 +801,21 @@ void defaultlook::setupEtc()
     } else {
         ui->checkboxNoEllipse->setChecked(false);
     }
+
+    //setup hibernate switch
+    //first, hide if running live
+    test = runCmd("df -T / |tail -n1 |awk '{print $2}'").output;
+    qDebug() << test;
+    if ( test == "aufs" || test == "overlay" ) {
+        ui->checkBoxHibernate->hide();
+    }
+    //set checkbox
+    test = runCmd("xfconf-query -c xfce4-session -p /shutdown/ShowHibernate").output;
+    if ( test == "true") {
+        ui->checkBoxHibernate->setChecked(true);
+    } else {
+        ui->checkBoxHibernate->setChecked(false);
+    }
 }
 
 void defaultlook::setuptheme()
@@ -1190,9 +1205,17 @@ void defaultlook::on_ButtonApplyEtc_clicked()
         system("xfdesktop --quit && sleep .5 && xfdesktop &");
     }else {
         QFileInfo noellipse_check(home_path + "/.local/share/mx-tweak-data/no-ellipse-desktop-filenames.rc");
-        if (noellipse_check.exists())
+        if (noellipse_check.exists()) {
             runCmd("rm -f " + home_path + "/.local/share/mx-tweak-data/no-ellipse-desktop-filenames.rc");
             system("xfdesktop --quit && sleep .5 && xfdesktop &");
+        }
+    }
+
+    //deal with hibernate
+    if (ui->checkBoxHibernate->isChecked()) {
+        system("xfconf-query -c xfce4-session -p /shutdown/ShowHibernate -s true --create");
+    } else {
+        system("xfconf-query -c xfce4-session -p /shutdown/ShowHibernate -s false --create");
     }
 
     //reset gui
@@ -1460,4 +1483,9 @@ void defaultlook::on_pushButtonPreview_clicked()
     preview_box.setIconPixmap(QPixmap(full_file_path));
     preview_box.exec();
 
+}
+
+void defaultlook::on_checkBoxHibernate_clicked()
+{
+    ui->ButtonApplyEtc->setEnabled(true);
 }
