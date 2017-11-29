@@ -1,3 +1,9 @@
+mx-tweak (17.11.04) mx; urgency=medium
+
+  * minor update to hibernate text
+
+ -- dolphinoracle <dolphin@littlebyte>  Tue, 28 Nov 2017 17:55:23 -0500
+
 mx-tweak (17.11.03) mx; urgency=medium
 
   * add hibernate switch
