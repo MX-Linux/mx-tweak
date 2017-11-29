@@ -1,215 +1,419 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="lt_LT">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="lt" version="2.1">
 <context>
     <name>defaultlook</name>
     <message>
-        <location filename="../defaultlook.ui" line="14"/>
-        <location filename="../defaultlook.cpp" line="49"/>
+        <location filename="../defaultlook.ui" line="20"/>
+        <location filename="../defaultlook.cpp" line="51"/>
+        <location filename="../defaultlook.cpp" line="460"/>
+        <location filename="../defaultlook.cpp" line="467"/>
+        <location filename="../defaultlook.cpp" line="476"/>
+        <location filename="../defaultlook.cpp" line="497"/>
         <source>MX Tweak</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="32"/>
-        <location filename="../defaultlook.ui" line="300"/>
+        <location filename="../defaultlook.ui" line="40"/>
+        <location filename="../defaultlook.ui" line="631"/>
         <source>Panel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="53"/>
-        <source>Backup current panel configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Skydelis</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="61"/>
-        <source>Bottom</source>
-        <translation type="unfinished"></translation>
+        <source>Backup current panel configuration</source>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="66"/>
-        <source>Top</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="74"/>
+        <location filename="../defaultlook.ui" line="68"/>
         <source>Restore backup panel configuration</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="81"/>
+        <location filename="../defaultlook.ui" line="75"/>
         <source>Restore default panel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="94"/>
+        <location filename="../defaultlook.ui" line="88"/>
         <source>Affects 1st panel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="101"/>
-        <source>Display panel horizontally</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="108"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Affects all panels&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="115"/>
+        <location filename="../defaultlook.ui" line="95"/>
         <source>Display panel vertically</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="130"/>
-        <location filename="../defaultlook.ui" line="181"/>
+        <location filename="../defaultlook.ui" line="109"/>
+        <source>Bottom</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="114"/>
+        <source>Top</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="122"/>
+        <source>Display panel horizontally</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="136"/>
+        <source>Left</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="141"/>
+        <source>Right</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="149"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Affects all panels&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="177"/>
+        <location filename="../defaultlook.ui" line="280"/>
+        <location filename="../defaultlook.ui" line="450"/>
+        <location filename="../defaultlook.ui" line="514"/>
         <source>Apply</source>
-        <translation type="unfinished"></translation>
+        <translation>Taikyti</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="154"/>
+        <location filename="../defaultlook.ui" line="200"/>
         <source>Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Tema</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="202"/>
-        <source>Fix HexChat input box in dark theme</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="209"/>
-        <source>Fix some website fields when using dark theme</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="212"/>
-        <source>Firefox dark theme tweak</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="225"/>
+        <location filename="../defaultlook.ui" line="214"/>
         <source>Theme Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Temos parametrai</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="260"/>
-        <source>Xfce Settings</source>
-        <translation type="unfinished"></translation>
+        <location filename="../defaultlook.ui" line="244"/>
+        <source>Fix some website fields when using dark theme</source>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="285"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the panel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <location filename="../defaultlook.ui" line="247"/>
+        <source>Firefox dark theme tweak</source>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="307"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configure window behavior and shortcuts&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <location filename="../defaultlook.ui" line="254"/>
+        <source>Fix HexChat input box in dark theme</source>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="322"/>
-        <source>Window Manager</source>
-        <translation type="unfinished"></translation>
+        <location filename="../defaultlook.ui" line="306"/>
+        <source>Undo</source>
+        <translation>Atšaukti</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="329"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the look of your desktop&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <location filename="../defaultlook.ui" line="313"/>
+        <source>Preview</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="323"/>
+        <location filename="../defaultlook.ui" line="416"/>
+        <source>Compositor</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="344"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce Compositor Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="347"/>
+        <source>Xfwm Settings</source>
+        <translation>Xfwm nustatymai</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="371"/>
+        <source>None</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="376"/>
+        <source>Xfwm (Xfce) Compositor</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="381"/>
+        <source>Compton </source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="389"/>
+        <source>Edit compton.conf directly in text editor</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="392"/>
+        <source>Edit compton.conf</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="423"/>
+        <source>Transparency and shadow options</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="430"/>
+        <source>Launch compton-conf configuration tool</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="433"/>
+        <source>Compton settings</source>
+        <translation>Compton nustatymai</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="486"/>
+        <source>Other</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="494"/>
+        <source>Enable single-click on desktop</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="501"/>
+        <source>Enable single-click in Thunar File Manager</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="538"/>
+        <source>Show systray (notification area) frame</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="545"/>
+        <source>Show windows from all workspaces in panel</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="552"/>
+        <source>Enable mounting of internal drives by non-root users</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="559"/>
+        <source>Disable shortening of long filenames on the desktop</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="566"/>
+        <source>Enable hibernate on Log Out menu </source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="573"/>
+        <source>                   note: to hibernate, swap needs to be &gt;= RAM) </source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="608"/>
+        <source>Xfce Settings</source>
+        <translation>Xfce nustatymai</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="617"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the panel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="651"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configure window behavior and shortcuts&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="665"/>
+        <source>Window Manager</source>
+        <translation>Langų tvarkytuvė</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="685"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the look of your desktop&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Derinti darbalaukio išvaizdą&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="699"/>
         <source>Appearance</source>
-        <translation type="unfinished"></translation>
+        <translation>Išvaizda</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="428"/>
-        <source>Quit application</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="431"/>
-        <source>Close</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="439"/>
-        <source>Alt+N</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="449"/>
+        <location filename="../defaultlook.ui" line="777"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>Apie</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="461"/>
+        <location filename="../defaultlook.ui" line="788"/>
         <source>Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Žinynas</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="441"/>
-        <source>About MX Default Look</source>
-        <translation type="unfinished"></translation>
+        <location filename="../defaultlook.ui" line="805"/>
+        <source>Quit application</source>
+        <translation>Išeiti iš programos</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="442"/>
-        <location filename="../defaultlook.cpp" line="449"/>
-        <location filename="../defaultlook.cpp" line="458"/>
-        <location filename="../defaultlook.cpp" line="469"/>
-        <location filename="../defaultlook.cpp" line="479"/>
-        <source>MX Default Look</source>
-        <translation type="unfinished"></translation>
+        <location filename="../defaultlook.ui" line="808"/>
+        <source>Close</source>
+        <translation>Užverti</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="442"/>
+        <location filename="../defaultlook.ui" line="815"/>
+        <source>Alt+N</source>
+        <translation>Alt+N</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.cpp" line="459"/>
+        <source>About MX Tweak</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../defaultlook.cpp" line="460"/>
         <source>Version: </source>
-        <translation type="unfinished"></translation>
+        <translation>Versija: </translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="443"/>
-        <source>App for quick default ui theme changes</source>
-        <translation type="unfinished"></translation>
+        <location filename="../defaultlook.cpp" line="461"/>
+        <source>App for quick default ui theme changes and tweaks</source>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="445"/>
+        <location filename="../defaultlook.cpp" line="463"/>
         <source>Copyright (c) MX Linux</source>
-        <translation type="unfinished"></translation>
+        <translation>Autorių teisės (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="446"/>
-        <location filename="../defaultlook.cpp" line="449"/>
+        <location filename="../defaultlook.cpp" line="464"/>
+        <location filename="../defaultlook.cpp" line="467"/>
         <source>License</source>
-        <translation type="unfinished"></translation>
+        <translation>Licencija</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="447"/>
+        <location filename="../defaultlook.cpp" line="465"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Atsisakyti</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="470"/>
+        <location filename="../defaultlook.cpp" line="487"/>
+        <source>MX Default Look</source>
+        <translation>MX numatytoji išvaizda</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.cpp" line="488"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
-        <translation type="unfinished"></translation>
+        <translation>Užbaigta! Firefox gali tekti paleisti iš naujo, kad įsigaliotų pakeitimai</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="480"/>
+        <location filename="../defaultlook.cpp" line="498"/>
         <source>This app is Xfce-only</source>
-        <translation type="unfinished"></translation>
+        <translation>Ši programa yra skirta tik Xfce</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="602"/>
+        <location filename="../defaultlook.cpp" line="640"/>
         <source>Panel settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Skydelio nustatymai</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="603"/>
+        <location filename="../defaultlook.cpp" line="641"/>
         <source> Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
-        <translation type="unfinished"></translation>
+        <translation> Jūsų esamų skydelio nustatymų atsarginė kopija buvo įrašyta į paslėptą aplanką, pavadinimu .restore, kuris yra jūsų namų aplanke (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="732"/>
+        <location filename="../defaultlook.cpp" line="950"/>
         <source>Choose a theme set</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
+    </message>
+</context>
+<context>
+    <name>xfwm_compositor_settings</name>
+    <message>
+        <location filename="../xfwm_compositor_settings.ui" line="14"/>
+        <source>Dialog</source>
+        <translation>Dialogas</translation>
+    </message>
+    <message>
+        <location filename="../xfwm_compositor_settings.ui" line="42"/>
+        <source>Popup Windows</source>
+        <translation>Iškylantieji langai</translation>
+    </message>
+    <message>
+        <location filename="../xfwm_compositor_settings.ui" line="49"/>
+        <source>Windows during move</source>
+        <translation>Langai perkėlimo metu</translation>
+    </message>
+    <message>
+        <location filename="../xfwm_compositor_settings.ui" line="56"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Opacity Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../xfwm_compositor_settings.ui" line="79"/>
+        <source>Window decorations</source>
+        <translation>Langų dekoracijos</translation>
+    </message>
+    <message>
+        <location filename="../xfwm_compositor_settings.ui" line="86"/>
+        <source>Show shadows under dock windows</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../xfwm_compositor_settings.ui" line="93"/>
+        <source>Show shadows under popup windows</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../xfwm_compositor_settings.ui" line="100"/>
+        <source>Windows during resize</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../xfwm_compositor_settings.ui" line="123"/>
+        <source>Show shadows under regular windows</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../xfwm_compositor_settings.ui" line="130"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Feature Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../xfwm_compositor_settings.ui" line="137"/>
+        <source>Show windows preview in place of icons when cycling</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../xfwm_compositor_settings.ui" line="144"/>
+        <source>Display fullscreen overlay windows directly</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../xfwm_compositor_settings.ui" line="183"/>
+        <source>Inactive windows</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../xfwm_compositor_settings.ui" line="190"/>
+        <source>Synchronize drawing to vertical blank</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../xfwm_compositor_settings.ui" line="212"/>
+        <source>Close</source>
+        <translation>Užverti</translation>
+    </message>
+    <message>
+        <location filename="../xfwm_compositor_settings.cpp" line="38"/>
+        <source>Xfwm Compositor Settings</source>
+        <translation type="unfinished"/>
     </message>
 </context>
 </TS>
