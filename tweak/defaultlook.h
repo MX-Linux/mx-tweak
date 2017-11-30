@@ -63,6 +63,7 @@ public:
     QString pluginidsystray;
     QString plugintasklist;
     QStringList undotheme;
+    bool hibernate_flag;
 
     void setup();
     void setupuiselections();
