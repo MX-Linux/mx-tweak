@@ -472,10 +472,8 @@ void defaultlook::on_buttonAbout_clicked()
 // Help button clicked
 void defaultlook::on_buttonHelp_clicked()
 {
-    this->hide();
-    QString cmd = QString("mx-viewer https://mxlinux.org/wiki/help-files/help-mx-tweak '%1'").arg(tr("MX Tweak"));
+    QString cmd = QString("mx-viewer https://mxlinux.org/wiki/help-files/help-mx-tweak '%1' &").arg(tr("MX Tweak"));
     system(cmd.toUtf8());
-    this->show();
 }
 
 void defaultlook::message()
@@ -484,7 +482,7 @@ void defaultlook::message()
     if ( system(cmd.toUtf8()) != 0 ) {
         qDebug() << "Firefox not running" ;
     } else {
-        QMessageBox::information(0, tr("MX Default Look"),
+        QMessageBox::information(0, tr("MX Tweak"),
                              tr("Finished! Firefox may require a restart for changes to take effect"));
     }
 }
@@ -813,8 +811,10 @@ void defaultlook::setupEtc()
     test = runCmd("xfconf-query -c xfce4-session -p /shutdown/ShowHibernate").output;
     if ( test == "true") {
         ui->checkBoxHibernate->setChecked(true);
+        hibernate_flag = true;
     } else {
         ui->checkBoxHibernate->setChecked(false);
+        hibernate_flag = false;
     }
 }
 
@@ -1212,12 +1212,14 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     }
 
     //deal with hibernate
-    if (ui->checkBoxHibernate->isChecked()) {
-        system("xfconf-query -c xfce4-session -p /shutdown/ShowHibernate -s true --create");
-    } else {
-        system("xfconf-query -c xfce4-session -p /shutdown/ShowHibernate -s false --create");
+    if (ui->checkBoxHibernate->isChecked() != hibernate_flag) {
+        if (ui->checkBoxHibernate->isChecked()) {
+            runCmd("gksu 'x-terminal-emulator -e tweak-update-initramfs.sh'");
+            system("xfconf-query -c xfce4-session -p /shutdown/ShowHibernate -s true --create");
+        } else {
+            system("xfconf-query -c xfce4-session -p /shutdown/ShowHibernate -s false --create");
+        }
     }
-
     //reset gui
     setupEtc();
 }
