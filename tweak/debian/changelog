@@ -1,3 +1,10 @@
+mx-tweak (17.11.05) mx; urgency=medium
+
+  * updated help button
+  * add initrd update to hibernate 
+
+ -- dolphinoracle <dolphin@littlebyte>  Thu, 30 Nov 2017 18:45:27 -0500
+
 mx-tweak (17.11.04) mx; urgency=medium
 
   * minor update to hibernate text
