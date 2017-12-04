@@ -568,7 +568,7 @@
              </widget>
             </item>
             <item row="7" column="0">
-             <widget class="QLabel" name="label_10">
+             <widget class="QLabel" name="label_hibernate">
               <property name="text">
                <string>                   note: to hibernate, swap needs to be &gt;= RAM) </string>
               </property>
