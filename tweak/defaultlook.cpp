@@ -806,7 +806,26 @@ void defaultlook::setupEtc()
     qDebug() << test;
     if ( test == "aufs" || test == "overlay" ) {
         ui->checkBoxHibernate->hide();
+        ui->label_hibernate->hide();
     }
+
+    //hide hibernate if there is no swap
+    int swaptest = runCmd("blkid |grep -q swap").exitCode;
+    qDebug () << "swaptest is " << swaptest;
+    if (swaptest != 0) {
+        ui->checkBoxHibernate->hide();
+        ui->label_hibernate->hide();
+    }
+
+    // also hide hibernate if /etc/uswsusp.conf is missing
+    QFileInfo file("/etc/uswsusp.conf");
+    if (file.exists()) {
+        qDebug() << "uswsusp.conf found";
+    }else {
+        ui->checkBoxHibernate->hide();
+        ui->label_hibernate->hide();
+    }
+
     //set checkbox
     test = runCmd("xfconf-query -c xfce4-session -p /shutdown/ShowHibernate").output;
     if ( test == "true") {
