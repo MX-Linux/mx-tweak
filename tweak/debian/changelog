@@ -1,3 +1,15 @@
+mx-tweak (17.12.01) mx; urgency=medium
+
+  * use QDialog instead of QMainWindow
+
+ -- dolphinoracle <dolphinoracle@gmail.com>  Sat, 09 Dec 2017 16:48:32 -0500
+ 
+mx-tweak (17.12) UNRELEASED; urgency=medium
+
+  * fixed swap test 
+
+ -- dolphinoracle <dolphinoracle@gmail.com>  Mon, 04 Dec 2017 04:01:56 -0500
+
 mx-tweak (17.11.07) mx; urgency=medium
 
   * and more hibernate adjustments 
