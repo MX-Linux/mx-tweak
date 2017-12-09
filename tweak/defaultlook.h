@@ -25,7 +25,7 @@
 #ifndef DEFAULTLOOK_H
 #define DEFAULTLOOK_H
 
-#include <QMainWindow>
+#include <QDialog>
 #include <QMessageBox>
 #include <QProcess>
 #include <QFile>
@@ -40,7 +40,7 @@ struct Result {
     QString output;
 };
 
-class defaultlook : public QMainWindow
+class defaultlook : public QDialog
 {
     Q_OBJECT
 
