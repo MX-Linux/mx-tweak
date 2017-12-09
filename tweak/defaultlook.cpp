@@ -33,7 +33,7 @@
 #include "xfwm_compositor_settings.h"
 
 defaultlook::defaultlook(QWidget *parent) :
-    QMainWindow(parent),
+    QDialog(parent),
     ui(new Ui::defaultlook)
 {
     ui->setupUi(this);
@@ -810,7 +810,8 @@ void defaultlook::setupEtc()
     }
 
     //hide hibernate if there is no swap
-    int swaptest = runCmd("blkid |grep -q swap").exitCode;
+    QString cmd = "/sbin/blkid |grep -q swap";
+    int swaptest = system(cmd.toUtf8());
     qDebug () << "swaptest is " << swaptest;
     if (swaptest != 0) {
         ui->checkBoxHibernate->hide();
