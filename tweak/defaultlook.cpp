@@ -472,8 +472,18 @@ void defaultlook::on_buttonAbout_clicked()
 // Help button clicked
 void defaultlook::on_buttonHelp_clicked()
 {
-    QString cmd = QString("mx-viewer https://mxlinux.org/wiki/help-files/help-mx-tweak '%1' &").arg(tr("MX Tweak"));
+    QLocale locale;
+    QString lang = locale.bcp47Name();
+
+    QString url = "https://mxlinux.org/wiki/help-files/help-mx-tweak";
+
+    if (lang.startsWith("fr")) {
+        url = "https://mxlinux.org/wiki/help-files/help-tweak-ajustements";
+    }
+
+    QString cmd = QString("mx-viewer %1 '%2' &").arg(url).arg(tr("MX Tweak"));
     system(cmd.toUtf8());
+
 }
 
 void defaultlook::message()
