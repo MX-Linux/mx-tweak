@@ -70,6 +70,7 @@ public:
     void setuppanel();
     void setuptheme();
     void setupEtc();
+    void setupConfigoptions();
     void setupComboTheme();
     void fliptohorizontal();
     void fliptovertical();
@@ -162,6 +163,12 @@ private slots:
     void on_pushButtonPreview_clicked();
 
     void on_checkBoxHibernate_clicked();
+
+    void on_ButtonApplyMiscDefualts_clicked();
+
+    void on_checkBoxLightdmReset_clicked();
+
+    void on_checkBoxThunarCAReset_clicked();
 
 private:
     Ui::defaultlook *ui;

@@ -72,6 +72,8 @@ void defaultlook::setup()
     //set panel tab as default
     ui->tabWidget->setCurrentIndex(0);
     ui->buttonThemeUndo->setEnabled(false);
+    //setup Config Options
+    setupConfigoptions();
 
     //copy template file to ~/.local/share/mx-tweak-data if it doesn't exist
     QString home_path = QDir::homePath();
@@ -921,6 +923,11 @@ void defaultlook::setupCompositor()
 
 }
 
+void defaultlook::setupConfigoptions()
+{
+  ui->ButtonApplyMiscDefualts->setEnabled(false);
+}
+
 void defaultlook::CheckComptonRunning()
 {
     //Index for combo box:  0=none, 1=xfce, 2=compton
@@ -1520,4 +1527,31 @@ void defaultlook::on_pushButtonPreview_clicked()
 void defaultlook::on_checkBoxHibernate_clicked()
 {
     ui->ButtonApplyEtc->setEnabled(true);
+}
+
+void defaultlook::on_ButtonApplyMiscDefualts_clicked()
+{
+    if (ui->checkBoxThunarCAReset->isChecked()) {
+        QString cmd = "cp /home/$USER/.config/Thunar/uca.xml /home/$USER/.config/Thunar/uca.xml.$(date +%Y%m%H%M%S)";
+        system(cmd.toUtf8());
+        runCmd("cp /etc/skel/.config/Thunar/uca.xml /home/$USER/.config/Thunar/uca.xml");
+    }
+
+    if (ui->checkBoxLightdmReset->isChecked()) {
+        QString cmd = "gnome-keyring-daemon -r -d";
+        system(cmd.toUtf8());
+        cmd = "gksu 'cp /etc/lightdm/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf.$(date +%Y%m%H%M%S); cp /etc/lightdm/mx$(lsb_release -rs)/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf'";
+        system(cmd.toUtf8());
+    }
+    setupConfigoptions();
+}
+
+void defaultlook::on_checkBoxLightdmReset_clicked()
+{
+    ui->ButtonApplyMiscDefualts->setEnabled(true);
+}
+
+void defaultlook::on_checkBoxThunarCAReset_clicked()
+{
+    ui->ButtonApplyMiscDefualts->setEnabled(true);
 }
