@@ -1,8 +1,14 @@
+mx-tweak (18.02.01) mx; urgency=medium
+
+  * new config options tab and new translations 
+
+ --  <dolphin@littlebyte>  Tue, 20 Feb 2018 20:36:04 -0500
+
 mx-tweak (17.12.03) mx; urgency=medium
 
   * updating translations
 
- -- dolphinoracle <dolphinoracle@gmail.com  Tue, 12 Dec 2017 18:21:51 -0500
+ -- dolphinoracle <dolphinoracle@gmail.com>  Tue, 12 Dec 2017 18:21:51 -0500
 
 mx-tweak (17.12.02) mx; urgency=medium
 
