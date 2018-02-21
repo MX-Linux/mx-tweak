@@ -927,7 +927,7 @@ void defaultlook::setupConfigoptions()
 {
   ui->ButtonApplyMiscDefualts->setEnabled(false);
   ui->checkBoxLightdmReset->setChecked(false);
-  ui->checkBoxThunarCAReset->setchecked(false);
+  ui->checkBoxThunarCAReset->setChecked(false);
 }
 
 void defaultlook::CheckComptonRunning()
