@@ -176,12 +176,12 @@
     <message>
         <location filename="defaultlook.ui" line="485"/>
         <source>Config Options</source>
-        <translation type="unfinished"/>
+        <translation>Config. Opzioni</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="493"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
-        <translation type="unfinished"/>
+        <translation>Reimposta Lightdm (shermata di login) al tema di default del sistema</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="500"/>
@@ -226,12 +226,12 @@
     <message>
         <location filename="defaultlook.ui" line="620"/>
         <source>Enable hibernate on Log Out menu </source>
-        <translation type="unfinished"/>
+        <translation>Abilita l&apos;ibernazione sul menu di chiusura</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="627"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
-        <translation type="unfinished"/>
+        <translation>                   nota: per l&apos;ibernazione, la swap deve essere &gt;= RAM</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="662"/>
@@ -340,7 +340,7 @@
         <translation>Le tue attuali impostazioni del pannello sono state ricopiate in una cartella nascosta chiamata .restore presente nella tua cartella utente (~/.restore/) </translation>
     </message>
     <message>
-        <location filename="defaultlook.cpp" line="987"/>
+        <location filename="defaultlook.cpp" line="989"/>
         <source>Choose a theme set</source>
         <translation>Scegli un set di temi</translation>
     </message>
