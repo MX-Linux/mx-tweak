@@ -1,4 +1,4 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="am" version="2.1">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="zh_TW" version="2.1">
 <context>
     <name>defaultlook</name>
     <message>
@@ -10,13 +10,13 @@
         <location filename="defaultlook.cpp" line="497"/>
         <location filename="defaultlook.cpp" line="507"/>
         <source>MX Tweak</source>
-        <translation>MX ማሻሻያ </translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.ui" line="39"/>
         <location filename="defaultlook.ui" line="685"/>
         <source>Panel</source>
-        <translation>ክፍል</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.ui" line="60"/>
@@ -41,37 +41,37 @@
     <message>
         <location filename="defaultlook.ui" line="94"/>
         <source>Display panel vertically</source>
-        <translation>ክፍል በ ቁመት ማሳያ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.ui" line="108"/>
         <source>Bottom</source>
-        <translation>ከ ታች</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.ui" line="113"/>
         <source>Top</source>
-        <translation>ከ ላይ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.ui" line="121"/>
         <source>Display panel horizontally</source>
-        <translation>ክፍል በ አግድም ማሳያ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.ui" line="135"/>
         <source>Left</source>
-        <translation>በ ግራ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.ui" line="140"/>
         <source>Right</source>
-        <translation>በ ቀኝ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.ui" line="148"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Affects all panels&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;ሁሉም አካሎች ላይ ተፅእኖ ይፈጥራል&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.ui" line="176"/>
@@ -80,17 +80,17 @@
         <location filename="defaultlook.ui" line="513"/>
         <location filename="defaultlook.ui" line="568"/>
         <source>Apply</source>
-        <translation>መፈጸሚያ</translation>
+        <translation>使用</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="199"/>
         <source>Theme</source>
-        <translation>ገፅታ</translation>
+        <translation>主題</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="213"/>
         <source>Theme Options</source>
-        <translation>የ ገጽታ ምርጫዎች</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.ui" line="243"/>
@@ -110,12 +110,12 @@
     <message>
         <location filename="defaultlook.ui" line="305"/>
         <source>Undo</source>
-        <translation>መተው</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.ui" line="312"/>
         <source>Preview</source>
-        <translation>ቅድመ እይታ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.ui" line="322"/>
@@ -131,12 +131,12 @@
     <message>
         <location filename="defaultlook.ui" line="346"/>
         <source>Xfwm Settings</source>
-        <translation>Xfwm ማሰናጃ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.ui" line="370"/>
         <source>None</source>
-        <translation>ምንም</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.ui" line="375"/>
@@ -156,7 +156,7 @@
     <message>
         <location filename="defaultlook.ui" line="391"/>
         <source>Edit compton.conf</source>
-        <translation>Compton ማሰናጃ ማረሚያ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.ui" line="422"/>
@@ -166,17 +166,17 @@
     <message>
         <location filename="defaultlook.ui" line="429"/>
         <source>Launch compton-conf configuration tool</source>
-        <translation>compton -ማስጀመሪያ-ማሰናጃ: የ ማሰናጃ መሳሪያዎች</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.ui" line="432"/>
         <source>Compton settings</source>
-        <translation>Compton ማሰናጃ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.ui" line="485"/>
         <source>Config Options</source>
-        <translation>የ ማሰናጃ ምርጫዎች</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.ui" line="493"/>
@@ -191,7 +191,7 @@
     <message>
         <location filename="defaultlook.ui" line="540"/>
         <source>Other</source>
-        <translation>ሌላ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.ui" line="548"/>
@@ -236,12 +236,12 @@
     <message>
         <location filename="defaultlook.ui" line="662"/>
         <source>Xfce Settings</source>
-        <translation>የ Xfce ማሰናጃ </translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.ui" line="671"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the panel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ክፍል ማስተካከያ&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.ui" line="705"/>
@@ -261,27 +261,27 @@
     <message>
         <location filename="defaultlook.ui" line="753"/>
         <source>Appearance</source>
-        <translation>አቀራረብ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.ui" line="831"/>
         <source>About</source>
-        <translation>ስለ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.ui" line="842"/>
         <source>Help</source>
-        <translation>እርዳታ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.ui" line="859"/>
         <source>Quit application</source>
-        <translation>መተግበሪያ ማጥፊያ</translation>
+        <translation>退出程式</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="862"/>
         <source>Close</source>
-        <translation>መዝጊያ</translation>
+        <translation>關閉</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="869"/>
@@ -291,12 +291,12 @@
     <message>
         <location filename="defaultlook.cpp" line="461"/>
         <source>About MX Tweak</source>
-        <translation>ስለ የ MX ማስተካከያ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="462"/>
         <source>Version: </source>
-        <translation>እትም</translation>
+        <translation>版本：</translation>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="463"/>
@@ -306,18 +306,18 @@
     <message>
         <location filename="defaultlook.cpp" line="465"/>
         <source>Copyright (c) MX Linux</source>
-        <translation>የ ቅጂ መብት (c) MX Linux</translation>
+        <translation>版權所有 (c) MX Linux</translation>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="466"/>
         <location filename="defaultlook.cpp" line="469"/>
         <source>License</source>
-        <translation>ፍቃድ</translation>
+        <translation>授權條款</translation>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="467"/>
         <source>Cancel</source>
-        <translation>መሰረዣ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="498"/>
@@ -332,7 +332,7 @@
     <message>
         <location filename="defaultlook.cpp" line="650"/>
         <source>Panel settings</source>
-        <translation>ክፍል ማሰናጃ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="651"/>
@@ -342,7 +342,7 @@
     <message>
         <location filename="defaultlook.cpp" line="989"/>
         <source>Choose a theme set</source>
-        <translation>የ ገጽታ ማሰናጃ ይምረጡ</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -350,17 +350,17 @@
     <message>
         <location filename="xfwm_compositor_settings.ui" line="14"/>
         <source>Dialog</source>
-        <translation>ንግግር</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="xfwm_compositor_settings.ui" line="42"/>
         <source>Popup Windows</source>
-        <translation>ብቅ ባይ መስኮት</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="xfwm_compositor_settings.ui" line="49"/>
         <source>Windows during move</source>
-        <translation>መስኮት በሚንቀሳቀስ ጊዜ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="xfwm_compositor_settings.ui" line="56"/>
@@ -370,7 +370,7 @@
     <message>
         <location filename="xfwm_compositor_settings.ui" line="79"/>
         <source>Window decorations</source>
-        <translation>መስኮት ማስጌጫ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="xfwm_compositor_settings.ui" line="86"/>
@@ -395,7 +395,7 @@
     <message>
         <location filename="xfwm_compositor_settings.ui" line="130"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Feature Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;ገጽታ ማሰናጃ &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="xfwm_compositor_settings.ui" line="137"/>
@@ -420,7 +420,7 @@
     <message>
         <location filename="xfwm_compositor_settings.ui" line="212"/>
         <source>Close</source>
-        <translation>መዝጊያ</translation>
+        <translation>關閉</translation>
     </message>
     <message>
         <location filename="xfwm_compositor_settings.cpp" line="38"/>

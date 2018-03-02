@@ -176,17 +176,17 @@
     <message>
         <location filename="defaultlook.ui" line="485"/>
         <source>Config Options</source>
-        <translation type="unfinished"/>
+        <translation>Opciones para configurar</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="493"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
-        <translation type="unfinished"/>
+        <translation>Restablecer Lightdm (pantalla de inicio) a la tema predeterminado</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="500"/>
         <source>Reset Thunar custom right-click actions to system defaults</source>
-        <translation type="unfinished"/>
+        <translation>Reestablecer las acciones personalizados de Thunar a los predeterminados</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="540"/>
@@ -340,7 +340,7 @@
         <translation> Su configuración del panel se ha respaldado en una carpeta oculta llamada .restore en su folder home (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="defaultlook.cpp" line="987"/>
+        <location filename="defaultlook.cpp" line="989"/>
         <source>Choose a theme set</source>
         <translation>Escoger un juego de tema</translation>
     </message>

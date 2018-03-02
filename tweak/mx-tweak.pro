@@ -43,7 +43,8 @@ TRANSLATIONS += translations/mx-tweak_am.ts \
                 translations/mx-tweak_sk.ts \
                 translations/mx-tweak_sv.ts \
                 translations/mx-tweak_tr.ts \
-                translations/mx-tweak_uk.ts
+                translations/mx-tweak_uk.ts \
+                translations/mx-tweak_zh_TW.ts
 
 RESOURCES += \
     images.qrc
