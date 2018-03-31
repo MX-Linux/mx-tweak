@@ -925,9 +925,24 @@ void defaultlook::setupCompositor()
 
 void defaultlook::setupConfigoptions()
 {
+  ui->checkboxIntelDriver->hide();
   ui->ButtonApplyMiscDefualts->setEnabled(false);
   ui->checkBoxLightdmReset->setChecked(false);
   ui->checkBoxThunarCAReset->setChecked(false);
+
+  //setup Intel checkbox
+
+  if ( system("lspci |grep VGA |grep -q Intel ") == 0) {
+      ui->checkboxIntelDriver->show();
+  }
+
+  QFileInfo intelfile("/etc/X11/xorg.conf.d/20-intel.conf");
+  if ( intelfile.exists()) {
+      ui->checkboxIntelDriver->setChecked(true);
+      Intel_flag = false ;//set false if box is checked by default.  we will set true if manually checked.
+  }else {
+      ui->checkboxIntelDriver->setChecked(false);
+  }
 }
 
 void defaultlook::CheckComptonRunning()
@@ -1105,12 +1120,14 @@ void defaultlook::on_buttonThemeApply_clicked()
     QFileInfo whisker_check(home_path + "/.gtkrc-2.0");
     if (whisker_check.exists()) {
         qDebug() << "existing gtkrc-2.0 found";
+        //fix problem with original tweak setup
+        runCmd("sed -i '/[[:space:]].local\\/share\\/mx-tweak-data\\/whisker-tweak.rc/d' " + whisker_check.absoluteFilePath());
         QString cmd = "cat " + home_path + "/.gtkrc-2.0 |grep -q whisker-tweak.rc";
         if (system(cmd.toUtf8()) == 0 ) {
             qDebug() << "include statement found";
         } else {
             qDebug() << "adding include statement";
-            QString cmd = "echo include \".local/share/mx-tweak-data/whisker-tweak.rc\" >> " + home_path + "/.gtkrc-2.0";
+            QString cmd = "echo 'include \".local/share/mx-tweak-data/whisker-tweak.rc\"' >> " + home_path + "/.gtkrc-2.0";
             system(cmd.toUtf8());
         }
     }else {
@@ -1545,6 +1562,27 @@ void defaultlook::on_ButtonApplyMiscDefualts_clicked()
         cmd = "gksu 'cp /etc/lightdm/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf.$(date +%Y%m%H%M%S); cp /etc/lightdm/mx$(lsb_release -rs)/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf'";
         system(cmd.toUtf8());
     }
+
+    if ( Intel_flag ) {
+        QFileInfo check_intel("/etc/X11/xorg.conf.d/20-intel.conf");
+        QString cmd;
+        if ( check_intel.exists()){
+            //backup existing 20-intel.conf file to home folder
+            cmd = "cp /etc/X11/xorg.conf.d/20-intel.conf /home/$USER/20-intel.conf.$(date +%Y%m%H%M%S)";
+            system(cmd.toUtf8());
+        }
+        if (ui->checkboxIntelDriver->isChecked()) {
+            //copy mx-tweak version to xorg.conf.d directory
+            cmd = "gksu 'cp /usr/share/mx-tweak/20-intel.conf /etc/X11/xorg.conf.d/20-intel.conf'";
+            system(cmd.toUtf8());
+        } else {
+            //remove 20-intel.conf
+            cmd = "gksu 'rm /etc/X11/xorg.conf.d/20-intel.conf'";
+            system(cmd.toUtf8());
+        }
+    }
+
+
     setupConfigoptions();
 }
 
@@ -1555,5 +1593,12 @@ void defaultlook::on_checkBoxLightdmReset_clicked()
 
 void defaultlook::on_checkBoxThunarCAReset_clicked()
 {
+    ui->ButtonApplyMiscDefualts->setEnabled(true);
+}
+
+void defaultlook::on_checkboxIntelDriver_clicked()
+{
+    //toggle flag for action.  this way, if box was checked initially, the action won't take place again.
+    Intel_flag = true;
     ui->ButtonApplyMiscDefualts->setEnabled(true);
 }

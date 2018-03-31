@@ -1,3 +1,10 @@
+mx-tweak (18.03.02) mx; urgency=medium
+
+  * tweak whisker theme problem
+  * added 20-intel.conf override
+
+ --  <dolphinoracle@gmail.com>  Sat, 31 Mar 2018 11:15:24 -0400
+
 mx-tweak (18.03.01) mx; urgency=medium
 
   *  bump changelog, new translations
