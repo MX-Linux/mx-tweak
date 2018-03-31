@@ -64,7 +64,7 @@ public:
     QString plugintasklist;
     QStringList undotheme;
     bool hibernate_flag;
-
+    bool Intel_flag;
     void setup();
     void setupuiselections();
     void setuppanel();
@@ -169,6 +169,8 @@ private slots:
     void on_checkBoxLightdmReset_clicked();
 
     void on_checkBoxThunarCAReset_clicked();
+
+    void on_checkboxIntelDriver_clicked();
 
 private:
     Ui::defaultlook *ui;

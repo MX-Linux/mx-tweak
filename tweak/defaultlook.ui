@@ -501,7 +501,7 @@
              </property>
             </widget>
            </item>
-           <item row="4" column="0">
+           <item row="6" column="0">
             <widget class="QPushButton" name="ButtonApplyMiscDefualts">
              <property name="minimumSize">
               <size>
@@ -518,7 +518,7 @@
              </property>
             </widget>
            </item>
-           <item row="3" column="0">
+           <item row="5" column="0">
             <spacer name="verticalSpacer_10">
              <property name="orientation">
               <enum>Qt::Vertical</enum>
@@ -530,6 +530,20 @@
               </size>
              </property>
             </spacer>
+           </item>
+           <item row="3" column="0">
+            <widget class="QCheckBox" name="checkboxIntelDriver">
+             <property name="text">
+              <string>Use intel driver instead of default &quot;modsetting&quot; driver (requires restart)</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_10">
+             <property name="text">
+              <string>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</string>
+             </property>
+            </widget>
            </item>
           </layout>
          </item>
