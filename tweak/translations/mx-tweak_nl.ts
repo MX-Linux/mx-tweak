@@ -14,7 +14,7 @@
     </message>
     <message>
         <location filename="defaultlook.ui" line="39"/>
-        <location filename="defaultlook.ui" line="685"/>
+        <location filename="defaultlook.ui" line="699"/>
         <source>Panel</source>
         <translation>Paneel</translation>
     </message>
@@ -78,7 +78,7 @@
         <location filename="defaultlook.ui" line="279"/>
         <location filename="defaultlook.ui" line="449"/>
         <location filename="defaultlook.ui" line="513"/>
-        <location filename="defaultlook.ui" line="568"/>
+        <location filename="defaultlook.ui" line="582"/>
         <source>Apply</source>
         <translation>Toepassen</translation>
     </message>
@@ -189,102 +189,112 @@
         <translation>Herstel Thunar aangepaste rechts-klik acties naar systeem standaard</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="540"/>
+        <location filename="defaultlook.ui" line="537"/>
+        <source>Use intel driver instead of default &quot;modsetting&quot; driver (requires restart)</source>
+        <translation>Gebruik intel driver in plaats van standaard &quot;modsetting&quot; driver (vereist herstart)</translation>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="544"/>
+        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
+        <translation>NOOT: bestaande /etc/X11/xorg.conf.d/20-intel.conf zal gebackupped worden in de home folder</translation>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="554"/>
         <source>Other</source>
         <translation>Ander</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="548"/>
+        <location filename="defaultlook.ui" line="562"/>
         <source>Enable single-click on desktop</source>
         <translation>Schakel enkel-klik op desktop in</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="555"/>
+        <location filename="defaultlook.ui" line="569"/>
         <source>Enable single-click in Thunar File Manager</source>
         <translation>Schakel enkel-klik in Thunar Bestandbeheer in</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="592"/>
+        <location filename="defaultlook.ui" line="606"/>
         <source>Show systray (notification area) frame</source>
         <translation>Laat systeemtray (notificatiegebied) venster zien</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="599"/>
+        <location filename="defaultlook.ui" line="613"/>
         <source>Show windows from all workspaces in panel</source>
         <translation>Laat schermen van alle werkgebieden in paneel zien</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="606"/>
+        <location filename="defaultlook.ui" line="620"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>Maak koppelen van interne schijven door niet-root gebruikers mogelijk</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="613"/>
+        <location filename="defaultlook.ui" line="627"/>
         <source>Disable shortening of long filenames on the desktop</source>
         <translation>Schakel verkorten van lange bestandsnamen op de desktop uit</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="620"/>
+        <location filename="defaultlook.ui" line="634"/>
         <source>Enable hibernate on Log Out menu </source>
         <translation>Schakel slaapstand in in Afmeldmenu</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="627"/>
+        <location filename="defaultlook.ui" line="641"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
         <translation>                   let op: voor slaapstand moet swap &gt;= RAM</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="662"/>
+        <location filename="defaultlook.ui" line="676"/>
         <source>Xfce Settings</source>
         <translation>Xfce Instellingen</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="671"/>
+        <location filename="defaultlook.ui" line="685"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the panel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Het paneel aanpassen&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="705"/>
+        <location filename="defaultlook.ui" line="719"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configure window behavior and shortcuts&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configureer schermgedrag en snelkoppelingen&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="719"/>
+        <location filename="defaultlook.ui" line="733"/>
         <source>Window Manager</source>
         <translation>Schermbeheer</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="739"/>
+        <location filename="defaultlook.ui" line="753"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the look of your desktop&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pas het uiterlijk van uw desktop aan&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="753"/>
+        <location filename="defaultlook.ui" line="767"/>
         <source>Appearance</source>
         <translation>Uiterlijk</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="831"/>
+        <location filename="defaultlook.ui" line="845"/>
         <source>About</source>
         <translation>Over</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="842"/>
+        <location filename="defaultlook.ui" line="856"/>
         <source>Help</source>
         <translation>Hulp</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="859"/>
+        <location filename="defaultlook.ui" line="873"/>
         <source>Quit application</source>
         <translation>Verlaat de applicatie</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="862"/>
+        <location filename="defaultlook.ui" line="876"/>
         <source>Close</source>
         <translation>Sluiten</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="869"/>
+        <location filename="defaultlook.ui" line="883"/>
         <source>Alt+N</source>
         <translation>Alt+N</translation>
     </message>
@@ -340,7 +350,7 @@
         <translation>Uw huidige paneelinstellingen zijn gebackupt in een verborgen folder genaamd .restore in uw home folder (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="defaultlook.cpp" line="987"/>
+        <location filename="defaultlook.cpp" line="1004"/>
         <source>Choose a theme set</source>
         <translation>Kies een thema set</translation>
     </message>

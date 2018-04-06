@@ -14,7 +14,7 @@
     </message>
     <message>
         <location filename="defaultlook.ui" line="39"/>
-        <location filename="defaultlook.ui" line="685"/>
+        <location filename="defaultlook.ui" line="699"/>
         <source>Panel</source>
         <translation>Plafó </translation>
     </message>
@@ -78,7 +78,7 @@
         <location filename="defaultlook.ui" line="279"/>
         <location filename="defaultlook.ui" line="449"/>
         <location filename="defaultlook.ui" line="513"/>
-        <location filename="defaultlook.ui" line="568"/>
+        <location filename="defaultlook.ui" line="582"/>
         <source>Apply</source>
         <translation>Aplica</translation>
     </message>
@@ -189,102 +189,112 @@
         <translation>Reinicia les accions de Thunar amb el botó dret als valors del sistema</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="540"/>
+        <location filename="defaultlook.ui" line="537"/>
+        <source>Use intel driver instead of default &quot;modsetting&quot; driver (requires restart)</source>
+        <translation>Usa el controlador intel en lloc de &quot;modesetting&quot; per omissió, (cal reiniciar)</translation>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="544"/>
+        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
+        <translation>          NOTA: es farà còpia de seguretat del fitxer /etc/X11/xorg.conf.d/20-intel.conf al directori d&apos;usuari</translation>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="554"/>
         <source>Other</source>
         <translation>Altres</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="548"/>
+        <location filename="defaultlook.ui" line="562"/>
         <source>Enable single-click on desktop</source>
         <translation>Activa clic únic a l&apos;escriptori</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="555"/>
+        <location filename="defaultlook.ui" line="569"/>
         <source>Enable single-click in Thunar File Manager</source>
         <translation>Activa clic únic al Gestor de Fitxers Thunar</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="592"/>
+        <location filename="defaultlook.ui" line="606"/>
         <source>Show systray (notification area) frame</source>
         <translation>Mostra el marc de systray (àrea de notificació)</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="599"/>
+        <location filename="defaultlook.ui" line="613"/>
         <source>Show windows from all workspaces in panel</source>
         <translation>Mostra les finestres de tots els espais de treball al plafó</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="606"/>
+        <location filename="defaultlook.ui" line="620"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>Activa el muntatge de discos interns per qualsevol usuari</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="613"/>
+        <location filename="defaultlook.ui" line="627"/>
         <source>Disable shortening of long filenames on the desktop</source>
         <translation>desactiva el truncament de noms de fitxer llargs a l&apos;escriptori</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="620"/>
+        <location filename="defaultlook.ui" line="634"/>
         <source>Enable hibernate on Log Out menu </source>
         <translation>Activa &apos;hiberna&apos; al Menú de Sortida</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="627"/>
+        <location filename="defaultlook.ui" line="641"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
         <translation>                   nota: per hibernar, cal una swap  &gt;= RAM</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="662"/>
+        <location filename="defaultlook.ui" line="676"/>
         <source>Xfce Settings</source>
         <translation>Paràmetres de Xfce</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="671"/>
+        <location filename="defaultlook.ui" line="685"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the panel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Personalitza el plafó&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="705"/>
+        <location filename="defaultlook.ui" line="719"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configure window behavior and shortcuts&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configura el comportament de finestres i dreceres&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="719"/>
+        <location filename="defaultlook.ui" line="733"/>
         <source>Window Manager</source>
         <translation>Gestor de Finestres</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="739"/>
+        <location filename="defaultlook.ui" line="753"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the look of your desktop&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Personalitzeu l&apos;aspecte de l&apos;escriptori&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="753"/>
+        <location filename="defaultlook.ui" line="767"/>
         <source>Appearance</source>
         <translation>Aspecte </translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="831"/>
+        <location filename="defaultlook.ui" line="845"/>
         <source>About</source>
         <translation>Quant a </translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="842"/>
+        <location filename="defaultlook.ui" line="856"/>
         <source>Help</source>
         <translation>Ajuda </translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="859"/>
+        <location filename="defaultlook.ui" line="873"/>
         <source>Quit application</source>
         <translation>Surt de l&apos;aplicació</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="862"/>
+        <location filename="defaultlook.ui" line="876"/>
         <source>Close</source>
         <translation>Tanca</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="869"/>
+        <location filename="defaultlook.ui" line="883"/>
         <source>Alt+N</source>
         <translation>Alt+N</translation>
     </message>
@@ -340,7 +350,7 @@
         <translation> S&apos;ha fet còpia de seguretat dels ajustos del plafó en una carpeta amagada anomenada .restore a la vostra carpeta d&apos;usuari (~/.restore)</translation>
     </message>
     <message>
-        <location filename="defaultlook.cpp" line="987"/>
+        <location filename="defaultlook.cpp" line="1004"/>
         <source>Choose a theme set</source>
         <translation>Trieu un conjunt de temes</translation>
     </message>

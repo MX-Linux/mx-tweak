@@ -14,7 +14,7 @@
     </message>
     <message>
         <location filename="defaultlook.ui" line="39"/>
-        <location filename="defaultlook.ui" line="685"/>
+        <location filename="defaultlook.ui" line="699"/>
         <source>Panel</source>
         <translation>Panel</translation>
     </message>
@@ -78,7 +78,7 @@
         <location filename="defaultlook.ui" line="279"/>
         <location filename="defaultlook.ui" line="449"/>
         <location filename="defaultlook.ui" line="513"/>
-        <location filename="defaultlook.ui" line="568"/>
+        <location filename="defaultlook.ui" line="582"/>
         <source>Apply</source>
         <translation>Använd</translation>
     </message>
@@ -189,102 +189,112 @@
         <translation>Återställ Thunars anpassade högerklick-händelser till systemstandard</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="540"/>
+        <location filename="defaultlook.ui" line="537"/>
+        <source>Use intel driver instead of default &quot;modsetting&quot; driver (requires restart)</source>
+        <translation>Använd intel drivrutin i stället för standard &quot;modsetting&quot;  drivrutin (kräver omstart)</translation>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="544"/>
+        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
+        <translation>ANMÄRKNING: existerande /etc/X11/xorg.conf.d/20-intel.conf kommer att backas upp i hemkatalogen</translation>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="554"/>
         <source>Other</source>
         <translation>Annat</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="548"/>
+        <location filename="defaultlook.ui" line="562"/>
         <source>Enable single-click on desktop</source>
         <translation>Aktivera singelklick på skrivbordet</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="555"/>
+        <location filename="defaultlook.ui" line="569"/>
         <source>Enable single-click in Thunar File Manager</source>
         <translation>Aktivera singelklick i Thunar Filhanterare</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="592"/>
+        <location filename="defaultlook.ui" line="606"/>
         <source>Show systray (notification area) frame</source>
         <translation>Visa systrays (meddelandefältets) ram</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="599"/>
+        <location filename="defaultlook.ui" line="613"/>
         <source>Show windows from all workspaces in panel</source>
         <translation>Visa fönster från alla arbetsytor i panelen</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="606"/>
+        <location filename="defaultlook.ui" line="620"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>Aktivera montering av interna hårddiskar för non-root användare</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="613"/>
+        <location filename="defaultlook.ui" line="627"/>
         <source>Disable shortening of long filenames on the desktop</source>
         <translation>Stäng av förkortning av långa filnamn på skrivbordet</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="620"/>
+        <location filename="defaultlook.ui" line="634"/>
         <source>Enable hibernate on Log Out menu </source>
         <translation>Aktivera viloläge på Utloggningsmenyn</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="627"/>
+        <location filename="defaultlook.ui" line="641"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
         <translation>anmärkning: för viloläge, swap måste vara &gt;= RAM</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="662"/>
+        <location filename="defaultlook.ui" line="676"/>
         <source>Xfce Settings</source>
         <translation>Xfce Inställningar</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="671"/>
+        <location filename="defaultlook.ui" line="685"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the panel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Anpassa panelen&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="705"/>
+        <location filename="defaultlook.ui" line="719"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configure window behavior and shortcuts&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Konfigurera fönsterbeteende och genvägar&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="719"/>
+        <location filename="defaultlook.ui" line="733"/>
         <source>Window Manager</source>
         <translation>Fönsterhanterare</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="739"/>
+        <location filename="defaultlook.ui" line="753"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the look of your desktop&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Anpassa ditt skrivbords utseende&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="753"/>
+        <location filename="defaultlook.ui" line="767"/>
         <source>Appearance</source>
         <translation>Utseende</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="831"/>
+        <location filename="defaultlook.ui" line="845"/>
         <source>About</source>
         <translation>Om</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="842"/>
+        <location filename="defaultlook.ui" line="856"/>
         <source>Help</source>
         <translation>Hjälp</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="859"/>
+        <location filename="defaultlook.ui" line="873"/>
         <source>Quit application</source>
         <translation>Avsluta programmet</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="862"/>
+        <location filename="defaultlook.ui" line="876"/>
         <source>Close</source>
         <translation>Stäng</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="869"/>
+        <location filename="defaultlook.ui" line="883"/>
         <source>Alt+N</source>
         <translation>Alt+N</translation>
     </message>
@@ -340,7 +350,7 @@
         <translation>Dina nuvarande panelinställningar har en backup i en dold mapp som heter .restore i din hemkatalog (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="defaultlook.cpp" line="987"/>
+        <location filename="defaultlook.cpp" line="1004"/>
         <source>Choose a theme set</source>
         <translation>Välj en temauppsättning</translation>
     </message>
