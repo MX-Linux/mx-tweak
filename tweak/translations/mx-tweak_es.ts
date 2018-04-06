@@ -10,11 +10,11 @@
         <location filename="defaultlook.cpp" line="497"/>
         <location filename="defaultlook.cpp" line="507"/>
         <source>MX Tweak</source>
-        <translation>MX Ajustes</translation>
+        <translation>MX Tweak</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="39"/>
-        <location filename="defaultlook.ui" line="685"/>
+        <location filename="defaultlook.ui" line="699"/>
         <source>Panel</source>
         <translation>Panel</translation>
     </message>
@@ -78,7 +78,7 @@
         <location filename="defaultlook.ui" line="279"/>
         <location filename="defaultlook.ui" line="449"/>
         <location filename="defaultlook.ui" line="513"/>
-        <location filename="defaultlook.ui" line="568"/>
+        <location filename="defaultlook.ui" line="582"/>
         <source>Apply</source>
         <translation>Aplicar</translation>
     </message>
@@ -189,102 +189,112 @@
         <translation>Reestablecer las acciones personalizados de Thunar a los predeterminados</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="540"/>
+        <location filename="defaultlook.ui" line="537"/>
+        <source>Use intel driver instead of default &quot;modsetting&quot; driver (requires restart)</source>
+        <translation>Usa controlador intel en vez del predeterminado controlador &apos;modesetting&apos; (se requiere reiniciar) </translation>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="544"/>
+        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
+        <translation>NOTA: el actual /etc/X11/xorg.conf.d/20-intel.conf será respaldado en la carpeta /home</translation>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="554"/>
         <source>Other</source>
         <translation>Otro</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="548"/>
+        <location filename="defaultlook.ui" line="562"/>
         <source>Enable single-click on desktop</source>
         <translation>Habilitar un solo clik en el escritorio</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="555"/>
+        <location filename="defaultlook.ui" line="569"/>
         <source>Enable single-click in Thunar File Manager</source>
         <translation>Habilitar un solo clik en Thunar gestor de archivos</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="592"/>
+        <location filename="defaultlook.ui" line="606"/>
         <source>Show systray (notification area) frame</source>
         <translation>Mostrar marco de systray (área de notificación)</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="599"/>
+        <location filename="defaultlook.ui" line="613"/>
         <source>Show windows from all workspaces in panel</source>
         <translation>Mostrar ventanas de todos los áreas de trabajos en el panel</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="606"/>
+        <location filename="defaultlook.ui" line="620"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>Habilitar montar discos internos por usuarios no-root</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="613"/>
+        <location filename="defaultlook.ui" line="627"/>
         <source>Disable shortening of long filenames on the desktop</source>
         <translation>Deshabilitar acortar nombres largos de archivos en el escritorio</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="620"/>
+        <location filename="defaultlook.ui" line="634"/>
         <source>Enable hibernate on Log Out menu </source>
         <translation>Habilitar Hibernar en el menú de Salida</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="627"/>
+        <location filename="defaultlook.ui" line="641"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
         <translation>                   nota: para hibernar, el swap debe ser &gt;= RAM</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="662"/>
+        <location filename="defaultlook.ui" line="676"/>
         <source>Xfce Settings</source>
         <translation>Xfce Ajustes</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="671"/>
+        <location filename="defaultlook.ui" line="685"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the panel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Personalizar el panel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="705"/>
+        <location filename="defaultlook.ui" line="719"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configure window behavior and shortcuts&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configurar comportamiento de ventana y atajos&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="719"/>
+        <location filename="defaultlook.ui" line="733"/>
         <source>Window Manager</source>
         <translation>Manejador de ventanas</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="739"/>
+        <location filename="defaultlook.ui" line="753"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the look of your desktop&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Personalizar la aparencia del escritorio&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="753"/>
+        <location filename="defaultlook.ui" line="767"/>
         <source>Appearance</source>
         <translation>Aparencia</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="831"/>
+        <location filename="defaultlook.ui" line="845"/>
         <source>About</source>
         <translation>Acerca de</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="842"/>
+        <location filename="defaultlook.ui" line="856"/>
         <source>Help</source>
         <translation>Ayuda</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="859"/>
+        <location filename="defaultlook.ui" line="873"/>
         <source>Quit application</source>
         <translation>Terminar aplicación</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="862"/>
+        <location filename="defaultlook.ui" line="876"/>
         <source>Close</source>
         <translation>Cerrar</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="869"/>
+        <location filename="defaultlook.ui" line="883"/>
         <source>Alt+N</source>
         <translation>Alt+N</translation>
     </message>
@@ -340,7 +350,7 @@
         <translation> Su configuración del panel se ha respaldado en una carpeta oculta llamada .restore en su folder home (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="defaultlook.cpp" line="989"/>
+        <location filename="defaultlook.cpp" line="1004"/>
         <source>Choose a theme set</source>
         <translation>Escoger un juego de tema</translation>
     </message>
