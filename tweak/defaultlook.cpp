@@ -926,6 +926,7 @@ void defaultlook::setupCompositor()
 void defaultlook::setupConfigoptions()
 {
   ui->checkboxIntelDriver->hide();
+  ui->labelIntel->hide();
   ui->ButtonApplyMiscDefualts->setEnabled(false);
   ui->checkBoxLightdmReset->setChecked(false);
   ui->checkBoxThunarCAReset->setChecked(false);
@@ -934,6 +935,7 @@ void defaultlook::setupConfigoptions()
 
   if ( system("lspci |grep VGA |grep -q Intel ") == 0) {
       ui->checkboxIntelDriver->show();
+      ui->labelIntel->show();
   }
 
   QFileInfo intelfile("/etc/X11/xorg.conf.d/20-intel.conf");

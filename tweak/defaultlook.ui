@@ -539,7 +539,7 @@
             </widget>
            </item>
            <item row="4" column="0">
-            <widget class="QLabel" name="label_10">
+            <widget class="QLabel" name="labelIntel">
              <property name="text">
               <string>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</string>
              </property>
