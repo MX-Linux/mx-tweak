@@ -1110,7 +1110,7 @@ void defaultlook::on_buttonThemeApply_clicked()
         //set panel color
 
         if (backgroundColor != "") {
-            runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-color -t int -t int -t int -t int -s " + color1 + " -s " + color2 + " -s " + color3 + " -s " + color4 + " --create");
+            runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-color -t uint -t uint -t uint -t uint -s " + color1 + " -s " + color2 + " -s " + color3 + " -s " + color4 + " --create");
         }
 
 
