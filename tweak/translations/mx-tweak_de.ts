@@ -181,22 +181,22 @@
     <message>
         <location filename="defaultlook.ui" line="493"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
-        <translation>Zurücksetzen von Lightdm (Login Bildschirm) auf die Systemvoreinstellung</translation>
+        <translation>Lightdm (Login Bildschirm) auf die Systemvoreinstellung zurücksetzen</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="500"/>
         <source>Reset Thunar custom right-click actions to system defaults</source>
-        <translation>Zurücksetzen der Aktionen von Thunar beim Rechts-Klick der Maus auf die Systemvoreinstellungen</translation>
+        <translation>Benutzerdefinierten Aktionen in Thunar auf die Systemvoreinstellungen zurücksetzen</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="537"/>
         <source>Use intel driver instead of default &quot;modsetting&quot; driver (requires restart)</source>
-        <translation type="unfinished"/>
+        <translation>Intel Treiber anstelle des voreingestellten &quot;modsetting&quot; Treibers benutzen (Neustart erforderlich)</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="544"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
-        <translation type="unfinished"/>
+        <translation>ANMERKUNG: Die existierende Datei /etc/X11/xorg.conf.d/20-intel.conf wird zur Sicherung in den &lt;HOME&gt;-Ordner verschoben </translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="554"/>
@@ -206,17 +206,17 @@
     <message>
         <location filename="defaultlook.ui" line="562"/>
         <source>Enable single-click on desktop</source>
-        <translation>Einfachen Klick auf dem Desktop aktivieren</translation>
+        <translation>Einfach-Klick auf dem Desktop aktivieren</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="569"/>
         <source>Enable single-click in Thunar File Manager</source>
-        <translation>Einfachen Klick im Thunar Dateimanager aktivieren</translation>
+        <translation>Einfach-Klick im Thunar Dateimanager aktivieren</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="606"/>
         <source>Show systray (notification area) frame</source>
-        <translation>Zeige Rahmen um das Systray (Benachrichtigungsfläche)</translation>
+        <translation>Zeige Rahmen um das Benachrichtigungsfeld (Systray)</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="613"/>
@@ -226,22 +226,22 @@
     <message>
         <location filename="defaultlook.ui" line="620"/>
         <source>Enable mounting of internal drives by non-root users</source>
-        <translation>Aktiviere Einhängen von internen Laufwerken durch Benutzer ohne Rootrechte</translation>
+        <translation>Aktiviere Einhängen von internen Laufwerken durch Benutzer ohne root-Rechte</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="627"/>
         <source>Disable shortening of long filenames on the desktop</source>
-        <translation>Deaktiviere das Verkürzen langer Dateinamen auf dem Desktop</translation>
+        <translation>Verkürzung langer Dateinamen auf dem Desktop abschalten</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="634"/>
         <source>Enable hibernate on Log Out menu </source>
-        <translation>im Log-Out Menü Versetzung des Rechners in den Ruhezustand ermöglichen</translation>
+        <translation>Ruhezustand im Log-Out Menü zulassen</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="641"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
-        <translation>Hinweis: für eine Versetzung des Rechners in den Ruhezustand muß SWAP &gt;= RAM sein</translation>
+        <translation>Hinweis: Für den Ruhezustand wird SWAP &gt;= RAM benötigt.</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="676"/>
@@ -332,7 +332,7 @@
     <message>
         <location filename="defaultlook.cpp" line="498"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
-        <translation>Fertig! Firefox sollte man neu starten, damit die Änderungen wirksam werden</translation>
+        <translation>Fertig! Die Änderungen werden nach einem Neustart von Firefox wirksam.</translation>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="508"/>
@@ -347,7 +347,7 @@
     <message>
         <location filename="defaultlook.cpp" line="651"/>
         <source> Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
-        <translation>Von Ihren aktuellen Leisten-Einstellungen wurde eine Sicherungskopie im versteckten Ornder namens .restore in Ihrem Home-Verzeichnis erstellt. (~/.restore/)</translation>
+        <translation>Die aktuellen Leisten-Einstellungen wurden im versteckten Ordner .restore im Home-Verzeichnis gesichert. (~/.restore/)</translation>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="1004"/>
