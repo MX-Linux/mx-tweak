@@ -186,17 +186,17 @@
     <message>
         <location filename="defaultlook.ui" line="500"/>
         <source>Reset Thunar custom right-click actions to system defaults</source>
-        <translation type="unfinished"/>
+        <translation>Reimposta le azioni personalizzate del pulsante destro in Thunar ai valori di default del sistema</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="537"/>
         <source>Use intel driver instead of default &quot;modsetting&quot; driver (requires restart)</source>
-        <translation type="unfinished"/>
+        <translation>Usa il driver intel invece del driver &quot;modsetting&quot; predefinito (sarà necessario riavviare)</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="544"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
-        <translation type="unfinished"/>
+        <translation>          NOTA: Verrà fatto un back up nella directory home dell&apos;attuale file /etc/X11/xorg.conf.d/20-intel.conf</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="554"/>

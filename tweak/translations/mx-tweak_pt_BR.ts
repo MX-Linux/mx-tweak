@@ -360,7 +360,7 @@
     <message>
         <location filename="xfwm_compositor_settings.ui" line="14"/>
         <source>Dialog</source>
-        <translation type="unfinished"/>
+        <translation>Diálogo</translation>
     </message>
     <message>
         <location filename="xfwm_compositor_settings.ui" line="42"/>

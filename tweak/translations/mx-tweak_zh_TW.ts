@@ -191,12 +191,12 @@
     <message>
         <location filename="defaultlook.ui" line="537"/>
         <source>Use intel driver instead of default &quot;modsetting&quot; driver (requires restart)</source>
-        <translation type="unfinished"/>
+        <translation>使用 intel 驅動程式，而不是預設的「modsetting」驅動程式（必須重新開機）</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="544"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
-        <translation type="unfinished"/>
+        <translation>註：現所採用的 /etc/X11/xorg.conf.d/20-intel.conf 會備份到家目錄當中</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="554"/>

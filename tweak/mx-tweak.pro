@@ -28,7 +28,10 @@ TRANSLATIONS += translations/mx-tweak_am.ts \
                 translations/mx-tweak_de.ts \
                 translations/mx-tweak_el.ts \
                 translations/mx-tweak_es.ts \
+                translations/mx-tweak_fi.ts \
                 translations/mx-tweak_fr.ts \
+                translations/mx-tweak_hi.ts \
+                translations/mx-tweak_hr.ts \
                 translations/mx-tweak_hu.ts \
                 translations/mx-tweak_it.ts \
                 translations/mx-tweak_ja.ts \
