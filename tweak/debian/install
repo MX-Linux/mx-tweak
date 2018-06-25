@@ -9,7 +9,8 @@ mx-tweak.png		usr/share/pixmaps
 mx.tweak.template usr/share/mx-tweak-data
 zcompton.desktop		usr/share/mx-tweak
 *.conf			usr/share/mx-tweak
-*.sh			usr/local/bin
 50-udisks.pkla 	usr/share/mx-tweak
 20-intel.conf   usr/share/mx-tweak
 no-ellipse-desktop-filenames.rc usr/share/mx-tweak
+scripts/*   usr/share/mx-tweak/scripts
+compton-launch.sh usr/local/bin

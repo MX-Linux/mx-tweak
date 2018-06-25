@@ -1,6 +1,7 @@
 #!/bin/bash
 
-#this app is part of mx-tweak for enabling hibernate
+#this app is part of mx-tweak 
+#the purpose is to enable hibernate function
 #this will update the initramfs of all kernels with the resume swap parition
 
 log=/var/log/tweak.log

@@ -1218,18 +1218,13 @@ void defaultlook::on_ButtonApplyEtc_clicked()
         if (fileinfo.exists()) {
             qDebug() << "no change to internal drive mount settings";
         } else {
-            if (fileinfo.absoluteDir().exists()) {
-            cmd = "gksu 'cp /usr/share/mx-tweak/50-udisks.pkla /etc/polkit-1/localauthority/50-local.d/50-udisks.pkla ;touch /etc/tweak-udisks.chk'";
+            cmd = "pkexec /usr/share/mx-tweak/scripts/tweak-user-mount-internal-devices-toggle.sh enable";
             system(cmd.toUtf8());
-            } else {
-            cmd = "gksu 'mkdir -p /etc/polkit-1/localauthority/50-local.d ;cp /usr/share/mx-tweak/50-udisks.pkla /etc/polkit-1/localauthority/50-local.d/50-udisks.pkla ;touch /etc/tweak-udisks.chk'";
-            system(cmd.toUtf8());
-            }
         }
     } else {
         if (fileinfo.exists()) {
-        cmd = "gksu 'rm -f /etc/polkit-1/localauthority/50-local.d/50-udisks.pkla; rm -f /etc/tweak-udisks.chk'";
-        system(cmd.toUtf8());
+            cmd = "pkexec /usr/share/mx-tweak/scripts/tweak-user-mount-internal-devices-toggle.sh disable";
+            system(cmd.toUtf8());
         } else {
             qDebug() << "no change to internal drive mount settings";
         }
@@ -1272,7 +1267,7 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     //deal with hibernate
     if (ui->checkBoxHibernate->isChecked() != hibernate_flag) {
         if (ui->checkBoxHibernate->isChecked()) {
-            runCmd("gksu 'x-terminal-emulator -e tweak-update-initramfs.sh'");
+            runCmd("x-terminal-emulator -e 'pkexec /usr/share/mx-tweak/scripts/tweak-update-initramfs.sh'");
             system("xfconf-query -c xfce4-session -p /shutdown/ShowHibernate -s true --create");
         } else {
             system("xfconf-query -c xfce4-session -p /shutdown/ShowHibernate -s false --create");
@@ -1552,22 +1547,20 @@ void defaultlook::on_checkBoxHibernate_clicked()
 
 void defaultlook::on_ButtonApplyMiscDefualts_clicked()
 {
+    QString cmd;
     if (ui->checkBoxThunarCAReset->isChecked()) {
-        QString cmd = "cp /home/$USER/.config/Thunar/uca.xml /home/$USER/.config/Thunar/uca.xml.$(date +%Y%m%H%M%S)";
+        cmd = "cp /home/$USER/.config/Thunar/uca.xml /home/$USER/.config/Thunar/uca.xml.$(date +%Y%m%H%M%S)";
         system(cmd.toUtf8());
         runCmd("cp /etc/skel/.config/Thunar/uca.xml /home/$USER/.config/Thunar/uca.xml");
     }
 
     if (ui->checkBoxLightdmReset->isChecked()) {
-        QString cmd = "gnome-keyring-daemon -r -d";
-        system(cmd.toUtf8());
-        cmd = "gksu 'cp /etc/lightdm/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf.$(date +%Y%m%H%M%S); cp /etc/lightdm/mx$(lsb_release -rs)/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf'";
+        cmd = "pkexec /usr/share/mx-tweak/scripts/tweak-lightdm-reset.sh";
         system(cmd.toUtf8());
     }
 
     if ( Intel_flag ) {
         QFileInfo check_intel("/etc/X11/xorg.conf.d/20-intel.conf");
-        QString cmd;
         if ( check_intel.exists()){
             //backup existing 20-intel.conf file to home folder
             cmd = "cp /etc/X11/xorg.conf.d/20-intel.conf /home/$USER/20-intel.conf.$(date +%Y%m%H%M%S)";
@@ -1575,11 +1568,11 @@ void defaultlook::on_ButtonApplyMiscDefualts_clicked()
         }
         if (ui->checkboxIntelDriver->isChecked()) {
             //copy mx-tweak version to xorg.conf.d directory
-            cmd = "gksu 'cp /usr/share/mx-tweak/20-intel.conf /etc/X11/xorg.conf.d/20-intel.conf'";
+            cmd = "pkexec /usr/share/mx-tweak/scripts/tweak-intel-driver.sh enable";
             system(cmd.toUtf8());
         } else {
             //remove 20-intel.conf
-            cmd = "gksu 'rm /etc/X11/xorg.conf.d/20-intel.conf'";
+            cmd = "pkexec /usr/share/mx-tweak/scripts/tweak-intel-driver.sh disable";
             system(cmd.toUtf8());
         }
     }

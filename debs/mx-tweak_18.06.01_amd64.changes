@@ -1,0 +1,34 @@
+Format: 1.8
+Date: Sun, 24 Jun 2018 19:19:22 -0400
+Source: mx-tweak
+Binary: mx-tweak
+Architecture: source amd64
+Version: 18.06.01
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: <dolphinoracle@gmail.com>
+Description:
+ mx-tweak   - MX Tweak
+Changes:
+ mx-tweak (18.06.01) mx; urgency=medium
+ .
+   *  removed gksu in place of pkexec
+Checksums-Sha1:
+ 6538417184678e2bedb4f162f1e143a399716d53 628 mx-tweak_18.06.01.dsc
+ bbbf0d1621c03b70d474ec024923a21bbcf2c5a2 59044 mx-tweak_18.06.01.tar.xz
+ d21bd5e22014eecebde485c15640f04ad7c0dd2c 9680 mx-tweak-dbgsym_18.06.01_amd64.deb
+ 4c7bfc0c80840b067d7558077746bb8e19b394b6 10078 mx-tweak_18.06.01_amd64.buildinfo
+ dc10cc9252adc882f0f4ebe167710676bc3ab07d 91620 mx-tweak_18.06.01_amd64.deb
+Checksums-Sha256:
+ 5fc40117d92a5fad6ce2e95f9870971ac71879971bc3d0851a11ee17caebd6a6 628 mx-tweak_18.06.01.dsc
+ 6fe996d1e299e86a9becd4dcf60953cc71592a18ad487a666d1f6e2a51d139d4 59044 mx-tweak_18.06.01.tar.xz
+ 2800e0ce726652360e18b8211ac10e4a575ae256c607782c34aa0feef8fddde3 9680 mx-tweak-dbgsym_18.06.01_amd64.deb
+ 1efaf5f0398c59fbcd104a5a53e08abf02ff45e929a61f7c32065f0d3e4397fd 10078 mx-tweak_18.06.01_amd64.buildinfo
+ bf3b10816f32df79468edc3b09d394bf163eba11dfcdf0a6ce9b3106b624c8d5 91620 mx-tweak_18.06.01_amd64.deb
+Files:
+ d6f513728cc6d9b590393aa348e4d154 628 admin optional mx-tweak_18.06.01.dsc
+ c4fcece83220b10e194d7257f6b25d8c 59044 admin optional mx-tweak_18.06.01.tar.xz
+ f7b3b66e61910cc11d85e944d7e7a887 9680 debug optional mx-tweak-dbgsym_18.06.01_amd64.deb
+ 25a15194cf471e51f0165f511f6717d8 10078 admin optional mx-tweak_18.06.01_amd64.buildinfo
+ 65bcefe65feaa0ef90f543b1e2574c1c 91620 admin optional mx-tweak_18.06.01_amd64.deb
