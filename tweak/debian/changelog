@@ -1,3 +1,9 @@
+mx-tweak (18.06.01) mx; urgency=medium
+
+  * update locales
+
+ --  <dolphin@mx>  Mon, 25 Jun 2018 21:28:10 -0400
+
 mx-tweak (18.05.01) mx; urgency=medium
 
   * update to panel color changer array values (uint vs. int) 
