@@ -12,6 +12,6 @@ zcompton.desktop		usr/share/mx-tweak
 50-udisks.pkla 	usr/share/mx-tweak
 20-intel.conf   usr/share/mx-tweak
 no-ellipse-desktop-filenames.rc usr/share/mx-tweak
-scripts/*   usr/share/mx-tweak/scripts
+lib/*   usr/lib/mx-tweak
 actions/* usr/share/polkit-1/actions
 compton-launch.sh usr/local/bin

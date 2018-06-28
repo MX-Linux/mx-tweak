@@ -1214,17 +1214,20 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     //deal with udisks option
     QFileInfo fileinfo("/etc/tweak-udisks.chk");
     QString cmd;
+    QString udisks_option;
+    QString hibernate_option;
+    udisks_option.clear();
+    hibernate_option.clear();
+
     if (ui->checkBoxMountInternalDrivesNonRoot->isChecked()) {
         if (fileinfo.exists()) {
             qDebug() << "no change to internal drive mount settings";
         } else {
-            cmd = "pkexec /usr/share/mx-tweak/scripts/tweak-user-mount-internal-devices-toggle.sh enable";
-            system(cmd.toUtf8());
+            udisks_option = "enable_user_mount";
         }
     } else {
         if (fileinfo.exists()) {
-            cmd = "pkexec /usr/share/mx-tweak/scripts/tweak-user-mount-internal-devices-toggle.sh disable";
-            system(cmd.toUtf8());
+            udisks_option = "disable_user_mount";
         } else {
             qDebug() << "no change to internal drive mount settings";
         }
@@ -1267,12 +1270,22 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     //deal with hibernate
     if (ui->checkBoxHibernate->isChecked() != hibernate_flag) {
         if (ui->checkBoxHibernate->isChecked()) {
-            runCmd("x-terminal-emulator -e 'pkexec /usr/share/mx-tweak/scripts/tweak-update-initramfs.sh'");
+            hibernate_option =  "hibernate";
             system("xfconf-query -c xfce4-session -p /shutdown/ShowHibernate -s true --create");
         } else {
             system("xfconf-query -c xfce4-session -p /shutdown/ShowHibernate -s false --create");
         }
     }
+
+
+    if ( ! hibernate_option.isEmpty() || ! udisks_option.isEmpty()) {
+        if ( hibernate_option.isEmpty()) {
+            runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + udisks_option);
+        } else {
+            runCmd("x-terminal-emulator -e 'pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + udisks_option + " " + hibernate_option + "'");
+        }
+    }
+
     //reset gui
     setupEtc();
 }
@@ -1548,6 +1561,12 @@ void defaultlook::on_checkBoxHibernate_clicked()
 void defaultlook::on_ButtonApplyMiscDefualts_clicked()
 {
     QString cmd;
+    QString intel_option;
+    QString lightdm_option;
+
+    intel_option.clear();
+    lightdm_option.clear();
+
     if (ui->checkBoxThunarCAReset->isChecked()) {
         cmd = "cp /home/$USER/.config/Thunar/uca.xml /home/$USER/.config/Thunar/uca.xml.$(date +%Y%m%H%M%S)";
         system(cmd.toUtf8());
@@ -1555,8 +1574,7 @@ void defaultlook::on_ButtonApplyMiscDefualts_clicked()
     }
 
     if (ui->checkBoxLightdmReset->isChecked()) {
-        cmd = "pkexec /usr/share/mx-tweak/scripts/tweak-lightdm-reset.sh";
-        system(cmd.toUtf8());
+        lightdm_option = "lightdm_reset";
     }
 
     if ( Intel_flag ) {
@@ -1568,13 +1586,16 @@ void defaultlook::on_ButtonApplyMiscDefualts_clicked()
         }
         if (ui->checkboxIntelDriver->isChecked()) {
             //copy mx-tweak version to xorg.conf.d directory
-            cmd = "pkexec /usr/share/mx-tweak/scripts/tweak-intel-driver.sh enable";
-            system(cmd.toUtf8());
+            intel_option = "enable_intel";
         } else {
             //remove 20-intel.conf
-            cmd = "pkexec /usr/share/mx-tweak/scripts/tweak-intel-driver.sh disable";
-            system(cmd.toUtf8());
+            intel_option = "disable_intel";
         }
+    }
+    if ( ! intel_option.isEmpty() || ! lightdm_option.isEmpty() ) {
+    cmd = "pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + intel_option + " " + lightdm_option;
+    qDebug() << "cmd is " << cmd;
+    system(cmd.toUtf8());
     }
 
 

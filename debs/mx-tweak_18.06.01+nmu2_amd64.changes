@@ -1,0 +1,35 @@
+Format: 1.8
+Date: Wed, 27 Jun 2018 21:19:21 -0400
+Source: mx-tweak
+Binary: mx-tweak
+Architecture: source amd64
+Version: 18.06.01+nmu2
+Distribution: UNRELEASED
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: dolphin oracle <dolphinoracle@gmail.com>
+Description:
+ mx-tweak   - MX Tweak
+Changes:
+ mx-tweak (18.06.01+nmu2) UNRELEASED; urgency=medium
+ .
+   *  revised policy file
+   *  revised bash "library" file
+Checksums-Sha1:
+ 320d8812499d50a73d68539de7eceb60b24c32f5 648 mx-tweak_18.06.01+nmu2.dsc
+ 4e36ecd2e9a6b16f2e15aa649d2af50dcadcb33c 59492 mx-tweak_18.06.01+nmu2.tar.xz
+ e669b7944dc178e6ec8443329bdeca44dfb5e04d 9660 mx-tweak-dbgsym_18.06.01+nmu2_amd64.deb
+ 2321442fcf0b46844c6b891ef98520cba229a2a6 10128 mx-tweak_18.06.01+nmu2_amd64.buildinfo
+ 9cacc22ce9c74cec5325bfe49dd831cdb600549e 92284 mx-tweak_18.06.01+nmu2_amd64.deb
+Checksums-Sha256:
+ 6c250445748cadb3bd1c2547121e5f00a53aef022d68254e2be49c7ad8bd5fb1 648 mx-tweak_18.06.01+nmu2.dsc
+ 0a3d45cdc3d5eb4df2c3e1863e9f9fd482b4f0d2338b3ab1f1a5c8316375d261 59492 mx-tweak_18.06.01+nmu2.tar.xz
+ f7ce388cc182e55c8a5cc1c8eace6e09d0d6c758d32848262faf0fc18529a7c6 9660 mx-tweak-dbgsym_18.06.01+nmu2_amd64.deb
+ 18d2fc399e0a45e012cf8bfcff15e42e1e80fe634563545e1598303817ab829a 10128 mx-tweak_18.06.01+nmu2_amd64.buildinfo
+ 62f8be2faf127625c6f7d2108a9fe1ec8944569704e749276d45656413725354 92284 mx-tweak_18.06.01+nmu2_amd64.deb
+Files:
+ de2d06e08cd74c4ef894699974f48b41 648 admin optional mx-tweak_18.06.01+nmu2.dsc
+ eb7ede849fdec0268755cfeac136ac0f 59492 admin optional mx-tweak_18.06.01+nmu2.tar.xz
+ 8bb1bd76cf47cb510863e256179292c2 9660 debug optional mx-tweak-dbgsym_18.06.01+nmu2_amd64.deb
+ eea8ce12b0d2e97e810a03f62650837a 10128 admin optional mx-tweak_18.06.01+nmu2_amd64.buildinfo
+ a33d55f480afd33495bca96935cac775 92284 admin optional mx-tweak_18.06.01+nmu2_amd64.deb
