@@ -20,8 +20,7 @@
    <string>MX Tweak</string>
   </property>
   <property name="windowIcon">
-   <iconset>
-    <normaloff>../../../../usr/share/pixmaps/mx-tweak.png</normaloff>../../../../usr/share/pixmaps/mx-tweak.png</iconset>
+   <iconset theme="mx-tweak"/>
   </property>
   <layout class="QGridLayout" name="gridLayout_20">
    <item row="0" column="0">
