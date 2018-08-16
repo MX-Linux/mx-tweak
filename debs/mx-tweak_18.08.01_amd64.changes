@@ -1,0 +1,36 @@
+Format: 1.8
+Date: Thu, 16 Aug 2018 16:41:51 -0400
+Source: mx-tweak
+Binary: mx-tweak
+Architecture: source amd64
+Version: 18.08.01
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: dolphin oracle <dolphinoracle@gmail.com>
+Description:
+ mx-tweak   - MX Tweak
+Changes:
+ mx-tweak (18.08.01) mx; urgency=medium
+ .
+   *  revised policy file
+   *  revised bash "library" file
+   *  added "window buttons" tasklist function
+Checksums-Sha1:
+ 4a3aa9b76e365336ba557956ed096c716aa1cdc0 628 mx-tweak_18.08.01.dsc
+ 0591ed933bdc44117e636a6bfc23a10866efd57d 61092 mx-tweak_18.08.01.tar.xz
+ 0af89f36f2e448b5159e5288f367914022a1bf5a 10682 mx-tweak-dbgsym_18.08.01_amd64.deb
+ d1c9b178df4ca4c3ec7a6967c235a3054b1f5f3e 10082 mx-tweak_18.08.01_amd64.buildinfo
+ 9004135bd343fcc1027070e47adda279bd23fc44 102654 mx-tweak_18.08.01_amd64.deb
+Checksums-Sha256:
+ f1525152860716fbaf1e10c346057dc2130bbc4fa0f5df81dac91ef7584adfc8 628 mx-tweak_18.08.01.dsc
+ 74e2c587bafcdaea2168e604d3d1151b8914667e980b11ba0f7a1df3d5b99dec 61092 mx-tweak_18.08.01.tar.xz
+ 28d6cc72671f9ca001ddfbfe5fe3a093c9209b8b11232de0e4e39413e68a09e9 10682 mx-tweak-dbgsym_18.08.01_amd64.deb
+ 3218f5d955defd010f0c0e6e06162d98344e9207d73ed7d75084ec72ba7c731a 10082 mx-tweak_18.08.01_amd64.buildinfo
+ 8f3f6a3727a9b0039216fe5d7ba24e1227c21cc9ca3001b9b5022a2c5c4f522b 102654 mx-tweak_18.08.01_amd64.deb
+Files:
+ d487d6e720c41544d983690f14298ac3 628 admin optional mx-tweak_18.08.01.dsc
+ 20c17b53a9ad1675a46d798572e4a876 61092 admin optional mx-tweak_18.08.01.tar.xz
+ 59e859a1f911e22a652d75b1cf197ed0 10682 debug optional mx-tweak-dbgsym_18.08.01_amd64.deb
+ ba4d8eec8ecce6618206e1b011ea8c2d 10082 admin optional mx-tweak_18.08.01_amd64.buildinfo
+ 9352b8b983e87b7d3d97ad0380a905c7 102654 admin optional mx-tweak_18.08.01_amd64.deb
