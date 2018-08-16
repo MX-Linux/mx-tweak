@@ -708,6 +708,13 @@ void defaultlook::setuppanel()
         ui->buttonApply->setIcon(QIcon(":/icons/dialog-ok.svg"));
     }
 
+    //hide tasklist setting if not present
+
+    if ( system("grep -q tasklist ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml") != 0 ) {
+        ui->labelTasklist->hide();
+        ui->pushButtontasklist->hide();
+    }
+
     //reset all checkboxes to unchecked
 
     ui->checkVert->setChecked(false);
@@ -1620,7 +1627,7 @@ void defaultlook::on_checkboxIntelDriver_clicked()
     ui->ButtonApplyMiscDefualts->setEnabled(true);
 }
 
-void defaultlook::on_pushButton_clicked()
+void defaultlook::on_pushButtontasklist_clicked()
 {
     window_buttons fred;
     fred.setModal(true);

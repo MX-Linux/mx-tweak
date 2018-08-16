@@ -172,7 +172,7 @@ private slots:
 
     void on_checkboxIntelDriver_clicked();
 
-    void on_pushButton_clicked();
+    void on_pushButtontasklist_clicked();
 
 private:
     Ui::defaultlook *ui;
