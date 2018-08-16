@@ -31,6 +31,7 @@
 #include <QHash>
 
 #include "xfwm_compositor_settings.h"
+#include "window_buttons.h"
 
 defaultlook::defaultlook(QWidget *parent) :
     QDialog(parent),
@@ -1617,4 +1618,11 @@ void defaultlook::on_checkboxIntelDriver_clicked()
     //toggle flag for action.  this way, if box was checked initially, the action won't take place again.
     Intel_flag = true;
     ui->ButtonApplyMiscDefualts->setEnabled(true);
+}
+
+void defaultlook::on_pushButton_clicked()
+{
+    window_buttons fred;
+    fred.setModal(true);
+    fred.exec();
 }

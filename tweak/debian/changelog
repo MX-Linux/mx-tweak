@@ -1,9 +1,10 @@
-mx-tweak (18.06.01+nmu2) UNRELEASED; urgency=medium
+mx-tweak (18.08.01) mx; urgency=medium
 
   *  revised policy file
   *  revised bash "library" file  
+  *  added "window buttons" tasklist function
 
- --  dolphin oracle <dolphinoracle@gmail.com>  Wed, 27 Jun 2018 21:19:21 -0400
+ --  dolphin oracle <dolphinoracle@gmail.com>  Thu, 16 Aug 2018 16:41:51 -0400
 
 mx-tweak (18.06.01) mx; urgency=medium
 
