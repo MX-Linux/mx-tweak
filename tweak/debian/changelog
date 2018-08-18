@@ -1,24 +1,17 @@
-<<<<<<< HEAD
 mx-tweak (18.08.01) mx; urgency=medium
 
   *  revised policy file
   *  revised bash "library" file  
   *  added "window buttons" tasklist function
+  *  use pkexec instead of gksu
 
- --  dolphin oracle <dolphinoracle@gmail.com>  Thu, 16 Aug 2018 16:41:51 -0400
+ --  dolphin oracle <dolphinoracle@gmail.com>  Fri 17 Aug 2018 21:12:14 -0400
 
-mx-tweak (18.06.01) mx; urgency=medium
-
-  *  removed gksu in place of pkexec 
-
- --  <dolphinoracle@gmail.com>  Sun, 24 Jun 2018 19:19:22 -0400
-=======
 mx-tweak (18.06.01) mx; urgency=medium
 
   * update locales
 
  --  <dolphin@mx>  Mon, 25 Jun 2018 21:28:10 -0400
->>>>>>> master
 
 mx-tweak (18.05.01) mx; urgency=medium
 
