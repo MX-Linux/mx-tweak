@@ -31,6 +31,7 @@
 #include <QHash>
 
 #include "xfwm_compositor_settings.h"
+#include "window_buttons.h"
 
 defaultlook::defaultlook(QWidget *parent) :
     QDialog(parent),
@@ -707,6 +708,13 @@ void defaultlook::setuppanel()
         ui->buttonApply->setIcon(QIcon(":/icons/dialog-ok.svg"));
     }
 
+    //hide tasklist setting if not present
+
+    if ( system("grep -q tasklist ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml") != 0 ) {
+        ui->labelTasklist->hide();
+        ui->pushButtontasklist->hide();
+    }
+
     //reset all checkboxes to unchecked
 
     ui->checkVert->setChecked(false);
@@ -1214,22 +1222,20 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     //deal with udisks option
     QFileInfo fileinfo("/etc/tweak-udisks.chk");
     QString cmd;
+    QString udisks_option;
+    QString hibernate_option;
+    udisks_option.clear();
+    hibernate_option.clear();
+
     if (ui->checkBoxMountInternalDrivesNonRoot->isChecked()) {
         if (fileinfo.exists()) {
             qDebug() << "no change to internal drive mount settings";
         } else {
-            if (fileinfo.absoluteDir().exists()) {
-            cmd = "gksu 'cp /usr/share/mx-tweak/50-udisks.pkla /etc/polkit-1/localauthority/50-local.d/50-udisks.pkla ;touch /etc/tweak-udisks.chk'";
-            system(cmd.toUtf8());
-            } else {
-            cmd = "gksu 'mkdir -p /etc/polkit-1/localauthority/50-local.d ;cp /usr/share/mx-tweak/50-udisks.pkla /etc/polkit-1/localauthority/50-local.d/50-udisks.pkla ;touch /etc/tweak-udisks.chk'";
-            system(cmd.toUtf8());
-            }
+            udisks_option = "enable_user_mount";
         }
     } else {
         if (fileinfo.exists()) {
-        cmd = "gksu 'rm -f /etc/polkit-1/localauthority/50-local.d/50-udisks.pkla; rm -f /etc/tweak-udisks.chk'";
-        system(cmd.toUtf8());
+            udisks_option = "disable_user_mount";
         } else {
             qDebug() << "no change to internal drive mount settings";
         }
@@ -1272,12 +1278,22 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     //deal with hibernate
     if (ui->checkBoxHibernate->isChecked() != hibernate_flag) {
         if (ui->checkBoxHibernate->isChecked()) {
-            runCmd("gksu 'x-terminal-emulator -e tweak-update-initramfs.sh'");
+            hibernate_option =  "hibernate";
             system("xfconf-query -c xfce4-session -p /shutdown/ShowHibernate -s true --create");
         } else {
             system("xfconf-query -c xfce4-session -p /shutdown/ShowHibernate -s false --create");
         }
     }
+
+
+    if ( ! hibernate_option.isEmpty() || ! udisks_option.isEmpty()) {
+        if ( hibernate_option.isEmpty()) {
+            runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + udisks_option);
+        } else {
+            runCmd("x-terminal-emulator -e 'pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + udisks_option + " " + hibernate_option + "'");
+        }
+    }
+
     //reset gui
     setupEtc();
 }
@@ -1552,22 +1568,25 @@ void defaultlook::on_checkBoxHibernate_clicked()
 
 void defaultlook::on_ButtonApplyMiscDefualts_clicked()
 {
+    QString cmd;
+    QString intel_option;
+    QString lightdm_option;
+
+    intel_option.clear();
+    lightdm_option.clear();
+
     if (ui->checkBoxThunarCAReset->isChecked()) {
-        QString cmd = "cp /home/$USER/.config/Thunar/uca.xml /home/$USER/.config/Thunar/uca.xml.$(date +%Y%m%H%M%S)";
+        cmd = "cp /home/$USER/.config/Thunar/uca.xml /home/$USER/.config/Thunar/uca.xml.$(date +%Y%m%H%M%S)";
         system(cmd.toUtf8());
         runCmd("cp /etc/skel/.config/Thunar/uca.xml /home/$USER/.config/Thunar/uca.xml");
     }
 
     if (ui->checkBoxLightdmReset->isChecked()) {
-        QString cmd = "gnome-keyring-daemon -r -d";
-        system(cmd.toUtf8());
-        cmd = "gksu 'cp /etc/lightdm/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf.$(date +%Y%m%H%M%S); cp /etc/lightdm/mx$(lsb_release -rs)/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf'";
-        system(cmd.toUtf8());
+        lightdm_option = "lightdm_reset";
     }
 
     if ( Intel_flag ) {
         QFileInfo check_intel("/etc/X11/xorg.conf.d/20-intel.conf");
-        QString cmd;
         if ( check_intel.exists()){
             //backup existing 20-intel.conf file to home folder
             cmd = "cp /etc/X11/xorg.conf.d/20-intel.conf /home/$USER/20-intel.conf.$(date +%Y%m%H%M%S)";
@@ -1575,13 +1594,16 @@ void defaultlook::on_ButtonApplyMiscDefualts_clicked()
         }
         if (ui->checkboxIntelDriver->isChecked()) {
             //copy mx-tweak version to xorg.conf.d directory
-            cmd = "gksu 'cp /usr/share/mx-tweak/20-intel.conf /etc/X11/xorg.conf.d/20-intel.conf'";
-            system(cmd.toUtf8());
+            intel_option = "enable_intel";
         } else {
             //remove 20-intel.conf
-            cmd = "gksu 'rm /etc/X11/xorg.conf.d/20-intel.conf'";
-            system(cmd.toUtf8());
+            intel_option = "disable_intel";
         }
+    }
+    if ( ! intel_option.isEmpty() || ! lightdm_option.isEmpty() ) {
+    cmd = "pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + intel_option + " " + lightdm_option;
+    qDebug() << "cmd is " << cmd;
+    system(cmd.toUtf8());
     }
 
 
@@ -1603,4 +1625,11 @@ void defaultlook::on_checkboxIntelDriver_clicked()
     //toggle flag for action.  this way, if box was checked initially, the action won't take place again.
     Intel_flag = true;
     ui->ButtonApplyMiscDefualts->setEnabled(true);
+}
+
+void defaultlook::on_pushButtontasklist_clicked()
+{
+    window_buttons fred;
+    fred.setModal(true);
+    fred.exec();
 }

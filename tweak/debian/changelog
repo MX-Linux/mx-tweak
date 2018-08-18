@@ -1,3 +1,12 @@
+mx-tweak (18.08.01) mx; urgency=medium
+
+  *  revised policy file
+  *  revised bash "library" file  
+  *  added "window buttons" tasklist function
+  *  use pkexec instead of gksu
+
+ --  dolphin oracle <dolphinoracle@gmail.com>  Fri 17 Aug 2018 21:12:14 -0400
+
 mx-tweak (18.08) mx; urgency=medium
 
   * fix icon other themes
