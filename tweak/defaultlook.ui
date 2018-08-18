@@ -288,7 +288,7 @@
            <item row="9" column="0">
             <widget class="QPushButton" name="pushButtontasklist">
              <property name="text">
-              <string>Tasklist Settings</string>
+              <string>Options</string>
              </property>
             </widget>
            </item>
