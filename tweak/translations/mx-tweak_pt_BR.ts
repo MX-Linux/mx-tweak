@@ -370,9 +370,8 @@
 <context>
     <name>window_buttons</name>
     <message>
-        <location filename="../window_buttons.ui" line="14"/>
         <source>Dialog</source>
-        <translation type="unfinished">Diálogo</translation>
+        <translation type="obsolete">Diálogo</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="28"/>
@@ -505,6 +504,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../window_buttons.ui" line="14"/>
         <location filename="../window_buttons.cpp" line="36"/>
         <source>Window Buttons</source>
         <translation type="unfinished"></translation>

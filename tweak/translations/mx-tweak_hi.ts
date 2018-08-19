@@ -370,11 +370,6 @@
 <context>
     <name>window_buttons</name>
     <message>
-        <location filename="../window_buttons.ui" line="14"/>
-        <source>Dialog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../window_buttons.ui" line="28"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Appearance&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
@@ -505,6 +500,7 @@
         <translation type="unfinished">बंद करें</translation>
     </message>
     <message>
+        <location filename="../window_buttons.ui" line="14"/>
         <location filename="../window_buttons.cpp" line="36"/>
         <source>Window Buttons</source>
         <translation type="unfinished"></translation>
