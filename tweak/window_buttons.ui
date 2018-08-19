@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Window Buttons</string>
   </property>
   <property name="windowIcon">
    <iconset theme="mx-tweak">
