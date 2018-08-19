@@ -375,132 +375,132 @@
         <translation type="unfinished">Dialogas</translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="27"/>
+        <location filename="../window_buttons.ui" line="28"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Appearance&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="34"/>
+        <location filename="../window_buttons.ui" line="35"/>
         <source>Show button labels</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="41"/>
+        <location filename="../window_buttons.ui" line="42"/>
         <source>Show flat buttons</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="48"/>
+        <location filename="../window_buttons.ui" line="49"/>
         <source>Show handle</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="55"/>
+        <location filename="../window_buttons.ui" line="56"/>
         <source>Sorting Order:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="63"/>
+        <location filename="../window_buttons.ui" line="64"/>
         <source>Timestamp</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="68"/>
+        <location filename="../window_buttons.ui" line="69"/>
         <source>Group title and timestamp</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="73"/>
+        <location filename="../window_buttons.ui" line="74"/>
         <source>Window Title</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="78"/>
+        <location filename="../window_buttons.ui" line="79"/>
         <source>Group title and window title</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="83"/>
+        <location filename="../window_buttons.ui" line="84"/>
         <source>None, allow drag-and-drop</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="91"/>
+        <location filename="../window_buttons.ui" line="92"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Behavior&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="98"/>
+        <location filename="../window_buttons.ui" line="99"/>
         <source>Window grouping:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="106"/>
+        <location filename="../window_buttons.ui" line="107"/>
         <source>Never</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="111"/>
+        <location filename="../window_buttons.ui" line="112"/>
         <source>Always</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="119"/>
+        <location filename="../window_buttons.ui" line="120"/>
         <source>Middle click action:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="127"/>
+        <location filename="../window_buttons.ui" line="128"/>
         <source>Nothing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="132"/>
+        <location filename="../window_buttons.ui" line="133"/>
         <source>Close window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="137"/>
+        <location filename="../window_buttons.ui" line="138"/>
         <source>Minimize window</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="145"/>
-        <source>Restore minimzed windows to current workspace</source>
+        <location filename="../window_buttons.ui" line="146"/>
+        <source>Restore minimized windows to current workspace</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="152"/>
+        <location filename="../window_buttons.ui" line="153"/>
         <source>Draw window frame when hovering over a button</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="159"/>
+        <location filename="../window_buttons.ui" line="160"/>
         <source>Switch windows using the mouse wheel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="166"/>
+        <location filename="../window_buttons.ui" line="167"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Filtering&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="173"/>
+        <location filename="../window_buttons.ui" line="174"/>
         <source>Show windows from all workspaces or viewports</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="180"/>
+        <location filename="../window_buttons.ui" line="181"/>
         <source>Show only minimized windows</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="187"/>
+        <location filename="../window_buttons.ui" line="188"/>
         <source>Show windows from all monitors</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="237"/>
+        <location filename="../window_buttons.ui" line="238"/>
         <source>Close</source>
         <translation type="unfinished">Užverti</translation>
     </message>
