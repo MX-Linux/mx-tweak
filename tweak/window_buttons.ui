@@ -14,7 +14,8 @@
    <string>Dialog</string>
   </property>
   <property name="windowIcon">
-   <iconset theme="mx-tweak"/>
+   <iconset theme="mx-tweak">
+    <normaloff>.</normaloff>.</iconset>
   </property>
   <layout class="QGridLayout" name="gridLayout_2">
    <item row="0" column="0">
@@ -142,7 +143,7 @@
        <item row="9" column="0" colspan="2">
         <widget class="QCheckBox" name="checkBoxrestoreminwindows">
          <property name="text">
-          <string>Restore minimzed windows to current workspace</string>
+          <string>Restore minimized windows to current workspace</string>
          </property>
         </widget>
        </item>
