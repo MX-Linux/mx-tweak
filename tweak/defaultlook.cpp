@@ -90,6 +90,7 @@ void defaultlook::setup()
             runCmd("cp /usr/share/mx-tweak-data/mx.tweak.template " + userdir.absolutePath());
         }
     }
+    version = getVersion("mx-tweak");
 }
 
 // Util function for getting bash command output and error code
@@ -1632,4 +1633,10 @@ void defaultlook::on_pushButtontasklist_clicked()
     window_buttons fred;
     fred.setModal(true);
     fred.exec();
+}
+
+// Get version of the program
+QString defaultlook::getVersion(QString name)
+{
+    return runCmd("dpkg-query -f '${Version}' -W " + name).output;
 }
