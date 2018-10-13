@@ -36,7 +36,7 @@
     <message>
         <location filename="defaultlook.ui" line="111"/>
         <source>Window Manager</source>
-        <translation>Manejador de ventanas</translation>
+        <translation>Gestor de ventanas</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="131"/>

@@ -10,7 +10,7 @@
         <location filename="defaultlook.cpp" line="499"/>
         <location filename="defaultlook.cpp" line="509"/>
         <source>MX Tweak</source>
-        <translation type="unfinished"/>
+        <translation>MX patobulinimai</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="54"/>
@@ -20,7 +20,7 @@
     <message>
         <location filename="defaultlook.ui" line="63"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the panel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tinkinti skydelį&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="77"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="defaultlook.ui" line="97"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configure window behavior and shortcuts&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Konfigūruoti langų elgseną ir susiejimus&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="111"/>
@@ -81,57 +81,57 @@
     <message>
         <location filename="defaultlook.ui" line="311"/>
         <source>Backup current panel configuration</source>
-        <translation type="unfinished"/>
+        <translation>Padaryti esamos skydelio konfigūracijos atsarginę kopiją</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="318"/>
         <source>Restore backup panel configuration</source>
-        <translation type="unfinished"/>
+        <translation>Atkurti skydelio konfigūracijos atsarginę kopiją</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="325"/>
         <source>Restore default panel</source>
-        <translation type="unfinished"/>
+        <translation>Atkurti numatytąjį skydelį</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="338"/>
         <source>Affects 1st panel</source>
-        <translation type="unfinished"/>
+        <translation>Paveikia 1-ąjį skydelį</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="345"/>
         <source>Display panel vertically</source>
-        <translation type="unfinished"/>
+        <translation>Rodyti skydelį vertikaliai</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="359"/>
         <source>Bottom</source>
-        <translation type="unfinished"/>
+        <translation>Apačioje</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="364"/>
         <source>Top</source>
-        <translation type="unfinished"/>
+        <translation>Viršuje</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="372"/>
         <source>Display panel horizontally</source>
-        <translation type="unfinished"/>
+        <translation>Rodyti skydelį horizontaliai</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="386"/>
         <source>Left</source>
-        <translation type="unfinished"/>
+        <translation>Kairėje</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="391"/>
         <source>Right</source>
-        <translation type="unfinished"/>
+        <translation>Dešinėje</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="399"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Affects all panels&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Paveikia visus skydelius&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="419"/>
@@ -160,17 +160,17 @@
     <message>
         <location filename="defaultlook.ui" line="501"/>
         <source>Fix some website fields when using dark theme</source>
-        <translation type="unfinished"/>
+        <translation>Pataisyti kai kurių svetainių laukus, kuomet naudojama tamsi tema</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="504"/>
         <source>Firefox dark theme tweak</source>
-        <translation type="unfinished"/>
+        <translation>Firefox tamsios temos patobulinimas</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="511"/>
         <source>Fix HexChat input box in dark theme</source>
-        <translation type="unfinished"/>
+        <translation>Pataisyti HexChat įvesties laukus tamsioje temoje</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="563"/>
@@ -180,18 +180,18 @@
     <message>
         <location filename="defaultlook.ui" line="570"/>
         <source>Preview</source>
-        <translation type="unfinished"/>
+        <translation>Peržiūra</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="580"/>
         <location filename="defaultlook.ui" line="673"/>
         <source>Compositor</source>
-        <translation type="unfinished"/>
+        <translation>Tvarkytojas</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="601"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce Compositor Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce tvarkytojo nustatymai&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="604"/>
@@ -201,37 +201,37 @@
     <message>
         <location filename="defaultlook.ui" line="628"/>
         <source>None</source>
-        <translation type="unfinished"/>
+        <translation>Nėra</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="633"/>
         <source>Xfwm (Xfce) Compositor</source>
-        <translation type="unfinished"/>
+        <translation>Xfwm (Xfce) tvarkytojas</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="638"/>
         <source>Compton </source>
-        <translation type="unfinished"/>
+        <translation>Compton </translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="646"/>
         <source>Edit compton.conf directly in text editor</source>
-        <translation type="unfinished"/>
+        <translation>Redaguoti compton.conf tiesiogiai tekstų redaktoriuje</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="649"/>
         <source>Edit compton.conf</source>
-        <translation type="unfinished"/>
+        <translation>Redaguoti compton.conf</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="680"/>
         <source>Transparency and shadow options</source>
-        <translation type="unfinished"/>
+        <translation>Permatomumo ir šešėlių parametrai</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="687"/>
         <source>Launch compton-conf configuration tool</source>
-        <translation type="unfinished"/>
+        <translation>Paleisti compton-conf konfigūravimo įrankį</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="690"/>
