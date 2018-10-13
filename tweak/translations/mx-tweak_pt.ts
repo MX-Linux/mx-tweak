@@ -10,7 +10,7 @@
         <location filename="defaultlook.cpp" line="499"/>
         <location filename="defaultlook.cpp" line="509"/>
         <source>MX Tweak</source>
-        <translation>MX-Personalização</translation>
+        <translation>MX-Ajustes Rápidos</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="54"/>
@@ -160,7 +160,7 @@
     <message>
         <location filename="defaultlook.ui" line="501"/>
         <source>Fix some website fields when using dark theme</source>
-        <translation>Corrige alguns campos em páginas web ao usar o tema escuro</translation>
+        <translation>Corrigir alguns campos em páginas web ao usar o tema escuro</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="504"/>
@@ -206,7 +206,7 @@
     <message>
         <location filename="defaultlook.ui" line="633"/>
         <source>Xfwm (Xfce) Compositor</source>
-        <translation>Compositor do Xfwm (Xfce)</translation>
+        <translation>Compositor Xfwm (Xfce)</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="638"/>
@@ -241,7 +241,7 @@
     <message>
         <location filename="defaultlook.ui" line="743"/>
         <source>Config Options</source>
-        <translation>Restabelecer</translation>
+        <translation>Opções de configuração</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="751"/>
@@ -251,7 +251,7 @@
     <message>
         <location filename="defaultlook.ui" line="758"/>
         <source>Reset Thunar custom right-click actions to system defaults</source>
-        <translation>Restabelecer as acções pré-definidas do botão direito do rato</translation>
+        <translation>Restabelecer as acções pré-definidas do botão direito do rato no Thunar</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="795"/>
@@ -261,7 +261,7 @@
     <message>
         <location filename="defaultlook.ui" line="802"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
-        <translation>      NOTA: o ficheiro /etc/X11/xorg.conf.d/20-intel.conf existente será guardado na pasta home</translation>
+        <translation>NOTA: o ficheiro /etc/X11/xorg.conf.d/20-intel.conf existente será guardado na pasta pessoal</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="812"/>
@@ -281,7 +281,7 @@
     <message>
         <location filename="defaultlook.ui" line="864"/>
         <source>Show systray (notification area) frame</source>
-        <translation>Mostrar o caixilho da área de notificação (systray frame)</translation>
+        <translation>Mostrar o caixilho da bandeja (área de notificação)</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="871"/>
@@ -306,12 +306,12 @@
     <message>
         <location filename="defaultlook.ui" line="899"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
-        <translation>nota: para o sistema poder hibernar, a partição swap tem que ser maior do que a RAM instalada</translation>
+        <translation>nota: para o sistema poder hibernar, a partição swap tem que ser &gt;= RAM instalada</translation>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="463"/>
         <source>About MX Tweak</source>
-        <translation>Sobre o MX-Personalização</translation>
+        <translation>Sobre o MX-Ajustes Rápidos</translation>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="464"/>
@@ -321,7 +321,7 @@
     <message>
         <location filename="defaultlook.cpp" line="465"/>
         <source>App for quick default ui theme changes and tweaks</source>
-        <translation>Aplicação para personalização rápida do tema pré-definido da interface de utilizador</translation>
+        <translation>Aplicação para rapidamente fazer alterações ao tema pré-definido da interface de utilizador e outros ajustes</translation>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="467"/>
@@ -401,12 +401,12 @@
     <message>
         <location filename="window_buttons.ui" line="64"/>
         <source>Timestamp</source>
-        <translation>Hora da execução</translation>
+        <translation>Estampa de data/hora</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="69"/>
         <source>Group title and timestamp</source>
-        <translation>Título do grupo e hora da execução</translation>
+        <translation>Título do grupo e estampa de data/hora</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="74"/>
@@ -416,12 +416,12 @@
     <message>
         <location filename="window_buttons.ui" line="79"/>
         <source>Group title and window title</source>
-        <translation>Título do grupo e da janela</translation>
+        <translation>Títulos do grupo e da janela</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="84"/>
         <source>None, allow drag-and-drop</source>
-        <translation>Nenhum, permitir arrastar e largar</translation>
+        <translation>Nenhum; permitir arrastar e largar</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="92"/>
@@ -446,7 +446,7 @@
     <message>
         <location filename="window_buttons.ui" line="120"/>
         <source>Middle click action:</source>
-        <translation>Ação com botão central:</translation>
+        <translation>Acção do botão central:</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="128"/>
@@ -584,7 +584,7 @@
     <message>
         <location filename="xfwm_compositor_settings.cpp" line="38"/>
         <source>Xfwm Compositor Settings</source>
-        <translation>Definições do Compositor do Xfwm</translation>
+        <translation>Definições do Compositor Xfwm</translation>
     </message>
 </context>
 </TS>

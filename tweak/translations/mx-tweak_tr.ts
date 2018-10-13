@@ -10,23 +10,23 @@
         <location filename="defaultlook.cpp" line="499"/>
         <location filename="defaultlook.cpp" line="509"/>
         <source>MX Tweak</source>
-        <translation type="unfinished"/>
+        <translation>MX İnce ayar</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="54"/>
         <source>Xfce Settings</source>
-        <translation type="unfinished"/>
+        <translation>Xfce Ayarları</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="63"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the panel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Paneli özelleştirme&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="77"/>
         <location filename="defaultlook.ui" line="283"/>
         <source>Panel</source>
-        <translation type="unfinished"/>
+        <translation>Panel</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="97"/>
@@ -56,22 +56,22 @@
     <message>
         <location filename="defaultlook.ui" line="234"/>
         <source>Help</source>
-        <translation type="unfinished"/>
+        <translation>Yardım</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="251"/>
         <source>Quit application</source>
-        <translation type="unfinished"/>
+        <translation>Uygulamadan çık</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="254"/>
         <source>Close</source>
-        <translation type="unfinished"/>
+        <translation>Kapat</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="261"/>
         <source>Alt+N</source>
-        <translation type="unfinished"/>
+        <translation>Alt+N</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="291"/>
@@ -81,7 +81,7 @@
     <message>
         <location filename="defaultlook.ui" line="311"/>
         <source>Backup current panel configuration</source>
-        <translation type="unfinished"/>
+        <translation>Şimdiki panel yapılandırmasını yedekle</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="318"/>
@@ -121,12 +121,12 @@
     <message>
         <location filename="defaultlook.ui" line="386"/>
         <source>Left</source>
-        <translation type="unfinished"/>
+        <translation>Sol</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="391"/>
         <source>Right</source>
-        <translation type="unfinished"/>
+        <translation>Sağ</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="399"/>
@@ -145,17 +145,17 @@
         <location filename="defaultlook.ui" line="771"/>
         <location filename="defaultlook.ui" line="840"/>
         <source>Apply</source>
-        <translation type="unfinished"/>
+        <translation>Uygula</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="457"/>
         <source>Theme</source>
-        <translation type="unfinished"/>
+        <translation>Tema</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="471"/>
         <source>Theme Options</source>
-        <translation type="unfinished"/>
+        <translation>Tema Seçenekleri</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="501"/>
@@ -180,7 +180,7 @@
     <message>
         <location filename="defaultlook.ui" line="570"/>
         <source>Preview</source>
-        <translation type="unfinished"/>
+        <translation>Önizleme</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="580"/>
@@ -569,7 +569,7 @@
     <message>
         <location filename="xfwm_compositor_settings.ui" line="183"/>
         <source>Inactive windows</source>
-        <translation type="unfinished"/>
+        <translation>Etkin olmayan pencereler</translation>
     </message>
     <message>
         <location filename="xfwm_compositor_settings.ui" line="190"/>
@@ -579,7 +579,7 @@
     <message>
         <location filename="xfwm_compositor_settings.ui" line="212"/>
         <source>Close</source>
-        <translation type="unfinished"/>
+        <translation>Kapat</translation>
     </message>
     <message>
         <location filename="xfwm_compositor_settings.cpp" line="38"/>
