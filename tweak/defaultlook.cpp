@@ -833,7 +833,7 @@ void defaultlook::setupEtc()
     //hide hibernate if there is no swap
     QString cmd = "/sbin/blkid |grep -q swap";
     int swaptest = system(cmd.toUtf8());
-    qDebug () << "swaptest is " << swaptest;
+    qDebug() << "swaptest swap present is " << swaptest;
     if (swaptest != 0) {
         ui->checkBoxHibernate->hide();
         ui->label_hibernate->hide();
@@ -844,6 +844,15 @@ void defaultlook::setupEtc()
     if (file.exists()) {
         qDebug() << "uswsusp.conf found";
     }else {
+        ui->checkBoxHibernate->hide();
+        ui->label_hibernate->hide();
+    }
+
+    //and hide hibernate if swap is encrypted
+    cmd = "grep swap /etc/crypttab |grep -q luks";
+    swaptest = system(cmd.toUtf8());
+    qDebug() << "swaptest encrypted is " << swaptest;
+    if (swaptest = 0) {
         ui->checkBoxHibernate->hide();
         ui->label_hibernate->hide();
     }
