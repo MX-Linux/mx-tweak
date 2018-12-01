@@ -1,3 +1,9 @@
+mx-tweak (18.11.02) mx; urgency=medium
+
+  * translation refresh 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Fri, 30 Nov 2018 19:37:21 -0500
+
 mx-tweak (18.11.01) mx; urgency=medium
 
   * disable hibernate option when swap encrypted 
