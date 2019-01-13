@@ -1,4 +1,4 @@
-mx-tweak (18.12.02) mx; urgency=medium
+mx-tweak (19.01.01) mx; urgency=medium
 
   * add check for theme existence before listing theme set
 
