@@ -1014,11 +1014,25 @@ void defaultlook::setupComboTheme()
         QFileInfo file_info(it.next());
         QString filename = file_info.absoluteFilePath();
         QString name = runCmd("cat '" + filename + "'|grep Name=").output.section("=",1,1);
-        qDebug() << "filename is " << filename;
-        qDebug()<< "theme combo name" << name;
-        theme_list << name;
-        theme_info.insert(name,filename);
-        qDebug() << "theme info hash value is" << name << " " << theme_info[name];
+        QString xsettings_gtk_theme = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xsettings_gtk_theme=").output.section("=",1,1);
+        qDebug() << "xsettings_gtk_theme = " << xsettings_gtk_theme;
+        QString xsettings_icon_theme = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xsettings_icon_theme=").output.section("=",1,1);
+        qDebug() << "xsettings_icon_theme = " << xsettings_icon_theme;
+        QString xfwm4_window_decorations = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xfwm4_window_decorations=").output.section("=",1,1);
+        qDebug() << "xfwm4_window_decorations = " << xfwm4_window_decorations;
+
+        //check theme existence, only list if all 3 elements present
+        QFileInfo xsettings_theme("/usr/share/themes/" + xsettings_gtk_theme);
+        QFileInfo xfwm4_theme("/usr/share/themes/" + xfwm4_window_decorations);
+        QFileInfo icon_theme("/usr/share/icons/" + xsettings_icon_theme);
+
+        if (xsettings_theme.exists() && xfwm4_theme.exists() && icon_theme.exists() ) {
+            qDebug() << "filename is " << filename;
+            qDebug()<< "theme combo name" << name;
+            theme_list << name;
+            theme_info.insert(name,filename);
+            qDebug() << "theme info hash value is" << name << " " << theme_info[name];
+        }
     }
     theme_list.sort();
     theme_list.insert(0,tr("Choose a theme set"));
@@ -1031,11 +1045,26 @@ void defaultlook::setupComboTheme()
         QFileInfo file_info(it2.next());
         QString filename = file_info.absoluteFilePath();
         QString name = runCmd("cat '" + filename + "'|grep Name=").output.section("=",1,1);
-        qDebug() << "filename is " << filename;
-        qDebug()<< "theme combo name" << name;
-        theme_list << name;
-        theme_info.insert(name,filename);
-        qDebug() << "theme info hash value is" << name << " " << theme_info[name];
+
+        QString xsettings_gtk_theme = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xsettings_gtk_theme=").output.section("=",1,1);
+        qDebug() << "xsettings_gtk_theme = " << xsettings_gtk_theme;
+        QString xsettings_icon_theme = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xsettings_icon_theme=").output.section("=",1,1);
+        qDebug() << "xsettings_icon_theme = " << xsettings_icon_theme;
+        QString xfwm4_window_decorations = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xfwm4_window_decorations=").output.section("=",1,1);
+        qDebug() << "xfwm4_window_decorations = " << xfwm4_window_decorations;
+
+        //check theme existence, only list if all 3 elements present
+        QFileInfo xsettings_theme("/usr/share/themes/" + xsettings_gtk_theme);
+        QFileInfo xfwm4_theme("/usr/share/themes/" + xfwm4_window_decorations);
+        QFileInfo icon_theme("/usr/share/icons/" + xsettings_icon_theme);
+
+        if (xsettings_theme.exists() && xfwm4_theme.exists() && icon_theme.exists() ) {
+            qDebug() << "filename is " << filename;
+            qDebug()<< "theme combo name" << name;
+            theme_list << name;
+            theme_info.insert(name,filename);
+            qDebug() << "theme info hash value is" << name << " " << theme_info[name];
+        }
     }
 
     ui->comboTheme->addItems(theme_list);
@@ -1268,7 +1297,7 @@ void defaultlook::on_ButtonApplyEtc_clicked()
             }
         }else {
             qDebug() << "creating simple gtkrc-2.0 file";
-            QString cmd = "echo 'include \"/.local/share/mx-tweak-data/no-ellipse-desktop-filenames.rc\"' >> " + home_path + "/.gtkrc-2.0";
+            QString cmd = "echo 'include \".local/share/mx-tweak-data/no-ellipse-desktop-filenames.rc\"' >> " + home_path + "/.gtkrc-2.0";
             system(cmd.toUtf8());
         }
         //add modification config
