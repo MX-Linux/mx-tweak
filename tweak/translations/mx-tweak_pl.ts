@@ -51,7 +51,7 @@
     <message>
         <location filename="defaultlook.ui" line="223"/>
         <source>About</source>
-        <translation type="unfinished"/>
+        <translation>O</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="234"/>
@@ -61,7 +61,7 @@
     <message>
         <location filename="defaultlook.ui" line="251"/>
         <source>Quit application</source>
-        <translation type="unfinished"/>
+        <translation>Zakończ aplikację</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="254"/>
@@ -180,7 +180,7 @@
     <message>
         <location filename="defaultlook.ui" line="570"/>
         <source>Preview</source>
-        <translation type="unfinished"/>
+        <translation>Podgląd</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="580"/>

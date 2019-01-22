@@ -201,7 +201,7 @@
     <message>
         <location filename="defaultlook.ui" line="628"/>
         <source>None</source>
-        <translation type="unfinished"/>
+        <translation>Ei mitään</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="633"/>
@@ -216,12 +216,12 @@
     <message>
         <location filename="defaultlook.ui" line="646"/>
         <source>Edit compton.conf directly in text editor</source>
-        <translation type="unfinished"/>
+        <translation>Muokkaa compton.conf -tiedostoa suoraan tekstieditorissa</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="649"/>
         <source>Edit compton.conf</source>
-        <translation type="unfinished"/>
+        <translation>Muokkaa compton.conf</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="680"/>
@@ -231,12 +231,12 @@
     <message>
         <location filename="defaultlook.ui" line="687"/>
         <source>Launch compton-conf configuration tool</source>
-        <translation type="unfinished"/>
+        <translation>Käynnistä compton-conf konfigurointityökalut</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="690"/>
         <source>Compton settings</source>
-        <translation type="unfinished"/>
+        <translation>Comptonin asetukset</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="743"/>
