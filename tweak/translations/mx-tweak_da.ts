@@ -10,43 +10,43 @@
         <location filename="defaultlook.cpp" line="499"/>
         <location filename="defaultlook.cpp" line="509"/>
         <source>MX Tweak</source>
-        <translation type="unfinished"/>
+        <translation>MX Finjustering</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="54"/>
         <source>Xfce Settings</source>
-        <translation type="unfinished"/>
+        <translation>Xfce-indstillinger</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="63"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the panel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tilpas panelet&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="77"/>
         <location filename="defaultlook.ui" line="283"/>
         <source>Panel</source>
-        <translation type="unfinished"/>
+        <translation>Panel</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="97"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configure window behavior and shortcuts&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Konfigurer vinduesopførsel og genveje&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="111"/>
         <source>Window Manager</source>
-        <translation type="unfinished"/>
+        <translation>Vindueshåndtering</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="131"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the look of your desktop&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tilpas skrivebordets udseende&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="145"/>
         <source>Appearance</source>
-        <translation type="unfinished"/>
+        <translation>Udseende</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="223"/>
@@ -56,7 +56,7 @@
     <message>
         <location filename="defaultlook.ui" line="234"/>
         <source>Help</source>
-        <translation type="unfinished"/>
+        <translation>Hjælp</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="251"/>
@@ -66,7 +66,7 @@
     <message>
         <location filename="defaultlook.ui" line="254"/>
         <source>Close</source>
-        <translation type="unfinished"/>
+        <translation>Luk</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="261"/>
@@ -81,62 +81,62 @@
     <message>
         <location filename="defaultlook.ui" line="311"/>
         <source>Backup current panel configuration</source>
-        <translation type="unfinished"/>
+        <translation>Sikkerhedskopiér nuværende panelkonfiguration</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="318"/>
         <source>Restore backup panel configuration</source>
-        <translation type="unfinished"/>
+        <translation>Gendan nuværende panelkonfiguration</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="325"/>
         <source>Restore default panel</source>
-        <translation type="unfinished"/>
+        <translation>Gendan standardpanel</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="338"/>
         <source>Affects 1st panel</source>
-        <translation type="unfinished"/>
+        <translation>Påvirker det første panel</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="345"/>
         <source>Display panel vertically</source>
-        <translation type="unfinished"/>
+        <translation>Vis panelet lodret</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="359"/>
         <source>Bottom</source>
-        <translation type="unfinished"/>
+        <translation>Nederst</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="364"/>
         <source>Top</source>
-        <translation type="unfinished"/>
+        <translation>Øverst</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="372"/>
         <source>Display panel horizontally</source>
-        <translation type="unfinished"/>
+        <translation>Vis panelet vandret</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="386"/>
         <source>Left</source>
-        <translation type="unfinished"/>
+        <translation>Venstre</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="391"/>
         <source>Right</source>
-        <translation type="unfinished"/>
+        <translation>Højre</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="399"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Affects all panels&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Påvirker alle paneler&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="419"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Buttons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Vinduesknapper&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="434"/>
@@ -155,22 +155,22 @@
     <message>
         <location filename="defaultlook.ui" line="471"/>
         <source>Theme Options</source>
-        <translation type="unfinished"/>
+        <translation>Temavalgmuligheder</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="501"/>
         <source>Fix some website fields when using dark theme</source>
-        <translation type="unfinished"/>
+        <translation>Ret nogle webstedsfelter når der bruges mørkt tema</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="504"/>
         <source>Firefox dark theme tweak</source>
-        <translation type="unfinished"/>
+        <translation>Finjustering af Firefox mørkt tema</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="511"/>
         <source>Fix HexChat input box in dark theme</source>
-        <translation type="unfinished"/>
+        <translation>Ret HexChat inputboks i mørkt tema</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="563"/>
@@ -180,38 +180,38 @@
     <message>
         <location filename="defaultlook.ui" line="570"/>
         <source>Preview</source>
-        <translation type="unfinished"/>
+        <translation>Forhåndsvis</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="580"/>
         <location filename="defaultlook.ui" line="673"/>
         <source>Compositor</source>
-        <translation type="unfinished"/>
+        <translation>Compositor</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="601"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce Compositor Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce Compositor-indstillinger&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="604"/>
         <source>Xfwm Settings</source>
-        <translation type="unfinished"/>
+        <translation>Xfwm-indstillinger</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="628"/>
         <source>None</source>
-        <translation type="unfinished"/>
+        <translation>Ingen</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="633"/>
         <source>Xfwm (Xfce) Compositor</source>
-        <translation type="unfinished"/>
+        <translation>Xfwm (Xfce) Compositor</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="638"/>
         <source>Compton </source>
-        <translation type="unfinished"/>
+        <translation>Compton </translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="646"/>
@@ -226,7 +226,7 @@
     <message>
         <location filename="defaultlook.ui" line="680"/>
         <source>Transparency and shadow options</source>
-        <translation type="unfinished"/>
+        <translation>Valgmuligheder for gennemsigtighed og skygge</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="687"/>
@@ -241,77 +241,77 @@
     <message>
         <location filename="defaultlook.ui" line="743"/>
         <source>Config Options</source>
-        <translation type="unfinished"/>
+        <translation>Konfigurationsvalgmuligheder</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="751"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
-        <translation type="unfinished"/>
+        <translation>Nulstil Lightdm (loginskærm) til systemets standardtema</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="758"/>
         <source>Reset Thunar custom right-click actions to system defaults</source>
-        <translation type="unfinished"/>
+        <translation>Nulstil Thunar tilpassede højreklik-handlinger til systemets standarder</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="795"/>
         <source>Use intel driver instead of default &quot;modsetting&quot; driver (requires restart)</source>
-        <translation type="unfinished"/>
+        <translation>Brug intel-driver i stedet for standard &quot;modsetting&quot;-driver (kræver genstart)</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="802"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
-        <translation type="unfinished"/>
+        <translation>          BEMÆRK: eksisterende /etc/X11/xorg.conf.d/20-intel.conf sikkerhedskopieres til hjemmemappen</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="812"/>
         <source>Other</source>
-        <translation>Andre</translation>
+        <translation>Andet</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="820"/>
         <source>Enable single-click on desktop</source>
-        <translation type="unfinished"/>
+        <translation>Aktivér enkelt klik på skrivebordet</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="827"/>
         <source>Enable single-click in Thunar File Manager</source>
-        <translation type="unfinished"/>
+        <translation>Aktivér enkelt klik i Thunar-filhåndtering</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="864"/>
         <source>Show systray (notification area) frame</source>
-        <translation type="unfinished"/>
+        <translation>Vis systembakke-ramme (notifikationsområde)</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="871"/>
         <source>Show windows from all workspaces in panel</source>
-        <translation type="unfinished"/>
+        <translation>Vis vinduer fra alle arbejdsområder i panel</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="878"/>
         <source>Enable mounting of internal drives by non-root users</source>
-        <translation type="unfinished"/>
+        <translation>Aktivér montering af interne drivere af ikke-root-brugere</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="885"/>
         <source>Disable shortening of long filenames on the desktop</source>
-        <translation type="unfinished"/>
+        <translation>Deaktivér afkortning af lange filnavne på skrivebordet</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="892"/>
         <source>Enable hibernate on Log Out menu </source>
-        <translation type="unfinished"/>
+        <translation>Aktivér dvale i log ud-menu</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="899"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
-        <translation type="unfinished"/>
+        <translation>                   bemærk: for at gå i dvale skal swap være &gt;= RAM</translation>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="463"/>
         <source>About MX Tweak</source>
-        <translation type="unfinished"/>
+        <translation>Om MX Finjustering</translation>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="464"/>
@@ -321,7 +321,7 @@
     <message>
         <location filename="defaultlook.cpp" line="465"/>
         <source>App for quick default ui theme changes and tweaks</source>
-        <translation type="unfinished"/>
+        <translation>Program til hurtigt at ændre standard brugerfladetema og finjusteringer.</translation>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="467"/>
@@ -342,27 +342,27 @@
     <message>
         <location filename="defaultlook.cpp" line="500"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
-        <translation type="unfinished"/>
+        <translation>Færdig! Firefox kan kræve en genstarte før ændringerne træder i kraft</translation>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="510"/>
         <source>This app is Xfce-only</source>
-        <translation type="unfinished"/>
+        <translation>Programmer er kun til brug i Xfce</translation>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="652"/>
         <source>Panel settings</source>
-        <translation type="unfinished"/>
+        <translation>Panelindstillinger</translation>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="653"/>
         <source> Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
-        <translation type="unfinished"/>
+        <translation> Dine nuværende panelindstillinger er blevet sikkerhedskopieret i en skjult mappe kaldet .restore i din hjemmemappe (~/.restore/)</translation>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="1015"/>
         <source>Choose a theme set</source>
-        <translation type="unfinished"/>
+        <translation>Vælg et temasæt</translation>
     </message>
 </context>
 <context>
@@ -371,132 +371,132 @@
         <location filename="window_buttons.ui" line="14"/>
         <location filename="window_buttons.cpp" line="36"/>
         <source>Window Buttons</source>
-        <translation type="unfinished"/>
+        <translation>Vinduesknapper</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="28"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Appearance&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Udseende&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="35"/>
         <source>Show button labels</source>
-        <translation type="unfinished"/>
+        <translation>Vis knapetiketter</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="42"/>
         <source>Show flat buttons</source>
-        <translation type="unfinished"/>
+        <translation>Vis flade knapper</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="49"/>
         <source>Show handle</source>
-        <translation type="unfinished"/>
+        <translation>Vis håndtag</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="56"/>
         <source>Sorting Order:</source>
-        <translation type="unfinished"/>
+        <translation>Sorteringsrækkefølge:</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="64"/>
         <source>Timestamp</source>
-        <translation type="unfinished"/>
+        <translation>Tidsstempel</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="69"/>
         <source>Group title and timestamp</source>
-        <translation type="unfinished"/>
+        <translation>Gruppetitel og tidsstempel</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="74"/>
         <source>Window Title</source>
-        <translation type="unfinished"/>
+        <translation>Vinduestitel</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="79"/>
         <source>Group title and window title</source>
-        <translation type="unfinished"/>
+        <translation>Gruppetitel og vinduestitel</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="84"/>
         <source>None, allow drag-and-drop</source>
-        <translation type="unfinished"/>
+        <translation>Ingen, tillad træk og slip</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="92"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Behavior&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Opførsel&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="99"/>
         <source>Window grouping:</source>
-        <translation type="unfinished"/>
+        <translation>Vinduesgruppering:</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="107"/>
         <source>Never</source>
-        <translation type="unfinished"/>
+        <translation>Aldrig</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="112"/>
         <source>Always</source>
-        <translation type="unfinished"/>
+        <translation>Altid</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="120"/>
         <source>Middle click action:</source>
-        <translation type="unfinished"/>
+        <translation>Handling for midterklik:</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="128"/>
         <source>Nothing</source>
-        <translation type="unfinished"/>
+        <translation>Ingen ting</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="133"/>
         <source>Close window</source>
-        <translation type="unfinished"/>
+        <translation>Luk vindue</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="138"/>
         <source>Minimize window</source>
-        <translation type="unfinished"/>
+        <translation>Minimier vindue</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="146"/>
         <source>Restore minimized windows to current workspace</source>
-        <translation type="unfinished"/>
+        <translation>Gendan minimerede vinduer til nuværende arbejdsområde</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="153"/>
         <source>Draw window frame when hovering over a button</source>
-        <translation type="unfinished"/>
+        <translation>Tegn vinduesramme når der holdes over en knap</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="160"/>
         <source>Switch windows using the mouse wheel</source>
-        <translation type="unfinished"/>
+        <translation>Skift vinduer med musehjulet</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="167"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Filtering&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Filtrering&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="174"/>
         <source>Show windows from all workspaces or viewports</source>
-        <translation type="unfinished"/>
+        <translation>Vis vinduer fra alle arbejdsområder eller visningsområder</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="181"/>
         <source>Show only minimized windows</source>
-        <translation type="unfinished"/>
+        <translation>Vi kun minimerede vinduer</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="188"/>
         <source>Show windows from all monitors</source>
-        <translation type="unfinished"/>
+        <translation>Vis vinduer fra alle skærme</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="238"/>
@@ -514,77 +514,77 @@
     <message>
         <location filename="xfwm_compositor_settings.ui" line="42"/>
         <source>Popup Windows</source>
-        <translation type="unfinished"/>
+        <translation>Pop op-vinduer</translation>
     </message>
     <message>
         <location filename="xfwm_compositor_settings.ui" line="49"/>
         <source>Windows during move</source>
-        <translation type="unfinished"/>
+        <translation>Vinduer under flytning</translation>
     </message>
     <message>
         <location filename="xfwm_compositor_settings.ui" line="56"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Opacity Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Opacityindstillinger&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="xfwm_compositor_settings.ui" line="79"/>
         <source>Window decorations</source>
-        <translation type="unfinished"/>
+        <translation>Vinduesdekorationer</translation>
     </message>
     <message>
         <location filename="xfwm_compositor_settings.ui" line="86"/>
         <source>Show shadows under dock windows</source>
-        <translation type="unfinished"/>
+        <translation>Vis skygger under dokvinduer</translation>
     </message>
     <message>
         <location filename="xfwm_compositor_settings.ui" line="93"/>
         <source>Show shadows under popup windows</source>
-        <translation type="unfinished"/>
+        <translation>Vis skygger under pop op-vinduer</translation>
     </message>
     <message>
         <location filename="xfwm_compositor_settings.ui" line="100"/>
         <source>Windows during resize</source>
-        <translation type="unfinished"/>
+        <translation>Vinduer under tilpasning af størrelse</translation>
     </message>
     <message>
         <location filename="xfwm_compositor_settings.ui" line="123"/>
         <source>Show shadows under regular windows</source>
-        <translation type="unfinished"/>
+        <translation>Vis skygger under almindelige vinduer</translation>
     </message>
     <message>
         <location filename="xfwm_compositor_settings.ui" line="130"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Feature Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Funktionalitetindstillinger&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="xfwm_compositor_settings.ui" line="137"/>
         <source>Show windows preview in place of icons when cycling</source>
-        <translation type="unfinished"/>
+        <translation>Vis vinduesforhåndsvisning i stedet for ikoner ved gennemløb</translation>
     </message>
     <message>
         <location filename="xfwm_compositor_settings.ui" line="144"/>
         <source>Display fullscreen overlay windows directly</source>
-        <translation type="unfinished"/>
+        <translation>Vis overlægningsvinduer i fuldskærm direkte</translation>
     </message>
     <message>
         <location filename="xfwm_compositor_settings.ui" line="183"/>
         <source>Inactive windows</source>
-        <translation type="unfinished"/>
+        <translation>Inaktive vinduer</translation>
     </message>
     <message>
         <location filename="xfwm_compositor_settings.ui" line="190"/>
         <source>Synchronize drawing to vertical blank</source>
-        <translation type="unfinished"/>
+        <translation>Synkroniser tegning til lodret rydning</translation>
     </message>
     <message>
         <location filename="xfwm_compositor_settings.ui" line="212"/>
         <source>Close</source>
-        <translation type="unfinished"/>
+        <translation>Luk</translation>
     </message>
     <message>
         <location filename="xfwm_compositor_settings.cpp" line="38"/>
         <source>Xfwm Compositor Settings</source>
-        <translation type="unfinished"/>
+        <translation>Xfwm Compositor-indstillinger</translation>
     </message>
 </context>
 </TS>

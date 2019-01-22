@@ -10,23 +10,23 @@
         <location filename="defaultlook.cpp" line="499"/>
         <location filename="defaultlook.cpp" line="509"/>
         <source>MX Tweak</source>
-        <translation type="unfinished"/>
+        <translation>MX Tweak</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="54"/>
         <source>Xfce Settings</source>
-        <translation type="unfinished"/>
+        <translation>Налаштування Xfce</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="63"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the panel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Налаштувати панель&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="77"/>
         <location filename="defaultlook.ui" line="283"/>
         <source>Panel</source>
-        <translation type="unfinished"/>
+        <translation>Панель</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="97"/>
@@ -36,12 +36,12 @@
     <message>
         <location filename="defaultlook.ui" line="111"/>
         <source>Window Manager</source>
-        <translation type="unfinished"/>
+        <translation>Віконний менеджер</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="131"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the look of your desktop&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Налаштування вигляду вашої стільниці&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="145"/>
@@ -51,32 +51,32 @@
     <message>
         <location filename="defaultlook.ui" line="223"/>
         <source>About</source>
-        <translation type="unfinished"/>
+        <translation>Про</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="234"/>
         <source>Help</source>
-        <translation type="unfinished"/>
+        <translation>Довідка</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="251"/>
         <source>Quit application</source>
-        <translation type="unfinished"/>
+        <translation>Закрити програму</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="254"/>
         <source>Close</source>
-        <translation type="unfinished"/>
+        <translation>Закрити</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="261"/>
         <source>Alt+N</source>
-        <translation type="unfinished"/>
+        <translation>Alt+N</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="291"/>
         <source>Options</source>
-        <translation type="unfinished"/>
+        <translation>Параметри</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="311"/>
@@ -101,7 +101,7 @@
     <message>
         <location filename="defaultlook.ui" line="345"/>
         <source>Display panel vertically</source>
-        <translation type="unfinished"/>
+        <translation>Показувати панель вертикально</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="359"/>
@@ -111,22 +111,22 @@
     <message>
         <location filename="defaultlook.ui" line="364"/>
         <source>Top</source>
-        <translation type="unfinished"/>
+        <translation>Зверху</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="372"/>
         <source>Display panel horizontally</source>
-        <translation type="unfinished"/>
+        <translation>Показувати панель горизонтально</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="386"/>
         <source>Left</source>
-        <translation type="unfinished"/>
+        <translation>Ліворуч</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="391"/>
         <source>Right</source>
-        <translation type="unfinished"/>
+        <translation>Праворуч</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="399"/>
@@ -145,17 +145,17 @@
         <location filename="defaultlook.ui" line="771"/>
         <location filename="defaultlook.ui" line="840"/>
         <source>Apply</source>
-        <translation type="unfinished"/>
+        <translation>Застосувати</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="457"/>
         <source>Theme</source>
-        <translation type="unfinished"/>
+        <translation>Тема</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="471"/>
         <source>Theme Options</source>
-        <translation type="unfinished"/>
+        <translation>Параметри теми</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="501"/>
@@ -211,7 +211,7 @@
     <message>
         <location filename="defaultlook.ui" line="638"/>
         <source>Compton </source>
-        <translation type="unfinished"/>
+        <translation>Compton </translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="646"/>
@@ -311,12 +311,12 @@
     <message>
         <location filename="defaultlook.cpp" line="463"/>
         <source>About MX Tweak</source>
-        <translation type="unfinished"/>
+        <translation>Про MX Tweak</translation>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="464"/>
         <source>Version: </source>
-        <translation type="unfinished"/>
+        <translation>Версія:</translation>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="465"/>
@@ -326,13 +326,13 @@
     <message>
         <location filename="defaultlook.cpp" line="467"/>
         <source>Copyright (c) MX Linux</source>
-        <translation type="unfinished"/>
+        <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="468"/>
         <location filename="defaultlook.cpp" line="471"/>
         <source>License</source>
-        <translation type="unfinished"/>
+        <translation>Ліцензія</translation>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="469"/>
@@ -352,7 +352,7 @@
     <message>
         <location filename="defaultlook.cpp" line="652"/>
         <source>Panel settings</source>
-        <translation type="unfinished"/>
+        <translation>Параметри панелі</translation>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="653"/>
@@ -579,7 +579,7 @@
     <message>
         <location filename="xfwm_compositor_settings.ui" line="212"/>
         <source>Close</source>
-        <translation type="unfinished"/>
+        <translation>Закрити</translation>
     </message>
     <message>
         <location filename="xfwm_compositor_settings.cpp" line="38"/>

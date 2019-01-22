@@ -10,7 +10,7 @@
         <location filename="defaultlook.cpp" line="499"/>
         <location filename="defaultlook.cpp" line="509"/>
         <source>MX Tweak</source>
-        <translation>MX-Personalização</translation>
+        <translation>MX-Ajustes Rápidos</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="54"/>
@@ -36,12 +36,12 @@
     <message>
         <location filename="defaultlook.ui" line="111"/>
         <source>Window Manager</source>
-        <translation>Gestor de Janelas</translation>
+        <translation>Gerenciador de Janelas</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="131"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the look of your desktop&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Personalizar a aparência da área de trabalho&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Personalizar o aspeto da área de trabalho&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="145"/>
@@ -81,7 +81,7 @@
     <message>
         <location filename="defaultlook.ui" line="311"/>
         <source>Backup current panel configuration</source>
-        <translation>Guardar a actual configuração do painel</translation>
+        <translation>Guardar a atual configuração do painel</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="318"/>
@@ -96,7 +96,7 @@
     <message>
         <location filename="defaultlook.ui" line="338"/>
         <source>Affects 1st panel</source>
-        <translation>Afecta o painel 1</translation>
+        <translation>Afeta o painel 1</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="345"/>
@@ -131,12 +131,12 @@
     <message>
         <location filename="defaultlook.ui" line="399"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Affects all panels&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Afecta todos os painéis&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Afeta todos os painéis&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="419"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Buttons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Botõ esde janela&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Botões de janela&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="434"/>
@@ -160,7 +160,7 @@
     <message>
         <location filename="defaultlook.ui" line="501"/>
         <source>Fix some website fields when using dark theme</source>
-        <translation>Corrige alguns campos em páginas web ao usar o tema escuro</translation>
+        <translation>Corrigir alguns campos em páginas web ao usar o tema escuro</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="504"/>
@@ -180,7 +180,7 @@
     <message>
         <location filename="defaultlook.ui" line="570"/>
         <source>Preview</source>
-        <translation>Pré-visualização</translation>
+        <translation>Visualizar</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="580"/>
@@ -216,12 +216,12 @@
     <message>
         <location filename="defaultlook.ui" line="646"/>
         <source>Edit compton.conf directly in text editor</source>
-        <translation>Editar o ficheiro compton.conf diretamente num editor de texto</translation>
+        <translation>Editar o arquivo compton.conf diretamente num editor de texto</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="649"/>
         <source>Edit compton.conf</source>
-        <translation>Editar o ficheiro compton.conf</translation>
+        <translation>Editar o arquivo compton.conf</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="680"/>
@@ -241,27 +241,27 @@
     <message>
         <location filename="defaultlook.ui" line="743"/>
         <source>Config Options</source>
-        <translation>Restabelecer</translation>
+        <translation>Opções de configuração</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="751"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
-        <translation>Restabelecer o tema pré-definido do écrã de entrada (LightDM) </translation>
+        <translation>Restabelecer o tema pré-definido da tela de entrada (LightDM) </translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="758"/>
         <source>Reset Thunar custom right-click actions to system defaults</source>
-        <translation>Restabelecer as acções pré-definidas do botão direito do rato</translation>
+        <translation>Restabelecer as ações pré-definidas do botão direito do mouse</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="795"/>
         <source>Use intel driver instead of default &quot;modsetting&quot; driver (requires restart)</source>
-        <translation>Usar o controlador intel em vez do controlador &quot;modsetting&quot; pré-definido (requer reiniciar)</translation>
+        <translation>Usar o controlador (driver) intel em vez do controlador &quot;modsetting&quot; pré-definido (requer reiniciar)</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="802"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
-        <translation>          NOTA: o ficheiro /etc/X11/xorg.conf.d/20-intel.conf existente será guardado na pasta home</translation>
+        <translation>NOTA: o arquivo /etc/X11/xorg.conf.d/20-intel.conf existente será guardado na pasta pessoal</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="812"/>
@@ -271,17 +271,17 @@
     <message>
         <location filename="defaultlook.ui" line="820"/>
         <source>Enable single-click on desktop</source>
-        <translation>Activar &apos;um clique&apos; na área de trabalho</translation>
+        <translation>Ativar &apos;um clique&apos; na área de trabalho</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="827"/>
         <source>Enable single-click in Thunar File Manager</source>
-        <translation>Activar &apos;um clique&apos; no gestor de ficheiros Thunar</translation>
+        <translation>Ativar &apos;um clique&apos; no gerenciador de arquivos Thunar</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="864"/>
         <source>Show systray (notification area) frame</source>
-        <translation>Mostrar o caixilho da área de notificação (systray frame)</translation>
+        <translation>Mostrar o caixilho da bandeja (área de notificação)</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="871"/>
@@ -291,37 +291,37 @@
     <message>
         <location filename="defaultlook.ui" line="878"/>
         <source>Enable mounting of internal drives by non-root users</source>
-        <translation>Activar o montar de discos internos por utilizadores além do administrador (root)</translation>
+        <translation>Ativar o montar de discos internos por usuários além do administrador (root)</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="885"/>
         <source>Disable shortening of long filenames on the desktop</source>
-        <translation>Desactivar o encurtar de nomes de ficheiro extensos na área de trabalho</translation>
+        <translation>Desativar o encurtar de nomes de arquivo extensos na área de trabalho</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="892"/>
         <source>Enable hibernate on Log Out menu </source>
-        <translation>Activar &apos;Hibernar&apos; no menu Sair</translation>
+        <translation>Ativar &apos;Hibernar&apos; no menu Sair</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="899"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
-        <translation>nota: para o sistema poder hibernar, a partição swap tem que ser maior do que a RAM instalada</translation>
+        <translation>nota: para o sistema poder hibernar, a partição swap tem que ser &gt;= RAM instalada</translation>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="463"/>
         <source>About MX Tweak</source>
-        <translation>Sobre o MX-Personalização</translation>
+        <translation>Sobre o MX-Ajustes Rápidos</translation>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="464"/>
         <source>Version: </source>
-        <translation>Versão:</translation>
+        <translation>Versão: </translation>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="465"/>
         <source>App for quick default ui theme changes and tweaks</source>
-        <translation>Aplicação para personalização rápida do tema pré-definido da interface de utilizador</translation>
+        <translation>Aplicação para rapidamente fazer alterações ao tema pré-definido da interface de utilizador e outros ajustes</translation>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="467"/>
@@ -342,7 +342,7 @@
     <message>
         <location filename="defaultlook.cpp" line="500"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
-        <translation>Concluído! O Firefox pode ter que ser reiniciado para efectivar as alterações </translation>
+        <translation>Concluído! O Firefox pode ter que ser reiniciado para efetivar as alterações </translation>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="510"/>
@@ -357,12 +357,12 @@
     <message>
         <location filename="defaultlook.cpp" line="653"/>
         <source> Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
-        <translation>As actuais definições do painel foram guardadas numa pasta oculta chamada .restore na pasta pessoal (~/.restore/)</translation>
+        <translation>As atuais definições do painel foram guardadas numa pasta oculta chamada .restore na pasta pessoal (~/.restore/)</translation>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="1015"/>
         <source>Choose a theme set</source>
-        <translation>Escolher um conjunto de temas</translation>
+        <translation>Escolher um tema</translation>
     </message>
 </context>
 <context>
@@ -371,7 +371,7 @@
         <location filename="window_buttons.ui" line="14"/>
         <location filename="window_buttons.cpp" line="36"/>
         <source>Window Buttons</source>
-        <translation>Botõ esde janela</translation>
+        <translation>Botões de janela</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="28"/>
@@ -381,17 +381,17 @@
     <message>
         <location filename="window_buttons.ui" line="35"/>
         <source>Show button labels</source>
-        <translation>Mostrar legendas dos botões</translation>
+        <translation>Mostrar rótulos dos botões</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="42"/>
         <source>Show flat buttons</source>
-        <translation>Mostrar botões planos</translation>
+        <translation>Mostrar botões sem relevo</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="49"/>
         <source>Show handle</source>
-        <translation>Mostrar alça</translation>
+        <translation>Mostrar pega</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="56"/>
@@ -401,12 +401,12 @@
     <message>
         <location filename="window_buttons.ui" line="64"/>
         <source>Timestamp</source>
-        <translation>Marca temporal</translation>
+        <translation>Marca de data/hora</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="69"/>
         <source>Group title and timestamp</source>
-        <translation>Título do grupo e marca temporal</translation>
+        <translation>Título do grupo e estampa de data/hora</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="74"/>
@@ -421,7 +421,7 @@
     <message>
         <location filename="window_buttons.ui" line="84"/>
         <source>None, allow drag-and-drop</source>
-        <translation>Nenhum, permite arrastar-e-soltar</translation>
+        <translation>Nenhum; permitir arrastar-e-soltar</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="92"/>
@@ -446,12 +446,12 @@
     <message>
         <location filename="window_buttons.ui" line="120"/>
         <source>Middle click action:</source>
-        <translation>ação do clique do meio:</translation>
+        <translation>Ação do clique do meio:</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="128"/>
         <source>Nothing</source>
-        <translation>Nada</translation>
+        <translation>Sem ação</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="133"/>
@@ -466,7 +466,7 @@
     <message>
         <location filename="window_buttons.ui" line="146"/>
         <source>Restore minimized windows to current workspace</source>
-        <translation>Restaurar as janelas minimizadas para o espaço de trabalho atual</translation>
+        <translation>Restaurar as janelas minimizadas no espaço de trabalho atual</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="153"/>
@@ -519,7 +519,7 @@
     <message>
         <location filename="xfwm_compositor_settings.ui" line="49"/>
         <source>Windows during move</source>
-        <translation>Ao  mover</translation>
+        <translation>Ao mover</translation>
     </message>
     <message>
         <location filename="xfwm_compositor_settings.ui" line="56"/>
@@ -564,17 +564,17 @@
     <message>
         <location filename="xfwm_compositor_settings.ui" line="144"/>
         <source>Display fullscreen overlay windows directly</source>
-        <translation>Exibir directamente as janelas de sobreposição de écrã inteiro</translation>
+        <translation>Exibir diretamente as janelas de sobreposição de tela inteir</translation>
     </message>
     <message>
         <location filename="xfwm_compositor_settings.ui" line="183"/>
         <source>Inactive windows</source>
-        <translation>Janelas inactivas</translation>
+        <translation>Janelas inativas</translation>
     </message>
     <message>
         <location filename="xfwm_compositor_settings.ui" line="190"/>
         <source>Synchronize drawing to vertical blank</source>
-        <translation>Sincronizar o desenho com o espaço em branco vertical</translation>
+        <translation>Sincronizar o desenho com o traço em branco vertical</translation>
     </message>
     <message>
         <location filename="xfwm_compositor_settings.ui" line="212"/>
