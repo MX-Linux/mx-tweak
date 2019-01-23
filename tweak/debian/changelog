@@ -1,3 +1,9 @@
+mx-tweak (19.01.02) mx; urgency=medium
+
+  * update translations 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Wed, 23 Jan 2019 18:49:17 -0500
+
 mx-tweak (19.01.01) mx; urgency=medium
 
   * add check for theme existence before listing theme set
