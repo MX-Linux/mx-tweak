@@ -11,6 +11,8 @@ zcompton.desktop		usr/share/mx-tweak
 *.conf			usr/share/mx-tweak
 50-udisks.pkla 	usr/share/mx-tweak
 20-intel.conf   usr/share/mx-tweak
+20-amd.conf 	usr/share/mx-tweak
+20-radeon.conf	usr/share/mx-tweak
 no-ellipse-desktop-filenames.rc usr/share/mx-tweak
 lib/*   usr/lib/mx-tweak
 actions/* usr/share/polkit-1/actions

@@ -64,6 +64,8 @@ public:
     QStringList undotheme;
     bool hibernate_flag;
     bool Intel_flag;
+    bool radeon_flag;
+    bool amdgpuflag;
     void setup();
     void setupuiselections();
     void setuppanel();
@@ -172,6 +174,10 @@ private slots:
     void on_checkboxIntelDriver_clicked();
 
     void on_pushButtontasklist_clicked();
+
+    void on_checkboxAMDtearfree_clicked();
+
+    void on_checkboxRadeontearfree_clicked();
 
 private:
     Ui::defaultlook *ui;

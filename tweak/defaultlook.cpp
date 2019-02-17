@@ -945,15 +945,32 @@ void defaultlook::setupConfigoptions()
 {
   ui->checkboxIntelDriver->hide();
   ui->labelIntel->hide();
+  ui->checkboxAMDtearfree->hide();
+  ui->labelamdgpu->hide();
+  ui->checkboxRadeontearfree->hide();
+  ui->labelradeon->hide();
   ui->ButtonApplyMiscDefualts->setEnabled(false);
   ui->checkBoxLightdmReset->setChecked(false);
   ui->checkBoxThunarCAReset->setChecked(false);
 
   //setup Intel checkbox
 
-  if ( system("lspci |grep VGA |grep -q Intel ") == 0) {
+  QString partcheck = runCmd("lspci -k | grep -iA2 'vga\\\|3d' | tail -1 | awk '{print $NF}'").output;
+  qDebug()<< "partcheck = " << partcheck;
+
+  if ( partcheck == "i915") {
       ui->checkboxIntelDriver->show();
       ui->labelIntel->show();
+  }
+
+  if ( partcheck == "amdgpu") {
+      ui->checkboxAMDtearfree->show();
+      ui->labelamdgpu->show();
+  }
+
+  if ( partcheck == "radeon") {
+      ui->checkboxRadeontearfree->show();
+      ui->labelradeon->show();
   }
 
   QFileInfo intelfile("/etc/X11/xorg.conf.d/20-intel.conf");
@@ -962,6 +979,22 @@ void defaultlook::setupConfigoptions()
       Intel_flag = false ;//set false if box is checked by default.  we will set true if manually checked.
   }else {
       ui->checkboxIntelDriver->setChecked(false);
+  }
+
+  QFileInfo amdfile("/etc/X11/xorg.conf.d/20-amd.conf");
+  if ( amdfile.exists()) {
+      ui->checkboxAMDtearfree->setChecked(true);
+      amdgpuflag = false ;//set false if box is checked by default.  we will set true if manually checked.
+  }else {
+      ui->checkboxAMDtearfree->setChecked(false);
+  }
+
+  QFileInfo radeonfile("/etc/X11/xorg.conf.d/20-radeon.conf");
+  if ( radeonfile.exists()) {
+      ui->checkboxRadeontearfree->setChecked(true);
+      radeon_flag = false ;//set false if box is checked by default.  we will set true if manually checked.
+  }else {
+      ui->checkboxRadeontearfree->setChecked(false);
   }
 }
 
@@ -1609,6 +1642,8 @@ void defaultlook::on_ButtonApplyMiscDefualts_clicked()
 {
     QString cmd;
     QString intel_option;
+    QString amd_option;
+    QString radeon_option;
     QString lightdm_option;
 
     intel_option.clear();
@@ -1639,8 +1674,40 @@ void defaultlook::on_ButtonApplyMiscDefualts_clicked()
             intel_option = "disable_intel";
         }
     }
-    if ( ! intel_option.isEmpty() || ! lightdm_option.isEmpty() ) {
-    cmd = "pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + intel_option + " " + lightdm_option;
+
+    if ( amdgpuflag ) {
+        QFileInfo check_intel("/etc/X11/xorg.conf.d/20-amd.conf");
+        if ( check_intel.exists()){
+            //backup existing 20-amd.conf file to home folder
+            cmd = "cp /etc/X11/xorg.conf.d/20-amd.conf /home/$USER/20-amd.conf.$(date +%Y%m%H%M%S)";
+            system(cmd.toUtf8());
+        }
+        if (ui->checkboxIntelDriver->isChecked()) {
+            //copy mx-tweak version to xorg.conf.d directory
+            amd_option = "enable_amd";
+        } else {
+            //remove 20-amd.conf
+            amd_option = "disable_amd";
+        }
+    }
+
+    if ( radeon_flag ) {
+        QFileInfo check_intel("/etc/X11/xorg.conf.d/20-radeon.conf");
+        if ( check_intel.exists()){
+            //backup existing 20-radeon.conf file to home folder
+            cmd = "cp /etc/X11/xorg.conf.d/20-radeon.conf /home/$USER/20-radeon.conf.$(date +%Y%m%H%M%S)";
+            system(cmd.toUtf8());
+        }
+        if (ui->checkboxIntelDriver->isChecked()) {
+            //copy mx-tweak version to xorg.conf.d directory
+            radeon_option = "enable_radeon";
+        } else {
+            //remove 20-intel.conf
+            radeon_option = "disable_radeon";
+        }
+    }
+    if ( ! intel_option.isEmpty() || ! lightdm_option.isEmpty() || ! amd_option.isEmpty() || ! radeon_option.isEmpty() ) {
+    cmd = "pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + intel_option + " " + amd_option + " " + radeon_option + " " + lightdm_option;
     qDebug() << "cmd is " << cmd;
     system(cmd.toUtf8());
     }
@@ -1666,6 +1733,20 @@ void defaultlook::on_checkboxIntelDriver_clicked()
     ui->ButtonApplyMiscDefualts->setEnabled(true);
 }
 
+void defaultlook::on_checkboxAMDtearfree_clicked()
+{
+    //toggle flag for action.  this way, if box was checked initially, the action won't take place again.
+    amdgpuflag = true;
+    ui->ButtonApplyMiscDefualts->setEnabled(true);
+}
+
+void defaultlook::on_checkboxRadeontearfree_clicked()
+{
+    //toggle flag for action.  this way, if box was checked initially, the action won't take place again.
+    radeon_flag = true;
+    ui->ButtonApplyMiscDefualts->setEnabled(true);
+}
+
 void defaultlook::on_pushButtontasklist_clicked()
 {
     window_buttons fred;
@@ -1678,3 +1759,5 @@ QString defaultlook::getVersion(QString name)
 {
     return runCmd("dpkg-query -f '${Version}' -W " + name).output;
 }
+
+
