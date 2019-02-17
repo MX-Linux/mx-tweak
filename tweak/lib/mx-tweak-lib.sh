@@ -15,6 +15,28 @@ disable_intel()
     
 }
 
+enable_radeon()
+{
+    cp /usr/share/mx-tweak/20-radeon.conf /etc/X11/xorg.conf.d/20-radeon.conf
+}
+
+disable_radeon()
+{
+    rm /etc/X11/xorg.conf.d/20-radeon.conf
+    
+}
+
+enable_amd()
+{
+    cp /usr/share/mx-tweak/20-amd.conf /etc/X11/xorg.conf.d/20-amd.conf
+}
+
+disable_intel()
+{
+    rm /etc/X11/xorg.conf.d/20-amd.conf
+    
+}
+
 #lightdm
 #the purpose is to reset the lightdm theme to current system defaults
 lightdm_reset()
