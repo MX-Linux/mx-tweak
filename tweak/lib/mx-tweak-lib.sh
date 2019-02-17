@@ -31,7 +31,7 @@ enable_amd()
     cp /usr/share/mx-tweak/20-amd.conf /etc/X11/xorg.conf.d/20-amd.conf
 }
 
-disable_intel()
+disable_amd()
 {
     rm /etc/X11/xorg.conf.d/20-amd.conf
     
@@ -106,11 +106,14 @@ main()
 {
 $CMD1
 $CMD2
+$CMD3
+$CMD4
 }
 
 CMD1=$1
 CMD2=$2
-
+CMD3=$3
+CMD4=$4
 main
 
 exit 0

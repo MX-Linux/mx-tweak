@@ -952,7 +952,9 @@ void defaultlook::setupConfigoptions()
   ui->ButtonApplyMiscDefualts->setEnabled(false);
   ui->checkBoxLightdmReset->setChecked(false);
   ui->checkBoxThunarCAReset->setChecked(false);
-
+  Intel_flag = false;
+  amdgpuflag = false;
+  radeon_flag =false;
   //setup Intel checkbox
 
   QString partcheck = runCmd("lspci -k | grep -iA2 'vga\\\|3d' | tail -1 | awk '{print $NF}'").output;
@@ -976,7 +978,6 @@ void defaultlook::setupConfigoptions()
   QFileInfo intelfile("/etc/X11/xorg.conf.d/20-intel.conf");
   if ( intelfile.exists()) {
       ui->checkboxIntelDriver->setChecked(true);
-      Intel_flag = false ;//set false if box is checked by default.  we will set true if manually checked.
   }else {
       ui->checkboxIntelDriver->setChecked(false);
   }
@@ -984,7 +985,6 @@ void defaultlook::setupConfigoptions()
   QFileInfo amdfile("/etc/X11/xorg.conf.d/20-amd.conf");
   if ( amdfile.exists()) {
       ui->checkboxAMDtearfree->setChecked(true);
-      amdgpuflag = false ;//set false if box is checked by default.  we will set true if manually checked.
   }else {
       ui->checkboxAMDtearfree->setChecked(false);
   }
@@ -992,7 +992,6 @@ void defaultlook::setupConfigoptions()
   QFileInfo radeonfile("/etc/X11/xorg.conf.d/20-radeon.conf");
   if ( radeonfile.exists()) {
       ui->checkboxRadeontearfree->setChecked(true);
-      radeon_flag = false ;//set false if box is checked by default.  we will set true if manually checked.
   }else {
       ui->checkboxRadeontearfree->setChecked(false);
   }
@@ -1676,13 +1675,13 @@ void defaultlook::on_ButtonApplyMiscDefualts_clicked()
     }
 
     if ( amdgpuflag ) {
-        QFileInfo check_intel("/etc/X11/xorg.conf.d/20-amd.conf");
-        if ( check_intel.exists()){
+        QFileInfo check_amd("/etc/X11/xorg.conf.d/20-amd.conf");
+        if ( check_amd.exists()){
             //backup existing 20-amd.conf file to home folder
             cmd = "cp /etc/X11/xorg.conf.d/20-amd.conf /home/$USER/20-amd.conf.$(date +%Y%m%H%M%S)";
             system(cmd.toUtf8());
         }
-        if (ui->checkboxIntelDriver->isChecked()) {
+        if (ui->checkboxAMDtearfree->isChecked()) {
             //copy mx-tweak version to xorg.conf.d directory
             amd_option = "enable_amd";
         } else {
@@ -1692,17 +1691,17 @@ void defaultlook::on_ButtonApplyMiscDefualts_clicked()
     }
 
     if ( radeon_flag ) {
-        QFileInfo check_intel("/etc/X11/xorg.conf.d/20-radeon.conf");
-        if ( check_intel.exists()){
+        QFileInfo check_radeon("/etc/X11/xorg.conf.d/20-radeon.conf");
+        if ( check_radeon.exists()){
             //backup existing 20-radeon.conf file to home folder
             cmd = "cp /etc/X11/xorg.conf.d/20-radeon.conf /home/$USER/20-radeon.conf.$(date +%Y%m%H%M%S)";
             system(cmd.toUtf8());
         }
-        if (ui->checkboxIntelDriver->isChecked()) {
+        if (ui->checkboxRadeontearfree->isChecked()) {
             //copy mx-tweak version to xorg.conf.d directory
             radeon_option = "enable_radeon";
         } else {
-            //remove 20-intel.conf
+            //remove 20-radeon.conf
             radeon_option = "disable_radeon";
         }
     }
