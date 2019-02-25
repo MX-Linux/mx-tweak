@@ -142,8 +142,8 @@
         <location filename="defaultlook.ui" line="434"/>
         <location filename="defaultlook.ui" line="537"/>
         <location filename="defaultlook.ui" line="707"/>
-        <location filename="defaultlook.ui" line="771"/>
-        <location filename="defaultlook.ui" line="840"/>
+        <location filename="defaultlook.ui" line="826"/>
+        <location filename="defaultlook.ui" line="868"/>
         <source>Apply</source>
         <translation>使用</translation>
     </message>
@@ -254,57 +254,77 @@
         <translation>將 Thunar 當中右鍵的自訂動作回復成系統預設的動作</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="795"/>
+        <location filename="defaultlook.ui" line="765"/>
         <source>Use intel driver instead of default &quot;modsetting&quot; driver (requires restart)</source>
         <translation>使用 intel 驅動程式，而不是預設的「modsetting」驅動程式（必須重新開機）</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="802"/>
+        <location filename="defaultlook.ui" line="772"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>註：現所採用的 /etc/X11/xorg.conf.d/20-intel.conf 會備份到家目錄當中</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="812"/>
+        <location filename="defaultlook.ui" line="779"/>
+        <source>Use tearfree amdgpu option</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="786"/>
+        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="793"/>
+        <source>Use tearfree radeon driver option</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="800"/>
+        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="840"/>
         <source>Other</source>
         <translation>其他</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="820"/>
+        <location filename="defaultlook.ui" line="848"/>
         <source>Enable single-click on desktop</source>
         <translation>在桌面上啟用游標單擊</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="827"/>
+        <location filename="defaultlook.ui" line="855"/>
         <source>Enable single-click in Thunar File Manager</source>
         <translation>在 Thunar 檔案管理員中啟用游標單擊</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="864"/>
+        <location filename="defaultlook.ui" line="892"/>
         <source>Show systray (notification area) frame</source>
         <translation>顯示通知區域的外框</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="871"/>
+        <location filename="defaultlook.ui" line="899"/>
         <source>Show windows from all workspaces in panel</source>
         <translation>在邊條中顯示來自所有工作區的視窗</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="878"/>
+        <location filename="defaultlook.ui" line="906"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>容許並非 root 的使用者掛載內接式硬碟</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="885"/>
+        <location filename="defaultlook.ui" line="913"/>
         <source>Disable shortening of long filenames on the desktop</source>
         <translation>在桌面上，不把過長檔名簡化顯示</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="892"/>
+        <location filename="defaultlook.ui" line="920"/>
         <source>Enable hibernate on Log Out menu </source>
         <translation>在登出選單中啟用休眠選項</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="899"/>
+        <location filename="defaultlook.ui" line="927"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
         <translation>註：若欲休眠，swap 必須大於 RAM</translation>
     </message>
@@ -360,7 +380,7 @@
         <translation>目前所採用的邊條設定已備份，放在家目錄下的一隠藏資料夾中（~./restore）</translation>
     </message>
     <message>
-        <location filename="defaultlook.cpp" line="1015"/>
+        <location filename="defaultlook.cpp" line="1070"/>
         <source>Choose a theme set</source>
         <translation>選擇一套佈景組合</translation>
     </message>
