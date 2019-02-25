@@ -142,8 +142,8 @@
         <location filename="defaultlook.ui" line="434"/>
         <location filename="defaultlook.ui" line="537"/>
         <location filename="defaultlook.ui" line="707"/>
-        <location filename="defaultlook.ui" line="771"/>
-        <location filename="defaultlook.ui" line="840"/>
+        <location filename="defaultlook.ui" line="826"/>
+        <location filename="defaultlook.ui" line="868"/>
         <source>Apply</source>
         <translation>Toepassen</translation>
     </message>
@@ -254,57 +254,77 @@
         <translation>Herstel Thunar aangepaste rechts-klik acties naar systeem standaard</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="795"/>
+        <location filename="defaultlook.ui" line="765"/>
         <source>Use intel driver instead of default &quot;modsetting&quot; driver (requires restart)</source>
         <translation>Gebruik intel driver in plaats van standaard &quot;modsetting&quot; driver (vereist herstart)</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="802"/>
+        <location filename="defaultlook.ui" line="772"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>NOOT: bestaande /etc/X11/xorg.conf.d/20-intel.conf zal gebackupped worden in de home folder</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="812"/>
+        <location filename="defaultlook.ui" line="779"/>
+        <source>Use tearfree amdgpu option</source>
+        <translation>Gebruik tearvrij amdgpu optie</translation>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="786"/>
+        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
+        <translation>NOOT: bestaande /etc/X11/xorg.conf.d/20-amd.conf zal gebackupped worden in de home folder</translation>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="793"/>
+        <source>Use tearfree radeon driver option</source>
+        <translation>Gebruik tearvrij radeon driver optie</translation>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="800"/>
+        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
+        <translation>NOOT: bestaande /etc/X11/xorg.conf.d/20-radeon.conf zal gebackupped worden in de home folder</translation>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="840"/>
         <source>Other</source>
         <translation>Ander</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="820"/>
+        <location filename="defaultlook.ui" line="848"/>
         <source>Enable single-click on desktop</source>
         <translation>Schakel enkel-klik op desktop in</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="827"/>
+        <location filename="defaultlook.ui" line="855"/>
         <source>Enable single-click in Thunar File Manager</source>
         <translation>Schakel enkel-klik in Thunar Bestandbeheer in</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="864"/>
+        <location filename="defaultlook.ui" line="892"/>
         <source>Show systray (notification area) frame</source>
         <translation>Laat systeemtray (notificatiegebied) venster zien</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="871"/>
+        <location filename="defaultlook.ui" line="899"/>
         <source>Show windows from all workspaces in panel</source>
         <translation>Laat schermen van alle werkgebieden in paneel zien</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="878"/>
+        <location filename="defaultlook.ui" line="906"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>Maak koppelen van interne schijven door niet-root gebruikers mogelijk</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="885"/>
+        <location filename="defaultlook.ui" line="913"/>
         <source>Disable shortening of long filenames on the desktop</source>
         <translation>Schakel verkorten van lange bestandsnamen op de desktop uit</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="892"/>
+        <location filename="defaultlook.ui" line="920"/>
         <source>Enable hibernate on Log Out menu </source>
         <translation>Schakel slaapstand in in Afmeldmenu</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="899"/>
+        <location filename="defaultlook.ui" line="927"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
         <translation>                   let op: voor slaapstand moet swap &gt;= RAM</translation>
     </message>
@@ -360,7 +380,7 @@
         <translation>Uw huidige paneelinstellingen zijn gebackupt in een verborgen folder genaamd .restore in uw home folder (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="defaultlook.cpp" line="1015"/>
+        <location filename="defaultlook.cpp" line="1070"/>
         <source>Choose a theme set</source>
         <translation>Kies een thema set</translation>
     </message>

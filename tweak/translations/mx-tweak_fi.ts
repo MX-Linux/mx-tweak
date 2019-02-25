@@ -142,8 +142,8 @@
         <location filename="defaultlook.ui" line="434"/>
         <location filename="defaultlook.ui" line="537"/>
         <location filename="defaultlook.ui" line="707"/>
-        <location filename="defaultlook.ui" line="771"/>
-        <location filename="defaultlook.ui" line="840"/>
+        <location filename="defaultlook.ui" line="826"/>
+        <location filename="defaultlook.ui" line="868"/>
         <source>Apply</source>
         <translation>Hyväksy</translation>
     </message>
@@ -254,57 +254,77 @@
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="795"/>
+        <location filename="defaultlook.ui" line="765"/>
         <source>Use intel driver instead of default &quot;modsetting&quot; driver (requires restart)</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="802"/>
+        <location filename="defaultlook.ui" line="772"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="812"/>
+        <location filename="defaultlook.ui" line="779"/>
+        <source>Use tearfree amdgpu option</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="786"/>
+        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="793"/>
+        <source>Use tearfree radeon driver option</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="800"/>
+        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="840"/>
         <source>Other</source>
         <translation>Muu</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="820"/>
+        <location filename="defaultlook.ui" line="848"/>
         <source>Enable single-click on desktop</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="827"/>
+        <location filename="defaultlook.ui" line="855"/>
         <source>Enable single-click in Thunar File Manager</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="864"/>
+        <location filename="defaultlook.ui" line="892"/>
         <source>Show systray (notification area) frame</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="871"/>
+        <location filename="defaultlook.ui" line="899"/>
         <source>Show windows from all workspaces in panel</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="878"/>
+        <location filename="defaultlook.ui" line="906"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="885"/>
+        <location filename="defaultlook.ui" line="913"/>
         <source>Disable shortening of long filenames on the desktop</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="892"/>
+        <location filename="defaultlook.ui" line="920"/>
         <source>Enable hibernate on Log Out menu </source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="899"/>
+        <location filename="defaultlook.ui" line="927"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
         <translation type="unfinished"/>
     </message>
@@ -360,7 +380,7 @@
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="defaultlook.cpp" line="1015"/>
+        <location filename="defaultlook.cpp" line="1070"/>
         <source>Choose a theme set</source>
         <translation type="unfinished"/>
     </message>

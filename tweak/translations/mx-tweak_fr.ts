@@ -142,8 +142,8 @@
         <location filename="defaultlook.ui" line="434"/>
         <location filename="defaultlook.ui" line="537"/>
         <location filename="defaultlook.ui" line="707"/>
-        <location filename="defaultlook.ui" line="771"/>
-        <location filename="defaultlook.ui" line="840"/>
+        <location filename="defaultlook.ui" line="826"/>
+        <location filename="defaultlook.ui" line="868"/>
         <source>Apply</source>
         <translation>Appliquer</translation>
     </message>
@@ -254,57 +254,77 @@
         <translation>Réinitialiser les actions personnalisées via clic droit de Thunar</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="795"/>
+        <location filename="defaultlook.ui" line="765"/>
         <source>Use intel driver instead of default &quot;modsetting&quot; driver (requires restart)</source>
         <translation>Utiliser le pilote intel à la place du pilote par défaut &quot;modsetting&quot; (nécessite un redémarrage)</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="802"/>
+        <location filename="defaultlook.ui" line="772"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>          NOTE:  /etc/X11/xorg.conf.d/20-intel.conf existant sera sauvegardé dans le dossier personnel</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="812"/>
+        <location filename="defaultlook.ui" line="779"/>
+        <source>Use tearfree amdgpu option</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="786"/>
+        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="793"/>
+        <source>Use tearfree radeon driver option</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="800"/>
+        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="840"/>
         <source>Other</source>
         <translation>Divers</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="820"/>
+        <location filename="defaultlook.ui" line="848"/>
         <source>Enable single-click on desktop</source>
         <translation>Activer le simple clic sur le bureau</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="827"/>
+        <location filename="defaultlook.ui" line="855"/>
         <source>Enable single-click in Thunar File Manager</source>
         <translation>Activer le simple clic dans le gestionnaire de fichier Thunar</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="864"/>
+        <location filename="defaultlook.ui" line="892"/>
         <source>Show systray (notification area) frame</source>
         <translation>Afficher le cadre de la systray (zone de notification)</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="871"/>
+        <location filename="defaultlook.ui" line="899"/>
         <source>Show windows from all workspaces in panel</source>
         <translation>Afficher les fenêtres de tous les espaces de travail dans le tableau de bord</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="878"/>
+        <location filename="defaultlook.ui" line="906"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>Activer le montage de disques internes par des utilisateurs non root</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="885"/>
+        <location filename="defaultlook.ui" line="913"/>
         <source>Disable shortening of long filenames on the desktop</source>
         <translation>Désactiver l&apos;abréviation des noms de fichiers longs sur le bureau</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="892"/>
+        <location filename="defaultlook.ui" line="920"/>
         <source>Enable hibernate on Log Out menu </source>
         <translation>Activer l&apos;hibernation à partir du menu de déconnexion</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="899"/>
+        <location filename="defaultlook.ui" line="927"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
         <translation>                   note: pour basculer en hibernation, le fichier d&apos;échange doit être &gt;= RAM</translation>
     </message>
@@ -360,7 +380,7 @@
         <translation>Les paramètres actuels de votre tableau de bord ont été enregistrés dans un dossier caché nommé .restore dans votre dossier personnel (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="defaultlook.cpp" line="1015"/>
+        <location filename="defaultlook.cpp" line="1070"/>
         <source>Choose a theme set</source>
         <translation>Choisir un jeu de thèmes</translation>
     </message>
