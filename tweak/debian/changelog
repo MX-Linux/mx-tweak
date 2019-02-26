@@ -1,3 +1,10 @@
+mx-tweak (19.02.02) mx; urgency=medium
+
+  * change driver check
+  * update localisations 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Mon, 25 Feb 2019 21:35:11 -0500
+
 mx-tweak (19.02.01) mx; urgency=medium
 
   * added tearfree options for radeon and amdgpu

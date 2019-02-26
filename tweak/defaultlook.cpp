@@ -960,17 +960,17 @@ void defaultlook::setupConfigoptions()
   QString partcheck = runCmd("lspci -k | grep -iA2 'vga\\\|3d' | tail -1 | awk '{print $NF}'").output;
   qDebug()<< "partcheck = " << partcheck;
 
-  if ( partcheck == "i915") {
+  if ( partcheck.contains("i915")) {
       ui->checkboxIntelDriver->show();
       ui->labelIntel->show();
   }
 
-  if ( partcheck == "amdgpu") {
+  if ( partcheck.contains("amdgpu")) {
       ui->checkboxAMDtearfree->show();
       ui->labelamdgpu->show();
   }
 
-  if ( partcheck == "radeon") {
+  if ( partcheck.contains("radeon")) {
       ui->checkboxRadeontearfree->show();
       ui->labelradeon->show();
   }
