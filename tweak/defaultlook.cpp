@@ -957,7 +957,7 @@ void defaultlook::setupConfigoptions()
   radeon_flag =false;
   //setup Intel checkbox
 
-  QString partcheck = runCmd("lspci -k | grep -iA2 'vga\\\|3d' | tail -1 | awk '{print $NF}'").output;
+  QString partcheck = runCmd("for i in $(lspci -n | awk '{print $2,$1}' | grep -E '^(0300|0302|0380)' | cut -f2 -d\\ ); do lspci -kns \"$i\"; done").output;
   qDebug()<< "partcheck = " << partcheck;
 
   if ( partcheck.contains("i915")) {
