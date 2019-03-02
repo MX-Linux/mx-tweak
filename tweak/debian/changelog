@@ -1,3 +1,9 @@
+mx-tweak (19.03.01) mx; urgency=medium
+
+  * fix video driver check for multiple card machines 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Fri, 01 Mar 2019 20:48:09 -0500
+
 mx-tweak (19.02.02) mx; urgency=medium
 
   * change driver check
