@@ -965,12 +965,12 @@ void defaultlook::setupConfigoptions()
       ui->labelIntel->show();
   }
 
-  if ( partcheck.contains("amdgpu")) {
+  if ( partcheck.contains("Kernel driver in use: amdgpu")) {
       ui->checkboxAMDtearfree->show();
       ui->labelamdgpu->show();
   }
 
-  if ( partcheck.contains("radeon")) {
+  if ( partcheck.contains("Kernel driver in use: radeon")) {
       ui->checkboxRadeontearfree->show();
       ui->labelradeon->show();
   }
