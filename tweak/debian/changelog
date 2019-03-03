@@ -1,3 +1,9 @@
+mx-tweak (19.03.02) mx; urgency=medium
+
+  * revised radeon and amdgpu driver check 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 03 Mar 2019 10:49:35 -0500
+
 mx-tweak (19.03.01) mx; urgency=medium
 
   * fix video driver check for multiple card machines 
