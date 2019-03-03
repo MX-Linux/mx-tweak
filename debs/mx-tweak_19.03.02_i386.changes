@@ -1,0 +1,28 @@
+Format: 1.8
+Date: Sun, 03 Mar 2019 10:49:35 -0500
+Source: mx-tweak
+Binary: mx-tweak
+Architecture: i386
+Version: 19.03.02
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: Dolphin Oracle <dolphinoracle@gmail.com>
+Description:
+ mx-tweak   - MX Tweak
+Changes:
+ mx-tweak (19.03.02) mx; urgency=medium
+ .
+   * revised radeon and amdgpu driver check
+Checksums-Sha1:
+ 020dfd394783d943a66b0db345b17c06f505ee31 10872 mx-tweak-dbgsym_19.03.02_i386.deb
+ d46481902f8dc481d422114f2284c59d111ace3d 9668 mx-tweak_19.03.02_i386.buildinfo
+ ebcdce5111854a83f6c0488e81cbc8459bd3f80d 132654 mx-tweak_19.03.02_i386.deb
+Checksums-Sha256:
+ 8ece8830934f39338031736f1e4ccc987d0fc9be324e38dd4bc8aad03ac09276 10872 mx-tweak-dbgsym_19.03.02_i386.deb
+ 677ea3ba3739a4520365068df905fe0a3ee08593a261e880e4871215a8050c40 9668 mx-tweak_19.03.02_i386.buildinfo
+ 4d37ae7c36d0ae810dba505cb7498baef73e7b1c7b82e02b8b4e44c726f82fb9 132654 mx-tweak_19.03.02_i386.deb
+Files:
+ ce1bc36beac497141d2ec5d19d4b0e67 10872 debug optional mx-tweak-dbgsym_19.03.02_i386.deb
+ 2bdd4f718454e979e5e8ee537dbf7f16 9668 admin optional mx-tweak_19.03.02_i386.buildinfo
+ 6ca3ff9c29065d517f12d0cc9d64c327 132654 admin optional mx-tweak_19.03.02_i386.deb

@@ -1,0 +1,34 @@
+Format: 1.8
+Date: Sun, 03 Mar 2019 10:49:35 -0500
+Source: mx-tweak
+Binary: mx-tweak
+Architecture: source amd64
+Version: 19.03.02
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: Dolphin Oracle <dolphinoracle@gmail.com>
+Description:
+ mx-tweak   - MX Tweak
+Changes:
+ mx-tweak (19.03.02) mx; urgency=medium
+ .
+   * revised radeon and amdgpu driver check
+Checksums-Sha1:
+ a90587f21d6441256b22e5abb3a5334ab90b5de9 628 mx-tweak_19.03.02.dsc
+ 1a09bc9ccda6b12334224a995b77d2001c9a9ba8 82620 mx-tweak_19.03.02.tar.xz
+ 859f8a3fb69a730dce7cc10ac50e6d0576f61094 10762 mx-tweak-dbgsym_19.03.02_amd64.deb
+ 3c8b7bca89c6d2e84bdbefe415a951b87a3e5860 10834 mx-tweak_19.03.02_amd64.buildinfo
+ 890e1d82d55d0aea7ec6a3ef272e1592e4740651 127984 mx-tweak_19.03.02_amd64.deb
+Checksums-Sha256:
+ 0d5ad0e53cdb8a23797ef37b27eb8292dd39c6b9143a7d5cd366f45d2d43bd2e 628 mx-tweak_19.03.02.dsc
+ f63a5ac8e19305de9542cfb70433f132b1f83f478298366b6d2a27468bb88de6 82620 mx-tweak_19.03.02.tar.xz
+ 6deaeb747245bd48cfb539821fcf1a94ccee0a95ae2735a0e72d4890acf2a0c6 10762 mx-tweak-dbgsym_19.03.02_amd64.deb
+ 1a95b185ebe0593603a13491f79c74f6644ce153af924721c006330ba43f2749 10834 mx-tweak_19.03.02_amd64.buildinfo
+ e5a0ab1992cf9d3f474b0df11aaefa0a73271670459ae108d0321e15df4a2884 127984 mx-tweak_19.03.02_amd64.deb
+Files:
+ 489a428b2b127c792e3707a53383ef40 628 admin optional mx-tweak_19.03.02.dsc
+ 5b3712ed0f7608730a67d3db6f033216 82620 admin optional mx-tweak_19.03.02.tar.xz
+ ed6c67018b6e4ea60067c9f7c335dacf 10762 debug optional mx-tweak-dbgsym_19.03.02_amd64.deb
+ b142cafbfd27ba697fed5539d568bab5 10834 admin optional mx-tweak_19.03.02_amd64.buildinfo
+ 0da47e6d8bf2dbc9aaf63299b5eee824 127984 admin optional mx-tweak_19.03.02_amd64.deb
