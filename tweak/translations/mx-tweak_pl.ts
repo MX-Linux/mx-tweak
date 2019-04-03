@@ -331,7 +331,7 @@
     <message>
         <location filename="defaultlook.cpp" line="463"/>
         <source>About MX Tweak</source>
-        <translation>O MX Ulepszenia</translation>
+        <translation>O programie MX Ulepszenia</translation>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="464"/>

@@ -266,22 +266,22 @@
     <message>
         <location filename="defaultlook.ui" line="779"/>
         <source>Use tearfree amdgpu option</source>
-        <translation type="unfinished"/>
+        <translation>Usa l&apos;opzione tearfree amdgpu</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="786"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
-        <translation type="unfinished"/>
+        <translation>NOTA: verrà eseguito il backup di /etc/X11/xorg.conf.d/20-amd.conf nella tua cartella home</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="793"/>
         <source>Use tearfree radeon driver option</source>
-        <translation type="unfinished"/>
+        <translation>Usa l&apos;opzione driver tearfree radeon</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="800"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
-        <translation type="unfinished"/>
+        <translation>NOTA: verrà eseguito il backup di /etc/X11/xorg.conf.d/20-radeon.conf nella tua cartella home</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="840"/>
