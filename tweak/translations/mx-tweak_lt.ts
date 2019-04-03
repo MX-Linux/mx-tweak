@@ -301,7 +301,7 @@
     <message>
         <location filename="defaultlook.ui" line="892"/>
         <source>Show systray (notification area) frame</source>
-        <translation type="unfinished"/>
+        <translation>Rodyti sistemos dėklo (pranešimų srities) rėmelį</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="899"/>
@@ -564,7 +564,7 @@
     <message>
         <location filename="xfwm_compositor_settings.ui" line="100"/>
         <source>Windows during resize</source>
-        <translation type="unfinished"/>
+        <translation>Langai dydžio keitimo metu</translation>
     </message>
     <message>
         <location filename="xfwm_compositor_settings.ui" line="123"/>
