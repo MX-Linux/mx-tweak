@@ -1206,12 +1206,12 @@ void defaultlook::on_buttonThemeApply_clicked()
             qDebug() << "include statement found";
         } else {
             qDebug() << "adding include statement";
-            QString cmd = "echo '@import url(\"whisker-tweak.css\")' >> " + home_path + "/.config/gtk-3.0/gtk.css";
+            QString cmd = "echo '@import url(\"whisker-tweak.css\");' >> " + home_path + "/.config/gtk-3.0/gtk.css";
             system(cmd.toUtf8());
         }
     }else {
         qDebug() << "creating simple gtk.css file";
-        QString cmd = "echo '@import url(\"whisker-tweak.css\")' >> " + home_path + "/.config/gtk-3.0/gtk.css";
+        QString cmd = "echo '@import url(\"whisker-tweak.css\");' >> " + home_path + "/.config/gtk-3.0/gtk.css";
         system(cmd.toUtf8());
     }
 
