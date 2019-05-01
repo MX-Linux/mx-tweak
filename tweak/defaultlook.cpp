@@ -1198,27 +1198,25 @@ void defaultlook::on_buttonThemeApply_clicked()
 
     //set whisker themeing
     QString home_path = QDir::homePath();
-    QFileInfo whisker_check(home_path + "/.gtkrc-2.0");
+    QFileInfo whisker_check(home_path + "/.config/gtk-3.0/gtk.css");
     if (whisker_check.exists()) {
-        qDebug() << "existing gtkrc-2.0 found";
-        //fix problem with original tweak setup
-        runCmd("sed -i '/[[:space:]].local\\/share\\/mx-tweak-data\\/whisker-tweak.rc/d' " + whisker_check.absoluteFilePath());
-        QString cmd = "cat " + home_path + "/.gtkrc-2.0 |grep -q whisker-tweak.rc";
+        qDebug() << "existing gtk.css found";
+        QString cmd = "cat " + home_path + "/.config/gtk-3.0/gtk.css |grep -q whisker-tweak.css";
         if (system(cmd.toUtf8()) == 0 ) {
             qDebug() << "include statement found";
         } else {
             qDebug() << "adding include statement";
-            QString cmd = "echo 'include \".local/share/mx-tweak-data/whisker-tweak.rc\"' >> " + home_path + "/.gtkrc-2.0";
+            QString cmd = "echo '@import url(\"whisker-tweak.css\")' >> " + home_path + "/.config/gtk-3.0/gtk.css";
             system(cmd.toUtf8());
         }
     }else {
-        qDebug() << "creating simple gtkrc-2.0 file";
-        QString cmd = "echo 'include \".local/share/mx-tweak-data/whisker-tweak.rc\"' >> " + home_path + "/.gtkrc-2.0";
+        qDebug() << "creating simple gtk.css file";
+        QString cmd = "echo '@import url(\"whisker-tweak.css\")' >> " + home_path + "/.config/gtk-3.0/gtk.css";
         system(cmd.toUtf8());
     }
 
    //add whisker info
-    runCmd("awk '/<begin_gtk_whisker_theme_code>/{flag=1;next}/<end_gtk_whisker_theme_code>/{flag=0}flag' \"" +fileinfo.absoluteFilePath() +"\" > " + home_path + "/.local/share/mx-tweak-data/whisker-tweak.rc");
+    runCmd("awk '/<begin_gtk_whisker_theme_code>/{flag=1;next}/<end_gtk_whisker_theme_code>/{flag=0}flag' \"" +fileinfo.absoluteFilePath() +"\" > " + home_path + "/.config/gtk-3.0/whisker-tweak.css");
 
     //restart xfce4-panel
 
@@ -1476,12 +1474,11 @@ void defaultlook::savethemeundo()
     }
 
     //backup whiskermenu changes
-    // if whisker-tweak.rc exists, back it up
-    QFileInfo fileinfo(home_path + "/.local/share/mx-tweak-data/whisker-tweak.rc");
+    // if whisker-tweak.css exists, back it up
+    QFileInfo fileinfo(home_path + "/.config/gtk-3.0/whisker-tweak.css");
     if (fileinfo.exists()) {
-        runCmd("cp " + home_path + "/.local/share/mx-tweak-data/whisker-tweak.rc /tmp/whisker-tweak.rc.undo." + whiskeriterator);
-        //runCmd("echo cp " + home_path + "/.local/share/mx-tweak-data/whisker-tweak.rc.undo " + fileinfo.absoluteFilePath() + " >> undo.txt");
-        undocommand = undocommand + "cp /tmp/whisker-tweak.rc.undo." + whiskeriterator + " " + fileinfo.absoluteFilePath();
+        runCmd("cp " + home_path + "/.config/gtk-3.0/whisker-tweak.css /tmp/whisker-tweak.css.undo." + whiskeriterator);
+        undocommand = undocommand + "cp /tmp/whisker-tweak.css.undo." + whiskeriterator + " " + fileinfo.absoluteFilePath();
     } else {
         // delete the file
         //runCmd("echo rm -f " + fileinfo.absoluteFilePath() + " >> undo.txt" );
