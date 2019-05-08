@@ -1,3 +1,9 @@
+mx-tweak (19.04.03) mx; urgency=medium
+
+  * adjust hexchat.conf to remove specific user names 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Wed, 08 May 2019 19:14:40 -0400
+
 mx-tweak (19.04.01) mx; urgency=medium
 
   * update translations 
