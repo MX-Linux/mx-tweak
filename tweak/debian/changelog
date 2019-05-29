@@ -1,3 +1,9 @@
+mx-tweak (19.05.01) mx; urgency=medium
+
+  * revised lightdm default reset lib
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Wed, 29 May 2019 19:24:25 -0400
+
 mx-tweak (19.04.03) mx; urgency=medium
 
   * adjust hexchat.conf to remove specific user names 
