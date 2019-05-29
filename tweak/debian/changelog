@@ -1,3 +1,15 @@
+mx-tweak (19.06.01) mx; urgency=medium
+
+  * gtk3 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Wed, 29 May 2019 19:27:06 -0400
+
+mx-tweak (19.05.01) mx; urgency=medium
+
+  * update  lightdm reset routine
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Wed, 29 May 2019 19:26:30 -0400
+
 mx-tweak (19.04.01) mx; urgency=medium
 
   * update translations 

@@ -42,7 +42,7 @@ disable_amd()
 lightdm_reset()
 {
 cp /etc/lightdm/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf.$(date +%Y%m%H%M%S)
-cp /etc/lightdm/mx$(lsb_release -rs)/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf
+cp /etc/lightdm/mx$(lsb_release -rs|cut -d\. -f1)/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf
 
 }
 
