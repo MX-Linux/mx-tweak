@@ -184,7 +184,7 @@ void defaultlook::fliptohorizontal()
 
             //try to move to in front of clock if present
 
-            QString clockID = runCmd("grep clock ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
+            QString clockID = runCmd("grep -m1 \"clock\\|datetime\" ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
             QString switchID;
             clockID=clockID.remove("\"").section("-",1,1).section(" ",0,0);
             qDebug() << "clockID: " << clockID;

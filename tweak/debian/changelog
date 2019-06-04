@@ -1,3 +1,9 @@
+mx-tweak (19.06.02) mx; urgency=medium
+
+  * revised flip to horizontal to deal with all 3 xfce clock plugins 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Tue, 04 Jun 2019 19:53:35 -0400
+
 mx-tweak (19.06.01) mx; urgency=medium
 
   * gtk3 
