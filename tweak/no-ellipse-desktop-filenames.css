@@ -1,0 +1,14 @@
+/*usr/share/mx-tweak/no-ellipse-desktop-filenames.css" */
+/*copies to ~/.local/share/mx-tweak-data/no-ellipse-desktop-filenames.css */
+
+/* xfdesktop */
+XfdesktopIconView.view {
+	-XfdesktopIconView-label-alpha:0;
+	-XfdesktopIconView-selected-label-alpha:0;
+	-XfdesktopIconView-ellipsize-icon-labels:0;
+	-XfdesktopIconView-tooltip-size:128;
+	-XfdesktopIconView-cell-spacing:0;
+	-XfdesktopIconView-cell-padding:20;
+	-XfdesktopIconView-cell-text-width-proportion:3.3;
+}
+

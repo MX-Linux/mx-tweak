@@ -1,8 +1,0 @@
-#usr/share/mx-tweak/no-ellipse-desktop-filenames.rc"
-#copies to ~/.local/share/mx-tweak-data/no-ellipse-desktop-filenames.rc
-
-style "xfdesktop-icon-view" {
-    XfdesktopIconView::ellipsize-icon-labels = 0
-}
-widget_class "*XfdesktopIconView*" style "xfdesktop-icon-view"
-

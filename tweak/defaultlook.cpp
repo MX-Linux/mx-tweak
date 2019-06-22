@@ -814,7 +814,7 @@ void defaultlook::setupEtc()
     }
 
     //setup no-ellipse option
-    QFileInfo fileinfo2(home_path + "/.local/share/mx-tweak-data/no-ellipse-desktop-filenames.rc");
+    QFileInfo fileinfo2(home_path + "/.config/gtk-3.0/no-ellipse-desktop-filenames.css");
     if (fileinfo2.exists()) {
         ui->checkboxNoEllipse->setChecked(true);
     } else {
@@ -1314,32 +1314,33 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     QString home_path = QDir::homePath();
     if (ui->checkboxNoEllipse->isChecked()) {
         //set desktop themeing
-        QFileInfo gtk_check(home_path + "/.gtkrc-2.0");
+        QFileInfo gtk_check(home_path + "/.config/gtk-3.0/gtk.css");
         if (gtk_check.exists()) {
-            qDebug() << "existing gtkrc-2.0 found";
-            QString cmd = "cat " + home_path + "/.gtkrc-2.0 |grep -q no-ellipse-desktop-filenames.rc";
+            qDebug() << "existing gtk.css found";
+            QString cmd = "cat " + home_path + "/.config/gtk-3.0/gtk.css |grep -q no-ellipse-desktop-filenames.css";
             if (system(cmd.toUtf8()) == 0 ) {
                 qDebug() << "include statement found";
             } else {
                 qDebug() << "adding include statement";
-                QString cmd = "echo 'include \".local/share/mx-tweak-data/no-ellipse-desktop-filenames.rc\"' >> " + home_path + "/.gtkrc-2.0";
+                QString cmd = "echo '@import url(\"no-ellipse-desktop-filenames.css\");' >> " + home_path + "/.config/gtk-3.0/gtk.css";
                 system(cmd.toUtf8());
             }
         }else {
-            qDebug() << "creating simple gtkrc-2.0 file";
-            QString cmd = "echo 'include \".local/share/mx-tweak-data/no-ellipse-desktop-filenames.rc\"' >> " + home_path + "/.gtkrc-2.0";
+            qDebug() << "creating simple gtk.css file";
+            QString cmd = "echo '@import url(\"no-ellipse-desktop-filenames.css\");' >> " + home_path + "/.config/gtk-3.0/gtk.css";
             system(cmd.toUtf8());
         }
         //add modification config
-        runCmd("cp /usr/share/mx-tweak/no-ellipse-desktop-filenames.rc " + home_path + "/.local/share/mx-tweak-data/no-ellipse-desktop-filenames.rc ");
+        runCmd("cp /usr/share/mx-tweak/no-ellipse-desktop-filenames.css " + home_path + "/.config/gtk-3.0/no-ellipse-desktop-filenames.css ");
 
         //restart xfdesktop by with xfdesktop --quite && xfdesktop &
 
         system("xfdesktop --quit && sleep .5 && xfdesktop &");
     }else {
-        QFileInfo noellipse_check(home_path + "/.local/share/mx-tweak-data/no-ellipse-desktop-filenames.rc");
+        QFileInfo noellipse_check(home_path + "/.config/gtk-3.0/no-ellipse-desktop-filenames.css");
         if (noellipse_check.exists()) {
-            runCmd("rm -f " + home_path + "/.local/share/mx-tweak-data/no-ellipse-desktop-filenames.rc");
+            runCmd("rm -f " + home_path + "/.config/gtk-3.0/no-ellipse-desktop-filenames.css");
+            runCmd("sed -i '/no-ellipse-desktop-filenames.css/d' " + home_path + "/.config/gtk-3.0/gtk.css");
             system("xfdesktop --quit && sleep .5 && xfdesktop &");
         }
     }
