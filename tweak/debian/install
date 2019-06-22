@@ -13,7 +13,7 @@ zcompton.desktop		usr/share/mx-tweak
 20-intel.conf   usr/share/mx-tweak
 20-amd.conf 	usr/share/mx-tweak
 20-radeon.conf	usr/share/mx-tweak
-no-ellipse-desktop-filenames.rc usr/share/mx-tweak
+no-ellipse-desktop-filenames.css usr/share/mx-tweak
 lib/*   usr/lib/mx-tweak
 actions/* usr/share/polkit-1/actions
 compton-launch.sh usr/local/bin

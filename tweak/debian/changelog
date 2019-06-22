@@ -1,3 +1,9 @@
+mx-tweak (19.06.03) mx; urgency=medium
+
+  * update no-ellipse-desktop-filenames for gtk3 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 22 Jun 2019 16:03:38 -0400
+
 mx-tweak (19.06.02) mx; urgency=medium
 
   * revised flip to horizontal to deal with all 3 xfce clock plugins 
