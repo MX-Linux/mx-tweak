@@ -130,7 +130,7 @@ void defaultlook::fliptohorizontal()
 
     // figure out moving the systray, if it exists
 
-    // figure out systrayID, and tasklistID
+    // figure out systrayID, pusleaudio plugin, and tasklistID
 
     QString systrayID = runCmd("grep \\\"systray\\\" ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
     systrayID=systrayID.remove("\"").section("-",1,1).section(" ",0,0);
@@ -139,6 +139,10 @@ void defaultlook::fliptohorizontal()
     QString tasklistID = runCmd("grep tasklist ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
     tasklistID=tasklistID.remove("\"").section("-",1,1).section(" ",0,0);
     qDebug() << "tasklist: " << tasklistID;
+
+    QString pulseaudioID = runCmd("grep pulseaudio ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
+    pulseaudioID=pulseaudioID.remove("\"").section("-",1,1).section(" ",0,0);
+    qDebug() << "pulseaudio: " << pulseaudioID;
 
     // if systray exists, do a bunch of stuff to relocate it a list of plugins.  If not present, do nothing to list
 
@@ -215,7 +219,20 @@ void defaultlook::fliptohorizontal()
             pluginIDs.insert(switchIDindex, systrayID);
             qDebug() << "reordered list" << pluginIDs;
         }
+
+        //if pulsaudio plugin is present, move it to in front of systray
+        if (pulseaudioID != "") {
+            int switchIDindex;
+            pluginIDs.removeAll(pulseaudioID);
+            switchIDindex = pluginIDs.indexOf(systrayID) + 1;
+            pluginIDs.insert(switchIDindex, pulseaudioID);
+            qDebug() << "reorderd PA list" << pluginIDs;
+
+
+        }
     }
+
+
     //now reverse the list
 
     std::reverse(pluginIDs.begin(), pluginIDs.end());
@@ -268,6 +285,10 @@ void defaultlook::fliptovertical()
     QString tasklistID = runCmd("grep tasklist ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
     tasklistID=tasklistID.remove("\"").section("-",1,1).section(" ",0,0);
     qDebug() << "tasklist: " << tasklistID;
+
+    QString pulseaudioID = runCmd("grep pulseaudio ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
+    pulseaudioID=pulseaudioID.remove("\"").section("-",1,1).section(" ",0,0);
+    qDebug() << "pulseaudio: " << pulseaudioID;
 
     //if systray exists, do a bunch of stuff to try to move it in a logical way
 
@@ -353,6 +374,17 @@ void defaultlook::fliptovertical()
         pluginIDs.insert(switchindex, systrayID);
         qDebug() << "reordered list" << pluginIDs;
 
+
+        //if pulsaudio plugin is present, move it to in front of systray
+        if (pulseaudioID != "") {
+            int switchIDindex;
+            pluginIDs.removeAll(pulseaudioID);
+            switchIDindex = pluginIDs.indexOf(systrayID) + 1;
+            pluginIDs.insert(switchIDindex, pulseaudioID);
+            qDebug() << "reorderd PA list" << pluginIDs;
+
+
+        }
         //move the expanding separator
 
         if (testexpandsep == "true") {
@@ -377,7 +409,7 @@ void defaultlook::fliptovertical()
         QString value = changeIterator.next();
         cmdstring = QString(cmdstring + "-s " + value + " ");
         qDebug() << cmdstring;
-    }
+    }QString switchID;
 
     //flip the panel plugins and pray for a miracle
 
