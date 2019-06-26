@@ -1,3 +1,9 @@
+mx-tweak (19.06.04) mx; urgency=medium
+
+  * updated flipto_ routines to look for pa plugin 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Tue, 25 Jun 2019 20:58:19 -0400
+
 mx-tweak (19.06.03) mx; urgency=medium
 
   * update no-ellipse-desktop-filenames for gtk3 
