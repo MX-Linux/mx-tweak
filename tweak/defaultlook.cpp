@@ -336,24 +336,24 @@ void defaultlook::fliptovertical()
             }
         }
 
-        //2.  if so, check second plugin is separator, if so place in front of separator
+//        //2.  if so, check second plugin is separator, if so place in front of separator
 
-        if (switchID != "") {
-            QString test = runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + pluginIDs.value(1)).output;
-            if (test == "separator") {
-                qDebug() << "test parm" << test;
-                switchID = pluginIDs.value(1);
-                qDebug() << "switchID sep: " << switchID;
-            }
-        }
+//        if (switchID != "") {
+//            QString test = runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + pluginIDs.value(1)).output;
+//            if (test == "separator") {
+//                qDebug() << "test parm" << test;
+//                switchID = pluginIDs.value(1);
+//                qDebug() << "switchID sep: " << switchID;
+//            }
+//        }
 
         //3.  if so, check third plugin is pager.  if so, place tasklist in front of pager
 
         if (switchID != ""){
-            QString test = runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + pluginIDs.value(2)).output;
+            QString test = runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + pluginIDs.value(1)).output;
             if (test == "pager") {
                 qDebug() << "test parm" << test;
-                switchID = pluginIDs.value(2);
+                switchID = pluginIDs.value(1);
                 qDebug() << "switchID pager: " << switchID;
             }
         }
