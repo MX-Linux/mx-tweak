@@ -1,3 +1,9 @@
+mx-tweak (19.07.01) mx; urgency=medium
+
+  * revised flip-to-vertical 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Thu, 04 Jul 2019 09:36:06 -0400
+
 mx-tweak (19.06.04) mx; urgency=medium
 
   * updated flipto_ routines to look for pa plugin 
