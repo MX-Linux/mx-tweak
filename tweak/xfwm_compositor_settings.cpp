@@ -7,6 +7,7 @@ xfwm_compositor_settings::xfwm_compositor_settings(QWidget *parent) :
     ui(new Ui::xfwm_compositor_settings)
 {
     ui->setupUi(this);
+    setWindowFlags(Qt::Window); // for the close, min and max buttons
     setup();
 }
 

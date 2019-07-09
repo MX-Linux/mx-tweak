@@ -8,6 +8,7 @@ window_buttons::window_buttons(QWidget *parent) :
     ui(new Ui::window_buttons)
 {
     ui->setupUi(this);
+    setWindowFlags(Qt::Window); // for the close, min and max buttons
     setup();
 }
 
