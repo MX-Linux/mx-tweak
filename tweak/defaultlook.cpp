@@ -38,6 +38,7 @@ defaultlook::defaultlook(QWidget *parent) :
     ui(new Ui::defaultlook)
 {
     ui->setupUi(this);
+    setWindowFlags(Qt::Window); // for the close, min and max buttons
     setup();
 }
 
