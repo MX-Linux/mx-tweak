@@ -179,6 +179,8 @@ private slots:
 
     void on_checkboxRadeontearfree_clicked();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::defaultlook *ui;
 };

@@ -1790,4 +1790,57 @@ QString defaultlook::getVersion(QString name)
     return runCmd("dpkg-query -f '${Version}' -W " + name).output;
 }
 
+void defaultlook::on_pushButton_clicked()
+{
+    //declared locally to prevent an issues with other code
+    auto pathAppend = [](const QString& path1, const QString& path2)
+    {
+        return QDir::cleanPath(path1 + QDir::separator() + path2);
+    };
 
+    QString panel;
+    QString data = runCmd("xfconf -c xfce4-panel -p /panels --list").output;
+    int panelNum;
+    for(panelNum = 1;; panelNum++)
+    {
+        if(data.contains("panel-" + QString::number(panelNum)))
+            break;
+    }
+    panel = "panel-" + QString::number(panelNum);
+
+    int backgroundStyle;
+    data = runCmd("xfconf -c xfce4-panel -p /panels/" + panel + "/background-style").output;
+    backgroundStyle = data.toInt(); //there may be newlines in output but qt ignores it
+
+    QVector<int> backgroundColor;
+    QString backgroundImage;
+    if(backgroundStyle == 1)
+    {
+        QStringList lines = runCmd("xfconf -c xfce4-panel -p /panels/" + panel + "/background-color").output.split('\n');
+        lines.removeAt(0);
+        lines.removeAt(0);
+        for(int i = 0; i < 4; i++)
+        {
+            backgroundColor << lines.at(i).toInt();
+        }
+    }
+    else if(backgroundStyle == 2)
+    {
+        backgroundImage = runCmd("xfconf -c /panels/" + panel + "/background-image").output;
+    }
+
+    QString iconThemeName = runCmd("xfconf -c xsettings -p /Net/IconThemeName").output;
+    QString themeName = runCmd("xfconf -c xsettings -p /Net/ThemeName").output;
+    QString windowDecorationsTheme = runCmd("xfconf -c xfwm4 -p /general/theme").output;
+
+    QString whiskerThemeFileName = pathAppend(QDir::homePath(), ".config/gtk-3.0/whisker-tweak.css");
+    QFile whiskerThemeFile(whiskerThemeFileName);
+    if(!whiskerThemeFile.open(QFile::ReadOnly | QFile::Text))
+    {
+        qDebug() << "Failed to fetch whisker theming: " + whiskerThemeFileName;
+    }
+    QTextStream whiskerThemeFileStream(&whiskerThemeFile);
+    QString whiskerThemeData = whiskerThemeFileStream.readAll();
+    whiskerThemeFile.close();
+
+}
