@@ -1793,7 +1793,7 @@ QString defaultlook::getVersion(QString name)
     return runCmd("dpkg-query -f '${Version}' -W " + name).output;
 }
 
-void defaultlook::on_pushButton_clicked()
+void defaultlook::on_pushButtonSettingsToThemeSet_clicked()
 {
     QString fileName;
     theming_to_tweak* dialog = new theming_to_tweak;
