@@ -15,15 +15,18 @@ TEMPLATE = app
 SOURCES += main.cpp\
         defaultlook.cpp \
     xfwm_compositor_settings.cpp \
-    window_buttons.cpp
+    window_buttons.cpp \
+    theming_to_tweak.cpp
 
 HEADERS  += defaultlook.h \
     xfwm_compositor_settings.h \
-    window_buttons.h
+    window_buttons.h \
+    theming_to_tweak.h
 
 FORMS    += defaultlook.ui \
     xfwm_compositor_settings.ui \
-    window_buttons.ui
+    window_buttons.ui \
+    theming_to_tweak.ui
 
 TRANSLATIONS += translations/mx-tweak_am.ts \
                 translations/mx-tweak_ar.ts \
