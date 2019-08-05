@@ -29,9 +29,12 @@
 #include <QDirIterator>
 #include <QFileDialog>
 #include <QHash>
+#include <QLineEdit>
+#include <QLabel>
 
 #include "xfwm_compositor_settings.h"
 #include "window_buttons.h"
+#include "theming_to_tweak.h"
 
 defaultlook::defaultlook(QWidget *parent) :
     QDialog(parent),
@@ -1792,6 +1795,13 @@ QString defaultlook::getVersion(QString name)
 
 void defaultlook::on_pushButton_clicked()
 {
+    QString fileName;
+    theming_to_tweak* dialog = new theming_to_tweak;
+    int userInput = dialog->exec();
+    if(userInput == QDialog::Rejected)
+        return;
+    fileName = dialog->nameEditor()->text();
+
     //declared locally to prevent an issues with other code
     auto pathAppend = [](const QString& path1, const QString& path2)
     {
@@ -1799,7 +1809,7 @@ void defaultlook::on_pushButton_clicked()
     };
 
     QString panel;
-    QString data = runCmd("xfconf -c xfce4-panel -p /panels --list").output;
+    QString data = runCmd("xfconf-query -c xfce4-panel -p /panels --list").output;
     int panelNum;
     for(panelNum = 1;; panelNum++)
     {
@@ -1809,14 +1819,14 @@ void defaultlook::on_pushButton_clicked()
     panel = "panel-" + QString::number(panelNum);
 
     int backgroundStyle;
-    data = runCmd("xfconf -c xfce4-panel -p /panels/" + panel + "/background-style").output;
+    data = runCmd("xfconf-query -c xfce4-panel -p /panels/" + panel + "/background-style").output;
     backgroundStyle = data.toInt(); //there may be newlines in output but qt ignores it
 
     QVector<int> backgroundColor;
     QString backgroundImage;
     if(backgroundStyle == 1)
     {
-        QStringList lines = runCmd("xfconf -c xfce4-panel -p /panels/" + panel + "/background-color").output.split('\n');
+        QStringList lines = runCmd("xfconf-query -c xfce4-panel -p /panels/" + panel + "/background-color").output.split('\n');
         lines.removeAt(0);
         lines.removeAt(0);
         for(int i = 0; i < 4; i++)
@@ -1826,21 +1836,69 @@ void defaultlook::on_pushButton_clicked()
     }
     else if(backgroundStyle == 2)
     {
-        backgroundImage = runCmd("xfconf -c /panels/" + panel + "/background-image").output;
+        backgroundImage = runCmd("xfconf-query -c /panels/" + panel + "/background-image").output;
     }
 
-    QString iconThemeName = runCmd("xfconf -c xsettings -p /Net/IconThemeName").output;
-    QString themeName = runCmd("xfconf -c xsettings -p /Net/ThemeName").output;
-    QString windowDecorationsTheme = runCmd("xfconf -c xfwm4 -p /general/theme").output;
+    QString iconThemeName = runCmd("xfconf-query -c xsettings -p /Net/IconThemeName").output;
+    QString themeName = runCmd("xfconf-query -c xsettings -p /Net/ThemeName").output;
+    QString windowDecorationsTheme = runCmd("xfconf-query -c xfwm4 -p /general/theme").output;
 
     QString whiskerThemeFileName = pathAppend(QDir::homePath(), ".config/gtk-3.0/whisker-tweak.css");
     QFile whiskerThemeFile(whiskerThemeFileName);
     if(!whiskerThemeFile.open(QFile::ReadOnly | QFile::Text))
     {
-        qDebug() << "Failed to fetch whisker theming: " + whiskerThemeFileName;
+        qDebug() << "Failed to fetch whisker theming from: " + whiskerThemeFileName;
     }
     QTextStream whiskerThemeFileStream(&whiskerThemeFile);
     QString whiskerThemeData = whiskerThemeFileStream.readAll();
     whiskerThemeFile.close();
 
+    QStringList fileLines;
+    fileLines << "Name=" + fileName;
+    fileLines << "background-style=" + QString::number(backgroundStyle);
+    if(backgroundStyle == 1)
+    {
+        QString line;
+        for(int num : backgroundColor)
+        {
+            line.append(QString::number(num) + ',');
+        }
+        if(line.endsWith(',')) line.chop(1);
+        fileLines << "background-color=" + line;
+    }
+    else
+    {
+        fileLines << "background-color=none";
+    }
+    if(backgroundStyle == 2)
+    {
+        fileLines << "background-image=" + backgroundImage;
+    }
+    else
+    {
+        fileLines << "background-image=none";
+    }
+    fileLines << "xsettings_gtk_theme=" + themeName;
+    fileLines << "xsettings_icon_theme=" + iconThemeName;
+    fileLines << "xfwm4_window_decorations=" + windowDecorationsTheme;
+    fileLines << "<begin_gtk_whisker_theme_code>";
+    for(QString line : whiskerThemeData.split('\n'))
+    {
+        fileLines << line;
+    }
+    fileLines << "<end_gtk_whisker_theme_code>";
+    QFile file(pathAppend(QDir::homePath(), ".local/share/mx-tweak-data/" + fileName + ".tweak"));
+    if(!file.open(QFile::WriteOnly | QFile::Text))
+    {
+        qDebug() << "Failed to open file for reading: " + fileName;
+        return;
+    }
+    QTextStream fileStream(&file);
+    for(QString line : fileLines)
+    {
+        fileStream << line + '\n';
+    }
+    file.close();
+    //Refresh
+    setupComboTheme();
 }
