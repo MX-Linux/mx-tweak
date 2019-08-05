@@ -179,7 +179,7 @@ private slots:
 
     void on_checkboxRadeontearfree_clicked();
 
-    void on_pushButton_clicked();
+    void on_pushButtonSettingsToThemeSet_clicked();
 
 private:
     Ui::defaultlook *ui;
