@@ -1156,7 +1156,7 @@ void defaultlook::on_buttonThemeApply_clicked()
     QString themename = theme_info[ui->comboTheme->currentText()];
     QFileInfo fileinfo(themename);
     //initialize variables
-    QString backgroundColor = runCmd("cat '" + fileinfo.absoluteFilePath() + "' |grep background-color=").output.section("=" , 1,1);
+    QString backgroundColor = runCmd("cat '" + fileinfo.absoluteFilePath() + "' |grep background-rgba=").output.section("=" , 1,1);
     qDebug() << "backgroundColor = " << backgroundColor;
     QString color1 = backgroundColor.section(",",0,0);
     QString color2 = backgroundColor.section(",", 1, 1);
@@ -1225,7 +1225,7 @@ void defaultlook::on_buttonThemeApply_clicked()
         //set panel color
 
         if (backgroundColor != "") {
-            runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-color -t uint -t uint -t uint -t uint -s " + color1 + " -s " + color2 + " -s " + color3 + " -s " + color4 + " --create");
+            runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-rgba -t double -t double -t double -t double -s " + color1 + " -s " + color2 + " -s " + color3 + " -s " + color4 + " --create");
         }
 
 
@@ -1822,16 +1822,16 @@ void defaultlook::on_pushButtonSettingsToThemeSet_clicked()
     data = runCmd("xfconf-query -c xfce4-panel -p /panels/" + panel + "/background-style").output;
     backgroundStyle = data.toInt(); //there may be newlines in output but qt ignores it
 
-    QVector<int> backgroundColor;
+    QVector<double> backgroundColor;
     QString backgroundImage;
     if(backgroundStyle == 1)
     {
-        QStringList lines = runCmd("xfconf-query -c xfce4-panel -p /panels/" + panel + "/background-color").output.split('\n');
+        QStringList lines = runCmd("xfconf-query -c xfce4-panel -p /panels/" + panel + "/background-rgba").output.split('\n');
         lines.removeAt(0);
         lines.removeAt(0);
         for(int i = 0; i < 4; i++)
         {
-            backgroundColor << lines.at(i).toInt();
+            backgroundColor << lines.at(i).toDouble();
         }
     }
     else if(backgroundStyle == 2)
@@ -1859,16 +1859,16 @@ void defaultlook::on_pushButtonSettingsToThemeSet_clicked()
     if(backgroundStyle == 1)
     {
         QString line;
-        for(int num : backgroundColor)
+        for(double num : backgroundColor)
         {
             line.append(QString::number(num) + ',');
         }
         if(line.endsWith(',')) line.chop(1);
-        fileLines << "background-color=" + line;
+        fileLines << "background-rgba=" + line;
     }
     else
     {
-        fileLines << "background-color=none";
+        fileLines << "background-rgba=none";
     }
     if(backgroundStyle == 2)
     {
