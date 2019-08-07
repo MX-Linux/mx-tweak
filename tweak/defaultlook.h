@@ -181,6 +181,8 @@ private slots:
 
     void on_pushButtonSettingsToThemeSet_clicked();
 
+    void on_pushButtonRemoveUserThemeSet_clicked();
+
 private:
     Ui::defaultlook *ui;
 };
