@@ -31,10 +31,12 @@
 #include <QHash>
 #include <QLineEdit>
 #include <QLabel>
+#include <QMessageBox>
 
 #include "xfwm_compositor_settings.h"
 #include "window_buttons.h"
 #include "theming_to_tweak.h"
+#include "remove_user_theme_set.h"
 
 defaultlook::defaultlook(QWidget *parent) :
     QDialog(parent),
@@ -1900,5 +1902,27 @@ void defaultlook::on_pushButtonSettingsToThemeSet_clicked()
     }
     file.close();
     //Refresh
+    setupComboTheme();
+}
+
+void defaultlook::on_pushButtonRemoveUserThemeSet_clicked()
+{
+    remove_user_theme_set dialog;
+    int result = dialog.exec();
+    if(result != QDialog::Accepted)
+        return;
+    QString theme = dialog.themeSelector()->currentText();
+    result = QMessageBox::warning(this, "Remove User Theme Set", "Are you sure you want to remove " + theme + " theme set?", QMessageBox::Ok | QMessageBox::Cancel);
+    if(result != QMessageBox::Ok)
+        return;
+    QString file = dialog.getFilename(theme);
+    file.replace(' ', "\\ ");
+    auto cmd = runCmd("rm " + file);
+    if(cmd.exitCode != 0)
+    {
+        qDebug() << "Removing theme set failed: exitCode: " << cmd.exitCode << " | output: " << cmd.output;
+        return;
+    }
+    //refresh
     setupComboTheme();
 }
