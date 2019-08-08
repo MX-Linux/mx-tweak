@@ -1,3 +1,9 @@
+mx-tweak (19.05.03) mx; urgency=medium
+
+  * added theme set creation and removal (nite coder)
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Thu, 08 Aug 2019 19:45:07 -0400
+
 mx-tweak (19.05.01) mx; urgency=medium
 
   * revised lightdm default reset lib
