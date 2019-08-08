@@ -1,0 +1,34 @@
+Format: 1.8
+Date: Thu, 08 Aug 2019 19:45:07 -0400
+Source: mx-tweak
+Binary: mx-tweak
+Architecture: source amd64
+Version: 19.05.03
+Distribution: mx
+Urgency: medium
+Maintainer: Steven Pusser (Stevo) <maintainer@mepiscommunity.org>
+Changed-By: Dolphin Oracle <dolphinoracle@gmail.com>
+Description:
+ mx-tweak   - MX Tweak
+Changes:
+ mx-tweak (19.05.03) mx; urgency=medium
+ .
+   * added theme set creation and removal (nite coder)
+Checksums-Sha1:
+ a78ae464d7d3e777b24228a7a191f90ec83587e5 628 mx-tweak_19.05.03.dsc
+ 417e65d55e13de2b0c7a77ef514213e81fd834b2 85516 mx-tweak_19.05.03.tar.xz
+ 23d64cefaed9b713ed7a6e8e6d786cdd73ac1531 12030 mx-tweak-dbgsym_19.05.03_amd64.deb
+ 6b15918577a07f124afe901409bfcfe187018651 10885 mx-tweak_19.05.03_amd64.buildinfo
+ 856dbf60819cadf02469844285b32bc9dc90cc31 139016 mx-tweak_19.05.03_amd64.deb
+Checksums-Sha256:
+ 6ace4a9be6d222edbd456fd2eb0fff5a4f1f1bd224230d44630f0e1ef2e59e1f 628 mx-tweak_19.05.03.dsc
+ 860be8523a1a9b0fa161c0b32420e0c7a4a0ba9fd3a84a17a6b0036a7944bc5e 85516 mx-tweak_19.05.03.tar.xz
+ 03527b5e3ee42c8c95e5d749cb0f8e5f2dcfaeaa34bee4c788dfeae3f707985c 12030 mx-tweak-dbgsym_19.05.03_amd64.deb
+ d6145529235d86a342e938eebc1e71f9953054fdc108f70ce81cae49724e57e8 10885 mx-tweak_19.05.03_amd64.buildinfo
+ 8cc008ddd5022c1febcc44b2a5121e551d57a1dcecb6e8fe8600503b74208506 139016 mx-tweak_19.05.03_amd64.deb
+Files:
+ c376020561e4f475caa9e9d52d4e7270 628 admin optional mx-tweak_19.05.03.dsc
+ 5a9ffb54b2f52f9ca2b8a2c647eed759 85516 admin optional mx-tweak_19.05.03.tar.xz
+ 954be738d82e2a30beb388d2f7bd19b3 12030 debug optional mx-tweak-dbgsym_19.05.03_amd64.deb
+ 3bfe490724a7a0b919a8cd0183816dc6 10885 admin optional mx-tweak_19.05.03_amd64.buildinfo
+ f1f9dc78e942ea23ae4a30898223fbde 139016 admin optional mx-tweak_19.05.03_amd64.deb
