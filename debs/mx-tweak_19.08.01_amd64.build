@@ -1,0 +1,287 @@
+ dpkg-buildpackage -us -uc -ui
+dpkg-buildpackage: info: source package mx-tweak
+dpkg-buildpackage: info: source version 19.08.01
+dpkg-buildpackage: info: source distribution mx
+dpkg-buildpackage: info: source changed by Dolphin Oracle <dolphinoracle@gmail.com>
+ dpkg-source --before-build .
+dpkg-buildpackage: info: host architecture amd64
+ fakeroot debian/rules clean
+dh clean --parallel 
+dh: Compatibility levels before 9 are deprecated (level 7 in use)
+   debian/rules override_dh_auto_clean
+make[1]: Entering directory '/media/dataext/development/working/tweak'
+dh_auto_clean
+dh_auto_clean: Compatibility levels before 9 are deprecated (level 7 in use)
+rm -f src/translations/*.qm
+make[1]: Leaving directory '/media/dataext/development/working/tweak'
+   dh_clean -O--parallel
+dh_clean: Compatibility levels before 9 are deprecated (level 7 in use)
+ dpkg-source -b .
+dpkg-source: info: using source format '3.0 (native)'
+dpkg-source: info: building mx-tweak in mx-tweak_19.08.01.tar.xz
+dpkg-source: info: building mx-tweak in mx-tweak_19.08.01.dsc
+ debian/rules build
+dh build --parallel 
+dh: Compatibility levels before 9 are deprecated (level 7 in use)
+   dh_update_autotools_config -O--parallel
+   dh_auto_configure -O--parallel
+dh_auto_configure: Compatibility levels before 9 are deprecated (level 7 in use)
+	qmake -makefile QMAKE_STRIP=: PREFIX=/usr
+Info: creating stash file /media/dataext/development/working/tweak/.qmake.stash
+   debian/rules override_dh_auto_build
+make[1]: Entering directory '/media/dataext/development/working/tweak'
+lrelease mx-tweak.pro
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_am.qm'...
+    Generated 60 translation(s) (60 finished and 0 unfinished)
+    Ignored 57 untranslated source text(s)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_ar.qm'...
+    Generated 6 translation(s) (6 finished and 0 unfinished)
+    Ignored 111 untranslated source text(s)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_bg.qm'...
+    Generated 7 translation(s) (7 finished and 0 unfinished)
+    Ignored 110 untranslated source text(s)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_ca.qm'...
+    Generated 113 translation(s) (113 finished and 0 unfinished)
+    Ignored 4 untranslated source text(s)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_cs.qm'...
+    Generated 31 translation(s) (31 finished and 0 unfinished)
+    Ignored 86 untranslated source text(s)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_da.qm'...
+    Generated 117 translation(s) (117 finished and 0 unfinished)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_de.qm'...
+    Generated 117 translation(s) (117 finished and 0 unfinished)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_el.qm'...
+    Generated 117 translation(s) (117 finished and 0 unfinished)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_es.qm'...
+    Generated 113 translation(s) (113 finished and 0 unfinished)
+    Ignored 4 untranslated source text(s)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_et.qm'...
+    Generated 1 translation(s) (1 finished and 0 unfinished)
+    Ignored 116 untranslated source text(s)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_eu.qm'...
+    Generated 1 translation(s) (1 finished and 0 unfinished)
+    Ignored 116 untranslated source text(s)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_fa.qm'...
+    Generated 1 translation(s) (1 finished and 0 unfinished)
+    Ignored 116 untranslated source text(s)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_fi.qm'...
+    Generated 72 translation(s) (72 finished and 0 unfinished)
+    Ignored 45 untranslated source text(s)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_fr.qm'...
+    Generated 117 translation(s) (117 finished and 0 unfinished)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_he_IL.qm'...
+    Generated 5 translation(s) (5 finished and 0 unfinished)
+    Ignored 112 untranslated source text(s)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_hi.qm'...
+    Generated 16 translation(s) (16 finished and 0 unfinished)
+    Ignored 101 untranslated source text(s)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_hr.qm'...
+    Generated 59 translation(s) (59 finished and 0 unfinished)
+    Ignored 58 untranslated source text(s)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_hu.qm'...
+    Generated 37 translation(s) (37 finished and 0 unfinished)
+    Ignored 80 untranslated source text(s)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_id.qm'...
+    Generated 3 translation(s) (3 finished and 0 unfinished)
+    Ignored 114 untranslated source text(s)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_is.qm'...
+    Generated 43 translation(s) (43 finished and 0 unfinished)
+    Ignored 74 untranslated source text(s)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_it.qm'...
+    Generated 117 translation(s) (117 finished and 0 unfinished)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_ja.qm'...
+    Generated 30 translation(s) (30 finished and 0 unfinished)
+    Ignored 87 untranslated source text(s)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_ja_JP.qm'...
+    Generated 1 translation(s) (1 finished and 0 unfinished)
+    Ignored 116 untranslated source text(s)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_kk.qm'...
+    Generated 29 translation(s) (29 finished and 0 unfinished)
+    Ignored 88 untranslated source text(s)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_ko.qm'...
+    Generated 5 translation(s) (5 finished and 0 unfinished)
+    Ignored 112 untranslated source text(s)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_lt.qm'...
+    Generated 94 translation(s) (94 finished and 0 unfinished)
+    Ignored 23 untranslated source text(s)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_mk.qm'...
+    Generated 2 translation(s) (2 finished and 0 unfinished)
+    Ignored 115 untranslated source text(s)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_nb.qm'...
+    Generated 7 translation(s) (7 finished and 0 unfinished)
+    Ignored 110 untranslated source text(s)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_nl.qm'...
+    Generated 117 translation(s) (117 finished and 0 unfinished)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_pl.qm'...
+    Generated 117 translation(s) (117 finished and 0 unfinished)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_pt.qm'...
+    Generated 113 translation(s) (113 finished and 0 unfinished)
+    Ignored 4 untranslated source text(s)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_pt_BR.qm'...
+    Generated 113 translation(s) (113 finished and 0 unfinished)
+    Ignored 4 untranslated source text(s)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_ro.qm'...
+    Generated 32 translation(s) (32 finished and 0 unfinished)
+    Ignored 85 untranslated source text(s)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_ru.qm'...
+    Generated 117 translation(s) (117 finished and 0 unfinished)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_sk.qm'...
+    Generated 117 translation(s) (117 finished and 0 unfinished)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_sl.qm'...
+    Generated 3 translation(s) (3 finished and 0 unfinished)
+    Ignored 114 untranslated source text(s)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_sq.qm'...
+    Generated 7 translation(s) (7 finished and 0 unfinished)
+    Ignored 110 untranslated source text(s)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_sr.qm'...
+    Generated 1 translation(s) (1 finished and 0 unfinished)
+    Ignored 116 untranslated source text(s)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_sv.qm'...
+    Generated 117 translation(s) (117 finished and 0 unfinished)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_tr.qm'...
+    Generated 48 translation(s) (48 finished and 0 unfinished)
+    Ignored 69 untranslated source text(s)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_uk.qm'...
+    Generated 57 translation(s) (57 finished and 0 unfinished)
+    Ignored 60 untranslated source text(s)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_zh_CN.qm'...
+    Generated 5 translation(s) (5 finished and 0 unfinished)
+    Ignored 112 untranslated source text(s)
+Updating '/media/dataext/development/working/tweak/translations/mx-tweak_zh_TW.qm'...
+    Generated 112 translation(s) (112 finished and 0 unfinished)
+    Ignored 5 untranslated source text(s)
+dh_auto_build -- QMAKE=qmake-qt5 LRELEASE=lrelease-qt5 QMAKE_OPTS="DEFINES+=NO_DEBUG_ON_CONSOLE"
+dh_auto_build: Compatibility levels before 9 are deprecated (level 7 in use)
+	make -j4 QMAKE=qmake-qt5 LRELEASE=lrelease-qt5 QMAKE_OPTS=DEFINES\+=NO_DEBUG_ON_CONSOLE
+make[2]: Entering directory '/media/dataext/development/working/tweak'
+/usr/lib/qt5/bin/uic defaultlook.ui -o ui_defaultlook.h
+/usr/lib/qt5/bin/uic xfwm_compositor_settings.ui -o ui_xfwm_compositor_settings.h
+/usr/lib/qt5/bin/uic window_buttons.ui -o ui_window_buttons.h
+/usr/lib/qt5/bin/uic theming_to_tweak.ui -o ui_theming_to_tweak.h
+/usr/lib/qt5/bin/uic remove_user_theme_set.ui -o ui_remove_user_theme_set.h
+g++ -c -pipe -O2 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -I. -isystem /usr/include/libdrm -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -o main.o main.cpp
+defaultlook.ui: Warning: Z-order assignment: '' is not a valid widget.
+g++ -c -pipe -O2 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -I. -isystem /usr/include/libdrm -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -o xfwm_compositor_settings.o xfwm_compositor_settings.cpp
+g++ -c -pipe -O2 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -I. -isystem /usr/include/libdrm -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -o window_buttons.o window_buttons.cpp
+g++ -c -pipe -O2 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -I. -isystem /usr/include/libdrm -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -o theming_to_tweak.o theming_to_tweak.cpp
+g++ -c -pipe -O2 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -I. -isystem /usr/include/libdrm -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -o remove_user_theme_set.o remove_user_theme_set.cpp
+window_buttons.cpp: In member function ‘void window_buttons::on_checkBoxbuttonlabels_toggled(bool)’:
+window_buttons.cpp:181:59: warning: unused parameter ‘checked’ [-Wunused-parameter]
+ void window_buttons::on_checkBoxbuttonlabels_toggled(bool checked)
+                                                      ~~~~~^~~~~~~
+window_buttons.cpp: In member function ‘void window_buttons::on_checkBoxshowflatbuttons_toggled(bool)’:
+window_buttons.cpp:194:62: warning: unused parameter ‘checked’ [-Wunused-parameter]
+ void window_buttons::on_checkBoxshowflatbuttons_toggled(bool checked)
+                                                         ~~~~~^~~~~~~
+window_buttons.cpp: In member function ‘void window_buttons::on_checkBoxshowhandle_toggled(bool)’:
+window_buttons.cpp:208:57: warning: unused parameter ‘checked’ [-Wunused-parameter]
+ void window_buttons::on_checkBoxshowhandle_toggled(bool checked)
+                                                    ~~~~~^~~~~~~
+window_buttons.cpp: In member function ‘void window_buttons::on_checkBoxrestoreminwindows_toggled(bool)’:
+window_buttons.cpp:245:64: warning: unused parameter ‘checked’ [-Wunused-parameter]
+ void window_buttons::on_checkBoxrestoreminwindows_toggled(bool checked)
+                                                           ~~~~~^~~~~~~
+window_buttons.cpp: In member function ‘void window_buttons::on_checkBoxdrawframes_toggled(bool)’:
+window_buttons.cpp:258:57: warning: unused parameter ‘checked’ [-Wunused-parameter]
+ void window_buttons::on_checkBoxdrawframes_toggled(bool checked)
+                                                    ~~~~~^~~~~~~
+window_buttons.cpp: In member function ‘void window_buttons::on_checkBoxwindowsallworkspaces_toggled(bool)’:
+window_buttons.cpp:285:67: warning: unused parameter ‘checked’ [-Wunused-parameter]
+ void window_buttons::on_checkBoxwindowsallworkspaces_toggled(bool checked)
+                                                              ~~~~~^~~~~~~
+window_buttons.cpp: In member function ‘void window_buttons::on_checkBoxonlyminwindows_toggled(bool)’:
+window_buttons.cpp:298:61: warning: unused parameter ‘checked’ [-Wunused-parameter]
+ void window_buttons::on_checkBoxonlyminwindows_toggled(bool checked)
+                                                        ~~~~~^~~~~~~
+window_buttons.cpp: In member function ‘void window_buttons::on_checkBoxwindowsallmonitors_toggled(bool)’:
+window_buttons.cpp:311:65: warning: unused parameter ‘checked’ [-Wunused-parameter]
+ void window_buttons::on_checkBoxwindowsallmonitors_toggled(bool checked)
+                                                            ~~~~~^~~~~~~
+/usr/lib/qt5/bin/rcc -name images images.qrc -o qrc_images.cpp
+g++ -pipe -O2 -Wall -W -dM -E -o moc_predefs.h /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp
+g++ -c -pipe -O2 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -I. -isystem /usr/include/libdrm -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -o defaultlook.o defaultlook.cpp
+g++ -c -pipe -O2 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -I. -isystem /usr/include/libdrm -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -o qrc_images.o qrc_images.cpp
+/usr/lib/qt5/bin/moc -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --include /media/dataext/development/working/tweak/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/media/dataext/development/working/tweak -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/8 -I/usr/include/x86_64-linux-gnu/c++/8 -I/usr/include/c++/8/backward -I/usr/lib/gcc/x86_64-linux-gnu/8/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include defaultlook.h -o moc_defaultlook.cpp
+/usr/lib/qt5/bin/moc -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --include /media/dataext/development/working/tweak/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/media/dataext/development/working/tweak -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/8 -I/usr/include/x86_64-linux-gnu/c++/8 -I/usr/include/c++/8/backward -I/usr/lib/gcc/x86_64-linux-gnu/8/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include xfwm_compositor_settings.h -o moc_xfwm_compositor_settings.cpp
+/usr/lib/qt5/bin/moc -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --include /media/dataext/development/working/tweak/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/media/dataext/development/working/tweak -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/8 -I/usr/include/x86_64-linux-gnu/c++/8 -I/usr/include/c++/8/backward -I/usr/lib/gcc/x86_64-linux-gnu/8/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include window_buttons.h -o moc_window_buttons.cpp
+/usr/lib/qt5/bin/moc -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --include /media/dataext/development/working/tweak/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/media/dataext/development/working/tweak -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/8 -I/usr/include/x86_64-linux-gnu/c++/8 -I/usr/include/c++/8/backward -I/usr/lib/gcc/x86_64-linux-gnu/8/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include theming_to_tweak.h -o moc_theming_to_tweak.cpp
+/usr/lib/qt5/bin/moc -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --include /media/dataext/development/working/tweak/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/media/dataext/development/working/tweak -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/8 -I/usr/include/x86_64-linux-gnu/c++/8 -I/usr/include/c++/8/backward -I/usr/lib/gcc/x86_64-linux-gnu/8/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/8/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include remove_user_theme_set.h -o moc_remove_user_theme_set.cpp
+g++ -c -pipe -O2 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -I. -isystem /usr/include/libdrm -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -o moc_defaultlook.o moc_defaultlook.cpp
+g++ -c -pipe -O2 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -I. -isystem /usr/include/libdrm -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -o moc_xfwm_compositor_settings.o moc_xfwm_compositor_settings.cpp
+defaultlook.cpp: In member function ‘void defaultlook::on_comboboxHorzPostition_currentIndexChanged(const QString&)’:
+defaultlook.cpp:717:79: warning: unused parameter ‘arg1’ [-Wunused-parameter]
+ void defaultlook::on_comboboxHorzPostition_currentIndexChanged(const QString &arg1)
+                                                                ~~~~~~~~~~~~~~~^~~~
+defaultlook.cpp: In member function ‘void defaultlook::on_comboboxVertpostition_currentIndexChanged(const QString&)’:
+defaultlook.cpp:731:79: warning: unused parameter ‘arg1’ [-Wunused-parameter]
+ void defaultlook::on_comboboxVertpostition_currentIndexChanged(const QString &arg1)
+                                                                ~~~~~~~~~~~~~~~^~~~
+defaultlook.cpp: In member function ‘void defaultlook::setupEtc()’:
+defaultlook.cpp:893:18: warning: suggest parentheses around assignment used as truth value [-Wparentheses]
+     if (swaptest = 0) {
+         ~~~~~~~~~^~~
+defaultlook.cpp: In member function ‘void defaultlook::on_comboTheme_activated(const QString&)’:
+defaultlook.cpp:1144:58: warning: unused parameter ‘arg1’ [-Wunused-parameter]
+ void defaultlook::on_comboTheme_activated(const QString &arg1)
+                                           ~~~~~~~~~~~~~~~^~~~
+defaultlook.cpp: In member function ‘void defaultlook::on_comboBoxCompositor_currentIndexChanged(const QString&)’:
+defaultlook.cpp:1612:76: warning: unused parameter ‘arg1’ [-Wunused-parameter]
+ void defaultlook::on_comboBoxCompositor_currentIndexChanged(const QString &arg1)
+                                                             ~~~~~~~~~~~~~~~^~~~
+g++ -c -pipe -O2 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -I. -isystem /usr/include/libdrm -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -o moc_window_buttons.o moc_window_buttons.cpp
+g++ -c -pipe -O2 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -I. -isystem /usr/include/libdrm -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -o moc_theming_to_tweak.o moc_theming_to_tweak.cpp
+g++ -c -pipe -O2 -Wall -W -D_REENTRANT -fPIC -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -I. -isystem /usr/include/libdrm -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -o moc_remove_user_theme_set.o moc_remove_user_theme_set.cpp
+g++ -Wl,-O1 -o mx-tweak main.o defaultlook.o xfwm_compositor_settings.o window_buttons.o theming_to_tweak.o remove_user_theme_set.o qrc_images.o moc_defaultlook.o moc_xfwm_compositor_settings.o moc_window_buttons.o moc_theming_to_tweak.o moc_remove_user_theme_set.o   -lQt5Widgets -lQt5Gui -lQt5Core -lGL -lpthread 
+make[2]: Leaving directory '/media/dataext/development/working/tweak'
+make[1]: Leaving directory '/media/dataext/development/working/tweak'
+   dh_auto_test -O--parallel
+dh_auto_test: Compatibility levels before 9 are deprecated (level 7 in use)
+ fakeroot debian/rules binary
+dh binary --parallel 
+dh: Compatibility levels before 9 are deprecated (level 7 in use)
+   dh_testroot -O--parallel
+   dh_prep -O--parallel
+   debian/rules override_dh_auto_install
+make[1]: Entering directory '/media/dataext/development/working/tweak'
+dh_auto_install -- QMAKE=qmake-qt5 LRELEASE=lrelease-qt5 QMAKE_OPTS="DEFINES+=NO_DEBUG_ON_CONSOLE"
+dh_auto_install: Compatibility levels before 9 are deprecated (level 7 in use)
+make[1]: Leaving directory '/media/dataext/development/working/tweak'
+   dh_install -O--parallel
+dh_install: Compatibility levels before 9 are deprecated (level 7 in use)
+   dh_installdocs -O--parallel
+dh_installdocs: Compatibility levels before 9 are deprecated (level 7 in use)
+   dh_installchangelogs -O--parallel
+   dh_installinit -O--parallel
+dh_installinit: Compatibility levels before 9 are deprecated (level 7 in use)
+   dh_perl -O--parallel
+   dh_link -O--parallel
+   dh_strip_nondeterminism -O--parallel
+   dh_compress -O--parallel
+dh_compress: Compatibility levels before 9 are deprecated (level 7 in use)
+   dh_fixperms -O--parallel
+   dh_missing -O--parallel
+dh_missing: Compatibility levels before 9 are deprecated (level 7 in use)
+   dh_strip -O--parallel
+dh_strip: Compatibility levels before 9 are deprecated (level 7 in use)
+   dh_makeshlibs -O--parallel
+   debian/rules override_dh_shlibdeps
+make[1]: Entering directory '/media/dataext/development/working/tweak'
+dh_shlibdeps --dpkg-shlibdeps-params=--ignore-missing-info
+dh_shlibdeps: Compatibility levels before 9 are deprecated (level 7 in use)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/mx-tweak/usr/bin/mx-tweak was not linked against libGL.so.1 (it uses none of the library's symbols)
+make[1]: Leaving directory '/media/dataext/development/working/tweak'
+   dh_installdeb -O--parallel
+dh_installdeb: Compatibility levels before 9 are deprecated (level 7 in use)
+   dh_gencontrol -O--parallel
+   dh_md5sums -O--parallel
+   debian/rules override_dh_builddeb
+make[1]: Entering directory '/media/dataext/development/working/tweak'
+dh_builddeb -- -Z xz
+dpkg-deb: building package 'mx-tweak-dbgsym' in '../mx-tweak-dbgsym_19.08.01_amd64.deb'.
+dpkg-deb: building package 'mx-tweak' in '../mx-tweak_19.08.01_amd64.deb'.
+make[1]: Leaving directory '/media/dataext/development/working/tweak'
+ dpkg-genbuildinfo
+ dpkg-genchanges  >../mx-tweak_19.08.01_amd64.changes
+dpkg-genchanges: info: including full source code in upload
+ dpkg-source --after-build .
+dpkg-buildpackage: info: full upload; Debian-native package (full source is included)
