@@ -270,6 +270,7 @@ void window_buttons::on_checkBoxdrawframes_toggled(bool checked)
 
 void window_buttons::on_checkBoxswitchwindowsmousewheel_toggled(bool checked)
 {
+    Q_UNUSED(checked);
     QString param;
     if ( ui->checkBoxswitchwindowsmousewheel->isChecked()) {
         param = "true";

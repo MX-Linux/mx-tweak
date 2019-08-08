@@ -594,6 +594,17 @@
              </property>
             </widget>
            </item>
+           <item row="5" column="1">
+            <widget class="QPushButton" name="pushButtonRemoveUserThemeSet">
+             <property name="text">
+              <string>Remove User Theme Set</string>
+             </property>
+             <property name="icon">
+              <iconset theme="list-remove">
+               <normaloff>.</normaloff>.</iconset>
+             </property>
+            </widget>
+           </item>
           </layout>
          </item>
         </layout>
