@@ -10,8 +10,8 @@ Build-Depends: qt5-default, qttools5-dev-tools, debhelper (>= 7.0.50~)
 Package-List:
  mx-tweak deb admin optional arch=any
 Checksums-Sha1:
- 417e65d55e13de2b0c7a77ef514213e81fd834b2 85516 mx-tweak_19.05.03.tar.xz
+ b39bc1c58dcf270bcf902f7721c1bd503994bc52 85716 mx-tweak_19.05.03.tar.xz
 Checksums-Sha256:
- 860be8523a1a9b0fa161c0b32420e0c7a4a0ba9fd3a84a17a6b0036a7944bc5e 85516 mx-tweak_19.05.03.tar.xz
+ 2b028d0db68496ebfff62f3561bcd174620ff5c7edda548ec6c92c6cdd1ea434 85716 mx-tweak_19.05.03.tar.xz
 Files:
- 5a9ffb54b2f52f9ca2b8a2c647eed759 85516 mx-tweak_19.05.03.tar.xz
+ 5a085efb622aaf8ddbf1f6db76a47ada 85716 mx-tweak_19.05.03.tar.xz

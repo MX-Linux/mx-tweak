@@ -15,20 +15,20 @@ Changes:
  .
    * added theme set creation and removal (nite coder)
 Checksums-Sha1:
- a78ae464d7d3e777b24228a7a191f90ec83587e5 628 mx-tweak_19.05.03.dsc
- 417e65d55e13de2b0c7a77ef514213e81fd834b2 85516 mx-tweak_19.05.03.tar.xz
- 23d64cefaed9b713ed7a6e8e6d786cdd73ac1531 12030 mx-tweak-dbgsym_19.05.03_amd64.deb
- 6b15918577a07f124afe901409bfcfe187018651 10885 mx-tweak_19.05.03_amd64.buildinfo
- 856dbf60819cadf02469844285b32bc9dc90cc31 139016 mx-tweak_19.05.03_amd64.deb
+ a70495de1aff29645a8e84d7a861cce41db4923b 628 mx-tweak_19.05.03.dsc
+ b39bc1c58dcf270bcf902f7721c1bd503994bc52 85716 mx-tweak_19.05.03.tar.xz
+ 961f126750c9074e6aa15483a7019f6b3d47014a 12018 mx-tweak-dbgsym_19.05.03_amd64.deb
+ aada928189d3e1d304d36854fa69009c86e33e68 10885 mx-tweak_19.05.03_amd64.buildinfo
+ 0e50702785e6175aaec78c2f18879a9d55eba2aa 139142 mx-tweak_19.05.03_amd64.deb
 Checksums-Sha256:
- 6ace4a9be6d222edbd456fd2eb0fff5a4f1f1bd224230d44630f0e1ef2e59e1f 628 mx-tweak_19.05.03.dsc
- 860be8523a1a9b0fa161c0b32420e0c7a4a0ba9fd3a84a17a6b0036a7944bc5e 85516 mx-tweak_19.05.03.tar.xz
- 03527b5e3ee42c8c95e5d749cb0f8e5f2dcfaeaa34bee4c788dfeae3f707985c 12030 mx-tweak-dbgsym_19.05.03_amd64.deb
- d6145529235d86a342e938eebc1e71f9953054fdc108f70ce81cae49724e57e8 10885 mx-tweak_19.05.03_amd64.buildinfo
- 8cc008ddd5022c1febcc44b2a5121e551d57a1dcecb6e8fe8600503b74208506 139016 mx-tweak_19.05.03_amd64.deb
+ 99c2763541d1037f5aa7057af074815552c7f4e056fdd009362ced5801d26ce8 628 mx-tweak_19.05.03.dsc
+ 2b028d0db68496ebfff62f3561bcd174620ff5c7edda548ec6c92c6cdd1ea434 85716 mx-tweak_19.05.03.tar.xz
+ 063f397a10fbb8d2f47ff5aa495e36e110f14b9b6824b305c29a7e8d61c17f71 12018 mx-tweak-dbgsym_19.05.03_amd64.deb
+ 76f274c98d063085e1954f682cc8fde64d4b47cd1cee13edcf34f860309363fe 10885 mx-tweak_19.05.03_amd64.buildinfo
+ 751bdd53d38b9d00bb5ee3aa37493efbb963d841665463cc8d5b242a817193ff 139142 mx-tweak_19.05.03_amd64.deb
 Files:
- c376020561e4f475caa9e9d52d4e7270 628 admin optional mx-tweak_19.05.03.dsc
- 5a9ffb54b2f52f9ca2b8a2c647eed759 85516 admin optional mx-tweak_19.05.03.tar.xz
- 954be738d82e2a30beb388d2f7bd19b3 12030 debug optional mx-tweak-dbgsym_19.05.03_amd64.deb
- 3bfe490724a7a0b919a8cd0183816dc6 10885 admin optional mx-tweak_19.05.03_amd64.buildinfo
- f1f9dc78e942ea23ae4a30898223fbde 139016 admin optional mx-tweak_19.05.03_amd64.deb
+ dedf6d5450c15063922d01aeac3f66ea 628 admin optional mx-tweak_19.05.03.dsc
+ 5a085efb622aaf8ddbf1f6db76a47ada 85716 admin optional mx-tweak_19.05.03.tar.xz
+ 3483781a8d1688f449f9cd0dd8d3f163 12018 debug optional mx-tweak-dbgsym_19.05.03_amd64.deb
+ 5b6dbb0df29b0b6053eef06002528aaf 10885 admin optional mx-tweak_19.05.03_amd64.buildinfo
+ 17c2a45ff4862b3847ddaa80c736efee 139142 admin optional mx-tweak_19.05.03_amd64.deb

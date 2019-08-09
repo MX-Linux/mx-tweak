@@ -4,20 +4,20 @@ Binary: mx-tweak
 Architecture: amd64 source
 Version: 19.05.03
 Checksums-Md5:
- c376020561e4f475caa9e9d52d4e7270 628 mx-tweak_19.05.03.dsc
- 954be738d82e2a30beb388d2f7bd19b3 12030 mx-tweak-dbgsym_19.05.03_amd64.deb
- f1f9dc78e942ea23ae4a30898223fbde 139016 mx-tweak_19.05.03_amd64.deb
+ dedf6d5450c15063922d01aeac3f66ea 628 mx-tweak_19.05.03.dsc
+ 3483781a8d1688f449f9cd0dd8d3f163 12018 mx-tweak-dbgsym_19.05.03_amd64.deb
+ 17c2a45ff4862b3847ddaa80c736efee 139142 mx-tweak_19.05.03_amd64.deb
 Checksums-Sha1:
- a78ae464d7d3e777b24228a7a191f90ec83587e5 628 mx-tweak_19.05.03.dsc
- 23d64cefaed9b713ed7a6e8e6d786cdd73ac1531 12030 mx-tweak-dbgsym_19.05.03_amd64.deb
- 856dbf60819cadf02469844285b32bc9dc90cc31 139016 mx-tweak_19.05.03_amd64.deb
+ a70495de1aff29645a8e84d7a861cce41db4923b 628 mx-tweak_19.05.03.dsc
+ 961f126750c9074e6aa15483a7019f6b3d47014a 12018 mx-tweak-dbgsym_19.05.03_amd64.deb
+ 0e50702785e6175aaec78c2f18879a9d55eba2aa 139142 mx-tweak_19.05.03_amd64.deb
 Checksums-Sha256:
- 6ace4a9be6d222edbd456fd2eb0fff5a4f1f1bd224230d44630f0e1ef2e59e1f 628 mx-tweak_19.05.03.dsc
- 03527b5e3ee42c8c95e5d749cb0f8e5f2dcfaeaa34bee4c788dfeae3f707985c 12030 mx-tweak-dbgsym_19.05.03_amd64.deb
- 8cc008ddd5022c1febcc44b2a5121e551d57a1dcecb6e8fe8600503b74208506 139016 mx-tweak_19.05.03_amd64.deb
+ 99c2763541d1037f5aa7057af074815552c7f4e056fdd009362ced5801d26ce8 628 mx-tweak_19.05.03.dsc
+ 063f397a10fbb8d2f47ff5aa495e36e110f14b9b6824b305c29a7e8d61c17f71 12018 mx-tweak-dbgsym_19.05.03_amd64.deb
+ 751bdd53d38b9d00bb5ee3aa37493efbb963d841665463cc8d5b242a817193ff 139142 mx-tweak_19.05.03_amd64.deb
 Build-Origin: Debian
 Build-Architecture: amd64
-Build-Date: Thu, 08 Aug 2019 19:46:46 -0400
+Build-Date: Thu, 08 Aug 2019 21:14:40 -0400
 Installed-Build-Depends:
  autoconf (= 2.69-10),
  automake (= 1:1.15-6),
