@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#this script is part of mx-tweak 
+#this script is part of mx-tweak
 
 #intel scripts
 #the purpose is to enable/disable intel driver override
@@ -12,7 +12,7 @@ enable_intel()
 disable_intel()
 {
     rm /etc/X11/xorg.conf.d/20-intel.conf
-    
+
 }
 
 enable_radeon()
@@ -23,7 +23,7 @@ enable_radeon()
 disable_radeon()
 {
     rm /etc/X11/xorg.conf.d/20-radeon.conf
-    
+
 }
 
 enable_amd()
@@ -34,7 +34,7 @@ enable_amd()
 disable_amd()
 {
     rm /etc/X11/xorg.conf.d/20-amd.conf
-    
+
 }
 
 #lightdm
@@ -42,7 +42,7 @@ disable_amd()
 lightdm_reset()
 {
 cp /etc/lightdm/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf.$(date +%Y%m%H%M%S)
-cp /etc/lightdm/mx$(lsb_release -rs|cut -d\. -f1)/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf
+cp /etc/lightdm/mx$(grep -oP '(?<=DISTRIB_RELEASE=).*' /etc/lsb-release|cut -d\. -f1)/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf
 
 }
 
@@ -54,8 +54,8 @@ enable_user_mount()
     else
     mkdir -p /etc/polkit-1/localauthority/50-local.d
     fi
-    
-    cp /usr/share/mx-tweak/50-udisks.pkla /etc/polkit-1/localauthority/50-local.d/50-udisks.pkla 
+
+    cp /usr/share/mx-tweak/50-udisks.pkla /etc/polkit-1/localauthority/50-local.d/50-udisks.pkla
     touch /etc/tweak-udisks.chk
 }
 
@@ -63,7 +63,7 @@ disable_user_mount()
 {
     rm -f /etc/polkit-1/localauthority/50-local.d/50-udisks.pkla
     rm -f /etc/tweak-udisks.chk
-    
+
 }
 
 
@@ -77,7 +77,7 @@ log=/var/log/tweak.log
 echo "" |tee -a $log
 date |tee -a $log
 echo "" |tee -a $log
-    
+
 if [ -e /etc/uswsusp.conf ]; then
     echo "" |tee -a $log
     date |tee -a $log
