@@ -1,3 +1,9 @@
+mx-tweak (19.08.03) mx; urgency=medium
+
+  * added xfwm4 vblank control (compositor tab) 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 18 Aug 2019 15:04:25 -0400
+
 mx-tweak (19.08.02) mx; urgency=medium
 
   * misc. revisions 

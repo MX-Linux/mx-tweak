@@ -66,6 +66,8 @@ public:
     bool Intel_flag;
     bool radeon_flag;
     bool amdgpuflag;
+    bool vblankflag;
+    QString vblankinitial;
     void setup();
     void setupuiselections();
     void setuppanel();
@@ -182,6 +184,8 @@ private slots:
     void on_pushButtonSettingsToThemeSet_clicked();
 
     void on_pushButtonRemoveUserThemeSet_clicked();
+
+    void on_comboBoxvblank_activated(const QString &arg1);
 
 private:
     Ui::defaultlook *ui;
