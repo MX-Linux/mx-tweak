@@ -943,6 +943,15 @@ void defaultlook::setuptheme()
 
 void defaultlook::setupCompositor()
 {
+    //set comboboxvblank to current setting
+
+    vblankflag = false;
+    vblankinitial = runCmd("xfconf-query -c xfwm4 -p /general/vblank_mode").output;
+    qDebug() << "vblank = " << vblankinitial;
+    ui->comboBoxvblank->setCurrentText(vblankinitial);
+
+    //deal with compositors
+
     QString cmd = "ps -aux |grep -v grep |grep -q compiz";
     if (system(cmd.toUtf8()) == 0) {
         ui->tabWidget->removeTab(2);
@@ -1599,6 +1608,13 @@ void defaultlook::on_buttonCompositorApply_clicked()
         runCmd("sed -i -r s/Hidden=.*/Hidden=true/ " + file_start.absoluteFilePath());
     }
     qDebug() << "autostart set to " << runCmd("grep Hidden= " + file_start.absoluteFilePath()).output;
+
+    //deal with vblank setting
+    if ( vblankflag ) {
+        runCmd("xfconf-query -c xfwm4 -p /general/vblank_mode -t string -s " + ui->comboBoxvblank->currentText() + " --create");
+        //restart xfwm4 to take advantage of the setting
+        runCmd("xfwm4 --replace");
+    }
 }
 
 
@@ -1926,3 +1942,14 @@ void defaultlook::on_pushButtonRemoveUserThemeSet_clicked()
     //refresh
     setupComboTheme();
 }
+
+void defaultlook::on_comboBoxvblank_activated(const QString &arg1)
+{
+    if ( vblankinitial == ui->comboBoxvblank->currentText()){
+        vblankflag = false;
+    } else {
+        vblankflag = true;
+    }
+    ui->buttonCompositorApply->setEnabled(true);
+}
+
