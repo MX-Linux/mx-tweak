@@ -1,3 +1,9 @@
+mx-tweak (19.08.02) mx; urgency=medium
+
+  * misc. revisions 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Mon, 12 Aug 2019 20:55:48 -0400
+
 mx-tweak (19.08.01) mx; urgency=medium
 
   * allow custom theme set creation and deletion (nite coder)
