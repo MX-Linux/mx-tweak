@@ -17,7 +17,7 @@
    <item>
     <widget class="QLabel" name="label">
      <property name="text">
-      <string> Enter name for new theme set</string>
+      <string>Enter name for new theme set</string>
      </property>
     </widget>
    </item>
