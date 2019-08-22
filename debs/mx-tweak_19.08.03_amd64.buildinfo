@@ -2,22 +2,22 @@ Format: 1.0
 Source: mx-tweak
 Binary: mx-tweak
 Architecture: amd64 source
-Version: 19.08.01
+Version: 19.08.03
 Checksums-Md5:
- 127ffd998b044083d035998f6ac9151e 631 mx-tweak_19.08.01.dsc
- 5c40f58ac3928becfb9f835e7d8ec111 12030 mx-tweak-dbgsym_19.08.01_amd64.deb
- b9673193b4a3c64a80bbd1263b188a2b 147626 mx-tweak_19.08.01_amd64.deb
+ 4e0506eb90be27819407e14eaa7fb3c5 631 mx-tweak_19.08.03.dsc
+ e2eb384c64545d192bf60f0e213f6247 12040 mx-tweak-dbgsym_19.08.03_amd64.deb
+ 32d0b357665bdbc126e2df696c796dfb 147988 mx-tweak_19.08.03_amd64.deb
 Checksums-Sha1:
- 18ab52df6e141ea407c330982432c457866e6237 631 mx-tweak_19.08.01.dsc
- 5ad4e3e8175f43c04a4b436b6ee35bc4a64fecf9 12030 mx-tweak-dbgsym_19.08.01_amd64.deb
- 0dd54c63c1425c152b385199b8c3f818028228a7 147626 mx-tweak_19.08.01_amd64.deb
+ e37ea7e2d5272b4f28ea74f0630b688e95823bb5 631 mx-tweak_19.08.03.dsc
+ bf5971337f22ba583a7458807b2761e54c1fba70 12040 mx-tweak-dbgsym_19.08.03_amd64.deb
+ 6e1fee3a2702bf74621b71148f84d8d3c4f54de7 147988 mx-tweak_19.08.03_amd64.deb
 Checksums-Sha256:
- ca16d46ab9d42140304aafa0c2a646b2e9d627bb644c4d9ab0abc012dc19c705 631 mx-tweak_19.08.01.dsc
- 3c6cd37d06b7073ac7d2a2ed4048cae850ff4e68719e0a3259b57828e23f4925 12030 mx-tweak-dbgsym_19.08.01_amd64.deb
- 4c4fa3b43c53e4311d19f950846125ca12fb8c5a9914fae40c270254e2a279ad 147626 mx-tweak_19.08.01_amd64.deb
+ 0333706c4d3e0d728ef31b15dfee8e6cb139cc9762985374555c52743444c9d6 631 mx-tweak_19.08.03.dsc
+ 9bb6f172ed5f84d2b9e01ebdddcaaf94a5175649e3a95bef55af5080f26e436b 12040 mx-tweak-dbgsym_19.08.03_amd64.deb
+ f018b09ad93b786ae7f3674d1099246078ccdf6f60b505cb062921bcca9b6b63 147988 mx-tweak_19.08.03_amd64.deb
 Build-Origin: Debian
 Build-Architecture: amd64
-Build-Date: Thu, 08 Aug 2019 21:15:10 -0400
+Build-Date: Sun, 18 Aug 2019 15:24:38 -0400
 Installed-Build-Depends:
  autoconf (= 2.69-10),
  automake (= 1:1.15-6),
@@ -344,4 +344,4 @@ Installed-Build-Depends:
 Environment:
  DEB_BUILD_OPTIONS="parallel=4"
  LANG="en_US.UTF-8"
- SOURCE_DATE_EPOCH="1565307238"
+ SOURCE_DATE_EPOCH="1566155065"
