@@ -29,9 +29,11 @@
 
 <h2>Theme</h2>
 
-<p>On this tab the user may select to change whatever the current theme is to the MX-16 default light theme, MX-16 default dark theme, or MX-16.1 theme.  This will change the gtk style, window manager style, and icon theme.</p>
+<img src="tweak-theme-1.jpg" alt="Theme options" />
 
-<img src="2-1.jpg" alt="Theme options" />
+<p>On this tab the user may select to change whatever the current theme is to the default light theme set, default dark theme set, or other theme set. This will change the gtk style, window manager style, and icon theme.</p>
+
+<p> The user can also save their current gtk, window manager, and icon theme settings to a new theme set.  The theme-set will be saved in <span style="font-style: normal">~/.local/share/mx-tweak-data.</span></p>
 
 <p>The Firefox tweak option will force a light theme on Firefox, which will solve an issue with some websites, including netflix and youtube, where text fields will not display correctly when a dark system theme is in use.</p>
 
@@ -48,11 +50,22 @@
 
 <p>Here the user may select whether to use a <a href="https://en.wikipedia.org/wiki/Compositing_window_manager" target="_blank" rel="noreferrer noopener" aria-label="compositing window manager (opens in a new tab)">compositing window manager</a>, and which compositor to use.</p>
 
-<img src="3-2.jpg" alt="Compositor" />
+<img src="tweak-compositor-2.jpg" alt="Compositor" />
 
 <h3>Xfwm (Xfce) compositor</h3>
 
 <p>Xfwm is the default window manager for Xfce, and it includes its own compositor. That compositor is turned off by default in MX Linux because it can cause various problems on older machines. When you turn on its compositor by selecting it from the pull-down menu, the button &#8220;Xfwm Settings&#8221; becomes active and, when clicked, provides access to some basic settings. For details, consult the <a href="https://wiki.xfce.org/howto/xfwm4_theme" target="_blank" rel="noreferrer noopener" aria-label="Xfce Wik (opens in a new tab)">Xfce Wik</a>i.</p>
+
+<p>Under Xfce 4.14, the user can set the “Vblank” mode to auto, glx, xpresent, or off.</p>
+
+<p style="margin-left: 0.49in"><strong>glx</strong> - Anecdotally,
+this seems to work well with intel cards and some nvidia/ati cards</p>
+<p style="margin-left: 0.49in"><strong>xpresent</strong> - uses the
+xpresent libraries. Anecdotally, this seems to work well with newer
+ati/amd cards.</p>
+<p style="margin-left: 0.49in"><strong>off</strong> - this disables
+the vblank code. Anecdotally, this seems to work well with nvidia
+cards.</p>
 
 <h3>Compton compositor</h3>
 
@@ -107,7 +120,7 @@
 <h3>Details</h3>
 
 	<ul>
-		<li>There is a template file in /usr/share/mx-tweak-data that folks can use to build theme sets. So far the only person who has asked about it is antechdesigns. The file should also be copied into ~/.local/share/mx-tweak-data. also, user files stored in ~/.local/share/mx-tweak-data will be picked up by mx-tweak on start of the app.</li>
+		<li>There is a template file in /usr/share/mx-tweak-data that folks can use to build theme sets. The file should also be copied into ~/.local/share/mx-tweak-data. also, user files stored in ~/.local/share/mx-tweak-data will be picked up by mx-tweak on start of the app.</li>
 	</ul>
 
 <p>Development history: Dolphin_Oracle, including a wrapper for Compton-conf (LXqt)</p>
