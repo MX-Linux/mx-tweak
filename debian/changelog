@@ -1,3 +1,9 @@
+mx-tweak (19.08.06) mx; urgency=medium
+
+  * add tooltip to vblank 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Fri, 23 Aug 2019 18:40:11 -0400
+
 mx-tweak (19.08.05) mx; urgency=medium
 
   * update help file for latest features 
