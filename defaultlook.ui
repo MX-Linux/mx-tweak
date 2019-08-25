@@ -771,7 +771,7 @@
            <item row="1" column="0">
             <widget class="QLabel" name="label_10">
              <property name="toolTip">
-              <string>Changin the VBlank mode may help alleviate some screen tearing issues.  See Help for more information.</string>
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Changing the VBlank mode may help alleviate some screen tearing issues.  See Help for more information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
              <property name="text">
               <string>VBlank</string>
