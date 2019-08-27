@@ -3,12 +3,12 @@
     <name>defaultlook</name>
     <message>
         <location filename="defaultlook.ui" line="20"/>
-        <location filename="defaultlook.cpp" line="52"/>
-        <location filename="defaultlook.cpp" line="464"/>
-        <location filename="defaultlook.cpp" line="471"/>
-        <location filename="defaultlook.cpp" line="488"/>
-        <location filename="defaultlook.cpp" line="499"/>
+        <location filename="defaultlook.cpp" line="58"/>
+        <location filename="defaultlook.cpp" line="502"/>
         <location filename="defaultlook.cpp" line="509"/>
+        <location filename="defaultlook.cpp" line="526"/>
+        <location filename="defaultlook.cpp" line="537"/>
+        <location filename="defaultlook.cpp" line="547"/>
         <source>MX Tweak</source>
         <translation>MX Tweak</translation>
     </message>
@@ -104,292 +104,353 @@
         <translation>Desplegar panel vertical</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="359"/>
+        <location filename="defaultlook.ui" line="365"/>
         <source>Bottom</source>
         <translation>Fondo</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="364"/>
+        <location filename="defaultlook.ui" line="370"/>
         <source>Top</source>
         <translation>Arriba</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="372"/>
+        <location filename="defaultlook.ui" line="378"/>
         <source>Display panel horizontally</source>
         <translation>Desplegar panel horizontalmente</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="386"/>
+        <location filename="defaultlook.ui" line="398"/>
         <source>Left</source>
         <translation>Izquierda</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="391"/>
+        <location filename="defaultlook.ui" line="403"/>
         <source>Right</source>
         <translation>Derecha</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="399"/>
+        <location filename="defaultlook.ui" line="411"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Affects all panels&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Afecta todos los paneless&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="419"/>
+        <location filename="defaultlook.ui" line="431"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Buttons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Botones de ventanas&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="434"/>
-        <location filename="defaultlook.ui" line="537"/>
-        <location filename="defaultlook.ui" line="707"/>
-        <location filename="defaultlook.ui" line="826"/>
-        <location filename="defaultlook.ui" line="868"/>
+        <location filename="defaultlook.ui" line="446"/>
+        <location filename="defaultlook.ui" line="549"/>
+        <location filename="defaultlook.ui" line="740"/>
+        <location filename="defaultlook.ui" line="894"/>
+        <location filename="defaultlook.ui" line="936"/>
         <source>Apply</source>
         <translation>Aplicar</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="457"/>
+        <location filename="defaultlook.ui" line="469"/>
         <source>Theme</source>
         <translation>Tema</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="471"/>
+        <location filename="defaultlook.ui" line="483"/>
         <source>Theme Options</source>
         <translation>Opciones de Tema</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="501"/>
+        <location filename="defaultlook.ui" line="513"/>
         <source>Fix some website fields when using dark theme</source>
         <translation>Corregir campos en páginas web cuando usa el tema oscuro</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="504"/>
+        <location filename="defaultlook.ui" line="516"/>
         <source>Firefox dark theme tweak</source>
         <translation>Retocar tema oscuro de Firefox</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="511"/>
+        <location filename="defaultlook.ui" line="523"/>
         <source>Fix HexChat input box in dark theme</source>
-        <translation>Ajuste el cuadro de entrada HexChat a tema oscura</translation>
+        <translation>Ajuste el cuadro de entrada HexChat a tema oscuro</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="563"/>
+        <location filename="defaultlook.ui" line="575"/>
         <source>Undo</source>
         <translation>Deshacer</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="570"/>
+        <location filename="defaultlook.ui" line="582"/>
         <source>Preview</source>
         <translation>Vista previa</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="580"/>
-        <location filename="defaultlook.ui" line="673"/>
+        <location filename="defaultlook.ui" line="589"/>
+        <source>Remove User Theme Set</source>
+        <translation>Eliminar el conjunto de temas de usuario</translation>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="600"/>
+        <source>Save Current Settings as a Theme Set</source>
+        <translation>Guardar la configuración actual como un conjunto de temas</translation>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="614"/>
+        <location filename="defaultlook.ui" line="760"/>
         <source>Compositor</source>
         <translation>Compositor</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="601"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce Compositor Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ajustes del Compositor Xfce&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="defaultlook.ui" line="604"/>
-        <source>Xfwm Settings</source>
-        <translation>Xfwm Ajustes</translation>
-    </message>
-    <message>
-        <location filename="defaultlook.ui" line="628"/>
-        <source>None</source>
-        <translation>Ninguno</translation>
-    </message>
-    <message>
-        <location filename="defaultlook.ui" line="633"/>
-        <source>Xfwm (Xfce) Compositor</source>
-        <translation>Xfwm (Xfce) Compositor</translation>
-    </message>
-    <message>
-        <location filename="defaultlook.ui" line="638"/>
-        <source>Compton </source>
-        <translation>Compton </translation>
-    </message>
-    <message>
-        <location filename="defaultlook.ui" line="646"/>
-        <source>Edit compton.conf directly in text editor</source>
-        <translation>Editar compton.conf directamente en editor de texto</translation>
-    </message>
-    <message>
-        <location filename="defaultlook.ui" line="649"/>
-        <source>Edit compton.conf</source>
-        <translation>Editar compton.conf</translation>
-    </message>
-    <message>
-        <location filename="defaultlook.ui" line="680"/>
-        <source>Transparency and shadow options</source>
-        <translation>Opciones de transparencias y sombras</translation>
-    </message>
-    <message>
-        <location filename="defaultlook.ui" line="687"/>
+        <location filename="defaultlook.ui" line="635"/>
         <source>Launch compton-conf configuration tool</source>
         <translation>Lanzar herramienta de configuración compton-conf</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="690"/>
+        <location filename="defaultlook.ui" line="638"/>
         <source>Compton settings</source>
         <translation>Ajustes Compton</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="743"/>
+        <location filename="defaultlook.ui" line="662"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce Compositor Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ajustes del Compositor Xfce&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="665"/>
+        <source>Xfwm Settings</source>
+        <translation>Xfwm Ajustes</translation>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="689"/>
+        <source>None</source>
+        <translation>Ninguno</translation>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="694"/>
+        <source>Xfwm (Xfce) Compositor</source>
+        <translation>Xfwm (Xfce) Compositor</translation>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="699"/>
+        <source>Compton </source>
+        <translation>Compton </translation>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="707"/>
+        <source>Edit compton.conf directly in text editor</source>
+        <translation>Editar compton.conf directamente en editor de texto</translation>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="710"/>
+        <source>Edit compton.conf</source>
+        <translation>Editar compton.conf</translation>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="767"/>
+        <source>Transparency and shadow options</source>
+        <translation>Opciones de transparencias y sombras</translation>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="774"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Changing the VBlank mode may help alleviate some screen tearing issues.  See Help for more information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="777"/>
+        <source>VBlank</source>
+        <translation>VBlank</translation>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="785"/>
+        <source>auto</source>
+        <translation>automático</translation>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="790"/>
+        <source>glx</source>
+        <translation>glx</translation>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="795"/>
+        <source>xpresent</source>
+        <translation>xpresent</translation>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="800"/>
+        <source>off</source>
+        <translation>apagado</translation>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="811"/>
         <source>Config Options</source>
         <translation>Opciones para configurar</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="751"/>
+        <location filename="defaultlook.ui" line="819"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>Restablecer Lightdm (pantalla de inicio) a la tema predeterminado</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="758"/>
+        <location filename="defaultlook.ui" line="826"/>
         <source>Reset Thunar custom right-click actions to system defaults</source>
         <translation>Reestablecer las acciones personalizados de Thunar a los predeterminados</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="765"/>
+        <location filename="defaultlook.ui" line="833"/>
         <source>Use intel driver instead of default &quot;modsetting&quot; driver (requires restart)</source>
-        <translation>Usa controlador intel en vez del predeterminado controlador &apos;modesetting&apos; (se requiere reiniciar) </translation>
+        <translation>Usar controlador intel en vez del controlador predeterminado &apos;modesetting&apos; (se requiere reiniciar) </translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="772"/>
+        <location filename="defaultlook.ui" line="840"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>NOTA: el actual /etc/X11/xorg.conf.d/20-intel.conf será respaldado en la carpeta /home</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="779"/>
+        <location filename="defaultlook.ui" line="847"/>
         <source>Use tearfree amdgpu option</source>
-        <translation type="unfinished"/>
+        <translation>Use la opción tearfree amdgpu</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="786"/>
+        <location filename="defaultlook.ui" line="854"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
-        <translation type="unfinished"/>
+        <translation>NOTA: el actual /etc/X11/xorg.conf.d/20-amd.conf será respaldado en la carpeta home</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="793"/>
+        <location filename="defaultlook.ui" line="861"/>
         <source>Use tearfree radeon driver option</source>
-        <translation type="unfinished"/>
+        <translation>Use la opción tearfree del controlador radeon</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="800"/>
+        <location filename="defaultlook.ui" line="868"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
-        <translation type="unfinished"/>
+        <translation>NOTA: el actual /etc/X11/xorg.conf.d/20-radeon.conf será respaldado en la carpeta home</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="840"/>
+        <location filename="defaultlook.ui" line="908"/>
         <source>Other</source>
-        <translation>Otro</translation>
+        <translation>Otros</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="848"/>
+        <location filename="defaultlook.ui" line="916"/>
         <source>Enable single-click on desktop</source>
-        <translation>Habilitar un solo clik en el escritorio</translation>
+        <translation>Habilitar un solo clic en el escritorio</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="855"/>
+        <location filename="defaultlook.ui" line="923"/>
         <source>Enable single-click in Thunar File Manager</source>
-        <translation>Habilitar un solo clik en Thunar gestor de archivos</translation>
+        <translation>Habilitar un solo clic en Thunar gestor de archivos</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="892"/>
+        <location filename="defaultlook.ui" line="960"/>
         <source>Show systray (notification area) frame</source>
         <translation>Mostrar marco de systray (área de notificación)</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="899"/>
+        <location filename="defaultlook.ui" line="967"/>
         <source>Show windows from all workspaces in panel</source>
-        <translation>Mostrar ventanas de todos los áreas de trabajos en el panel</translation>
+        <translation>Mostrar ventanas de todos las áreas de trabajo en el panel</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="906"/>
+        <location filename="defaultlook.ui" line="974"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>Habilitar montar discos internos por usuarios no-root</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="913"/>
+        <location filename="defaultlook.ui" line="981"/>
         <source>Disable shortening of long filenames on the desktop</source>
         <translation>Deshabilitar acortar nombres largos de archivos en el escritorio</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="920"/>
+        <location filename="defaultlook.ui" line="988"/>
         <source>Enable hibernate on Log Out menu </source>
         <translation>Habilitar Hibernar en el menú de Salida</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="927"/>
+        <location filename="defaultlook.ui" line="995"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
         <translation>                   nota: para hibernar, el swap debe ser &gt;= RAM</translation>
     </message>
     <message>
-        <location filename="defaultlook.cpp" line="463"/>
+        <location filename="defaultlook.cpp" line="501"/>
         <source>About MX Tweak</source>
         <translation>Acerca de MX Ajustes</translation>
     </message>
     <message>
-        <location filename="defaultlook.cpp" line="464"/>
+        <location filename="defaultlook.cpp" line="502"/>
         <source>Version: </source>
         <translation>Versión:</translation>
     </message>
     <message>
-        <location filename="defaultlook.cpp" line="465"/>
+        <location filename="defaultlook.cpp" line="503"/>
         <source>App for quick default ui theme changes and tweaks</source>
-        <translation>Ap para cambios rápidos al tema de la IU por defecto y ajustes</translation>
+        <translation>App para cambios rápidos al tema de la IU por defecto y ajustes</translation>
     </message>
     <message>
-        <location filename="defaultlook.cpp" line="467"/>
+        <location filename="defaultlook.cpp" line="505"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="defaultlook.cpp" line="468"/>
-        <location filename="defaultlook.cpp" line="471"/>
+        <location filename="defaultlook.cpp" line="506"/>
+        <location filename="defaultlook.cpp" line="509"/>
         <source>License</source>
         <translation>Licencia</translation>
     </message>
     <message>
-        <location filename="defaultlook.cpp" line="469"/>
+        <location filename="defaultlook.cpp" line="507"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location filename="defaultlook.cpp" line="500"/>
+        <location filename="defaultlook.cpp" line="538"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
         <translation>¡Listo! Firefox puede requerir un reinicio para que los cambios surtan efecto. </translation>
     </message>
     <message>
-        <location filename="defaultlook.cpp" line="510"/>
+        <location filename="defaultlook.cpp" line="548"/>
         <source>This app is Xfce-only</source>
         <translation>Esta aplicación es solamente para Xfce</translation>
     </message>
     <message>
-        <location filename="defaultlook.cpp" line="652"/>
+        <location filename="defaultlook.cpp" line="690"/>
         <source>Panel settings</source>
         <translation>Ajustes del panel</translation>
     </message>
     <message>
-        <location filename="defaultlook.cpp" line="653"/>
+        <location filename="defaultlook.cpp" line="691"/>
         <source> Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
         <translation> Su configuración del panel se ha respaldado en una carpeta oculta llamada .restore en su folder home (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="defaultlook.cpp" line="1070"/>
+        <location filename="defaultlook.cpp" line="1117"/>
         <source>Choose a theme set</source>
-        <translation>Escoger un juego de tema</translation>
+        <translation>Elegir un conjunto de temas</translation>
+    </message>
+</context>
+<context>
+    <name>remove_user_theme_set</name>
+    <message>
+        <location filename="remove_user_theme_set.ui" line="14"/>
+        <source>Remove User Theme Set</source>
+        <translation>Eliminar el conjunto de temas de usuario</translation>
+    </message>
+</context>
+<context>
+    <name>theming_to_tweak</name>
+    <message>
+        <location filename="theming_to_tweak.ui" line="14"/>
+        <source>New Theme Set</source>
+        <translation>Nuevo conjunto de temas </translation>
+    </message>
+    <message>
+        <location filename="theming_to_tweak.ui" line="20"/>
+        <source>Enter name for new theme set</source>
+        <translation>Introduzca el nombre para el nuevo conjunto de temas</translation>
     </message>
 </context>
 <context>
     <name>window_buttons</name>
     <message>
         <location filename="window_buttons.ui" line="14"/>
-        <location filename="window_buttons.cpp" line="36"/>
+        <location filename="window_buttons.cpp" line="37"/>
         <source>Window Buttons</source>
         <translation>Botones de ventanas</translation>
     </message>
@@ -411,12 +472,12 @@
     <message>
         <location filename="window_buttons.ui" line="49"/>
         <source>Show handle</source>
-        <translation>Mostrar manijas</translation>
+        <translation>Mostrar asa</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="56"/>
         <source>Sorting Order:</source>
-        <translation>Forma de ordenado:</translation>
+        <translation>Orden de selección:</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="64"/>
@@ -539,7 +600,7 @@
     <message>
         <location filename="xfwm_compositor_settings.ui" line="49"/>
         <source>Windows during move</source>
-        <translation>Ventanas durante movida</translation>
+        <translation>Ventanas durante el movimiento</translation>
     </message>
     <message>
         <location filename="xfwm_compositor_settings.ui" line="56"/>
@@ -554,12 +615,12 @@
     <message>
         <location filename="xfwm_compositor_settings.ui" line="86"/>
         <source>Show shadows under dock windows</source>
-        <translation>Mostrar sombras debajo ventanas del muelle</translation>
+        <translation>Mostrar sombras debajo de ventanas del muelle</translation>
     </message>
     <message>
         <location filename="xfwm_compositor_settings.ui" line="93"/>
         <source>Show shadows under popup windows</source>
-        <translation>Mostrar sombras debajo ventanas desplegables</translation>
+        <translation>Mostrar sombras debajo de ventanas desplegables</translation>
     </message>
     <message>
         <location filename="xfwm_compositor_settings.ui" line="100"/>
@@ -579,12 +640,12 @@
     <message>
         <location filename="xfwm_compositor_settings.ui" line="137"/>
         <source>Show windows preview in place of icons when cycling</source>
-        <translation>Mostrar visita previa en vez del icono cuando ciclando ventanas</translation>
+        <translation>Mostrar vista previa de ventanas en lugar de iconos durante el ciclo</translation>
     </message>
     <message>
         <location filename="xfwm_compositor_settings.ui" line="144"/>
         <source>Display fullscreen overlay windows directly</source>
-        <translation>Mostrar ventanas sobrepuestos directamente en pantalla plena</translation>
+        <translation>Mostrar ventanas sobrepuestas directamente en pantalla plena</translation>
     </message>
     <message>
         <location filename="xfwm_compositor_settings.ui" line="183"/>
@@ -602,7 +663,7 @@
         <translation>Cerrar</translation>
     </message>
     <message>
-        <location filename="xfwm_compositor_settings.cpp" line="38"/>
+        <location filename="xfwm_compositor_settings.cpp" line="39"/>
         <source>Xfwm Compositor Settings</source>
         <translation>Ajustes del Compositor de Xfwm</translation>
     </message>
