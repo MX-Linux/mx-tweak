@@ -3,12 +3,12 @@
     <name>defaultlook</name>
     <message>
         <location filename="defaultlook.ui" line="20"/>
-        <location filename="defaultlook.cpp" line="52"/>
-        <location filename="defaultlook.cpp" line="464"/>
-        <location filename="defaultlook.cpp" line="471"/>
-        <location filename="defaultlook.cpp" line="488"/>
-        <location filename="defaultlook.cpp" line="499"/>
-        <location filename="defaultlook.cpp" line="509"/>
+        <location filename="defaultlook.cpp" line="55"/>
+        <location filename="defaultlook.cpp" line="467"/>
+        <location filename="defaultlook.cpp" line="474"/>
+        <location filename="defaultlook.cpp" line="491"/>
+        <location filename="defaultlook.cpp" line="502"/>
+        <location filename="defaultlook.cpp" line="512"/>
         <source>MX Tweak</source>
         <translation>MX Tweak</translation>
     </message>
@@ -104,285 +104,316 @@
         <translation>Вертикальное расположение</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="359"/>
+        <location filename="defaultlook.ui" line="365"/>
         <source>Bottom</source>
         <translation>Внизу</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="364"/>
+        <location filename="defaultlook.ui" line="370"/>
         <source>Top</source>
         <translation>Сверху</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="372"/>
+        <location filename="defaultlook.ui" line="378"/>
         <source>Display panel horizontally</source>
         <translation>Горизонтальное расположение</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="386"/>
+        <location filename="defaultlook.ui" line="398"/>
         <source>Left</source>
         <translation>Слева</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="391"/>
+        <location filename="defaultlook.ui" line="403"/>
         <source>Right</source>
         <translation>Справа</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="399"/>
+        <location filename="defaultlook.ui" line="411"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Affects all panels&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Влияет на все панели&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="419"/>
+        <location filename="defaultlook.ui" line="431"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Buttons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Кнопки окон&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="434"/>
-        <location filename="defaultlook.ui" line="537"/>
-        <location filename="defaultlook.ui" line="707"/>
-        <location filename="defaultlook.ui" line="826"/>
-        <location filename="defaultlook.ui" line="868"/>
+        <location filename="defaultlook.ui" line="446"/>
+        <location filename="defaultlook.ui" line="549"/>
+        <location filename="defaultlook.ui" line="741"/>
+        <location filename="defaultlook.ui" line="860"/>
+        <location filename="defaultlook.ui" line="902"/>
         <source>Apply</source>
         <translation>Применить</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="457"/>
+        <location filename="defaultlook.ui" line="469"/>
         <source>Theme</source>
         <translation>Тема</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="471"/>
+        <location filename="defaultlook.ui" line="483"/>
         <source>Theme Options</source>
         <translation>Параметры темы</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="501"/>
+        <location filename="defaultlook.ui" line="513"/>
         <source>Fix some website fields when using dark theme</source>
         <translation>Исправлять некоторые поля веб-сайтов при использовании темной темы</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="504"/>
+        <location filename="defaultlook.ui" line="516"/>
         <source>Firefox dark theme tweak</source>
         <translation>Настройка темной темы Firefox</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="511"/>
+        <location filename="defaultlook.ui" line="523"/>
         <source>Fix HexChat input box in dark theme</source>
         <translation>Исправить поле ввода HexChat для темной темы</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="563"/>
+        <location filename="defaultlook.ui" line="575"/>
         <source>Undo</source>
         <translation>Отменить</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="570"/>
+        <location filename="defaultlook.ui" line="582"/>
         <source>Preview</source>
         <translation>Предварительный просмотр</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="580"/>
-        <location filename="defaultlook.ui" line="673"/>
+        <location filename="defaultlook.ui" line="589"/>
+        <source>Remove User Theme Sets</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="600"/>
+        <source>Save Current Settings as a Theme Set</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="defaultlook.ui" line="614"/>
+        <location filename="defaultlook.ui" line="707"/>
         <source>Compositor</source>
         <translation>Композитор</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="601"/>
+        <location filename="defaultlook.ui" line="635"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce Compositor Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Настройки композитора Xfce&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="604"/>
+        <location filename="defaultlook.ui" line="638"/>
         <source>Xfwm Settings</source>
         <translation>Настройки Xfmw</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="628"/>
+        <location filename="defaultlook.ui" line="662"/>
         <source>None</source>
         <translation>Никакой</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="633"/>
+        <location filename="defaultlook.ui" line="667"/>
         <source>Xfwm (Xfce) Compositor</source>
         <translation>Композитор Xfwm (Xfce)</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="638"/>
+        <location filename="defaultlook.ui" line="672"/>
         <source>Compton </source>
         <translation>Compton</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="646"/>
+        <location filename="defaultlook.ui" line="680"/>
         <source>Edit compton.conf directly in text editor</source>
         <translation>Редактировать compton.conf в текстовом редакторе</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="649"/>
+        <location filename="defaultlook.ui" line="683"/>
         <source>Edit compton.conf</source>
         <translation>Редактировать compton.conf</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="680"/>
+        <location filename="defaultlook.ui" line="714"/>
         <source>Transparency and shadow options</source>
         <translation>Параметры прозрачности и теней</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="687"/>
+        <location filename="defaultlook.ui" line="721"/>
         <source>Launch compton-conf configuration tool</source>
         <translation>Запустить конфигуратор compton-conf</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="690"/>
+        <location filename="defaultlook.ui" line="724"/>
         <source>Compton settings</source>
         <translation>Настройки Compton</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="743"/>
+        <location filename="defaultlook.ui" line="777"/>
         <source>Config Options</source>
         <translation>Опции конфигурации</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="751"/>
+        <location filename="defaultlook.ui" line="785"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>Сбросить Lightdm (экран логина) к системной теме по умолчанию</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="758"/>
+        <location filename="defaultlook.ui" line="792"/>
         <source>Reset Thunar custom right-click actions to system defaults</source>
         <translation>Сбросить на предустановленные действия по правому клику в Thunar</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="765"/>
+        <location filename="defaultlook.ui" line="799"/>
         <source>Use intel driver instead of default &quot;modsetting&quot; driver (requires restart)</source>
         <translation>Использовать драйвер intel вместо штатного &quot;modsetting&quot; драйвера (необходим перезапуск)</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="772"/>
+        <location filename="defaultlook.ui" line="806"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>ПРИМЕЧАНИЕ: существующий /etc/X11/xorg.conf.d/20-intel.conf будет сохранен в домашней директории</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="779"/>
+        <location filename="defaultlook.ui" line="813"/>
         <source>Use tearfree amdgpu option</source>
         <translation>Использовать опцию amdgpu видео без тиринга</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="786"/>
+        <location filename="defaultlook.ui" line="820"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>ПРИМЕЧАНИЕ: существующий /etc/X11/xorg.conf.d/20-amd.conf будет скопирован в домашний каталог</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="793"/>
+        <location filename="defaultlook.ui" line="827"/>
         <source>Use tearfree radeon driver option</source>
         <translation>Использовать опцию драйвера radeon видео без тиринга</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="800"/>
+        <location filename="defaultlook.ui" line="834"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>ПРИМЕЧАНИЕ: существующий /etc/X11/xorg.conf.d/20-radeon.conf будет скопирован в домашний каталог</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="840"/>
+        <location filename="defaultlook.ui" line="874"/>
         <source>Other</source>
         <translation>Другое</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="848"/>
+        <location filename="defaultlook.ui" line="882"/>
         <source>Enable single-click on desktop</source>
         <translation>Задействовать одиночный клик на рабочем столе</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="855"/>
+        <location filename="defaultlook.ui" line="889"/>
         <source>Enable single-click in Thunar File Manager</source>
         <translation>Задействовать одиночный клик в Thunar</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="892"/>
+        <location filename="defaultlook.ui" line="926"/>
         <source>Show systray (notification area) frame</source>
         <translation>Отображать рамку systray (область уведомлений)</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="899"/>
+        <location filename="defaultlook.ui" line="933"/>
         <source>Show windows from all workspaces in panel</source>
         <translation>Показывать на панели окна со всех рабочих столов</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="906"/>
+        <location filename="defaultlook.ui" line="940"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>Включить монтирование внешних носителей для не-рут пользователей</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="913"/>
+        <location filename="defaultlook.ui" line="947"/>
         <source>Disable shortening of long filenames on the desktop</source>
         <translation>Отключить укорачивание длинных имен на рабочем столе</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="920"/>
+        <location filename="defaultlook.ui" line="954"/>
         <source>Enable hibernate on Log Out menu </source>
         <translation>Добавить hibernate в меню Выхода из системы</translation>
     </message>
     <message>
-        <location filename="defaultlook.ui" line="927"/>
+        <location filename="defaultlook.ui" line="961"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
         <translation>примечание: для hibernate необходим swap &gt;= RAM</translation>
     </message>
     <message>
-        <location filename="defaultlook.cpp" line="463"/>
+        <location filename="defaultlook.cpp" line="466"/>
         <source>About MX Tweak</source>
         <translation>О MX Tweak</translation>
     </message>
     <message>
-        <location filename="defaultlook.cpp" line="464"/>
+        <location filename="defaultlook.cpp" line="467"/>
         <source>Version: </source>
         <translation>Версия: </translation>
     </message>
     <message>
-        <location filename="defaultlook.cpp" line="465"/>
+        <location filename="defaultlook.cpp" line="468"/>
         <source>App for quick default ui theme changes and tweaks</source>
         <translation>Приложение для доводки штатного оформления и твиков</translation>
     </message>
     <message>
-        <location filename="defaultlook.cpp" line="467"/>
+        <location filename="defaultlook.cpp" line="470"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="defaultlook.cpp" line="468"/>
         <location filename="defaultlook.cpp" line="471"/>
+        <location filename="defaultlook.cpp" line="474"/>
         <source>License</source>
         <translation>Лицензия</translation>
     </message>
     <message>
-        <location filename="defaultlook.cpp" line="469"/>
+        <location filename="defaultlook.cpp" line="472"/>
         <source>Cancel</source>
         <translation>Отменить</translation>
     </message>
     <message>
-        <location filename="defaultlook.cpp" line="500"/>
+        <location filename="defaultlook.cpp" line="503"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
         <translation>Готово! Может потребоваться перезапуск Firefox</translation>
     </message>
     <message>
-        <location filename="defaultlook.cpp" line="510"/>
+        <location filename="defaultlook.cpp" line="513"/>
         <source>This app is Xfce-only</source>
         <translation>Приложение только для Xfce</translation>
     </message>
     <message>
-        <location filename="defaultlook.cpp" line="652"/>
+        <location filename="defaultlook.cpp" line="655"/>
         <source>Panel settings</source>
         <translation>Настройки панели</translation>
     </message>
     <message>
-        <location filename="defaultlook.cpp" line="653"/>
+        <location filename="defaultlook.cpp" line="656"/>
         <source> Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
         <translation>Текущие настройки панели были сохранены в скрытой папке .restore вашего домашнего каталога (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="defaultlook.cpp" line="1070"/>
+        <location filename="defaultlook.cpp" line="1073"/>
         <source>Choose a theme set</source>
         <translation>Выберите набор темы</translation>
+    </message>
+</context>
+<context>
+    <name>remove_user_theme_set</name>
+    <message>
+        <location filename="remove_user_theme_set.ui" line="14"/>
+        <source>Remove User Theme Set</source>
+        <translation type="unfinished"/>
+    </message>
+</context>
+<context>
+    <name>theming_to_tweak</name>
+    <message>
+        <location filename="theming_to_tweak.ui" line="14"/>
+        <source>Dialog</source>
+        <translation>Диалоговое окно</translation>
+    </message>
+    <message>
+        <location filename="theming_to_tweak.ui" line="20"/>
+        <source>Enter name for new theme set</source>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
