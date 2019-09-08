@@ -1,3 +1,9 @@
+mx-tweak (19.09.01) mx; urgency=medium
+
+  * adjusted hibernate detection function 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 08 Sep 2019 12:07:02 -0400
+
 mx-tweak (19.08.07) mx; urgency=medium
 
   * translation refresh 
