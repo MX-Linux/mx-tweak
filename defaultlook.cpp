@@ -869,10 +869,9 @@ void defaultlook::setupEtc()
     }
 
     //hide hibernate if there is no swap
-    QString cmd = "/sbin/blkid |grep -q swap";
-    int swaptest = system(cmd.toUtf8());
+    QString swaptest = runCmd("/usr/sbin/swapon --show").output;
     qDebug() << "swaptest swap present is " << swaptest;
-    if (swaptest != 0) {
+    if (swaptest.isEmpty()) {
         ui->checkBoxHibernate->hide();
         ui->label_hibernate->hide();
     }
@@ -887,10 +886,10 @@ void defaultlook::setupEtc()
     }
 
     //and hide hibernate if swap is encrypted
-    cmd = "grep swap /etc/crypttab |grep -q luks";
-    swaptest = system(cmd.toUtf8());
-    qDebug() << "swaptest encrypted is " << swaptest;
-    if (swaptest = 0) {
+    QString cmd = "grep swap /etc/crypttab |grep -q luks";
+    int swaptest2 = system(cmd.toUtf8());
+    qDebug() << "swaptest encrypted is " << swaptest2;
+    if (swaptest2 == 0) {
         ui->checkBoxHibernate->hide();
         ui->label_hibernate->hide();
     }
