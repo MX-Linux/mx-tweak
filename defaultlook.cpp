@@ -1881,6 +1881,8 @@ void defaultlook::on_pushButtonRemoveUserThemeSets_clicked()
     QString theme = dialog.themeSelector()->currentText();
     if(result != QDialog::Accepted)
         return;
+    if(theme == "Select User Theme Set to Remove") // potential error if the message is changed(not critical)
+        return;
     result = QMessageBox::warning(this, "Remove User Theme Set", "Are you sure you want to remove " + theme + " theme set?", QMessageBox::Ok | QMessageBox::Cancel);
     if(result == QMessageBox::Cancel)
         return;
