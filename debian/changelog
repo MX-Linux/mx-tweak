@@ -1,0 +1,331 @@
+mx-tweak (19.09.01) mx; urgency=medium
+
+  * adjusted hibernate detection function 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 08 Sep 2019 12:07:02 -0400
+
+mx-tweak (19.08.07) mx; urgency=medium
+
+  * translation refresh 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Tue, 27 Aug 2019 21:32:33 -0400
+
+mx-tweak (19.08.06) mx; urgency=medium
+
+  * add tooltip to vblank 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Fri, 23 Aug 2019 18:40:11 -0400
+
+mx-tweak (19.08.05) mx; urgency=medium
+
+  * update help file for latest features 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Thu, 22 Aug 2019 18:49:55 -0400
+
+mx-tweak (19.08.04) mx; urgency=medium
+
+  * local help files 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Wed, 21 Aug 2019 21:18:40 -0400
+
+mx-tweak (19.08.03) mx; urgency=medium
+
+  * added xfwm4 vblank control (compositor tab) 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 18 Aug 2019 15:04:25 -0400
+
+mx-tweak (19.08.02) mx; urgency=medium
+
+  * misc. revisions 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Mon, 12 Aug 2019 20:55:48 -0400
+
+mx-tweak (19.08.01) mx; urgency=medium
+
+  * allow custom theme set creation and deletion (nite coder)
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Thu, 08 Aug 2019 19:33:58 -0400
+
+mx-tweak (19.07.02) mx; urgency=medium
+
+  * new icon 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Mon, 08 Jul 2019 20:25:52 -0400
+
+mx-tweak (19.07.01) mx; urgency=medium
+
+  * revised flip-to-vertical 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Thu, 04 Jul 2019 09:36:06 -0400
+
+mx-tweak (19.06.04) mx; urgency=medium
+
+  * updated flipto_ routines to look for pa plugin 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Tue, 25 Jun 2019 20:58:19 -0400
+
+mx-tweak (19.06.03) mx; urgency=medium
+
+  * update no-ellipse-desktop-filenames for gtk3 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 22 Jun 2019 16:03:38 -0400
+
+mx-tweak (19.06.02) mx; urgency=medium
+
+  * revised flip to horizontal to deal with all 3 xfce clock plugins 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Tue, 04 Jun 2019 19:53:35 -0400
+
+mx-tweak (19.06.01) mx; urgency=medium
+
+  * gtk3 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Wed, 29 May 2019 19:27:06 -0400
+
+mx-tweak (19.05.01) mx; urgency=medium
+
+  * update  lightdm reset routine
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Wed, 29 May 2019 19:26:30 -0400
+
+mx-tweak (19.04.01) mx; urgency=medium
+
+  * update translations 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Fri, 05 Apr 2019 18:38:29 -0400
+
+mx-tweak (19.03.02) mx; urgency=medium
+
+  * revised radeon and amdgpu driver check 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 03 Mar 2019 10:49:35 -0500
+
+mx-tweak (19.03.01) mx; urgency=medium
+
+  * fix video driver check for multiple card machines 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Fri, 01 Mar 2019 20:48:09 -0500
+
+mx-tweak (19.02.02) mx; urgency=medium
+
+  * change driver check
+  * update localisations 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Mon, 25 Feb 2019 21:35:11 -0500
+
+mx-tweak (19.02.01) mx; urgency=medium
+
+  * added tearfree options for radeon and amdgpu
+  * adjusted intel detction 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 17 Feb 2019 12:28:41 -0500
+
+mx-tweak (19.01.02) mx; urgency=medium
+
+  * update translations 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Wed, 23 Jan 2019 18:49:17 -0500
+
+mx-tweak (19.01.01) mx; urgency=medium
+
+  * add check for theme existence before listing theme set
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 13 Jan 2019 12:03:12 -0500
+
+mx-tweak (18.12.01) mx; urgency=medium
+
+  * fix to ellipse fuctions 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Mon, 24 Dec 2018 20:47:41 -0500
+
+mx-tweak (18.11.02) mx; urgency=medium
+
+  * translation refresh 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Fri, 30 Nov 2018 19:37:21 -0500
+
+mx-tweak (18.11.01) mx; urgency=medium
+
+  * disable hibernate option when swap encrypted 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Mon, 26 Nov 2018 22:09:28 -0500
+
+mx-tweak (18.10.01) mx; urgency=medium
+
+  * updated translations 
+
+ -- dolphin <dolphinoracle@gmail.com>  Sun, 14 Oct 2018 19:46:17 -0400
+
+mx-tweak (18.08.02) mx; urgency=medium
+
+  * updated translations 
+
+ --  dolphin oracle <dolphin@mx>  Sun, 26 Aug 2018 10:47:48 -0400
+
+mx-tweak (18.08.01) mx; urgency=medium
+
+  *  revised policy file
+  *  revised bash "library" file  
+  *  added "window buttons" tasklist function
+  *  use pkexec instead of gksu
+
+ --  dolphin oracle <dolphinoracle@gmail.com>  Fri, 17 Aug 2018 21:12:14 -0400
+ 
+mx-tweak (18.08) mx; urgency=medium
+
+  * fix icon other themes
+
+ -- Adrian <adrian@mxlinux.org>  Sat, 11 Aug 2018 23:26:35 -0400
+
+mx-tweak (18.06.01) mx; urgency=medium
+
+  * update locales
+
+ --  <dolphin@mx>  Mon, 25 Jun 2018 21:28:10 -0400
+
+mx-tweak (18.05.01) mx; urgency=medium
+
+  * update to panel color changer array values (uint vs. int) 
+
+ --  <dolphin@mx>  Sat, 12 May 2018 16:10:16 -0400
+
+mx-tweak (18.04.01) mx; urgency=medium
+
+  * updated translations and 20-intel.conf 
+
+ --  <dolphinoracle@gmail.com>  Sat, 07 Apr 2018 19:34:34 -0400
+
+mx-tweak (18.03.02) mx; urgency=medium
+
+  * tweak whisker theme problem
+  * added 20-intel.conf override
+
+ --  <dolphinoracle@gmail.com>  Sat, 31 Mar 2018 11:15:24 -0400
+
+mx-tweak (18.03.01) mx; urgency=medium
+
+  *  bump changelog, new translations
+
+ --  <dolphin@littlebyte>  Fri, 02 Mar 2018 22:33:31 -0500
+
+mx-tweak (18.02.01) mx; urgency=medium
+
+  * new config options tab and new translations 
+
+ --  <dolphin@littlebyte>  Tue, 20 Feb 2018 20:36:04 -0500
+
+mx-tweak (17.12.03) mx; urgency=medium
+
+  * updating translations
+
+ -- dolphinoracle <dolphinoracle@gmail.com>  Tue, 12 Dec 2017 18:21:51 -0500
+
+mx-tweak (17.12.02) mx; urgency=medium
+
+  * added french help files 
+
+ -- dolphinoracle <dolphinoracle@gmail.com>  Mon, 11 Dec 2017 20:34:30 -0500
+
+mx-tweak (17.12.01) mx; urgency=medium
+
+  * use QDialog instead of QMainWindow
+
+ -- dolphinoracle <dolphinoracle@gmail.com>  Sat, 09 Dec 2017 16:48:32 -0500
+ 
+mx-tweak (17.12) UNRELEASED; urgency=medium
+
+  * fixed swap test 
+
+ -- dolphinoracle <dolphinoracle@gmail.com>  Mon, 04 Dec 2017 04:01:56 -0500
+
+mx-tweak (17.11.07) mx; urgency=medium
+
+  * and more hibernate adjustments 
+
+ -- dolphinoracle <dolphinoracle@gmail.com>  Sun, 03 Dec 2017 19:37:12 -0500
+ 
+mx-tweak (17.11.06) mx; urgency=medium
+
+  * further hibernate adjustments 
+
+ -- dolphinoracle <dolphin@mx1>  Fri, 01 Dec 2017 22:00:15 -0500
+
+mx-tweak (17.11.05) mx; urgency=medium
+
+  * updated help button
+  * add initrd update to hibernate 
+
+ -- dolphinoracle <dolphin@littlebyte>  Thu, 30 Nov 2017 18:45:27 -0500
+
+mx-tweak (17.11.04) mx; urgency=medium
+
+  * minor update to hibernate text
+
+ -- dolphinoracle <dolphin@littlebyte>  Tue, 28 Nov 2017 17:55:23 -0500
+
+mx-tweak (17.11.03) mx; urgency=medium
+
+  * add hibernate switch
+  
+ -- dolphinoracle <dolphinoracle@gmail.com>  Mon, 27 Nov 2017 21:15:24 -0400
+
+mx-tweak (17.11.02) mx; urgency=medium
+
+  * add theme preview feature
+  
+ -- dolphinoracle <dolphinoracle@gmail.com>  Fri, 24 Nov 2017 20:43:17 -0400
+
+mx-tweak (17.11.01) mx; urgency=medium
+
+  * fix for backup, restore, and restore defualt options
+  * fix tooltip on Xfce compositor (thanks Old Giza)
+  
+ -- dolphinoracle <dolphinoracle@gmail.com>  Tue, 21 Oct 2017 21:26:52 -0400
+ 
+mx-tweak (17.10.03) mx; urgency=medium
+
+  * added option for long file names on desktop
+  
+ -- dolphinoracle <dolphinoracle@gmail.com>  Thu, 19 Oct 2017 19:55:12 -0400
+
+mx-tweak (17.10.02) mx; urgency=medium
+
+  * new icon
+
+ -- dolphinoracle <dolphinoracle@gmail.com>  Fri, 13 Oct 2017 21:46:12 -0400
+
+mx-tweak (17.10.01) mx; urgency=medium
+
+  * smaller icon
+
+ -- dolphinoracle <dolphinoracle@gmail.com>  Sun, 01 Oct 2017 18:21:12 -0400
+
+mx-tweak (17.09.01) mx; urgency=medium
+
+  * disable compositor selection if compiz is running
+
+ -- dolphinoracle <dolphinoracle@gmail.com>  Mon, 25 Sep 2017 05:53:12 -0400
+
+mx-tweak (17.07.03) mx; urgency=medium
+
+  * misc. changes
+
+ -- dolphinoracle <dolphinoracle@gmail.com>  Sat, 16 Sep 2017 11:05:12 -0400
+
+mx-tweak (17.07.02) mx; urgency=medium
+
+  * misc. changes
+
+ -- dolphinoracle <dolphinoracle@gmail.com>  Mon, 04 Sep 2017 11:05:12 -0400
+
+mx-tweak (17.07.01) mx; urgency=medium
+
+  * misc. changes
+
+ -- dolphinoracle <dolphinoracle@gmail.com>  Sun, 03 Sep 2017 10:05:12 -0400
+
+mx-tweak (17.07) mx; urgency=medium
+
+  * initial commit
+
+ -- dolphinoracle <dolphinoracle@gmail.com>  Sat, 21 Jun 2017 10:20:12 -0400
