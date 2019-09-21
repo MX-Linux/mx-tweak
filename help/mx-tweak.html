@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>HELP: MX Tweak</title>
+</head>
+<body>
+<h1>HELP: MX Tweak</h1>
+<p>MX Tweak brings together a number of small but often used customizations. Related settings applications native to Xfce are presented below for the user&#8217;s convenience.</p>
+
+<h2>Panel</h2>
+
+<p>Allows the user to make quick user interface changes to system defaults.</p>
+
+<img src="1-2.jpg" alt="MX Tweak" />
+
+<p>The user may select to display the default panel horizontally (top or bottom) or vertically (left&#8211;default&#8211;or right).  Customizations, including panel plugins,will be preserved, although plugin location might be altered. </p>
+
+<p>A backup of the current panel is stored in ~/.restore/.  A backup is created on first launch of the app, and a new backup may be made at anytime.  Only one backup at a time may be stored at this time.</p>
+
+<p>The user may use the &#8220;Restore default panel&#8221; to get back to the original, as-shipped panel.</p>
+
+<h3>Tips and Tricks</h3>
+
+	<ul>
+		<li>If you want to export a panel configuration from one computer to another, with both running MX-15 or later, copy the &#8220;~./restore/&#8221; folder from the original computer and paste it in &#8220;~/.restore/&#8221; of the second computer, and use the &#8220;Restore backup panel configuration&#8221; option to &#8220;import&#8221; the migrated panel.</li>
+	</ul>
+
+<h2>Theme</h2>
+
+<img src="tweak-theme-1.jpg" alt="Theme options" />
+
+<p>On this tab the user may select to change whatever the current theme is to the default light theme set, default dark theme set, or other theme set. This will change the gtk style, window manager style, and icon theme.</p>
+
+<p> The user can also save their current gtk, window manager, and icon theme settings to a new theme set.  The theme-set will be saved in <span style="font-style: normal">~/.local/share/mx-tweak-data.</span></p>
+
+<p>The Firefox tweak option will force a light theme on Firefox, which will solve an issue with some websites, including netflix and youtube, where text fields will not display correctly when a dark system theme is in use.</p>
+
+<p>The HexChat tweak will modify the HexChat configuration to make the text in the input box in chat more visible.</p>
+
+<h3>Tips and Tricks</h3>
+
+	<ul>
+		<li>The Firefox dark theme tweak option will work with themes other than the system defaults.   </li>
+		<li> The HexChat tweak will work with themes other than the system defaults.</li>
+	</ul>
+
+<h2>Compositor</h2>
+
+<p>Here the user may select whether to use a <a href="https://en.wikipedia.org/wiki/Compositing_window_manager" target="_blank" rel="noreferrer noopener" aria-label="compositing window manager (opens in a new tab)">compositing window manager</a>, and which compositor to use.</p>
+
+<img src="tweak-compositor-2.jpg" alt="Compositor" />
+
+<h3>Xfwm (Xfce) compositor</h3>
+
+<p>Xfwm is the default window manager for Xfce, and it includes its own compositor. That compositor is turned off by default in MX Linux because it can cause various problems on older machines. When you turn on its compositor by selecting it from the pull-down menu, the button &#8220;Xfwm Settings&#8221; becomes active and, when clicked, provides access to some basic settings. For details, consult the <a href="https://wiki.xfce.org/howto/xfwm4_theme" target="_blank" rel="noreferrer noopener" aria-label="Xfce Wik (opens in a new tab)">Xfce Wik</a>i.</p>
+
+<p>Under Xfce 4.14, the user can set the “Vblank” mode to auto, glx, xpresent, or off.</p>
+
+<p style="margin-left: 0.49in"><strong>glx</strong> - Anecdotally,
+this seems to work well with intel cards and some nvidia/ati cards</p>
+<p style="margin-left: 0.49in"><strong>xpresent</strong> - uses the
+xpresent libraries. Anecdotally, this seems to work well with newer
+ati/amd cards.</p>
+<p style="margin-left: 0.49in"><strong>off</strong> - this disables
+the vblank code. Anecdotally, this seems to work well with nvidia
+cards.</p>
+
+<h3>Compton compositor</h3>
+
+<p><a rel="noreferrer noopener" aria-label="Compton (opens in a new tab)" href="https://github.com/chjj/compton" target="_blank">Compton</a> is often used instead of Xfwm to reduce the kind of <a href="https://en.wikipedia.org/wiki/Screen_tearing" target="_blank" rel="noreferrer noopener" aria-label="screen tearing (opens in a new tab)">screen tearing</a> that sometimes troubles lightweight compositors such as Xfwm. MX Tweak gives you an easy way to start, stop, and configure the Compton compositor.  </p>
+
+<p>At launch, a compton.conf configuration file will be created for you in ~/.config if one doesn&#8217;t already exist.</p>
+
+<p>The &#8220;Stop Compton&#8221; button will change to &#8220;Launch Compton&#8221; if its not running.</p>
+
+<p>The &#8220;Configure Compton&#8221; button will launch compton-conf, an LXqt project configuraiton tool for compton.  The compton-conf configuration tool works best with the compton.conf file included with the package.  Changes made by compton-conf will take affect at the &#8220;apply&#8221; button.</p>
+
+<img src="mxcompton-2-1.jpg" alt="" />
+
+<p>If you have an existing compton.conf file, or want to change settings not available in the gui, the &#8220;Edit compton.conf&#8221; button will open ~/.compton.conf in a text editor for you to edit directly.  Use the Start-Stop button to cycle compton for manual changes to take affect.</p>
+
+<p>The &#8220;launch at login&#8221; checkmark will enable autostart of compton. this works if the compton file is the in the default location of ~/.config/compton.conf.</p>
+
+<h3>Tips and Tricks</h3>
+
+	<ul>
+		<li>The xfce compositor will be disabled when compton is launched with the mx compton manager.</li>
+		<li>If you have an existing compton.conf file, it may not work with the gui compton-conf tool.</li>
+		<li>Some users have found that screen tearing can be reduced by setting Compton to autostart with the command:
+			<ul>
+				<li><em>compton &#8211;backend glx &#8211;paint-on-overlay &#8211;vsync opengl-swc</em></li>
+			</ul>
+		</li>
+	</ul>
+
+<h2>Config Options</h2>
+
+<p>Config options contains a few special items pertaining to the system configuration</p>
+
+<img src="4-1.jpg" alt="config" />
+
+<p>Occasionally the lightdm theme and thunar custom right-click actions maybe be updated.  While these updated configurations will be present on the system, they will not go into effect automatically for upgraders.   The &#8220;Reset&#8221; actions will change any existing lightdm or thunar custom actions to the latest MX defaults.</p>
+
+<p>The last item varies depending on what video adapter is installed on the system.  If a intel graphics board is detected, the user will be presented with the option show above, which will force the system to use the &#8220;intel&#8221; driver rather than the debian default &#8220;modesetting&#8221; driver.  The &#8220;intel&#8221; configuration also includes a &#8220;tear free&#8221; option that many find helps with screen tearing.   </p>
+
+<p>If the user has an amd graphics part, then the user will be offered a choice to enable the &#8220;tear free&#8221; option for the radeon or amdgpu drivers, which ever is in current use.  The actual driver choice will not be changed, just the &#8220;tear free&#8221; option.<br></p>
+
+<h2>Other</h2>
+
+<img src="5-1.jpg" alt="other options" />
+
+	<ul>
+		<li>Most items on &#8220;Other&#8221; are self explanatory.</li>
+		<li> Enable mounting of internal drives will require the user&#8217;s root password.</li>
+		<li> Enabling hibernate on logout menu will also require the user&#8217;s root password.</li>
+	</ul>
+
+<h3>Details</h3>
+
+	<ul>
+		<li>There is a template file in /usr/share/mx-tweak-data that folks can use to build theme sets. The file should also be copied into ~/.local/share/mx-tweak-data. also, user files stored in ~/.local/share/mx-tweak-data will be picked up by mx-tweak on start of the app.</li>
+	</ul>
+
+<p>Development history: Dolphin_Oracle, including a wrapper for Compton-conf (LXqt)</p>
+
+<p>License: <a href="https://mxlinux.org/wiki/licenses/license-mx-default-look">here</a>.</p>
+
+</body>
+</html>
