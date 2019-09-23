@@ -1,3 +1,9 @@
+mx-tweak (19.09.02) mx; urgency=medium
+
+  * fixed invalid message on theme removal (nite coder) 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 22 Sep 2019 21:10:20 -0400
+
 mx-tweak (19.09.01) mx; urgency=medium
 
   * adjusted hibernate detection function 
