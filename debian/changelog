@@ -1,3 +1,9 @@
+mx-tweak (19.05.05) mx; urgency=medium
+
+  * fix for invalid message on theme removal (nite coder) 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 22 Sep 2019 21:13:01 -0400
+
 mx-tweak (19.05.04) mx; urgency=medium
 
   * local help files 
