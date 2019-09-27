@@ -190,7 +190,7 @@
     <message>
         <location filename="defaultlook.ui" line="600"/>
         <source>Save Current Settings as a Theme Set</source>
-        <translation type="unfinished"/>
+        <translation>Uložiť súčastné nastavenie ako užívateľskú Tému</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="614"/>
@@ -400,7 +400,7 @@
     <message>
         <location filename="remove_user_theme_set.ui" line="14"/>
         <source>Remove User Theme Set</source>
-        <translation type="unfinished"/>
+        <translation>Odobrať užívateľskú tému</translation>
     </message>
 </context>
 <context>
@@ -413,7 +413,7 @@
     <message>
         <location filename="theming_to_tweak.ui" line="20"/>
         <source>Enter name for new theme set</source>
-        <translation type="unfinished"/>
+        <translation>Zadajte meno novej sady tém</translation>
     </message>
 </context>
 <context>

@@ -185,12 +185,12 @@
     <message>
         <location filename="defaultlook.ui" line="589"/>
         <source>Remove User Theme Sets</source>
-        <translation type="unfinished"/>
+        <translation>Supprimer Jeux de Thème Utilisateur</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="600"/>
         <source>Save Current Settings as a Theme Set</source>
-        <translation type="unfinished"/>
+        <translation>Enregistrer Réglages Actuels comme un Jeu de Thème</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="614"/>
@@ -291,7 +291,7 @@
     <message>
         <location filename="defaultlook.ui" line="834"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
-        <translation>NOTE: l&apos;actuelle configuration /etc/X11/xorg.conf.d/20-radeon.conf sera sauvegardée dans le répertoire utilsateur</translation>
+        <translation>NOTE: l&apos;actuelle configuration /etc/X11/xorg.conf.d/20-radeon.conf sera sauvegardée dans le répertoire utilisateur</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="874"/>
@@ -400,7 +400,7 @@
     <message>
         <location filename="remove_user_theme_set.ui" line="14"/>
         <source>Remove User Theme Set</source>
-        <translation type="unfinished"/>
+        <translation>Supprimer Jeu de Thème Utilisateur</translation>
     </message>
 </context>
 <context>
@@ -413,7 +413,7 @@
     <message>
         <location filename="theming_to_tweak.ui" line="20"/>
         <source>Enter name for new theme set</source>
-        <translation type="unfinished"/>
+        <translation>Entrer un nom pour le nouveau jeu de thème</translation>
     </message>
 </context>
 <context>

@@ -185,7 +185,7 @@
     <message>
         <location filename="defaultlook.ui" line="589"/>
         <source>Remove User Theme Sets</source>
-        <translation type="unfinished"/>
+        <translation>Rimuovi i temi dell&apos;utente</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="600"/>

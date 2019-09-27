@@ -256,7 +256,7 @@
     <message>
         <location filename="defaultlook.ui" line="785"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
-        <translation>Restablecer Lightdm (pantalla de inicio) a la tema predeterminado</translation>
+        <translation>Restablecer Lightdm (pantalla de inicio) a la tema predeterminada</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="792"/>
@@ -306,17 +306,17 @@
     <message>
         <location filename="defaultlook.ui" line="889"/>
         <source>Enable single-click in Thunar File Manager</source>
-        <translation>Habilitar un solo clik en Thunar gestor de archivos</translation>
+        <translation>Habilitar un solo clik en el gestor de archivos Thunar</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="926"/>
         <source>Show systray (notification area) frame</source>
-        <translation>Mostrar marco de systray (área de notificación)</translation>
+        <translation>Mostrar marco en el área de notificación</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="933"/>
         <source>Show windows from all workspaces in panel</source>
-        <translation>Mostrar ventanas de todos los áreas de trabajos en el panel</translation>
+        <translation>Mostrar ventanas de todas las áreas de trabajo en el panel</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="940"/>

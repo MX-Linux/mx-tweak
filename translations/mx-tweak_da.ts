@@ -185,12 +185,12 @@
     <message>
         <location filename="defaultlook.ui" line="589"/>
         <source>Remove User Theme Sets</source>
-        <translation type="unfinished"/>
+        <translation>Fjern brugertemasæt</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="600"/>
         <source>Save Current Settings as a Theme Set</source>
-        <translation type="unfinished"/>
+        <translation>Gem nuværende indstillinger som et temasæt</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="614"/>
@@ -400,7 +400,7 @@
     <message>
         <location filename="remove_user_theme_set.ui" line="14"/>
         <source>Remove User Theme Set</source>
-        <translation type="unfinished"/>
+        <translation>Fjern brugertemasæt</translation>
     </message>
 </context>
 <context>
@@ -413,7 +413,7 @@
     <message>
         <location filename="theming_to_tweak.ui" line="20"/>
         <source>Enter name for new theme set</source>
-        <translation type="unfinished"/>
+        <translation>Indtast navnet til det nye temasæt</translation>
     </message>
 </context>
 <context>
