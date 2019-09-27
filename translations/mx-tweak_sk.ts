@@ -185,12 +185,12 @@
     <message>
         <location filename="defaultlook.ui" line="589"/>
         <source>Remove User Theme Set</source>
-        <translation type="unfinished"/>
+        <translation>Odobrať užívateľskú sadu tém</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="600"/>
         <source>Save Current Settings as a Theme Set</source>
-        <translation type="unfinished"/>
+        <translation>Uložiť súčastné nastavenie ako užívateľskú sadu tém</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="614"/>
@@ -256,7 +256,7 @@
     <message>
         <location filename="defaultlook.ui" line="777"/>
         <source>VBlank</source>
-        <translation type="unfinished"/>
+        <translation>VBlank</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="785"/>
@@ -266,12 +266,12 @@
     <message>
         <location filename="defaultlook.ui" line="790"/>
         <source>glx</source>
-        <translation type="unfinished"/>
+        <translation>glx</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="795"/>
         <source>xpresent</source>
-        <translation type="unfinished"/>
+        <translation>xpresent</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="800"/>
@@ -430,7 +430,7 @@
     <message>
         <location filename="remove_user_theme_set.ui" line="14"/>
         <source>Remove User Theme Set</source>
-        <translation type="unfinished"/>
+        <translation>Odobrať užívateľskú sadu tém</translation>
     </message>
 </context>
 <context>
@@ -438,12 +438,12 @@
     <message>
         <location filename="theming_to_tweak.ui" line="14"/>
         <source>New Theme Set</source>
-        <translation type="unfinished"/>
+        <translation>Nová sada tém</translation>
     </message>
     <message>
         <location filename="theming_to_tweak.ui" line="20"/>
         <source>Enter name for new theme set</source>
-        <translation type="unfinished"/>
+        <translation>Zadajte meno novej sady tém</translation>
     </message>
 </context>
 <context>

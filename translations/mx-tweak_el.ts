@@ -185,12 +185,12 @@
     <message>
         <location filename="defaultlook.ui" line="589"/>
         <source>Remove User Theme Set</source>
-        <translation type="unfinished"/>
+        <translation>Αφαίρεση θεμάτωνν του χρήστη</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="600"/>
         <source>Save Current Settings as a Theme Set</source>
-        <translation type="unfinished"/>
+        <translation>Αποθηκεύστε τις τρέχουσες ρυθμίσεις ως θέματος</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="614"/>
@@ -251,12 +251,12 @@
     <message>
         <location filename="defaultlook.ui" line="774"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Changing the VBlank mode may help alleviate some screen tearing issues.  See Help for more information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Η αλλαγή της λειτουργίας VBlank μπορεί να βοηθήσει στην ανακούφιση ορισμένων ζητημάτων σχισίματος οθόνης. Δείτε Βοήθεια για περισσότερες πληροφορίες.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="777"/>
         <source>VBlank</source>
-        <translation type="unfinished"/>
+        <translation>VBlank</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="785"/>
@@ -266,12 +266,12 @@
     <message>
         <location filename="defaultlook.ui" line="790"/>
         <source>glx</source>
-        <translation type="unfinished"/>
+        <translation>glx</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="795"/>
         <source>xpresent</source>
-        <translation type="unfinished"/>
+        <translation>xpresent</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="800"/>
@@ -430,7 +430,7 @@
     <message>
         <location filename="remove_user_theme_set.ui" line="14"/>
         <source>Remove User Theme Set</source>
-        <translation type="unfinished"/>
+        <translation>Αφαίρεση θεμάτωνν του χρήστη</translation>
     </message>
 </context>
 <context>
@@ -438,12 +438,12 @@
     <message>
         <location filename="theming_to_tweak.ui" line="14"/>
         <source>New Theme Set</source>
-        <translation type="unfinished"/>
+        <translation>Νέο θέμα</translation>
     </message>
     <message>
         <location filename="theming_to_tweak.ui" line="20"/>
         <source>Enter name for new theme set</source>
-        <translation type="unfinished"/>
+        <translation>Εισαγάγετε όνομα για το νέο θέμα</translation>
     </message>
 </context>
 <context>

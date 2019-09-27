@@ -10,17 +10,17 @@
         <location filename="defaultlook.cpp" line="537"/>
         <location filename="defaultlook.cpp" line="547"/>
         <source>MX Tweak</source>
-        <translation type="unfinished"/>
+        <translation>MX ugađanje</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="54"/>
         <source>Xfce Settings</source>
-        <translation type="unfinished"/>
+        <translation>Xfce postavke</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="63"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the panel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Prilagodite ploču&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="77"/>
@@ -36,17 +36,17 @@
     <message>
         <location filename="defaultlook.ui" line="111"/>
         <source>Window Manager</source>
-        <translation type="unfinished"/>
+        <translation>Upravitelj prozorima</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="131"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the look of your desktop&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Prilagodite izgled vaše radne površine&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="145"/>
         <source>Appearance</source>
-        <translation type="unfinished"/>
+        <translation>Izgled</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="223"/>
@@ -165,7 +165,7 @@
     <message>
         <location filename="defaultlook.ui" line="516"/>
         <source>Firefox dark theme tweak</source>
-        <translation type="unfinished"/>
+        <translation>Ugađanje Firefox tamne teme</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="523"/>
@@ -201,7 +201,7 @@
     <message>
         <location filename="defaultlook.ui" line="635"/>
         <source>Launch compton-conf configuration tool</source>
-        <translation type="unfinished"/>
+        <translation>Pokreni commpton-conf konfiguracijski alat</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="638"/>
@@ -326,17 +326,17 @@
     <message>
         <location filename="defaultlook.ui" line="908"/>
         <source>Other</source>
-        <translation type="unfinished"/>
+        <translation>Ostalo</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="916"/>
         <source>Enable single-click on desktop</source>
-        <translation type="unfinished"/>
+        <translation>Omogućite jednostruki klik na radnu površinu</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="923"/>
         <source>Enable single-click in Thunar File Manager</source>
-        <translation type="unfinished"/>
+        <translation>Omogućite jednostruki klik u Thunar upravitelju datotekama</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="960"/>
@@ -346,7 +346,7 @@
     <message>
         <location filename="defaultlook.ui" line="967"/>
         <source>Show windows from all workspaces in panel</source>
-        <translation type="unfinished"/>
+        <translation>Pokažite na ploči prozore sa svih radnih prostora</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="974"/>
@@ -650,7 +650,7 @@
     <message>
         <location filename="xfwm_compositor_settings.ui" line="183"/>
         <source>Inactive windows</source>
-        <translation type="unfinished"/>
+        <translation>Neaktivni prozori</translation>
     </message>
     <message>
         <location filename="xfwm_compositor_settings.ui" line="190"/>
