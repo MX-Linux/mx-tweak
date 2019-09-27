@@ -251,7 +251,7 @@
     <message>
         <location filename="defaultlook.ui" line="774"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Changing the VBlank mode may help alleviate some screen tearing issues.  See Help for more information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cambiar el modo VBlank puede ayudar a aliviar algunos problemas de rotura de pantalla. Consulte la Ayuda para obtener más información..&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="777"/>
@@ -286,7 +286,7 @@
     <message>
         <location filename="defaultlook.ui" line="819"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
-        <translation>Restablecer Lightdm (pantalla de inicio) a la tema predeterminado</translation>
+        <translation>Restablecer Lightdm (pantalla de inicio) a la tema predeterminada</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="826"/>
@@ -336,17 +336,17 @@
     <message>
         <location filename="defaultlook.ui" line="923"/>
         <source>Enable single-click in Thunar File Manager</source>
-        <translation>Habilitar un solo clic en Thunar gestor de archivos</translation>
+        <translation>Habilitar un solo clic en el gestor de archivos Thunar</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="960"/>
         <source>Show systray (notification area) frame</source>
-        <translation>Mostrar marco de systray (área de notificación)</translation>
+        <translation>Mostrar marco de bandeja del sistema (área de notificación)</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="967"/>
         <source>Show windows from all workspaces in panel</source>
-        <translation>Mostrar ventanas de todos las áreas de trabajo en el panel</translation>
+        <translation>Mostrar ventanas de todas las áreas de trabajo en el panel</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="974"/>

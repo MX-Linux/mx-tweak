@@ -96,7 +96,7 @@
     <message>
         <location filename="defaultlook.ui" line="338"/>
         <source>Affects 1st panel</source>
-        <translation type="unfinished"/>
+        <translation>1. paneli etkiler</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="345"/>
@@ -185,12 +185,12 @@
     <message>
         <location filename="defaultlook.ui" line="589"/>
         <source>Remove User Theme Set</source>
-        <translation type="unfinished"/>
+        <translation>Kullanıcı Temasını Kaldır</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="600"/>
         <source>Save Current Settings as a Theme Set</source>
-        <translation type="unfinished"/>
+        <translation>Mevcut Ayarları Tema Olarak Kaydet</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="614"/>
@@ -216,12 +216,12 @@
     <message>
         <location filename="defaultlook.ui" line="665"/>
         <source>Xfwm Settings</source>
-        <translation type="unfinished"/>
+        <translation>Xfwm Ayarları</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="689"/>
         <source>None</source>
-        <translation type="unfinished"/>
+        <translation>Hiçbiri</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="694"/>
@@ -231,7 +231,7 @@
     <message>
         <location filename="defaultlook.ui" line="699"/>
         <source>Compton </source>
-        <translation type="unfinished"/>
+        <translation>Compton </translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="707"/>
@@ -246,7 +246,7 @@
     <message>
         <location filename="defaultlook.ui" line="767"/>
         <source>Transparency and shadow options</source>
-        <translation type="unfinished"/>
+        <translation>Saydamlık ve gölge seçenekleri</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="774"/>
@@ -261,12 +261,12 @@
     <message>
         <location filename="defaultlook.ui" line="785"/>
         <source>auto</source>
-        <translation type="unfinished"/>
+        <translation>oto</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="790"/>
         <source>glx</source>
-        <translation type="unfinished"/>
+        <translation>glx</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="795"/>
@@ -281,7 +281,7 @@
     <message>
         <location filename="defaultlook.ui" line="811"/>
         <source>Config Options</source>
-        <translation type="unfinished"/>
+        <translation>Yapılandırma Seçenekleri</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="819"/>
@@ -346,7 +346,7 @@
     <message>
         <location filename="defaultlook.ui" line="967"/>
         <source>Show windows from all workspaces in panel</source>
-        <translation type="unfinished"/>
+        <translation>Tüm çalışma alanlarındaki pencereleri panelde göster.</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="974"/>
@@ -356,7 +356,7 @@
     <message>
         <location filename="defaultlook.ui" line="981"/>
         <source>Disable shortening of long filenames on the desktop</source>
-        <translation type="unfinished"/>
+        <translation>Masaüstünde uzun dosya adlarının kısaltılmasını devre dışı bırak</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="988"/>
@@ -366,12 +366,12 @@
     <message>
         <location filename="defaultlook.ui" line="995"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
-        <translation type="unfinished"/>
+        <translation>                   not: uyku için, takas &gt;= RAM olması gereklidir.</translation>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="501"/>
         <source>About MX Tweak</source>
-        <translation type="unfinished"/>
+        <translation>MX Tweak Hakkında</translation>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="502"/>
@@ -402,12 +402,12 @@
     <message>
         <location filename="defaultlook.cpp" line="538"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
-        <translation type="unfinished"/>
+        <translation>Tamamlandı! Değişikliklerin etkili olması için Firefox&apos;un yeniden başlatılması gerekebilir</translation>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="548"/>
         <source>This app is Xfce-only</source>
-        <translation type="unfinished"/>
+        <translation>Bu uygulama sadece Xfce içindir</translation>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="690"/>
@@ -422,7 +422,7 @@
     <message>
         <location filename="defaultlook.cpp" line="1117"/>
         <source>Choose a theme set</source>
-        <translation type="unfinished"/>
+        <translation>Bir Tema Grubu Seç</translation>
     </message>
 </context>
 <context>
@@ -430,7 +430,7 @@
     <message>
         <location filename="remove_user_theme_set.ui" line="14"/>
         <source>Remove User Theme Set</source>
-        <translation type="unfinished"/>
+        <translation>Kullanıcı Temasını Kaldır</translation>
     </message>
 </context>
 <context>
@@ -443,7 +443,7 @@
     <message>
         <location filename="theming_to_tweak.ui" line="20"/>
         <source>Enter name for new theme set</source>
-        <translation type="unfinished"/>
+        <translation>Yeni tema grubu için isim girin</translation>
     </message>
 </context>
 <context>
@@ -562,7 +562,7 @@
     <message>
         <location filename="window_buttons.ui" line="167"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Filtering&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Filtre&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Filtreleme&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="174"/>
@@ -590,7 +590,7 @@
     <message>
         <location filename="xfwm_compositor_settings.ui" line="14"/>
         <source>Dialog</source>
-        <translation type="unfinished"/>
+        <translation>Dialog</translation>
     </message>
     <message>
         <location filename="xfwm_compositor_settings.ui" line="42"/>
@@ -600,12 +600,12 @@
     <message>
         <location filename="xfwm_compositor_settings.ui" line="49"/>
         <source>Windows during move</source>
-        <translation type="unfinished"/>
+        <translation>Hareket halinde pencereler</translation>
     </message>
     <message>
         <location filename="xfwm_compositor_settings.ui" line="56"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Opacity Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Matlık Ayarları&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="xfwm_compositor_settings.ui" line="79"/>
@@ -620,7 +620,7 @@
     <message>
         <location filename="xfwm_compositor_settings.ui" line="93"/>
         <source>Show shadows under popup windows</source>
-        <translation type="unfinished"/>
+        <translation>Açılan pencerelerin altında gölge göster</translation>
     </message>
     <message>
         <location filename="xfwm_compositor_settings.ui" line="100"/>
@@ -630,7 +630,7 @@
     <message>
         <location filename="xfwm_compositor_settings.ui" line="123"/>
         <source>Show shadows under regular windows</source>
-        <translation type="unfinished"/>
+        <translation>Normal pencerelerin altında gölge göster</translation>
     </message>
     <message>
         <location filename="xfwm_compositor_settings.ui" line="130"/>

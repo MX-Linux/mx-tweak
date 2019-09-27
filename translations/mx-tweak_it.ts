@@ -251,7 +251,7 @@
     <message>
         <location filename="defaultlook.ui" line="774"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Changing the VBlank mode may help alleviate some screen tearing issues.  See Help for more information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>Modificare la modalità VBank può ridurre i problemi di sfarfallìo del monitor. Guarda &apos;Aiuto&apos; per avere ulteriori informazioni.</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="777"/>
