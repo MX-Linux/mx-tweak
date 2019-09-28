@@ -1,3 +1,9 @@
+mx-tweak (19.09.03) mx; urgency=medium
+
+  * translation refresh 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 28 Sep 2019 15:02:39 -0400
+
 mx-tweak (19.09.02) mx; urgency=medium
 
   * fixed invalid message on theme removal (nite coder) 
