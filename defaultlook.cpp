@@ -150,6 +150,10 @@ void defaultlook::fliptohorizontal()
     pulseaudioID=pulseaudioID.remove("\"").section("-",1,1).section(" ",0,0);
     qDebug() << "pulseaudio: " << pulseaudioID;
 
+    QString workspacesID = runCmd("grep pager ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
+    workspacesID=workspacesID.remove("\"").section("-",1,1).section(" ",0,0);
+    qDebug() << "workspacesID: " << workspacesID;
+
     // if systray exists, do a bunch of stuff to relocate it a list of plugins.  If not present, do nothing to list
 
     if (systrayID !=""){
@@ -267,6 +271,15 @@ void defaultlook::fliptohorizontal()
     if (tasklistID != "") {
         runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + tasklistID + "/show-labels -s true");
     }
+
+    //change mode of pager if exists
+    //xfconf-query -c xfce4-panel --property /plugins/plugin-" + workspaceID + "/rows --type int --set 1"
+    //check current workspaces rows
+        QString workspacesrows = runCmd("xfconf-query -c xfce4-panel --property /plugins/plugin-" + workspacesID + "/rows").output;
+        if ( workspacesrows == "1" || workspacesrows == "2") {
+            runCmd("xfconf-query -c xfce4-panel --property /plugins/plugin-" + workspacesID + "/rows --type int --set 1");
+        }
+
     //deteremine top or bottom horizontal placement
     top_or_bottom();
 
@@ -295,6 +308,10 @@ void defaultlook::fliptovertical()
     QString pulseaudioID = runCmd("grep pulseaudio ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
     pulseaudioID=pulseaudioID.remove("\"").section("-",1,1).section(" ",0,0);
     qDebug() << "pulseaudio: " << pulseaudioID;
+
+    QString workspacesID = runCmd("grep pager ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
+    workspacesID=workspacesID.remove("\"").section("-",1,1).section(" ",0,0);
+    qDebug() << "workspacesID: " << workspacesID;
 
     //if systray exists, do a bunch of stuff to try to move it in a logical way
 
@@ -432,6 +449,14 @@ void defaultlook::fliptovertical()
     if (tasklistID != "") {
         runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + tasklistID + "/show-labels -s false");
     }
+
+    //change mode of pager if exists
+    //xfconf-query -c xfce4-panel --property /plugins/plugin-" + workspaceID + "/rows --type int --set 2"
+    //check current workspaces rows
+        QString workspacesrows = runCmd("xfconf-query -c xfce4-panel --property /plugins/plugin-" + workspacesID + "/rows").output;
+        if ( workspacesrows == "1" || workspacesrows == "2") {
+            runCmd("xfconf-query -c xfce4-panel --property /plugins/plugin-" + workspacesID + "/rows --type int --set 2");
+        }
 
     //determine left_or_right placement
     left_or_right();

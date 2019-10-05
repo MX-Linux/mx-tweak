@@ -1,3 +1,9 @@
+mx-tweak (19.10.01) mx; urgency=medium
+
+  * adjust workspaces rows on vertical and horizontal flip 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 05 Oct 2019 10:57:22 -0400
+
 mx-tweak (19.09.03) mx; urgency=medium
 
   * translation refresh 
