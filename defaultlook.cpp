@@ -653,7 +653,7 @@ void defaultlook::left_or_right()
 void defaultlook::message2()
 {
     QMessageBox::information(0, tr("Panel settings"),
-                             tr(" Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)"));
+                             tr("Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)"));
 }
 
 void defaultlook::on_toolButtonXFCEpanelSettings_clicked()
