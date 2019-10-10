@@ -1,3 +1,10 @@
+mx-tweak (19.05.07) mx; urgency=medium
+
+  * fix typo 
+  * adjust help file
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Wed, 09 Oct 2019 20:28:02 -0400
+
 mx-tweak (19.05.06) mx; urgency=medium
 
   * translation refresh 
