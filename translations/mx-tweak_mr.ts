@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="mk">
+<TS version="2.1" language="mr">
 <context>
     <name>defaultlook</name>
     <message>
@@ -58,7 +58,7 @@
     <message>
         <location filename="../defaultlook.ui" line="234"/>
         <source>Help</source>
-        <translation type="unfinished"></translation>
+        <translation>मदत</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="251"/>
@@ -68,12 +68,12 @@
     <message>
         <location filename="../defaultlook.ui" line="254"/>
         <source>Close</source>
-        <translation type="unfinished">Затвори</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="261"/>
         <source>Alt+N</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+N</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="291"/>
@@ -177,7 +177,7 @@
     <message>
         <location filename="../defaultlook.ui" line="575"/>
         <source>Undo</source>
-        <translation>Отповикај</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="582"/>
@@ -348,7 +348,7 @@
     <message>
         <location filename="../defaultlook.cpp" line="467"/>
         <source>Version: </source>
-        <translation type="unfinished"></translation>
+        <translation>आवृत्ती</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="468"/>
@@ -358,18 +358,18 @@
     <message>
         <location filename="../defaultlook.cpp" line="470"/>
         <source>Copyright (c) MX Linux</source>
-        <translation type="unfinished"></translation>
+        <translation>कॉपीराइट (c) एमएक्स लिनक्स</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="471"/>
         <location filename="../defaultlook.cpp" line="474"/>
         <source>License</source>
-        <translation type="unfinished"></translation>
+        <translation>परवाना</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="472"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>रद्द करा</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="503"/>
@@ -554,7 +554,7 @@
     <message>
         <location filename="../window_buttons.ui" line="238"/>
         <source>Close</source>
-        <translation>Затвори</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -632,7 +632,7 @@
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="212"/>
         <source>Close</source>
-        <translation type="unfinished">Затвори</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.cpp" line="38"/>
