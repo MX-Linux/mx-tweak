@@ -1,3 +1,9 @@
+mx-tweak (19.10.05) mx; urgency=medium
+
+  * fix removing user themesets 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Thu, 24 Oct 2019 17:20:27 -0400
+
 mx-tweak (19.10.04) mx; urgency=medium
 
   * fix custom themes when themes are in ~/.themes  
