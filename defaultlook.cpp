@@ -1135,7 +1135,7 @@ void defaultlook::setupComboTheme()
         QFileInfo icon_theme("/usr/share/icons/" + xsettings_icon_theme);
         QFileInfo xsettings_theme_home(home_path + "/.themes/" + xsettings_gtk_theme);
         QFileInfo xfwm4_theme_home("" + home_path + "/.themes/" + xfwm4_window_decorations);
-        QFileInfo icon_theme_home("" + home_path + "/.themes/" + xsettings_icon_theme);
+        QFileInfo icon_theme_home("" + home_path + "/.icons/" + xsettings_icon_theme);
         qDebug() << "xsettings_theme_home path" << xsettings_theme_home.absoluteFilePath();
 
         if (xsettings_theme.exists() || xsettings_theme_home.exists() ) {
@@ -1183,7 +1183,7 @@ void defaultlook::setupComboTheme()
         QFileInfo icon_theme("/usr/share/icons/" + xsettings_icon_theme);
         QFileInfo xsettings_theme_home(home_path + "/.themes/" + xsettings_gtk_theme);
         QFileInfo xfwm4_theme_home("" + home_path + "/.themes/" + xfwm4_window_decorations);
-        QFileInfo icon_theme_home("" + home_path + "/.themes/" + xsettings_icon_theme);
+        QFileInfo icon_theme_home("" + home_path + "/.icons/" + xsettings_icon_theme);
         qDebug() << "xsettings_theme_home path" << xsettings_theme_home.absoluteFilePath();
 
         if (xsettings_theme.exists() || xsettings_theme_home.exists() ) {
