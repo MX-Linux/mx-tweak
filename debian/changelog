@@ -1,3 +1,9 @@
+mx-tweak (19.05.08) mx; urgency=medium
+
+  * fix for custom theme sets when themes are in home folder 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Wed, 23 Oct 2019 22:16:44 -0400
+
 mx-tweak (19.05.07) mx; urgency=medium
 
   * fix typo 

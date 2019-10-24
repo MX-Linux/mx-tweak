@@ -1041,6 +1041,11 @@ void defaultlook::CheckAptNotifierRunning()
 void defaultlook::setupComboTheme()
 {
     //build theme list
+    QString home_path = QDir::homePath();
+    qDebug() << "home path is " << home_path;
+    bool xsettings_gtk_theme_present = false;
+    bool icontheme_present = false;
+    bool xfwm4_theme_present = false;
     ui->comboTheme->clear();
     QStringList theme_list;
     QStringList filter("*.tweak");
@@ -1060,8 +1065,24 @@ void defaultlook::setupComboTheme()
         QFileInfo xsettings_theme("/usr/share/themes/" + xsettings_gtk_theme);
         QFileInfo xfwm4_theme("/usr/share/themes/" + xfwm4_window_decorations);
         QFileInfo icon_theme("/usr/share/icons/" + xsettings_icon_theme);
+        QFileInfo xsettings_theme_home(home_path + "/.themes/" + xsettings_gtk_theme);
+        QFileInfo xfwm4_theme_home("" + home_path + "/.themes/" + xfwm4_window_decorations);
+        QFileInfo icon_theme_home("" + home_path + "/.icons/" + xsettings_icon_theme);
+        qDebug() << "xsettings_theme_home path" << xsettings_theme_home.absoluteFilePath();
 
-        if (xsettings_theme.exists() && xfwm4_theme.exists() && icon_theme.exists() ) {
+        if (xsettings_theme.exists() || xsettings_theme_home.exists() ) {
+            xsettings_gtk_theme_present = true;
+        }
+
+        if (xfwm4_theme.exists() || xfwm4_theme_home.exists()) {
+            xfwm4_theme_present = true;
+        }
+
+        if (icon_theme.exists() || icon_theme_home.exists()) {
+            icontheme_present = true;
+        }
+
+        if (xsettings_gtk_theme_present && xfwm4_theme_present && icontheme_present) {
             qDebug() << "filename is " << filename;
             qDebug()<< "theme combo name" << name;
             theme_list << name;
@@ -1074,9 +1095,9 @@ void defaultlook::setupComboTheme()
 
     //add user entries in ~/.local/share/mx-tweak-data
 
-    QString home_path = QDir::homePath();
     QDirIterator it2(home_path + "/.local/share/mx-tweak-data", filter, QDir::Files, QDirIterator::Subdirectories);
     while (it2.hasNext()) {
+        QString home_path = QDir::homePath();
         QFileInfo file_info(it2.next());
         QString filename = file_info.absoluteFilePath();
         QString name = runCmd("cat '" + filename + "'|grep Name=").output.section("=",1,1);
@@ -1092,8 +1113,24 @@ void defaultlook::setupComboTheme()
         QFileInfo xsettings_theme("/usr/share/themes/" + xsettings_gtk_theme);
         QFileInfo xfwm4_theme("/usr/share/themes/" + xfwm4_window_decorations);
         QFileInfo icon_theme("/usr/share/icons/" + xsettings_icon_theme);
+        QFileInfo xsettings_theme_home(home_path + "/.themes/" + xsettings_gtk_theme);
+        QFileInfo xfwm4_theme_home("" + home_path + "/.themes/" + xfwm4_window_decorations);
+        QFileInfo icon_theme_home("" + home_path + "/.icons/" + xsettings_icon_theme);
+        qDebug() << "xsettings_theme_home path" << xsettings_theme_home.absoluteFilePath();
 
-        if (xsettings_theme.exists() && xfwm4_theme.exists() && icon_theme.exists() ) {
+        if (xsettings_theme.exists() || xsettings_theme_home.exists() ) {
+            xsettings_gtk_theme_present = true;
+        }
+
+        if (xfwm4_theme.exists() || xfwm4_theme_home.exists()) {
+            xfwm4_theme_present = true;
+        }
+
+        if (icon_theme.exists() || icon_theme_home.exists()) {
+            icontheme_present = true;
+        }
+
+        if (xsettings_gtk_theme_present && xfwm4_theme_present && icontheme_present) {
             qDebug() << "filename is " << filename;
             qDebug()<< "theme combo name" << name;
             theme_list << name;
@@ -1146,23 +1183,16 @@ void defaultlook::on_buttonThemeApply_clicked()
     message_flag = true;
 
     //set gtk theme
-    QFileInfo xsettings_theme("/usr/share/themes/" + xsettings_gtk_theme);
-    if (xsettings_theme.exists()) {
         runCmd("xfconf-query -c xsettings -p /Net/ThemeName -s " + xsettings_gtk_theme);
         runCmd("sleep .5");
-    }
+
     //set window decorations theme
-    QFileInfo xfwm4_theme("/usr/share/themes/" + xfwm4_window_decorations);
-    if (xfwm4_theme.exists()) {
         runCmd("xfconf-query -c xfwm4 -p /general/theme -s " + xfwm4_window_decorations);
         runCmd("sleep .5");
-    }
     //set icon theme
-    QFileInfo icon_theme("/usr/share/icons/" + xsettings_icon_theme);
-    if (icon_theme.exists()) {
         runCmd("xfconf-query -c xsettings -p /Net/IconThemeName -s " + xsettings_icon_theme);
         runCmd("sleep .5");
-    }
+
 
     //deal with panel customizations for each panel
 
