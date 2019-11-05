@@ -34,8 +34,13 @@ void remove_user_theme_set::setupThemeSelector()
     ui->comboBoxThemes->clear();
     QStringList theme_list;
     QStringList filter("*.tweak");
+    bool xsettings_gtk_theme_present = false;
+    bool icontheme_present = false;
+    bool xfwm4_theme_present = false;
 
     //add user entries in ~/.local/share/mx-tweak-data
+
+
 
     QString home_path = QDir::homePath();
     QDirIterator it2(home_path + "/.local/share/mx-tweak-data", filter, QDir::Files, QDirIterator::Subdirectories);
@@ -55,8 +60,24 @@ void remove_user_theme_set::setupThemeSelector()
         QFileInfo xsettings_theme("/usr/share/themes/" + xsettings_gtk_theme);
         QFileInfo xfwm4_theme("/usr/share/themes/" + xfwm4_window_decorations);
         QFileInfo icon_theme("/usr/share/icons/" + xsettings_icon_theme);
+        QFileInfo xsettings_theme_home(home_path + "/.themes/" + xsettings_gtk_theme);
+        QFileInfo xfwm4_theme_home("" + home_path + "/.themes/" + xfwm4_window_decorations);
+        QFileInfo icon_theme_home("" + home_path + "/.icons/" + xsettings_icon_theme);
+        qDebug() << "xsettings_theme_home path" << xsettings_theme_home.absoluteFilePath();
 
-        if (xsettings_theme.exists() && xfwm4_theme.exists() && icon_theme.exists() ) {
+        if (xsettings_theme.exists() || xsettings_theme_home.exists() ) {
+            xsettings_gtk_theme_present = true;
+        }
+
+        if (xfwm4_theme.exists() || xfwm4_theme_home.exists()) {
+            xfwm4_theme_present = true;
+        }
+
+        if (icon_theme.exists() || icon_theme_home.exists()) {
+            icontheme_present = true;
+        }
+
+        if (xsettings_gtk_theme_present && xfwm4_theme_present && icontheme_present) {
             qDebug() << "filename is " << filename;
             qDebug()<< "theme combo name" << name;
             theme_list << name;
