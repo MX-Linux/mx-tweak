@@ -1,3 +1,9 @@
+mx-tweak (19.11.01) mx; urgency=medium
+
+  * adjust xfconf-query for background panel color to be language neutral 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Wed, 06 Nov 2019 18:14:06 -0500
+
 mx-tweak (19.10.05) mx; urgency=medium
 
   * fix removing user themesets 

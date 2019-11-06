@@ -1895,7 +1895,7 @@ void defaultlook::on_pushButtonSettingsToThemeSet_clicked()
     QString backgroundImage;
     if(backgroundStyle == 1)
     {
-        QStringList lines = runCmd("xfconf-query -c xfce4-panel -p /panels/" + panel + "/background-rgba").output.split('\n');
+        QStringList lines = runCmd("LANG=C xfconf-query -c xfce4-panel -p /panels/" + panel + "/background-rgba").output.split('\n');
         lines.removeAt(0);
         lines.removeAt(0);
         for(int i = 0; i < 4; i++)
