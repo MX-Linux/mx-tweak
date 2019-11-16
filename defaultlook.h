@@ -40,6 +40,9 @@ struct Result {
     QString output;
 };
 
+// For the ui_ functions
+class QComboBox;
+
 class defaultlook : public QDialog
 {
     Q_OBJECT
@@ -66,6 +69,7 @@ public:
     bool Intel_flag;
     bool radeon_flag;
     bool amdgpuflag;
+    bool terminalFlag;
     void setup();
     void setupuiselections();
     void setuppanel();
@@ -92,13 +96,11 @@ public:
     void savethemeundo();
     void themeundo();
 
+    QComboBox* ui_comboTheme();
 
+    // this isn't considered the best code style(it doesn't cause issues) but it will make managing the code easier
 public slots:
 
-
-
-
-private slots:
     void on_buttonApply_clicked();
 
     void on_buttonCancel_clicked();

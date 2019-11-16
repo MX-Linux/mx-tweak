@@ -30,6 +30,7 @@
 #include <QFileDialog>
 #include <QHash>
 #include <QMessageBox>
+#include <QDebug>
 
 #include "xfwm_compositor_settings.h"
 #include "window_buttons.h"
@@ -499,7 +500,9 @@ void defaultlook::message()
     if ( system(cmd.toUtf8()) != 0 ) {
         qDebug() << "Firefox not running" ;
     } else {
-        QMessageBox::information(0, tr("MX Tweak"),
+        // if not running in terminal mode display dialog
+        if(!terminalFlag)
+            QMessageBox::information(0, tr("MX Tweak"),
                              tr("Finished! Firefox may require a restart for changes to take effect"));
     }
 }
@@ -1533,6 +1536,11 @@ void defaultlook::themeundo()
    QString cmd = undotheme.last();
    system(cmd.toUtf8());
    undotheme.removeLast();
+}
+
+QComboBox *defaultlook::ui_comboTheme()
+{
+    return ui->comboTheme;
 }
 
 void defaultlook::on_buttonThemeUndo_clicked()

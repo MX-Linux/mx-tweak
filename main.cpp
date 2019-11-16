@@ -27,10 +27,15 @@
 #include <QApplication>
 #include <QTranslator>
 #include <QLocale>
+#include <QCommandLineParser>
+#include <QCommandLineOption>
+#include <QComboBox>
+#include <QDebug>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+    QApplication::setApplicationName("mx-tweak");
 
     QTranslator qtTran;
     qtTran.load(QString("qt_") + QLocale::system().name());
@@ -40,7 +45,41 @@ int main(int argc, char *argv[])
     appTran.load(QString("mx-tweak_") + QLocale::system().name(), "/usr/share/mx-tweak/locale");
     a.installTranslator(&appTran);
 
+    QCommandLineParser parser;
+    parser.addHelpOption();
+    QCommandLineOption noguiOption{QStringList() << "terminal" << "t", "Enables commandline mode, not launching the gui"};
+    parser.addOption(noguiOption);
+    QCommandLineOption setThemeSetOption{QStringList() << "set-theme-set", "Applys the theme set with <THEME_SET_NAME>, is case sensitive", "THEME_SET_NAME"};
+    parser.addOption(setThemeSetOption);
+
+    parser.process(a.arguments());
+
     defaultlook w;
-    w.show();
+    if(parser.isSet(noguiOption))
+    {
+        // enable terminal mode
+        w.terminalFlag = true;
+        if(parser.isSet(setThemeSetOption))
+        {
+            QString themeSetName = parser.value(setThemeSetOption);
+            int index = w.ui_comboTheme()->findText(themeSetName);
+            if(index == -1)
+            {
+                qCritical("Invalid theme set name");
+                return -1;
+            }
+            w.ui_comboTheme()->setCurrentIndex(index);
+            // calling slot directly
+            w.on_buttonThemeApply_clicked();
+        }
+        // got to return before a.exec() to terminate the application
+        return 0;
+    }
+    else
+    {
+        w.terminalFlag = false;
+        w.show();
+    }
+
     return a.exec();
 }
