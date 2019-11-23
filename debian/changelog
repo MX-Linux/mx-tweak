@@ -1,3 +1,9 @@
+mx-tweak (19.11.02) mx; urgency=medium
+
+  * update to look for new name of panel preferences 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 23 Nov 2019 17:04:38 -0500
+
 mx-tweak (19.11.01) mx; urgency=medium
 
   * adjust xfconf-query for background panel color to be language neutral 
