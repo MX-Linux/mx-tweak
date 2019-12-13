@@ -1,7 +1,11 @@
 #!/bin/bash
 
 # restore saved brightness upon reboot
-
+while [ -z "$(pidof xfdesktop)" ]; do
+	sleep 1
+done
+ 
+sleep 1
 CONFIG_FOLDER="$HOME/.config/MX-Linux/MX-Tweak/brightness"
 
 for file in $(ls "$CONFIG_FOLDER"); do

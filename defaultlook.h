@@ -209,10 +209,10 @@ private slots:
 
     void on_buttonSaveBrightness_clicked();
 
-    void on_horizsliderhardwarebacklight_sliderMoved(int position);
-
 
     void on_buttonGTKscaling_clicked();
+
+    void on_horizsliderhardwarebacklight_actionTriggered(int action);
 
 private:
     Ui::defaultlook *ui;

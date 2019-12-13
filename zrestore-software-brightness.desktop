@@ -8,5 +8,5 @@ Exec=restore-software-brightness-mx
 OnlyShowIn=XFCE;
 StartupNotify=false
 Terminal=false
-Hidden=true
+Hidden=false
 

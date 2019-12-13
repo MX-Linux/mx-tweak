@@ -2182,12 +2182,12 @@ void defaultlook::on_buttonSaveBrightness_clicked()
     saveBrightness();
 }
 
-void defaultlook::on_horizsliderhardwarebacklight_sliderMoved(int position)
-{
-    setbacklight();
-}
-
 void defaultlook::on_buttonGTKscaling_clicked()
 {
     setgtkscaling();
+}
+
+void defaultlook::on_horizsliderhardwarebacklight_actionTriggered(int action)
+{
+    setbacklight();
 }
