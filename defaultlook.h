@@ -49,7 +49,7 @@ protected:
     QTimer *timer;
 
 public:
-    explicit defaultlook(QWidget *parent = 0);
+    explicit defaultlook(QWidget *parent = 0, QStringList args = QStringList());
     ~defaultlook();
     Result runCmd(QString cmd);
     QString getVersion(QString name);
@@ -67,14 +67,18 @@ public:
     bool radeon_flag;
     bool amdgpuflag;
     bool vblankflag;
+    bool displayflag = false;
+
     QString vblankinitial;
     void setup();
     void setupuiselections();
     void setuppanel();
     void setuptheme();
     void setupEtc();
+    void setupDisplay();
     void setupConfigoptions();
     void setupComboTheme();
+    void setupBrightness();
     void fliptohorizontal();
     void fliptovertical();
     void whichpanel();
@@ -93,6 +97,14 @@ public:
     void message2();
     void savethemeundo();
     void themeundo();
+
+    void setBrightness();
+
+    void setupscale();
+    void setscale();
+    void setupbacklight();
+    void setbacklight();
+    void setgtkscaling();
 
 
 public slots:
@@ -186,6 +198,21 @@ private slots:
     void on_pushButtonRemoveUserThemeSet_clicked();
 
     void on_comboBoxvblank_activated(const QString &arg1);
+
+    void on_horizontalSliderBrightness_valueChanged(int value);
+
+    void on_buttonApplyDisplayScaling_clicked();
+
+    void on_comboBoxDisplay_currentIndexChanged(int index);
+
+    void saveBrightness();
+
+    void on_buttonSaveBrightness_clicked();
+
+    void on_horizsliderhardwarebacklight_sliderMoved(int position);
+
+
+    void on_buttonGTKscaling_clicked();
 
 private:
     Ui::defaultlook *ui;

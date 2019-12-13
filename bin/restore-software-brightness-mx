@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# restore saved brightness upon reboot
+
+CONFIG_FOLDER="$HOME/.config/MX-Linux/MX-Tweak/brightness"
+
+for file in $(ls "$CONFIG_FOLDER"); do
+    echo $file
+    #check to see if display exists and is connected
+    xrandr |grep connected |grep $file
+    #if present, run command in file
+    if [ $? = 0 ]; then
+        source "$CONFIG_FOLDER/$file"
+    fi
+done

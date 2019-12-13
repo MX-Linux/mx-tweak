@@ -1,3 +1,9 @@
+mx-tweak (19.12.01) mx; urgency=medium
+
+  * initial build with "display" tab
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Fri, 13 Dec 2019 16:07:22 -0500
+
 mx-tweak (19.11.02) mx; urgency=medium
 
   * update to look for new name of panel preferences 
