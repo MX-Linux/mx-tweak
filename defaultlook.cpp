@@ -38,12 +38,15 @@
 #include "theming_to_tweak.h"
 #include "remove_user_theme_set.h"
 
-defaultlook::defaultlook(QWidget *parent) :
+defaultlook::defaultlook(QWidget *parent, QStringList args) :
     QDialog(parent),
     ui(new Ui::defaultlook)
 {
     ui->setupUi(this);
     setWindowFlags(Qt::Window); // for the close, min and max buttons
+    if ( args.contains("--display")) {
+        displayflag = true;
+    }
     setup();
 }
 
@@ -81,6 +84,8 @@ void defaultlook::setup()
     ui->buttonThemeUndo->setEnabled(false);
     //setup Config Options
     setupConfigoptions();
+    //setup display tab
+    setupDisplay();
 
     //copy template file to ~/.local/share/mx-tweak-data if it doesn't exist
     QString home_path = QDir::homePath();
@@ -97,6 +102,9 @@ void defaultlook::setup()
         }
     }
     version = getVersion("mx-tweak");
+    if (displayflag){
+        ui->tabWidget->setCurrentIndex(4);
+    }
 }
 
 // Util function for getting bash command output and error code
@@ -1105,6 +1113,166 @@ void defaultlook::CheckAptNotifierRunning()
     }
 }
 
+void defaultlook::setupscale()
+{
+    //setup scale for currently shown display and in the active profile
+    QString xscale;
+    QString yscale;
+    double scale;
+
+    //get active profile
+    QString activeprofile = runCmd("LANG=C xfconf-query --channel displays -p /ActiveProfile").output;
+    //get scales for display show in combobox
+    int exitcode = runCmd("LANG=C xfconf-query --channel displays -p /" + activeprofile + "/" + ui->comboBoxDisplay->currentText() +"/Scale/X").exitCode;
+    if ( exitcode == 0 ){
+        xscale = runCmd("LANG=C xfconf-query --channel displays -p /" + activeprofile + "/" + ui->comboBoxDisplay->currentText() +"/Scale/X").output;
+    }
+    exitcode = runCmd("LANG=C xfconf-query --channel displays -p /" + activeprofile + "/" + ui->comboBoxDisplay->currentText() +"/Scale/Y").exitCode;
+    if ( exitcode == 0 ){
+        yscale = runCmd("LANG=C xfconf-query --channel displays -p /" + activeprofile + "/" + ui->comboBoxDisplay->currentText() + "/Scale/Y").output;
+    }
+    // since we want scales equal, set the scale spin box to xscale.  invert so that 2 = .5
+
+    scale = 1 / xscale.toDouble();
+    qDebug() << "active profile is: " << activeprofile << " xscale is " << xscale << " yscale is " << yscale << " scale is: " << scale;
+
+    //set value
+    ui->doubleSpinBoxscale->setValue(scale);
+
+    //hide scale setup if X and Y don't match
+    if ( xscale != yscale) {
+        ui->doubleSpinBoxscale->hide();
+        ui->label_scale->hide();
+        ui->buttonApplyDisplayScaling->hide();
+    }
+}
+
+void defaultlook::setscale()
+{
+    //get active profile
+    double scale = 1 / ui->doubleSpinBoxscale->value();
+    QString activeprofile = runCmd("LANG=C xfconf-query --channel displays -p /ActiveProfile").output;
+    QString cmd = "xfconf-query --channel displays -p /" + activeprofile + "/" + ui->comboBoxDisplay->currentText() +"/Scale/Y -t double -s " + QString::number(scale, 'G', 5) + " --create";
+    qDebug() << "cmd is " << cmd;
+    runCmd(cmd);
+    cmd = "xfconf-query --channel displays -p /" + activeprofile + "/" + ui->comboBoxDisplay->currentText() +"/Scale/X -t double -s " + QString::number(scale, 'G', 5) + " --create";
+    runCmd(cmd);
+    qDebug() << "cmd is " << cmd;
+    runCmd("sleep 1");
+    runCmd("xfsettingsd --replace");
+}
+
+
+void defaultlook::on_buttonApplyDisplayScaling_clicked()
+{
+    setscale();
+}
+
+void defaultlook::on_comboBoxDisplay_currentIndexChanged(int index)
+{
+    setupBrightness();
+    setupscale();
+}
+
+void defaultlook::setupDisplay()
+{
+    //populate combobox
+    QString displaydata = runCmd("LANG=C xrandr |grep -w connected | cut -d' ' -f1").output;
+    QStringList displaylist = displaydata.split("\n");
+    ui->comboBoxDisplay->clear();
+    ui->comboBoxDisplay->addItems(displaylist);
+    setupBrightness();
+    setupscale();
+    setupbacklight();
+
+    //get gtk scaling value
+    QString GTKScale = runCmd("LANG=C xfconf-query --channel xsettings -p /Gdk/WindowScalingFactor").output;
+    ui->spinBoxgtkscaling->setValue(GTKScale.toInt());
+}
+
+void defaultlook::setupbacklight()
+{
+    //check for backlights
+    QString test = runCmd("ls /sys/class/backlight").output;
+    if ( ! test.isEmpty()) {
+        //get backlight value for currently
+        QString backlight=runCmd("sudo /usr/lib/mx-tweak/backlight-brightness -g").output;
+        int backlight_slider_value = backlight.toInt();
+        ui->horizsliderhardwarebacklight->setValue(backlight_slider_value);
+        ui->horizsliderhardwarebacklight->setToolTip(backlight);
+        ui->backlight_label->setText(backlight);
+        qDebug() << "backlight string is " << backlight;
+        qDebug() << " backlight_slider_value is " << backlight_slider_value;
+    } else {
+        ui->horizsliderhardwarebacklight->hide();
+        ui->backlight_label->hide();
+        ui->label_xbacklight->hide();
+    }
+}
+
+void defaultlook::setbacklight()
+{
+    QString backlight = QString::number(ui->horizsliderhardwarebacklight->value());
+    QString cmd = "sudo /usr/lib/mx-tweak/backlight-brightness -s " + backlight;
+    ui->backlight_label->setText(backlight);
+    system(cmd.toUtf8());
+}
+
+void defaultlook::setgtkscaling()
+{
+    runCmd("xfconf-query --channel xsettings -p /Gdk/WindowScalingFactor -t int -s " + QString::number(ui->spinBoxgtkscaling->value()));
+    runCmd("xfce4-panel --restart");
+}
+
+void defaultlook::setupBrightness()
+{
+    //get brightness value for currently shown display
+    QString brightness=runCmd("LANG=C xrandr --verbose | awk '/LVDS-1/{flag=1;next}/CONNECTOR_ID/{flag=0}flag'|grep Brightness|cut -d' ' -f2").output;
+    int brightness_slider_value = brightness.toFloat() * 100;
+    ui->horizontalSliderBrightness->setValue(brightness_slider_value);
+    qDebug() << "brightness string is " << brightness;
+    qDebug() << " brightness_slider_value is " << brightness_slider_value;
+    ui->horizontalSliderBrightness->setToolTip(QString::number(ui->horizontalSliderBrightness->value()));
+}
+
+void defaultlook::on_horizontalSliderBrightness_valueChanged(int value)
+{
+    QString slider_value = QString::number(ui->horizontalSliderBrightness->value());
+    ui->horizontalSliderBrightness->setToolTip(slider_value);
+    ui->label_brightness_slider->setText(slider_value);
+    setBrightness();
+}
+
+void defaultlook::setBrightness()
+{
+
+    QString cmd;
+    double num = ui->horizontalSliderBrightness->value() / 100.0;
+    qDebug() << "num is :" << num;
+    QString brightness = QString::number(num, 'G', 5);
+    qDebug() << "changed brightness is :" << brightness;
+    cmd = "xrandr --output " + ui->comboBoxDisplay->currentText() + " --brightness " + brightness;
+    system(cmd.toUtf8());
+}
+
+void defaultlook::saveBrightness()
+{
+    //save cmd used in user's home file under .config
+    //make directory when its not present
+    double num = ui->horizontalSliderBrightness->value() / 100.0;
+    qDebug() << "num is :" << num;
+    QString brightness = QString::number(num, 'G', 5);
+    QString home_path = QDir::homePath();
+    QString config_file_path = home_path + "/.config/MX-Linux/MX-Tweak/brightness";
+    if ( ! QFileInfo::exists(config_file_path)) {
+        runCmd("mkdir -p " + config_file_path);
+    }
+    //save config in file named after the display
+    runCmd("echo 'xrandr --output " + ui->comboBoxDisplay->currentText() + " --brightness " + brightness + "'>" + config_file_path + "/" + ui->comboBoxDisplay->currentText());
+
+}
+
+
 
 void defaultlook::setupComboTheme()
 {
@@ -2006,3 +2174,20 @@ void defaultlook::on_comboBoxvblank_activated(const QString &arg1)
     ui->buttonCompositorApply->setEnabled(true);
 }
 
+
+
+
+void defaultlook::on_buttonSaveBrightness_clicked()
+{
+    saveBrightness();
+}
+
+void defaultlook::on_horizsliderhardwarebacklight_sliderMoved(int position)
+{
+    setbacklight();
+}
+
+void defaultlook::on_buttonGTKscaling_clicked()
+{
+    setgtkscaling();
+}
