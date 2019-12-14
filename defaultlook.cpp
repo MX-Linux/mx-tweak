@@ -1116,8 +1116,8 @@ void defaultlook::CheckAptNotifierRunning()
 void defaultlook::setupscale()
 {
     //setup scale for currently shown display and in the active profile
-    QString xscale;
-    QString yscale;
+    QString xscale = "1";
+    QString yscale = "1";
     double scale;
 
     //get active profile
@@ -1151,15 +1151,18 @@ void defaultlook::setscale()
 {
     //get active profile
     double scale = 1 / ui->doubleSpinBoxscale->value();
+    QString scalestring = QString::number(scale, 'G', 5);
     QString activeprofile = runCmd("LANG=C xfconf-query --channel displays -p /ActiveProfile").output;
-    QString cmd = "xfconf-query --channel displays -p /" + activeprofile + "/" + ui->comboBoxDisplay->currentText() +"/Scale/Y -t double -s " + QString::number(scale, 'G', 5) + " --create";
+    QString cmd = "xfconf-query --channel displays -p /" + activeprofile + "/" + ui->comboBoxDisplay->currentText() +"/Scale/Y -t double -s " + scalestring + " --create";
     qDebug() << "cmd is " << cmd;
     runCmd(cmd);
-    cmd = "xfconf-query --channel displays -p /" + activeprofile + "/" + ui->comboBoxDisplay->currentText() +"/Scale/X -t double -s " + QString::number(scale, 'G', 5) + " --create";
+    cmd = "xfconf-query --channel displays -p /" + activeprofile + "/" + ui->comboBoxDisplay->currentText() +"/Scale/X -t double -s " + scalestring + " --create";
     runCmd(cmd);
     qDebug() << "cmd is " << cmd;
     runCmd("sleep 1");
-    runCmd("xfsettingsd --replace");
+    //runCmd("xfsettingsd --replace");
+    //set initial scale with xrandr
+    runCmd("xrandr --output " + ui->comboBoxDisplay->currentText() + " --scale " + scalestring + "x" + scalestring);
 }
 
 
