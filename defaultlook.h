@@ -214,6 +214,7 @@ private slots:
 
     void on_horizsliderhardwarebacklight_actionTriggered(int action);
 
+
 private:
     Ui::defaultlook *ui;
 };

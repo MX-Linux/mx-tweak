@@ -1,3 +1,9 @@
+mx-tweak (19.12.02) mx; urgency=medium
+
+  * use different xrandr initial scaling. 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Fri, 13 Dec 2019 19:13:42 -0500
+
 mx-tweak (19.12.01) mx; urgency=medium
 
   * initial build with "display" tab
