@@ -1118,7 +1118,7 @@ void defaultlook::setupscale()
     //setup scale for currently shown display and in the active profile
     QString xscale = "1";
     QString yscale = "1";
-    double scale;
+    double scale = 1;
 
     //get active profile
     QString activeprofile = runCmd("LANG=C xfconf-query --channel displays -p /ActiveProfile").output;
@@ -1151,20 +1151,36 @@ void defaultlook::setscale()
 {
     //get active profile
     double scale = 1 / ui->doubleSpinBoxscale->value();
+    QString resolution = runCmd("xrandr |grep " + ui->comboBoxDisplay->currentText() + " |cut -d' ' -f3 |cut -d'+' -f1").output;
+    qDebug() << "resolution is : " << resolution;
     QString scalestring = QString::number(scale, 'G', 5);
     QString activeprofile = runCmd("LANG=C xfconf-query --channel displays -p /ActiveProfile").output;
+
+    //set resolution, set active, set scales, set display name
+
+    //set display name
+    runCmd("xfconf-query --channel displays -p /" + activeprofile + "/" + ui->comboBoxDisplay->currentText() + " -t string -s " + ui->comboBoxDisplay->currentText() + " --create");
+
+    //set resolution
+    runCmd("xfconf-query --channel displays -p /" + activeprofile + "/" + ui->comboBoxDisplay->currentText() + "/Resolution -t string -s " + resolution + " --create");
+
+    //set active profile
+    runCmd("xfconf-query --channel displays -p /" + activeprofile + "/" + ui->comboBoxDisplay->currentText() + "/Active -t bool -s true --create");
+
+    //set scale value
     QString cmd = "xfconf-query --channel displays -p /" + activeprofile + "/" + ui->comboBoxDisplay->currentText() +"/Scale/Y -t double -s " + scalestring + " --create";
     qDebug() << "cmd is " << cmd;
     runCmd(cmd);
     cmd = "xfconf-query --channel displays -p /" + activeprofile + "/" + ui->comboBoxDisplay->currentText() +"/Scale/X -t double -s " + scalestring + " --create";
     runCmd(cmd);
     qDebug() << "cmd is " << cmd;
-    runCmd("sleep 1");
+    //runCmd("sleep 1");
     //runCmd("xfsettingsd --replace");
-    //set initial scale with xrandr
-    runCmd("xrandr --output " + ui->comboBoxDisplay->currentText() + " --scale " + scalestring + "x" + scalestring);
-}
 
+    //set initial scale with xrandr
+    QString cmd2 = "xrandr --output " + ui->comboBoxDisplay->currentText() + " --scale " + scalestring + "x" + scalestring;
+    runCmd(cmd2);
+}
 
 void defaultlook::on_buttonApplyDisplayScaling_clicked()
 {
@@ -1175,6 +1191,7 @@ void defaultlook::on_comboBoxDisplay_currentIndexChanged(int index)
 {
     setupBrightness();
     setupscale();
+    setupresolutions();
 }
 
 void defaultlook::setupDisplay()
@@ -1187,12 +1204,45 @@ void defaultlook::setupDisplay()
     setupBrightness();
     setupscale();
     setupbacklight();
+    setupresolutions();
 
     //get gtk scaling value
     QString GTKScale = runCmd("LANG=C xfconf-query --channel xsettings -p /Gdk/WindowScalingFactor").output;
     ui->spinBoxgtkscaling->setValue(GTKScale.toInt());
 }
 
+void defaultlook::setupresolutions()
+{
+    QString display = ui->comboBoxDisplay->currentText();
+    QString cmd = "LANG=C /usr/lib/mx-tweak/mx-tweak-lib-randr.sh " + display + " resolutions";
+    qDebug() << "get resolution command is :" << cmd;
+    QString resolutions = runCmd(cmd).output;
+    qDebug() << "resolutions are :" << resolutions;
+    QStringList resolutionslist = resolutions.split("\n");
+    ui->comboBoxresolutions->addItems(resolutionslist);
+    //set current resolution as default
+    QString resolution = runCmd("xrandr |grep " + ui->comboBoxDisplay->currentText() + " |cut -d' ' -f3 |cut -d'+' -f1").output;
+    qDebug() << "resolution is : " << resolution;
+    ui->comboBoxresolutions->setCurrentText(resolution);
+}
+
+void defaultlook::setresolution()
+{
+    QString activeprofile = runCmd("LANG=C xfconf-query --channel displays -p /ActiveProfile").output;
+    QString display = ui->comboBoxDisplay->currentText();
+    QString resolution = ui->comboBoxresolutions->currentText();
+    QString cmd = "xrandr --output " + display + " --mode " + resolution;
+    qDebug() << "resolution change command is " << cmd;
+    runCmd(cmd);
+    //set resolution
+    runCmd("xfconf-query --channel displays -p /" + activeprofile + "/" + display + "/Resolution -t string -s " + resolution.simplified() + " --create; sleep 1");
+    //set refreshrate too
+    QString refreshrate = runCmd("/usr/lib/mx-tweak/mx-tweak-lib-randr.sh " + display + " refreshrate").output;
+    refreshrate=refreshrate.simplified();
+    refreshrate=refreshrate.section("*", 0,0).remove(resolution + " ");
+    qDebug() << "refreshreate list is :" << refreshrate;
+    runCmd("xfconf-query --channel displays -p /" + activeprofile + "/" + display + "/RefreshRate -t double -s " + refreshrate + " --create; sleep 1");
+}
 void defaultlook::setupbacklight()
 {
     //check for backlights
@@ -1230,7 +1280,7 @@ void defaultlook::setgtkscaling()
 void defaultlook::setupBrightness()
 {
     //get brightness value for currently shown display
-    QString brightness=runCmd("LANG=C xrandr --verbose | awk '/LVDS-1/{flag=1;next}/CONNECTOR_ID/{flag=0}flag'|grep Brightness|cut -d' ' -f2").output;
+    QString brightness=runCmd("LANG=C xrandr --verbose | awk '/" + ui->comboBoxDisplay->currentText() +"/{flag=1;next}/CONNECTOR_ID/{flag=0}flag'|grep Brightness|cut -d' ' -f2").output;
     int brightness_slider_value = brightness.toFloat() * 100;
     ui->horizontalSliderBrightness->setValue(brightness_slider_value);
     qDebug() << "brightness string is " << brightness;
@@ -2177,9 +2227,6 @@ void defaultlook::on_comboBoxvblank_activated(const QString &arg1)
     ui->buttonCompositorApply->setEnabled(true);
 }
 
-
-
-
 void defaultlook::on_buttonSaveBrightness_clicked()
 {
     saveBrightness();
@@ -2193,4 +2240,9 @@ void defaultlook::on_buttonGTKscaling_clicked()
 void defaultlook::on_horizsliderhardwarebacklight_actionTriggered(int action)
 {
     setbacklight();
+}
+
+void defaultlook::on_buttonapplyresolution_clicked()
+{
+    setresolution();
 }
