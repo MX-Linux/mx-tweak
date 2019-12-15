@@ -1192,6 +1192,7 @@ void defaultlook::on_comboBoxDisplay_currentIndexChanged(int index)
     setupBrightness();
     setupscale();
     setupresolutions();
+    setupGamma();
 }
 
 void defaultlook::setupDisplay()
