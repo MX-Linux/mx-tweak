@@ -107,7 +107,7 @@ public:
     void setgtkscaling();
     void setupresolutions();
     void setresolution();
-
+    void setrefreshrate(QString arg1, QString arg2, QString arg3);
 
 public slots:
 
