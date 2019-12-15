@@ -105,6 +105,8 @@ public:
     void setupbacklight();
     void setbacklight();
     void setgtkscaling();
+    void setupresolutions();
+    void setresolution();
 
 
 public slots:
@@ -214,6 +216,8 @@ private slots:
 
     void on_horizsliderhardwarebacklight_actionTriggered(int action);
 
+
+    void on_buttonapplyresolution_clicked();
 
 private:
     Ui::defaultlook *ui;
