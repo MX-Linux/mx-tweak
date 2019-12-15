@@ -1209,11 +1209,16 @@ void defaultlook::setupDisplay()
     //get gtk scaling value
     QString GTKScale = runCmd("LANG=C xfconf-query --channel xsettings -p /Gdk/WindowScalingFactor").output;
     ui->spinBoxgtkscaling->setValue(GTKScale.toInt());
+    //disable resolution stuff
+    //ui->comboBoxresolutions->hide();
+    //ui->label_resolutions->hide();
+    //ui->buttonapplyresolution->hide();
 }
 
 void defaultlook::setupresolutions()
 {
     QString display = ui->comboBoxDisplay->currentText();
+    ui->comboBoxresolutions->clear();
     QString cmd = "LANG=C /usr/lib/mx-tweak/mx-tweak-lib-randr.sh " + display + " resolutions";
     qDebug() << "get resolution command is :" << cmd;
     QString resolutions = runCmd(cmd).output;
@@ -1236,13 +1241,21 @@ void defaultlook::setresolution()
     runCmd(cmd);
     //set resolution
     runCmd("xfconf-query --channel displays -p /" + activeprofile + "/" + display + "/Resolution -t string -s " + resolution.simplified() + " --create; sleep 1");
+    //set refresh rate
+    setrefreshrate(display, resolution, activeprofile);
+}
+
+void defaultlook::setrefreshrate(QString display, QString resolution, QString activeprofile)
+{
     //set refreshrate too
     QString refreshrate = runCmd("/usr/lib/mx-tweak/mx-tweak-lib-randr.sh " + display + " refreshrate").output;
     refreshrate=refreshrate.simplified();
-    refreshrate=refreshrate.section("*", 0,0).remove(resolution + " ");
-    qDebug() << "refreshreate list is :" << refreshrate;
-    runCmd("xfconf-query --channel displays -p /" + activeprofile + "/" + display + "/RefreshRate -t double -s " + refreshrate + " --create; sleep 1");
+    QStringList refreshratelist = refreshrate.split(QRegExp("\\s"));
+    refreshratelist.removeAll(resolution);
+    qDebug() << "defualt refreshreate list is :" << refreshratelist.at(0).section("*",0,0);
+    runCmd("xfconf-query --channel displays -p /" + activeprofile + "/" + display + "/RefreshRate -t double -s " + refreshratelist.at(0).section("*",0,0) + " --create; sleep 1");
 }
+
 void defaultlook::setupbacklight()
 {
     //check for backlights

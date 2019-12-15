@@ -907,7 +907,7 @@
         <attribute name="title">
          <string>Display</string>
         </attribute>
-        <widget class="QWidget" name="">
+        <widget class="QWidget" name="layoutWidget">
          <property name="geometry">
           <rect>
            <x>10</x>
