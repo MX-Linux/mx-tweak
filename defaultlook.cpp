@@ -1202,9 +1202,11 @@ void defaultlook::setupDisplay()
     ui->comboBoxDisplay->clear();
     ui->comboBoxDisplay->addItems(displaylist);
     setupBrightness();
+    setupGamma();
     setupscale();
     setupbacklight();
     setupresolutions();
+    brightnessflag = true;
 
     //get gtk scaling value
     QString GTKScale = runCmd("LANG=C xfconf-query --channel xsettings -p /Gdk/WindowScalingFactor").output;
@@ -1301,23 +1303,38 @@ void defaultlook::setupBrightness()
     ui->horizontalSliderBrightness->setToolTip(QString::number(ui->horizontalSliderBrightness->value()));
 }
 
+void defaultlook::setupGamma()
+{
+    QString gamma = runCmd("/usr/lib/mx-tweak/mx-tweak-lib-randr.sh " + ui->comboBoxDisplay->currentText() + " gamma").output;
+    gamma=gamma.simplified();
+    gamma = gamma.section(":",1,3).simplified();
+    double gamma1 = 1.0 / gamma.section(":",0,0).toDouble();
+    double gamma2 = 1.0 / gamma.section(":",1,1).toDouble();
+    double gamma3 = 1.0 / gamma.section(":",2,2).toDouble();
+    g1 = QString::number(gamma1,'G', 3);
+    g2 = QString::number(gamma2,'G', 3);
+    g3 = QString::number(gamma3,'G', 3);
+    qDebug() << "gamma is " << g1 << " " << g2 << " " << g3;
+}
+
 void defaultlook::on_horizontalSliderBrightness_valueChanged(int value)
 {
     QString slider_value = QString::number(ui->horizontalSliderBrightness->value());
     ui->horizontalSliderBrightness->setToolTip(slider_value);
     ui->label_brightness_slider->setText(slider_value);
-    setBrightness();
+    if ( brightnessflag ) {
+        setBrightness();
+    }
 }
 
 void defaultlook::setBrightness()
 {
-
     QString cmd;
     double num = ui->horizontalSliderBrightness->value() / 100.0;
     qDebug() << "num is :" << num;
     QString brightness = QString::number(num, 'G', 5);
     qDebug() << "changed brightness is :" << brightness;
-    cmd = "xrandr --output " + ui->comboBoxDisplay->currentText() + " --brightness " + brightness;
+    cmd = "xrandr --output " + ui->comboBoxDisplay->currentText() + " --brightness " + brightness + " --gamma " + g1 + ":" + g2 + ":" +g3;
     system(cmd.toUtf8());
 }
 

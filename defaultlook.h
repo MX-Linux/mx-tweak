@@ -68,6 +68,10 @@ public:
     bool amdgpuflag;
     bool vblankflag;
     bool displayflag = false;
+    bool brightnessflag = false;
+    QString g1;
+    QString g2;
+    QString g3;
 
     QString vblankinitial;
     void setup();
@@ -108,6 +112,7 @@ public:
     void setupresolutions();
     void setresolution();
     void setrefreshrate(QString arg1, QString arg2, QString arg3);
+    void setupGamma();
 
 public slots:
 
