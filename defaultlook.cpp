@@ -1351,7 +1351,7 @@ void defaultlook::saveBrightness()
         runCmd("mkdir -p " + config_file_path);
     }
     //save config in file named after the display
-    runCmd("echo 'xrandr --output " + ui->comboBoxDisplay->currentText() + " --brightness " + brightness + "'>" + config_file_path + "/" + ui->comboBoxDisplay->currentText());
+    runCmd("echo 'xrandr --output " + ui->comboBoxDisplay->currentText() + " --brightness " + brightness + " --gamma " + g1 + ":" + g2 + ":" + g3 + "'>" + config_file_path + "/" + ui->comboBoxDisplay->currentText());
 
 }
 
