@@ -1149,23 +1149,15 @@ void defaultlook::setupscale()
 
 void defaultlook::setscale()
 {
-    //get active profile
+    //get active profile and desired scale for given resolution
     double scale = 1 / ui->doubleSpinBoxscale->value();
     QString resolution = runCmd("xrandr |grep " + ui->comboBoxDisplay->currentText() + " |cut -d' ' -f3 |cut -d'+' -f1").output;
     qDebug() << "resolution is : " << resolution;
     QString scalestring = QString::number(scale, 'G', 5);
     QString activeprofile = runCmd("LANG=C xfconf-query --channel displays -p /ActiveProfile").output;
 
-    //set resolution, set active, set scales, set display name
-
-    //set display name
-    runCmd("xfconf-query --channel displays -p /" + activeprofile + "/" + ui->comboBoxDisplay->currentText() + " -t string -s " + ui->comboBoxDisplay->currentText() + " --create");
-
-    //set resolution
-    runCmd("xfconf-query --channel displays -p /" + activeprofile + "/" + ui->comboBoxDisplay->currentText() + "/Resolution -t string -s " + resolution + " --create");
-
-    //set active profile
-    runCmd("xfconf-query --channel displays -p /" + activeprofile + "/" + ui->comboBoxDisplay->currentText() + "/Active -t bool -s true --create");
+    //set missing variables
+    setmissingxfconfvariables(activeprofile, resolution);
 
     //set scale value
     QString cmd = "xfconf-query --channel displays -p /" + activeprofile + "/" + ui->comboBoxDisplay->currentText() +"/Scale/Y -t double -s " + scalestring + " --create";
@@ -1174,8 +1166,6 @@ void defaultlook::setscale()
     cmd = "xfconf-query --channel displays -p /" + activeprofile + "/" + ui->comboBoxDisplay->currentText() +"/Scale/X -t double -s " + scalestring + " --create";
     runCmd(cmd);
     qDebug() << "cmd is " << cmd;
-    //runCmd("sleep 1");
-    //runCmd("xfsettingsd --replace");
 
     //set initial scale with xrandr
     QString cmd2 = "xrandr --output " + ui->comboBoxDisplay->currentText() + " --scale " + scalestring + "x" + scalestring;
@@ -1242,10 +1232,24 @@ void defaultlook::setresolution()
     QString cmd = "xrandr --output " + display + " --mode " + resolution;
     qDebug() << "resolution change command is " << cmd;
     runCmd(cmd);
-    //set resolution
-    runCmd("xfconf-query --channel displays -p /" + activeprofile + "/" + display + "/Resolution -t string -s " + resolution.simplified() + " --create; sleep 1");
+    //setmissingvariables
+    setmissingxfconfvariables(activeprofile, resolution);
     //set refresh rate
     setrefreshrate(display, resolution, activeprofile);
+}
+
+void defaultlook::setmissingxfconfvariables(QString activeprofile, QString resolution)
+{
+    //set resolution, set active, set scales, set display name
+
+    //set display name
+    runCmd("xfconf-query --channel displays -p /" + activeprofile + "/" + ui->comboBoxDisplay->currentText() + " -t string -s " + ui->comboBoxDisplay->currentText() + " --create");
+
+    //set resolution
+    runCmd("xfconf-query --channel displays -p /" + activeprofile + "/" + ui->comboBoxDisplay->currentText() + "/Resolution -t string -s " + resolution.simplified() + " --create");
+
+    //set active profile
+    runCmd("xfconf-query --channel displays -p /" + activeprofile + "/" + ui->comboBoxDisplay->currentText() + "/Active -t bool -s true --create");
 }
 
 void defaultlook::setrefreshrate(QString display, QString resolution, QString activeprofile)
