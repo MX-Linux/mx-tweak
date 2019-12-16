@@ -5,12 +5,12 @@
     <name>defaultlook</name>
     <message>
         <location filename="../defaultlook.ui" line="20"/>
-        <location filename="../defaultlook.cpp" line="58"/>
-        <location filename="../defaultlook.cpp" line="527"/>
-        <location filename="../defaultlook.cpp" line="534"/>
-        <location filename="../defaultlook.cpp" line="551"/>
-        <location filename="../defaultlook.cpp" line="562"/>
-        <location filename="../defaultlook.cpp" line="572"/>
+        <location filename="../defaultlook.cpp" line="61"/>
+        <location filename="../defaultlook.cpp" line="535"/>
+        <location filename="../defaultlook.cpp" line="542"/>
+        <location filename="../defaultlook.cpp" line="559"/>
+        <location filename="../defaultlook.cpp" line="570"/>
+        <location filename="../defaultlook.cpp" line="580"/>
         <source>MX Tweak</source>
         <translation>MX 調校</translation>
     </message>
@@ -145,7 +145,10 @@
         <location filename="../defaultlook.ui" line="549"/>
         <location filename="../defaultlook.ui" line="740"/>
         <location filename="../defaultlook.ui" line="894"/>
-        <location filename="../defaultlook.ui" line="936"/>
+        <location filename="../defaultlook.ui" line="974"/>
+        <location filename="../defaultlook.ui" line="1097"/>
+        <location filename="../defaultlook.ui" line="1104"/>
+        <location filename="../defaultlook.ui" line="1141"/>
         <source>Apply</source>
         <translation>使用</translation>
     </message>
@@ -327,97 +330,153 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="908"/>
+        <source>Display</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="933"/>
+        <source>Hardware Backlight</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="940"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Display Tweaks&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="967"/>
+        <source>Choose Display for xrandr tweaks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1000"/>
+        <source>Resolution</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1007"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Saving is per display&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1010"/>
+        <source>Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1017"/>
+        <source>Software (xrandr) Brightness</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1024"/>
+        <location filename="../defaultlook.ui" line="1038"/>
+        <source>TextLabel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1031"/>
+        <source>GTK scaling</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1058"/>
+        <source>xrandr Scaling</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1113"/>
         <source>Other</source>
         <translation>其它</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="916"/>
+        <location filename="../defaultlook.ui" line="1121"/>
         <source>Enable single-click on desktop</source>
         <translation>在桌面上啟用游標單擊</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="923"/>
+        <location filename="../defaultlook.ui" line="1128"/>
         <source>Enable single-click in Thunar File Manager</source>
         <translation>在 Thunar 檔案管理員中啟用游標單擊</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="960"/>
+        <location filename="../defaultlook.ui" line="1165"/>
         <source>Show systray (notification area) frame</source>
         <translation>顯示通知區域的外框</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="967"/>
+        <location filename="../defaultlook.ui" line="1172"/>
         <source>Show windows from all workspaces in panel</source>
         <translation>在邊條中顯示來自所有工作區的視窗</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="974"/>
+        <location filename="../defaultlook.ui" line="1179"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>容許並非 root 的使用者掛載內接式硬碟</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="981"/>
+        <location filename="../defaultlook.ui" line="1186"/>
         <source>Disable shortening of long filenames on the desktop</source>
         <translation>在桌面上，不把過長檔名簡化顯示</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="988"/>
+        <location filename="../defaultlook.ui" line="1193"/>
         <source>Enable hibernate on Log Out menu </source>
         <translation>在登出選單中啟用休眠選項</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="995"/>
+        <location filename="../defaultlook.ui" line="1200"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
         <translation>註：若欲休眠，swap 必須大於 RAM</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="526"/>
+        <location filename="../defaultlook.cpp" line="534"/>
         <source>About MX Tweak</source>
         <translation>關於 MX 調校</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="527"/>
+        <location filename="../defaultlook.cpp" line="535"/>
         <source>Version: </source>
         <translation>版本：</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="528"/>
+        <location filename="../defaultlook.cpp" line="536"/>
         <source>App for quick default ui theme changes and tweaks</source>
         <translation>本程式可快速更換與調校預設介面佈景</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="530"/>
+        <location filename="../defaultlook.cpp" line="538"/>
         <source>Copyright (c) MX Linux</source>
         <translation>版權所有 (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="531"/>
-        <location filename="../defaultlook.cpp" line="534"/>
+        <location filename="../defaultlook.cpp" line="539"/>
+        <location filename="../defaultlook.cpp" line="542"/>
         <source>License</source>
         <translation>授權條款</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="532"/>
+        <location filename="../defaultlook.cpp" line="540"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="563"/>
+        <location filename="../defaultlook.cpp" line="571"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
         <translation>完成！可能需要重新啟動 Firefox，這些變動才會生效。</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="573"/>
+        <location filename="../defaultlook.cpp" line="581"/>
         <source>This app is Xfce-only</source>
         <translation>本程式僅支援 Xfce</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="715"/>
+        <location filename="../defaultlook.cpp" line="723"/>
         <source>Panel settings</source>
         <translation>邊條設定</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="716"/>
+        <location filename="../defaultlook.cpp" line="724"/>
         <source>Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -426,7 +485,7 @@
         <translation type="vanished">目前所採用的邊條設定已備份，放在家目錄下的一隠藏資料夾中（~./restore）</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1160"/>
+        <location filename="../defaultlook.cpp" line="1418"/>
         <source>Choose a theme set</source>
         <translation>選擇一套佈景組合</translation>
     </message>
