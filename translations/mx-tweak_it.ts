@@ -5,12 +5,12 @@
     <name>defaultlook</name>
     <message>
         <location filename="../defaultlook.ui" line="20"/>
-        <location filename="../defaultlook.cpp" line="58"/>
-        <location filename="../defaultlook.cpp" line="527"/>
-        <location filename="../defaultlook.cpp" line="534"/>
-        <location filename="../defaultlook.cpp" line="551"/>
-        <location filename="../defaultlook.cpp" line="562"/>
-        <location filename="../defaultlook.cpp" line="572"/>
+        <location filename="../defaultlook.cpp" line="61"/>
+        <location filename="../defaultlook.cpp" line="535"/>
+        <location filename="../defaultlook.cpp" line="542"/>
+        <location filename="../defaultlook.cpp" line="559"/>
+        <location filename="../defaultlook.cpp" line="570"/>
+        <location filename="../defaultlook.cpp" line="580"/>
         <source>MX Tweak</source>
         <translation>MX Rifiniture</translation>
     </message>
@@ -145,7 +145,10 @@
         <location filename="../defaultlook.ui" line="549"/>
         <location filename="../defaultlook.ui" line="740"/>
         <location filename="../defaultlook.ui" line="894"/>
-        <location filename="../defaultlook.ui" line="936"/>
+        <location filename="../defaultlook.ui" line="974"/>
+        <location filename="../defaultlook.ui" line="1097"/>
+        <location filename="../defaultlook.ui" line="1104"/>
+        <location filename="../defaultlook.ui" line="1141"/>
         <source>Apply</source>
         <translation>Applica</translation>
     </message>
@@ -327,97 +330,153 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="908"/>
+        <source>Display</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="933"/>
+        <source>Hardware Backlight</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="940"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Display Tweaks&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="967"/>
+        <source>Choose Display for xrandr tweaks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1000"/>
+        <source>Resolution</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1007"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Saving is per display&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1010"/>
+        <source>Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1017"/>
+        <source>Software (xrandr) Brightness</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1024"/>
+        <location filename="../defaultlook.ui" line="1038"/>
+        <source>TextLabel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1031"/>
+        <source>GTK scaling</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1058"/>
+        <source>xrandr Scaling</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1113"/>
         <source>Other</source>
         <translation>Altro</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="916"/>
+        <location filename="../defaultlook.ui" line="1121"/>
         <source>Enable single-click on desktop</source>
         <translation>Abilita il click-singolo sul desktop</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="923"/>
+        <location filename="../defaultlook.ui" line="1128"/>
         <source>Enable single-click in Thunar File Manager</source>
         <translation>Abilita il click-singolo sul Gestore di File Thunar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="960"/>
+        <location filename="../defaultlook.ui" line="1165"/>
         <source>Show systray (notification area) frame</source>
         <translation>Mostra la systray (area di notifica)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="967"/>
+        <location filename="../defaultlook.ui" line="1172"/>
         <source>Show windows from all workspaces in panel</source>
         <translation>Mostra le finestre di tutti gli spazi di lavoro nel pannello</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="974"/>
+        <location filename="../defaultlook.ui" line="1179"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>Permetti il montaggio delle periferiche interne agli utenti non-root</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="981"/>
+        <location filename="../defaultlook.ui" line="1186"/>
         <source>Disable shortening of long filenames on the desktop</source>
         <translation>Disabilitare l&apos;accorciamento dei nomi lunghi dei file nel desktop</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="988"/>
+        <location filename="../defaultlook.ui" line="1193"/>
         <source>Enable hibernate on Log Out menu </source>
         <translation>Abilita l&apos;ibernazione sul menu di chiusura</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="995"/>
+        <location filename="../defaultlook.ui" line="1200"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
         <translation>                   nota: per l&apos;ibernazione, la swap deve essere &gt;= RAM</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="526"/>
+        <location filename="../defaultlook.cpp" line="534"/>
         <source>About MX Tweak</source>
         <translation>Informazioni su MX Rifiniture</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="527"/>
+        <location filename="../defaultlook.cpp" line="535"/>
         <source>Version: </source>
         <translation>Versione: </translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="528"/>
+        <location filename="../defaultlook.cpp" line="536"/>
         <source>App for quick default ui theme changes and tweaks</source>
         <translation>Applicazione per ritocchi e rapide modifiche ai temi predefiniti dell&apos;interfaccia </translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="530"/>
+        <location filename="../defaultlook.cpp" line="538"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="531"/>
-        <location filename="../defaultlook.cpp" line="534"/>
+        <location filename="../defaultlook.cpp" line="539"/>
+        <location filename="../defaultlook.cpp" line="542"/>
         <source>License</source>
         <translation>Licenza</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="532"/>
+        <location filename="../defaultlook.cpp" line="540"/>
         <source>Cancel</source>
         <translation>Annulla</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="563"/>
+        <location filename="../defaultlook.cpp" line="571"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
         <translation>Finito! Potrebbe essere necessario riavviare Firefox perchè le modifiche abbiano effetto</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="573"/>
+        <location filename="../defaultlook.cpp" line="581"/>
         <source>This app is Xfce-only</source>
         <translation>Questa applicazione è solo per Xfce </translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="715"/>
+        <location filename="../defaultlook.cpp" line="723"/>
         <source>Panel settings</source>
         <translation>Impostazioni Pannello </translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="716"/>
+        <location filename="../defaultlook.cpp" line="724"/>
         <source>Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -426,7 +485,7 @@
         <translation type="vanished">Le tue attuali impostazioni del pannello sono state ricopiate in una cartella nascosta chiamata .restore presente nella tua cartella utente (~/.restore/) </translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1160"/>
+        <location filename="../defaultlook.cpp" line="1418"/>
         <source>Choose a theme set</source>
         <translation>Scegli un set di temi</translation>
     </message>
