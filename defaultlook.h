@@ -114,6 +114,8 @@ public:
     void setrefreshrate(QString arg1, QString arg2, QString arg3);
     void setupGamma();
 
+    void setmissingxfconfvariables(QString arg1, QString arg2);
+
 public slots:
 
 
