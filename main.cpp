@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
     appTran.load(QString("mx-tweak_") + QLocale::system().name(), "/usr/share/mx-tweak/locale");
     a.installTranslator(&appTran);
 
-    defaultlook w;
+    defaultlook w(0, a.arguments());
     w.show();
     return a.exec();
 }
