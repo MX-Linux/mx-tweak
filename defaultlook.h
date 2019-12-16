@@ -49,7 +49,7 @@ protected:
     QTimer *timer;
 
 public:
-    explicit defaultlook(QWidget *parent = 0);
+    explicit defaultlook(QWidget *parent = 0, QStringList args = QStringList());
     ~defaultlook();
     Result runCmd(QString cmd);
     QString getVersion(QString name);
@@ -67,14 +67,22 @@ public:
     bool radeon_flag;
     bool amdgpuflag;
     bool vblankflag;
+    bool displayflag = false;
+    bool brightnessflag = false;
+    QString g1;
+    QString g2;
+    QString g3;
+
     QString vblankinitial;
     void setup();
     void setupuiselections();
     void setuppanel();
     void setuptheme();
     void setupEtc();
+    void setupDisplay();
     void setupConfigoptions();
     void setupComboTheme();
+    void setupBrightness();
     void fliptohorizontal();
     void fliptovertical();
     void whichpanel();
@@ -94,6 +102,19 @@ public:
     void savethemeundo();
     void themeundo();
 
+    void setBrightness();
+
+    void setupscale();
+    void setscale();
+    void setupbacklight();
+    void setbacklight();
+    void setgtkscaling();
+    void setupresolutions();
+    void setresolution();
+    void setrefreshrate(QString arg1, QString arg2, QString arg3);
+    void setupGamma();
+
+    void setmissingxfconfvariables(QString arg1, QString arg2);
 
 public slots:
 
@@ -186,6 +207,24 @@ private slots:
     void on_pushButtonRemoveUserThemeSet_clicked();
 
     void on_comboBoxvblank_activated(const QString &arg1);
+
+    void on_horizontalSliderBrightness_valueChanged(int value);
+
+    void on_buttonApplyDisplayScaling_clicked();
+
+    void on_comboBoxDisplay_currentIndexChanged(int index);
+
+    void saveBrightness();
+
+    void on_buttonSaveBrightness_clicked();
+
+
+    void on_buttonGTKscaling_clicked();
+
+    void on_horizsliderhardwarebacklight_actionTriggered(int action);
+
+
+    void on_buttonapplyresolution_clicked();
 
 private:
     Ui::defaultlook *ui;

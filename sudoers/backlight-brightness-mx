@@ -1,0 +1,3 @@
+# sudoers file.
+ 
+%users ALL=(root) NOPASSWD: /usr/lib/mx-tweak/backlight-brightness

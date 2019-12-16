@@ -1,3 +1,39 @@
+mx-tweak (19.12.06) mx; urgency=medium
+
+  * always set active, resolution and name when saving to xfconf 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 15 Dec 2019 20:06:02 -0500
+
+mx-tweak (19.12.05) mx; urgency=medium
+
+  * preserve existing gamma settings 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 15 Dec 2019 13:35:25 -0500
+
+mx-tweak (19.12.04) mx; urgency=medium
+
+  * misc. refinements, ready for translation 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 14 Dec 2019 23:28:53 -0500
+
+mx-tweak (19.12.03) mx; urgency=medium
+
+  * add resolution settings 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 14 Dec 2019 20:01:58 -0500
+
+mx-tweak (19.12.02) mx; urgency=medium
+
+  * use different xrandr initial scaling. 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Fri, 13 Dec 2019 19:13:42 -0500
+
+mx-tweak (19.12.01) mx; urgency=medium
+
+  * initial build with "display" tab
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Fri, 13 Dec 2019 16:07:22 -0500
+
 mx-tweak (19.11.02) mx; urgency=medium
 
   * update to look for new name of panel preferences 
