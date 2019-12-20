@@ -1,4 +1,5 @@
 mx-tweak	 		 usr/bin
+mx-tweak-tray        usr/bin
 mx-tweak.desktop	 usr/share/applications
 translations/*.qm 	 usr/share/mx-tweak/locale
 icons/*                 usr/share/mx-tweak/icons

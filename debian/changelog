@@ -1,3 +1,9 @@
+mx-tweak (19.12.07) mx; urgency=medium
+
+  * add tray mode, small brightness dialog 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Thu, 19 Dec 2019 21:53:51 -0500
+
 mx-tweak (19.12.06) mx; urgency=medium
 
   * always set active, resolution and name when saving to xfconf 
