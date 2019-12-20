@@ -2,15 +2,54 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="sv">
 <context>
+    <name>brightness_small</name>
+    <message>
+        <location filename="../brightness_small.ui" line="14"/>
+        <source>MainWindow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../brightness_small.ui" line="37"/>
+        <source>Brightness</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../brightness_small.ui" line="51"/>
+        <location filename="../brightness_small.ui" line="72"/>
+        <source>TextLabel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../brightness_small.ui" line="58"/>
+        <source>Backlight</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../brightness_small.cpp" line="19"/>
+        <source>MX-Tweak</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../brightness_small.cpp" line="26"/>
+        <source>&amp;Quit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../brightness_small.cpp" line="28"/>
+        <source>Display</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>defaultlook</name>
     <message>
         <location filename="../defaultlook.ui" line="20"/>
-        <location filename="../defaultlook.cpp" line="61"/>
-        <location filename="../defaultlook.cpp" line="535"/>
-        <location filename="../defaultlook.cpp" line="542"/>
-        <location filename="../defaultlook.cpp" line="559"/>
-        <location filename="../defaultlook.cpp" line="570"/>
-        <location filename="../defaultlook.cpp" line="580"/>
+        <location filename="../defaultlook.cpp" line="62"/>
+        <location filename="../defaultlook.cpp" line="536"/>
+        <location filename="../defaultlook.cpp" line="543"/>
+        <location filename="../defaultlook.cpp" line="560"/>
+        <location filename="../defaultlook.cpp" line="571"/>
+        <location filename="../defaultlook.cpp" line="581"/>
         <source>MX Tweak</source>
         <translation>MX Tweak</translation>
     </message>
@@ -430,53 +469,53 @@
         <translation>anmärkning: för viloläge, swap måste vara &gt;= RAM</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="534"/>
+        <location filename="../defaultlook.cpp" line="535"/>
         <source>About MX Tweak</source>
         <translation>Om MX Tweak</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="535"/>
+        <location filename="../defaultlook.cpp" line="536"/>
         <source>Version: </source>
         <translation>Version:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="536"/>
+        <location filename="../defaultlook.cpp" line="537"/>
         <source>App for quick default ui theme changes and tweaks</source>
         <translation>App för snabbändringar av användargränsnittets standardtema</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="538"/>
+        <location filename="../defaultlook.cpp" line="539"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="539"/>
-        <location filename="../defaultlook.cpp" line="542"/>
+        <location filename="../defaultlook.cpp" line="540"/>
+        <location filename="../defaultlook.cpp" line="543"/>
         <source>License</source>
         <translation>Licens</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="540"/>
+        <location filename="../defaultlook.cpp" line="541"/>
         <source>Cancel</source>
         <translation>Avbryt</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="571"/>
+        <location filename="../defaultlook.cpp" line="572"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
         <translation>Färdig! Firefox kan behöva en omstart för att ändringarna ska synas</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="581"/>
+        <location filename="../defaultlook.cpp" line="582"/>
         <source>This app is Xfce-only</source>
         <translation>Denna app är enbart för Xfce</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="723"/>
+        <location filename="../defaultlook.cpp" line="724"/>
         <source>Panel settings</source>
         <translation>Panel-inställningar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="724"/>
+        <location filename="../defaultlook.cpp" line="725"/>
         <source>Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -485,7 +524,7 @@
         <translation type="vanished">Dina nuvarande panelinställningar har en backup i en dold mapp som heter .restore i din hemkatalog (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1418"/>
+        <location filename="../defaultlook.cpp" line="1416"/>
         <source>Choose a theme set</source>
         <translation>Välj en temauppsättning</translation>
     </message>

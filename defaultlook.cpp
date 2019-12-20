@@ -37,6 +37,7 @@
 #include "window_buttons.h"
 #include "theming_to_tweak.h"
 #include "remove_user_theme_set.h"
+#include "brightness_small.h"
 
 defaultlook::defaultlook(QWidget *parent, QStringList args) :
     QDialog(parent),
@@ -1203,9 +1204,6 @@ void defaultlook::setupDisplay()
     QString GTKScale = runCmd("LANG=C xfconf-query --channel xsettings -p /Gdk/WindowScalingFactor").output;
     ui->spinBoxgtkscaling->setValue(GTKScale.toInt());
     //disable resolution stuff
-    //ui->comboBoxresolutions->hide();
-    //ui->label_resolutions->hide();
-    //ui->buttonapplyresolution->hide();
 }
 
 void defaultlook::setupresolutions()

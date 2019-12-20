@@ -17,19 +17,22 @@ SOURCES += main.cpp\
     xfwm_compositor_settings.cpp \
     window_buttons.cpp \
     theming_to_tweak.cpp \
-    remove_user_theme_set.cpp
+    remove_user_theme_set.cpp \
+    brightness_small.cpp
 
 HEADERS  += defaultlook.h \
     xfwm_compositor_settings.h \
     window_buttons.h \
     theming_to_tweak.h \
-    remove_user_theme_set.h
+    remove_user_theme_set.h \
+    brightness_small.h
 
 FORMS    += defaultlook.ui \
     xfwm_compositor_settings.ui \
     window_buttons.ui \
     theming_to_tweak.ui \
-    remove_user_theme_set.ui
+    remove_user_theme_set.ui \
+    brightness_small.ui
 
 TRANSLATIONS += translations/mx-tweak_am.ts \
                 translations/mx-tweak_ar.ts \
