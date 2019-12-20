@@ -61,6 +61,8 @@ private slots:
     void changeEvent(QEvent *event);
 
 
+    void on_buttonSave_clicked();
+
 private:
     Ui::brightness_small *ui;
     QSystemTrayIcon *trayicon;
