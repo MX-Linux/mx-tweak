@@ -244,3 +244,7 @@ void brightness_small::launchfulldisplaydialog()
     system(cmd.toUtf8());
 }
 
+void brightness_small::on_buttonSave_clicked()
+{
+    saveBrightness();
+}
