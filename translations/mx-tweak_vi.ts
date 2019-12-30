@@ -1,4 +1,4 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="kk" version="2.0">
+<?xml version="1.0" ?><!DOCTYPE TS><TS language="vi" version="2.0">
 <context>
     <name>defaultlook</name>
     <message>
@@ -51,22 +51,22 @@
     <message>
         <location filename="defaultlook.ui" line="223"/>
         <source>About</source>
-        <translation>Осы туралы</translation>
+        <translation>Về ứng dụng này</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="234"/>
         <source>Help</source>
-        <translation>Көмек</translation>
+        <translation>Trợ giúp</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="251"/>
         <source>Quit application</source>
-        <translation>Қолданба жұмысын аяқтау</translation>
+        <translation>Thoát ứng dụng</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="254"/>
         <source>Close</source>
-        <translation>Жабу</translation>
+        <translation>Đóng</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="261"/>
@@ -76,22 +76,22 @@
     <message>
         <location filename="defaultlook.ui" line="291"/>
         <source>Options</source>
-        <translation>Опциялар</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.ui" line="311"/>
         <source>Backup current panel configuration</source>
-        <translation>Ағымдағы панель баптауларын қор көшірмеге сақтау</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.ui" line="318"/>
         <source>Restore backup panel configuration</source>
-        <translation>Ағымдағы панель баптауларын қор көшірмеден қалпына келтіру</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.ui" line="325"/>
         <source>Restore default panel</source>
-        <translation>Бастапқы панельді қалпына келтіру</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.ui" line="338"/>
@@ -101,7 +101,7 @@
     <message>
         <location filename="defaultlook.ui" line="345"/>
         <source>Display panel vertically</source>
-        <translation>Панельді вертикалды көрсету</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.ui" line="365"/>
@@ -116,7 +116,7 @@
     <message>
         <location filename="defaultlook.ui" line="378"/>
         <source>Display panel horizontally</source>
-        <translation>Панельді горизонталды көрсету</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.ui" line="398"/>
@@ -131,12 +131,12 @@
     <message>
         <location filename="defaultlook.ui" line="411"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Affects all panels&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Барлық панельдерге әсер етеді&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.ui" line="431"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Buttons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Терезе батырмалары&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.ui" line="446"/>
@@ -148,7 +148,7 @@
         <location filename="defaultlook.ui" line="1104"/>
         <location filename="defaultlook.ui" line="1141"/>
         <source>Apply</source>
-        <translation>Іске асыру</translation>
+        <translation>Áp dụng</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="469"/>
@@ -158,17 +158,17 @@
     <message>
         <location filename="defaultlook.ui" line="483"/>
         <source>Theme Options</source>
-        <translation>Тема опциялары</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.ui" line="513"/>
         <source>Fix some website fields when using dark theme</source>
-        <translation>Қараңғы теманы қолданған кезде кейбір вебсайттардың өрістерін түзеу</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.ui" line="516"/>
         <source>Firefox dark theme tweak</source>
-        <translation>Firefox қараңғы темасы баптауы</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.ui" line="523"/>
@@ -230,12 +230,12 @@
     <message>
         <location filename="defaultlook.ui" line="707"/>
         <source>Edit compton.conf directly in text editor</source>
-        <translation type="unfinished"/>
+        <translation>Chỉnh sửa compton.conf trực tiếp trong trình chỉnh sửa văn bản</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="710"/>
         <source>Edit compton.conf</source>
-        <translation type="unfinished"/>
+        <translation>Chỉnh sửa compton.conf</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="767"/>
@@ -245,7 +245,7 @@
     <message>
         <location filename="defaultlook.ui" line="635"/>
         <source>Launch compton-conf configuration tool</source>
-        <translation type="unfinished"/>
+        <translation>Khởi chạy công cụ cấu hình compton-conf</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="638"/>
@@ -265,7 +265,7 @@
     <message>
         <location filename="defaultlook.ui" line="785"/>
         <source>auto</source>
-        <translation>авто</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.ui" line="790"/>
@@ -280,7 +280,7 @@
     <message>
         <location filename="defaultlook.ui" line="800"/>
         <source>off</source>
-        <translation>сөнд.</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.ui" line="811"/>
@@ -360,7 +360,7 @@
     <message>
         <location filename="defaultlook.ui" line="1010"/>
         <source>Save</source>
-        <translation>Сақтау</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1017"/>
@@ -436,7 +436,7 @@
     <message>
         <location filename="defaultlook.cpp" line="535"/>
         <source>Version: </source>
-        <translation>Нұсқасы:</translation>
+        <translation>Phiên bản:</translation>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="536"/>
@@ -452,27 +452,27 @@
         <location filename="defaultlook.cpp" line="539"/>
         <location filename="defaultlook.cpp" line="542"/>
         <source>License</source>
-        <translation>Лицензиясы</translation>
+        <translation>Giấy phép</translation>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="540"/>
         <source>Cancel</source>
-        <translation>Бас тарту</translation>
+        <translation>Hủy bỏ</translation>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="571"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
-        <translation>Аяқталды! Өзгерістер іске асуы үшін Firefox-ты қайта іске қосу керек болуы мүмкін</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="581"/>
         <source>This app is Xfce-only</source>
-        <translation>Бұл қолданба тек Xfce үшін арналған</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="723"/>
         <source>Panel settings</source>
-        <translation>Панель баптаулары</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="724"/>
@@ -512,137 +512,137 @@
         <location filename="window_buttons.ui" line="14"/>
         <location filename="window_buttons.cpp" line="37"/>
         <source>Window Buttons</source>
-        <translation>Терезе батырмалары</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="window_buttons.ui" line="28"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Appearance&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Сыртқы түрі&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="window_buttons.ui" line="35"/>
         <source>Show button labels</source>
-        <translation>Батырмалар мәтінін көрсету</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="window_buttons.ui" line="42"/>
         <source>Show flat buttons</source>
-        <translation>Жалпақ батырмаларды көрсету</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="window_buttons.ui" line="49"/>
         <source>Show handle</source>
-        <translation>Тұтқасын көрсету</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="window_buttons.ui" line="56"/>
         <source>Sorting Order:</source>
-        <translation>Сұрыптау реті:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="window_buttons.ui" line="64"/>
         <source>Timestamp</source>
-        <translation>Уақыт шамасы</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="window_buttons.ui" line="69"/>
         <source>Group title and timestamp</source>
-        <translation>Топ атауы мен уақыт шамасы</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="window_buttons.ui" line="74"/>
         <source>Window Title</source>
-        <translation>Терезе атауы</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="window_buttons.ui" line="79"/>
         <source>Group title and window title</source>
-        <translation>Топ пен терезе атауы</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="window_buttons.ui" line="84"/>
         <source>None, allow drag-and-drop</source>
-        <translation>Ешнәрсе, ұстап апару мен тастауды рұқсат ету</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="window_buttons.ui" line="92"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Behavior&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Мінез-құлығы&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="window_buttons.ui" line="99"/>
         <source>Window grouping:</source>
-        <translation>Терезелерді топтау:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="window_buttons.ui" line="107"/>
         <source>Never</source>
-        <translation>Ешқашан</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="window_buttons.ui" line="112"/>
         <source>Always</source>
-        <translation>Әрқашан</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="window_buttons.ui" line="120"/>
         <source>Middle click action:</source>
-        <translation>Орта батырманы шерту әрекеті:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="window_buttons.ui" line="128"/>
         <source>Nothing</source>
-        <translation>Ешнәрсе</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="window_buttons.ui" line="133"/>
         <source>Close window</source>
-        <translation>Терезені жабу</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="window_buttons.ui" line="138"/>
         <source>Minimize window</source>
-        <translation>Терезені қайыру</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="window_buttons.ui" line="146"/>
         <source>Restore minimized windows to current workspace</source>
-        <translation>Қайырылған терезелерді ағымдағы үстелге қалпына келтіру</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="window_buttons.ui" line="153"/>
         <source>Draw window frame when hovering over a button</source>
-        <translation>Батырмадан тышқан өткен кезде терезе шетін көрсету</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="window_buttons.ui" line="160"/>
         <source>Switch windows using the mouse wheel</source>
-        <translation>Терезелер арасында тышқан дөңгелегі арқылы ауысу</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="window_buttons.ui" line="167"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Filtering&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Сүзгілеу&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="window_buttons.ui" line="174"/>
         <source>Show windows from all workspaces or viewports</source>
-        <translation>Барлық жұмыс орындар не қарау экрандар терезелерін көрсету</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="window_buttons.ui" line="181"/>
         <source>Show only minimized windows</source>
-        <translation>Тек қайырылған терезелерді көрсету</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="window_buttons.ui" line="188"/>
         <source>Show windows from all monitors</source>
-        <translation>Барлық мониторлар терезелерін көрсету</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="window_buttons.ui" line="238"/>
         <source>Close</source>
-        <translation>Жабу</translation>
+        <translation>Đóng</translation>
     </message>
 </context>
 <context>
@@ -720,7 +720,7 @@
     <message>
         <location filename="xfwm_compositor_settings.ui" line="212"/>
         <source>Close</source>
-        <translation>Жабу</translation>
+        <translation>Đóng</translation>
     </message>
     <message>
         <location filename="xfwm_compositor_settings.cpp" line="39"/>
