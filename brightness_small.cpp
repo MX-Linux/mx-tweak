@@ -131,6 +131,7 @@ void brightness_small::setupbacklight()
         qDebug() << "backlight string is " << backlight;
         qDebug() << " backlight_slider_value is " << backlight_slider_value;
     } else {
+        ui->toolButtonExpandBacklight->hide();
         ui->horizsliderhardwarebacklight->hide();
         ui->backlight_label->hide();
         ui->label_xbacklight->hide();
