@@ -107,6 +107,25 @@ cards.</p>
 
 <p>If the user has an amd graphics part, then the user will be offered a choice to enable the &#8220;tear free&#8221; option for the radeon or amdgpu drivers, which ever is in current use.  The actual driver choice will not be changed, just the &#8220;tear free&#8221; option.<br></p>
 
+<h2>Display</h2>
+
+<img src="display-1.jpg" alt="Display" /> <img src="tray-app-1.jpg" alt="System Tray" />
+
+
+<p>On MX19 and later, a Display tab is available.  Here you can control the backlight, xrandr brightness, resolution, gtk scaling and the hidden xrandr scaling available under Xfce</p>
+
+
+	<ul>
+		<li>GTK scaling accepts only whole number scaling. This is the same as the scaling available under the Xfce Appearance application</li>
+		<li>Xrandr scaling accepts fractional scales.  These values will be saved in the standard xfconf system, so Xfce will automatically apply them on restart of Xfce</li>
+		<li>The backlight control will be available on systems with an exposed backlight interface under /sys/class/brightness.  This is mostly laptops and all-in-one devices.</li>
+        <li>The Software brightness slider controls the brightness through the xrandr interface and should work on external as well as internal monitors. Clicking "Save" will preserve the current setting across reboots</li>
+        <li>For convenience, the resolution can also be set here.  This controls the same settings as the Xfce Display application</li>
+        <li>A system tray application for controlling the brightness is also available.  A menu entry is provided, or start MX-Tweak with the --tray switch.</li>
+        <li>In the tray application, clicking the >> button will expose any backlight control available.</li>
+        <li>All settings except for backlight on are a per-user and per-display basis.  Select the proper Display from the Dropdown box.</li>
+	</ul>
+    
 <h2>Other</h2>
 
 <img src="5-1.jpg" alt="other options" />
