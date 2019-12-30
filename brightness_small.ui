@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>614</width>
-    <height>237</height>
+    <height>153</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,10 +20,7 @@
    <layout class="QGridLayout" name="gridLayout_2">
     <item row="0" column="0">
      <layout class="QGridLayout" name="gridLayout">
-      <item row="0" column="0">
-       <widget class="QComboBox" name="comboBoxDisplay"/>
-      </item>
-      <item row="0" column="1" colspan="3">
+      <item row="0" column="1">
        <spacer name="horizontalSpacer">
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
@@ -36,14 +33,14 @@
         </property>
        </spacer>
       </item>
-      <item row="1" column="0">
-       <widget class="QLabel" name="labelsoftwarebrightness">
+      <item row="2" column="3">
+       <widget class="QPushButton" name="buttonSave">
         <property name="text">
-         <string>Software (xrandr) Brightness</string>
+         <string>Save</string>
         </property>
        </widget>
       </item>
-      <item row="2" column="0" colspan="2">
+      <item row="2" column="0">
        <widget class="QSlider" name="horizontalSliderBrightness">
         <property name="minimum">
          <number>1</number>
@@ -56,17 +53,24 @@
         </property>
        </widget>
       </item>
-      <item row="2" column="2">
-       <widget class="QLabel" name="label_brightness_slider">
+      <item row="1" column="0">
+       <widget class="QLabel" name="labelsoftwarebrightness">
+        <property name="text">
+         <string>Software (xrandr) Brightness</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1" colspan="2">
+       <widget class="QLabel" name="backlight_label">
         <property name="text">
          <string>TextLabel</string>
         </property>
        </widget>
       </item>
-      <item row="2" column="3">
-       <widget class="QPushButton" name="buttonSave">
-        <property name="text">
-         <string>Save</string>
+      <item row="4" column="0">
+       <widget class="QSlider" name="horizsliderhardwarebacklight">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
         </property>
        </widget>
       </item>
@@ -77,19 +81,22 @@
         </property>
        </widget>
       </item>
-      <item row="4" column="0" colspan="2">
-       <widget class="QSlider" name="horizsliderhardwarebacklight">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-       </widget>
-      </item>
-      <item row="4" column="2">
-       <widget class="QLabel" name="backlight_label">
+      <item row="2" column="1" colspan="2">
+       <widget class="QLabel" name="label_brightness_slider">
         <property name="text">
          <string>TextLabel</string>
         </property>
        </widget>
+      </item>
+      <item row="0" column="2" colspan="2">
+       <widget class="QToolButton" name="toolButtonExpandBacklight">
+        <property name="text">
+         <string>&gt;&gt;</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QComboBox" name="comboBoxDisplay"/>
       </item>
      </layout>
     </item>

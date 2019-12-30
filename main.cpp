@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
     a.installTranslator(&appTran);
 
     if (a.arguments().contains("--tray")){
-        brightness_small fred;
+        brightness_small fred(0,a.arguments());
         return a.exec();
     } else {
       defaultlook w(0, a.arguments());
