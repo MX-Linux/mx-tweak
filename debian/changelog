@@ -1,3 +1,11 @@
+mx-tweak (19.12.08) mx; urgency=medium
+
+  * update translations
+  * update icons on tray app
+  * update help file
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Mon, 30 Dec 2019 14:59:26 -0500
+
 mx-tweak (19.12.07) mx; urgency=medium
 
   * add tray mode, small brightness dialog 

@@ -18,7 +18,7 @@ brightness_small::brightness_small(QWidget *parent, QStringList args) :
     ui->buttonSave->setIcon(save);
     setupDisplay();
     QIcon icon;
-    icon = QIcon::fromTheme("video-display");
+    icon = QIcon::fromTheme("display-brightness");
     setWindowIcon(icon);
     setWindowTitle(tr("MX-Tweak"));
     expand = false;
