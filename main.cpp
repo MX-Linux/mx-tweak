@@ -24,9 +24,9 @@
 #include "defaultlook.h"
 #include <QApplication>
 #include <unistd.h>
-#include <QApplication>
 #include <QTranslator>
 #include <QLocale>
+#include "brightness_small.h"
 
 int main(int argc, char *argv[])
 {
@@ -40,7 +40,12 @@ int main(int argc, char *argv[])
     appTran.load(QString("mx-tweak_") + QLocale::system().name(), "/usr/share/mx-tweak/locale");
     a.installTranslator(&appTran);
 
-    defaultlook w(0, a.arguments());
-    w.show();
-    return a.exec();
+    if (a.arguments().contains("--tray")){
+        brightness_small fred(0,a.arguments());
+        return a.exec();
+    } else {
+      defaultlook w(0, a.arguments());
+      w.show();
+      return a.exec();
+    }
 }
