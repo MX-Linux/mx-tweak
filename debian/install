@@ -1,5 +1,6 @@
 mx-tweak	 		 usr/bin
 mx-tweak.desktop	 usr/share/applications
+mx-tweak-systray    usr/share/applications
 translations/*.qm 	 usr/share/mx-tweak/locale
 icons/*                 usr/share/mx-tweak/icons
 license.html            usr/share/doc/mx-tweak
