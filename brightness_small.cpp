@@ -7,7 +7,7 @@
 #include "QDialog"
 #include "QKeyEvent"
 
-brightness_small::brightness_small(QWidget *parent) :
+brightness_small::brightness_small(QWidget *parent, QStringList args) :
     QMainWindow(parent),
     ui(new Ui::brightness_small)
 {
@@ -21,6 +21,21 @@ brightness_small::brightness_small(QWidget *parent) :
     icon = QIcon::fromTheme("video-display");
     setWindowIcon(icon);
     setWindowTitle(tr("MX-Tweak"));
+    expand = false;
+    QString home_path = QDir::homePath();
+    QString config_file_path = home_path + "/.config/MX-Linux/MX-Tweak/expand";
+    if (args.contains("--full") || QFileInfo::exists(config_file_path)) {
+        expand = true;
+    }
+    if (expand){
+        ui->label_xbacklight->show();
+        ui->horizsliderhardwarebacklight->show();
+        ui->backlight_label->show();
+    } else {
+        ui->label_xbacklight->hide();
+        ui->horizsliderhardwarebacklight->hide();
+        ui->backlight_label->hide();
+    }
     trayicon = new QSystemTrayIcon;
     trayicon->setIcon(icon);
     trayicon->show();
@@ -28,16 +43,17 @@ brightness_small::brightness_small(QWidget *parent) :
 
     this->adjustSize();
 
-    quitAction = new QAction(QIcon::fromTheme("gtk-quit"), tr("&Quit"), this);
-    connect(quitAction, &QAction::triggered, qApp, &QGuiApplication::quit);
-    full = new QAction(QIcon::fromTheme("video-display"), tr("Display"), this);
-    connect(full, &QAction::triggered, this, &brightness_small::launchfulldisplaydialog);
-
     menu = new QMenu(this);
 
-    menu->addAction(full);
-    menu->addSeparator();
-    menu->addAction(quitAction);
+    if (QFileInfo::exists("/usr/bin/mx-tweak")) {
+            full = new QAction(QIcon::fromTheme("video-display"), tr("Display"), this);
+            connect(full, &QAction::triggered, this, &brightness_small::launchfulldisplaydialog);
+             menu->addAction(full);
+             menu->addSeparator();
+        }
+        quitAction = new QAction(QIcon::fromTheme("gtk-quit"), tr("&Quit"), this);
+        connect(quitAction, &QAction::triggered, qApp, &QGuiApplication::quit);
+        menu->addAction(quitAction);
 
     connect(trayicon, &QSystemTrayIcon::messageClicked, this, &brightness_small::messageClicked);
     connect(trayicon, &QSystemTrayIcon::activated, this, &brightness_small::iconActivated);
@@ -53,6 +69,7 @@ void brightness_small::iconActivated(QSystemTrayIcon::ActivationReason reason)
         setupGamma();
         setupbacklight();
         this->move(QCursor::pos());
+        this->adjustSize();
         this->show();
         break;
     default:
@@ -160,6 +177,9 @@ void brightness_small::on_horizontalSliderBrightness_valueChanged(int value)
     ui->horizontalSliderBrightness->setToolTip(slider_value);
     ui->label_brightness_slider->setText(slider_value);
     if ( brightnessflag ) {
+        setupBrightness();
+        setupGamma();
+        setupbacklight();
         setBrightness();
     }
 }
@@ -194,8 +214,10 @@ void brightness_small::saveBrightness()
 
 void brightness_small::on_comboBoxDisplay_currentIndexChanged(int index)
 {
-    setupBrightness();
-    setupGamma();
+    if (brightnessflag) {
+        setupBrightness();
+        setupGamma();
+    }
 }
 
 void brightness_small::setupDisplay()
@@ -205,9 +227,6 @@ void brightness_small::setupDisplay()
     QStringList displaylist = displaydata.split("\n");
     ui->comboBoxDisplay->clear();
     ui->comboBoxDisplay->addItems(displaylist);
-    setupBrightness();
-    setupGamma();
-    setupbacklight();
     brightnessflag = true;
 }
 
@@ -247,4 +266,31 @@ void brightness_small::launchfulldisplaydialog()
 void brightness_small::on_buttonSave_clicked()
 {
     saveBrightness();
+}
+
+void brightness_small::on_toolButtonExpandBacklight_clicked()
+{
+    QString home_path = QDir::homePath();
+    QString config_file_path = home_path + "/.config/MX-Linux/MX-Tweak/expand";
+    //expand toggle
+    if ( ! expand ){
+        expand = true;
+    } else {
+        expand = false;
+    }
+
+    if (! expand){
+
+        QString cmd = "rm " + config_file_path;
+        system(cmd.toUtf8());
+        ui->label_xbacklight->hide();
+        ui->horizsliderhardwarebacklight->hide();
+        ui->backlight_label->hide();
+    } else {
+        QString cmd = "touch " + config_file_path;
+        system(cmd.toUtf8());
+        ui->label_xbacklight->show();
+        ui->horizsliderhardwarebacklight->show();
+        ui->backlight_label->show();
+    }
 }

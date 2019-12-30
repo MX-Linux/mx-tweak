@@ -37,6 +37,7 @@ FORMS    += defaultlook.ui \
 TRANSLATIONS += translations/mx-tweak_am.ts \
                 translations/mx-tweak_ar.ts \
                 translations/mx-tweak_bg.ts \
+                translations/mx-tweak_bn.ts \
                 translations/mx-tweak_ca.ts \
                 translations/mx-tweak_cs.ts \
                 translations/mx-tweak_da.ts \
@@ -47,6 +48,7 @@ TRANSLATIONS += translations/mx-tweak_am.ts \
                 translations/mx-tweak_eu.ts \
                 translations/mx-tweak_fa.ts \
                 translations/mx-tweak_fi.ts \
+                translations/mx-tweak_fil_PH.ts \
                 translations/mx-tweak_fr.ts \
                 translations/mx-tweak_he_IL.ts \
                 translations/mx-tweak_hi.ts \
@@ -76,6 +78,7 @@ TRANSLATIONS += translations/mx-tweak_am.ts \
                 translations/mx-tweak_sv.ts \
                 translations/mx-tweak_tr.ts \
                 translations/mx-tweak_uk.ts \
+                translations/mx-tweak_vi.ts \
                 translations/mx-tweak_zh_CN.ts \
                 translations/mx-tweak_zh_TW.ts
 

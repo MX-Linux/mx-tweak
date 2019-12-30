@@ -28,7 +28,7 @@ protected:
     QTimer *timer;
 
 public:
-    explicit brightness_small(QWidget *parent = 0);
+    explicit brightness_small(QWidget *parent = 0, QStringList args = QStringList());
     ~brightness_small();
     Result3 runCmd(QString cmd);
     void setmissingxfconfvariables(QString arg1, QString arg2);
@@ -44,6 +44,7 @@ public:
     QString g1;
     QString g2;
     QString g3;
+    bool expand;
 
 private slots:
     void on_comboBoxDisplay_currentIndexChanged(int index);
@@ -62,6 +63,8 @@ private slots:
 
 
     void on_buttonSave_clicked();
+
+    void on_toolButtonExpandBacklight_clicked();
 
 private:
     Ui::brightness_small *ui;
