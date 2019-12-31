@@ -178,9 +178,9 @@ void brightness_small::on_horizontalSliderBrightness_valueChanged(int value)
     ui->horizontalSliderBrightness->setToolTip(slider_value);
     ui->label_brightness_slider->setText(slider_value);
     if ( brightnessflag ) {
-        setupBrightness();
-        setupGamma();
-        setupbacklight();
+        //setupBrightness();
+        //setupGamma();
+        //setupbacklight();
         setBrightness();
     }
 }
