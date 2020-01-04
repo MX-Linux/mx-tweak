@@ -96,11 +96,11 @@ Comment[uk]=brightness systray application
 Comment[vi]=brightness systray application
 Comment[zh_CN]=brightness systray application
 Comment[zh_TW]=brightness systray application
-Exec=mx-tweak --tray
+Exec=mx-tweak --tray &
 Terminal=false
 Type=Application
 Icon=display-brightness
-Categories=XFCE;Settings;DesktopSettings;X-XFCE-SettingsDialog;X-XFCE-PersonalSettings;MX-Setup;
+Categories=XFCE;Settings;DesktopSettings;MX-Setup;
 Keywords=Desktop
 NoDisplay=false
 

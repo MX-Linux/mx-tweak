@@ -1,3 +1,9 @@
+mx-tweak (20.01.01) mx; urgency=medium
+
+  * update launcher icon for tray app 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Fri, 03 Jan 2020 20:05:27 -0500
+
 mx-tweak (19.12.09) mx; urgency=medium
 
   * fix stupid setupgamma problem. 

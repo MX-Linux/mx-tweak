@@ -11,6 +11,13 @@ brightness_small::brightness_small(QWidget *parent, QStringList args) :
     QMainWindow(parent),
     ui(new Ui::brightness_small)
 {
+    //check to see if running, if so, exit quick
+    QString check = runCmd("ps -aux |grep -E 'mx-tweak.*--tray'|grep -v grep|wc -l").output;
+
+    if ( check.toInt() >= 2) {
+        qDebug() << "check is " << check;
+        exit(1);
+    }
     ui->setupUi(this);
     setWindowFlags(Qt::CustomizeWindowHint); // for the close, min and max buttons
     QIcon save;
