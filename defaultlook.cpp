@@ -893,6 +893,14 @@ void defaultlook::setupEtc()
         ui->checkboxNoEllipse->setChecked(false);
     }
 
+    //setup sudo override function
+    QFileInfo sudo_override_file("/etc/polkit-1/localauthority.conf.d/55-tweak-override.conf");
+    if (sudo_override_file.exists()) {
+        ui->checkBoxSudoOverride->setChecked(true);
+    } else {
+        ui->checkBoxSudoOverride->setChecked(false);
+    }
+
     //setup hibernate switch
     //first, hide if running live
     test = runCmd("df -T / |tail -n1 |awk '{print $2}'").output;
@@ -1642,9 +1650,11 @@ void defaultlook::on_ButtonApplyEtc_clicked()
 
     //deal with udisks option
     QFileInfo fileinfo("/etc/tweak-udisks.chk");
+    QFileInfo sudo_override("/etc/polkit-1/localauthority.conf.d/55-tweak-override.conf");
     QString cmd;
     QString udisks_option;
     QString hibernate_option;
+    QString sudo_override_option;
     udisks_option.clear();
     hibernate_option.clear();
 
@@ -1697,6 +1707,24 @@ void defaultlook::on_ButtonApplyEtc_clicked()
         }
     }
 
+    //deal with sudo override
+
+    if (ui->checkBoxSudoOverride->isChecked()) {
+        if (sudo_override.exists()) {
+            qDebug() << "no change to admin password settings";
+        } else {
+            sudo_override_option = "enable_sudo_override";
+        }
+    } else {
+        if (sudo_override.exists()) {
+            sudo_override_option = "disable_sudo_override";
+        } else {
+            qDebug() << "no change to admin password settings";
+        }
+    }
+
+
+
     //deal with hibernate
     if (ui->checkBoxHibernate->isChecked() != hibernate_flag) {
         if (ui->checkBoxHibernate->isChecked()) {
@@ -1708,11 +1736,11 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     }
 
 
-    if ( ! hibernate_option.isEmpty() || ! udisks_option.isEmpty()) {
+    if ( ! hibernate_option.isEmpty() || ! udisks_option.isEmpty() || ! sudo_override_option.isEmpty()) {
         if ( hibernate_option.isEmpty()) {
-            runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + udisks_option);
+            runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + udisks_option + " " + sudo_override_option);
         } else {
-            runCmd("x-terminal-emulator -e 'pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + udisks_option + " " + hibernate_option + "'");
+            runCmd("x-terminal-emulator -e 'pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + udisks_option + " " + sudo_override_option + " " + hibernate_option + "'");
         }
     }
 
@@ -1990,6 +2018,11 @@ void defaultlook::on_pushButtonPreview_clicked()
 }
 
 void defaultlook::on_checkBoxHibernate_clicked()
+{
+    ui->ButtonApplyEtc->setEnabled(true);
+}
+
+void defaultlook::on_checkBoxSudoOverride_clicked()
 {
     ui->ButtonApplyEtc->setEnabled(true);
 }
@@ -2279,3 +2312,5 @@ void defaultlook::on_buttonapplyresolution_clicked()
 {
     setresolution();
 }
+
+

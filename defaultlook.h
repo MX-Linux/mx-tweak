@@ -226,6 +226,8 @@ private slots:
 
     void on_buttonapplyresolution_clicked();
 
+    void on_checkBoxSudoOverride_clicked();
+
 private:
     Ui::defaultlook *ui;
 };
