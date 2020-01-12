@@ -896,9 +896,9 @@ void defaultlook::setupEtc()
     //setup sudo override function
     QFileInfo sudo_override_file("/etc/polkit-1/localauthority.conf.d/55-tweak-override.conf");
     if (sudo_override_file.exists()) {
-        ui->checkBoxSudoOverride->setChecked(true);
+        ui->radioSudoUser->setChecked(true);
     } else {
-        ui->checkBoxSudoOverride->setChecked(false);
+        ui->radioSudoRoot->setChecked(true);
     }
 
     //setup hibernate switch
@@ -1709,7 +1709,7 @@ void defaultlook::on_ButtonApplyEtc_clicked()
 
     //deal with sudo override
 
-    if (ui->checkBoxSudoOverride->isChecked()) {
+    if (ui->radioSudoUser->isChecked()) {
         if (sudo_override.exists()) {
             qDebug() << "no change to admin password settings";
         } else {
@@ -2022,7 +2022,11 @@ void defaultlook::on_checkBoxHibernate_clicked()
     ui->ButtonApplyEtc->setEnabled(true);
 }
 
-void defaultlook::on_checkBoxSudoOverride_clicked()
+void defaultlook::on_radioSudoUser_clicked()
+{
+    ui->ButtonApplyEtc->setEnabled(true);
+}
+void defaultlook::on_radioSudoRoot_clicked()
 {
     ui->ButtonApplyEtc->setEnabled(true);
 }
