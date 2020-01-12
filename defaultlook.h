@@ -226,6 +226,9 @@ private slots:
 
     void on_buttonapplyresolution_clicked();
 
+    void on_radioSudoUser_clicked();
+    void on_radioSudoRoot_clicked();
+
 private:
     Ui::defaultlook *ui;
 };

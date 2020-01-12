@@ -1,9 +1,12 @@
 #!/bin/bash
 
 # restore saved brightness upon reboot
-while [ -z "$(pidof xfdesktop)" ]; do
-	sleep 1
+# if xfce is starting up, wait for xfdesktop
+if [ "$XDG_CURRENT_DESKTOP" = "XFCE"]; then
+    while [ -z "$(pidof xfdesktop)" ]; do
+        sleep 1
 done
+fi
  
 sleep 1
 CONFIG_FOLDER="$HOME/.config/MX-Linux/MX-Tweak/brightness"

@@ -276,7 +276,7 @@
         <enum>QTabWidget::North</enum>
        </property>
        <property name="currentIndex">
-        <number>4</number>
+        <number>5</number>
        </property>
        <widget class="QWidget" name="Panel">
         <attribute name="title">
@@ -1115,21 +1115,34 @@
         <layout class="QGridLayout" name="gridLayout_8">
          <item row="0" column="0">
           <layout class="QGridLayout" name="gridLayout_7">
-           <item row="0" column="0">
-            <widget class="QCheckBox" name="checkBoxSingleClick">
-             <property name="text">
-              <string>Enable single-click on desktop</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QCheckBox" name="checkBoxThunarSingleClick">
-             <property name="text">
-              <string>Enable single-click in Thunar File Manager</string>
-             </property>
-            </widget>
-           </item>
            <item row="9" column="0">
+            <spacer name="verticalSpacer_6">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="2" column="0" colspan="4">
+            <widget class="QCheckBox" name="checkBoxSystrayFrame">
+             <property name="text">
+              <string>Show systray (notification area) frame</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="label_11">
+             <property name="text">
+              <string>Password for administrative tasks:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="0" colspan="4">
             <widget class="QPushButton" name="ButtonApplyEtc">
              <property name="minimumSize">
               <size>
@@ -1146,58 +1159,79 @@
              </property>
             </widget>
            </item>
-           <item row="8" column="0">
-            <spacer name="verticalSpacer_6">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>20</width>
-               <height>40</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="2" column="0">
-            <widget class="QCheckBox" name="checkBoxSystrayFrame">
-             <property name="text">
-              <string>Show systray (notification area) frame</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="0">
+           <item row="3" column="0" colspan="4">
             <widget class="QCheckBox" name="checkBoxShowAllWorkspaces">
              <property name="text">
               <string>Show windows from all workspaces in panel</string>
              </property>
             </widget>
            </item>
-           <item row="4" column="0">
-            <widget class="QCheckBox" name="checkBoxMountInternalDrivesNonRoot">
+           <item row="6" column="2">
+            <widget class="QRadioButton" name="radioSudoRoot">
              <property name="text">
-              <string>Enable mounting of internal drives by non-root users</string>
+              <string>Root</string>
              </property>
             </widget>
            </item>
-           <item row="5" column="0">
-            <widget class="QCheckBox" name="checkboxNoEllipse">
+           <item row="0" column="0" colspan="4">
+            <widget class="QCheckBox" name="checkBoxSingleClick">
              <property name="text">
-              <string>Disable shortening of long filenames on the desktop</string>
+              <string>Enable single-click on desktop</string>
              </property>
             </widget>
            </item>
-           <item row="6" column="0">
+           <item row="7" column="0" colspan="4">
             <widget class="QCheckBox" name="checkBoxHibernate">
              <property name="text">
               <string>Enable hibernate on Log Out menu </string>
              </property>
             </widget>
            </item>
-           <item row="7" column="0">
+           <item row="4" column="0" colspan="4">
+            <widget class="QCheckBox" name="checkBoxMountInternalDrivesNonRoot">
+             <property name="text">
+              <string>Enable mounting of internal drives by non-root users</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0" colspan="4">
             <widget class="QLabel" name="label_hibernate">
              <property name="text">
               <string>                   note: to hibernate, swap needs to be &gt;= RAM</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0" colspan="4">
+            <widget class="QCheckBox" name="checkboxNoEllipse">
+             <property name="text">
+              <string>Disable shortening of long filenames on the desktop</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <widget class="QRadioButton" name="radioSudoUser">
+             <property name="text">
+              <string>User</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="3">
+            <spacer name="horizontalSpacer_5">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="0" colspan="4">
+            <widget class="QCheckBox" name="checkBoxThunarSingleClick">
+             <property name="text">
+              <string>Enable single-click in Thunar File Manager</string>
              </property>
             </widget>
            </item>

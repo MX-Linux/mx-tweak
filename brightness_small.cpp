@@ -11,6 +11,13 @@ brightness_small::brightness_small(QWidget *parent, QStringList args) :
     QMainWindow(parent),
     ui(new Ui::brightness_small)
 {
+    //check to see if running, if so, exit quick
+    QString check = runCmd("ps -aux |grep -E 'mx-tweak.*--tray'|grep -v grep|wc -l").output;
+
+    if ( check.toInt() >= 2) {
+        qDebug() << "check is " << check;
+        exit(1);
+    }
     ui->setupUi(this);
     setWindowFlags(Qt::CustomizeWindowHint); // for the close, min and max buttons
     QIcon save;
@@ -18,7 +25,7 @@ brightness_small::brightness_small(QWidget *parent, QStringList args) :
     ui->buttonSave->setIcon(save);
     setupDisplay();
     QIcon icon;
-    icon = QIcon::fromTheme("video-display");
+    icon = QIcon::fromTheme("display-brightness");
     setWindowIcon(icon);
     setWindowTitle(tr("MX-Tweak"));
     expand = false;
@@ -131,6 +138,7 @@ void brightness_small::setupbacklight()
         qDebug() << "backlight string is " << backlight;
         qDebug() << " backlight_slider_value is " << backlight_slider_value;
     } else {
+        ui->toolButtonExpandBacklight->hide();
         ui->horizsliderhardwarebacklight->hide();
         ui->backlight_label->hide();
         ui->label_xbacklight->hide();
@@ -177,9 +185,9 @@ void brightness_small::on_horizontalSliderBrightness_valueChanged(int value)
     ui->horizontalSliderBrightness->setToolTip(slider_value);
     ui->label_brightness_slider->setText(slider_value);
     if ( brightnessflag ) {
-        setupBrightness();
-        setupGamma();
-        setupbacklight();
+        //setupBrightness();
+        //setupGamma();
+        //setupbacklight();
         setBrightness();
     }
 }

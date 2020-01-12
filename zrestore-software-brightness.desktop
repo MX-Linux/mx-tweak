@@ -2,9 +2,9 @@
 Encoding=UTF-8
 Version=0.9.4
 Type=Application
-Name=restore-software-brightness-mx
+Name=restore-software-brightness
 Comment=restore xrandr brightness values stored mx-tweak display tab
-Exec=restore-software-brightness-mx
+Exec=restore-software-brightness
 OnlyShowIn=XFCE;
 StartupNotify=false
 Terminal=false
