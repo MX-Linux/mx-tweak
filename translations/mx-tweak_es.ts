@@ -35,17 +35,17 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../brightness_small.cpp" line="23"/>
+        <location filename="../brightness_small.cpp" line="30"/>
         <source>MX-Tweak</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../brightness_small.cpp" line="49"/>
+        <location filename="../brightness_small.cpp" line="56"/>
         <source>Display</source>
         <translation type="unfinished">Pantalla</translation>
     </message>
     <message>
-        <location filename="../brightness_small.cpp" line="54"/>
+        <location filename="../brightness_small.cpp" line="61"/>
         <source>&amp;Quit</source>
         <translation type="unfinished"></translation>
     </message>
@@ -197,7 +197,7 @@
         <location filename="../defaultlook.ui" line="974"/>
         <location filename="../defaultlook.ui" line="1097"/>
         <location filename="../defaultlook.ui" line="1104"/>
-        <location filename="../defaultlook.ui" line="1141"/>
+        <location filename="../defaultlook.ui" line="1154"/>
         <source>Apply</source>
         <translation>Aplicar</translation>
     </message>
@@ -292,6 +292,16 @@
         <location filename="../defaultlook.ui" line="767"/>
         <source>Transparency and shadow options</source>
         <translation>Opciones de transparencias y sombras</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1227"/>
+        <source>Password for administrative tasks:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1234"/>
+        <source>User</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="635"/>
@@ -441,41 +451,46 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1121"/>
+        <source>Root</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1172"/>
         <source>Enable single-click on desktop</source>
         <translation>Habilitar un solo clic en el escritorio</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1128"/>
+        <location filename="../defaultlook.ui" line="1207"/>
         <source>Enable single-click in Thunar File Manager</source>
         <translation>Habilitar un solo clic en el gestor de archivos Thunar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1165"/>
+        <location filename="../defaultlook.ui" line="1141"/>
         <source>Show systray (notification area) frame</source>
         <translation>Mostrar marco de bandeja del sistema (área de notificación)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1172"/>
+        <location filename="../defaultlook.ui" line="1165"/>
         <source>Show windows from all workspaces in panel</source>
         <translation>Mostrar ventanas de todas las áreas de trabajo en el panel</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1179"/>
+        <location filename="../defaultlook.ui" line="1186"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>Habilitar montar discos internos por usuarios no-root</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1186"/>
+        <location filename="../defaultlook.ui" line="1200"/>
         <source>Disable shortening of long filenames on the desktop</source>
         <translation>Deshabilitar acortar nombres largos de archivos en el escritorio</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1193"/>
+        <location filename="../defaultlook.ui" line="1179"/>
         <source>Enable hibernate on Log Out menu </source>
         <translation>Habilitar Hibernar en el menú de Salida</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1200"/>
+        <location filename="../defaultlook.ui" line="1193"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
         <translation>                   nota: para hibernar, el swap debe ser &gt;= RAM</translation>
     </message>
@@ -531,7 +546,7 @@
         <translation>La configuración actual de su panel se ha guardado en una carpeta oculta llamada .restore en su carpeta de inicio (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1416"/>
+        <location filename="../defaultlook.cpp" line="1424"/>
         <source>Choose a theme set</source>
         <translation>Elegir un conjunto de temas</translation>
     </message>

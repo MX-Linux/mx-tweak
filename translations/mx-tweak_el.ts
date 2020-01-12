@@ -35,17 +35,17 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../brightness_small.cpp" line="23"/>
+        <location filename="../brightness_small.cpp" line="30"/>
         <source>MX-Tweak</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../brightness_small.cpp" line="49"/>
+        <location filename="../brightness_small.cpp" line="56"/>
         <source>Display</source>
         <translation type="unfinished">Οθόνη</translation>
     </message>
     <message>
-        <location filename="../brightness_small.cpp" line="54"/>
+        <location filename="../brightness_small.cpp" line="61"/>
         <source>&amp;Quit</source>
         <translation type="unfinished"></translation>
     </message>
@@ -197,7 +197,7 @@
         <location filename="../defaultlook.ui" line="974"/>
         <location filename="../defaultlook.ui" line="1097"/>
         <location filename="../defaultlook.ui" line="1104"/>
-        <location filename="../defaultlook.ui" line="1141"/>
+        <location filename="../defaultlook.ui" line="1154"/>
         <source>Apply</source>
         <translation>Εφαρμογή</translation>
     </message>
@@ -292,6 +292,16 @@
         <location filename="../defaultlook.ui" line="767"/>
         <source>Transparency and shadow options</source>
         <translation>επιλογές διαφάνειας και σκιάς</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1227"/>
+        <source>Password for administrative tasks:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1234"/>
+        <source>User</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="635"/>
@@ -441,41 +451,46 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1121"/>
+        <source>Root</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1172"/>
         <source>Enable single-click on desktop</source>
         <translation>Ενεργοποίηση του μονό κλικ στην επιφάνεια εργασίας</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1128"/>
+        <location filename="../defaultlook.ui" line="1207"/>
         <source>Enable single-click in Thunar File Manager</source>
         <translation>Ενεργοποίηση του μονό κλικ στο Thunar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1165"/>
+        <location filename="../defaultlook.ui" line="1141"/>
         <source>Show systray (notification area) frame</source>
         <translation>Εμφάνιση πλαισίου systray (περιοχή ειδοποίησης)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1172"/>
+        <location filename="../defaultlook.ui" line="1165"/>
         <source>Show windows from all workspaces in panel</source>
         <translation>Εμφάνιση παράθυρα από όλους τους χώρους εργασίας στον πίνακα</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1179"/>
+        <location filename="../defaultlook.ui" line="1186"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>Ενεργοποιήστε την τοποθέτηση εσωτερικών μονάδων δίσκου από μη χρήστες root</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1186"/>
+        <location filename="../defaultlook.ui" line="1200"/>
         <source>Disable shortening of long filenames on the desktop</source>
         <translation>Απενεργοποιήστε τη συντόμευση των μακροχρόνιων ονομάτων αρχείων στην επιφάνεια εργασίας</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1193"/>
+        <location filename="../defaultlook.ui" line="1179"/>
         <source>Enable hibernate on Log Out menu </source>
         <translation>Ενεργοποιήστε την αδρανοποίηση στο μενού Αποσύνδεση</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1200"/>
+        <location filename="../defaultlook.ui" line="1193"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
         <translation>Σημείωση: σε κατάσταση αδρανοποίησης, το swap πρέπει να είναι &gt;= RAM</translation>
     </message>
@@ -531,7 +546,7 @@
         <translation>Οι τρέχουσες ρυθμίσεις του Panel  σας δημιουργήσει αντίγραφα ασφαλείας σε έναν κρυφό φάκελο που ονομάζεται .restore στο φάκελο /home (~/.restore /)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1416"/>
+        <location filename="../defaultlook.cpp" line="1424"/>
         <source>Choose a theme set</source>
         <translation>Επιλέξτε ένα σύνολο θέματος</translation>
     </message>

@@ -35,17 +35,17 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../brightness_small.cpp" line="23"/>
+        <location filename="../brightness_small.cpp" line="30"/>
         <source>MX-Tweak</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../brightness_small.cpp" line="49"/>
+        <location filename="../brightness_small.cpp" line="56"/>
         <source>Display</source>
         <translation type="unfinished">Beeldscherm</translation>
     </message>
     <message>
-        <location filename="../brightness_small.cpp" line="54"/>
+        <location filename="../brightness_small.cpp" line="61"/>
         <source>&amp;Quit</source>
         <translation type="unfinished"></translation>
     </message>
@@ -197,7 +197,7 @@
         <location filename="../defaultlook.ui" line="974"/>
         <location filename="../defaultlook.ui" line="1097"/>
         <location filename="../defaultlook.ui" line="1104"/>
-        <location filename="../defaultlook.ui" line="1141"/>
+        <location filename="../defaultlook.ui" line="1154"/>
         <source>Apply</source>
         <translation>Toepassen</translation>
     </message>
@@ -292,6 +292,16 @@
         <location filename="../defaultlook.ui" line="767"/>
         <source>Transparency and shadow options</source>
         <translation>Transparantie- en schaduwopties</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1227"/>
+        <source>Password for administrative tasks:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1234"/>
+        <source>User</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="635"/>
@@ -441,41 +451,46 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1121"/>
+        <source>Root</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1172"/>
         <source>Enable single-click on desktop</source>
         <translation>Schakel enkel-klik op desktop in</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1128"/>
+        <location filename="../defaultlook.ui" line="1207"/>
         <source>Enable single-click in Thunar File Manager</source>
         <translation>Schakel enkel-klik in Thunar Bestandbeheer in</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1165"/>
+        <location filename="../defaultlook.ui" line="1141"/>
         <source>Show systray (notification area) frame</source>
         <translation>Laat systeemtray (notificatiegebied) venster zien</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1172"/>
+        <location filename="../defaultlook.ui" line="1165"/>
         <source>Show windows from all workspaces in panel</source>
         <translation>Laat schermen van alle werkgebieden in paneel zien</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1179"/>
+        <location filename="../defaultlook.ui" line="1186"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>Maak koppelen van interne schijven door niet-root gebruikers mogelijk</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1186"/>
+        <location filename="../defaultlook.ui" line="1200"/>
         <source>Disable shortening of long filenames on the desktop</source>
         <translation>Schakel verkorten van lange bestandsnamen op de desktop uit</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1193"/>
+        <location filename="../defaultlook.ui" line="1179"/>
         <source>Enable hibernate on Log Out menu </source>
         <translation>Schakel slaapstand in in Afmeldmenu</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1200"/>
+        <location filename="../defaultlook.ui" line="1193"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
         <translation>                   let op: voor slaapstand moet swap &gt;= RAM</translation>
     </message>
@@ -531,7 +546,7 @@
         <translation>Uw huidige paneelinstellingen zijn gebackupt in een verborgen folder genaamd .restore in uw home folder (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1416"/>
+        <location filename="../defaultlook.cpp" line="1424"/>
         <source>Choose a theme set</source>
         <translation>Kies een thema set</translation>
     </message>
