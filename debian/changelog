@@ -1,3 +1,9 @@
+mx-tweak (20.01.01+2) mx; urgency=medium
+
+  * revise to use radio buttons for super user prompt selection (chkboom)
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 11 Jan 2020 21:48:22 -0500
+
 mx-tweak (20.01.01+1) mx; urgency=medium
 
   * add user password for super user authentication option 
