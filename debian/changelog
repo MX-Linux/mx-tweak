@@ -1,3 +1,30 @@
+mx-tweak (20.01.01+1) mx; urgency=medium
+
+  * add user password for super user authentication option 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Fri, 10 Jan 2020 21:24:57 -0500
+
+mx-tweak (20.01.01) mx; urgency=medium
+
+  * update launcher icon for tray app 
+  * only allow one instance of tray app to launch
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Fri, 03 Jan 2020 20:05:27 -0500
+
+mx-tweak (19.12.09) mx; urgency=medium
+
+  * fix stupid setupgamma problem. 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Mon, 30 Dec 2019 20:35:00 -0500
+
+mx-tweak (19.12.08) mx; urgency=medium
+
+  * update translations
+  * update icons on tray app
+  * update help file
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Mon, 30 Dec 2019 14:59:26 -0500
+
 mx-tweak (19.12.07) mx; urgency=medium
 
   * add tray mode, small brightness dialog 

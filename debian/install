@@ -1,5 +1,6 @@
 mx-tweak	 		 usr/bin
 mx-tweak.desktop	 usr/share/applications
+mx-tweak-systray.desktop    usr/share/applications
 translations/*.qm 	 usr/share/mx-tweak/locale
 icons/*                 usr/share/mx-tweak/icons
 license.html            usr/share/doc/mx-tweak
@@ -11,6 +12,7 @@ mx.tweak.template usr/share/mx-tweak-data
 zcompton.desktop		usr/share/mx-tweak
 *.conf			usr/share/mx-tweak
 50-udisks.pkla 	usr/share/mx-tweak
+55-tweak-override.conf usr/share/mx-tweak
 20-intel.conf   usr/share/mx-tweak
 20-amd.conf 	usr/share/mx-tweak
 20-radeon.conf	usr/share/mx-tweak
@@ -20,4 +22,5 @@ actions/* usr/share/polkit-1/actions
 compton-launch.sh usr/local/bin
 bin/* usr/bin
 zrestore-software-brightness.desktop etc/xdg/autostart
+mx-tweak-tray-app-autostart.desktop etc/xdg/autostart
 sudoers/* etc/sudoers.d

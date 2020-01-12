@@ -102,6 +102,24 @@ sleep 3
 exit 0
 }
 
+enable_sudo_override()
+{
+if [ -d /etc/polkit-1/localauthority.conf.d/ ]; then
+    echo "/etc/polkit-1/localauthority/50-local.d found"
+    else
+    mkdir -p /etc/polkit-1/localauthority.conf.d
+    fi
+    
+    cp /usr/share/mx-tweak/55-tweak-override.conf /etc/polkit-1/localauthority.conf.d
+
+}
+
+disable_sudo_override()
+{
+    rm -f /etc/polkit-1/localauthority.conf.d/55-tweak-override.conf
+
+}
+
 main()
 {
 $CMD1
