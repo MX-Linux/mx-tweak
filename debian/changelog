@@ -1,3 +1,10 @@
+mx-tweak (20.01.02) mx; urgency=medium
+
+  * update translations
+  * change name of brightness tray app to brightness systray
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Thu, 30 Jan 2020 19:59:08 -0500
+
 mx-tweak (20.01.01+2) mx; urgency=medium
 
   * revise to use radio buttons for super user prompt selection (chkboom)
