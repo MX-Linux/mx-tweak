@@ -1094,6 +1094,24 @@ void defaultlook::CheckComptonRunning()
         ui->comboBoxCompositor->setCurrentIndex(2);
     } else {
         qDebug() << "Compton is NOT running";
+
+        //check if compton is present on system, remove from choices if not
+        QFileInfo compton("/usr/bin/compton");
+
+        //adjust for picom
+        if (compton.readLink() == "/usr/bin/picom" ){
+            QFileInfo picom(compton.readLink());
+            ui->comboBoxCompositor->setItemText(2,picom.baseName());
+            ui->buttonConfigureCompton->setText(picom.baseName() + " " + tr("settings"));
+        } else {
+            //hide compton settings
+            if ( !compton.exists() ){
+                ui->comboBoxCompositor->removeItem(2);
+                ui->buttonConfigureCompton->hide();
+                ui->buttonEditComptonConf->hide();
+            }
+        }
+
         //check if xfce compositor is enabled
         QString test;
         test = runCmd("xfconf-query -c xfwm4 -p /general/use_compositing").output;
