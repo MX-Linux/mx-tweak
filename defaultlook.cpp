@@ -61,7 +61,7 @@ void defaultlook::setup()
 {
     this->setWindowTitle(tr("MX Tweak"));
     this->adjustSize();
-    checkXFCE();
+ //   checkXFCE();
     whichpanel();
     message_flag = false;
     QString cmd = QString("test -f ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml");
@@ -580,7 +580,6 @@ void defaultlook::checkXFCE()
     if ( test != "XFCE") {
         QMessageBox::information(0, tr("MX Tweak"),
                                  tr("This app is Xfce-only"));
-        qApp->quit();
     }
 }
 

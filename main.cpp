@@ -44,6 +44,11 @@ int main(int argc, char *argv[])
         brightness_small fred(0,a.arguments());
         return a.exec();
     } else {
+        if (system("echo $XDG_CURRENT_DESKTOP | grep -q XFCE") != 0){
+            QMessageBox::information(0, QApplication::tr("MX Tweak"),
+                                     QApplication::tr("This app is Xfce-only"));
+            exit(0);
+        }
       defaultlook w(0, a.arguments());
       w.show();
       return a.exec();
