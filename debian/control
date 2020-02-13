@@ -8,6 +8,7 @@ Vcs-Git: git://github.com/mxlinux/mx-tweak.git
 
 Package: mx-tweak
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}, mx-viewer, mx-tweak-data, compton, compton-conf
+Depends: ${misc:Depends}, ${shlibs:Depends}, mx-viewer, mx-tweak-data, 
+Recommends: compton, compton-conf
 Description: MX Tweak
  MX Tweak is a tool for quick tweaks to the Xfce environment supplied with MX Linux

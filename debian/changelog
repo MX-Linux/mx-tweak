@@ -1,3 +1,22 @@
+mx-tweak (20.02.01) mx; urgency=medium
+
+  * improve xfce check 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Tue, 04 Feb 2020 20:45:37 -0500
+
+mx-tweak (20.01.02) mx; urgency=medium
+
+  * update translations
+  * change name of brightness tray app to brightness systray
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Thu, 30 Jan 2020 19:59:08 -0500
+
+mx-tweak (20.01.01+2) mx; urgency=medium
+
+  * revise to use radio buttons for super user prompt selection (chkboom)
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 11 Jan 2020 21:48:22 -0500
+
 mx-tweak (20.01.01+1) mx; urgency=medium
 
   * add user password for super user authentication option 
