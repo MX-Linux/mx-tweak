@@ -61,7 +61,7 @@ void defaultlook::setup()
 {
     this->setWindowTitle(tr("MX Tweak"));
     this->adjustSize();
-    checkXFCE();
+ //   checkXFCE();
     whichpanel();
     message_flag = false;
     QString cmd = QString("test -f ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml");
@@ -580,7 +580,6 @@ void defaultlook::checkXFCE()
     if ( test != "XFCE") {
         QMessageBox::information(0, tr("MX Tweak"),
                                  tr("This app is Xfce-only"));
-        qApp->quit();
     }
 }
 
@@ -1094,6 +1093,24 @@ void defaultlook::CheckComptonRunning()
         ui->comboBoxCompositor->setCurrentIndex(2);
     } else {
         qDebug() << "Compton is NOT running";
+
+        //check if compton is present on system, remove from choices if not
+        QFileInfo compton("/usr/bin/compton");
+
+        //adjust for picom
+        if (compton.readLink() == "/usr/bin/picom" ){
+            QFileInfo picom(compton.readLink());
+            ui->comboBoxCompositor->setItemText(2,picom.baseName());
+            ui->buttonConfigureCompton->setText(picom.baseName() + " " + tr("settings"));
+        } else {
+            //hide compton settings
+            if ( !compton.exists() ){
+                ui->comboBoxCompositor->removeItem(2);
+                ui->buttonConfigureCompton->hide();
+                ui->buttonEditComptonConf->hide();
+            }
+        }
+
         //check if xfce compositor is enabled
         QString test;
         test = runCmd("xfconf-query -c xfwm4 -p /general/use_compositing").output;
