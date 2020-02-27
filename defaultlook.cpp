@@ -900,6 +900,14 @@ void defaultlook::setupEtc()
         ui->radioSudoRoot->setChecked(true);
     }
 
+    //setup user namespaces option (99-sandbox.conf)
+    QFileInfo user_namespace_override("/etc/sysctl.d/99-sandbox.conf");
+    if (user_namespace_override.exists()){
+        ui->checkBoxSandbox->setChecked(true);
+    } else {
+        ui->checkBoxSandbox->setChecked(false);
+}
+
     //setup hibernate switch
     //first, hide if running live
     test = runCmd("df -T / |tail -n1 |awk '{print $2}'").output;
@@ -1668,10 +1676,12 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     //deal with udisks option
     QFileInfo fileinfo("/etc/tweak-udisks.chk");
     QFileInfo sudo_override("/etc/polkit-1/localauthority.conf.d/55-tweak-override.conf");
+    QFileInfo user_namespace_override("/etc/sysctl.d/99-sandbox.conf");
     QString cmd;
     QString udisks_option;
     QString hibernate_option;
     QString sudo_override_option;
+    QString user_name_space_override_option;
     udisks_option.clear();
     hibernate_option.clear();
 
@@ -1740,7 +1750,20 @@ void defaultlook::on_ButtonApplyEtc_clicked()
         }
     }
 
-
+    //deal with user namespace override
+    if (ui->checkBoxSandbox->isChecked()){
+        if (user_namespace_override.exists()) {
+            qDebug() << "no change to user namespace override";
+        } else {
+            user_name_space_override_option = "enable_sandbox";
+        }
+    } else {
+        if (user_namespace_override.exists()){
+            user_name_space_override_option = "disable_sandbox";
+        } else {
+            qDebug() << "no change to user namespace override";
+        }
+    }
 
     //deal with hibernate
     if (ui->checkBoxHibernate->isChecked() != hibernate_flag) {
@@ -1753,11 +1776,11 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     }
 
 
-    if ( ! hibernate_option.isEmpty() || ! udisks_option.isEmpty() || ! sudo_override_option.isEmpty()) {
+    if ( ! hibernate_option.isEmpty() || ! udisks_option.isEmpty() || ! sudo_override_option.isEmpty() || ! user_name_space_override_option.isEmpty()) {
         if ( hibernate_option.isEmpty()) {
-            runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + udisks_option + " " + sudo_override_option);
+            runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + udisks_option + " " + sudo_override_option + " " + user_name_space_override_option);
         } else {
-            runCmd("x-terminal-emulator -e 'pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + udisks_option + " " + sudo_override_option + " " + hibernate_option + "'");
+            runCmd("x-terminal-emulator -e 'pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + udisks_option + " " + sudo_override_option + + " " + user_name_space_override_option + " " + hibernate_option + "'");
         }
     }
 
@@ -2335,3 +2358,8 @@ void defaultlook::on_buttonapplyresolution_clicked()
 }
 
 
+
+void defaultlook::on_checkBoxSandbox_clicked()
+{
+    ui->ButtonApplyEtc->setEnabled(true);
+}

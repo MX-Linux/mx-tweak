@@ -1,3 +1,9 @@
+mx-tweak (20.02.02) mx; urgency=medium
+
+  * provide switchable kernel user namespaces  
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Wed, 26 Feb 2020 21:30:36 -0500
+
 mx-tweak (20.02.01) mx; urgency=medium
 
   * improve xfce check 

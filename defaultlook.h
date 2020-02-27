@@ -229,6 +229,8 @@ private slots:
     void on_radioSudoUser_clicked();
     void on_radioSudoRoot_clicked();
 
+    void on_checkBoxSandbox_clicked();
+
 private:
     Ui::defaultlook *ui;
 };

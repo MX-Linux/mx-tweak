@@ -120,6 +120,22 @@ disable_sudo_override()
 
 }
 
+enable_sandbox()
+{
+	if [ ! -d /etc/sysctl.d/ ]; then
+		mkdir -p /etc/systclt.d
+	fi
+	sysctl kernel.unprivileged_userns_clone=1
+	echo "kernel.unprivileged_userns_clone=1"> /etc/sysctl.d/99-sandbox.conf
+}
+
+disable_sandbox()
+{
+	sysctl kernel.unprivileged_userns_clone=0
+	rm -f /etc/sysctl.d/99-sandbox.conf
+}
+
+
 main()
 {
 $CMD1
