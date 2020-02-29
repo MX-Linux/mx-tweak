@@ -1,3 +1,10 @@
+mx-tweak (20.02.03) mx; urgency=medium
+
+  * revised detection mechansim for userns
+  * hide if switch not present  
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 29 Feb 2020 14:54:43 -0500
+
 mx-tweak (20.02.02) mx; urgency=medium
 
   * provide switchable kernel user namespaces  
