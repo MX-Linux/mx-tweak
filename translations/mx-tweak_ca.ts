@@ -483,7 +483,7 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1248"/>
-        <source>Enable kernel user namespaces (sandbox)</source>
+        <source>Enable kernel sandbox</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -563,12 +563,12 @@
         <translation>S&apos;ha fet còpia de seguretat dels vostres paràmetres del plafó en un fitxer amagat anomenat .restore al vostre directori d&apos;usuari (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1112"/>
+        <location filename="../defaultlook.cpp" line="1119"/>
         <source>settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1449"/>
+        <location filename="../defaultlook.cpp" line="1456"/>
         <source>Choose a theme set</source>
         <translation>Trieu un conjunt de temes</translation>
     </message>
