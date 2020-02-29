@@ -126,13 +126,16 @@ enable_sandbox()
 		mkdir -p /etc/systclt.d
 	fi
 	sysctl kernel.unprivileged_userns_clone=1
-	echo "kernel.unprivileged_userns_clone=1"> /etc/sysctl.d/99-sandbox.conf
+	sysctl kernel.yama.ptrace_scope=1
+	echo "kernel.unprivileged_userns_clone=1"> /etc/sysctl.d/99-sandbox-mx.conf
+	echo "kernel.yama.ptrace_scope=1">>/etc/sysctl.d/99-sandbox-mx.conf
 }
 
 disable_sandbox()
 {
 	sysctl kernel.unprivileged_userns_clone=0
-	rm -f /etc/sysctl.d/99-sandbox.conf
+	sysctl kernel.yama.ptrace_scope=0
+	rm -f /etc/sysctl.d/99-sandbox-mx.conf
 }
 
 
