@@ -483,7 +483,7 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1248"/>
-        <source>Enable kernel user namespaces (sandbox)</source>
+        <source>Enable kernel sandbox</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -563,12 +563,12 @@
         <translation>Uw huidige paneelinstellingen zijn gebackupt in een verborgen folder genaamd .restore in uw home folder (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1112"/>
+        <location filename="../defaultlook.cpp" line="1119"/>
         <source>settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1449"/>
+        <location filename="../defaultlook.cpp" line="1456"/>
         <source>Choose a theme set</source>
         <translation>Kies een thema set</translation>
     </message>
