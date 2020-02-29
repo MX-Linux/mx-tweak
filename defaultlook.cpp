@@ -900,8 +900,8 @@ void defaultlook::setupEtc()
         ui->radioSudoRoot->setChecked(true);
     }
 
-    //setup user namespaces option (99-sandbox.conf)
-    QFileInfo user_namespace_override("/etc/sysctl.d/99-sandbox.conf");
+    //setup user namespaces option (99-sandbox-mx.conf)
+    QFileInfo user_namespace_override("/etc/sysctl.d/99-sandbox-mx.conf");
     if (user_namespace_override.exists()){
         ui->checkBoxSandbox->setChecked(true);
     } else {
@@ -1676,7 +1676,7 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     //deal with udisks option
     QFileInfo fileinfo("/etc/tweak-udisks.chk");
     QFileInfo sudo_override("/etc/polkit-1/localauthority.conf.d/55-tweak-override.conf");
-    QFileInfo user_namespace_override("/etc/sysctl.d/99-sandbox.conf");
+    QFileInfo user_namespace_override("/etc/sysctl.d/99-sandbox-mx.conf");
     QString cmd;
     QString udisks_option;
     QString hibernate_option;
