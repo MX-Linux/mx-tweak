@@ -483,7 +483,7 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1248"/>
-        <source>Enable kernel user namespaces (sandbox)</source>
+        <source>Enable kernel sandbox</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -563,12 +563,12 @@
         <translation>Οι τρέχουσες ρυθμίσεις του Panel  σας δημιουργήσει αντίγραφα ασφαλείας σε έναν κρυφό φάκελο που ονομάζεται .restore στο φάκελο /home (~/.restore /)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1112"/>
+        <location filename="../defaultlook.cpp" line="1119"/>
         <source>settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1449"/>
+        <location filename="../defaultlook.cpp" line="1456"/>
         <source>Choose a theme set</source>
         <translation>Επιλέξτε ένα σύνολο θέματος</translation>
     </message>
