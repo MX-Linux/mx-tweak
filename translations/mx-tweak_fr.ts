@@ -483,7 +483,7 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1248"/>
-        <source>Enable kernel user namespaces (sandbox)</source>
+        <source>Enable kernel sandbox</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -563,12 +563,12 @@
         <translation>Les paramètres actuels de votre tableau de bord ont été enregistrés dans un dossier caché nommé .restore dans votre dossier personnel (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1112"/>
+        <location filename="../defaultlook.cpp" line="1119"/>
         <source>settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1449"/>
+        <location filename="../defaultlook.cpp" line="1456"/>
         <source>Choose a theme set</source>
         <translation>Choisir un jeu de thèmes</translation>
     </message>
