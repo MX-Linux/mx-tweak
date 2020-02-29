@@ -901,12 +901,19 @@ void defaultlook::setupEtc()
     }
 
     //setup user namespaces option (99-sandbox-mx.conf)
-    QFileInfo user_namespace_override("/etc/sysctl.d/99-sandbox-mx.conf");
-    if (user_namespace_override.exists()){
-        ui->checkBoxSandbox->setChecked(true);
+    sandboxflag = false;
+    QString userns_clone = runCmd("/usr/sbin/sysctl -n kernel.unprivileged_userns_clone").output;
+    QString yama_ptrace = runCmd("/usr/sbin/sysctl -n kernel.yama.ptrace_scope").output;
+    qDebug() << "userns_clone is: " << userns_clone;
+    if (userns_clone == "0" || userns_clone == "1"){
+        if (userns_clone == "1" && yama_ptrace == "1"){
+            ui->checkBoxSandbox->setChecked(true);
+        } else {
+            ui->checkBoxSandbox->setChecked(false);
+        }
     } else {
-        ui->checkBoxSandbox->setChecked(false);
-}
+        ui->checkBoxSandbox->hide();
+    }
 
     //setup hibernate switch
     //first, hide if running live
@@ -1751,17 +1758,11 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     }
 
     //deal with user namespace override
-    if (ui->checkBoxSandbox->isChecked()){
-        if (user_namespace_override.exists()) {
-            qDebug() << "no change to user namespace override";
-        } else {
+    if (sandboxflag){
+        if (ui->checkBoxSandbox->isChecked()){
             user_name_space_override_option = "enable_sandbox";
-        }
-    } else {
-        if (user_namespace_override.exists()){
-            user_name_space_override_option = "disable_sandbox";
         } else {
-            qDebug() << "no change to user namespace override";
+            user_name_space_override_option = "disable_sandbox";
         }
     }
 
@@ -2362,4 +2363,5 @@ void defaultlook::on_buttonapplyresolution_clicked()
 void defaultlook::on_checkBoxSandbox_clicked()
 {
     ui->ButtonApplyEtc->setEnabled(true);
+    sandboxflag = true;
 }
