@@ -1245,7 +1245,7 @@
            <item row="7" column="0">
             <widget class="QCheckBox" name="checkBoxSandbox">
              <property name="text">
-              <string>Enable kernel user namespaces (sandbox)</string>
+              <string>Enable kernel sandbox</string>
              </property>
             </widget>
            </item>
