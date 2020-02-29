@@ -69,6 +69,7 @@ public:
     bool vblankflag;
     bool displayflag = false;
     bool brightnessflag = false;
+    bool sandboxflag = false;
     QString g1;
     QString g2;
     QString g3;
