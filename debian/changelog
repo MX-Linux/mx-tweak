@@ -1,3 +1,9 @@
+mx-tweak (20.02.04) mx; urgency=medium
+
+  * update help for userns switch 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 29 Feb 2020 22:36:04 -0500
+
 mx-tweak (20.02.03) mx; urgency=medium
 
   * revised detection mechansim for userns
