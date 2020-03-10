@@ -1,3 +1,9 @@
+mx-tweak (20.03.01) mx; urgency=medium
+
+  * revise xrandr library search flags for gamma 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Tue, 10 Mar 2020 15:51:35 -0400
+
 mx-tweak (20.02.04) mx; urgency=medium
 
   * update help for userns switch 
