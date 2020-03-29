@@ -58,7 +58,6 @@ TRANSLATIONS += translations/mx-tweak_am.ts \
                 translations/mx-tweak_is.ts \
                 translations/mx-tweak_it.ts \
                 translations/mx-tweak_ja.ts \
-                translations/mx-tweak_ja_JP.ts \
                 translations/mx-tweak_kk.ts \
                 translations/mx-tweak_ko.ts \
                 translations/mx-tweak_lt.ts \
