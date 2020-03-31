@@ -1,3 +1,9 @@
+mx-tweak (20.03.03) mx; urgency=medium
+
+  * update control file 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Mon, 30 Mar 2020 22:59:50 -0400
+
 mx-tweak (20.03.01) mx; urgency=medium
 
   * revise xrandr library search flags for gamma 
