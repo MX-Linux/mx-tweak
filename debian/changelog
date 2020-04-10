@@ -1,4 +1,4 @@
-mx-tweak (20.03.04) UNRELEASED; urgency=medium
+mx-tweak (20.04.01) mx; urgency=medium
 
   * allow running in non-Xfce environments
   * remove Xfce options in non-Xfce environments 
