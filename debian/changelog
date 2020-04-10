@@ -1,3 +1,10 @@
+mx-tweak (20.03.04) UNRELEASED; urgency=medium
+
+  * allow running in non-Xfce environments
+  * remove Xfce options in non-Xfce environments 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Fri, 10 Apr 2020 12:33:04 -0400
+
 mx-tweak (20.03.03) mx; urgency=medium
 
   * update control file 
