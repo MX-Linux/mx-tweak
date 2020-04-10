@@ -52,7 +52,7 @@ brightness_small::brightness_small(QWidget *parent, QStringList args) :
 
     menu = new QMenu(this);
 
-    if (QFileInfo::exists("/usr/bin/mx-tweak")) {
+    if (system("echo $XDG_CURRENT_DESKTOP | grep -q XFCE") == 0) {
             full = new QAction(QIcon::fromTheme("video-display"), tr("Display"), this);
             connect(full, &QAction::triggered, this, &brightness_small::launchfulldisplaydialog);
              menu->addAction(full);
@@ -110,6 +110,7 @@ brightness_small::~brightness_small()
     delete ui;
 }
 
+//following function is not actually used by the tray application
 void brightness_small::setmissingxfconfvariables(QString activeprofile, QString resolution)
 {
     //set resolution, set active, set scales, set display name
