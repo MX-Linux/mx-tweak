@@ -61,32 +61,48 @@ void defaultlook::setup()
 {
     this->setWindowTitle(tr("MX Tweak"));
     this->adjustSize();
- //   checkXFCE();
-    whichpanel();
-    message_flag = false;
-    QString cmd = QString("test -f ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml");
-    if (system(cmd.toUtf8()) != 0) {
-        backupPanel();
-        message2();
+    if (checkXFCE()) {
+        whichpanel();
+        message_flag = false;
+        QString cmd = QString("test -f ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml");
+        if (system(cmd.toUtf8()) != 0) {
+            backupPanel();
+            message2();
+        }
+        //setup theme tab
+        setuptheme();
+        ui->buttonThemeUndo->setEnabled(false);
+        //setup theme combo box
+        setupComboTheme();
+        //setup panel tab
+        setuppanel();
+        //setup compositor tab
+        setupCompositor();
+         //setup display tab
+        setupDisplay();
+    } else {
+        ui->tabWidget->removeTab(3);
+        ui->tabWidget->removeTab(2);
+        ui->tabWidget->removeTab(1);
+        ui->tabWidget->removeTab(0);
+        ui->label_4->hide();
+        ui->label_5->hide();
+        ui->label_6->hide();
+        ui->label_7->hide();
+        ui->toolButtonXFCEAppearance->hide();
+        ui->toolButtonXFCEWMsettings->hide();
+        ui->toolButtonXFCEpanelSettings->hide();
     }
 
-    //setup theme tab
-    setuptheme();
-    //setup theme combo box
-    setupComboTheme();
-    //setup panel tab
-    setuppanel();
     //setup other tab;
     setupEtc();
-    //setup compositor tab
-    setupCompositor();
-    //set panel tab as default
+
+    //set first tab as default
     ui->tabWidget->setCurrentIndex(0);
-    ui->buttonThemeUndo->setEnabled(false);
     //setup Config Options
     setupConfigoptions();
-    //setup display tab
-    setupDisplay();
+
+
 
     //copy template file to ~/.local/share/mx-tweak-data if it doesn't exist
     QString home_path = QDir::homePath();
@@ -106,6 +122,7 @@ void defaultlook::setup()
     if (displayflag){
         ui->tabWidget->setCurrentIndex(4);
     }
+    this->adjustSize();
 }
 
 // Util function for getting bash command output and error code
@@ -573,13 +590,14 @@ void defaultlook::message()
     }
 }
 
-void defaultlook::checkXFCE()
+bool defaultlook::checkXFCE()
 {
     QString test = runCmd("echo $XDG_CURRENT_DESKTOP").output;
     qDebug() << test;
-    if ( test != "XFCE") {
-        QMessageBox::information(0, tr("MX Tweak"),
-                                 tr("This app is Xfce-only"));
+    if ( test == "XFCE") {
+        return true;
+    } else {
+        return false;
     }
 }
 
@@ -837,60 +855,114 @@ void defaultlook::setupEtc()
     }
     //set values for checkboxes
 
+    //set xfce values
+    if (checkXFCE()){
+        //check single click status
+        QString test;
+        test = runCmd("xfconf-query  -c xfce4-desktop -p /desktop-icons/single-click").output;
+        if ( test == "true") {
+            ui->checkBoxSingleClick->setChecked(true);
+        } else {
+            ui->checkBoxSingleClick->setChecked(false);
+        }
 
-    //check single click status
-    QString test;
-    test = runCmd("xfconf-query  -c xfce4-desktop -p /desktop-icons/single-click").output;
-    if ( test == "true") {
-        ui->checkBoxSingleClick->setChecked(true);
+        //check single click thunar status
+
+        test = runCmd("xfconf-query  -c thunar -p /misc-single-click").output;
+        if ( test == "true") {
+            ui->checkBoxThunarSingleClick->setChecked(true);
+        } else {
+            ui->checkBoxThunarSingleClick->setChecked(false);
+        }
+
+        //check systray frame status
+
+        pluginidsystray = runCmd("cat ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml | grep \\\"systray\\\"|cut -d '=' -f2 | cut -d '' -f1| cut -d '\"' -f2").output;
+        qDebug() << "systray is " << pluginidsystray;
+        test = runCmd("xfconf-query -c xfce4-panel -p /plugins/" + pluginidsystray + "/show-frame").output;
+        if ( test == "true") {
+            ui->checkBoxSystrayFrame->setChecked(true);
+        } else {
+            ui->checkBoxSystrayFrame->setChecked(false);
+        }
+
+        plugintasklist = runCmd("cat ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml | grep \\\"tasklist\\\"|cut -d '=' -f2 | cut -d '' -f1| cut -d '\"' -f2").output;
+        qDebug() << "tasklist is " << plugintasklist;
+        test = runCmd("xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/include-all-workspaces").output;
+        if ( test == "true") {
+            ui->checkBoxShowAllWorkspaces->setChecked(true);
+        } else {
+            ui->checkBoxShowAllWorkspaces->setChecked(false);
+        }
+
+        //setup no-ellipse option
+        QFileInfo fileinfo2(home_path + "/.config/gtk-3.0/no-ellipse-desktop-filenames.css");
+        if (fileinfo2.exists()) {
+            ui->checkboxNoEllipse->setChecked(true);
+        } else {
+            ui->checkboxNoEllipse->setChecked(false);
+        }
+
+        //setup hibernate switch
+        //first, hide if running live
+        test = runCmd("df -T / |tail -n1 |awk '{print $2}'").output;
+        qDebug() << test;
+        if ( test == "aufs" || test == "overlay" ) {
+            ui->checkBoxHibernate->hide();
+            ui->label_hibernate->hide();
+        }
+
+        //hide hibernate if there is no swap
+        QString swaptest = runCmd("/usr/sbin/swapon --show").output;
+        qDebug() << "swaptest swap present is " << swaptest;
+        if (swaptest.isEmpty()) {
+            ui->checkBoxHibernate->hide();
+            ui->label_hibernate->hide();
+        }
+
+        // also hide hibernate if /etc/uswsusp.conf is missing
+        QFileInfo file("/etc/uswsusp.conf");
+        if (file.exists()) {
+            qDebug() << "uswsusp.conf found";
+        }else {
+            ui->checkBoxHibernate->hide();
+            ui->label_hibernate->hide();
+        }
+
+        //and hide hibernate if swap is encrypted
+        QString cmd = "grep swap /etc/crypttab |grep -q luks";
+        int swaptest2 = system(cmd.toUtf8());
+        qDebug() << "swaptest encrypted is " << swaptest2;
+        if (swaptest2 == 0) {
+            ui->checkBoxHibernate->hide();
+            ui->label_hibernate->hide();
+        }
+
+        //set checkbox
+        test = runCmd("xfconf-query -c xfce4-session -p /shutdown/ShowHibernate").output;
+        if ( test == "true") {
+            ui->checkBoxHibernate->setChecked(true);
+            hibernate_flag = true;
+        } else {
+            ui->checkBoxHibernate->setChecked(false);
+            hibernate_flag = false;
+        }
     } else {
-        ui->checkBoxSingleClick->setChecked(false);
+        ui->label_hibernate->hide();
+        ui->checkBoxHibernate->hide();
+        ui->checkboxNoEllipse->hide();
+        ui->checkBoxSingleClick->hide();
+        ui->checkBoxThunarSingleClick->hide();
+        ui->checkBoxSystrayFrame->hide();
+        ui->checkBoxShowAllWorkspaces->hide();
     }
-
-    //check single click thunar status
-
-    test = runCmd("xfconf-query  -c thunar -p /misc-single-click").output;
-    if ( test == "true") {
-        ui->checkBoxThunarSingleClick->setChecked(true);
-    } else {
-        ui->checkBoxThunarSingleClick->setChecked(false);
-    }
-
-    //check systray frame status
-
-    pluginidsystray = runCmd("cat ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml | grep \\\"systray\\\"|cut -d '=' -f2 | cut -d '' -f1| cut -d '\"' -f2").output;
-    qDebug() << "systray is " << pluginidsystray;
-    test = runCmd("xfconf-query -c xfce4-panel -p /plugins/" + pluginidsystray + "/show-frame").output;
-    if ( test == "true") {
-        ui->checkBoxSystrayFrame->setChecked(true);
-    } else {
-        ui->checkBoxSystrayFrame->setChecked(false);
-    }
-
-    plugintasklist = runCmd("cat ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml | grep \\\"tasklist\\\"|cut -d '=' -f2 | cut -d '' -f1| cut -d '\"' -f2").output;
-    qDebug() << "tasklist is " << plugintasklist;
-    test = runCmd("xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/include-all-workspaces").output;
-    if ( test == "true") {
-        ui->checkBoxShowAllWorkspaces->setChecked(true);
-    } else {
-        ui->checkBoxShowAllWorkspaces->setChecked(false);
-    }
-
     //setup udisks option
     QFileInfo fileinfo("/etc/tweak-udisks.chk");
     if (fileinfo.exists()) {
         ui->checkBoxMountInternalDrivesNonRoot->setChecked(true);
     } else {
         ui->checkBoxMountInternalDrivesNonRoot->setChecked(false);
-    }
-
-    //setup no-ellipse option
-    QFileInfo fileinfo2(home_path + "/.config/gtk-3.0/no-ellipse-desktop-filenames.css");
-    if (fileinfo2.exists()) {
-        ui->checkboxNoEllipse->setChecked(true);
-    } else {
-        ui->checkboxNoEllipse->setChecked(false);
-    }
+    } 
 
     //setup sudo override function
     QFileInfo sudo_override_file("/etc/polkit-1/localauthority.conf.d/55-tweak-override.conf");
@@ -915,50 +987,7 @@ void defaultlook::setupEtc()
         ui->checkBoxSandbox->hide();
     }
 
-    //setup hibernate switch
-    //first, hide if running live
-    test = runCmd("df -T / |tail -n1 |awk '{print $2}'").output;
-    qDebug() << test;
-    if ( test == "aufs" || test == "overlay" ) {
-        ui->checkBoxHibernate->hide();
-        ui->label_hibernate->hide();
-    }
 
-    //hide hibernate if there is no swap
-    QString swaptest = runCmd("/usr/sbin/swapon --show").output;
-    qDebug() << "swaptest swap present is " << swaptest;
-    if (swaptest.isEmpty()) {
-        ui->checkBoxHibernate->hide();
-        ui->label_hibernate->hide();
-    }
-
-    // also hide hibernate if /etc/uswsusp.conf is missing
-    QFileInfo file("/etc/uswsusp.conf");
-    if (file.exists()) {
-        qDebug() << "uswsusp.conf found";
-    }else {
-        ui->checkBoxHibernate->hide();
-        ui->label_hibernate->hide();
-    }
-
-    //and hide hibernate if swap is encrypted
-    QString cmd = "grep swap /etc/crypttab |grep -q luks";
-    int swaptest2 = system(cmd.toUtf8());
-    qDebug() << "swaptest encrypted is " << swaptest2;
-    if (swaptest2 == 0) {
-        ui->checkBoxHibernate->hide();
-        ui->label_hibernate->hide();
-    }
-
-    //set checkbox
-    test = runCmd("xfconf-query -c xfce4-session -p /shutdown/ShowHibernate").output;
-    if ( test == "true") {
-        ui->checkBoxHibernate->setChecked(true);
-        hibernate_flag = true;
-    } else {
-        ui->checkBoxHibernate->setChecked(false);
-        hibernate_flag = false;
-    }
 }
 
 void defaultlook::setuptheme()
@@ -1053,7 +1082,11 @@ void defaultlook::setupConfigoptions()
   ui->labelradeon->hide();
   ui->ButtonApplyMiscDefualts->setEnabled(false);
   ui->checkBoxLightdmReset->setChecked(false);
-  ui->checkBoxThunarCAReset->setChecked(false);
+  if (checkXFCE()){
+    ui->checkBoxThunarCAReset->setChecked(false);
+  } else{
+      ui->checkBoxThunarCAReset->hide();
+  }
   Intel_flag = false;
   amdgpuflag = false;
   radeon_flag =false;
