@@ -88,7 +88,7 @@ public:
     void fliptovertical();
     void whichpanel();
     void message();
-    void checkXFCE();
+    bool checkXFCE();
     void CheckComptonRunning();
     void setupCompositor();
     void CheckAptNotifierRunning();

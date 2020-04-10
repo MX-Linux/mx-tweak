@@ -276,7 +276,7 @@
         <enum>QTabWidget::North</enum>
        </property>
        <property name="currentIndex">
-        <number>5</number>
+        <number>1</number>
        </property>
        <widget class="QWidget" name="Panel">
         <attribute name="title">
@@ -806,103 +806,6 @@
          </item>
         </layout>
        </widget>
-       <widget class="QWidget" name="MiscDefaults">
-        <attribute name="title">
-         <string>Config Options</string>
-        </attribute>
-        <layout class="QGridLayout" name="gridLayout_12">
-         <item row="0" column="0">
-          <layout class="QGridLayout" name="gridLayout_11">
-           <item row="0" column="0">
-            <widget class="QCheckBox" name="checkBoxLightdmReset">
-             <property name="text">
-              <string>Reset Lightdm (login screen) to system default theme</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QCheckBox" name="checkBoxThunarCAReset">
-             <property name="text">
-              <string>Reset Thunar custom right-click actions to system defaults</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QCheckBox" name="checkboxIntelDriver">
-             <property name="text">
-              <string>Use intel driver instead of default &quot;modsetting&quot; driver (requires restart)</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="0">
-            <widget class="QLabel" name="labelIntel">
-             <property name="text">
-              <string>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="0">
-            <widget class="QCheckBox" name="checkboxAMDtearfree">
-             <property name="text">
-              <string>Use tearfree amdgpu option</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="0">
-            <widget class="QLabel" name="labelamdgpu">
-             <property name="text">
-              <string>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="0">
-            <widget class="QCheckBox" name="checkboxRadeontearfree">
-             <property name="text">
-              <string>Use tearfree radeon driver option</string>
-             </property>
-            </widget>
-           </item>
-           <item row="7" column="0">
-            <widget class="QLabel" name="labelradeon">
-             <property name="text">
-              <string>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</string>
-             </property>
-            </widget>
-           </item>
-           <item row="8" column="0">
-            <spacer name="verticalSpacer_10">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>20</width>
-               <height>17</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="9" column="0">
-            <widget class="QPushButton" name="ButtonApplyMiscDefualts">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>32</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>Apply</string>
-             </property>
-             <property name="icon">
-              <iconset theme="dialog-ok">
-               <normaloff>.</normaloff>.</iconset>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-        </layout>
-       </widget>
        <widget class="QWidget" name="DisplayTab">
         <attribute name="title">
          <string>Display</string>
@@ -1107,6 +1010,103 @@
           </item>
          </layout>
         </widget>
+       </widget>
+       <widget class="QWidget" name="MiscDefaults">
+        <attribute name="title">
+         <string>Config Options</string>
+        </attribute>
+        <layout class="QGridLayout" name="gridLayout_12">
+         <item row="0" column="0">
+          <layout class="QGridLayout" name="gridLayout_11">
+           <item row="0" column="0">
+            <widget class="QCheckBox" name="checkBoxLightdmReset">
+             <property name="text">
+              <string>Reset Lightdm (login screen) to system default theme</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QCheckBox" name="checkBoxThunarCAReset">
+             <property name="text">
+              <string>Reset Thunar custom right-click actions to system defaults</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QCheckBox" name="checkboxIntelDriver">
+             <property name="text">
+              <string>Use intel driver instead of default &quot;modsetting&quot; driver (requires restart)</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="labelIntel">
+             <property name="text">
+              <string>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QCheckBox" name="checkboxAMDtearfree">
+             <property name="text">
+              <string>Use tearfree amdgpu option</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="labelamdgpu">
+             <property name="text">
+              <string>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QCheckBox" name="checkboxRadeontearfree">
+             <property name="text">
+              <string>Use tearfree radeon driver option</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0">
+            <widget class="QLabel" name="labelradeon">
+             <property name="text">
+              <string>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0">
+            <spacer name="verticalSpacer_10">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>17</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="9" column="0">
+            <widget class="QPushButton" name="ButtonApplyMiscDefualts">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>32</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Apply</string>
+             </property>
+             <property name="icon">
+              <iconset theme="dialog-ok">
+               <normaloff>.</normaloff>.</iconset>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
        </widget>
        <widget class="QWidget" name="etcTab">
         <attribute name="title">
