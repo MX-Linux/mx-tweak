@@ -46,7 +46,12 @@ defaultlook::defaultlook(QWidget *parent, QStringList args) :
     ui->setupUi(this);
     setWindowFlags(Qt::Window); // for the close, min and max buttons
     if ( args.contains("--display")) {
-        displayflag = true;
+        if(!checkXFCE()){
+            displayflag = true;
+        } else {
+            QMessageBox::information(0, tr("MX Tweak"),
+                                 tr("--display switch only valid for Xfce"));
+        }
     }
     setup();
 }
@@ -120,7 +125,7 @@ void defaultlook::setup()
     }
     version = getVersion("mx-tweak");
     if (displayflag){
-        ui->tabWidget->setCurrentIndex(4);
+        ui->tabWidget->setCurrentIndex(3);
     }
     this->adjustSize();
 }
