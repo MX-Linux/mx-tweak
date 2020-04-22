@@ -25,7 +25,7 @@ LANG=C xrandr | awk "/$display/{flag=1;next}/connected/{flag=0}flag" |grep \*
 
 gamma()
 {
-    LANG=C xrandr --verbose | awk "/$display/{flag=1;next}/Brightness/{flag=0}flag"|grep Gamma
+    LANG=C xrandr --verbose | awk "/$display/{flag=1}/Brightness/{flag=0}flag"|grep -m 1 Gamma
 }
 
 display=$1
