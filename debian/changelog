@@ -1,3 +1,9 @@
+mx-tweak (20.05.01) mx; urgency=medium
+
+  *  fix type in restore-system-brightness
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 10 May 2020 14:41:43 -0400
+
 mx-tweak (20.04.02) mx; urgency=medium
 
   * modify gamma capture routine 
