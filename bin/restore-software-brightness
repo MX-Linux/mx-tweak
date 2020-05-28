@@ -2,7 +2,7 @@
 
 # restore saved brightness upon reboot
 # if xfce is starting up, wait for xfdesktop
-if [ "$XDG_CURRENT_DESKTOP" = "XFCE"]; then
+if [ "$XDG_CURRENT_DESKTOP" = "XFCE" ]; then
     while [ -z "$(pidof xfdesktop)" ]; do
         sleep 1
 done

@@ -4,14 +4,12 @@
 <context>
     <name>QApplication</name>
     <message>
-        <location filename="../main.cpp" line="48"/>
         <source>MX Tweak</source>
-        <translation type="unfinished">MX Tweak</translation>
+        <translation type="obsolete">MX Tweak</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="49"/>
         <source>This app is Xfce-only</source>
-        <translation type="unfinished">Esta aplicación es solamente para Xfce</translation>
+        <translation type="obsolete">Esta aplicación es solamente para Xfce</translation>
     </message>
 </context>
 <context>
@@ -67,12 +65,12 @@
     <name>defaultlook</name>
     <message>
         <location filename="../defaultlook.ui" line="20"/>
-        <location filename="../defaultlook.cpp" line="62"/>
-        <location filename="../defaultlook.cpp" line="536"/>
-        <location filename="../defaultlook.cpp" line="543"/>
-        <location filename="../defaultlook.cpp" line="560"/>
-        <location filename="../defaultlook.cpp" line="571"/>
-        <location filename="../defaultlook.cpp" line="581"/>
+        <location filename="../defaultlook.cpp" line="52"/>
+        <location filename="../defaultlook.cpp" line="67"/>
+        <location filename="../defaultlook.cpp" line="558"/>
+        <location filename="../defaultlook.cpp" line="565"/>
+        <location filename="../defaultlook.cpp" line="582"/>
+        <location filename="../defaultlook.cpp" line="593"/>
         <source>MX Tweak</source>
         <translation>MX Tweak</translation>
     </message>
@@ -206,10 +204,10 @@
         <location filename="../defaultlook.ui" line="446"/>
         <location filename="../defaultlook.ui" line="549"/>
         <location filename="../defaultlook.ui" line="740"/>
-        <location filename="../defaultlook.ui" line="894"/>
-        <location filename="../defaultlook.ui" line="974"/>
-        <location filename="../defaultlook.ui" line="1097"/>
-        <location filename="../defaultlook.ui" line="1104"/>
+        <location filename="../defaultlook.ui" line="877"/>
+        <location filename="../defaultlook.ui" line="1000"/>
+        <location filename="../defaultlook.ui" line="1007"/>
+        <location filename="../defaultlook.ui" line="1099"/>
         <location filename="../defaultlook.ui" line="1168"/>
         <source>Apply</source>
         <translation>Aplicar</translation>
@@ -346,103 +344,103 @@
         <translation>apagado</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="811"/>
+        <location filename="../defaultlook.ui" line="1016"/>
         <source>Config Options</source>
         <translation>Opciones para configurar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="819"/>
+        <location filename="../defaultlook.ui" line="1024"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>Restablecer Lightdm (pantalla de inicio) a la tema predeterminada</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="826"/>
+        <location filename="../defaultlook.ui" line="1031"/>
         <source>Reset Thunar custom right-click actions to system defaults</source>
         <translation>Reestablecer las acciones personalizados de Thunar a los predeterminados</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="833"/>
-        <source>Use intel driver instead of default &quot;modsetting&quot; driver (requires restart)</source>
+        <location filename="../defaultlook.ui" line="1038"/>
+        <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>Usar controlador intel en vez del controlador predeterminado &apos;modesetting&apos; (se requiere reiniciar) </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="840"/>
+        <location filename="../defaultlook.ui" line="1045"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>NOTA: el actual /etc/X11/xorg.conf.d/20-intel.conf será respaldado en la carpeta /home</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="847"/>
+        <location filename="../defaultlook.ui" line="1052"/>
         <source>Use tearfree amdgpu option</source>
         <translation>Use la opción tearfree amdgpu</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="854"/>
+        <location filename="../defaultlook.ui" line="1059"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>NOTA: el actual /etc/X11/xorg.conf.d/20-amd.conf será respaldado en la carpeta home</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="861"/>
+        <location filename="../defaultlook.ui" line="1066"/>
         <source>Use tearfree radeon driver option</source>
         <translation>Use la opción tearfree del controlador radeon</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="868"/>
+        <location filename="../defaultlook.ui" line="1073"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>NOTA: el actual /etc/X11/xorg.conf.d/20-radeon.conf será respaldado en la carpeta home</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="908"/>
+        <location filename="../defaultlook.ui" line="811"/>
         <source>Display</source>
         <translation>Pantalla</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="933"/>
+        <location filename="../defaultlook.ui" line="836"/>
         <source>Hardware Backlight</source>
         <translation>Luz de fondo de hardware</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="940"/>
+        <location filename="../defaultlook.ui" line="843"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Display Tweaks&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ajustes de la pantalla&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="967"/>
+        <location filename="../defaultlook.ui" line="870"/>
         <source>Choose Display for xrandr tweaks</source>
         <translation>Elija mostrar ajustes de xrandr</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1000"/>
+        <location filename="../defaultlook.ui" line="903"/>
         <source>Resolution</source>
         <translation>Resolución</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1007"/>
+        <location filename="../defaultlook.ui" line="910"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Saving is per display&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;El ahorro es por pantalla&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1010"/>
+        <location filename="../defaultlook.ui" line="913"/>
         <source>Save</source>
         <translation>Guardar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1017"/>
+        <location filename="../defaultlook.ui" line="920"/>
         <source>Software (xrandr) Brightness</source>
         <translation>Programa (xrandr) Brillo</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1024"/>
-        <location filename="../defaultlook.ui" line="1038"/>
+        <location filename="../defaultlook.ui" line="927"/>
+        <location filename="../defaultlook.ui" line="941"/>
         <source>TextLabel</source>
         <translation>TextLabel</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1031"/>
+        <location filename="../defaultlook.ui" line="934"/>
         <source>GTK scaling</source>
         <translation>Escala GTK</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1058"/>
+        <location filename="../defaultlook.ui" line="961"/>
         <source>xrandr Scaling</source>
         <translation>Escala xrandr</translation>
     </message>
@@ -512,63 +510,67 @@
         <translation>Usuario</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="535"/>
+        <location filename="../defaultlook.cpp" line="53"/>
+        <source>--display switch only valid for Xfce</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.cpp" line="557"/>
         <source>About MX Tweak</source>
         <translation>Acerca de MX Ajustes</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="536"/>
+        <location filename="../defaultlook.cpp" line="558"/>
         <source>Version: </source>
         <translation>Versión:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="537"/>
+        <location filename="../defaultlook.cpp" line="559"/>
         <source>App for quick default ui theme changes and tweaks</source>
         <translation>App para cambios rápidos al tema de la IU por defecto y ajustes</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="539"/>
+        <location filename="../defaultlook.cpp" line="561"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="540"/>
-        <location filename="../defaultlook.cpp" line="543"/>
+        <location filename="../defaultlook.cpp" line="562"/>
+        <location filename="../defaultlook.cpp" line="565"/>
         <source>License</source>
         <translation>Licencia</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="541"/>
+        <location filename="../defaultlook.cpp" line="563"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="572"/>
+        <location filename="../defaultlook.cpp" line="594"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
         <translation>¡Listo! Firefox puede requerir un reinicio para que los cambios surtan efecto. </translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="582"/>
         <source>This app is Xfce-only</source>
-        <translation>Esta aplicación es solamente para Xfce</translation>
+        <translation type="vanished">Esta aplicación es solamente para Xfce</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="723"/>
+        <location filename="../defaultlook.cpp" line="746"/>
         <source>Panel settings</source>
         <translation>Ajustes del panel</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="724"/>
+        <location filename="../defaultlook.cpp" line="747"/>
         <source>Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
         <translation>La configuración actual de su panel se ha guardado en una carpeta oculta llamada .restore en su carpeta de inicio (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1119"/>
+        <location filename="../defaultlook.cpp" line="1157"/>
         <source>settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1456"/>
+        <location filename="../defaultlook.cpp" line="1494"/>
         <source>Choose a theme set</source>
         <translation>Elegir un conjunto de temas</translation>
     </message>
