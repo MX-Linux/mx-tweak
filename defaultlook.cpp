@@ -46,7 +46,7 @@ defaultlook::defaultlook(QWidget *parent, QStringList args) :
     ui->setupUi(this);
     setWindowFlags(Qt::Window); // for the close, min and max buttons
     if ( args.contains("--display")) {
-        if(!checkXFCE()){
+        if(checkXFCE()){
             displayflag = true;
         } else {
             QMessageBox::information(0, tr("MX Tweak"),

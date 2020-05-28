@@ -362,7 +362,7 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="833"/>
-        <source>Use intel driver instead of default &quot;modsetting&quot; driver (requires restart)</source>
+        <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
