@@ -276,7 +276,7 @@
         <enum>QTabWidget::North</enum>
        </property>
        <property name="currentIndex">
-        <number>1</number>
+        <number>4</number>
        </property>
        <widget class="QWidget" name="Panel">
         <attribute name="title">
@@ -1035,7 +1035,7 @@
            <item row="2" column="0">
             <widget class="QCheckBox" name="checkboxIntelDriver">
              <property name="text">
-              <string>Use intel driver instead of default &quot;modsetting&quot; driver (requires restart)</string>
+              <string>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</string>
              </property>
             </widget>
            </item>
