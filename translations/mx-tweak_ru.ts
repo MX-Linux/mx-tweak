@@ -4,14 +4,12 @@
 <context>
     <name>QApplication</name>
     <message>
-        <location filename="../main.cpp" line="48"/>
         <source>MX Tweak</source>
-        <translation type="unfinished">MX Tweak</translation>
+        <translation type="obsolete">MX Tweak</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="49"/>
         <source>This app is Xfce-only</source>
-        <translation type="unfinished">Приложение только для Xfce</translation>
+        <translation type="obsolete">Приложение только для Xfce</translation>
     </message>
 </context>
 <context>
@@ -67,12 +65,12 @@
     <name>defaultlook</name>
     <message>
         <location filename="../defaultlook.ui" line="20"/>
-        <location filename="../defaultlook.cpp" line="62"/>
-        <location filename="../defaultlook.cpp" line="536"/>
-        <location filename="../defaultlook.cpp" line="543"/>
-        <location filename="../defaultlook.cpp" line="560"/>
-        <location filename="../defaultlook.cpp" line="571"/>
-        <location filename="../defaultlook.cpp" line="581"/>
+        <location filename="../defaultlook.cpp" line="52"/>
+        <location filename="../defaultlook.cpp" line="67"/>
+        <location filename="../defaultlook.cpp" line="558"/>
+        <location filename="../defaultlook.cpp" line="565"/>
+        <location filename="../defaultlook.cpp" line="582"/>
+        <location filename="../defaultlook.cpp" line="593"/>
         <source>MX Tweak</source>
         <translation>MX Tweak</translation>
     </message>
@@ -206,10 +204,10 @@
         <location filename="../defaultlook.ui" line="446"/>
         <location filename="../defaultlook.ui" line="549"/>
         <location filename="../defaultlook.ui" line="740"/>
-        <location filename="../defaultlook.ui" line="894"/>
-        <location filename="../defaultlook.ui" line="974"/>
-        <location filename="../defaultlook.ui" line="1097"/>
-        <location filename="../defaultlook.ui" line="1104"/>
+        <location filename="../defaultlook.ui" line="877"/>
+        <location filename="../defaultlook.ui" line="1000"/>
+        <location filename="../defaultlook.ui" line="1007"/>
+        <location filename="../defaultlook.ui" line="1099"/>
         <location filename="../defaultlook.ui" line="1168"/>
         <source>Apply</source>
         <translation>Применить</translation>
@@ -346,103 +344,103 @@
         <translation>выкл.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="811"/>
+        <location filename="../defaultlook.ui" line="1016"/>
         <source>Config Options</source>
         <translation>Опции конфигурации</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="819"/>
+        <location filename="../defaultlook.ui" line="1024"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>Сбросить Lightdm (экран логина) к системной теме по умолчанию</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="826"/>
+        <location filename="../defaultlook.ui" line="1031"/>
         <source>Reset Thunar custom right-click actions to system defaults</source>
         <translation>Сбросить на предустановленные действия по правому клику в Thunar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="833"/>
-        <source>Use intel driver instead of default &quot;modsetting&quot; driver (requires restart)</source>
-        <translation>Использовать драйвер intel вместо штатного &quot;modsetting&quot; драйвера (необходим перезапуск)</translation>
+        <location filename="../defaultlook.ui" line="1038"/>
+        <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
+        <translation>Использовать драйвер intel вместо штатного &quot;modesetting&quot; драйвера (необходим перезапуск)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="840"/>
+        <location filename="../defaultlook.ui" line="1045"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>ПРИМЕЧАНИЕ: существующий /etc/X11/xorg.conf.d/20-intel.conf будет сохранен в домашней директории</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="847"/>
+        <location filename="../defaultlook.ui" line="1052"/>
         <source>Use tearfree amdgpu option</source>
         <translation>Использовать опцию amdgpu видео без тиринга</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="854"/>
+        <location filename="../defaultlook.ui" line="1059"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>ПРИМЕЧАНИЕ: существующий /etc/X11/xorg.conf.d/20-amd.conf будет скопирован в домашний каталог</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="861"/>
+        <location filename="../defaultlook.ui" line="1066"/>
         <source>Use tearfree radeon driver option</source>
         <translation>Использовать опцию драйвера radeon видео без тиринга</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="868"/>
+        <location filename="../defaultlook.ui" line="1073"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>ПРИМЕЧАНИЕ: существующий /etc/X11/xorg.conf.d/20-radeon.conf будет скопирован в домашний каталог</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="908"/>
+        <location filename="../defaultlook.ui" line="811"/>
         <source>Display</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="933"/>
+        <location filename="../defaultlook.ui" line="836"/>
         <source>Hardware Backlight</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="940"/>
+        <location filename="../defaultlook.ui" line="843"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Display Tweaks&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="967"/>
+        <location filename="../defaultlook.ui" line="870"/>
         <source>Choose Display for xrandr tweaks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1000"/>
+        <location filename="../defaultlook.ui" line="903"/>
         <source>Resolution</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1007"/>
+        <location filename="../defaultlook.ui" line="910"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Saving is per display&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1010"/>
+        <location filename="../defaultlook.ui" line="913"/>
         <source>Save</source>
         <translation>Сохранить</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1017"/>
+        <location filename="../defaultlook.ui" line="920"/>
         <source>Software (xrandr) Brightness</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1024"/>
-        <location filename="../defaultlook.ui" line="1038"/>
+        <location filename="../defaultlook.ui" line="927"/>
+        <location filename="../defaultlook.ui" line="941"/>
         <source>TextLabel</source>
         <translation>TextLabel</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1031"/>
+        <location filename="../defaultlook.ui" line="934"/>
         <source>GTK scaling</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1058"/>
+        <location filename="../defaultlook.ui" line="961"/>
         <source>xrandr Scaling</source>
         <translation type="unfinished"></translation>
     </message>
@@ -512,63 +510,67 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="535"/>
+        <location filename="../defaultlook.cpp" line="53"/>
+        <source>--display switch only valid for Xfce</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.cpp" line="557"/>
         <source>About MX Tweak</source>
         <translation>О MX Tweak</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="536"/>
+        <location filename="../defaultlook.cpp" line="558"/>
         <source>Version: </source>
         <translation>Версия: </translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="537"/>
+        <location filename="../defaultlook.cpp" line="559"/>
         <source>App for quick default ui theme changes and tweaks</source>
         <translation>Приложение для доводки штатного оформления и твиков</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="539"/>
+        <location filename="../defaultlook.cpp" line="561"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="540"/>
-        <location filename="../defaultlook.cpp" line="543"/>
+        <location filename="../defaultlook.cpp" line="562"/>
+        <location filename="../defaultlook.cpp" line="565"/>
         <source>License</source>
         <translation>Лицензия</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="541"/>
+        <location filename="../defaultlook.cpp" line="563"/>
         <source>Cancel</source>
         <translation>Отменить</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="572"/>
+        <location filename="../defaultlook.cpp" line="594"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
         <translation>Готово! Может потребоваться перезапуск Firefox</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="582"/>
         <source>This app is Xfce-only</source>
-        <translation>Приложение только для Xfce</translation>
+        <translation type="vanished">Приложение только для Xfce</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="723"/>
+        <location filename="../defaultlook.cpp" line="746"/>
         <source>Panel settings</source>
         <translation>Настройки панели</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="724"/>
+        <location filename="../defaultlook.cpp" line="747"/>
         <source>Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1119"/>
+        <location filename="../defaultlook.cpp" line="1157"/>
         <source>settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1456"/>
+        <location filename="../defaultlook.cpp" line="1494"/>
         <source>Choose a theme set</source>
         <translation>Выберите набор темы</translation>
     </message>

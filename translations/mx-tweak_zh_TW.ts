@@ -4,14 +4,12 @@
 <context>
     <name>QApplication</name>
     <message>
-        <location filename="../main.cpp" line="48"/>
         <source>MX Tweak</source>
-        <translation type="unfinished">MX 調校</translation>
+        <translation type="obsolete">MX 調校</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="49"/>
         <source>This app is Xfce-only</source>
-        <translation type="unfinished">本程式僅支援 Xfce</translation>
+        <translation type="obsolete">本程式僅支援 Xfce</translation>
     </message>
 </context>
 <context>
@@ -67,12 +65,12 @@
     <name>defaultlook</name>
     <message>
         <location filename="../defaultlook.ui" line="20"/>
-        <location filename="../defaultlook.cpp" line="62"/>
-        <location filename="../defaultlook.cpp" line="536"/>
-        <location filename="../defaultlook.cpp" line="543"/>
-        <location filename="../defaultlook.cpp" line="560"/>
-        <location filename="../defaultlook.cpp" line="571"/>
-        <location filename="../defaultlook.cpp" line="581"/>
+        <location filename="../defaultlook.cpp" line="52"/>
+        <location filename="../defaultlook.cpp" line="67"/>
+        <location filename="../defaultlook.cpp" line="558"/>
+        <location filename="../defaultlook.cpp" line="565"/>
+        <location filename="../defaultlook.cpp" line="582"/>
+        <location filename="../defaultlook.cpp" line="593"/>
         <source>MX Tweak</source>
         <translation>MX 調校</translation>
     </message>
@@ -206,10 +204,10 @@
         <location filename="../defaultlook.ui" line="446"/>
         <location filename="../defaultlook.ui" line="549"/>
         <location filename="../defaultlook.ui" line="740"/>
-        <location filename="../defaultlook.ui" line="894"/>
-        <location filename="../defaultlook.ui" line="974"/>
-        <location filename="../defaultlook.ui" line="1097"/>
-        <location filename="../defaultlook.ui" line="1104"/>
+        <location filename="../defaultlook.ui" line="877"/>
+        <location filename="../defaultlook.ui" line="1000"/>
+        <location filename="../defaultlook.ui" line="1007"/>
+        <location filename="../defaultlook.ui" line="1099"/>
         <location filename="../defaultlook.ui" line="1168"/>
         <source>Apply</source>
         <translation>使用</translation>
@@ -346,103 +344,103 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="811"/>
+        <location filename="../defaultlook.ui" line="1016"/>
         <source>Config Options</source>
         <translation>設定選項</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="819"/>
+        <location filename="../defaultlook.ui" line="1024"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>將 Lightdm（登入畫面）回復成系統預設的佈景</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="826"/>
+        <location filename="../defaultlook.ui" line="1031"/>
         <source>Reset Thunar custom right-click actions to system defaults</source>
         <translation>將 Thunar 當中右鍵的自訂動作回復成系統預設的動作</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="833"/>
-        <source>Use intel driver instead of default &quot;modsetting&quot; driver (requires restart)</source>
-        <translation>使用 intel 驅動程式，而不是預設的「modsetting」驅動程式（必須重新開機）</translation>
+        <location filename="../defaultlook.ui" line="1038"/>
+        <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
+        <translation>使用 intel 驅動程式，而不是預設的「modesetting」驅動程式（必須重新開機）</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="840"/>
+        <location filename="../defaultlook.ui" line="1045"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>註：現所採用的 /etc/X11/xorg.conf.d/20-intel.conf 會備份到家目錄當中</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="847"/>
+        <location filename="../defaultlook.ui" line="1052"/>
         <source>Use tearfree amdgpu option</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="854"/>
+        <location filename="../defaultlook.ui" line="1059"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="861"/>
+        <location filename="../defaultlook.ui" line="1066"/>
         <source>Use tearfree radeon driver option</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="868"/>
+        <location filename="../defaultlook.ui" line="1073"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="908"/>
+        <location filename="../defaultlook.ui" line="811"/>
         <source>Display</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="933"/>
+        <location filename="../defaultlook.ui" line="836"/>
         <source>Hardware Backlight</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="940"/>
+        <location filename="../defaultlook.ui" line="843"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Display Tweaks&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="967"/>
+        <location filename="../defaultlook.ui" line="870"/>
         <source>Choose Display for xrandr tweaks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1000"/>
+        <location filename="../defaultlook.ui" line="903"/>
         <source>Resolution</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1007"/>
+        <location filename="../defaultlook.ui" line="910"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Saving is per display&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1010"/>
+        <location filename="../defaultlook.ui" line="913"/>
         <source>Save</source>
         <translation>儲存</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1017"/>
+        <location filename="../defaultlook.ui" line="920"/>
         <source>Software (xrandr) Brightness</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1024"/>
-        <location filename="../defaultlook.ui" line="1038"/>
+        <location filename="../defaultlook.ui" line="927"/>
+        <location filename="../defaultlook.ui" line="941"/>
         <source>TextLabel</source>
         <translation>TextLabel</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1031"/>
+        <location filename="../defaultlook.ui" line="934"/>
         <source>GTK scaling</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1058"/>
+        <location filename="../defaultlook.ui" line="961"/>
         <source>xrandr Scaling</source>
         <translation type="unfinished"></translation>
     </message>
@@ -512,63 +510,67 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="535"/>
+        <location filename="../defaultlook.cpp" line="53"/>
+        <source>--display switch only valid for Xfce</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.cpp" line="557"/>
         <source>About MX Tweak</source>
         <translation>關於 MX 調校</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="536"/>
+        <location filename="../defaultlook.cpp" line="558"/>
         <source>Version: </source>
         <translation>版本：</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="537"/>
+        <location filename="../defaultlook.cpp" line="559"/>
         <source>App for quick default ui theme changes and tweaks</source>
         <translation>本程式可快速更換與調校預設介面佈景</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="539"/>
+        <location filename="../defaultlook.cpp" line="561"/>
         <source>Copyright (c) MX Linux</source>
         <translation>版權所有 (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="540"/>
-        <location filename="../defaultlook.cpp" line="543"/>
+        <location filename="../defaultlook.cpp" line="562"/>
+        <location filename="../defaultlook.cpp" line="565"/>
         <source>License</source>
         <translation>授權條款</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="541"/>
+        <location filename="../defaultlook.cpp" line="563"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="572"/>
+        <location filename="../defaultlook.cpp" line="594"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
         <translation>完成！可能需要重新啟動 Firefox，這些變動才會生效。</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="582"/>
         <source>This app is Xfce-only</source>
-        <translation>本程式僅支援 Xfce</translation>
+        <translation type="vanished">本程式僅支援 Xfce</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="723"/>
+        <location filename="../defaultlook.cpp" line="746"/>
         <source>Panel settings</source>
         <translation>邊條設定</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="724"/>
+        <location filename="../defaultlook.cpp" line="747"/>
         <source>Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1119"/>
+        <location filename="../defaultlook.cpp" line="1157"/>
         <source>settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1456"/>
+        <location filename="../defaultlook.cpp" line="1494"/>
         <source>Choose a theme set</source>
         <translation>選擇一套佈景組合</translation>
     </message>
