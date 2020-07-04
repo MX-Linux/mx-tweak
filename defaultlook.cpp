@@ -66,11 +66,12 @@ void defaultlook::setup()
 {
     this->setWindowTitle(tr("MX Tweak"));
     this->adjustSize();
+    QString home_path = QDir::homePath();
     if (checkXFCE()) {
         whichpanel();
         message_flag = false;
-        QString cmd = QString("test -f ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml");
-        if (system(cmd.toUtf8()) != 0) {
+        QFileInfo backuppanel(home_path + "/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml");
+        if (!backuppanel.exists()) {
             backupPanel();
             message2();
         }
@@ -85,6 +86,7 @@ void defaultlook::setup()
         setupCompositor();
          //setup display tab
         setupDisplay();
+        ui->tabWidget->removeTab(5);
     } else {
         ui->tabWidget->removeTab(3);
         ui->tabWidget->removeTab(2);
@@ -97,7 +99,15 @@ void defaultlook::setup()
         ui->toolButtonXFCEAppearance->hide();
         ui->toolButtonXFCEWMsettings->hide();
         ui->toolButtonXFCEpanelSettings->hide();
+        //ui->label_slit_location->hide();
+       //ui->combofluxslitlocation->hide();
     }
+
+    //setup fluxbox
+    if (checkFluxbox()){
+        setupFluxbox();
+    }
+
 
     //setup other tab;
     setupEtc();
@@ -110,7 +120,6 @@ void defaultlook::setup()
 
 
     //copy template file to ~/.local/share/mx-tweak-data if it doesn't exist
-    QString home_path = QDir::homePath();
     QDir userdir(home_path + "/.local/share/mx-tweak-data");
     QFileInfo template_file(home_path + "/.local/share/mx-tweak-data/mx.tweak.template");
     if (template_file.exists()) {
@@ -606,6 +615,17 @@ bool defaultlook::checkXFCE()
     }
 }
 
+bool defaultlook::checkFluxbox()
+{
+    QString test = runCmd("pgrep fluxbox").output;
+    qDebug() << test;
+    if ( !test.isEmpty()) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 // backs up the current panel configuration
 void defaultlook::backupPanel()
 {
@@ -851,6 +871,69 @@ void defaultlook::setuppanel()
 
 }
 
+void defaultlook::setupFluxbox()
+{
+
+    //resets
+    QFileInfo resetALL("/usr/bin/mxflux_install.sh");
+    QFileInfo resetDefaultDock("/usr/share/mxflux/.fluxbox/scripts/DefaultDock.mxdk");
+    QFileInfo resetDefaultMenu("/usr/share/mxflux/.fluxbox/menu-mx");
+    QFileInfo idesktogglepresent("/usr/bin/idesktoggle");
+    QFileInfo ideskpresent("/usr/bin/idesk");
+
+    if (!resetALL.exists()){
+        ui->checkboxfluxreseteverything->setDisabled(true);
+    }
+
+    if (!resetDefaultDock.exists()){
+        ui->checkboxfluxresetdock->setDisabled(true);
+    }
+
+    if (!resetDefaultMenu.exists()){
+        ui->checkboxfluxresetmenu->setDisabled(true);
+    }
+
+    if (!idesktogglepresent.exists() || !ideskpresent.exists()){
+        ui->checkBoxiconstoggle->setDisabled(true);
+        ui->checkBoxiconcaptions->setDisabled(true);
+        ui->checkBoxiconhovercaptions->setDisabled(true);
+    }
+
+    //toolbar autohide
+    QString toolbarautohide = runCmd("grep screen0.toolbar.autoHide $HOME/.fluxbox/init").output.section(":",1,1).trimmed();
+    qDebug() << "Toolbar autohide" << toolbarautohide;
+    if (toolbarautohide == "true"){
+        ui->checkboxfluxtoolbarautohide->setChecked(true);
+    } else {
+        ui->checkboxfluxtoolbarautohide->setChecked(false);
+    }
+    //toolbar location
+    QString toolbarlocation = runCmd("grep screen0.toolbar.placement $HOME/.fluxbox/init").output.section(":",1,1).trimmed();
+    qDebug() << "Toolbar location" << toolbarlocation;
+    ui->combofluxtoolbarlocatoin->setCurrentText(toolbarlocation);
+    //slit location
+    QString slitlocation = runCmd("grep screen0.slit.placement $HOME/.fluxbox/init").output.section(":",1,1).trimmed();
+    qDebug() << "Slit location" << slitlocation;
+    ui->combofluxslitlocation->setCurrentText(slitlocation);
+    //toolbar width;
+    QString toolbarwidth = runCmd("grep screen0.toolbar.widthPercent $HOME/.fluxbox/init").output.section(":",1,1).trimmed();
+    qDebug() << "Toolbar width" << toolbarwidth;
+    ui->spinBoxFluxToolbarWidth->setValue(toolbarwidth.toInt());
+    //toolbar height
+    QString toolbarheight = runCmd("grep screen0.toolbar.height $HOME/.fluxbox/init").output.section(":",1,1).trimmed();
+    qDebug() << "Toolbar height" << toolbarheight;
+    ui->spinBoxFluxToolbarHeight->setValue(toolbarheight.toInt());
+    //slit autohide
+    QString slitautohide = runCmd("grep screen0.slit.autoHide $HOME/.fluxbox/init").output.section(":",1,1).trimmed();
+    qDebug() << "slit autohide" << toolbarautohide;
+    if (toolbarautohide == "true"){
+        ui->checkboxfluxSlitautohide->setChecked(true);
+    } else {
+        ui->checkboxfluxSlitautohide->setChecked(false);
+    }
+    ui->ApplyFluxboxResets->setDisabled(true);
+
+}
 void defaultlook::setupEtc()
 {
     QString home_path = QDir::homePath();
@@ -2402,4 +2485,185 @@ void defaultlook::on_checkBoxSandbox_clicked()
 {
     ui->ButtonApplyEtc->setEnabled(true);
     sandboxflag = true;
+}
+
+void defaultlook::on_ApplyFluxboxResets_clicked()
+{
+    //Reset Everything
+    if (ui->checkboxfluxreseteverything->isChecked()){
+        ui->checkboxfluxresetdock->setChecked(false);
+        ui->checkboxfluxresetmenu->setChecked(false);
+        runCmd("/usr/bin/mxflux_install.sh");
+    }
+
+    //Reset Menu
+    if (ui->checkboxfluxresetmenu->isChecked()){
+        //determine menu in use
+         QString menumx = runCmd("grep session.menuFile $HOME/.fluxbox/init").output.section(":",1,1).trimmed();
+         qDebug() << "menu mx is " << menumx;
+         //backup menu
+         runCmd("cp " + menumx + " " + menumx + ".$(date +%Y%m%d%H%M%S)");
+         //copy menu-mx from /usr/share/mx-fluxbox/.fluxbox
+         runCmd("cp /usr/share/mxflux/.fluxbox/menu-mx $HOME/.fluxbox");
+         //run localize-fluxbox-menu to generate new menu
+         runCmd("localize_fluxbox_menu-mx");
+    }
+
+    //Reset Dock
+    if (ui->checkboxfluxresetdock->isChecked()){
+        //copy backup dock and copy one from usr/share/mxflux/.fluxbox/scripts
+        runCmd("cp $HOME/.fluxbox/scripts/DefaultDock.mxdk $HOME/.fluxbox/scripts/DefaultDock.mxdk.$(date +%Y%m%d%H%M%S)");
+        runCmd("cp /usr/share/mxflux/.fluxbox/scripts/DefaultDock.mxdk $HOME/.fluxbox/scripts/DefaultDock.mxdk");
+    }
+
+    //toggle icons
+    if (ui->checkBoxiconstoggle->isChecked()){
+        runCmd("idesktoggle icons");
+    }
+
+    //toggle captions
+    if (ui->checkBoxiconcaptions->isChecked()){
+        runCmd("idesktoggle caption");
+    }
+
+    //toggle icon caption on hover
+    if (ui->checkBoxiconhovercaptions->isChecked()){
+        runCmd("idesktoggle CaptionOnHover");
+    }
+
+    //setup slit autohide
+    //get slit line
+    QString initline;
+    QString value;
+    if (ui->checkboxfluxSlitautohide->isChecked()){
+        value = "true";
+    } else {
+        value = "false";
+    }
+    initline = runCmd("grep screen0.slit.autoHide  $HOME/.fluxbox/init").output;
+    fluxboxchangeinitvariable(initline,value);
+
+    //set slit placement
+    //setup toolbar location
+    value = ui->combofluxslitlocation->currentText();
+    initline = runCmd("grep screen0.slit.placement  $HOME/.fluxbox/init").output;
+    fluxboxchangeinitvariable(initline,value);
+    fluxboxchangedock();
+
+    //setup toolbar autohide
+    if (ui->checkboxfluxtoolbarautohide->isChecked()){
+        value = "true";
+    } else {
+        value = "false";
+    }
+    initline = runCmd("grep screen0.toolbar.autoHide  $HOME/.fluxbox/init").output;
+    fluxboxchangeinitvariable(initline,value);
+
+    //setup toolbar location
+    value = ui->combofluxtoolbarlocatoin->currentText();
+    initline = runCmd("grep screen0.toolbar.placement  $HOME/.fluxbox/init").output;
+    fluxboxchangeinitvariable(initline,value);
+
+    //setup toolbar widthpercent
+    value = QString::number(ui->spinBoxFluxToolbarWidth->value(), 'G', 5);
+    initline = runCmd("grep screen0.toolbar.widthPercent  $HOME/.fluxbox/init").output;
+    fluxboxchangeinitvariable(initline,value);
+
+    //setup toolbar height
+    value = QString::number(ui->spinBoxFluxToolbarHeight->value(), 'G', 5);
+    initline = runCmd("grep screen0.toolbar.height  $HOME/.fluxbox/init").output;
+    fluxboxchangeinitvariable(initline,value);
+
+    //when all done, restart fluxbox
+    ui->checkboxfluxresetdock->setChecked(false);
+    ui->checkboxfluxresetmenu->setChecked(false);
+    ui->checkboxfluxreseteverything->setChecked(false);
+    ui->checkBoxiconstoggle->setChecked(false);
+    ui->checkBoxiconcaptions->setChecked(false);
+    ui->checkBoxiconhovercaptions->setChecked(false);
+    runCmd("sleep 2; /usr/bin/fluxbox-remote restart");
+}
+
+void defaultlook::fluxboxchangeinitvariable(QString initline, QString value)
+{
+    qDebug() << "checking for init value changes";
+    QString initialvalue = initline.section(":",1,1).trimmed();
+    if ( initialvalue != value){
+        QString cmd = "sed -i 's/^" + initline +"/" + initline.section(":",0,0).trimmed() + ":    " + value + "/' $HOME/.fluxbox/init";
+        qDebug() << "init change command " << cmd;
+        runCmd(cmd);
+    }
+}
+
+void defaultlook::fluxboxchangedock()
+{
+    qDebug() << "comment slit changes in mxdk files";
+
+    if (slitflag){
+        runCmd("sed -i 's/^fluxbox-remote/#&/' $HOME/.fluxbox/scripts/*.mxdk");
+        runCmd("sed -i 's/^sed/#&/' $HOME/.fluxbox/scripts/*.mxdk");
+    }
+}
+
+void defaultlook::on_checkboxfluxresetdock_clicked()
+{
+    ui->ApplyFluxboxResets->setEnabled(true);
+}
+
+
+
+void defaultlook::on_checkboxfluxresetmenu_clicked()
+{
+    ui->ApplyFluxboxResets->setEnabled(true);
+}
+
+void defaultlook::on_checkboxfluxreseteverything_clicked()
+{
+    ui->ApplyFluxboxResets->setEnabled(true);
+}
+
+void defaultlook::on_combofluxtoolbarlocatoin_currentIndexChanged(int index)
+{
+    ui->ApplyFluxboxResets->setEnabled(true);
+}
+
+void defaultlook::on_checkboxfluxtoolbarautohide_clicked()
+{
+    ui->ApplyFluxboxResets->setEnabled(true);
+}
+
+void defaultlook::on_spinBoxFluxToolbarWidth_valueChanged(int arg1)
+{
+    ui->ApplyFluxboxResets->setEnabled(true);
+}
+
+void defaultlook::on_spinBoxFluxToolbarHeight_valueChanged(int arg1)
+{
+    ui->ApplyFluxboxResets->setEnabled(true);
+}
+
+void defaultlook::on_combofluxslitlocation_currentIndexChanged(int index)
+{
+    ui->ApplyFluxboxResets->setEnabled(true);
+    slitflag = true;
+}
+
+void defaultlook::on_checkboxfluxSlitautohide_clicked()
+{
+    ui->ApplyFluxboxResets->setEnabled(true);
+}
+
+void defaultlook::on_checkBoxiconstoggle_clicked()
+{
+    ui->ApplyFluxboxResets->setEnabled(true);
+}
+
+void defaultlook::on_checkBoxiconcaptions_clicked()
+{
+    ui->ApplyFluxboxResets->setEnabled(true);
+}
+
+void defaultlook::on_checkBoxiconhovercaptions_clicked()
+{
+    ui->ApplyFluxboxResets->setEnabled(true);
 }
