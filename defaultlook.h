@@ -70,6 +70,7 @@ public:
     bool displayflag = false;
     bool brightnessflag = false;
     bool sandboxflag = false;
+    bool slitflag = false;
     QString g1;
     QString g2;
     QString g3;
@@ -80,6 +81,7 @@ public:
     void setuppanel();
     void setuptheme();
     void setupEtc();
+    void setupFluxbox();
     void setupDisplay();
     void setupConfigoptions();
     void setupComboTheme();
@@ -89,6 +91,7 @@ public:
     void whichpanel();
     void message();
     bool checkXFCE();
+    bool checkFluxbox();
     void CheckComptonRunning();
     void setupCompositor();
     void CheckAptNotifierRunning();
@@ -116,6 +119,8 @@ public:
     void setupGamma();
 
     void setmissingxfconfvariables(QString arg1, QString arg2);
+    void fluxboxchangeinitvariable(QString arg1, QString arg2);
+    void fluxboxchangedock();
 
 public slots:
 
@@ -231,6 +236,32 @@ private slots:
     void on_radioSudoRoot_clicked();
 
     void on_checkBoxSandbox_clicked();
+
+    void on_ApplyFluxboxResets_clicked();
+
+    void on_checkboxfluxresetdock_clicked();
+
+    void on_checkboxfluxresetmenu_clicked();
+
+    void on_checkboxfluxreseteverything_clicked();
+
+    void on_combofluxtoolbarlocatoin_currentIndexChanged(int index);
+
+    void on_checkboxfluxtoolbarautohide_clicked();
+
+    void on_spinBoxFluxToolbarWidth_valueChanged(int arg1);
+
+    void on_spinBoxFluxToolbarHeight_valueChanged(int arg1);
+
+    void on_combofluxslitlocation_currentIndexChanged(int index);
+
+    void on_checkboxfluxSlitautohide_clicked();
+
+    void on_checkBoxiconstoggle_clicked();
+
+    void on_checkBoxiconcaptions_clicked();
+
+    void on_checkBoxiconhovercaptions_clicked();
 
 private:
     Ui::defaultlook *ui;
