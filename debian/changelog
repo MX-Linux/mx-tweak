@@ -1,3 +1,9 @@
+mx-tweak (20.07.03) mx; urgency=medium
+
+  * fix plasma/kwin restart 
+
+ -- Dolphin Oracle <dolphin@littlebyte>  Sat, 11 Jul 2020 16:15:12 -0400
+
 mx-tweak (20.07.02) mx; urgency=medium
 
   * plasma tab 

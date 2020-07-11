@@ -2907,9 +2907,9 @@ void defaultlook::on_ButtonApplyPlasma_clicked()
     //time to reset kwin and plasmashell
     if (plasmaworkspacesflag || plasmasingleclickflag || plasmaplacementflag || plasmaresetflag){
         //restart kwin first
-        //runCmd("sleep 1; qdbus org.kde.KWin /KWin reconfigure");
+        runCmd("sleep 1; qdbus org.kde.KWin /KWin reconfigure");
         //then plasma
-        //runCmd("sleep 1; plasmashell --replace &");
+        runCmd("sleep 1; plasmashell --replace &");
     }
     setupPlasma();
 
