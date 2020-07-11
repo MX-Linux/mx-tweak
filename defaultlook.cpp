@@ -2909,7 +2909,8 @@ void defaultlook::on_ButtonApplyPlasma_clicked()
         //restart kwin first
         runCmd("sleep 1; qdbus org.kde.KWin /KWin reconfigure");
         //then plasma
-        runCmd("sleep 1; plasmashell --replace &");
+        QString cmd ="sleep 1; plasmashell --replace &";
+        system(cmd.toUtf8());
     }
     setupPlasma();
 
