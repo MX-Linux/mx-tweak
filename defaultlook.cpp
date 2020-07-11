@@ -89,8 +89,8 @@ void defaultlook::setup()
         setupCompositor();
          //setup display tab
         setupDisplay();
-        //ui->tabWidget->removeTab(6);
-        //ui->tabWidget->removeTab(5);
+        ui->tabWidget->removeTab(6);
+        ui->tabWidget->removeTab(5);
     } else {
         ui->checkBoxThunarCAReset->hide();
         ui->checkBoxThunarSingleClick->hide();
@@ -125,7 +125,7 @@ void defaultlook::setup()
     }
 
     //setup plasma
-    if (!checkPlasma()){
+    if (checkPlasma()){
         ui->tabWidget->setCurrentIndex(6);
         ui->tabWidget->removeTab(5);
         ui->tabWidget->removeTab(3);
