@@ -928,7 +928,7 @@ void defaultlook::setupPlasma()
         ui->comboPlasmaPanelLocation->setCurrentIndex(1);
         break;
     case 6:
-        ui->comboPlasmaPanelLocation->setCurrentIndex(6);
+        ui->comboPlasmaPanelLocation->setCurrentIndex(3);
         break;
     default: ui->comboPlasmaPanelLocation->setCurrentIndex(0);
     }
