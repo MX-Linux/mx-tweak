@@ -57,6 +57,8 @@ public:
     QString output;
     QStringList panelIDs;
     QString panel;
+    QString plasmaPanelId;
+    QString plasmataskmanagerID;
     bool message_flag;
     QHash<QString, QString>  theme_info;
     QString pluginidsystray;
@@ -71,6 +73,13 @@ public:
     bool brightnessflag = false;
     bool sandboxflag = false;
     bool slitflag = false;
+    bool fluxcaptionflag = false;
+    bool fluxiconflag = false;
+    bool plasmaplacementflag;
+    bool plasmaworkspacesflag;
+    bool plasmasingleclickflag;
+    bool plasmaresetflag;
+
     QString g1;
     QString g2;
     QString g3;
@@ -82,6 +91,11 @@ public:
     void setuptheme();
     void setupEtc();
     void setupFluxbox();
+    void setupPlasma();
+    QString readPlasmaPanelConfig(QString Key);
+    QString readTaskmanagerConfig(QString Key);
+    void writePlasmaPanelConfig(QString key, QString value);
+    void writeTaskmanagerConfig(QString key, QString value);
     void setupDisplay();
     void setupConfigoptions();
     void setupComboTheme();
@@ -92,6 +106,8 @@ public:
     void message();
     bool checkXFCE();
     bool checkFluxbox();
+    bool checklightdm();
+    bool checkPlasma();
     void CheckComptonRunning();
     void setupCompositor();
     void CheckAptNotifierRunning();
@@ -257,11 +273,20 @@ private slots:
 
     void on_checkboxfluxSlitautohide_clicked();
 
-    void on_checkBoxiconstoggle_clicked();
 
-    void on_checkBoxiconcaptions_clicked();
+    void on_comboBoxfluxIcons_currentIndexChanged(int index);
 
-    void on_checkBoxiconhovercaptions_clicked();
+    void on_comboBoxfluxcaptions_currentIndexChanged(int index);
+
+    void on_comboPlasmaPanelLocation_currentIndexChanged(int index);
+
+    void on_checkBoxPlasmaSingleClick_clicked();
+
+    void on_checkBoxPlasmaShowAllWorkspaces_clicked();
+
+    void on_checkboxplasmaresetdock_clicked();
+
+    void on_ButtonApplyPlasma_clicked();
 
 private:
     Ui::defaultlook *ui;

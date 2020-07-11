@@ -67,6 +67,9 @@ void defaultlook::setup()
     this->setWindowTitle(tr("MX Tweak"));
     this->adjustSize();
     QString home_path = QDir::homePath();
+    if (!checklightdm()){
+        ui->checkBoxLightdmReset->hide();
+    }
     if (checkXFCE()) {
         whichpanel();
         message_flag = false;
@@ -86,12 +89,11 @@ void defaultlook::setup()
         setupCompositor();
          //setup display tab
         setupDisplay();
-        ui->tabWidget->removeTab(5);
+        //ui->tabWidget->removeTab(6);
+        //ui->tabWidget->removeTab(5);
     } else {
-        ui->tabWidget->removeTab(3);
-        ui->tabWidget->removeTab(2);
-        ui->tabWidget->removeTab(1);
-        ui->tabWidget->removeTab(0);
+        ui->checkBoxThunarCAReset->hide();
+        ui->checkBoxThunarSingleClick->hide();
         ui->label_4->hide();
         ui->label_5->hide();
         ui->label_6->hide();
@@ -103,12 +105,6 @@ void defaultlook::setup()
        //ui->combofluxslitlocation->hide();
     }
 
-    //setup fluxbox
-    if (checkFluxbox()){
-        setupFluxbox();
-    }
-
-
     //setup other tab;
     setupEtc();
 
@@ -117,7 +113,27 @@ void defaultlook::setup()
     //setup Config Options
     setupConfigoptions();
 
+    //setup fluxbox
+    if (checkFluxbox()){
+        setupFluxbox();
+        ui->tabWidget->setCurrentIndex(5);
+        ui->tabWidget->removeTab(6);
+        ui->tabWidget->removeTab(3);
+        ui->tabWidget->removeTab(2);
+        ui->tabWidget->removeTab(1);
+        ui->tabWidget->removeTab(0);
+    }
 
+    //setup plasma
+    if (!checkPlasma()){
+        ui->tabWidget->setCurrentIndex(6);
+        ui->tabWidget->removeTab(5);
+        ui->tabWidget->removeTab(3);
+        ui->tabWidget->removeTab(2);
+        ui->tabWidget->removeTab(1);
+        ui->tabWidget->removeTab(0);
+        setupPlasma();
+    }
 
     //copy template file to ~/.local/share/mx-tweak-data if it doesn't exist
     QDir userdir(home_path + "/.local/share/mx-tweak-data");
@@ -626,6 +642,27 @@ bool defaultlook::checkFluxbox()
     }
 }
 
+bool defaultlook::checklightdm()
+{
+    QFileInfo test("/etc/lightdm/lightdm-gtk-greeter.conf");
+    if ( test.exists()) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+bool defaultlook::checkPlasma()
+{
+    QString test = runCmd("pgrep plasma").output;
+    qDebug() << test;
+    if ( !test.isEmpty()) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 // backs up the current panel configuration
 void defaultlook::backupPanel()
 {
@@ -871,6 +908,84 @@ void defaultlook::setuppanel()
 
 }
 
+void defaultlook::setupPlasma()
+{
+    //get panel ID
+    plasmaPanelId = runCmd("grep --max-count 1 -B 8 panel $HOME/.config/plasma-org.kde.plasma.desktop-appletsrc |grep Containment").output;
+    QString panellocation = readPlasmaPanelConfig("location");
+    QString panelformfactor = readPlasmaPanelConfig("formfactor");
+
+    //location combo index - 0=bottom, 1=left, 2=top, 3=right
+    //location plasma settings - 4=bottom, 3 top, 5 left, 6 right
+    switch(panellocation.toInt()){
+    case 3:
+        ui->comboPlasmaPanelLocation->setCurrentIndex(2);
+        break;
+    case 4:
+        ui->comboPlasmaPanelLocation->setCurrentIndex(0);
+        break;
+    case 5:
+        ui->comboPlasmaPanelLocation->setCurrentIndex(1);
+        break;
+    case 6:
+        ui->comboPlasmaPanelLocation->setCurrentIndex(6);
+        break;
+    default: ui->comboPlasmaPanelLocation->setCurrentIndex(0);
+    }
+
+    //setup singleclick
+    QString singleclick = runCmd("kreadconfig5 --group KDE --key SingleClick").output;
+    if (singleclick == "false"){
+        ui->checkBoxPlasmaSingleClick->setChecked(false);
+    } else {
+        ui->checkBoxPlasmaSingleClick->setChecked(true);
+    }
+
+    //get taskmanager ID and setup showOnlyCurrentDesktop
+    plasmataskmanagerID = runCmd("grep --max-count 1 -B 2 taskmanager $HOME/.config/plasma-org.kde.plasma.desktop-appletsrc |grep Containment").output;
+    QString showOnlyCurrentDesktop = readTaskmanagerConfig("showOnlyCurrentDesktop");
+    if (showOnlyCurrentDesktop == "true"){
+        ui->checkBoxPlasmaShowAllWorkspaces->setChecked(false);
+    } else {
+        ui->checkBoxPlasmaShowAllWorkspaces->setChecked(true);
+    }
+   ui->ButtonApplyPlasma->setDisabled(true);
+
+   ui->checkboxplasmaresetdock->setChecked(false);
+
+   plasmaplacementflag = false;
+   plasmaworkspacesflag = false;
+   plasmasingleclickflag = false;
+   plasmaresetflag = false;
+
+}
+QString defaultlook::readTaskmanagerConfig(QString key)
+{
+    QString ID = plasmataskmanagerID.section("[",2,2).section("]",0,0);
+    QString Applet = plasmataskmanagerID.section("[",4,4).section("]",0,0);
+    qDebug() << "plasma taskmanager ID is " << ID;
+    qDebug() << "plasma taskmanger Applet ID is " << Applet;
+    //read key
+    QString value = runCmd("kreadconfig5 --file plasma-org.kde.plasma.desktop-appletsrc --group Containments --group " + ID + " --group Applets --group " + Applet + " --key " + key).output;
+    if (value.isEmpty()){
+           value = "false";
+    }
+    qDebug() << "key is " << value;
+    return value;
+}
+
+QString defaultlook::readPlasmaPanelConfig(QString key)
+{
+    QString ID;
+    ID = plasmaPanelId.section("[",2,2).section("]",0,0);
+    qDebug() << "plasma panel ID" << ID;
+    //read key
+    QString value = runCmd("kreadconfig5 --file plasma-org.kde.plasma.desktop-appletsrc --group Containments --group " + ID + " --key " + key).output;
+    qDebug() << "key is " << value;
+    return value;
+}
+
+
 void defaultlook::setupFluxbox()
 {
 
@@ -894,10 +1009,28 @@ void defaultlook::setupFluxbox()
     }
 
     if (!idesktogglepresent.exists() || !ideskpresent.exists()){
-        ui->checkBoxiconstoggle->setDisabled(true);
-        ui->checkBoxiconcaptions->setDisabled(true);
-        ui->checkBoxiconhovercaptions->setDisabled(true);
+        ui->comboBoxfluxIcons->setDisabled(true);
+        ui->comboBoxfluxcaptions->setDisabled(true);
+    } else {
+        QString test;
+        test = runCmd("grep \\#Caption $HOME/.idesktop/*.lnk").output;
+        if (test.isEmpty()){
+            ui->comboBoxfluxcaptions->setCurrentIndex(0);
+            test = runCmd("grep CaptionOnHover $HOME/.ideskrc |grep -v ToolTip").output.section(":",1,1).trimmed();
+            qDebug() << "hover test" << test;
+            if (test.contains("true")){
+                ui->comboBoxfluxcaptions->setCurrentIndex(2);
+            }
+        }
+        test = runCmd("grep \\#Icon $HOME/.idesktop/*.lnk").output;
+        if (test.isEmpty()){
+            ui->comboBoxfluxIcons->setCurrentIndex(0);
+        }
+
     }
+
+    fluxiconflag = false;
+    fluxcaptionflag =false;
 
     //toolbar autohide
     QString toolbarautohide = runCmd("grep screen0.toolbar.autoHide $HOME/.fluxbox/init").output.section(":",1,1).trimmed();
@@ -955,7 +1088,6 @@ void defaultlook::setupEtc()
         }
 
         //check single click thunar status
-
         test = runCmd("xfconf-query  -c thunar -p /misc-single-click").output;
         if ( test == "true") {
             ui->checkBoxThunarSingleClick->setChecked(true);
@@ -1170,6 +1302,10 @@ void defaultlook::setupConfigoptions()
   ui->labelradeon->hide();
   ui->ButtonApplyMiscDefualts->setEnabled(false);
   ui->checkBoxLightdmReset->setChecked(false);
+  QString test = runCmd("pgrep lightdm").output;
+  if (test.isEmpty()){
+        ui->checkBoxLightdmReset->hide();
+  }
   if (checkXFCE()){
     ui->checkBoxThunarCAReset->setChecked(false);
   } else{
@@ -2489,47 +2625,39 @@ void defaultlook::on_checkBoxSandbox_clicked()
 
 void defaultlook::on_ApplyFluxboxResets_clicked()
 {
-    //Reset Everything
-    if (ui->checkboxfluxreseteverything->isChecked()){
-        ui->checkboxfluxresetdock->setChecked(false);
-        ui->checkboxfluxresetmenu->setChecked(false);
-        runCmd("/usr/bin/mxflux_install.sh");
-    }
-
-    //Reset Menu
-    if (ui->checkboxfluxresetmenu->isChecked()){
-        //determine menu in use
-         QString menumx = runCmd("grep session.menuFile $HOME/.fluxbox/init").output.section(":",1,1).trimmed();
-         qDebug() << "menu mx is " << menumx;
-         //backup menu
-         runCmd("cp " + menumx + " " + menumx + ".$(date +%Y%m%d%H%M%S)");
-         //copy menu-mx from /usr/share/mx-fluxbox/.fluxbox
-         runCmd("cp /usr/share/mxflux/.fluxbox/menu-mx $HOME/.fluxbox");
-         //run localize-fluxbox-menu to generate new menu
-         runCmd("localize_fluxbox_menu-mx");
-    }
-
-    //Reset Dock
-    if (ui->checkboxfluxresetdock->isChecked()){
-        //copy backup dock and copy one from usr/share/mxflux/.fluxbox/scripts
-        runCmd("cp $HOME/.fluxbox/scripts/DefaultDock.mxdk $HOME/.fluxbox/scripts/DefaultDock.mxdk.$(date +%Y%m%d%H%M%S)");
-        runCmd("cp /usr/share/mxflux/.fluxbox/scripts/DefaultDock.mxdk $HOME/.fluxbox/scripts/DefaultDock.mxdk");
-    }
-
     //toggle icons
-    if (ui->checkBoxiconstoggle->isChecked()){
-        runCmd("idesktoggle icons");
+    // flux captions - 0=on 1=off 2=On Hover
+    // flux icons 0=on 1=off
+
+    if (fluxcaptionflag){
+        switch(ui->comboBoxfluxcaptions->currentIndex()){
+        case 0:
+            runCmd("/usr/bin/idesktoggle caption on");
+            break;
+
+        case 1:
+            runCmd("/usr/bin/idesktoggle caption off");
+            break;
+
+        case 2:
+            runCmd("/usr/bin/idesktoggle caption on");
+            runCmd("/usr/bin/idesktoggle CaptionOnHover On");
+            break;
+        }
     }
 
-    //toggle captions
-    if (ui->checkBoxiconcaptions->isChecked()){
-        runCmd("idesktoggle caption");
+    if (fluxiconflag){
+        switch(ui->comboBoxfluxIcons->currentIndex()){
+        case 0:
+            runCmd("/usr/bin/idesktoggle Icon on");
+            break;
+
+        case 1:
+            runCmd("/usr/bin/idesktoggle Icon off");
+            break;
+        }
     }
 
-    //toggle icon caption on hover
-    if (ui->checkBoxiconhovercaptions->isChecked()){
-        runCmd("idesktoggle CaptionOnHover");
-    }
 
     //setup slit autohide
     //get slit line
@@ -2574,14 +2702,44 @@ void defaultlook::on_ApplyFluxboxResets_clicked()
     initline = runCmd("grep screen0.toolbar.height  $HOME/.fluxbox/init").output;
     fluxboxchangeinitvariable(initline,value);
 
+    //Reset Everything
+    if (ui->checkboxfluxreseteverything->isChecked()){
+        ui->checkboxfluxresetdock->setChecked(false);
+        ui->checkboxfluxresetmenu->setChecked(false);
+        runCmd("/usr/bin/mxflux_install.sh");
+        runCmd("pkill wmalauncher");
+        runCmd("$HOME/.fluxbox/scripts/DefaultDock.mxdk");
+
+    }
+
+    //Reset Menu
+    if (ui->checkboxfluxresetmenu->isChecked() && !ui->checkboxfluxreseteverything->isChecked()){
+        //determine menu in use
+        QString menumx = runCmd("grep session.menuFile $HOME/.fluxbox/init").output.section(":",1,1).trimmed();
+        qDebug() << "menu mx is " << menumx;
+        //backup menu
+        runCmd("cp " + menumx + " " + menumx + ".$(date +%Y%m%d%H%M%S)");
+        //copy menu-mx from /usr/share/mx-fluxbox/.fluxbox
+        runCmd("cp /usr/share/mxflux/.fluxbox/menu-mx $HOME/.fluxbox");
+        //run localize-fluxbox-menu to generate new menu
+        runCmd("localize_fluxbox_menu-mx");
+    }
+
+    //Reset Dock
+    if (ui->checkboxfluxresetdock->isChecked() && !ui->checkboxfluxreseteverything->isChecked()){
+        //copy backup dock and copy one from usr/share/mxflux/.fluxbox/scripts
+        runCmd("cp $HOME/.fluxbox/scripts/DefaultDock.mxdk $HOME/.fluxbox/scripts/DefaultDock.mxdk.$(date +%Y%m%d%H%M%S)");
+        runCmd("cp /usr/share/mxflux/.fluxbox/scripts/DefaultDock.mxdk $HOME/.fluxbox/scripts/DefaultDock.mxdk");
+        runCmd("pkill wmalauncher");
+        runCmd("$HOME/.fluxbox/scripts/DefaultDock.mxdk");
+    }
+
     //when all done, restart fluxbox
     ui->checkboxfluxresetdock->setChecked(false);
     ui->checkboxfluxresetmenu->setChecked(false);
     ui->checkboxfluxreseteverything->setChecked(false);
-    ui->checkBoxiconstoggle->setChecked(false);
-    ui->checkBoxiconcaptions->setChecked(false);
-    ui->checkBoxiconhovercaptions->setChecked(false);
     runCmd("sleep 2; /usr/bin/fluxbox-remote restart");
+    setupFluxbox();
 }
 
 void defaultlook::fluxboxchangeinitvariable(QString initline, QString value)
@@ -2653,17 +2811,121 @@ void defaultlook::on_checkboxfluxSlitautohide_clicked()
     ui->ApplyFluxboxResets->setEnabled(true);
 }
 
-void defaultlook::on_checkBoxiconstoggle_clicked()
+
+void defaultlook::on_comboBoxfluxIcons_currentIndexChanged(int index)
 {
     ui->ApplyFluxboxResets->setEnabled(true);
+    fluxiconflag = true;
 }
 
-void defaultlook::on_checkBoxiconcaptions_clicked()
+void defaultlook::on_comboBoxfluxcaptions_currentIndexChanged(int index)
 {
     ui->ApplyFluxboxResets->setEnabled(true);
+    fluxcaptionflag = true;
 }
 
-void defaultlook::on_checkBoxiconhovercaptions_clicked()
+void defaultlook::on_comboPlasmaPanelLocation_currentIndexChanged(int index)
 {
-    ui->ApplyFluxboxResets->setEnabled(true);
+    ui->ButtonApplyPlasma->setEnabled(true);
+    plasmaplacementflag = true;
+}
+
+void defaultlook::on_checkBoxPlasmaSingleClick_clicked()
+{
+    ui->ButtonApplyPlasma->setEnabled(true);
+    plasmasingleclickflag = true;
+}
+
+void defaultlook::on_checkBoxPlasmaShowAllWorkspaces_clicked()
+{
+    ui->ButtonApplyPlasma->setEnabled(true);
+    plasmaworkspacesflag = true;
+}
+
+void defaultlook::on_checkboxplasmaresetdock_clicked()
+{
+    ui->ButtonApplyPlasma->setEnabled(true);
+    plasmaresetflag = true;
+}
+
+void defaultlook::on_ButtonApplyPlasma_clicked()
+{
+    if (plasmaresetflag){
+        plasmaplacementflag = false;
+        plasmasingleclickflag = false;
+        plasmaworkspacesflag = false;
+        //reset plasma script Adrian
+        runCmd("/usr/lib/mx-tweak/reset-kde-mx");
+    }
+
+    //location combo index - 0=bottom, 1=left, 2=top, 3=right
+    //location plasma settings - 4=bottom, 3 top, 5 left, 6 right
+
+    if (plasmaplacementflag){
+        switch(ui->comboPlasmaPanelLocation->currentIndex()){
+        case 0:
+            writePlasmaPanelConfig("location", "4");
+            writePlasmaPanelConfig("formfactor", "2");
+            break;
+
+        case 1:
+            writePlasmaPanelConfig("location", "5");
+            writePlasmaPanelConfig("formfactor", "3");
+            break;
+        case 2:
+            writePlasmaPanelConfig("location", "3");
+            writePlasmaPanelConfig("formfactor", "2");
+            break;
+        case 3:
+            writePlasmaPanelConfig("location", "6");
+            writePlasmaPanelConfig("formfactor", "3");
+            break;
+        }
+    }
+
+    if (plasmasingleclickflag){
+        QString value;
+        if (ui->checkBoxPlasmaSingleClick->isChecked()){
+            value = "true";
+        } else {
+            value = "false";
+        }
+        runCmd("kwriteconfig5 --group KDE --key SingleClick " + value);
+    }
+
+
+    if (plasmaworkspacesflag) {
+        QString value;
+        if (ui->checkBoxPlasmaShowAllWorkspaces->isChecked()){
+            value = "false";
+        } else {
+            value = "true";
+        }
+        writeTaskmanagerConfig("showOnlyCurrentDesktop", value);
+    }
+
+    //time to reset kwin and plasmashell
+    if (plasmaworkspacesflag || plasmasingleclickflag || plasmaplacementflag || plasmaresetflag){
+        //restart kwin first
+        //runCmd("sleep 1; qdbus org.kde.KWin /KWin reconfigure");
+        //then plasma
+        //runCmd("sleep 1; plasmashell --replace &");
+    }
+    setupPlasma();
+
+}
+
+void defaultlook::writePlasmaPanelConfig(QString key, QString value)
+{
+    QString ID;
+    ID = plasmaPanelId.section("[",2,2).section("]",0,0);
+    runCmd("kwriteconfig5 --file plasma-org.kde.plasma.desktop-appletsrc --group Containments --group " + ID + " --key " + key + " " + value);
+}
+
+void defaultlook::writeTaskmanagerConfig(QString key, QString value)
+{
+    QString ID = plasmataskmanagerID.section("[",2,2).section("]",0,0);
+    QString Applet = plasmataskmanagerID.section("[",4,4).section("]",0,0);
+    runCmd("kwriteconfig5 --file plasma-org.kde.plasma.desktop-appletsrc --group Containments --group " + ID + " --group Applets --group " + Applet + " --key " + key + " " + value);
+
 }
