@@ -87,13 +87,20 @@ void defaultlook::setup()
         setuppanel();
         //setup compositor tab
         setupCompositor();
-         //setup display tab
+        //setup display tab
         setupDisplay();
         ui->tabWidget->removeTab(6);
         ui->tabWidget->removeTab(5);
-    } else {
-        ui->checkBoxThunarCAReset->hide();
-        ui->checkBoxThunarSingleClick->hide();
+        //set first tab as default
+        ui->tabWidget->setCurrentIndex(0);
+        //setup Config Options
+        setupConfigoptions();
+    }
+
+    //setup fluxbox
+    if (checkFluxbox()){
+        setupFluxbox();
+        ui->tabWidget->removeTab(6);
         ui->label_4->hide();
         ui->label_5->hide();
         ui->label_6->hide();
@@ -101,23 +108,8 @@ void defaultlook::setup()
         ui->toolButtonXFCEAppearance->hide();
         ui->toolButtonXFCEWMsettings->hide();
         ui->toolButtonXFCEpanelSettings->hide();
-        //ui->label_slit_location->hide();
-       //ui->combofluxslitlocation->hide();
-    }
-
-    //setup other tab;
-    setupEtc();
-
-    //set first tab as default
-    ui->tabWidget->setCurrentIndex(0);
-    //setup Config Options
-    setupConfigoptions();
-
-    //setup fluxbox
-    if (checkFluxbox()){
-        setupFluxbox();
         ui->tabWidget->setCurrentIndex(5);
-        ui->tabWidget->removeTab(6);
+        ui->tabWidget->removeTab(4);
         ui->tabWidget->removeTab(3);
         ui->tabWidget->removeTab(2);
         ui->tabWidget->removeTab(1);
@@ -126,14 +118,25 @@ void defaultlook::setup()
 
     //setup plasma
     if (checkPlasma()){
+        ui->label_4->hide();
+        ui->label_5->hide();
+        ui->label_6->hide();
+        ui->label_7->hide();
+        ui->toolButtonXFCEAppearance->hide();
+        ui->toolButtonXFCEWMsettings->hide();
+        ui->toolButtonXFCEpanelSettings->hide();
         ui->tabWidget->setCurrentIndex(6);
         ui->tabWidget->removeTab(5);
+        ui->tabWidget->removeTab(4);
         ui->tabWidget->removeTab(3);
         ui->tabWidget->removeTab(2);
         ui->tabWidget->removeTab(1);
         ui->tabWidget->removeTab(0);
         setupPlasma();
     }
+
+    //setup other tab;
+    setupEtc();
 
     //copy template file to ~/.local/share/mx-tweak-data if it doesn't exist
     QDir userdir(home_path + "/.local/share/mx-tweak-data");
@@ -1070,112 +1073,26 @@ void defaultlook::setupFluxbox()
 void defaultlook::setupEtc()
 {
     QString home_path = QDir::homePath();
+
+    ui->checkBoxLightdmReset->setChecked(false);
+    QString test = runCmd("pgrep lightdm").output;
+    if (test.isEmpty()){
+          ui->checkBoxLightdmReset->hide();
+    }
+
+    ui->checkboxIntelDriver->hide();
+    ui->labelIntel->hide();
+    ui->checkboxAMDtearfree->hide();
+    ui->labelamdgpu->hide();
+    ui->checkboxRadeontearfree->hide();
+    ui->labelradeon->hide();
+
     ui->ButtonApplyEtc->setEnabled(false);
     if (ui->ButtonApplyEtc->icon().isNull()) {
         ui->ButtonApplyEtc->setIcon(QIcon(":/icons/dialog-ok.svg"));
     }
     //set values for checkboxes
 
-    //set xfce values
-    if (checkXFCE()){
-        //check single click status
-        QString test;
-        test = runCmd("xfconf-query  -c xfce4-desktop -p /desktop-icons/single-click").output;
-        if ( test == "true") {
-            ui->checkBoxSingleClick->setChecked(true);
-        } else {
-            ui->checkBoxSingleClick->setChecked(false);
-        }
-
-        //check single click thunar status
-        test = runCmd("xfconf-query  -c thunar -p /misc-single-click").output;
-        if ( test == "true") {
-            ui->checkBoxThunarSingleClick->setChecked(true);
-        } else {
-            ui->checkBoxThunarSingleClick->setChecked(false);
-        }
-
-        //check systray frame status
-
-        pluginidsystray = runCmd("cat ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml | grep \\\"systray\\\"|cut -d '=' -f2 | cut -d '' -f1| cut -d '\"' -f2").output;
-        qDebug() << "systray is " << pluginidsystray;
-        test = runCmd("xfconf-query -c xfce4-panel -p /plugins/" + pluginidsystray + "/show-frame").output;
-        if ( test == "true") {
-            ui->checkBoxSystrayFrame->setChecked(true);
-        } else {
-            ui->checkBoxSystrayFrame->setChecked(false);
-        }
-
-        plugintasklist = runCmd("cat ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml | grep \\\"tasklist\\\"|cut -d '=' -f2 | cut -d '' -f1| cut -d '\"' -f2").output;
-        qDebug() << "tasklist is " << plugintasklist;
-        test = runCmd("xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/include-all-workspaces").output;
-        if ( test == "true") {
-            ui->checkBoxShowAllWorkspaces->setChecked(true);
-        } else {
-            ui->checkBoxShowAllWorkspaces->setChecked(false);
-        }
-
-        //setup no-ellipse option
-        QFileInfo fileinfo2(home_path + "/.config/gtk-3.0/no-ellipse-desktop-filenames.css");
-        if (fileinfo2.exists()) {
-            ui->checkboxNoEllipse->setChecked(true);
-        } else {
-            ui->checkboxNoEllipse->setChecked(false);
-        }
-
-        //setup hibernate switch
-        //first, hide if running live
-        test = runCmd("df -T / |tail -n1 |awk '{print $2}'").output;
-        qDebug() << test;
-        if ( test == "aufs" || test == "overlay" ) {
-            ui->checkBoxHibernate->hide();
-            ui->label_hibernate->hide();
-        }
-
-        //hide hibernate if there is no swap
-        QString swaptest = runCmd("/usr/sbin/swapon --show").output;
-        qDebug() << "swaptest swap present is " << swaptest;
-        if (swaptest.isEmpty()) {
-            ui->checkBoxHibernate->hide();
-            ui->label_hibernate->hide();
-        }
-
-        // also hide hibernate if /etc/uswsusp.conf is missing
-        QFileInfo file("/etc/uswsusp.conf");
-        if (file.exists()) {
-            qDebug() << "uswsusp.conf found";
-        }else {
-            ui->checkBoxHibernate->hide();
-            ui->label_hibernate->hide();
-        }
-
-        //and hide hibernate if swap is encrypted
-        QString cmd = "grep swap /etc/crypttab |grep -q luks";
-        int swaptest2 = system(cmd.toUtf8());
-        qDebug() << "swaptest encrypted is " << swaptest2;
-        if (swaptest2 == 0) {
-            ui->checkBoxHibernate->hide();
-            ui->label_hibernate->hide();
-        }
-
-        //set checkbox
-        test = runCmd("xfconf-query -c xfce4-session -p /shutdown/ShowHibernate").output;
-        if ( test == "true") {
-            ui->checkBoxHibernate->setChecked(true);
-            hibernate_flag = true;
-        } else {
-            ui->checkBoxHibernate->setChecked(false);
-            hibernate_flag = false;
-        }
-    } else {
-        ui->label_hibernate->hide();
-        ui->checkBoxHibernate->hide();
-        ui->checkboxNoEllipse->hide();
-        ui->checkBoxSingleClick->hide();
-        ui->checkBoxThunarSingleClick->hide();
-        ui->checkBoxSystrayFrame->hide();
-        ui->checkBoxShowAllWorkspaces->hide();
-    }
     //setup udisks option
     QFileInfo fileinfo("/etc/tweak-udisks.chk");
     if (fileinfo.exists()) {
@@ -1205,6 +1122,50 @@ void defaultlook::setupEtc()
         }
     } else {
         ui->checkBoxSandbox->hide();
+    }
+
+    Intel_flag = false;
+    amdgpuflag = false;
+    radeon_flag =false;
+    //setup Intel checkbox
+
+    QString partcheck = runCmd("for i in $(lspci -n | awk '{print $2,$1}' | grep -E '^(0300|0302|0380)' | cut -f2 -d\\ ); do lspci -kns \"$i\"; done").output;
+    qDebug()<< "partcheck = " << partcheck;
+
+    if ( partcheck.contains("i915")) {
+        ui->checkboxIntelDriver->show();
+        ui->labelIntel->show();
+    }
+
+    if ( partcheck.contains("Kernel driver in use: amdgpu")) {
+        ui->checkboxAMDtearfree->show();
+        ui->labelamdgpu->show();
+    }
+
+    if ( partcheck.contains("Kernel driver in use: radeon")) {
+        ui->checkboxRadeontearfree->show();
+        ui->labelradeon->show();
+    }
+
+    QFileInfo intelfile("/etc/X11/xorg.conf.d/20-intel.conf");
+    if ( intelfile.exists()) {
+        ui->checkboxIntelDriver->setChecked(true);
+    }else {
+        ui->checkboxIntelDriver->setChecked(false);
+    }
+
+    QFileInfo amdfile("/etc/X11/xorg.conf.d/20-amd.conf");
+    if ( amdfile.exists()) {
+        ui->checkboxAMDtearfree->setChecked(true);
+    }else {
+        ui->checkboxAMDtearfree->setChecked(false);
+    }
+
+    QFileInfo radeonfile("/etc/X11/xorg.conf.d/20-radeon.conf");
+    if ( radeonfile.exists()) {
+        ui->checkboxRadeontearfree->setChecked(true);
+    }else {
+        ui->checkboxRadeontearfree->setChecked(false);
     }
 
 
@@ -1294,66 +1255,105 @@ void defaultlook::setupCompositor()
 
 void defaultlook::setupConfigoptions()
 {
-  ui->checkboxIntelDriver->hide();
-  ui->labelIntel->hide();
-  ui->checkboxAMDtearfree->hide();
-  ui->labelamdgpu->hide();
-  ui->checkboxRadeontearfree->hide();
-  ui->labelradeon->hide();
+  QString home_path = QDir::homePath();
   ui->ButtonApplyMiscDefualts->setEnabled(false);
-  ui->checkBoxLightdmReset->setChecked(false);
-  QString test = runCmd("pgrep lightdm").output;
-  if (test.isEmpty()){
-        ui->checkBoxLightdmReset->hide();
-  }
+
+  //set xfce values
   if (checkXFCE()){
-    ui->checkBoxThunarCAReset->setChecked(false);
-  } else{
-      ui->checkBoxThunarCAReset->hide();
-  }
-  Intel_flag = false;
-  amdgpuflag = false;
-  radeon_flag =false;
-  //setup Intel checkbox
+      //check single click status
+      QString test;
+      test = runCmd("xfconf-query  -c xfce4-desktop -p /desktop-icons/single-click").output;
+      if ( test == "true") {
+          ui->checkBoxSingleClick->setChecked(true);
+      } else {
+          ui->checkBoxSingleClick->setChecked(false);
+      }
 
-  QString partcheck = runCmd("for i in $(lspci -n | awk '{print $2,$1}' | grep -E '^(0300|0302|0380)' | cut -f2 -d\\ ); do lspci -kns \"$i\"; done").output;
-  qDebug()<< "partcheck = " << partcheck;
+      //check single click thunar status
+      test = runCmd("xfconf-query  -c thunar -p /misc-single-click").output;
+      if ( test == "true") {
+          ui->checkBoxThunarSingleClick->setChecked(true);
+      } else {
+          ui->checkBoxThunarSingleClick->setChecked(false);
+      }
 
-  if ( partcheck.contains("i915")) {
-      ui->checkboxIntelDriver->show();
-      ui->labelIntel->show();
+      //check systray frame status
+
+      pluginidsystray = runCmd("cat ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml | grep \\\"systray\\\"|cut -d '=' -f2 | cut -d '' -f1| cut -d '\"' -f2").output;
+      qDebug() << "systray is " << pluginidsystray;
+      test = runCmd("xfconf-query -c xfce4-panel -p /plugins/" + pluginidsystray + "/show-frame").output;
+      if ( test == "true") {
+          ui->checkBoxSystrayFrame->setChecked(true);
+      } else {
+          ui->checkBoxSystrayFrame->setChecked(false);
+      }
+
+      plugintasklist = runCmd("cat ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml | grep \\\"tasklist\\\"|cut -d '=' -f2 | cut -d '' -f1| cut -d '\"' -f2").output;
+      qDebug() << "tasklist is " << plugintasklist;
+      test = runCmd("xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/include-all-workspaces").output;
+      if ( test == "true") {
+          ui->checkBoxShowAllWorkspaces->setChecked(true);
+      } else {
+          ui->checkBoxShowAllWorkspaces->setChecked(false);
+      }
+
+      //setup no-ellipse option
+      QFileInfo fileinfo2(home_path + "/.config/gtk-3.0/no-ellipse-desktop-filenames.css");
+      if (fileinfo2.exists()) {
+          ui->checkboxNoEllipse->setChecked(true);
+      } else {
+          ui->checkboxNoEllipse->setChecked(false);
+      }
+
+      //setup hibernate switch
+      //first, hide if running live
+      test = runCmd("df -T / |tail -n1 |awk '{print $2}'").output;
+      qDebug() << test;
+      if ( test == "aufs" || test == "overlay" ) {
+          ui->checkBoxHibernate->hide();
+          ui->label_hibernate->hide();
+      }
+
+      //hide hibernate if there is no swap
+      QString swaptest = runCmd("/usr/sbin/swapon --show").output;
+      qDebug() << "swaptest swap present is " << swaptest;
+      if (swaptest.isEmpty()) {
+          ui->checkBoxHibernate->hide();
+          ui->label_hibernate->hide();
+      }
+
+      // also hide hibernate if /etc/uswsusp.conf is missing
+      QFileInfo file("/etc/uswsusp.conf");
+      if (file.exists()) {
+          qDebug() << "uswsusp.conf found";
+      }else {
+          ui->checkBoxHibernate->hide();
+          ui->label_hibernate->hide();
+      }
+
+      //and hide hibernate if swap is encrypted
+      QString cmd = "grep swap /etc/crypttab |grep -q luks";
+      int swaptest2 = system(cmd.toUtf8());
+      qDebug() << "swaptest encrypted is " << swaptest2;
+      if (swaptest2 == 0) {
+          ui->checkBoxHibernate->hide();
+          ui->label_hibernate->hide();
+      }
+
+      //set checkbox
+      test = runCmd("xfconf-query -c xfce4-session -p /shutdown/ShowHibernate").output;
+      if ( test == "true") {
+          ui->checkBoxHibernate->setChecked(true);
+          hibernate_flag = true;
+      } else {
+          ui->checkBoxHibernate->setChecked(false);
+          hibernate_flag = false;
+      }
+
+      ui->checkBoxThunarCAReset->setChecked(false);
+
   }
 
-  if ( partcheck.contains("Kernel driver in use: amdgpu")) {
-      ui->checkboxAMDtearfree->show();
-      ui->labelamdgpu->show();
-  }
-
-  if ( partcheck.contains("Kernel driver in use: radeon")) {
-      ui->checkboxRadeontearfree->show();
-      ui->labelradeon->show();
-  }
-
-  QFileInfo intelfile("/etc/X11/xorg.conf.d/20-intel.conf");
-  if ( intelfile.exists()) {
-      ui->checkboxIntelDriver->setChecked(true);
-  }else {
-      ui->checkboxIntelDriver->setChecked(false);
-  }
-
-  QFileInfo amdfile("/etc/X11/xorg.conf.d/20-amd.conf");
-  if ( amdfile.exists()) {
-      ui->checkboxAMDtearfree->setChecked(true);
-  }else {
-      ui->checkboxAMDtearfree->setChecked(false);
-  }
-
-  QFileInfo radeonfile("/etc/X11/xorg.conf.d/20-radeon.conf");
-  if ( radeonfile.exists()) {
-      ui->checkboxRadeontearfree->setChecked(true);
-  }else {
-      ui->checkboxRadeontearfree->setChecked(false);
-  }
 }
 
 void defaultlook::CheckComptonRunning()
@@ -1911,31 +1911,14 @@ void defaultlook::on_buttonThemeApply_clicked()
 
 void defaultlook::on_ButtonApplyEtc_clicked()
 {
+    QString intel_option;
+    QString amd_option;
+    QString radeon_option;
+    QString lightdm_option;
     ui->ButtonApplyEtc->setEnabled(false);
 
-    if (ui->checkBoxShowAllWorkspaces->isChecked()) {
-        runCmd("xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/include-all-workspaces -s true");
-    } else {
-        runCmd("xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/include-all-workspaces -s false");
-    }
-
-    if (ui->checkBoxSingleClick->isChecked()) {
-        runCmd("xfconf-query  -c xfce4-desktop -p /desktop-icons/single-click -s true");
-    }else {
-        runCmd("xfconf-query  -c xfce4-desktop -p /desktop-icons/single-click -s false");
-    }
-
-    if (ui->checkBoxThunarSingleClick->isChecked()) {
-        runCmd("xfconf-query  -c thunar -p /misc-single-click -s true");
-    } else {
-        runCmd("xfconf-query  -c thunar -p /misc-single-click -s false");
-    }
-
-    if (ui->checkBoxSystrayFrame->isChecked()) {
-        runCmd("xfconf-query -c xfce4-panel -p /plugins/" + pluginidsystray + "/show-frame -s true");
-    } else {
-        runCmd("xfconf-query -c xfce4-panel -p /plugins/" + pluginidsystray + "/show-frame -s false");
-    }
+    intel_option.clear();
+    lightdm_option.clear();
 
     //deal with udisks option
     QFileInfo fileinfo("/etc/tweak-udisks.chk");
@@ -1943,11 +1926,10 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     QFileInfo user_namespace_override("/etc/sysctl.d/99-sandbox-mx.conf");
     QString cmd;
     QString udisks_option;
-    QString hibernate_option;
     QString sudo_override_option;
     QString user_name_space_override_option;
     udisks_option.clear();
-    hibernate_option.clear();
+
 
     if (ui->checkBoxMountInternalDrivesNonRoot->isChecked()) {
         if (fileinfo.exists()) {
@@ -1963,38 +1945,55 @@ void defaultlook::on_ButtonApplyEtc_clicked()
         }
     }
 
-    //deal with no-ellipse-filenames option
-    QString home_path = QDir::homePath();
-    if (ui->checkboxNoEllipse->isChecked()) {
-        //set desktop themeing
-        QFileInfo gtk_check(home_path + "/.config/gtk-3.0/gtk.css");
-        if (gtk_check.exists()) {
-            qDebug() << "existing gtk.css found";
-            QString cmd = "cat " + home_path + "/.config/gtk-3.0/gtk.css |grep -q no-ellipse-desktop-filenames.css";
-            if (system(cmd.toUtf8()) == 0 ) {
-                qDebug() << "include statement found";
-            } else {
-                qDebug() << "adding include statement";
-                QString cmd = "echo '@import url(\"no-ellipse-desktop-filenames.css\");' >> " + home_path + "/.config/gtk-3.0/gtk.css";
-                system(cmd.toUtf8());
-            }
-        }else {
-            qDebug() << "creating simple gtk.css file";
-            QString cmd = "echo '@import url(\"no-ellipse-desktop-filenames.css\");' >> " + home_path + "/.config/gtk-3.0/gtk.css";
+    if (ui->checkBoxLightdmReset->isChecked()) {
+        lightdm_option = "lightdm_reset";
+    }
+
+    if ( Intel_flag ) {
+        QFileInfo check_intel("/etc/X11/xorg.conf.d/20-intel.conf");
+        if ( check_intel.exists()){
+            //backup existing 20-intel.conf file to home folder
+            cmd = "cp /etc/X11/xorg.conf.d/20-intel.conf /home/$USER/20-intel.conf.$(date +%Y%m%H%M%S)";
             system(cmd.toUtf8());
         }
-        //add modification config
-        runCmd("cp /usr/share/mx-tweak/no-ellipse-desktop-filenames.css " + home_path + "/.config/gtk-3.0/no-ellipse-desktop-filenames.css ");
+        if (ui->checkboxIntelDriver->isChecked()) {
+            //copy mx-tweak version to xorg.conf.d directory
+            intel_option = "enable_intel";
+        } else {
+            //remove 20-intel.conf
+            intel_option = "disable_intel";
+        }
+    }
 
-        //restart xfdesktop by with xfdesktop --quite && xfdesktop &
+    if ( amdgpuflag ) {
+        QFileInfo check_amd("/etc/X11/xorg.conf.d/20-amd.conf");
+        if ( check_amd.exists()){
+            //backup existing 20-amd.conf file to home folder
+            cmd = "cp /etc/X11/xorg.conf.d/20-amd.conf /home/$USER/20-amd.conf.$(date +%Y%m%H%M%S)";
+            system(cmd.toUtf8());
+        }
+        if (ui->checkboxAMDtearfree->isChecked()) {
+            //copy mx-tweak version to xorg.conf.d directory
+            amd_option = "enable_amd";
+        } else {
+            //remove 20-amd.conf
+            amd_option = "disable_amd";
+        }
+    }
 
-        system("xfdesktop --quit && sleep .5 && xfdesktop &");
-    }else {
-        QFileInfo noellipse_check(home_path + "/.config/gtk-3.0/no-ellipse-desktop-filenames.css");
-        if (noellipse_check.exists()) {
-            runCmd("rm -f " + home_path + "/.config/gtk-3.0/no-ellipse-desktop-filenames.css");
-            runCmd("sed -i '/no-ellipse-desktop-filenames.css/d' " + home_path + "/.config/gtk-3.0/gtk.css");
-            system("xfdesktop --quit && sleep .5 && xfdesktop &");
+    if ( radeon_flag ) {
+        QFileInfo check_radeon("/etc/X11/xorg.conf.d/20-radeon.conf");
+        if ( check_radeon.exists()){
+            //backup existing 20-radeon.conf file to home folder
+            cmd = "cp /etc/X11/xorg.conf.d/20-radeon.conf /home/$USER/20-radeon.conf.$(date +%Y%m%H%M%S)";
+            system(cmd.toUtf8());
+        }
+        if (ui->checkboxRadeontearfree->isChecked()) {
+            //copy mx-tweak version to xorg.conf.d directory
+            radeon_option = "enable_radeon";
+        } else {
+            //remove 20-radeon.conf
+            radeon_option = "disable_radeon";
         }
     }
 
@@ -2023,47 +2022,31 @@ void defaultlook::on_ButtonApplyEtc_clicked()
         }
     }
 
-    //deal with hibernate
-    if (ui->checkBoxHibernate->isChecked() != hibernate_flag) {
-        if (ui->checkBoxHibernate->isChecked()) {
-            hibernate_option =  "hibernate";
-            system("xfconf-query -c xfce4-session -p /shutdown/ShowHibernate -s true --create");
-        } else {
-            system("xfconf-query -c xfce4-session -p /shutdown/ShowHibernate -s false --create");
+    if ( ! udisks_option.isEmpty() || ! sudo_override_option.isEmpty() || ! user_name_space_override_option.isEmpty() || ! intel_option.isEmpty() || ! lightdm_option.isEmpty() || ! amd_option.isEmpty() || ! radeon_option.isEmpty() ) {
+        runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + udisks_option + " " + sudo_override_option + " " + user_name_space_override_option + " " + intel_option + " " + amd_option + " " + radeon_option + " " + lightdm_option);
         }
-    }
-
-
-    if ( ! hibernate_option.isEmpty() || ! udisks_option.isEmpty() || ! sudo_override_option.isEmpty() || ! user_name_space_override_option.isEmpty()) {
-        if ( hibernate_option.isEmpty()) {
-            runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + udisks_option + " " + sudo_override_option + " " + user_name_space_override_option);
-        } else {
-            runCmd("x-terminal-emulator -e 'pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + udisks_option + " " + sudo_override_option + + " " + user_name_space_override_option + " " + hibernate_option + "'");
-        }
-    }
-
     //reset gui
     setupEtc();
 }
 
 void defaultlook::on_checkBoxSingleClick_clicked()
 {
-    ui->ButtonApplyEtc->setEnabled(true);
+    ui->ButtonApplyMiscDefualts->setEnabled(true);
 }
 
 void defaultlook::on_checkBoxThunarSingleClick_clicked()
 {
-    ui->ButtonApplyEtc->setEnabled(true);
+    ui->ButtonApplyMiscDefualts->setEnabled(true);
 }
 
 void defaultlook::on_checkBoxSystrayFrame_clicked()
 {
-    ui->ButtonApplyEtc->setEnabled(true);
+    ui->ButtonApplyMiscDefualts->setEnabled(true);
 }
 
 void defaultlook::on_checkboxNoEllipse_clicked()
 {
-    ui->ButtonApplyEtc->setEnabled(true);
+    ui->ButtonApplyMiscDefualts->setEnabled(true);
 }
 
 void defaultlook::savethemeundo()
@@ -2289,7 +2272,7 @@ void defaultlook::on_buttonConfigureXfwm_clicked()
 
 void defaultlook::on_checkBoxShowAllWorkspaces_clicked()
 {
-    ui->ButtonApplyEtc->setEnabled(true);
+    ui->ButtonApplyMiscDefualts->setEnabled(true);
 }
 
 void defaultlook::on_checkBoxMountInternalDrivesNonRoot_clicked()
@@ -2317,7 +2300,7 @@ void defaultlook::on_pushButtonPreview_clicked()
 
 void defaultlook::on_checkBoxHibernate_clicked()
 {
-    ui->ButtonApplyEtc->setEnabled(true);
+    ui->ButtonApplyMiscDefualts->setEnabled(true);
 }
 
 void defaultlook::on_radioSudoUser_clicked()
@@ -2332,13 +2315,32 @@ void defaultlook::on_radioSudoRoot_clicked()
 void defaultlook::on_ButtonApplyMiscDefualts_clicked()
 {
     QString cmd;
-    QString intel_option;
-    QString amd_option;
-    QString radeon_option;
-    QString lightdm_option;
+    QString hibernate_option;
+    hibernate_option.clear();
 
-    intel_option.clear();
-    lightdm_option.clear();
+    if (ui->checkBoxShowAllWorkspaces->isChecked()) {
+        runCmd("xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/include-all-workspaces -s true");
+    } else {
+        runCmd("xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/include-all-workspaces -s false");
+    }
+
+    if (ui->checkBoxSingleClick->isChecked()) {
+        runCmd("xfconf-query  -c xfce4-desktop -p /desktop-icons/single-click -s true");
+    }else {
+        runCmd("xfconf-query  -c xfce4-desktop -p /desktop-icons/single-click -s false");
+    }
+
+    if (ui->checkBoxThunarSingleClick->isChecked()) {
+        runCmd("xfconf-query  -c thunar -p /misc-single-click -s true");
+    } else {
+        runCmd("xfconf-query  -c thunar -p /misc-single-click -s false");
+    }
+
+    if (ui->checkBoxSystrayFrame->isChecked()) {
+        runCmd("xfconf-query -c xfce4-panel -p /plugins/" + pluginidsystray + "/show-frame -s true");
+    } else {
+        runCmd("xfconf-query -c xfce4-panel -p /plugins/" + pluginidsystray + "/show-frame -s false");
+    }
 
     if (ui->checkBoxThunarCAReset->isChecked()) {
         cmd = "cp /home/$USER/.config/Thunar/uca.xml /home/$USER/.config/Thunar/uca.xml.$(date +%Y%m%H%M%S)";
@@ -2346,70 +2348,62 @@ void defaultlook::on_ButtonApplyMiscDefualts_clicked()
         runCmd("cp /etc/skel/.config/Thunar/uca.xml /home/$USER/.config/Thunar/uca.xml");
     }
 
-    if (ui->checkBoxLightdmReset->isChecked()) {
-        lightdm_option = "lightdm_reset";
-    }
-
-    if ( Intel_flag ) {
-        QFileInfo check_intel("/etc/X11/xorg.conf.d/20-intel.conf");
-        if ( check_intel.exists()){
-            //backup existing 20-intel.conf file to home folder
-            cmd = "cp /etc/X11/xorg.conf.d/20-intel.conf /home/$USER/20-intel.conf.$(date +%Y%m%H%M%S)";
+    //deal with no-ellipse-filenames option
+    QString home_path = QDir::homePath();
+    if (ui->checkboxNoEllipse->isChecked()) {
+        //set desktop themeing
+        QFileInfo gtk_check(home_path + "/.config/gtk-3.0/gtk.css");
+        if (gtk_check.exists()) {
+            qDebug() << "existing gtk.css found";
+            QString cmd = "cat " + home_path + "/.config/gtk-3.0/gtk.css |grep -q no-ellipse-desktop-filenames.css";
+            if (system(cmd.toUtf8()) == 0 ) {
+                qDebug() << "include statement found";
+            } else {
+                qDebug() << "adding include statement";
+                QString cmd = "echo '@import url(\"no-ellipse-desktop-filenames.css\");' >> " + home_path + "/.config/gtk-3.0/gtk.css";
+                system(cmd.toUtf8());
+            }
+        }else {
+            qDebug() << "creating simple gtk.css file";
+            QString cmd = "echo '@import url(\"no-ellipse-desktop-filenames.css\");' >> " + home_path + "/.config/gtk-3.0/gtk.css";
             system(cmd.toUtf8());
         }
-        if (ui->checkboxIntelDriver->isChecked()) {
-            //copy mx-tweak version to xorg.conf.d directory
-            intel_option = "enable_intel";
-        } else {
-            //remove 20-intel.conf
-            intel_option = "disable_intel";
+        //add modification config
+        runCmd("cp /usr/share/mx-tweak/no-ellipse-desktop-filenames.css " + home_path + "/.config/gtk-3.0/no-ellipse-desktop-filenames.css ");
+
+        //restart xfdesktop by with xfdesktop --quite && xfdesktop &
+
+        system("xfdesktop --quit && sleep .5 && xfdesktop &");
+    }else {
+        QFileInfo noellipse_check(home_path + "/.config/gtk-3.0/no-ellipse-desktop-filenames.css");
+        if (noellipse_check.exists()) {
+            runCmd("rm -f " + home_path + "/.config/gtk-3.0/no-ellipse-desktop-filenames.css");
+            runCmd("sed -i '/no-ellipse-desktop-filenames.css/d' " + home_path + "/.config/gtk-3.0/gtk.css");
+            system("xfdesktop --quit && sleep .5 && xfdesktop &");
         }
     }
 
-    if ( amdgpuflag ) {
-        QFileInfo check_amd("/etc/X11/xorg.conf.d/20-amd.conf");
-        if ( check_amd.exists()){
-            //backup existing 20-amd.conf file to home folder
-            cmd = "cp /etc/X11/xorg.conf.d/20-amd.conf /home/$USER/20-amd.conf.$(date +%Y%m%H%M%S)";
-            system(cmd.toUtf8());
-        }
-        if (ui->checkboxAMDtearfree->isChecked()) {
-            //copy mx-tweak version to xorg.conf.d directory
-            amd_option = "enable_amd";
+    //deal with hibernate
+    if (ui->checkBoxHibernate->isChecked() != hibernate_flag) {
+        if (ui->checkBoxHibernate->isChecked()) {
+            hibernate_option =  "hibernate";
+            system("xfconf-query -c xfce4-session -p /shutdown/ShowHibernate -s true --create");
         } else {
-            //remove 20-amd.conf
-            amd_option = "disable_amd";
+            system("xfconf-query -c xfce4-session -p /shutdown/ShowHibernate -s false --create");
         }
     }
 
-    if ( radeon_flag ) {
-        QFileInfo check_radeon("/etc/X11/xorg.conf.d/20-radeon.conf");
-        if ( check_radeon.exists()){
-            //backup existing 20-radeon.conf file to home folder
-            cmd = "cp /etc/X11/xorg.conf.d/20-radeon.conf /home/$USER/20-radeon.conf.$(date +%Y%m%H%M%S)";
-            system(cmd.toUtf8());
-        }
-        if (ui->checkboxRadeontearfree->isChecked()) {
-            //copy mx-tweak version to xorg.conf.d directory
-            radeon_option = "enable_radeon";
-        } else {
-            //remove 20-radeon.conf
-            radeon_option = "disable_radeon";
-        }
-    }
-    if ( ! intel_option.isEmpty() || ! lightdm_option.isEmpty() || ! amd_option.isEmpty() || ! radeon_option.isEmpty() ) {
-    cmd = "pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + intel_option + " " + amd_option + " " + radeon_option + " " + lightdm_option;
-    qDebug() << "cmd is " << cmd;
-    system(cmd.toUtf8());
-    }
 
+    if ( !hibernate_option.isEmpty() ) {
+        runCmd("x-terminal-emulator -e 'pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + hibernate_option + "'");
+        }
 
     setupConfigoptions();
 }
 
 void defaultlook::on_checkBoxLightdmReset_clicked()
 {
-    ui->ButtonApplyMiscDefualts->setEnabled(true);
+    ui->ButtonApplyEtc->setEnabled(true);
 }
 
 void defaultlook::on_checkBoxThunarCAReset_clicked()
@@ -2421,21 +2415,21 @@ void defaultlook::on_checkboxIntelDriver_clicked()
 {
     //toggle flag for action.  this way, if box was checked initially, the action won't take place again.
     Intel_flag = true;
-    ui->ButtonApplyMiscDefualts->setEnabled(true);
+    ui->ButtonApplyEtc->setEnabled(true);
 }
 
 void defaultlook::on_checkboxAMDtearfree_clicked()
 {
     //toggle flag for action.  this way, if box was checked initially, the action won't take place again.
     amdgpuflag = true;
-    ui->ButtonApplyMiscDefualts->setEnabled(true);
+    ui->ButtonApplyEtc->setEnabled(true);
 }
 
 void defaultlook::on_checkboxRadeontearfree_clicked()
 {
     //toggle flag for action.  this way, if box was checked initially, the action won't take place again.
     radeon_flag = true;
-    ui->ButtonApplyMiscDefualts->setEnabled(true);
+    ui->ButtonApplyEtc->setEnabled(true);
 }
 
 void defaultlook::on_pushButtontasklist_clicked()
