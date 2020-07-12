@@ -6,7 +6,7 @@
 
 kwriteconfig --file ~/.config/kcminputrc --group Mouse --key cursorTheme breeze_cursors
 
-​
+
 
 # kdeglobals
 
@@ -16,13 +16,13 @@ kwriteconfig --file ~/.config/kdeglobals --group General --key ColorScheme Breez
 
 kwriteconfig --file ~/.config/kdeglobals --group General --key Name Breeze
 
-kwriteconfig --file ~/.config/kdeglobals --group General --key shadeSortColumn true 
+kwriteconfig --file ~/.config/kdeglobals --group General --key shadeSortColumn true
 
 kwriteconfig --file ~/.config/kdeglobals --group General --key widgetStyle Breeze
 
 kwriteconfig --file ~/.config/kdeglobals --group General --key XftAntialias true
 
-kwriteconfig --file ~/.config/kdeglobals --group General --key XftHintStyle hintslight 
+kwriteconfig --file ~/.config/kdeglobals --group General --key XftHintStyle hintslight
 
 kwriteconfig --file ~/.config/kdeglobals --group General --key XftSubPixel rgb
 
@@ -37,7 +37,6 @@ kwriteconfig --file ~/.config/kdeglobals --group KDE --key widgetStyle breeze
 kwriteconfig5 --group KDE --key SingleClick true
 
 
-​
 
 # kglobalshortcutsrc
 
@@ -53,7 +52,7 @@ kwriteconfig --file ~/.config/kglobalshortcutsrc --group yakuake --key _k_friend
 
 kwriteconfig --file ~/.config/kglobalshortcutsrc --group yakuake --key toggle-window-state "F4,F12,Open/Retract Yakuake"
 
-​
+
 
 # klaunchrc
 
@@ -69,15 +68,15 @@ kwriteconfig --file ~/.config/klaunchrc --group FeedbackStyle --key TaskbarButto
 
 kwriteconfig --file ~/.config/klaunchrc --group TaskbarButtonSettings --key Timeout 4
 
-​
+
 
 # komparerc
 
 kwriteconfig --file ~/.config/komparerc --group "Diff Options" --key DiffProgram /usr/bin/diff
 
-​
 
-# kscreenlockerrc 
+
+# kscreenlockerrc
 
 kwriteconfig --file ~/.config/kscreenlockerrc --group Daemon --key Autolock false
 
@@ -85,7 +84,7 @@ kwriteconfig --file ~/.config/kscreenlockerrc --group Daemon --key LockOnResume 
 
 kwriteconfig --file ~/.config/kscreenlockerrc --group Greeter --group Wallpaper --group org.kde.image --group General --key Image file:///usr/share/backgrounds/mx_blue.jpg
 
-​
+
 
 # ksmserverrc
 
@@ -93,7 +92,7 @@ kwriteconfig --file ~/.config/ksmserverrc --group General --key excludeApps yaku
 
 kwriteconfig --file ~/.config/ksmserverrc --group General --key loginMode default
 
-​
+
 
 # ksplashrc
 
@@ -101,13 +100,13 @@ kwriteconfig --file ~/.config/ksplashrc --group KSplash --key Engine KSplashQML
 
 kwriteconfig --file ~/.config/ksplashrc --group KSplash --key Theme QuarksSplashDark
 
-​
+
 
 # kwalletrc
 
 kwriteconfig --file ~/.config/kwalletrc --group Wallet --key Enabled false
 
-​
+
 
 # kwinrc
 
@@ -123,13 +122,13 @@ kwriteconfig --file ~/.config/kwinrc --group TabBox --key LayoutName org.kde.bre
 
 kwriteconfig --file ~/.config/kwinrc --group org.kde.kdecoration2 --key library org.kde.breeze
 
-​
+
 
 # plasma-org.kde.plasma.desktop-appletsrc
 
 cp /etc/skel/.config/plasma-org.kde.plasma.desktop-appletsrc ~/.config/
 
-​
+
 
 # plasmarc
 
@@ -137,7 +136,7 @@ kwriteconfig --file ~/.config/plasmarc --group Theme --key name breeze-dark
 
 kwriteconfig --file ~/.config/plasmarc --group Wallpapers --key usersWallpapers /usr/share/backgrounds/mx_blue.jpg
 
-​
+
 
 # yakuakerc
 
@@ -145,7 +144,7 @@ kwriteconfig --file ~/.config/yakuakerc --group Dialogs --key FirstRun false
 
 kwriteconfig --file ~/.config/yakuakerc --group Window --key KeepOpen false
 
-​
+
 
 # Copy autostart items
 
@@ -153,12 +152,12 @@ cp /etc/skel/.config/autostart/conky.desktop ~/.config/autostart/
 
 cp /etc/skel/.config/autostart/org.kde.yakuake.desktop ~/.config/autostart/
 
-​
+
 
 # Set wallpaper
 
 qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript 'var allDesktops = desktops();print (allDesktops);for (i=0;i<allDesktops.length;i++) {d = allDesktops[i];d.wallpaperPlugin = "org.kde.image";d.currentConfigGroup = Array("Wallpaper", "org.kde.image", "General");d.writeConfig("Image", "file:///usr/share/backgrounds/mx_blue.jpg")}'
 
-​sleep 2
+sleep 2
 
 exit 0
