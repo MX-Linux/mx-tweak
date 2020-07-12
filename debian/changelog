@@ -1,3 +1,9 @@
+mx-tweak (20.07.05) mx; urgency=medium
+
+  * update help files 
+
+ -- Dolphin Oracle <dolphin@littlebyte>  Sat, 11 Jul 2020 22:48:16 -0400
+
 mx-tweak (20.07.04) mx; urgency=medium
 
   * further adjustment of plasma/kwin restart 
