@@ -2627,6 +2627,7 @@ void defaultlook::on_ApplyFluxboxResets_clicked()
         switch(ui->comboBoxfluxcaptions->currentIndex()){
         case 0:
             runCmd("/usr/bin/idesktoggle caption on");
+            runCmd("/usr/bin/idesktoggle CaptionOnHover off");
             break;
 
         case 1:
