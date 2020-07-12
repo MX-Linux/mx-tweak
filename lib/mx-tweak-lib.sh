@@ -146,12 +146,18 @@ $CMD1
 $CMD2
 $CMD3
 $CMD4
+$CMD5
+$CMD6
+$CMD7
 }
 
 CMD1=$1
 CMD2=$2
 CMD3=$3
 CMD4=$4
+CMD5=$5
+CMD6=$6
+CMD7=$7
 main
 
 exit 0
