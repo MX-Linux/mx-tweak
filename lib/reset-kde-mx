@@ -12,13 +12,9 @@ kwriteconfig --file ~/.config/kcminputrc --group Mouse --key cursorTheme breeze_
 
 kwriteconfig --file ~/.config/kdeglobals --group General --key BrowserApplication firefox.desktop
 
-kwriteconfig --file ~/.config/kdeglobals --group General --key ColorScheme Breeze
-
 kwriteconfig --file ~/.config/kdeglobals --group General --key Name Breeze
 
 kwriteconfig --file ~/.config/kdeglobals --group General --key shadeSortColumn true
-
-kwriteconfig --file ~/.config/kdeglobals --group General --key widgetStyle Breeze
 
 kwriteconfig --file ~/.config/kdeglobals --group General --key XftAntialias true
 
@@ -26,13 +22,9 @@ kwriteconfig --file ~/.config/kdeglobals --group General --key XftHintStyle hint
 
 kwriteconfig --file ~/.config/kdeglobals --group General --key XftSubPixel rgb
 
-kwriteconfig --file ~/.config/kdeglobals --group KDE --key ColorScheme Breeze
-
-kwriteconfig --file ~/.config/kdeglobals --group KDE --key LookAndFeelPackage org.kde.breeze.desktop
+kwriteconfig --file ~/.config/kdeglobals --group KDE --key LookAndFeelPackage org.mxlinux.mx.desktop
 
 kwriteconfig --file ~/.config/kdeglobals --group KDE --key contrast 4
-
-kwriteconfig --file ~/.config/kdeglobals --group KDE --key widgetStyle breeze
 
 kwriteconfig5 --group KDE --key SingleClick true
 
@@ -120,22 +112,11 @@ kwriteconfig --file ~/.config/kwinrc --group TabBox --key DesktopListLayout org.
 
 kwriteconfig --file ~/.config/kwinrc --group TabBox --key LayoutName org.kde.breeze.desktop
 
-kwriteconfig --file ~/.config/kwinrc --group org.kde.kdecoration2 --key library org.kde.breeze
-
 
 
 # plasma-org.kde.plasma.desktop-appletsrc
 
 cp /etc/skel/.config/plasma-org.kde.plasma.desktop-appletsrc ~/.config/
-
-
-
-# plasmarc
-
-kwriteconfig --file ~/.config/plasmarc --group Theme --key name breeze-dark
-
-kwriteconfig --file ~/.config/plasmarc --group Wallpapers --key usersWallpapers /usr/share/backgrounds/mx_blue.jpg
-
 
 
 # yakuakerc
@@ -151,12 +132,6 @@ kwriteconfig --file ~/.config/yakuakerc --group Window --key KeepOpen false
 cp /etc/skel/.config/autostart/conky.desktop ~/.config/autostart/
 
 cp /etc/skel/.config/autostart/org.kde.yakuake.desktop ~/.config/autostart/
-
-
-
-# Set wallpaper
-
-qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript 'var allDesktops = desktops();print (allDesktops);for (i=0;i<allDesktops.length;i++) {d = allDesktops[i];d.wallpaperPlugin = "org.kde.image";d.currentConfigGroup = Array("Wallpaper", "org.kde.image", "General");d.writeConfig("Image", "file:///usr/share/backgrounds/mx_blue.jpg")}'
 
 sleep 2
 
