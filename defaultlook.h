@@ -79,6 +79,7 @@ public:
     bool plasmaworkspacesflag;
     bool plasmasingleclickflag;
     bool plasmaresetflag;
+    bool plasmasystrayiconsizeflag;
 
     QString g1;
     QString g2;
@@ -287,6 +288,8 @@ private slots:
     void on_checkboxplasmaresetdock_clicked();
 
     void on_ButtonApplyPlasma_clicked();
+
+    void on_comboBoxPlasmaSystrayIcons_currentIndexChanged(int index);
 
 private:
     Ui::defaultlook *ui;

@@ -111,27 +111,27 @@
         <translation>Uiterlijk</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1642"/>
+        <location filename="../defaultlook.ui" line="1673"/>
         <source>About</source>
         <translation>Over</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1653"/>
+        <location filename="../defaultlook.ui" line="1684"/>
         <source>Help</source>
         <translation>Hulp</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1670"/>
+        <location filename="../defaultlook.ui" line="1701"/>
         <source>Quit application</source>
         <translation>Verlaat de applicatie</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1673"/>
+        <location filename="../defaultlook.ui" line="1704"/>
         <source>Close</source>
         <translation>Sluiten</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1680"/>
+        <location filename="../defaultlook.ui" line="1711"/>
         <source>Alt+N</source>
         <translation>Alt+N</translation>
     </message>
@@ -157,7 +157,7 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="216"/>
-        <location filename="../defaultlook.ui" line="1311"/>
+        <location filename="../defaultlook.ui" line="1416"/>
         <source>Affects 1st panel</source>
         <translation>Beïnvloedt 1e paneel</translation>
     </message>
@@ -214,8 +214,8 @@
         <location filename="../defaultlook.ui" line="878"/>
         <location filename="../defaultlook.ui" line="971"/>
         <location filename="../defaultlook.ui" line="1287"/>
-        <location filename="../defaultlook.ui" line="1425"/>
-        <location filename="../defaultlook.ui" line="1569"/>
+        <location filename="../defaultlook.ui" line="1365"/>
+        <location filename="../defaultlook.ui" line="1600"/>
         <source>Apply</source>
         <translation>Toepassen</translation>
     </message>
@@ -356,7 +356,42 @@
         <translation>Configuratie Opties</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1447"/>
+        <location filename="../defaultlook.ui" line="1423"/>
+        <source>Systray Icon Size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1434"/>
+        <source>Default</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1439"/>
+        <source>Small</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1444"/>
+        <source>Medium</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1449"/>
+        <source>Large</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1454"/>
+        <source>Larger</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1459"/>
+        <source>Largest</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1478"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>Herstel Lightdm (login scherm) naar systeem standaard thema</translation>
     </message>
@@ -366,32 +401,32 @@
         <translation>Herstel Thunar aangepaste rechts-klik acties naar systeem standaard</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1470"/>
+        <location filename="../defaultlook.ui" line="1501"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>Gebruik intel driver in plaats van standaard &quot;modesetting&quot; driver (vereist herstart)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1477"/>
+        <location filename="../defaultlook.ui" line="1508"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>NOOT: bestaande /etc/X11/xorg.conf.d/20-intel.conf zal gebackupped worden in de home folder</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1488"/>
+        <location filename="../defaultlook.ui" line="1519"/>
         <source>Use tearfree amdgpu option</source>
         <translation>Gebruik tearvrij amdgpu optie</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1495"/>
+        <location filename="../defaultlook.ui" line="1526"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>NOOT: bestaande /etc/X11/xorg.conf.d/20-amd.conf zal gebackupped worden in de home folder</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1506"/>
+        <location filename="../defaultlook.ui" line="1537"/>
         <source>Use tearfree radeon driver option</source>
         <translation>Gebruik tearvrij radeon driver optie</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1513"/>
+        <location filename="../defaultlook.ui" line="1544"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>NOOT: bestaande /etc/X11/xorg.conf.d/20-radeon.conf zal gebackupped worden in de home folder</translation>
     </message>
@@ -480,7 +515,7 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="993"/>
-        <location filename="../defaultlook.ui" line="1392"/>
+        <location filename="../defaultlook.ui" line="1376"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -522,7 +557,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1098"/>
         <location filename="../defaultlook.ui" line="1206"/>
-        <location filename="../defaultlook.ui" line="1318"/>
+        <location filename="../defaultlook.ui" line="1383"/>
         <source>Placement</source>
         <translation type="unfinished"></translation>
     </message>
@@ -548,32 +583,32 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1371"/>
+        <location filename="../defaultlook.ui" line="1396"/>
         <source>Workspace</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1378"/>
+        <location filename="../defaultlook.ui" line="1352"/>
         <source>Enable single-click</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1399"/>
+        <location filename="../defaultlook.ui" line="1318"/>
         <source>Reset KDE/Plasma defaults</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1439"/>
+        <location filename="../defaultlook.ui" line="1470"/>
         <source>Other</source>
         <translation>Overige</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1536"/>
+        <location filename="../defaultlook.ui" line="1567"/>
         <source>&amp;User</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1543"/>
+        <location filename="../defaultlook.ui" line="1574"/>
         <source>Root</source>
         <translation>Root</translation>
     </message>
@@ -584,7 +619,7 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="924"/>
-        <location filename="../defaultlook.ui" line="1385"/>
+        <location filename="../defaultlook.ui" line="1403"/>
         <source>Show windows from all workspaces in panel</source>
         <translation>Laat schermen van alle werkgebieden in paneel zien</translation>
     </message>
@@ -599,12 +634,12 @@
         <translation>Schakel slaapstand in in Afmeldmenu</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1454"/>
+        <location filename="../defaultlook.ui" line="1485"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>Maak koppelen van interne schijven door niet-root gebruikers mogelijk</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1461"/>
+        <location filename="../defaultlook.ui" line="1492"/>
         <source>Enable kernel sandbox</source>
         <translation type="unfinished"></translation>
     </message>
@@ -624,7 +659,7 @@
         <translation>Schakel enkel-klik in Thunar Bestandbeheer in</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1529"/>
+        <location filename="../defaultlook.ui" line="1560"/>
         <source>Password for administrative tasks:</source>
         <translation>Wachtwoord voor administratieve taken:</translation>
     </message>
@@ -688,12 +723,12 @@
         <translation>Uw huidige paneelinstellingen zijn gebackupt in een verborgen folder genaamd .restore in uw home folder (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1376"/>
+        <location filename="../defaultlook.cpp" line="1408"/>
         <source>settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1713"/>
+        <location filename="../defaultlook.cpp" line="1745"/>
         <source>Choose a theme set</source>
         <translation>Kies een thema set</translation>
     </message>
