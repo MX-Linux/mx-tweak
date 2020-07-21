@@ -1,3 +1,9 @@
+mx-tweak (20.07.07) mx; urgency=medium
+
+  * add plasma systray icon adjustment 
+
+ -- Dolphin Oracle <dolphin@littlebyte>  Mon, 20 Jul 2020 21:36:10 -0400
+
 mx-tweak (20.07.06) mx; urgency=medium
 
   * adjust tray icon 
