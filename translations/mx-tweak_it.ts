@@ -111,27 +111,27 @@
         <translation>Aspetto</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1642"/>
+        <location filename="../defaultlook.ui" line="1673"/>
         <source>About</source>
         <translation>Info</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1653"/>
+        <location filename="../defaultlook.ui" line="1684"/>
         <source>Help</source>
         <translation>Aiuto</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1670"/>
+        <location filename="../defaultlook.ui" line="1701"/>
         <source>Quit application</source>
         <translation> Chiudi applicazione</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1673"/>
+        <location filename="../defaultlook.ui" line="1704"/>
         <source>Close</source>
         <translation>Chiudi</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1680"/>
+        <location filename="../defaultlook.ui" line="1711"/>
         <source>Alt+N</source>
         <translation>Alt+N</translation>
     </message>
@@ -157,7 +157,7 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="216"/>
-        <location filename="../defaultlook.ui" line="1311"/>
+        <location filename="../defaultlook.ui" line="1416"/>
         <source>Affects 1st panel</source>
         <translation>Agisce sul 1° pannello</translation>
     </message>
@@ -214,8 +214,8 @@
         <location filename="../defaultlook.ui" line="878"/>
         <location filename="../defaultlook.ui" line="971"/>
         <location filename="../defaultlook.ui" line="1287"/>
-        <location filename="../defaultlook.ui" line="1425"/>
-        <location filename="../defaultlook.ui" line="1569"/>
+        <location filename="../defaultlook.ui" line="1365"/>
+        <location filename="../defaultlook.ui" line="1600"/>
         <source>Apply</source>
         <translation>Applica</translation>
     </message>
@@ -356,7 +356,42 @@
         <translation>Opzioni di config.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1447"/>
+        <location filename="../defaultlook.ui" line="1423"/>
+        <source>Systray Icon Size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1434"/>
+        <source>Default</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1439"/>
+        <source>Small</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1444"/>
+        <source>Medium</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1449"/>
+        <source>Large</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1454"/>
+        <source>Larger</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1459"/>
+        <source>Largest</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1478"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>Reimposta Lightdm (shermata di login) al tema di default del sistema</translation>
     </message>
@@ -366,32 +401,32 @@
         <translation>Reimposta le azioni personalizzate del pulsante destro in Thunar ai valori di default del sistema</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1470"/>
+        <location filename="../defaultlook.ui" line="1501"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>Usa il driver intel invece del driver &quot;modesetting&quot; predefinito (sarà necessario riavviare)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1477"/>
+        <location filename="../defaultlook.ui" line="1508"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>          NOTA: Verrà fatto un back up nella directory home dell&apos;attuale file /etc/X11/xorg.conf.d/20-intel.conf</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1488"/>
+        <location filename="../defaultlook.ui" line="1519"/>
         <source>Use tearfree amdgpu option</source>
         <translation>Usa l&apos;opzione tearfree amdgpu</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1495"/>
+        <location filename="../defaultlook.ui" line="1526"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>NOTA: verrà eseguito il backup di /etc/X11/xorg.conf.d/20-amd.conf nella tua cartella home</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1506"/>
+        <location filename="../defaultlook.ui" line="1537"/>
         <source>Use tearfree radeon driver option</source>
         <translation>Usa l&apos;opzione driver tearfree radeon</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1513"/>
+        <location filename="../defaultlook.ui" line="1544"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>NOTA: verrà eseguito il backup di /etc/X11/xorg.conf.d/20-radeon.conf nella tua cartella home</translation>
     </message>
@@ -480,7 +515,7 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="993"/>
-        <location filename="../defaultlook.ui" line="1392"/>
+        <location filename="../defaultlook.ui" line="1376"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -522,7 +557,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1098"/>
         <location filename="../defaultlook.ui" line="1206"/>
-        <location filename="../defaultlook.ui" line="1318"/>
+        <location filename="../defaultlook.ui" line="1383"/>
         <source>Placement</source>
         <translation type="unfinished"></translation>
     </message>
@@ -548,32 +583,32 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1371"/>
+        <location filename="../defaultlook.ui" line="1396"/>
         <source>Workspace</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1378"/>
+        <location filename="../defaultlook.ui" line="1352"/>
         <source>Enable single-click</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1399"/>
+        <location filename="../defaultlook.ui" line="1318"/>
         <source>Reset KDE/Plasma defaults</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1439"/>
+        <location filename="../defaultlook.ui" line="1470"/>
         <source>Other</source>
         <translation>Altro</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1536"/>
+        <location filename="../defaultlook.ui" line="1567"/>
         <source>&amp;User</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1543"/>
+        <location filename="../defaultlook.ui" line="1574"/>
         <source>Root</source>
         <translation>Root</translation>
     </message>
@@ -584,7 +619,7 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="924"/>
-        <location filename="../defaultlook.ui" line="1385"/>
+        <location filename="../defaultlook.ui" line="1403"/>
         <source>Show windows from all workspaces in panel</source>
         <translation>Mostra le finestre di tutti gli spazi di lavoro nel pannello</translation>
     </message>
@@ -599,12 +634,12 @@
         <translation>Abilita l&apos;ibernazione sul menu di chiusura</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1454"/>
+        <location filename="../defaultlook.ui" line="1485"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>Permetti il montaggio delle periferiche interne agli utenti non-root</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1461"/>
+        <location filename="../defaultlook.ui" line="1492"/>
         <source>Enable kernel sandbox</source>
         <translation type="unfinished"></translation>
     </message>
@@ -624,7 +659,7 @@
         <translation>Abilita il click-singolo sul Gestore di File Thunar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1529"/>
+        <location filename="../defaultlook.ui" line="1560"/>
         <source>Password for administrative tasks:</source>
         <translation>Password per attività amministrative:</translation>
     </message>
@@ -688,12 +723,12 @@
         <translation>È stato eseguito il backup delle tue impostazioni correnti del pannello in una cartella nascosta denominata .restore nella tua cartella home (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1376"/>
+        <location filename="../defaultlook.cpp" line="1408"/>
         <source>settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1713"/>
+        <location filename="../defaultlook.cpp" line="1745"/>
         <source>Choose a theme set</source>
         <translation>Scegli un set di temi</translation>
     </message>

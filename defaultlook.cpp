@@ -952,6 +952,37 @@ void defaultlook::setupPlasma()
     } else {
         ui->checkBoxPlasmaShowAllWorkspaces->setChecked(true);
     }
+
+    //setup icon size
+    QString systrayid = runCmd("grep -B 3 extraItems $HOME/.config/plasma-org.kde.plasma.desktop-appletsrc |grep Containment").output.section("[",2,2).section("]",0,0);
+    qDebug() << "systrayid is" << systrayid;
+    //read in config and set combobox
+    QString value = runCmd("kreadconfig5 --file ~/.config/plasma-org.kde.plasma.desktop-appletsrc --group Containments --group " + systrayid + " --group General --key iconSize").output;
+
+    //kde value vs. combobox index
+    //1=0,2=1,3=2,4=3,5=4,6=5
+    switch(value.toInt()){
+    case 1:
+        ui->comboBoxPlasmaSystrayIcons->setCurrentIndex(0);
+        break;
+    case 2:
+        ui->comboBoxPlasmaSystrayIcons->setCurrentIndex(1);
+        break;
+    case 3:
+        ui->comboBoxPlasmaSystrayIcons->setCurrentIndex(2);
+        break;
+    case 4:
+        ui->comboBoxPlasmaSystrayIcons->setCurrentIndex(3);
+        break;
+    case 5:
+        ui->comboBoxPlasmaSystrayIcons->setCurrentIndex(4);
+        break;
+    case 6:
+        ui->comboBoxPlasmaSystrayIcons->setCurrentIndex(5);
+        break;
+    default: ui->comboBoxPlasmaSystrayIcons->setCurrentIndex(0);
+    }
+
    ui->ButtonApplyPlasma->setDisabled(true);
 
    ui->checkboxplasmaresetdock->setChecked(false);
@@ -960,6 +991,7 @@ void defaultlook::setupPlasma()
    plasmaworkspacesflag = false;
    plasmasingleclickflag = false;
    plasmaresetflag = false;
+   plasmasystrayiconsizeflag = false;
 
 }
 QString defaultlook::readTaskmanagerConfig(QString key)
@@ -2886,6 +2918,38 @@ void defaultlook::on_ButtonApplyPlasma_clicked()
             value = "false";
         }
         runCmd("kwriteconfig5 --group KDE --key SingleClick " + value);
+        runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-kde-edit.sh \"kwriteconfig5 --file /root/.config/kdeglobals --group KDE --key SingleClick " + value + "\"");
+
+    }
+
+    if (plasmasystrayiconsizeflag){
+        int value = ui->comboBoxPlasmaSystrayIcons->currentIndex();
+        QString systrayiconvalue;
+        //kde value vs. combobox index
+        //1=0,2=1,3=2,4=3,5=4,6=5
+        switch(value){
+        case 0:
+            systrayiconvalue = "1";
+            break;
+        case 1:
+            systrayiconvalue = "2";
+            break;
+        case 2:
+            systrayiconvalue = "3";
+            break;
+        case 3:
+            systrayiconvalue = "4";
+            break;
+        case 4:
+            systrayiconvalue = "5";
+            break;
+        case 5:
+            systrayiconvalue = "6";
+            break;
+        default: systrayiconvalue = "1";
+        }
+        QString systrayid = runCmd("grep -B 3 extraItems $HOME/.config/plasma-org.kde.plasma.desktop-appletsrc |grep Containment").output.section("[",2,2).section("]",0,0);
+        runCmd("kwriteconfig5 --file ~/.config/plasma-org.kde.plasma.desktop-appletsrc --group Containments --group " + systrayid + " --group General --key iconSize " + systrayiconvalue);
     }
 
 
@@ -2900,7 +2964,7 @@ void defaultlook::on_ButtonApplyPlasma_clicked()
     }
 
     //time to reset kwin and plasmashell
-    if (plasmaworkspacesflag || plasmasingleclickflag || plasmaplacementflag || plasmaresetflag){
+    if (plasmaworkspacesflag || plasmasingleclickflag || plasmaplacementflag || plasmaresetflag || plasmasystrayiconsizeflag){
         //restart kwin first
         runCmd("sleep 1; qdbus org.kde.KWin /KWin reconfigure");
         //then plasma
@@ -2924,4 +2988,10 @@ void defaultlook::writeTaskmanagerConfig(QString key, QString value)
     QString Applet = plasmataskmanagerID.section("[",4,4).section("]",0,0);
     runCmd("kwriteconfig5 --file plasma-org.kde.plasma.desktop-appletsrc --group Containments --group " + ID + " --group Applets --group " + Applet + " --key " + key + " " + value);
 
+}
+
+void defaultlook::on_comboBoxPlasmaSystrayIcons_currentIndexChanged(int index)
+{
+    ui->ButtonApplyPlasma->setEnabled(true);
+    plasmasystrayiconsizeflag = true;
 }
