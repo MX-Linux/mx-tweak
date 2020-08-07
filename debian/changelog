@@ -1,3 +1,9 @@
+mx-tweak (20.08.01) mx; urgency=medium
+
+  * updated translations 
+
+ -- Dolphin Oracle <dolphin@littlebyte>  Thu, 06 Aug 2020 23:32:49 -0400
+
 mx-tweak (20.07.07) mx; urgency=medium
 
   * add plasma systray icon adjustment 
