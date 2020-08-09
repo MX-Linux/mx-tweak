@@ -1,3 +1,9 @@
+mx-tweak (20.08.02) mx; urgency=medium
+
+  * prevent panel changes on first startup of mx-tweak 
+
+ -- Dolphin Oracle <dolphin@littlebyte>  Sat, 08 Aug 2020 21:39:28 -0400
+
 mx-tweak (20.08.01) mx; urgency=medium
 
   * updated translations 
