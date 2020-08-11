@@ -14,6 +14,8 @@ kwriteconfig --file ~/.config/kdeglobals --group General --key BrowserApplicatio
 
 kwriteconfig --file ~/.config/kdeglobals --group General --key Name Breeze
 
+kwriteconfig --file ~/.config/kdeglobals --group Icons --key Theme Papirus
+
 kwriteconfig --file ~/.config/kdeglobals --group General --key shadeSortColumn true
 
 kwriteconfig --file ~/.config/kdeglobals --group General --key XftAntialias true
