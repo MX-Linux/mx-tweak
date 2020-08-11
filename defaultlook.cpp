@@ -763,6 +763,10 @@ void defaultlook::on_radioRestoreBackup_clicked()
 
 void defaultlook::top_or_bottom()
 {
+
+    if (!panelflag){
+        return;
+    }
     //move to user selected top or bottom border per mx-16 defaults  p=11 is top, p=12 is bottom
 
     QString top_bottom;
@@ -783,6 +787,9 @@ void defaultlook::top_or_bottom()
 
 void defaultlook::left_or_right()
 {
+    if (!panelflag){
+        return;
+    }
     //move to user selected top or bottom border per mx-16 defaults  p=5 is left, p=1 is right
 
     QString left_right;
@@ -858,6 +865,7 @@ void defaultlook::on_comboboxVertpostition_currentIndexChanged(const QString &ar
 }
 void defaultlook::setuppanel()
 {
+    panelflag = false;
     ui->buttonApply->setEnabled(false);
     if (ui->buttonApply->icon().isNull()) {
         ui->buttonApply->setIcon(QIcon(":/icons/dialog-ok.svg"));
@@ -898,6 +906,9 @@ void defaultlook::setuppanel()
     if (test == "1" || test == "2") {
         ui->checkVert->setChecked(true);
         ui->checkHorz->setEnabled(true);
+        if (test2 == "p=1") {
+            ui->comboboxVertpostition->setCurrentIndex(1);
+        }
     }
 
     // if backup available, make the restore backup option available
@@ -908,6 +919,7 @@ void defaultlook::setuppanel()
     } else {
         ui->radioRestoreBackup->setEnabled(false);
     }
+    panelflag = true;
 
 }
 
