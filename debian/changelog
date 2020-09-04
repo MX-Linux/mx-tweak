@@ -1,4 +1,4 @@
-mx-tweak (20.09.01) ; urgency=medium
+mx-tweak (20.09.01) mx; urgency=medium
 
   *  add menu-migrate
   *  remove template copy to home folder
