@@ -139,18 +139,18 @@ void defaultlook::setup()
     setupEtc();
 
     //copy template file to ~/.local/share/mx-tweak-data if it doesn't exist
-    QDir userdir(home_path + "/.local/share/mx-tweak-data");
-    QFileInfo template_file(home_path + "/.local/share/mx-tweak-data/mx.tweak.template");
-    if (template_file.exists()) {
-        qDebug() << "template file found";
-    } else {
-        if (userdir.exists()){
-            runCmd("cp /usr/share/mx-tweak-data/mx.tweak.template " + userdir.absolutePath());
-        } else {
-            runCmd("mkdir -p " + userdir.absolutePath());
-            runCmd("cp /usr/share/mx-tweak-data/mx.tweak.template " + userdir.absolutePath());
-        }
-    }
+    //QDir userdir(home_path + "/.local/share/mx-tweak-data");
+    //QFileInfo template_file(home_path + "/.local/share/mx-tweak-data/mx.tweak.template");
+    //if (template_file.exists()) {
+      //  qDebug() << "template file found";
+    //} else {
+      //  if (userdir.exists()){
+        //    runCmd("cp /usr/share/mx-tweak-data/mx.tweak.template " + userdir.absolutePath());
+        //} else {
+          //  runCmd("mkdir -p " + userdir.absolutePath());
+            //runCmd("cp /usr/share/mx-tweak-data/mx.tweak.template " + userdir.absolutePath());
+        //}
+    //}
     version = getVersion("mx-tweak");
     if (displayflag){
         ui->tabWidget->setCurrentIndex(3);
