@@ -8,6 +8,7 @@ help/*					usr/share/doc/mx-tweak/help
 firefox			usr/local/bin
 hexchat.conf            usr/share/mx-tweak
 mx-tweak.png		usr/share/icons/hicolor/48x48/apps
+brightness-systray.png usr/share/icons/hicolor/48x48/apps
 brightness-systray.png  usr/share/pixmaps
 mx.tweak.template usr/share/mx-tweak-data
 zcompton.desktop		usr/share/mx-tweak
