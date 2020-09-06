@@ -292,6 +292,8 @@ private slots:
 
     void on_comboBoxPlasmaSystrayIcons_currentIndexChanged(int index);
 
+    void on_checkBoxMenuMigrate_clicked();
+
 private:
     Ui::defaultlook *ui;
 };

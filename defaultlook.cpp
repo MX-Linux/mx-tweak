@@ -139,18 +139,18 @@ void defaultlook::setup()
     setupEtc();
 
     //copy template file to ~/.local/share/mx-tweak-data if it doesn't exist
-    QDir userdir(home_path + "/.local/share/mx-tweak-data");
-    QFileInfo template_file(home_path + "/.local/share/mx-tweak-data/mx.tweak.template");
-    if (template_file.exists()) {
-        qDebug() << "template file found";
-    } else {
-        if (userdir.exists()){
-            runCmd("cp /usr/share/mx-tweak-data/mx.tweak.template " + userdir.absolutePath());
-        } else {
-            runCmd("mkdir -p " + userdir.absolutePath());
-            runCmd("cp /usr/share/mx-tweak-data/mx.tweak.template " + userdir.absolutePath());
-        }
-    }
+    //QDir userdir(home_path + "/.local/share/mx-tweak-data");
+    //QFileInfo template_file(home_path + "/.local/share/mx-tweak-data/mx.tweak.template");
+    //if (template_file.exists()) {
+      //  qDebug() << "template file found";
+    //} else {
+      //  if (userdir.exists()){
+        //    runCmd("cp /usr/share/mx-tweak-data/mx.tweak.template " + userdir.absolutePath());
+        //} else {
+          //  runCmd("mkdir -p " + userdir.absolutePath());
+            //runCmd("cp /usr/share/mx-tweak-data/mx.tweak.template " + userdir.absolutePath());
+        //}
+    //}
     version = getVersion("mx-tweak");
     if (displayflag){
         ui->tabWidget->setCurrentIndex(3);
@@ -1042,6 +1042,11 @@ void defaultlook::setupFluxbox()
     QFileInfo resetDefaultMenu("/usr/share/mxflux/.fluxbox/menu-mx");
     QFileInfo idesktogglepresent("/usr/bin/idesktoggle");
     QFileInfo ideskpresent("/usr/bin/idesk");
+    QFileInfo menumigrate("/usr/bin/menu-migrate");
+
+    if (!menumigrate.exists()){
+        ui->checkBoxMenuMigrate->setDisabled(true);
+    }
 
     if (!resetALL.exists()){
         ui->checkboxfluxreseteverything->setDisabled(true);
@@ -2745,6 +2750,7 @@ void defaultlook::on_ApplyFluxboxResets_clicked()
     if (ui->checkboxfluxreseteverything->isChecked()){
         ui->checkboxfluxresetdock->setChecked(false);
         ui->checkboxfluxresetmenu->setChecked(false);
+        ui->checkBoxMenuMigrate->setChecked(false);
         runCmd("/usr/bin/mxflux_install.sh");
         runCmd("pkill wmalauncher");
         runCmd("$HOME/.fluxbox/scripts/DefaultDock.mxdk");
@@ -2764,6 +2770,12 @@ void defaultlook::on_ApplyFluxboxResets_clicked()
         runCmd("localize_fluxbox_menu-mx");
     }
 
+    //Migrate Menu
+    if (ui->checkBoxMenuMigrate->isChecked() && !ui->checkboxfluxreseteverything->isChecked()){
+        //run menu-migrate script
+        runCmd("/usr/bin/menu-migrate");
+    }
+
     //Reset Dock
     if (ui->checkboxfluxresetdock->isChecked() && !ui->checkboxfluxreseteverything->isChecked()){
         //copy backup dock and copy one from usr/share/mxflux/.fluxbox/scripts
@@ -2777,6 +2789,7 @@ void defaultlook::on_ApplyFluxboxResets_clicked()
     ui->checkboxfluxresetdock->setChecked(false);
     ui->checkboxfluxresetmenu->setChecked(false);
     ui->checkboxfluxreseteverything->setChecked(false);
+    ui->checkBoxMenuMigrate->setChecked(false);
     runCmd("sleep 2; /usr/bin/fluxbox-remote restart");
     setupFluxbox();
 }
@@ -2807,16 +2820,25 @@ void defaultlook::on_checkboxfluxresetdock_clicked()
     ui->ApplyFluxboxResets->setEnabled(true);
 }
 
+void defaultlook::on_checkBoxMenuMigrate_clicked()
+{
+    ui->ApplyFluxboxResets->setEnabled(true);
+    ui->checkboxfluxresetmenu->setChecked(false);
+}
 
 
 void defaultlook::on_checkboxfluxresetmenu_clicked()
 {
     ui->ApplyFluxboxResets->setEnabled(true);
+    ui->checkBoxMenuMigrate->setChecked(false);
 }
 
 void defaultlook::on_checkboxfluxreseteverything_clicked()
 {
     ui->ApplyFluxboxResets->setEnabled(true);
+    ui->checkboxfluxresetdock->setChecked(false);
+    ui->checkboxfluxresetmenu->setChecked(false);
+    ui->checkBoxMenuMigrate->setChecked(false);
 }
 
 void defaultlook::on_combofluxtoolbarlocatoin_currentIndexChanged(int index)
@@ -3007,3 +3029,5 @@ void defaultlook::on_comboBoxPlasmaSystrayIcons_currentIndexChanged(int index)
     ui->ButtonApplyPlasma->setEnabled(true);
     plasmasystrayiconsizeflag = true;
 }
+
+
