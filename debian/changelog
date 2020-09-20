@@ -1,3 +1,9 @@
+mx-tweak (20.09.02) mx; urgency=medium
+
+  * fix pulling of fluxbox init settings 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 20 Sep 2020 10:57:10 -0400
+
 mx-tweak (20.09.01) mx; urgency=medium
 
   *  add menu-migrate

@@ -1110,8 +1110,8 @@ void defaultlook::setupFluxbox()
     ui->spinBoxFluxToolbarHeight->setValue(toolbarheight.toInt());
     //slit autohide
     QString slitautohide = runCmd("grep screen0.slit.autoHide $HOME/.fluxbox/init").output.section(":",1,1).trimmed();
-    qDebug() << "slit autohide" << toolbarautohide;
-    if (toolbarautohide == "true"){
+    qDebug() << "slit autohide" << slitautohide;
+    if (slitautohide == "true"){
         ui->checkboxfluxSlitautohide->setChecked(true);
     } else {
         ui->checkboxfluxSlitautohide->setChecked(false);
