@@ -154,7 +154,7 @@
         <enum>QTabWidget::North</enum>
        </property>
        <property name="currentIndex">
-        <number>5</number>
+        <number>7</number>
        </property>
        <widget class="QWidget" name="Panel">
         <attribute name="title">

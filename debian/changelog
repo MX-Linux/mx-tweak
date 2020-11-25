@@ -1,3 +1,9 @@
+mx-tweak (20.11.01) mx; urgency=medium
+
+  * for non-supported desktops, still show the Other/etc tab only.
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Tue, 24 Nov 2020 19:58:49 -0500
+
 mx-tweak (20.09.02) mx; urgency=medium
 
   * fix pulling of fluxbox init settings 

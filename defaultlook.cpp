@@ -70,7 +70,11 @@ void defaultlook::setup()
     if (!checklightdm()){
         ui->checkBoxLightdmReset->hide();
     }
+
+    bool isOther = true;
+
     if (checkXFCE()) {
+        isOther = false;
         whichpanel();
         message_flag = false;
         QFileInfo backuppanel(home_path + "/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml");
@@ -99,6 +103,7 @@ void defaultlook::setup()
 
     //setup fluxbox
     if (checkFluxbox()){
+        isOther = false;
         setupFluxbox();
         ui->tabWidget->removeTab(6);
         ui->label_4->hide();
@@ -118,6 +123,7 @@ void defaultlook::setup()
 
     //setup plasma
     if (checkPlasma()){
+        isOther = false;
         ui->label_4->hide();
         ui->label_5->hide();
         ui->label_6->hide();
@@ -133,6 +139,25 @@ void defaultlook::setup()
         ui->tabWidget->removeTab(1);
         ui->tabWidget->removeTab(0);
         setupPlasma();
+    }
+
+    //for other non-supported desktops, show only
+    if (isOther){
+        ui->label_4->hide();
+        ui->label_5->hide();
+        ui->label_6->hide();
+        ui->label_7->hide();
+        ui->toolButtonXFCEAppearance->hide();
+        ui->toolButtonXFCEWMsettings->hide();
+        ui->toolButtonXFCEpanelSettings->hide();
+        ui->tabWidget->setCurrentIndex(7);
+        ui->tabWidget->removeTab(6);
+        ui->tabWidget->removeTab(5);
+        ui->tabWidget->removeTab(4);
+        ui->tabWidget->removeTab(3);
+        ui->tabWidget->removeTab(2);
+        ui->tabWidget->removeTab(1);
+        ui->tabWidget->removeTab(0);
     }
 
     //setup other tab;
