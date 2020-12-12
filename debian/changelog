@@ -1,3 +1,9 @@
+mx-tweak (20.12.02) mx; urgency=medium
+
+  * update icons 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Fri, 11 Dec 2020 20:29:06 -0500
+
 mx-tweak (20.12.01) mx; urgency=medium
 
   * make sure ~/.local/share/mx-tweak-data exits
