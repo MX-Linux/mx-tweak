@@ -1,3 +1,27 @@
+mx-tweak (20.12.02) mx; urgency=medium
+
+  * update icons 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Fri, 11 Dec 2020 20:29:06 -0500
+
+mx-tweak (20.12.01) mx; urgency=medium
+
+  * make sure ~/.local/share/mx-tweak-data exits
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Wed, 02 Dec 2020 18:23:18 -0500
+
+mx-tweak (20.11.01) mx; urgency=medium
+
+  * for non-supported desktops, still show the Other/etc tab only.
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Tue, 24 Nov 2020 19:58:49 -0500
+
+mx-tweak (20.09.02) mx; urgency=medium
+
+  * fix pulling of fluxbox init settings 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 20 Sep 2020 10:57:10 -0400
+
 mx-tweak (20.09.01) mx; urgency=medium
 
   *  add menu-migrate

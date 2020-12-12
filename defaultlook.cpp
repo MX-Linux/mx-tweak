@@ -70,7 +70,11 @@ void defaultlook::setup()
     if (!checklightdm()){
         ui->checkBoxLightdmReset->hide();
     }
+
+    bool isOther = true;
+
     if (checkXFCE()) {
+        isOther = false;
         whichpanel();
         message_flag = false;
         QFileInfo backuppanel(home_path + "/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml");
@@ -99,6 +103,7 @@ void defaultlook::setup()
 
     //setup fluxbox
     if (checkFluxbox()){
+        isOther = false;
         setupFluxbox();
         ui->tabWidget->removeTab(6);
         ui->label_4->hide();
@@ -118,6 +123,7 @@ void defaultlook::setup()
 
     //setup plasma
     if (checkPlasma()){
+        isOther = false;
         ui->label_4->hide();
         ui->label_5->hide();
         ui->label_6->hide();
@@ -135,22 +141,41 @@ void defaultlook::setup()
         setupPlasma();
     }
 
+    //for other non-supported desktops, show only
+    if (isOther){
+        ui->label_4->hide();
+        ui->label_5->hide();
+        ui->label_6->hide();
+        ui->label_7->hide();
+        ui->toolButtonXFCEAppearance->hide();
+        ui->toolButtonXFCEWMsettings->hide();
+        ui->toolButtonXFCEpanelSettings->hide();
+        ui->tabWidget->setCurrentIndex(7);
+        ui->tabWidget->removeTab(6);
+        ui->tabWidget->removeTab(5);
+        ui->tabWidget->removeTab(4);
+        ui->tabWidget->removeTab(3);
+        ui->tabWidget->removeTab(2);
+        ui->tabWidget->removeTab(1);
+        ui->tabWidget->removeTab(0);
+    }
+
     //setup other tab;
     setupEtc();
 
     //copy template file to ~/.local/share/mx-tweak-data if it doesn't exist
-    //QDir userdir(home_path + "/.local/share/mx-tweak-data");
-    //QFileInfo template_file(home_path + "/.local/share/mx-tweak-data/mx.tweak.template");
-    //if (template_file.exists()) {
-      //  qDebug() << "template file found";
-    //} else {
-      //  if (userdir.exists()){
-        //    runCmd("cp /usr/share/mx-tweak-data/mx.tweak.template " + userdir.absolutePath());
-        //} else {
-          //  runCmd("mkdir -p " + userdir.absolutePath());
-            //runCmd("cp /usr/share/mx-tweak-data/mx.tweak.template " + userdir.absolutePath());
-        //}
-    //}
+    QDir userdir(home_path + "/.local/share/mx-tweak-data");
+    QFileInfo template_file(home_path + "/.local/share/mx-tweak-data/mx.tweak.template");
+    if (template_file.exists()) {
+        qDebug() << "template file found";
+    } else {
+        if (userdir.exists()){
+            runCmd("cp /usr/share/mx-tweak-data/mx.tweak.template " + userdir.absolutePath());
+        } else {
+            runCmd("mkdir -p " + userdir.absolutePath());
+            runCmd("cp /usr/share/mx-tweak-data/mx.tweak.template " + userdir.absolutePath());
+        }
+    }
     version = getVersion("mx-tweak");
     if (displayflag){
         ui->tabWidget->setCurrentIndex(3);
@@ -1110,8 +1135,8 @@ void defaultlook::setupFluxbox()
     ui->spinBoxFluxToolbarHeight->setValue(toolbarheight.toInt());
     //slit autohide
     QString slitautohide = runCmd("grep screen0.slit.autoHide $HOME/.fluxbox/init").output.section(":",1,1).trimmed();
-    qDebug() << "slit autohide" << toolbarautohide;
-    if (toolbarautohide == "true"){
+    qDebug() << "slit autohide" << slitautohide;
+    if (slitautohide == "true"){
         ui->checkboxfluxSlitautohide->setChecked(true);
     } else {
         ui->checkboxfluxSlitautohide->setChecked(false);
