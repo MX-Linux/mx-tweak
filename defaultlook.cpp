@@ -1063,8 +1063,8 @@ void defaultlook::setupFluxbox()
 
     //resets
     QFileInfo resetALL("/usr/bin/mxflux_install.sh");
-    QFileInfo resetDefaultDock("/usr/share/mxflux/.fluxbox/scripts/DefaultDock.mxdk");
-    QFileInfo resetDefaultMenu("/usr/share/mxflux/.fluxbox/menu-mx");
+    QFileInfo resetDefaultDock("/etc/skel/.fluxbox/scripts/DefaultDock.mxdk");
+    QFileInfo resetDefaultMenu("/etc/skel/.fluxbox/menu-mx");
     QFileInfo idesktogglepresent("/usr/bin/idesktoggle");
     QFileInfo ideskpresent("/usr/bin/idesk");
     QFileInfo menumigrate("/usr/bin/menu-migrate");
@@ -2789,8 +2789,8 @@ void defaultlook::on_ApplyFluxboxResets_clicked()
         qDebug() << "menu mx is " << menumx;
         //backup menu
         runCmd("cp " + menumx + " " + menumx + ".$(date +%Y%m%d%H%M%S)");
-        //copy menu-mx from /usr/share/mx-fluxbox/.fluxbox
-        runCmd("cp /usr/share/mxflux/.fluxbox/menu-mx $HOME/.fluxbox");
+        //copy menu-mx from /etc/skel/.fluxbox
+        runCmd("cp /etc/skel/.fluxbox/menu-mx $HOME/.fluxbox");
         //run localize-fluxbox-menu to generate new menu
         runCmd("localize_fluxbox_menu-mx");
     }
@@ -2805,7 +2805,7 @@ void defaultlook::on_ApplyFluxboxResets_clicked()
     if (ui->checkboxfluxresetdock->isChecked() && !ui->checkboxfluxreseteverything->isChecked()){
         //copy backup dock and copy one from usr/share/mxflux/.fluxbox/scripts
         runCmd("cp $HOME/.fluxbox/scripts/DefaultDock.mxdk $HOME/.fluxbox/scripts/DefaultDock.mxdk.$(date +%Y%m%d%H%M%S)");
-        runCmd("cp /usr/share/mxflux/.fluxbox/scripts/DefaultDock.mxdk $HOME/.fluxbox/scripts/DefaultDock.mxdk");
+        runCmd("cp /etc/skel/.fluxbox/scripts/DefaultDock.mxdk $HOME/.fluxbox/scripts/DefaultDock.mxdk");
         runCmd("pkill wmalauncher");
         runCmd("$HOME/.fluxbox/scripts/DefaultDock.mxdk");
     }
