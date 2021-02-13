@@ -1,3 +1,9 @@
+mx-tweak (21.02.01) mx; urgency=medium
+
+  * adjust fluxbox reset routines
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Fri, 12 Feb 2021 23:13:51 -0500
+
 mx-tweak (20.12.02) mx; urgency=medium
 
   * update icons 
