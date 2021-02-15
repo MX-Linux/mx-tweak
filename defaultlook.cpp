@@ -238,6 +238,16 @@ void defaultlook::fliptohorizontal()
     workspacesID=workspacesID.remove("\"").section("-",1,1).section(" ",0,0);
     qDebug() << "workspacesID: " << workspacesID;
 
+    if (tasklistID == ""){
+        QString docklikeID = runCmd("grep docklike ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
+        docklikeID=docklikeID.remove("\"").section("-",1,1).section(" ",0,0);
+        qDebug() << "docklikeID: " << docklikeID;
+        if (docklikeID != ""){
+        tasklistID = docklikeID;
+        qDebug() << "new tasklist: " << tasklistID;
+        }
+    }
+
     // if systray exists, do a bunch of stuff to relocate it a list of plugins.  If not present, do nothing to list
 
     if (systrayID !=""){
@@ -396,6 +406,16 @@ void defaultlook::fliptovertical()
     QString workspacesID = runCmd("grep pager ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
     workspacesID=workspacesID.remove("\"").section("-",1,1).section(" ",0,0);
     qDebug() << "workspacesID: " << workspacesID;
+
+    if (tasklistID == ""){
+        QString docklikeID = runCmd("grep docklike ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
+        docklikeID=docklikeID.remove("\"").section("-",1,1).section(" ",0,0);
+        qDebug() << "docklikeID: " << docklikeID;
+        if (docklikeID != ""){
+        tasklistID = docklikeID;
+        qDebug() << "new tasklist: " << tasklistID;
+        }
+    }
 
     //if systray exists, do a bunch of stuff to try to move it in a logical way
 
