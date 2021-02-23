@@ -234,6 +234,10 @@ void defaultlook::fliptohorizontal()
     pulseaudioID=pulseaudioID.remove("\"").section("-",1,1).section(" ",0,0);
     qDebug() << "pulseaudio: " << pulseaudioID;
 
+    QString powerID = runCmd("grep power-manager-plugin ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
+    powerID=powerID.remove("\"").section("-",1,1).section(" ",0,0);
+    qDebug() << "powerID: " << powerID;
+
     QString workspacesID = runCmd("grep pager ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
     workspacesID=workspacesID.remove("\"").section("-",1,1).section(" ",0,0);
     qDebug() << "workspacesID: " << workspacesID;
@@ -331,8 +335,14 @@ void defaultlook::fliptohorizontal()
             switchIDindex = pluginIDs.indexOf(systrayID) + 1;
             pluginIDs.insert(switchIDindex, pulseaudioID);
             qDebug() << "reorderd PA list" << pluginIDs;
-
-
+        }
+        //if power-manager plugin is present, move it to in behind of systray
+        if (powerID != "") {
+            int switchIDindex;
+            pluginIDs.removeAll(powerID);
+            switchIDindex = pluginIDs.indexOf(systrayID);
+            pluginIDs.insert(switchIDindex, powerID);
+            qDebug() << "reorderd PA list" << pluginIDs;
         }
     }
 
@@ -402,6 +412,10 @@ void defaultlook::fliptovertical()
     QString pulseaudioID = runCmd("grep pulseaudio ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
     pulseaudioID=pulseaudioID.remove("\"").section("-",1,1).section(" ",0,0);
     qDebug() << "pulseaudio: " << pulseaudioID;
+
+    QString powerID = runCmd("grep power-manager-plugin ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
+    powerID=powerID.remove("\"").section("-",1,1).section(" ",0,0);
+    qDebug() << "powerID: " << powerID;
 
     QString workspacesID = runCmd("grep pager ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
     workspacesID=workspacesID.remove("\"").section("-",1,1).section(" ",0,0);
@@ -509,8 +523,15 @@ void defaultlook::fliptovertical()
             switchIDindex = pluginIDs.indexOf(systrayID) + 1;
             pluginIDs.insert(switchIDindex, pulseaudioID);
             qDebug() << "reorderd PA list" << pluginIDs;
+        }
 
-
+        //if powerID plugin is present, move it to in behind of systray
+        if (powerID != "") {
+            int switchIDindex;
+            pluginIDs.removeAll(powerID);
+            switchIDindex = pluginIDs.indexOf(systrayID);
+            pluginIDs.insert(switchIDindex, powerID);
+            qDebug() << "reorderd PA list" << pluginIDs;
         }
         //move the expanding separator
 
