@@ -1217,12 +1217,22 @@ void defaultlook::setupEtc()
     } 
 
     //setup sudo override function
+
     QFileInfo sudo_override_file("/etc/polkit-1/localauthority.conf.d/55-tweak-override.conf");
     if (sudo_override_file.exists()) {
         ui->radioSudoUser->setChecked(true);
     } else {
         ui->radioSudoRoot->setChecked(true);
     }
+
+    //if root accout disabled, disable root authentication changes
+    test = runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-check.sh").output;
+    if ( test.contains("NP")){
+        ui->radioSudoRoot->setEnabled(false);
+        ui->radioSudoUser->setEnabled(false);
+        ui->label_11->setEnabled(false);
+    }
+
 
     //setup user namespaces option (99-sandbox-mx.conf)
     sandboxflag = false;
@@ -2044,6 +2054,7 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     QString sudo_override_option;
     QString user_name_space_override_option;
     udisks_option.clear();
+
 
 
     if (ui->checkBoxMountInternalDrivesNonRoot->isChecked()) {
