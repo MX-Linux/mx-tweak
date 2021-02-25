@@ -1,3 +1,11 @@
+mx-tweak (21.02.04mx21) mx; urgency=medium
+
+  * remove systray frame toggle (systray frame no longer exists as of xfce 4.16)
+  * add zoom_desktop toggle
+  * change enable hibernate option on MX-21 and forward 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Wed, 24 Feb 2021 22:52:09 -0500
+
 mx-tweak (21.02.03mx21) mx; urgency=medium
 
   * disable admin password selection if root account inactive 
