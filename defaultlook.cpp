@@ -1403,23 +1403,29 @@ void defaultlook::setupConfigoptions()
       }
 
       //check systray frame status
+      //frame has been removed from systray
 
-      pluginidsystray = runCmd("cat ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml | grep \\\"systray\\\"|cut -d '=' -f2 | cut -d '' -f1| cut -d '\"' -f2").output;
-      qDebug() << "systray is " << pluginidsystray;
-      test = runCmd("xfconf-query -c xfce4-panel -p /plugins/" + pluginidsystray + "/show-frame").output;
-      if ( test == "true") {
-          ui->checkBoxSystrayFrame->setChecked(true);
+      // show all workspaces - tasklist/show buttons feature
+      plugintasklist = runCmd("grep \\\"tasklist\\\" ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml |cut -d '=' -f2 | cut -d '' -f1| cut -d '\"' -f2").output;
+      qDebug() << "tasklist is " << plugintasklist;
+      if ( ! plugintasklist.isEmpty()){
+          test = runCmd("xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/include-all-workspaces").output;
+          if ( test == "true") {
+              ui->checkBoxShowAllWorkspaces->setChecked(true);
+          } else {
+              ui->checkBoxShowAllWorkspaces->setChecked(false);
+          }
       } else {
-          ui->checkBoxSystrayFrame->setChecked(false);
+          ui->checkBoxShowAllWorkspaces->setEnabled(false);
       }
 
-      plugintasklist = runCmd("cat ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml | grep \\\"tasklist\\\"|cut -d '=' -f2 | cut -d '' -f1| cut -d '\"' -f2").output;
-      qDebug() << "tasklist is " << plugintasklist;
-      test = runCmd("xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/include-all-workspaces").output;
+      //switch zoom_desktop
+
+      test = runCmd("xfconf-query -c xfwm4 -p /general/zoom_desktop").output;
       if ( test == "true") {
-          ui->checkBoxShowAllWorkspaces->setChecked(true);
+          ui->checkBoxDesktopZoom->setChecked(true);
       } else {
-          ui->checkBoxShowAllWorkspaces->setChecked(false);
+          ui->checkBoxDesktopZoom->setChecked(false);
       }
 
       //setup no-ellipse option
@@ -2165,10 +2171,6 @@ void defaultlook::on_checkBoxThunarSingleClick_clicked()
     ui->ButtonApplyMiscDefualts->setEnabled(true);
 }
 
-void defaultlook::on_checkBoxSystrayFrame_clicked()
-{
-    ui->ButtonApplyMiscDefualts->setEnabled(true);
-}
 
 void defaultlook::on_checkboxNoEllipse_clicked()
 {
@@ -2462,10 +2464,13 @@ void defaultlook::on_ButtonApplyMiscDefualts_clicked()
         runCmd("xfconf-query  -c thunar -p /misc-single-click -s false");
     }
 
-    if (ui->checkBoxSystrayFrame->isChecked()) {
-        runCmd("xfconf-query -c xfce4-panel -p /plugins/" + pluginidsystray + "/show-frame -s true");
+    //systray frame removed
+
+    //set desktop zoom
+    if (ui->checkBoxDesktopZoom->isChecked()) {
+        runCmd("xfconf-query -c xfwm4 -p /general/zoom_desktop -s true");
     } else {
-        runCmd("xfconf-query -c xfce4-panel -p /plugins/" + pluginidsystray + "/show-frame -s false");
+        runCmd("xfconf-query -c xfwm4 -p /general/zoom_desktop -s false");
     }
 
     if (ui->checkBoxThunarCAReset->isChecked()) {
@@ -2519,10 +2524,13 @@ void defaultlook::on_ButtonApplyMiscDefualts_clicked()
         }
     }
 
-
+    //only do this part on MX-19.  MX-21 and later do not have uswsusp
     if ( !hibernate_option.isEmpty() ) {
-        runCmd("x-terminal-emulator -e 'pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + hibernate_option + "'");
+        QString test = runCmd("cat /etc/mx-version").output;
+        if ( test.contains("MX-19")) {
+            runCmd("x-terminal-emulator -e 'pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + hibernate_option + "'");
         }
+    }
 
     setupConfigoptions();
 }
@@ -2531,6 +2539,12 @@ void defaultlook::on_checkBoxLightdmReset_clicked()
 {
     ui->ButtonApplyEtc->setEnabled(true);
 }
+
+void defaultlook::on_checkBoxDesktopZoom_clicked()
+{
+    ui->ButtonApplyMiscDefualts->setEnabled(true);
+}
+
 
 void defaultlook::on_checkBoxThunarCAReset_clicked()
 {
@@ -3106,5 +3120,6 @@ void defaultlook::on_comboBoxPlasmaSystrayIcons_currentIndexChanged(int index)
     ui->ButtonApplyPlasma->setEnabled(true);
     plasmasystrayiconsizeflag = true;
 }
+
 
 

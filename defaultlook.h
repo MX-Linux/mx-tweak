@@ -186,8 +186,6 @@ private slots:
 
     void on_checkBoxThunarSingleClick_clicked();
 
-    void on_checkBoxSystrayFrame_clicked();
-
     void on_comboboxVertpostition_currentIndexChanged(const QString &arg1);
 
     void on_buttonThemeUndo_clicked();
@@ -293,6 +291,8 @@ private slots:
     void on_comboBoxPlasmaSystrayIcons_currentIndexChanged(int index);
 
     void on_checkBoxMenuMigrate_clicked();
+
+    void on_checkBoxDesktopZoom_clicked();
 
 private:
     Ui::defaultlook *ui;
