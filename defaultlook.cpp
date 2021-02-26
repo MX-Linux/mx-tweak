@@ -1801,6 +1801,9 @@ void defaultlook::setupComboTheme()
     QStringList filter("*.tweak");
     QDirIterator it("/usr/share/mx-tweak-data", filter, QDir::Files, QDirIterator::Subdirectories);
     while (it.hasNext()) {
+        xsettings_gtk_theme_present = false;
+        icontheme_present = false;
+        xfwm4_theme_present = false;
         QFileInfo file_info(it.next());
         QString filename = file_info.absoluteFilePath();
         QString name = runCmd("cat '" + filename + "'|grep Name=").output.section("=",1,1);
@@ -1820,19 +1823,20 @@ void defaultlook::setupComboTheme()
         QFileInfo icon_theme_home("" + home_path + "/.icons/" + xsettings_icon_theme);
         qDebug() << "xsettings_theme_home path" << xsettings_theme_home.absoluteFilePath();
 
-        if (xsettings_theme.exists() || xsettings_theme_home.exists() ) {
+        if ( xsettings_theme.exists() || xsettings_theme_home.exists() ) {
             xsettings_gtk_theme_present = true;
+            qDebug() << "xsettings_gtk_theme_present" << xsettings_gtk_theme_present;
         }
 
-        if (xfwm4_theme.exists() || xfwm4_theme_home.exists()) {
+        if ( xfwm4_theme.exists() || xfwm4_theme_home.exists() ) {
             xfwm4_theme_present = true;
         }
 
-        if (icon_theme.exists() || icon_theme_home.exists()) {
+        if ( icon_theme.exists() || icon_theme_home.exists() ) {
             icontheme_present = true;
         }
 
-        if (xsettings_gtk_theme_present && xfwm4_theme_present && icontheme_present) {
+        if ( xsettings_gtk_theme_present && xfwm4_theme_present && icontheme_present ) {
             qDebug() << "filename is " << filename;
             qDebug()<< "theme combo name" << name;
             theme_list << name;
@@ -1847,6 +1851,9 @@ void defaultlook::setupComboTheme()
 
     QDirIterator it2(home_path + "/.local/share/mx-tweak-data", filter, QDir::Files, QDirIterator::Subdirectories);
     while (it2.hasNext()) {
+        xsettings_gtk_theme_present = false;
+        icontheme_present = false;
+        xfwm4_theme_present = false;
         QString home_path = QDir::homePath();
         QFileInfo file_info(it2.next());
         QString filename = file_info.absoluteFilePath();
