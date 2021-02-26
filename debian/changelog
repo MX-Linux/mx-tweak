@@ -1,3 +1,9 @@
+mx-tweak (21.02.05mx21) mx; urgency=medium
+
+  * adjust tweak combo box building
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Thu, 25 Feb 2021 21:06:33 -0500
+
 mx-tweak (21.02.04mx21) mx; urgency=medium
 
   * remove systray frame toggle (systray frame no longer exists as of xfce 4.16)
