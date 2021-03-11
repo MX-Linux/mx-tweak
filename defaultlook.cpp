@@ -1306,8 +1306,15 @@ void defaultlook::setuptheme()
     ui->pushButtonPreview->setEnabled(false);
     //reset all checkboxes to unchecked
 
+
     ui->checkFirefox->setChecked(false);
     ui->checkHexchat->setChecked(false);
+    ui->checkFirefox->hide();
+    ui->checkHexchat->hide();
+
+    populatethemelists("gtk-3.0");
+    populatethemelists("xfwm4");
+    populatethemelists("icons");
 
     //only enable options that make sense
 
@@ -1454,12 +1461,16 @@ void defaultlook::setupConfigoptions()
       }
 
       // also hide hibernate if /etc/uswsusp.conf is missing
-      QFileInfo file("/etc/uswsusp.conf");
-      if (file.exists()) {
-          qDebug() << "uswsusp.conf found";
-      }else {
-          ui->checkBoxHibernate->hide();
-          ui->label_hibernate->hide();
+      //only on mx-21 and up
+      test = runCmd("cat /etc/mx-version").output;
+      if ( test.contains("MX-19")){
+          QFileInfo file("/etc/uswsusp.conf");
+          if (file.exists()) {
+              qDebug() << "uswsusp.conf found";
+          }else {
+              ui->checkBoxHibernate->hide();
+              ui->label_hibernate->hide();
+          }
       }
 
       //and hide hibernate if swap is encrypted
@@ -1910,7 +1921,7 @@ void defaultlook::on_comboTheme_activated(const QString &arg1)
 
 void defaultlook::on_buttonThemeApply_clicked()
 {
-
+    themeflag = false;
     savethemeundo();
     ui->buttonThemeApply->setEnabled(false);
     ui->buttonThemeUndo->setEnabled(true);
@@ -2038,10 +2049,10 @@ void defaultlook::on_buttonThemeApply_clicked()
 
     // message that we are done if a theme change was made
 
-    if (message_flag == true) {
-        message();
-        message_flag = false;
-    }
+    //if (message_flag == true) {
+     //   message();
+      //  message_flag = false;
+    //}
 
     // reset gui
     setuptheme();
@@ -3129,4 +3140,92 @@ void defaultlook::on_comboBoxPlasmaSystrayIcons_currentIndexChanged(int index)
 }
 
 
+void defaultlook::populatethemelists(QString value)
+{
+    QString themes;
+    QStringList themelist;
+    if ( value == "gtk-3.0" || value == "xfwm4"){
+        themes = runCmd("find /usr/share/themes/*/" + value + " -maxdepth 0 |cut -d\"/\" -f5").output;
+        themes.append("\n");
+        themes.append(runCmd("find $HOME/.themes/*/" + value + " -maxdepth 0 |cut -d\"/\" -f5").output);
+    } else {
+        themes = runCmd("find /usr/share/icons/*/index.theme -maxdepth 1 |cut -d\"/\" -f5").output;
+        themes.append("\n");
+        themes.append(runCmd("find $HOME/.icons/*/index.theme -maxdepth 1 |cut -d\"/\" -f5").output);
+    }
+    themelist = themes.split("\n");
+    themelist.removeDuplicates();
+    themelist.sort();
+    if ( value == "gtk-3.0" ){
+        ui->listWidgetTheme->addItems(themelist);
+        //set current
+        QString current = runCmd("xfconf-query -c xsettings -p /Net/ThemeName").output;
+        //index of theme in list
+        ui->listWidgetTheme->setCurrentRow(themelist.indexOf(current));
+    }
+    if ( value == "xfwm4"){
+        ui->listWidgetWMtheme->addItems(themelist);
+        QString current = runCmd("xfconf-query -c xfwm4 -p /general/theme").output;
+        ui->listWidgetWMtheme->setCurrentRow(themelist.indexOf(current));
+    }
 
+    if ( value == "icons"){
+        qDebug() << "themelist" << themelist;
+        QStringList iconthemelist = themelist;
+        for (const QString &item : iconthemelist) {
+            QString icontheme = item;
+            qDebug() << "icontheme" << icontheme;
+            QString test = runCmd("find /usr/share/icons/" + icontheme + " -maxdepth 1 -mindepth 1 -type d |cut -d\"/\" -f6").output;
+            if ( test == "cursors" ) {
+                themelist.removeAll(icontheme);
+            }
+        }
+        themelist.removeAll("default.kde4");
+        themelist.removeAll("default");
+        themelist.removeAll("hicolor");
+        ui->listWidgeticons->addItems(themelist);
+        QString current = runCmd("xfconf-query -c xsettings -p /Net/IconThemeName").output;
+        ui->listWidgeticons->setCurrentRow(themelist.indexOf(current));
+    }
+
+
+    themeflag = true;
+}
+
+void defaultlook::settheme(QString type, QString theme)
+{   //set new theme
+    QString cmd;
+    if ( type == "gtk-3.0" ){
+        cmd = "xfconf-query -c xsettings -p /Net/ThemeName -s " + theme;
+    }
+    if ( type == "xfwm4" ) {
+        cmd = "xfconf-query -c xfwm4 -p /general/theme -s " + theme;
+    }
+
+    if ( type == "icon" ) {
+        cmd = "xfconf-query -c xsettings -p /Net/IconThemeName -s " + theme;
+    }
+
+    system(cmd.toUtf8());
+}
+
+void defaultlook::on_listWidgetTheme_currentTextChanged(const QString &currentText)
+{
+    if ( themeflag ){
+    settheme("gtk-3.0", currentText);
+    }
+}
+
+void defaultlook::on_listWidgetWMtheme_currentTextChanged(const QString &currentText)
+{
+    if ( themeflag ){
+    settheme("xfwm4", currentText);
+    }
+}
+
+void defaultlook::on_listWidgeticons_currentTextChanged(const QString &currentText)
+{
+    if ( themeflag ){
+    settheme("icon", currentText);
+    }
+}
