@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>729</width>
+    <width>730</width>
     <height>655</height>
    </rect>
   </property>
@@ -23,297 +23,336 @@
    <iconset>
     <normaloff>../../../../usr/share/pixmaps/mx-tweak.png</normaloff>../../../../usr/share/pixmaps/mx-tweak.png</iconset>
   </property>
-  <layout class="QGridLayout" name="gridLayout_20">
-   <item row="0" column="0">
-    <layout class="QGridLayout" name="gridLayout_9">
-     <item row="4" column="0">
-      <layout class="QHBoxLayout" name="horizontalLayout">
-       <item>
-        <widget class="QToolButton" name="toolButtonXFCEpanelSettings">
-         <property name="toolTip">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the panel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset theme="xfce4-panel">
-           <normaloff>.</normaloff>.</iconset>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="label_4">
-         <property name="text">
-          <string>Panel</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <spacer name="horizontalSpacer_2">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>40</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item>
-        <widget class="QToolButton" name="toolButtonXFCEWMsettings">
-         <property name="toolTip">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configure window behavior and shortcuts&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset theme="xfwm4">
-           <normaloff>.</normaloff>.</iconset>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="label_6">
-         <property name="text">
-          <string>Window Manager</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <spacer name="horizontalSpacer_3">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>40</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item>
-        <widget class="QToolButton" name="toolButtonXFCEAppearance">
-         <property name="toolTip">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the look of your desktop&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset theme="preferences-desktop-theme">
-           <normaloff>.</normaloff>.</iconset>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="label_5">
-         <property name="text">
-          <string>Appearance</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item row="2" column="0">
-      <spacer name="verticalSpacer_2">
-       <property name="orientation">
-        <enum>Qt::Vertical</enum>
+  <layout class="QGridLayout" name="gridLayout_9">
+   <item row="3" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QToolButton" name="toolButtonXFCEpanelSettings">
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the panel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
-       <property name="sizeType">
-        <enum>QSizePolicy::MinimumExpanding</enum>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset theme="xfce4-panel">
+         <normaloff>.</normaloff>.</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Panel</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
        </property>
        <property name="sizeHint" stdset="0">
         <size>
-         <width>20</width>
-         <height>10</height>
+         <width>40</width>
+         <height>20</height>
         </size>
        </property>
       </spacer>
      </item>
-     <item row="3" column="0">
-      <widget class="QLabel" name="label_7">
-       <property name="font">
-        <font>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
+     <item>
+      <widget class="QToolButton" name="toolButtonXFCEWMsettings">
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configure window behavior and shortcuts&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="text">
-        <string>Xfce Settings</string>
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset theme="xfwm4">
+         <normaloff>.</normaloff>.</iconset>
        </property>
       </widget>
      </item>
-     <item row="1" column="0">
-      <widget class="QTabWidget" name="tabWidget">
-       <property name="tabPosition">
-        <enum>QTabWidget::North</enum>
+     <item>
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string>Window Manager</string>
        </property>
-       <property name="currentIndex">
-        <number>4</number>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
        </property>
-       <widget class="QWidget" name="Panel">
-        <attribute name="title">
-         <string>Panel</string>
-        </attribute>
-        <layout class="QGridLayout" name="gridLayout_3">
-         <item row="0" column="0">
-          <layout class="QGridLayout" name="gridLayout">
-           <item row="9" column="0">
-            <widget class="QPushButton" name="pushButtontasklist">
-             <property name="text">
-              <string>Options</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="2">
-            <spacer name="horizontalSpacer">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>26</width>
-               <height>23</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="6" column="0" colspan="2">
-            <widget class="QCheckBox" name="radioBackupPanel">
-             <property name="text">
-              <string>Backup current panel configuration</string>
-             </property>
-            </widget>
-           </item>
-           <item row="7" column="0" colspan="2">
-            <widget class="QCheckBox" name="radioRestoreBackup">
-             <property name="text">
-              <string>Restore backup panel configuration</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="0">
-            <widget class="QCheckBox" name="radioDefaultPanel">
-             <property name="text">
-              <string>Restore default panel</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="0">
-            <widget class="QLabel" name="label_2">
-             <property name="font">
-              <font>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="text">
-              <string>Affects 1st panel</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="0">
-            <widget class="QCheckBox" name="checkVert">
-             <property name="text">
-              <string>Display panel vertically</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="1">
-            <widget class="QComboBox" name="comboboxHorzPostition">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>0</height>
-              </size>
-             </property>
-             <item>
-              <property name="text">
-               <string>Bottom</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Top</string>
-              </property>
-             </item>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QCheckBox" name="checkHorz">
-             <property name="text">
-              <string>Display panel horizontally</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="1">
-            <widget class="QComboBox" name="comboboxVertpostition">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>0</height>
-              </size>
-             </property>
-             <item>
-              <property name="text">
-               <string>Left</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Right</string>
-              </property>
-             </item>
-            </widget>
-           </item>
-           <item row="4" column="0">
-            <widget class="QLabel" name="label_3">
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Affects all panels&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="10" column="0">
-            <spacer name="verticalSpacer_9">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>20</width>
-               <height>40</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="8" column="0">
-            <widget class="QLabel" name="labelTasklist">
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Buttons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QToolButton" name="toolButtonXFCEAppearance">
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the look of your desktop&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset theme="preferences-desktop-theme">
+         <normaloff>.</normaloff>.</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>Appearance</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label_7">
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Xfce Settings</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>709</width>
+       <height>15</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="0" column="0">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="tabPosition">
+      <enum>QTabWidget::North</enum>
+     </property>
+     <property name="currentIndex">
+      <number>6</number>
+     </property>
+     <widget class="QWidget" name="Panel">
+      <attribute name="title">
+       <string>Panel</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="0" column="0">
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="9" column="0">
+          <widget class="QPushButton" name="pushButtontasklist">
+           <property name="text">
+            <string>Options</string>
+           </property>
+          </widget>
          </item>
-         <item row="1" column="0">
-          <widget class="QPushButton" name="buttonApply">
+         <item row="2" column="2">
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>26</width>
+             <height>23</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="6" column="0" colspan="2">
+          <widget class="QCheckBox" name="radioBackupPanel">
+           <property name="text">
+            <string>Backup current panel configuration</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="0" colspan="2">
+          <widget class="QCheckBox" name="radioRestoreBackup">
+           <property name="text">
+            <string>Restore backup panel configuration</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QCheckBox" name="radioDefaultPanel">
+           <property name="text">
+            <string>Restore default panel</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_2">
+           <property name="font">
+            <font>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Affects 1st panel</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QCheckBox" name="checkVert">
+           <property name="text">
+            <string>Display panel vertically</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QComboBox" name="comboboxHorzPostition">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <item>
+            <property name="text">
+             <string>Bottom</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Top</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QCheckBox" name="checkHorz">
+           <property name="text">
+            <string>Display panel horizontally</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QComboBox" name="comboboxVertpostition">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <item>
+            <property name="text">
+             <string>Left</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Right</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Affects all panels&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="10" column="0">
+          <spacer name="verticalSpacer_9">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="8" column="0">
+          <widget class="QLabel" name="labelTasklist">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Buttons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="0">
+        <widget class="QPushButton" name="buttonApply">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Apply</string>
+         </property>
+         <property name="icon">
+          <iconset theme="dialog-ok">
+           <normaloff>.</normaloff>.</iconset>
+         </property>
+         <property name="shortcut">
+          <string/>
+         </property>
+         <property name="autoDefault">
+          <bool>true</bool>
+         </property>
+         <property name="default">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+      <zorder></zorder>
+      <zorder>buttonApply</zorder>
+     </widget>
+     <widget class="QWidget" name="Theme">
+      <attribute name="title">
+       <string>Theme</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_6">
+       <item row="0" column="0">
+        <layout class="QGridLayout" name="gridLayout_5">
+         <item row="7" column="3">
+          <widget class="QLabel" name="label_30">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QPushButton" name="buttonThemeApply">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
              <horstretch>0</horstretch>
@@ -338,1412 +377,1388 @@
            </property>
           </widget>
          </item>
-        </layout>
-        <zorder></zorder>
-        <zorder>buttonApply</zorder>
-       </widget>
-       <widget class="QWidget" name="Theme">
-        <attribute name="title">
-         <string>Theme</string>
-        </attribute>
-        <layout class="QGridLayout" name="gridLayout_6">
+         <item row="8" column="1" colspan="2">
+          <widget class="QListWidget" name="listWidgetWMtheme"/>
+         </item>
+         <item row="5" column="0" colspan="2">
+          <widget class="QCheckBox" name="checkHexchat">
+           <property name="text">
+            <string>Fix HexChat input box in dark theme</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QPushButton" name="pushButtonPreview">
+           <property name="text">
+            <string>Preview</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QCheckBox" name="checkFirefox">
+           <property name="toolTip">
+            <string>Fix some website fields when using dark theme</string>
+           </property>
+           <property name="text">
+            <string>Firefox dark theme tweak</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="1">
+          <widget class="QLabel" name="label_29">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Manager&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0">
+          <widget class="QLabel" name="label_31">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Themes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="0">
+          <widget class="QLabel" name="label_28">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0" colspan="5">
+          <widget class="Line" name="line_3">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="8" column="0">
+          <widget class="QListWidget" name="listWidgetTheme"/>
+         </item>
+         <item row="8" column="3" colspan="2">
+          <widget class="QListWidget" name="listWidgeticons"/>
+         </item>
+         <item row="9" column="0" colspan="2">
+          <widget class="QPushButton" name="pushButtonSettingsToThemeSet">
+           <property name="text">
+            <string>Save Current Settings as a Theme Set</string>
+           </property>
+           <property name="icon">
+            <iconset theme="document-save">
+             <normaloff>.</normaloff>.</iconset>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QPushButton" name="pushButtonRemoveUserThemeSet">
+           <property name="text">
+            <string>Remove User Theme Set</string>
+           </property>
+           <property name="icon">
+            <iconset theme="list-remove">
+             <normaloff>.</normaloff>.</iconset>
+           </property>
+          </widget>
+         </item>
          <item row="0" column="0">
-          <layout class="QGridLayout" name="gridLayout_5">
-           <item row="0" column="0">
-            <widget class="QLabel" name="label">
-             <property name="font">
-              <font>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="text">
-              <string>Theme Options</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QComboBox" name="comboTheme">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="0">
-            <spacer name="verticalSpacer_4">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>20</width>
-               <height>25</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="4" column="0">
-            <widget class="QCheckBox" name="checkFirefox">
-             <property name="toolTip">
-              <string>Fix some website fields when using dark theme</string>
-             </property>
-             <property name="text">
-              <string>Firefox dark theme tweak</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="0">
-            <widget class="QCheckBox" name="checkHexchat">
-             <property name="text">
-              <string>Fix HexChat input box in dark theme</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="0">
-            <spacer name="verticalSpacer_3">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>20</width>
-               <height>25</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="7" column="0">
-            <widget class="QPushButton" name="buttonThemeApply">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="text">
-              <string>Apply</string>
-             </property>
-             <property name="icon">
-              <iconset theme="dialog-ok">
-               <normaloff>.</normaloff>.</iconset>
-             </property>
-             <property name="shortcut">
-              <string/>
-             </property>
-             <property name="autoDefault">
-              <bool>true</bool>
-             </property>
-             <property name="default">
-              <bool>true</bool>
-             </property>
-            </widget>
-           </item>
-           <item row="7" column="1">
-            <widget class="QPushButton" name="buttonThemeUndo">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>32</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>Undo</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QPushButton" name="pushButtonPreview">
-             <property name="text">
-              <string>Preview</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="1">
-            <widget class="QPushButton" name="pushButtonRemoveUserThemeSet">
-             <property name="text">
-              <string>Remove User Theme Set</string>
-             </property>
-             <property name="icon">
-              <iconset theme="list-remove">
-               <normaloff>.</normaloff>.</iconset>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="1">
-            <widget class="QPushButton" name="pushButtonSettingsToThemeSet">
-             <property name="text">
-              <string>Save Current Settings as a Theme Set</string>
-             </property>
-             <property name="icon">
-              <iconset theme="document-save">
-               <normaloff>.</normaloff>.</iconset>
-             </property>
-            </widget>
-           </item>
-          </layout>
+          <widget class="QLabel" name="label">
+           <property name="font">
+            <font>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Theme Options</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QComboBox" name="comboTheme">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="2">
+          <widget class="QPushButton" name="buttonThemeUndo">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>32</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Undo</string>
+           </property>
+          </widget>
          </item>
         </layout>
-       </widget>
-       <widget class="QWidget" name="CompositorTab">
-        <attribute name="title">
-         <string>Compositor</string>
-        </attribute>
-        <layout class="QGridLayout" name="gridLayout_10">
-         <item row="0" column="0">
-          <layout class="QGridLayout" name="gridLayout_4">
-           <item row="8" column="0">
-            <spacer name="verticalSpacer_5">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>76</width>
-               <height>13</height>
-              </size>
-             </property>
-            </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="CompositorTab">
+      <attribute name="title">
+       <string>Compositor</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_10">
+       <item row="0" column="0">
+        <layout class="QGridLayout" name="gridLayout_4">
+         <item row="9" column="0" colspan="4">
+          <widget class="QPushButton" name="buttonCompositorApply">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Apply</string>
+           </property>
+           <property name="icon">
+            <iconset theme="dialog-ok">
+             <normaloff>.</normaloff>.</iconset>
+           </property>
+           <property name="shortcut">
+            <string/>
+           </property>
+           <property name="autoDefault">
+            <bool>true</bool>
+           </property>
+           <property name="default">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0" alignment="Qt::AlignLeft">
+          <widget class="QLabel" name="label_8">
+           <property name="text">
+            <string>Transparency and shadow options</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0" alignment="Qt::AlignLeft">
+          <widget class="QLabel" name="label_9">
+           <property name="text">
+            <string>Compositor</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="3">
+          <widget class="QPushButton" name="buttonEditComptonConf">
+           <property name="toolTip">
+            <string>Edit compton.conf directly in text editor</string>
+           </property>
+           <property name="text">
+            <string>Edit compton.conf</string>
+           </property>
+           <property name="icon">
+            <iconset theme="edit">
+             <normaloff>../../mx-compton/app</normaloff>../../mx-compton/app</iconset>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <spacer name="verticalSpacer_8">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>76</width>
+             <height>13</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="8" column="0">
+          <spacer name="verticalSpacer_5">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>76</width>
+             <height>13</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="2" column="0">
+          <spacer name="verticalSpacer_7">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>76</width>
+             <height>13</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="1" column="0" alignment="Qt::AlignLeft">
+          <widget class="QLabel" name="label_10">
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Changing the VBlank mode may help alleviate some screen tearing issues.  See Help for more information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="text">
+            <string>VBlank</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QComboBox" name="comboBoxvblank">
+           <item>
+            <property name="text">
+             <string>auto</string>
+            </property>
            </item>
-           <item row="7" column="0" colspan="3">
-            <widget class="QPushButton" name="buttonConfigureCompton">
-             <property name="toolTip">
-              <string>Launch compton-conf configuration tool</string>
-             </property>
-             <property name="text">
-              <string>Compton settings</string>
-             </property>
-             <property name="icon">
-              <iconset theme="preferences-system">
-               <normaloff>../../mx-compton/app</normaloff>../../mx-compton/app</iconset>
-             </property>
-            </widget>
+           <item>
+            <property name="text">
+             <string>glx</string>
+            </property>
            </item>
-           <item row="5" column="0">
-            <spacer name="verticalSpacer_8">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>76</width>
-               <height>13</height>
-              </size>
-             </property>
-            </spacer>
+           <item>
+            <property name="text">
+             <string>xpresent</string>
+            </property>
            </item>
-           <item row="6" column="0" colspan="4">
-            <widget class="QPushButton" name="buttonConfigureXfwm">
-             <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce Compositor Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-             <property name="text">
-              <string>Xfwm Settings</string>
-             </property>
-             <property name="icon">
-              <iconset theme="wmtweaks">
-               <normaloff>.</normaloff>.</iconset>
-             </property>
-            </widget>
+           <item>
+            <property name="text">
+             <string>off</string>
+            </property>
            </item>
-           <item row="4" column="1" colspan="3">
-            <widget class="QComboBox" name="comboBoxCompositor">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>0</height>
-              </size>
-             </property>
-             <item>
-              <property name="text">
-               <string>None</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Xfwm (Xfce) Compositor</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Compton </string>
-              </property>
-             </item>
-            </widget>
+          </widget>
+         </item>
+         <item row="4" column="1" colspan="2">
+          <widget class="QComboBox" name="comboBoxCompositor">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <item>
+            <property name="text">
+             <string>None</string>
+            </property>
            </item>
-           <item row="7" column="3">
-            <widget class="QPushButton" name="buttonEditComptonConf">
-             <property name="toolTip">
-              <string>Edit compton.conf directly in text editor</string>
-             </property>
-             <property name="text">
-              <string>Edit compton.conf</string>
-             </property>
-             <property name="icon">
-              <iconset theme="edit">
-               <normaloff>../../mx-compton/app</normaloff>../../mx-compton/app</iconset>
-             </property>
-            </widget>
+           <item>
+            <property name="text">
+             <string>Xfwm (Xfce) Compositor</string>
+            </property>
            </item>
-           <item row="2" column="0">
-            <spacer name="verticalSpacer_7">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>76</width>
-               <height>13</height>
-              </size>
-             </property>
-            </spacer>
+           <item>
+            <property name="text">
+             <string>Compton </string>
+            </property>
            </item>
-           <item row="9" column="0" colspan="4">
-            <widget class="QPushButton" name="buttonCompositorApply">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="text">
-              <string>Apply</string>
-             </property>
-             <property name="icon">
-              <iconset theme="dialog-ok">
-               <normaloff>.</normaloff>.</iconset>
-             </property>
-             <property name="shortcut">
-              <string/>
-             </property>
-             <property name="autoDefault">
-              <bool>true</bool>
-             </property>
-             <property name="default">
-              <bool>true</bool>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="0">
-            <widget class="QLabel" name="label_9">
-             <property name="text">
-              <string>Compositor</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="0">
-            <widget class="QLabel" name="label_8">
-             <property name="text">
-              <string>Transparency and shadow options</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QLabel" name="label_10">
-             <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Changing the VBlank mode may help alleviate some screen tearing issues.  See Help for more information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-             <property name="text">
-              <string>VBlank</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="1">
-            <widget class="QComboBox" name="comboBoxvblank">
-             <item>
-              <property name="text">
-               <string>auto</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>glx</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>xpresent</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>off</string>
-              </property>
-             </item>
-            </widget>
-           </item>
-          </layout>
+          </widget>
+         </item>
+         <item row="6" column="0" colspan="4">
+          <widget class="QPushButton" name="buttonConfigureXfwm">
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce Compositor Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="text">
+            <string>Xfwm Settings</string>
+           </property>
+           <property name="icon">
+            <iconset theme="wmtweaks">
+             <normaloff>.</normaloff>.</iconset>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="0" colspan="3">
+          <widget class="QPushButton" name="buttonConfigureCompton">
+           <property name="toolTip">
+            <string>Launch compton-conf configuration tool</string>
+           </property>
+           <property name="text">
+            <string>Compton settings</string>
+           </property>
+           <property name="icon">
+            <iconset theme="preferences-system">
+             <normaloff>../../mx-compton/app</normaloff>../../mx-compton/app</iconset>
+           </property>
+          </widget>
          </item>
         </layout>
-       </widget>
-       <widget class="QWidget" name="DisplayTab">
-        <attribute name="title">
-         <string>Display</string>
-        </attribute>
-        <layout class="QGridLayout" name="gridLayout_12">
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="DisplayTab">
+      <attribute name="title">
+       <string>Display</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_12">
+       <item row="0" column="0">
+        <layout class="QGridLayout" name="gridLayout_13">
+         <item row="2" column="2">
+          <widget class="QSpinBox" name="spinBoxgtkscaling">
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>3</number>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0" colspan="2">
+          <widget class="QLabel" name="label_xbacklight">
+           <property name="text">
+            <string>Hardware Backlight</string>
+           </property>
+          </widget>
+         </item>
          <item row="0" column="0">
-          <layout class="QGridLayout" name="gridLayout_13">
-           <item row="2" column="2">
-            <widget class="QSpinBox" name="spinBoxgtkscaling">
-             <property name="minimum">
-              <number>1</number>
-             </property>
-             <property name="maximum">
-              <number>3</number>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0" colspan="2">
-            <widget class="QLabel" name="label_xbacklight">
-             <property name="text">
-              <string>Hardware Backlight</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="0">
-            <widget class="QLabel" name="label_12">
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Display Tweaks&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="10" column="3">
-            <spacer name="verticalSpacer_11">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>20</width>
-               <height>40</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="3" column="0" colspan="7">
-            <widget class="Line" name="line">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="0" colspan="3">
-            <widget class="QLabel" name="label_13">
-             <property name="text">
-              <string>Choose Display for xrandr tweaks</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="3">
-            <widget class="QPushButton" name="buttonGTKscaling">
-             <property name="text">
-              <string>Apply</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="2" colspan="2">
-            <widget class="QSlider" name="horizsliderhardwarebacklight">
-             <property name="minimum">
-              <number>1</number>
-             </property>
-             <property name="maximum">
-              <number>100</number>
-             </property>
-             <property name="singleStep">
-              <number>1</number>
-             </property>
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="0">
-            <widget class="QComboBox" name="comboBoxDisplay"/>
-           </item>
-           <item row="6" column="0">
-            <widget class="QLabel" name="label_resolutions">
-             <property name="text">
-              <string>Resolution</string>
-             </property>
-            </widget>
-           </item>
-           <item row="9" column="5">
-            <widget class="QPushButton" name="buttonSaveBrightness">
-             <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Saving is per display&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-             <property name="text">
-              <string>Save</string>
-             </property>
-            </widget>
-           </item>
-           <item row="9" column="0">
-            <widget class="QLabel" name="labelsoftwarebrightness">
-             <property name="text">
-              <string>Software (xrandr) Brightness</string>
-             </property>
-            </widget>
-           </item>
-           <item row="9" column="4">
-            <widget class="QLabel" name="label_brightness_slider">
-             <property name="text">
-              <string>TextLabel</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="labelgtkscaling">
-             <property name="text">
-              <string>GTK scaling</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="4">
-            <widget class="QLabel" name="backlight_label">
-             <property name="text">
-              <string>TextLabel</string>
-             </property>
-            </widget>
-           </item>
-           <item row="7" column="6">
-            <spacer name="horizontalSpacer_4">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="7" column="0">
-            <widget class="QLabel" name="label_scale">
-             <property name="text">
-              <string>xrandr Scaling</string>
-             </property>
-            </widget>
-           </item>
-           <item row="9" column="2" colspan="2">
-            <widget class="QSlider" name="horizontalSliderBrightness">
-             <property name="maximum">
-              <number>200</number>
-             </property>
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="1" colspan="3">
-            <widget class="QComboBox" name="comboBoxresolutions"/>
-           </item>
-           <item row="7" column="1" colspan="3">
-            <widget class="QDoubleSpinBox" name="doubleSpinBoxscale">
-             <property name="minimumSize">
-              <size>
-               <width>30</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="minimum">
-              <double>0.500000000000000</double>
-             </property>
-             <property name="maximum">
-              <double>3.000000000000000</double>
-             </property>
-             <property name="singleStep">
-              <double>0.050000000000000</double>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="5">
-            <widget class="QPushButton" name="buttonapplyresolution">
-             <property name="text">
-              <string>Apply</string>
-             </property>
-            </widget>
-           </item>
-           <item row="7" column="5">
-            <widget class="QPushButton" name="buttonApplyDisplayScaling">
-             <property name="text">
-              <string>Apply</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
+          <widget class="QLabel" name="label_12">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Display Tweaks&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="10" column="3">
+          <spacer name="verticalSpacer_11">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="3" column="0" colspan="7">
+          <widget class="Line" name="line">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0" colspan="3">
+          <widget class="QLabel" name="label_13">
+           <property name="text">
+            <string>Choose Display for xrandr tweaks</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="3">
+          <widget class="QPushButton" name="buttonGTKscaling">
+           <property name="text">
+            <string>Apply</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2" colspan="2">
+          <widget class="QSlider" name="horizsliderhardwarebacklight">
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>100</number>
+           </property>
+           <property name="singleStep">
+            <number>1</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QComboBox" name="comboBoxDisplay"/>
+         </item>
+         <item row="6" column="0">
+          <widget class="QLabel" name="label_resolutions">
+           <property name="text">
+            <string>Resolution</string>
+           </property>
+          </widget>
+         </item>
+         <item row="9" column="5">
+          <widget class="QPushButton" name="buttonSaveBrightness">
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Saving is per display&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="text">
+            <string>Save</string>
+           </property>
+          </widget>
+         </item>
+         <item row="9" column="0">
+          <widget class="QLabel" name="labelsoftwarebrightness">
+           <property name="text">
+            <string>Software (xrandr) Brightness</string>
+           </property>
+          </widget>
+         </item>
+         <item row="9" column="4">
+          <widget class="QLabel" name="label_brightness_slider">
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="labelgtkscaling">
+           <property name="text">
+            <string>GTK scaling</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="4">
+          <widget class="QLabel" name="backlight_label">
+           <property name="text">
+            <string>TextLabel</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="6">
+          <spacer name="horizontalSpacer_4">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="7" column="0">
+          <widget class="QLabel" name="label_scale">
+           <property name="text">
+            <string>xrandr Scaling</string>
+           </property>
+          </widget>
+         </item>
+         <item row="9" column="2" colspan="2">
+          <widget class="QSlider" name="horizontalSliderBrightness">
+           <property name="maximum">
+            <number>200</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="1" colspan="3">
+          <widget class="QComboBox" name="comboBoxresolutions"/>
+         </item>
+         <item row="7" column="1" colspan="3">
+          <widget class="QDoubleSpinBox" name="doubleSpinBoxscale">
+           <property name="minimumSize">
+            <size>
+             <width>30</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="minimum">
+            <double>0.500000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>3.000000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.050000000000000</double>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="5">
+          <widget class="QPushButton" name="buttonapplyresolution">
+           <property name="text">
+            <string>Apply</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="5">
+          <widget class="QPushButton" name="buttonApplyDisplayScaling">
+           <property name="text">
+            <string>Apply</string>
+           </property>
+          </widget>
          </item>
         </layout>
-       </widget>
-       <widget class="QWidget" name="MiscDefaults">
-        <attribute name="title">
-         <string>Config Options</string>
-        </attribute>
-        <layout class="QGridLayout" name="gridLayout_18">
-         <item row="0" column="0">
-          <layout class="QGridLayout" name="gridLayout_11">
-           <item row="0" column="0" colspan="2">
-            <widget class="QCheckBox" name="checkBoxThunarCAReset">
-             <property name="text">
-              <string>Reset Thunar custom right-click actions to system defaults</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QCheckBox" name="checkBoxSingleClick">
-             <property name="text">
-              <string>Enable single-click on desktop</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QCheckBox" name="checkBoxThunarSingleClick">
-             <property name="text">
-              <string>Enable single-click in Thunar File Manager</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="0">
-            <widget class="QCheckBox" name="checkBoxDesktopZoom">
-             <property name="text">
-              <string>Enable Desktop Zoom </string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="0">
-            <widget class="QCheckBox" name="checkBoxShowAllWorkspaces">
-             <property name="text">
-              <string>Show windows from all workspaces in panel</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="0" colspan="2">
-            <widget class="QCheckBox" name="checkboxNoEllipse">
-             <property name="text">
-              <string>Disable shortening of long filenames on the desktop</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="0" colspan="2">
-            <widget class="QCheckBox" name="checkBoxHibernate">
-             <property name="text">
-              <string>Enable hibernate on Log Out menu </string>
-             </property>
-            </widget>
-           </item>
-           <item row="7" column="0" colspan="2">
-            <widget class="QLabel" name="label_hibernate">
-             <property name="text">
-              <string>                   note: to hibernate, swap needs to be &gt;= RAM</string>
-             </property>
-            </widget>
-           </item>
-           <item row="8" column="1">
-            <spacer name="verticalSpacer_10">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>20</width>
-               <height>28</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="9" column="0" colspan="2">
-            <widget class="QPushButton" name="ButtonApplyMiscDefualts">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>32</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>Apply</string>
-             </property>
-             <property name="icon">
-              <iconset theme="dialog-ok">
-               <normaloff>.</normaloff>.</iconset>
-             </property>
-            </widget>
-           </item>
-          </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="MiscDefaults">
+      <attribute name="title">
+       <string>Config Options</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_18">
+       <item row="0" column="0">
+        <layout class="QGridLayout" name="gridLayout_11">
+         <item row="0" column="0" colspan="2">
+          <widget class="QCheckBox" name="checkBoxThunarCAReset">
+           <property name="text">
+            <string>Reset Thunar custom right-click actions to system defaults</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QCheckBox" name="checkBoxSingleClick">
+           <property name="text">
+            <string>Enable single-click on desktop</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QCheckBox" name="checkBoxThunarSingleClick">
+           <property name="text">
+            <string>Enable single-click in Thunar File Manager</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QCheckBox" name="checkBoxDesktopZoom">
+           <property name="text">
+            <string>Enable Desktop Zoom </string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QCheckBox" name="checkBoxShowAllWorkspaces">
+           <property name="text">
+            <string>Show windows from all workspaces in panel</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0" colspan="2">
+          <widget class="QCheckBox" name="checkboxNoEllipse">
+           <property name="text">
+            <string>Disable shortening of long filenames on the desktop</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0" colspan="2">
+          <widget class="QCheckBox" name="checkBoxHibernate">
+           <property name="text">
+            <string>Enable hibernate on Log Out menu </string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="0" colspan="2">
+          <widget class="QLabel" name="label_hibernate">
+           <property name="text">
+            <string>                   note: to hibernate, swap needs to be &gt;= RAM</string>
+           </property>
+          </widget>
+         </item>
+         <item row="8" column="1">
+          <spacer name="verticalSpacer_10">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>28</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="9" column="0" colspan="2">
+          <widget class="QPushButton" name="ButtonApplyMiscDefualts">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>32</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Apply</string>
+           </property>
+           <property name="icon">
+            <iconset theme="dialog-ok">
+             <normaloff>.</normaloff>.</iconset>
+           </property>
+          </widget>
          </item>
         </layout>
-       </widget>
-       <widget class="QWidget" name="tab">
-        <attribute name="title">
-         <string>Fluxbox</string>
-        </attribute>
-        <layout class="QGridLayout" name="gridLayout_15">
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>Fluxbox</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_15">
+       <item row="0" column="0">
+        <layout class="QGridLayout" name="gridLayout_14">
          <item row="0" column="0">
-          <layout class="QGridLayout" name="gridLayout_14">
-           <item row="0" column="0">
-            <widget class="QLabel" name="label_14">
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
+          <widget class="QLabel" name="label_14">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QLabel" name="label_20">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Desktop Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QCheckBox" name="checkboxfluxresetdock">
+           <property name="text">
+            <string>Reset DefaultDock</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2" colspan="2">
+          <widget class="QLabel" name="label_26">
+           <property name="text">
+            <string>Toggle desktop icons</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="4">
+          <widget class="QComboBox" name="comboBoxfluxIcons">
+           <item>
+            <property name="text">
+             <string>On</string>
+            </property>
            </item>
-           <item row="0" column="2">
-            <widget class="QLabel" name="label_20">
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Desktop Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
+           <item>
+            <property name="text">
+             <string>Off</string>
+            </property>
            </item>
-           <item row="1" column="0">
-            <widget class="QCheckBox" name="checkboxfluxresetdock">
-             <property name="text">
-              <string>Reset DefaultDock</string>
-             </property>
-            </widget>
+          </widget>
+         </item>
+         <item row="2" column="0" colspan="2">
+          <widget class="QCheckBox" name="checkboxfluxresetmenu">
+           <property name="text">
+            <string>Reset Fluxbox Menu</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="2" colspan="2">
+          <widget class="QLabel" name="label_25">
+           <property name="text">
+            <string>Toggle icon captions</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="4">
+          <widget class="QComboBox" name="comboBoxfluxcaptions">
+           <property name="currentIndex">
+            <number>0</number>
+           </property>
+           <item>
+            <property name="text">
+             <string>On</string>
+            </property>
            </item>
-           <item row="1" column="2" colspan="2">
-            <widget class="QLabel" name="label_26">
-             <property name="text">
-              <string>Toggle desktop icons</string>
-             </property>
-            </widget>
+           <item>
+            <property name="text">
+             <string>Off</string>
+            </property>
            </item>
-           <item row="1" column="4">
-            <widget class="QComboBox" name="comboBoxfluxIcons">
-             <item>
-              <property name="text">
-               <string>On</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Off</string>
-              </property>
-             </item>
-            </widget>
+           <item>
+            <property name="text">
+             <string>On Hover</string>
+            </property>
            </item>
-           <item row="2" column="0" colspan="2">
-            <widget class="QCheckBox" name="checkboxfluxresetmenu">
-             <property name="text">
-              <string>Reset Fluxbox Menu</string>
-             </property>
-            </widget>
+          </widget>
+         </item>
+         <item row="2" column="5">
+          <spacer name="horizontalSpacer_6">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>138</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="3" column="0" colspan="2">
+          <widget class="QCheckBox" name="checkboxfluxreseteverything">
+           <property name="text">
+            <string>Reset ALL mx-fluxbox settings</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0" colspan="3">
+          <widget class="QCheckBox" name="checkBoxMenuMigrate">
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="text">
+            <string>Upgrade existing menu entries</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="label_15">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0">
+          <widget class="QLabel" name="label_16">
+           <property name="text">
+            <string>Placement</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="1">
+          <widget class="QComboBox" name="combofluxtoolbarlocatoin">
+           <property name="currentText">
+            <string notr="true">TopLeft</string>
+           </property>
+           <item>
+            <property name="text">
+             <string notr="true">TopLeft</string>
+            </property>
            </item>
-           <item row="2" column="2" colspan="2">
-            <widget class="QLabel" name="label_25">
-             <property name="text">
-              <string>Toggle icon captions</string>
-             </property>
-            </widget>
+           <item>
+            <property name="text">
+             <string notr="true">TopCenter</string>
+            </property>
            </item>
-           <item row="2" column="4">
-            <widget class="QComboBox" name="comboBoxfluxcaptions">
-             <property name="currentIndex">
-              <number>0</number>
-             </property>
-             <item>
-              <property name="text">
-               <string>On</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Off</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>On Hover</string>
-              </property>
-             </item>
-            </widget>
+           <item>
+            <property name="text">
+             <string notr="true">TopRight</string>
+            </property>
            </item>
-           <item row="2" column="5">
-            <spacer name="horizontalSpacer_6">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>138</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
+           <item>
+            <property name="text">
+             <string notr="true">LeftTop</string>
+            </property>
            </item>
-           <item row="3" column="0" colspan="2">
-            <widget class="QCheckBox" name="checkboxfluxreseteverything">
-             <property name="text">
-              <string>Reset ALL mx-fluxbox settings</string>
-             </property>
-            </widget>
+           <item>
+            <property name="text">
+             <string notr="true">LeftCenter</string>
+            </property>
            </item>
-           <item row="4" column="0" colspan="3">
-            <widget class="QCheckBox" name="checkBoxMenuMigrate">
-             <property name="toolTip">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-             <property name="text">
-              <string>Upgrade existing menu entries</string>
-             </property>
-            </widget>
+           <item>
+            <property name="text">
+             <string notr="true">LeftBottom</string>
+            </property>
            </item>
-           <item row="5" column="0">
-            <widget class="QLabel" name="label_15">
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
+           <item>
+            <property name="text">
+             <string notr="true">BottomLeft</string>
+            </property>
            </item>
-           <item row="6" column="0">
-            <widget class="QLabel" name="label_16">
-             <property name="text">
-              <string>Placement</string>
-             </property>
-            </widget>
+           <item>
+            <property name="text">
+             <string notr="true">BottomCenter</string>
+            </property>
            </item>
-           <item row="6" column="1">
-            <widget class="QComboBox" name="combofluxtoolbarlocatoin">
-             <property name="currentText">
-              <string notr="true">TopLeft</string>
-             </property>
-             <item>
-              <property name="text">
-               <string notr="true">TopLeft</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string notr="true">TopCenter</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string notr="true">TopRight</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string notr="true">LeftTop</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string notr="true">LeftCenter</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string notr="true">LeftBottom</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string notr="true">BottomLeft</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string notr="true">BottomCenter</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string notr="true">BottomRight</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string notr="true">RightTop</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string notr="true">RightCenter</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string notr="true">RightBottom</string>
-              </property>
-             </item>
-            </widget>
+           <item>
+            <property name="text">
+             <string notr="true">BottomRight</string>
+            </property>
            </item>
-           <item row="6" column="2">
-            <widget class="QLabel" name="label_17">
-             <property name="text">
-              <string>Width</string>
-             </property>
-            </widget>
+           <item>
+            <property name="text">
+             <string notr="true">RightTop</string>
+            </property>
            </item>
-           <item row="6" column="3">
-            <widget class="QSpinBox" name="spinBoxFluxToolbarWidth"/>
+           <item>
+            <property name="text">
+             <string notr="true">RightCenter</string>
+            </property>
            </item>
-           <item row="7" column="0">
-            <widget class="QCheckBox" name="checkboxfluxtoolbarautohide">
-             <property name="text">
-              <string>Autohide</string>
-             </property>
-            </widget>
+           <item>
+            <property name="text">
+             <string notr="true">RightBottom</string>
+            </property>
            </item>
-           <item row="7" column="2">
-            <widget class="QLabel" name="label_18">
-             <property name="text">
-              <string>Height</string>
-             </property>
-            </widget>
+          </widget>
+         </item>
+         <item row="6" column="2">
+          <widget class="QLabel" name="label_17">
+           <property name="text">
+            <string>Width</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="3">
+          <widget class="QSpinBox" name="spinBoxFluxToolbarWidth"/>
+         </item>
+         <item row="7" column="0">
+          <widget class="QCheckBox" name="checkboxfluxtoolbarautohide">
+           <property name="text">
+            <string>Autohide</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="2">
+          <widget class="QLabel" name="label_18">
+           <property name="text">
+            <string>Height</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="3">
+          <widget class="QSpinBox" name="spinBoxFluxToolbarHeight"/>
+         </item>
+         <item row="8" column="0">
+          <widget class="QLabel" name="label_19">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="9" column="0">
+          <widget class="QLabel" name="label_slit_location">
+           <property name="text">
+            <string>Placement</string>
+           </property>
+          </widget>
+         </item>
+         <item row="9" column="1">
+          <widget class="QComboBox" name="combofluxslitlocation">
+           <property name="currentText">
+            <string notr="true">TopLeft</string>
+           </property>
+           <item>
+            <property name="text">
+             <string notr="true">TopLeft</string>
+            </property>
            </item>
-           <item row="7" column="3">
-            <widget class="QSpinBox" name="spinBoxFluxToolbarHeight"/>
+           <item>
+            <property name="text">
+             <string notr="true">TopCenter</string>
+            </property>
            </item>
-           <item row="8" column="0">
-            <widget class="QLabel" name="label_19">
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
+           <item>
+            <property name="text">
+             <string notr="true">TopRight</string>
+            </property>
            </item>
-           <item row="9" column="0">
-            <widget class="QLabel" name="label_slit_location">
-             <property name="text">
-              <string>Placement</string>
-             </property>
-            </widget>
+           <item>
+            <property name="text">
+             <string notr="true">LeftTop</string>
+            </property>
            </item>
-           <item row="9" column="1">
-            <widget class="QComboBox" name="combofluxslitlocation">
-             <property name="currentText">
-              <string notr="true">TopLeft</string>
-             </property>
-             <item>
-              <property name="text">
-               <string notr="true">TopLeft</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string notr="true">TopCenter</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string notr="true">TopRight</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string notr="true">LeftTop</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string notr="true">LeftCenter</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string notr="true">LeftBottom</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string notr="true">BottomLeft</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string notr="true">BottomCenter</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string notr="true">BottomRight</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string notr="true">RightTop</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string notr="true">RightCenter</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string notr="true">RightBottom</string>
-              </property>
-             </item>
-            </widget>
+           <item>
+            <property name="text">
+             <string notr="true">LeftCenter</string>
+            </property>
            </item>
-           <item row="10" column="0">
-            <widget class="QCheckBox" name="checkboxfluxSlitautohide">
-             <property name="text">
-              <string>Autohide</string>
-             </property>
-            </widget>
+           <item>
+            <property name="text">
+             <string notr="true">LeftBottom</string>
+            </property>
            </item>
-           <item row="11" column="0" colspan="6">
-            <widget class="QPushButton" name="ApplyFluxboxResets">
-             <property name="text">
-              <string>Apply</string>
-             </property>
-            </widget>
+           <item>
+            <property name="text">
+             <string notr="true">BottomLeft</string>
+            </property>
            </item>
-          </layout>
+           <item>
+            <property name="text">
+             <string notr="true">BottomCenter</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">BottomRight</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">RightTop</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">RightCenter</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">RightBottom</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="10" column="0">
+          <widget class="QCheckBox" name="checkboxfluxSlitautohide">
+           <property name="text">
+            <string>Autohide</string>
+           </property>
+          </widget>
+         </item>
+         <item row="11" column="0" colspan="6">
+          <widget class="QPushButton" name="ApplyFluxboxResets">
+           <property name="text">
+            <string>Apply</string>
+           </property>
+          </widget>
          </item>
         </layout>
-       </widget>
-       <widget class="QWidget" name="tab_2">
-        <attribute name="title">
-         <string>Plasma</string>
-        </attribute>
-        <layout class="QGridLayout" name="gridLayout_17">
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_2">
+      <attribute name="title">
+       <string>Plasma</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_17">
+       <item row="0" column="0">
+        <layout class="QGridLayout" name="gridLayout_16">
          <item row="0" column="0">
-          <layout class="QGridLayout" name="gridLayout_16">
-           <item row="7" column="0">
-            <spacer name="verticalSpacer_12">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>20</width>
-               <height>40</height>
-              </size>
-             </property>
-            </spacer>
+          <widget class="QLabel" name="label_22">
+           <property name="font">
+            <font>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Affects 1st panel</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_21">
+           <property name="text">
+            <string>Placement</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QComboBox" name="comboPlasmaPanelLocation">
+           <property name="currentText">
+            <string notr="true">Bottom</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>Bottom</string>
+            </property>
            </item>
-           <item row="6" column="0" colspan="2">
-            <widget class="QCheckBox" name="checkboxplasmaresetdock">
-             <property name="text">
-              <string>Reset KDE/Plasma defaults</string>
-             </property>
-            </widget>
+           <item>
+            <property name="text">
+             <string>Left</string>
+            </property>
            </item>
-           <item row="1" column="1">
-            <widget class="QComboBox" name="comboPlasmaPanelLocation">
-             <property name="currentText">
-              <string notr="true">Bottom</string>
-             </property>
-             <item>
-              <property name="text">
-               <string>Bottom</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Left</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Top</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Right</string>
-              </property>
-             </item>
-            </widget>
+           <item>
+            <property name="text">
+             <string>Top</string>
+            </property>
            </item>
-           <item row="3" column="0">
-            <widget class="QCheckBox" name="checkBoxPlasmaSingleClick">
-             <property name="text">
-              <string>Enable single-click</string>
-             </property>
-            </widget>
+           <item>
+            <property name="text">
+             <string>Right</string>
+            </property>
            </item>
-           <item row="8" column="0" colspan="4">
-            <widget class="QPushButton" name="ButtonApplyPlasma">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>32</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>Apply</string>
-             </property>
-             <property name="icon">
-              <iconset theme="dialog-ok">
-               <normaloff>.</normaloff>.</iconset>
-             </property>
-            </widget>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QLabel" name="label_27">
+           <property name="text">
+            <string>Systray Icon Size</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <widget class="QComboBox" name="comboBoxPlasmaSystrayIcons">
+           <item>
+            <property name="text">
+             <string>Default</string>
+            </property>
            </item>
-           <item row="5" column="0">
-            <widget class="QLabel" name="label_24">
-             <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-             </property>
-            </widget>
+           <item>
+            <property name="text">
+             <string>Small</string>
+            </property>
            </item>
-           <item row="1" column="0">
-            <widget class="QLabel" name="label_21">
-             <property name="text">
-              <string>Placement</string>
-             </property>
-            </widget>
+           <item>
+            <property name="text">
+             <string>Medium</string>
+            </property>
            </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="label_23">
-             <property name="font">
-              <font>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="text">
-              <string>Workspace</string>
-             </property>
-            </widget>
+           <item>
+            <property name="text">
+             <string>Large</string>
+            </property>
            </item>
-           <item row="4" column="0" colspan="2">
-            <widget class="QCheckBox" name="checkBoxPlasmaShowAllWorkspaces">
-             <property name="text">
-              <string>Show windows from all workspaces in panel</string>
-             </property>
-            </widget>
+           <item>
+            <property name="text">
+             <string>Larger</string>
+            </property>
            </item>
-           <item row="0" column="0">
-            <widget class="QLabel" name="label_22">
-             <property name="font">
-              <font>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="text">
-              <string>Affects 1st panel</string>
-             </property>
-            </widget>
+           <item>
+            <property name="text">
+             <string>Largest</string>
+            </property>
            </item>
-           <item row="1" column="2">
-            <widget class="QLabel" name="label_27">
-             <property name="text">
-              <string>Systray Icon Size</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="3">
-            <widget class="QComboBox" name="comboBoxPlasmaSystrayIcons">
-             <item>
-              <property name="text">
-               <string>Default</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Small</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Medium</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Large</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Larger</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Largest</string>
-              </property>
-             </item>
-            </widget>
-           </item>
-          </layout>
+          </widget>
+         </item>
+         <item row="1" column="4">
+          <spacer name="horizontalSpacer_7">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_23">
+           <property name="font">
+            <font>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Workspace</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QCheckBox" name="checkBoxPlasmaSingleClick">
+           <property name="text">
+            <string>Enable single-click</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0" colspan="2">
+          <widget class="QCheckBox" name="checkBoxPlasmaShowAllWorkspaces">
+           <property name="text">
+            <string>Show windows from all workspaces in panel</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="label_24">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0" colspan="2">
+          <widget class="QCheckBox" name="checkboxplasmaresetdock">
+           <property name="text">
+            <string>Reset KDE/Plasma defaults</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="0">
+          <spacer name="verticalSpacer_12">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="8" column="0" colspan="5">
+          <widget class="QPushButton" name="ButtonApplyPlasma">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>32</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Apply</string>
+           </property>
+           <property name="icon">
+            <iconset theme="dialog-ok">
+             <normaloff>.</normaloff>.</iconset>
+           </property>
+          </widget>
          </item>
         </layout>
-       </widget>
-       <widget class="QWidget" name="etcTab">
-        <attribute name="title">
-         <string>Other</string>
-        </attribute>
-        <layout class="QGridLayout" name="gridLayout_22">
-         <item row="0" column="0">
-          <layout class="QGridLayout" name="gridLayout_21">
-           <item row="0" column="0" colspan="2">
-            <widget class="QCheckBox" name="checkBoxLightdmReset">
-             <property name="text">
-              <string>Reset Lightdm (login screen) to system default theme</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0" colspan="2">
-            <widget class="QCheckBox" name="checkBoxMountInternalDrivesNonRoot">
-             <property name="text">
-              <string>Enable mounting of internal drives by non-root users</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QCheckBox" name="checkBoxSandbox">
-             <property name="text">
-              <string>Enable kernel sandbox</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="0" colspan="4">
-            <layout class="QGridLayout" name="gridLayout_7">
-             <item row="0" column="0">
-              <widget class="QCheckBox" name="checkboxIntelDriver">
-               <property name="text">
-                <string>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="0">
-              <widget class="QLabel" name="labelIntel">
-               <property name="text">
-                <string>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </item>
-           <item row="4" column="0" colspan="4">
-            <layout class="QGridLayout" name="gridLayout_8">
-             <item row="0" column="0">
-              <widget class="QCheckBox" name="checkboxAMDtearfree">
-               <property name="text">
-                <string>Use tearfree amdgpu option</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="0">
-              <widget class="QLabel" name="labelamdgpu">
-               <property name="text">
-                <string>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </item>
-           <item row="5" column="0" colspan="4">
-            <layout class="QGridLayout" name="gridLayout_19">
-             <item row="0" column="0">
-              <widget class="QCheckBox" name="checkboxRadeontearfree">
-               <property name="text">
-                <string>Use tearfree radeon driver option</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="0">
-              <widget class="QLabel" name="labelradeon">
-               <property name="text">
-                <string>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </item>
-           <item row="6" column="0" colspan="4">
-            <widget class="Line" name="line_2">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="7" column="0" rowspan="2">
-            <widget class="QLabel" name="label_11">
-             <property name="text">
-              <string>Password for administrative tasks:</string>
-             </property>
-            </widget>
-           </item>
-           <item row="7" column="1" rowspan="2">
-            <widget class="QRadioButton" name="radioSudoUser">
-             <property name="text">
-              <string>&amp;User</string>
-             </property>
-            </widget>
-           </item>
-           <item row="7" column="2" rowspan="2">
-            <widget class="QRadioButton" name="radioSudoRoot">
-             <property name="text">
-              <string>Root</string>
-             </property>
-            </widget>
-           </item>
-           <item row="8" column="3">
-            <spacer name="horizontalSpacer_5">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>164</width>
-               <height>14</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="9" column="0" colspan="4">
-            <widget class="QPushButton" name="ButtonApplyEtc">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>32</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>Apply</string>
-             </property>
-             <property name="icon">
-              <iconset theme="dialog-ok">
-               <normaloff>.</normaloff>.</iconset>
-             </property>
-            </widget>
-           </item>
-          </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="etcTab">
+      <attribute name="title">
+       <string>Other</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_8">
+       <item row="0" column="0">
+        <layout class="QGridLayout" name="gridLayout_7">
+         <item row="0" column="0" colspan="2">
+          <widget class="QCheckBox" name="checkBoxLightdmReset">
+           <property name="text">
+            <string>Reset Lightdm (login screen) to system default theme</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0" colspan="2">
+          <widget class="QCheckBox" name="checkBoxMountInternalDrivesNonRoot">
+           <property name="text">
+            <string>Enable mounting of internal drives by non-root users</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QCheckBox" name="checkBoxSandbox">
+           <property name="text">
+            <string>Enable kernel sandbox</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0" colspan="3">
+          <widget class="QCheckBox" name="checkboxIntelDriver">
+           <property name="text">
+            <string>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0" colspan="3">
+          <widget class="QLabel" name="labelIntel">
+           <property name="text">
+            <string>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QCheckBox" name="checkboxAMDtearfree">
+           <property name="text">
+            <string>Use tearfree amdgpu option</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0" colspan="3">
+          <widget class="QLabel" name="labelamdgpu">
+           <property name="text">
+            <string>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="0" colspan="2">
+          <widget class="QCheckBox" name="checkboxRadeontearfree">
+           <property name="text">
+            <string>Use tearfree radeon driver option</string>
+           </property>
+          </widget>
+         </item>
+         <item row="8" column="0" colspan="3">
+          <widget class="QLabel" name="labelradeon">
+           <property name="text">
+            <string>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</string>
+           </property>
+          </widget>
+         </item>
+         <item row="9" column="0" colspan="3">
+          <widget class="Line" name="line_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="10" column="0">
+          <widget class="QLabel" name="label_11">
+           <property name="text">
+            <string>Password for administrative tasks:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="10" column="1">
+          <widget class="QRadioButton" name="radioSudoUser">
+           <property name="text">
+            <string>&amp;User</string>
+           </property>
+          </widget>
+         </item>
+         <item row="10" column="2">
+          <widget class="QRadioButton" name="radioSudoRoot">
+           <property name="text">
+            <string>Root</string>
+           </property>
+          </widget>
          </item>
         </layout>
-       </widget>
-      </widget>
-     </item>
-     <item row="6" column="0">
-      <layout class="QGridLayout" name="gridLayout_2">
-       <item row="0" column="2">
-        <spacer name="horizontalSpacer1">
+       </item>
+       <item row="1" column="0">
+        <spacer name="verticalSpacer_6">
          <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeType">
-          <enum>QSizePolicy::MinimumExpanding</enum>
+          <enum>Qt::Vertical</enum>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
-           <width>28</width>
-           <height>29</height>
+           <width>20</width>
+           <height>77</height>
           </size>
          </property>
         </spacer>
        </item>
-       <item row="0" column="3">
-        <widget class="QLabel" name="labelMX">
-         <property name="maximumSize">
+       <item row="2" column="0">
+        <widget class="QPushButton" name="ButtonApplyEtc">
+         <property name="minimumSize">
           <size>
-           <width>32</width>
+           <width>0</width>
            <height>32</height>
           </size>
          </property>
-         <property name="midLineWidth">
-          <number>0</number>
-         </property>
          <property name="text">
-          <string/>
-         </property>
-         <property name="pixmap">
-          <pixmap resource="images.qrc">:/icons/logo.png</pixmap>
-         </property>
-         <property name="scaledContents">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="4">
-        <spacer name="horizontalSpacer2">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeType">
-          <enum>QSizePolicy::MinimumExpanding</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>18</width>
-           <height>29</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="0" column="0">
-        <widget class="QPushButton" name="buttonAbout">
-         <property name="text">
-          <string>About</string>
+          <string>Apply</string>
          </property>
          <property name="icon">
-          <iconset theme="help-about">
+          <iconset theme="dialog-ok">
            <normaloff>.</normaloff>.</iconset>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QPushButton" name="buttonHelp">
-         <property name="text">
-          <string>Help</string>
-         </property>
-         <property name="icon">
-          <iconset theme="help-contents">
-           <normaloff>.</normaloff>.</iconset>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="7">
-        <widget class="QPushButton" name="buttonCancel">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="toolTip">
-          <string>Quit application</string>
-         </property>
-         <property name="text">
-          <string>Close</string>
-         </property>
-         <property name="icon">
-          <iconset theme="window-close">
-           <normaloff>.</normaloff>.</iconset>
-         </property>
-         <property name="shortcut">
-          <string>Alt+N</string>
-         </property>
-         <property name="autoDefault">
-          <bool>true</bool>
-         </property>
-         <property name="default">
-          <bool>true</bool>
          </property>
         </widget>
        </item>
       </layout>
-     </item>
-     <item row="5" column="0">
-      <spacer name="verticalSpacer">
+     </widget>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="2">
+      <spacer name="horizontalSpacer1">
        <property name="orientation">
-        <enum>Qt::Vertical</enum>
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::MinimumExpanding</enum>
        </property>
        <property name="sizeHint" stdset="0">
         <size>
-         <width>709</width>
-         <height>13</height>
+         <width>28</width>
+         <height>29</height>
         </size>
        </property>
       </spacer>
      </item>
+     <item row="0" column="3">
+      <widget class="QLabel" name="labelMX">
+       <property name="maximumSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+       <property name="midLineWidth">
+        <number>0</number>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="images.qrc">:/icons/logo.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="4">
+      <spacer name="horizontalSpacer2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::MinimumExpanding</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>18</width>
+         <height>29</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="buttonAbout">
+       <property name="text">
+        <string>About</string>
+       </property>
+       <property name="icon">
+        <iconset theme="help-about">
+         <normaloff>.</normaloff>.</iconset>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="buttonHelp">
+       <property name="text">
+        <string>Help</string>
+       </property>
+       <property name="icon">
+        <iconset theme="help-contents">
+         <normaloff>.</normaloff>.</iconset>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="7">
+      <widget class="QPushButton" name="buttonCancel">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="toolTip">
+        <string>Quit application</string>
+       </property>
+       <property name="text">
+        <string>Close</string>
+       </property>
+       <property name="icon">
+        <iconset theme="window-close">
+         <normaloff>.</normaloff>.</iconset>
+       </property>
+       <property name="shortcut">
+        <string>Alt+N</string>
+       </property>
+       <property name="autoDefault">
+        <bool>true</bool>
+       </property>
+       <property name="default">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
     </layout>
+   </item>
+   <item row="1" column="0">
+    <spacer name="verticalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::MinimumExpanding</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>13</height>
+      </size>
+     </property>
+    </spacer>
    </item>
   </layout>
  </widget>
