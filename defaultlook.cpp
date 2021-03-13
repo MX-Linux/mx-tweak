@@ -234,6 +234,10 @@ void defaultlook::fliptohorizontal()
     pulseaudioID=pulseaudioID.remove("\"").section("-",1,1).section(" ",0,0);
     qDebug() << "pulseaudio: " << pulseaudioID;
 
+    QString powerID = runCmd("grep power-manager-plugin ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
+    powerID=powerID.remove("\"").section("-",1,1).section(" ",0,0);
+    qDebug() << "powerID: " << powerID;
+
     QString workspacesID = runCmd("grep pager ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
     workspacesID=workspacesID.remove("\"").section("-",1,1).section(" ",0,0);
     qDebug() << "workspacesID: " << workspacesID;
@@ -331,8 +335,14 @@ void defaultlook::fliptohorizontal()
             switchIDindex = pluginIDs.indexOf(systrayID) + 1;
             pluginIDs.insert(switchIDindex, pulseaudioID);
             qDebug() << "reorderd PA list" << pluginIDs;
-
-
+        }
+        //if power-manager plugin is present, move it to in behind of systray
+        if (powerID != "") {
+            int switchIDindex;
+            pluginIDs.removeAll(powerID);
+            switchIDindex = pluginIDs.indexOf(systrayID);
+            pluginIDs.insert(switchIDindex, powerID);
+            qDebug() << "reorderd PA list" << pluginIDs;
         }
     }
 
@@ -402,6 +412,10 @@ void defaultlook::fliptovertical()
     QString pulseaudioID = runCmd("grep pulseaudio ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
     pulseaudioID=pulseaudioID.remove("\"").section("-",1,1).section(" ",0,0);
     qDebug() << "pulseaudio: " << pulseaudioID;
+
+    QString powerID = runCmd("grep power-manager-plugin ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
+    powerID=powerID.remove("\"").section("-",1,1).section(" ",0,0);
+    qDebug() << "powerID: " << powerID;
 
     QString workspacesID = runCmd("grep pager ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
     workspacesID=workspacesID.remove("\"").section("-",1,1).section(" ",0,0);
@@ -509,8 +523,15 @@ void defaultlook::fliptovertical()
             switchIDindex = pluginIDs.indexOf(systrayID) + 1;
             pluginIDs.insert(switchIDindex, pulseaudioID);
             qDebug() << "reorderd PA list" << pluginIDs;
+        }
 
-
+        //if powerID plugin is present, move it to in behind of systray
+        if (powerID != "") {
+            int switchIDindex;
+            pluginIDs.removeAll(powerID);
+            switchIDindex = pluginIDs.indexOf(systrayID);
+            pluginIDs.insert(switchIDindex, powerID);
+            qDebug() << "reorderd PA list" << pluginIDs;
         }
         //move the expanding separator
 
@@ -1196,12 +1217,22 @@ void defaultlook::setupEtc()
     } 
 
     //setup sudo override function
+
     QFileInfo sudo_override_file("/etc/polkit-1/localauthority.conf.d/55-tweak-override.conf");
     if (sudo_override_file.exists()) {
         ui->radioSudoUser->setChecked(true);
     } else {
         ui->radioSudoRoot->setChecked(true);
     }
+
+    //if root accout disabled, disable root authentication changes
+    test = runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-check.sh").output;
+    if ( test.contains("NP")){
+        ui->radioSudoRoot->setEnabled(false);
+        ui->radioSudoUser->setEnabled(false);
+        ui->label_11->setEnabled(false);
+    }
+
 
     //setup user namespaces option (99-sandbox-mx.conf)
     sandboxflag = false;
@@ -1275,8 +1306,15 @@ void defaultlook::setuptheme()
     ui->pushButtonPreview->setEnabled(false);
     //reset all checkboxes to unchecked
 
+
     ui->checkFirefox->setChecked(false);
     ui->checkHexchat->setChecked(false);
+    ui->checkFirefox->hide();
+    ui->checkHexchat->hide();
+
+    populatethemelists("gtk-3.0");
+    populatethemelists("xfwm4");
+    populatethemelists("icons");
 
     //only enable options that make sense
 
@@ -1372,23 +1410,29 @@ void defaultlook::setupConfigoptions()
       }
 
       //check systray frame status
+      //frame has been removed from systray
 
-      pluginidsystray = runCmd("cat ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml | grep \\\"systray\\\"|cut -d '=' -f2 | cut -d '' -f1| cut -d '\"' -f2").output;
-      qDebug() << "systray is " << pluginidsystray;
-      test = runCmd("xfconf-query -c xfce4-panel -p /plugins/" + pluginidsystray + "/show-frame").output;
-      if ( test == "true") {
-          ui->checkBoxSystrayFrame->setChecked(true);
+      // show all workspaces - tasklist/show buttons feature
+      plugintasklist = runCmd("grep \\\"tasklist\\\" ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml |cut -d '=' -f2 | cut -d '' -f1| cut -d '\"' -f2").output;
+      qDebug() << "tasklist is " << plugintasklist;
+      if ( ! plugintasklist.isEmpty()){
+          test = runCmd("xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/include-all-workspaces").output;
+          if ( test == "true") {
+              ui->checkBoxShowAllWorkspaces->setChecked(true);
+          } else {
+              ui->checkBoxShowAllWorkspaces->setChecked(false);
+          }
       } else {
-          ui->checkBoxSystrayFrame->setChecked(false);
+          ui->checkBoxShowAllWorkspaces->setEnabled(false);
       }
 
-      plugintasklist = runCmd("cat ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml | grep \\\"tasklist\\\"|cut -d '=' -f2 | cut -d '' -f1| cut -d '\"' -f2").output;
-      qDebug() << "tasklist is " << plugintasklist;
-      test = runCmd("xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/include-all-workspaces").output;
+      //switch zoom_desktop
+
+      test = runCmd("xfconf-query -c xfwm4 -p /general/zoom_desktop").output;
       if ( test == "true") {
-          ui->checkBoxShowAllWorkspaces->setChecked(true);
+          ui->checkBoxDesktopZoom->setChecked(true);
       } else {
-          ui->checkBoxShowAllWorkspaces->setChecked(false);
+          ui->checkBoxDesktopZoom->setChecked(false);
       }
 
       //setup no-ellipse option
@@ -1417,12 +1461,16 @@ void defaultlook::setupConfigoptions()
       }
 
       // also hide hibernate if /etc/uswsusp.conf is missing
-      QFileInfo file("/etc/uswsusp.conf");
-      if (file.exists()) {
-          qDebug() << "uswsusp.conf found";
-      }else {
-          ui->checkBoxHibernate->hide();
-          ui->label_hibernate->hide();
+      //only on mx-21 and up
+      test = runCmd("cat /etc/mx-version").output;
+      if ( test.contains("MX-19")){
+          QFileInfo file("/etc/uswsusp.conf");
+          if (file.exists()) {
+              qDebug() << "uswsusp.conf found";
+          }else {
+              ui->checkBoxHibernate->hide();
+              ui->label_hibernate->hide();
+          }
       }
 
       //and hide hibernate if swap is encrypted
@@ -1764,6 +1812,9 @@ void defaultlook::setupComboTheme()
     QStringList filter("*.tweak");
     QDirIterator it("/usr/share/mx-tweak-data", filter, QDir::Files, QDirIterator::Subdirectories);
     while (it.hasNext()) {
+        xsettings_gtk_theme_present = false;
+        icontheme_present = false;
+        xfwm4_theme_present = false;
         QFileInfo file_info(it.next());
         QString filename = file_info.absoluteFilePath();
         QString name = runCmd("cat '" + filename + "'|grep Name=").output.section("=",1,1);
@@ -1783,19 +1834,20 @@ void defaultlook::setupComboTheme()
         QFileInfo icon_theme_home("" + home_path + "/.icons/" + xsettings_icon_theme);
         qDebug() << "xsettings_theme_home path" << xsettings_theme_home.absoluteFilePath();
 
-        if (xsettings_theme.exists() || xsettings_theme_home.exists() ) {
+        if ( xsettings_theme.exists() || xsettings_theme_home.exists() ) {
             xsettings_gtk_theme_present = true;
+            qDebug() << "xsettings_gtk_theme_present" << xsettings_gtk_theme_present;
         }
 
-        if (xfwm4_theme.exists() || xfwm4_theme_home.exists()) {
+        if ( xfwm4_theme.exists() || xfwm4_theme_home.exists() ) {
             xfwm4_theme_present = true;
         }
 
-        if (icon_theme.exists() || icon_theme_home.exists()) {
+        if ( icon_theme.exists() || icon_theme_home.exists() ) {
             icontheme_present = true;
         }
 
-        if (xsettings_gtk_theme_present && xfwm4_theme_present && icontheme_present) {
+        if ( xsettings_gtk_theme_present && xfwm4_theme_present && icontheme_present ) {
             qDebug() << "filename is " << filename;
             qDebug()<< "theme combo name" << name;
             theme_list << name;
@@ -1810,6 +1862,9 @@ void defaultlook::setupComboTheme()
 
     QDirIterator it2(home_path + "/.local/share/mx-tweak-data", filter, QDir::Files, QDirIterator::Subdirectories);
     while (it2.hasNext()) {
+        xsettings_gtk_theme_present = false;
+        icontheme_present = false;
+        xfwm4_theme_present = false;
         QString home_path = QDir::homePath();
         QFileInfo file_info(it2.next());
         QString filename = file_info.absoluteFilePath();
@@ -1866,7 +1921,7 @@ void defaultlook::on_comboTheme_activated(const QString &arg1)
 
 void defaultlook::on_buttonThemeApply_clicked()
 {
-
+    themeflag = false;
     savethemeundo();
     ui->buttonThemeApply->setEnabled(false);
     ui->buttonThemeUndo->setEnabled(true);
@@ -1994,10 +2049,10 @@ void defaultlook::on_buttonThemeApply_clicked()
 
     // message that we are done if a theme change was made
 
-    if (message_flag == true) {
-        message();
-        message_flag = false;
-    }
+    //if (message_flag == true) {
+     //   message();
+      //  message_flag = false;
+    //}
 
     // reset gui
     setuptheme();
@@ -2023,6 +2078,7 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     QString sudo_override_option;
     QString user_name_space_override_option;
     udisks_option.clear();
+
 
 
     if (ui->checkBoxMountInternalDrivesNonRoot->isChecked()) {
@@ -2133,10 +2189,6 @@ void defaultlook::on_checkBoxThunarSingleClick_clicked()
     ui->ButtonApplyMiscDefualts->setEnabled(true);
 }
 
-void defaultlook::on_checkBoxSystrayFrame_clicked()
-{
-    ui->ButtonApplyMiscDefualts->setEnabled(true);
-}
 
 void defaultlook::on_checkboxNoEllipse_clicked()
 {
@@ -2430,10 +2482,13 @@ void defaultlook::on_ButtonApplyMiscDefualts_clicked()
         runCmd("xfconf-query  -c thunar -p /misc-single-click -s false");
     }
 
-    if (ui->checkBoxSystrayFrame->isChecked()) {
-        runCmd("xfconf-query -c xfce4-panel -p /plugins/" + pluginidsystray + "/show-frame -s true");
+    //systray frame removed
+
+    //set desktop zoom
+    if (ui->checkBoxDesktopZoom->isChecked()) {
+        runCmd("xfconf-query -c xfwm4 -p /general/zoom_desktop -s true");
     } else {
-        runCmd("xfconf-query -c xfce4-panel -p /plugins/" + pluginidsystray + "/show-frame -s false");
+        runCmd("xfconf-query -c xfwm4 -p /general/zoom_desktop -s false");
     }
 
     if (ui->checkBoxThunarCAReset->isChecked()) {
@@ -2487,10 +2542,13 @@ void defaultlook::on_ButtonApplyMiscDefualts_clicked()
         }
     }
 
-
+    //only do this part on MX-19.  MX-21 and later do not have uswsusp
     if ( !hibernate_option.isEmpty() ) {
-        runCmd("x-terminal-emulator -e 'pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + hibernate_option + "'");
+        QString test = runCmd("cat /etc/mx-version").output;
+        if ( test.contains("MX-19")) {
+            runCmd("x-terminal-emulator -e 'pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + hibernate_option + "'");
         }
+    }
 
     setupConfigoptions();
 }
@@ -2499,6 +2557,12 @@ void defaultlook::on_checkBoxLightdmReset_clicked()
 {
     ui->ButtonApplyEtc->setEnabled(true);
 }
+
+void defaultlook::on_checkBoxDesktopZoom_clicked()
+{
+    ui->ButtonApplyMiscDefualts->setEnabled(true);
+}
+
 
 void defaultlook::on_checkBoxThunarCAReset_clicked()
 {
@@ -3076,3 +3140,92 @@ void defaultlook::on_comboBoxPlasmaSystrayIcons_currentIndexChanged(int index)
 }
 
 
+void defaultlook::populatethemelists(QString value)
+{
+    QString themes;
+    QStringList themelist;
+    if ( value == "gtk-3.0" || value == "xfwm4"){
+        themes = runCmd("find /usr/share/themes/*/" + value + " -maxdepth 0 |cut -d\"/\" -f5").output;
+        themes.append("\n");
+        themes.append(runCmd("find $HOME/.themes/*/" + value + " -maxdepth 0 |cut -d\"/\" -f5").output);
+    } else {
+        themes = runCmd("find /usr/share/icons/*/index.theme -maxdepth 1 |cut -d\"/\" -f5").output;
+        themes.append("\n");
+        themes.append(runCmd("find $HOME/.icons/*/index.theme -maxdepth 1 |cut -d\"/\" -f5").output);
+    }
+    themelist = themes.split("\n");
+    themelist.removeDuplicates();
+    themelist.sort();
+    if ( value == "gtk-3.0" ){
+        ui->listWidgetTheme->addItems(themelist);
+        //set current
+        QString current = runCmd("xfconf-query -c xsettings -p /Net/ThemeName").output;
+        //index of theme in list
+        ui->listWidgetTheme->setCurrentRow(themelist.indexOf(current));
+    }
+    if ( value == "xfwm4"){
+        ui->listWidgetWMtheme->addItems(themelist);
+        QString current = runCmd("xfconf-query -c xfwm4 -p /general/theme").output;
+        ui->listWidgetWMtheme->setCurrentRow(themelist.indexOf(current));
+    }
+
+    if ( value == "icons"){
+        qDebug() << "themelist" << themelist;
+        QStringList iconthemelist = themelist;
+        for (const QString &item : iconthemelist) {
+            QString icontheme = item;
+            qDebug() << "icontheme" << icontheme;
+            QString test = runCmd("find /usr/share/icons/" + icontheme + " -maxdepth 1 -mindepth 1 -type d |cut -d\"/\" -f6").output;
+            if ( test == "cursors" ) {
+                themelist.removeAll(icontheme);
+            }
+        }
+        themelist.removeAll("default.kde4");
+        themelist.removeAll("default");
+        themelist.removeAll("hicolor");
+        ui->listWidgeticons->addItems(themelist);
+        QString current = runCmd("xfconf-query -c xsettings -p /Net/IconThemeName").output;
+        ui->listWidgeticons->setCurrentRow(themelist.indexOf(current));
+    }
+
+
+    themeflag = true;
+}
+
+void defaultlook::settheme(QString type, QString theme)
+{   //set new theme
+    QString cmd;
+    if ( type == "gtk-3.0" ){
+        cmd = "xfconf-query -c xsettings -p /Net/ThemeName -s " + theme;
+    }
+    if ( type == "xfwm4" ) {
+        cmd = "xfconf-query -c xfwm4 -p /general/theme -s " + theme;
+    }
+
+    if ( type == "icon" ) {
+        cmd = "xfconf-query -c xsettings -p /Net/IconThemeName -s " + theme;
+    }
+
+    system(cmd.toUtf8());
+}
+
+void defaultlook::on_listWidgetTheme_currentTextChanged(const QString &currentText)
+{
+    if ( themeflag ){
+    settheme("gtk-3.0", currentText);
+    }
+}
+
+void defaultlook::on_listWidgetWMtheme_currentTextChanged(const QString &currentText)
+{
+    if ( themeflag ){
+    settheme("xfwm4", currentText);
+    }
+}
+
+void defaultlook::on_listWidgeticons_currentTextChanged(const QString &currentText)
+{
+    if ( themeflag ){
+    settheme("icon", currentText);
+    }
+}

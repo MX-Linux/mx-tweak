@@ -81,6 +81,7 @@ public:
     bool plasmasingleclickflag;
     bool plasmaresetflag;
     bool plasmasystrayiconsizeflag;
+    bool themeflag = false;
 
     QString g1;
     QString g2;
@@ -91,6 +92,8 @@ public:
     void setupuiselections();
     void setuppanel();
     void setuptheme();
+    void populatethemelists(QString value);
+    void settheme(QString type, QString theme);
     void setupEtc();
     void setupFluxbox();
     void setupPlasma();
@@ -185,8 +188,6 @@ private slots:
     void on_checkBoxSingleClick_clicked();
 
     void on_checkBoxThunarSingleClick_clicked();
-
-    void on_checkBoxSystrayFrame_clicked();
 
     void on_comboboxVertpostition_currentIndexChanged(const QString &arg1);
 
@@ -293,6 +294,14 @@ private slots:
     void on_comboBoxPlasmaSystrayIcons_currentIndexChanged(int index);
 
     void on_checkBoxMenuMigrate_clicked();
+
+    void on_checkBoxDesktopZoom_clicked();
+
+    void on_listWidgetTheme_currentTextChanged(const QString &currentText);
+
+    void on_listWidgetWMtheme_currentTextChanged(const QString &currentText);
+
+    void on_listWidgeticons_currentTextChanged(const QString &currentText);
 
 private:
     Ui::defaultlook *ui;
