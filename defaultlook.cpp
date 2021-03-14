@@ -3159,6 +3159,7 @@ void defaultlook::populatethemelists(QString value)
     }
     themelist = themes.split("\n");
     themelist.removeDuplicates();
+    themelist.removeAll("");
     themelist.sort();
     if ( value == "gtk-3.0" ){
         ui->listWidgetTheme->addItems(themelist);
