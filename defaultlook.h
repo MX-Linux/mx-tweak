@@ -64,6 +64,7 @@ public:
     QString pluginidsystray;
     QString plugintasklist;
     QStringList undotheme;
+    bool verbose = false;
     bool panelflag;
     bool hibernate_flag;
     bool Intel_flag;
