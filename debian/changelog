@@ -1,3 +1,9 @@
+mx-tweak (21.03.03mx21) mx; urgency=medium
+
+  * remove blank lines in icon and theme boxes 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 13 Mar 2021 23:57:15 -0500
+
 mx-tweak (21.03.02mx21) mx; urgency=medium
 
   * reduce qdebug output 
