@@ -1205,6 +1205,7 @@ void defaultlook::setupEtc()
     ui->labelamdgpu->hide();
     ui->checkboxRadeontearfree->hide();
     ui->labelradeon->hide();
+    ui->checkBoxlibinput->hide();
 
     ui->ButtonApplyEtc->setEnabled(false);
     if (ui->ButtonApplyEtc->icon().isNull()) {
@@ -1256,6 +1257,7 @@ void defaultlook::setupEtc()
     Intel_flag = false;
     amdgpuflag = false;
     radeon_flag =false;
+    libinput_touchpadflag = false;
     //setup Intel checkbox
 
     QString partcheck = runCmd("for i in $(lspci -n | awk '{print $2,$1}' | grep -E '^(0300|0302|0380)' | cut -f2 -d\\ ); do lspci -kns \"$i\"; done").output;
@@ -1297,7 +1299,17 @@ void defaultlook::setupEtc()
         ui->checkboxRadeontearfree->setChecked(false);
     }
 
+    partcheck = runCmd("xinput |grep -i touchpad").output;
+    if (!partcheck.isEmpty()){
+        ui->checkBoxlibinput->show();
+    }
 
+    QFileInfo libinputfile("/etc/X11/xorg.conf.d/30-touchpad.conf");
+    if ( libinputfile.exists()) {
+        ui->checkBoxlibinput->setChecked(true);
+    }else {
+        ui->checkBoxlibinput->setChecked(false);
+    }
 }
 
 void defaultlook::setuptheme()
@@ -2068,10 +2080,12 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     QString amd_option;
     QString radeon_option;
     QString lightdm_option;
+    QString libinput_option;
     ui->ButtonApplyEtc->setEnabled(false);
 
     intel_option.clear();
     lightdm_option.clear();
+    libinput_option.clear();
 
     //deal with udisks option
     QFileInfo fileinfo("/etc/tweak-udisks.chk");
@@ -2151,12 +2165,30 @@ void defaultlook::on_ButtonApplyEtc_clicked()
         }
     }
 
+    //libinput_touchpad
+
+    if ( libinput_touchpadflag ) {
+        QFileInfo check_libinput("/etc/X11/xorg.conf.d/30-touchpad.conf");
+        if ( check_libinput.exists()){
+            //backup existing 20-radeon.conf file to home folder
+            cmd = "cp /etc/X11/xorg.conf.d/30-touchpad.conf /home/$USER/30-touchpad.conf.$(date +%Y%m%H%M%S)";
+            system(cmd.toUtf8());
+        }
+        if (ui->checkBoxlibinput->isChecked()) {
+            //copy mx-tweak version to xorg.conf.d directory
+            libinput_option = "enable_libinput_touchpad";
+        } else {
+            //remove 20-radeon.conf
+            libinput_option = "disable_libinput_touchpad";
+        }
+    }
+
     //deal with sudo override
 
     if (ui->radioSudoUser->isChecked()) {
         if (sudo_override.exists()) {
             if (verbose) qDebug() << "no change to admin password settings";
-        } else {
+        } else {te
             sudo_override_option = "enable_sudo_override";
         }
     } else {
@@ -2176,8 +2208,8 @@ void defaultlook::on_ButtonApplyEtc_clicked()
         }
     }
 
-    if ( ! udisks_option.isEmpty() || ! sudo_override_option.isEmpty() || ! user_name_space_override_option.isEmpty() || ! intel_option.isEmpty() || ! lightdm_option.isEmpty() || ! amd_option.isEmpty() || ! radeon_option.isEmpty() ) {
-        runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + udisks_option + " " + sudo_override_option + " " + user_name_space_override_option + " " + intel_option + " " + amd_option + " " + radeon_option + " " + lightdm_option);
+    if ( ! udisks_option.isEmpty() || ! sudo_override_option.isEmpty() || ! user_name_space_override_option.isEmpty() || ! intel_option.isEmpty() || ! lightdm_option.isEmpty() || ! amd_option.isEmpty() || ! radeon_option.isEmpty() || ! libinput_option.isEmpty() ) {
+        runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + udisks_option + " " + sudo_override_option + " " + user_name_space_override_option + " " + intel_option + " " + amd_option + " " + radeon_option + " " + libinput_option + " " + lightdm_option);
         }
     //reset gui
     setupEtc();
@@ -3233,4 +3265,11 @@ void defaultlook::on_listWidgeticons_currentTextChanged(const QString &currentTe
     if ( themeflag ){
     settheme("icon", currentText);
     }
+}
+
+void defaultlook::on_checkBoxlibinput_clicked()
+{
+    ui->ButtonApplyEtc->setEnabled(true);
+    libinput_touchpadflag = true;
+
 }
