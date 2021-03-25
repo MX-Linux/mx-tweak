@@ -70,6 +70,7 @@ public:
     bool Intel_flag;
     bool radeon_flag;
     bool amdgpuflag;
+    bool libinput_touchpadflag;
     bool vblankflag;
     bool displayflag = false;
     bool brightnessflag = false;
@@ -303,6 +304,8 @@ private slots:
     void on_listWidgetWMtheme_currentTextChanged(const QString &currentText);
 
     void on_listWidgeticons_currentTextChanged(const QString &currentText);
+
+    void on_checkBoxlibinput_clicked();
 
 private:
     Ui::defaultlook *ui;

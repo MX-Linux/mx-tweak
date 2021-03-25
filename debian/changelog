@@ -1,3 +1,9 @@
+mx-tweak (21.03.05mx21) mx; urgency=medium
+
+  * add libinput_touchpad toggle 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Wed, 24 Mar 2021 23:37:35 -0400
+
 mx-tweak (21.03.04mx21) mx; urgency=medium
 
   * update themer 

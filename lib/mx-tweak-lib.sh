@@ -37,6 +37,17 @@ disable_amd()
     
 }
 
+enable_libinput_touchpad()
+{
+    cp /usr/share/mx-tweak/30-touchpad.conf /etc/X11/xorg.conf.d/30-touchpad.conf
+}
+
+disable_libinput_touchpad()
+{
+    rm /etc/X11/xorg.conf.d/30-touchpad.conf
+    
+}
+
 #lightdm
 #the purpose is to reset the lightdm theme to current system defaults
 lightdm_reset()
@@ -149,6 +160,7 @@ $CMD4
 $CMD5
 $CMD6
 $CMD7
+$CMD8
 }
 
 CMD1=$1
@@ -158,6 +170,7 @@ CMD4=$4
 CMD5=$5
 CMD6=$6
 CMD7=$7
+CMD8=$8
 main
 
 exit 0
