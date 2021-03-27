@@ -55,11 +55,11 @@
     <message>
         <location filename="../defaultlook.ui" line="20"/>
         <location filename="../defaultlook.cpp" line="52"/>
-        <location filename="../defaultlook.cpp" line="67"/>
-        <location filename="../defaultlook.cpp" line="652"/>
-        <location filename="../defaultlook.cpp" line="659"/>
-        <location filename="../defaultlook.cpp" line="676"/>
-        <location filename="../defaultlook.cpp" line="687"/>
+        <location filename="../defaultlook.cpp" line="71"/>
+        <location filename="../defaultlook.cpp" line="656"/>
+        <location filename="../defaultlook.cpp" line="663"/>
+        <location filename="../defaultlook.cpp" line="680"/>
+        <location filename="../defaultlook.cpp" line="691"/>
         <source>MX Tweak</source>
         <translation>MX Prilagoditve</translation>
     </message>
@@ -179,7 +179,7 @@
         <location filename="../defaultlook.ui" line="984"/>
         <location filename="../defaultlook.ui" line="1310"/>
         <location filename="../defaultlook.ui" line="1492"/>
-        <location filename="../defaultlook.ui" line="1626"/>
+        <location filename="../defaultlook.ui" line="1631"/>
         <source>Apply</source>
         <translation>Potrdi</translation>
     </message>
@@ -618,71 +618,76 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1535"/>
+        <source>Use libinput driver for touchpad instead of synaptics touchpad driver (requires restart)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1542"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>Namesto privzetega &quot;modesetting&quot; gonilnika uporabite Intel gonilnik (zahteva ponovni zagon)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1542"/>
+        <location filename="../defaultlook.ui" line="1549"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>POMNI: obstoječi /etc/X11/xorg.conf.d/20-intel.conf bo varnostno shranjen v domačo home mapo</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1549"/>
+        <location filename="../defaultlook.ui" line="1556"/>
         <source>Use tearfree amdgpu option</source>
         <translation>Uporabi amdgpu opcijo za odpravljanje napak v prikazovanju </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1556"/>
+        <location filename="../defaultlook.ui" line="1563"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>POMNI: obstoječi /etc/X11/xorg.conf.d/20-amd.conf bo varnostno shranjen v domačo home mapo</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1563"/>
+        <location filename="../defaultlook.ui" line="1570"/>
         <source>Use tearfree radeon driver option</source>
         <translation>Uporabi radeon opcijo za odpravljanje napak v prikazovanju </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1570"/>
+        <location filename="../defaultlook.ui" line="1577"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>POMNI: obstoječi /etc/X11/xorg.conf.d/20-radeon.conf bo varnostno shranjen v domačo home mapo</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1584"/>
+        <location filename="../defaultlook.ui" line="1591"/>
         <source>Password for administrative tasks:</source>
         <translation>Geslo za adminstracijo:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1591"/>
+        <location filename="../defaultlook.ui" line="1598"/>
         <source>&amp;User</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1598"/>
+        <location filename="../defaultlook.ui" line="1605"/>
         <source>Root</source>
         <translation>Root (administrator)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1697"/>
+        <location filename="../defaultlook.ui" line="1704"/>
         <source>About</source>
         <translation>O programu</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1708"/>
+        <location filename="../defaultlook.ui" line="1715"/>
         <source>Help</source>
         <translation>Pomoč</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1725"/>
+        <location filename="../defaultlook.ui" line="1732"/>
         <source>Quit application</source>
         <translation>Zapri aplikacijo</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1728"/>
+        <location filename="../defaultlook.ui" line="1735"/>
         <source>Close</source>
         <translation>Zapri</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1735"/>
+        <location filename="../defaultlook.ui" line="1742"/>
         <source>Alt+N</source>
         <translation>Alt+N</translation>
     </message>
@@ -692,58 +697,58 @@
         <translation>--display stikalo ve veljavno le za Xfce</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="651"/>
+        <location filename="../defaultlook.cpp" line="655"/>
         <source>About MX Tweak</source>
         <translation>O MX fiziranju</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="652"/>
+        <location filename="../defaultlook.cpp" line="656"/>
         <source>Version: </source>
         <translation>Različica:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="653"/>
+        <location filename="../defaultlook.cpp" line="657"/>
         <source>App for quick default ui theme changes and tweaks</source>
         <translation>Aplikacija za hitro spreminjanje in prilagajanje privzete teme uporabniškega vmesnika</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="655"/>
+        <location filename="../defaultlook.cpp" line="659"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="656"/>
-        <location filename="../defaultlook.cpp" line="659"/>
+        <location filename="../defaultlook.cpp" line="660"/>
+        <location filename="../defaultlook.cpp" line="663"/>
         <source>License</source>
         <translation>Licenca</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="657"/>
+        <location filename="../defaultlook.cpp" line="661"/>
         <source>Cancel</source>
         <translation>Prekliči</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="688"/>
+        <location filename="../defaultlook.cpp" line="692"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
         <translation>Končano! Firefox bo morda potreboval ponovni zagon, da bodo spremembe delovale.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="879"/>
+        <location filename="../defaultlook.cpp" line="883"/>
         <source>Panel settings</source>
         <translation>Nastavitve panoja</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="880"/>
+        <location filename="../defaultlook.cpp" line="884"/>
         <source>Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
         <translation>Trenutne nastavitve orodne vrstice so se shranile v skrito mapo z imenom .restore  znotraj uporabniske domace mape (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1518"/>
+        <location filename="../defaultlook.cpp" line="1534"/>
         <source>settings</source>
         <translation>nastavitve</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1859"/>
+        <location filename="../defaultlook.cpp" line="1875"/>
         <source>Choose a theme set</source>
         <translation>Izberite tematski set</translation>
     </message>
