@@ -2188,7 +2188,7 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     if (ui->radioSudoUser->isChecked()) {
         if (sudo_override.exists()) {
             if (verbose) qDebug() << "no change to admin password settings";
-        } else {te
+        } else {
             sudo_override_option = "enable_sudo_override";
         }
     } else {
