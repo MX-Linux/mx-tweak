@@ -96,7 +96,7 @@ void defaultlook::setup()
         //setup compositor tab
         setupCompositor();
         //setup display tab
-        setupDisplay();
+        //setupDisplay();
         ui->tabWidget->removeTab(6);
         ui->tabWidget->removeTab(5);
         //set first tab as default
@@ -3272,4 +3272,14 @@ void defaultlook::on_checkBoxlibinput_clicked()
     ui->ButtonApplyEtc->setEnabled(true);
     libinput_touchpadflag = true;
 
+}
+
+void defaultlook::on_tabWidget_currentChanged(int index)
+{
+    if (displaysetupflag == false){
+        if (ui->tabWidget->tabText(index) == tr("Display")){
+            setupDisplay();
+            displaysetupflag = true;
+        }
+    }
 }
