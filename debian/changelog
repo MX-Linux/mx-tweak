@@ -1,3 +1,9 @@
+mx-tweak (21.04.01mx21) mx; urgency=medium
+
+  * delay display page setup until display tab selected
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 17 Apr 2021 16:43:42 -0400
+
 mx-tweak (21.03.05mx21) mx; urgency=medium
 
   * add libinput_touchpad toggle 
