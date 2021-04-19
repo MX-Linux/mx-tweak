@@ -55,11 +55,11 @@
     <message>
         <location filename="../defaultlook.ui" line="20"/>
         <location filename="../defaultlook.cpp" line="52"/>
-        <location filename="../defaultlook.cpp" line="67"/>
-        <location filename="../defaultlook.cpp" line="652"/>
-        <location filename="../defaultlook.cpp" line="659"/>
-        <location filename="../defaultlook.cpp" line="676"/>
-        <location filename="../defaultlook.cpp" line="687"/>
+        <location filename="../defaultlook.cpp" line="71"/>
+        <location filename="../defaultlook.cpp" line="656"/>
+        <location filename="../defaultlook.cpp" line="663"/>
+        <location filename="../defaultlook.cpp" line="680"/>
+        <location filename="../defaultlook.cpp" line="691"/>
         <source>MX Tweak</source>
         <translation>MX Tweak</translation>
     </message>
@@ -179,7 +179,7 @@
         <location filename="../defaultlook.ui" line="984"/>
         <location filename="../defaultlook.ui" line="1310"/>
         <location filename="../defaultlook.ui" line="1492"/>
-        <location filename="../defaultlook.ui" line="1626"/>
+        <location filename="../defaultlook.ui" line="1631"/>
         <source>Apply</source>
         <translation>Toepassen</translation>
     </message>
@@ -618,71 +618,76 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1535"/>
+        <source>Use libinput driver for touchpad instead of synaptics touchpad driver (requires restart)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1542"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>Gebruik intel driver in plaats van standaard &quot;modesetting&quot; driver (vereist herstart)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1542"/>
+        <location filename="../defaultlook.ui" line="1549"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>NOOT: bestaande /etc/X11/xorg.conf.d/20-intel.conf zal gebackupped worden in de home folder</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1549"/>
+        <location filename="../defaultlook.ui" line="1556"/>
         <source>Use tearfree amdgpu option</source>
         <translation>Gebruik tearvrij amdgpu optie</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1556"/>
+        <location filename="../defaultlook.ui" line="1563"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>NOOT: bestaande /etc/X11/xorg.conf.d/20-amd.conf zal gebackupped worden in de home folder</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1563"/>
+        <location filename="../defaultlook.ui" line="1570"/>
         <source>Use tearfree radeon driver option</source>
         <translation>Gebruik tearvrij radeon driver optie</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1570"/>
+        <location filename="../defaultlook.ui" line="1577"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>NOOT: bestaande /etc/X11/xorg.conf.d/20-radeon.conf zal gebackupped worden in de home folder</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1584"/>
+        <location filename="../defaultlook.ui" line="1591"/>
         <source>Password for administrative tasks:</source>
         <translation>Wachtwoord voor administratieve taken:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1591"/>
+        <location filename="../defaultlook.ui" line="1598"/>
         <source>&amp;User</source>
         <translation>&amp;User</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1598"/>
+        <location filename="../defaultlook.ui" line="1605"/>
         <source>Root</source>
         <translation>Root</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1697"/>
+        <location filename="../defaultlook.ui" line="1704"/>
         <source>About</source>
         <translation>Over</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1708"/>
+        <location filename="../defaultlook.ui" line="1715"/>
         <source>Help</source>
         <translation>Hulp</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1725"/>
+        <location filename="../defaultlook.ui" line="1732"/>
         <source>Quit application</source>
         <translation>Verlaat de applicatie</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1728"/>
+        <location filename="../defaultlook.ui" line="1735"/>
         <source>Close</source>
         <translation>Sluiten</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1735"/>
+        <location filename="../defaultlook.ui" line="1742"/>
         <source>Alt+N</source>
         <translation>Alt+N</translation>
     </message>
@@ -692,58 +697,58 @@
         <translation>--display schakel enkel geldig voor Xfce</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="651"/>
+        <location filename="../defaultlook.cpp" line="655"/>
         <source>About MX Tweak</source>
         <translation>Over MX Tweak</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="652"/>
+        <location filename="../defaultlook.cpp" line="656"/>
         <source>Version: </source>
         <translation>Versie:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="653"/>
+        <location filename="../defaultlook.cpp" line="657"/>
         <source>App for quick default ui theme changes and tweaks</source>
         <translation>App voor snelle standaard ui thema veranderingen en fijninstellingen</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="655"/>
+        <location filename="../defaultlook.cpp" line="659"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="656"/>
-        <location filename="../defaultlook.cpp" line="659"/>
+        <location filename="../defaultlook.cpp" line="660"/>
+        <location filename="../defaultlook.cpp" line="663"/>
         <source>License</source>
         <translation>Licentie</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="657"/>
+        <location filename="../defaultlook.cpp" line="661"/>
         <source>Cancel</source>
         <translation>Ongedaan maken</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="688"/>
+        <location filename="../defaultlook.cpp" line="692"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
         <translation>Klaar! Firefox kan een herstart vereisen om de veranderingen door te voeren</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="879"/>
+        <location filename="../defaultlook.cpp" line="883"/>
         <source>Panel settings</source>
         <translation>Paneel instellingen</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="880"/>
+        <location filename="../defaultlook.cpp" line="884"/>
         <source>Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
         <translation>Uw huidige paneelinstellingen zijn gebackupt in een verborgen folder genaamd .restore in uw home folder (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1518"/>
+        <location filename="../defaultlook.cpp" line="1534"/>
         <source>settings</source>
         <translation>instellingen</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1859"/>
+        <location filename="../defaultlook.cpp" line="1875"/>
         <source>Choose a theme set</source>
         <translation>Kies een thema set</translation>
     </message>

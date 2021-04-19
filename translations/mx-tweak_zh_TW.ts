@@ -55,11 +55,11 @@
     <message>
         <location filename="../defaultlook.ui" line="20"/>
         <location filename="../defaultlook.cpp" line="52"/>
-        <location filename="../defaultlook.cpp" line="67"/>
-        <location filename="../defaultlook.cpp" line="652"/>
-        <location filename="../defaultlook.cpp" line="659"/>
-        <location filename="../defaultlook.cpp" line="676"/>
-        <location filename="../defaultlook.cpp" line="687"/>
+        <location filename="../defaultlook.cpp" line="71"/>
+        <location filename="../defaultlook.cpp" line="656"/>
+        <location filename="../defaultlook.cpp" line="663"/>
+        <location filename="../defaultlook.cpp" line="680"/>
+        <location filename="../defaultlook.cpp" line="691"/>
         <source>MX Tweak</source>
         <translation>MX 調校</translation>
     </message>
@@ -179,7 +179,7 @@
         <location filename="../defaultlook.ui" line="984"/>
         <location filename="../defaultlook.ui" line="1310"/>
         <location filename="../defaultlook.ui" line="1492"/>
-        <location filename="../defaultlook.ui" line="1626"/>
+        <location filename="../defaultlook.ui" line="1631"/>
         <source>Apply</source>
         <translation>使用</translation>
     </message>
@@ -618,72 +618,77 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1535"/>
+        <source>Use libinput driver for touchpad instead of synaptics touchpad driver (requires restart)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1542"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>使用英特爾驅動代替默認的「模式設置」驅動（需要重啟）。</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1542"/>
+        <location filename="../defaultlook.ui" line="1549"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>註：現所採用的 /etc/X11/xorg.conf.d/20-intel.conf 會備份到家目錄當中</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1549"/>
+        <location filename="../defaultlook.ui" line="1556"/>
         <source>Use tearfree amdgpu option</source>
         <translation>使用無淚amdgpu選項</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1556"/>
+        <location filename="../defaultlook.ui" line="1563"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>         注意：現有的/etc/X11/xorg.conf.d/20-amd.conf將備份到主文件夾
 </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1563"/>
+        <location filename="../defaultlook.ui" line="1570"/>
         <source>Use tearfree radeon driver option</source>
         <translation>使用無淚radeon驅動程序選項</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1570"/>
+        <location filename="../defaultlook.ui" line="1577"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>          注意：現有的/etc/X11/xorg.conf.d/20-radeon.conf將備份到主文件夾</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1584"/>
+        <location filename="../defaultlook.ui" line="1591"/>
         <source>Password for administrative tasks:</source>
         <translation>管理任務的密碼：</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1591"/>
+        <location filename="../defaultlook.ui" line="1598"/>
         <source>&amp;User</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1598"/>
+        <location filename="../defaultlook.ui" line="1605"/>
         <source>Root</source>
         <translation>最高用戶</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1697"/>
+        <location filename="../defaultlook.ui" line="1704"/>
         <source>About</source>
         <translation>關於</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1708"/>
+        <location filename="../defaultlook.ui" line="1715"/>
         <source>Help</source>
         <translation>說明</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1725"/>
+        <location filename="../defaultlook.ui" line="1732"/>
         <source>Quit application</source>
         <translation>退出程式</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1728"/>
+        <location filename="../defaultlook.ui" line="1735"/>
         <source>Close</source>
         <translation>關閉</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1735"/>
+        <location filename="../defaultlook.ui" line="1742"/>
         <source>Alt+N</source>
         <translation>Alt+N</translation>
     </message>
@@ -693,58 +698,58 @@
         <translation>--display開關僅對Xfce有效</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="651"/>
+        <location filename="../defaultlook.cpp" line="655"/>
         <source>About MX Tweak</source>
         <translation>關於 MX 調校</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="652"/>
+        <location filename="../defaultlook.cpp" line="656"/>
         <source>Version: </source>
         <translation>版本：</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="653"/>
+        <location filename="../defaultlook.cpp" line="657"/>
         <source>App for quick default ui theme changes and tweaks</source>
         <translation>本程式可快速更換與調校預設介面佈景</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="655"/>
+        <location filename="../defaultlook.cpp" line="659"/>
         <source>Copyright (c) MX Linux</source>
         <translation>版權所有 (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="656"/>
-        <location filename="../defaultlook.cpp" line="659"/>
+        <location filename="../defaultlook.cpp" line="660"/>
+        <location filename="../defaultlook.cpp" line="663"/>
         <source>License</source>
         <translation>授權條款</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="657"/>
+        <location filename="../defaultlook.cpp" line="661"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="688"/>
+        <location filename="../defaultlook.cpp" line="692"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
         <translation>完成！可能需要重新啟動 Firefox，這些變動才會生效。</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="879"/>
+        <location filename="../defaultlook.cpp" line="883"/>
         <source>Panel settings</source>
         <translation>邊條設定</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="880"/>
+        <location filename="../defaultlook.cpp" line="884"/>
         <source>Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
         <translation>您當前的面板設置已備份到主文件夾（~/ .restore/）中名為.restore的隱藏文件夾中。</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1518"/>
+        <location filename="../defaultlook.cpp" line="1534"/>
         <source>settings</source>
         <translation>設定</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1859"/>
+        <location filename="../defaultlook.cpp" line="1875"/>
         <source>Choose a theme set</source>
         <translation>選擇一套佈景組合</translation>
     </message>
