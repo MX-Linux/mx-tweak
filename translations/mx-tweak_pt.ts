@@ -316,6 +316,7 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="702"/>
+        <location filename="../defaultlook.cpp" line="3280"/>
         <source>Display</source>
         <translation>Ecrã</translation>
     </message>
