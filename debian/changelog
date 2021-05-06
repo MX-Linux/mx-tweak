@@ -1,3 +1,9 @@
+mx-tweak (21.05.01mx21) mx; urgency=medium
+
+  * add nocsd toggle for gtk3, present with gtk3-nocsd is installed 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Wed, 05 May 2021 23:18:47 -0400
+
 mx-tweak (21.04.01mx21) mx; urgency=medium
 
   * delay display page setup until display tab selected
