@@ -1192,6 +1192,7 @@ void defaultlook::setupFluxbox()
 void defaultlook::setupEtc()
 {
     QString home_path = QDir::homePath();
+    QString DESKTOP = runCmd("echo $XDG_SESSION_DESKTOP").output;
 
     ui->checkBoxLightdmReset->setChecked(false);
     QString test = runCmd("pgrep lightdm").output;
@@ -1252,6 +1253,16 @@ void defaultlook::setupEtc()
         }
     } else {
         ui->checkBoxSandbox->hide();
+    }
+
+    //setup NOCSD GTK3 option
+    if (!QFileInfo::exists("/usr/bin/gtk3-nocsd")){
+        ui->checkBoxCSD->hide();
+    }
+    if (QFileInfo::exists(home_path + "/.config/MX-Linux/nocsd/" + DESKTOP)){
+        ui->checkBoxCSD->setChecked(false);
+    } else {
+        ui->checkBoxCSD->setChecked(true);
     }
 
     Intel_flag = false;
@@ -2081,6 +2092,8 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     QString radeon_option;
     QString lightdm_option;
     QString libinput_option;
+    QString DESKTOP = runCmd("echo $XDG_SESSION_DESKTOP").output;
+    QString home_path = QDir::homePath();
     ui->ButtonApplyEtc->setEnabled(false);
 
     intel_option.clear();
@@ -2097,6 +2110,14 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     QString user_name_space_override_option;
     udisks_option.clear();
 
+    if (ui->checkBoxCSD->isChecked()){
+        if ( QFileInfo::exists(home_path + "/.config/MX-Linux/nocsd/" + DESKTOP)){
+            runCmd("rm " + home_path + "/.config/MX-Linux/nocsd/" + DESKTOP);
+        }
+    } else {
+        runCmd("mkdir -p " + home_path + "/.config/MX-Linux/nocsd/");
+        runCmd("touch " + home_path + "/.config/MX-Linux/nocsd/" + DESKTOP );
+    }
 
 
     if (ui->checkBoxMountInternalDrivesNonRoot->isChecked()) {
@@ -3282,4 +3303,9 @@ void defaultlook::on_tabWidget_currentChanged(int index)
             displaysetupflag = true;
         }
     }
+}
+
+void defaultlook::on_checkBoxCSD_clicked()
+{
+    ui->ButtonApplyEtc->setEnabled(true);
 }

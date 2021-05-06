@@ -1,0 +1,40 @@
+# gtk3-nocsd global configuration
+#
+# This file overrides 01gtk3-nocsd to allow a user-selectable setting in mx-tweak
+
+#
+# Whether to disable CSD on non-GNOME desktops
+#    0: disable CSD
+#    1: enable CSD
+#
+# If this setting is left unset, it will default to 0 (CSD disabled)
+# unless GTK3_NOCSD_IGNORE is set to 1, in which case it will remain
+# unset. (With gtk defaulting to showing CSDs.)
+#
+#MX defaults to GTK_CSD=1
+
+# Whether to not preload libgtk3-nocsd.so.0 even if GTK_CSD=0
+#
+# If this setting is set to 1, LD_PRELOAD and GTK_CSD will not be
+# touched upon session startup.
+#
+#MX defaults to GTK3_NOCSD_IGNORE=1
+
+#only do anything if gtk3_nocsd is installed
+
+echo "$XDG_SESSION_DESKTOP" > $HOME/fred.txt
+
+if [ -n "$(command -v gtk3-nocsd)" ]; then
+	mx_csd_setting="GTK_CSD=1"
+	mx_csd_preload_setting="GTK3_NOCSD_IGNORE=1"
+
+	#disable if toggle active
+	if [ -e "$HOME/.config/MX-Linux/nocsd/$XDG_SESSION_DESKTOP" ]; then
+		mx_csd_setting="GTK_CSD=0"
+		mx_csd_preload_setting="GTK3_NOCSD_IGNORE=0"
+	fi
+
+	echo "$mx_csd_setting $mx_csd_preload_setting" >> $HOME/fred.txt
+	export "$mx_csd_setting"
+	export "$mx_csd_preload_setting"
+fi
