@@ -156,6 +156,7 @@ cards.</p>
 		<li>Occasionally the lightdm configuration maybe be updated.  While these updated configurations will be present on the system, they will not go into effect automatically for upgraders.   The &#8220;Reset&#8221; actions will change any lightdm configuration to the latest MX defaults.</li>
 		<li> Enable of kernel sandbox is only available on kernels that have a switch for user namespaces built in.  Some kernels default to off, some default to on.  Enabling this feature is useful for a lot of applications that require sandboxes.</li>
 		<li> Enable mounting of internal drives will require the user&#8217;s root password.</li>
+		<li> If the gtk3-nocsd package is installed, the option to disable or enable Client Side Decorations for gtk3 apps will be available.  This option is on a per user and per desktop environment basis.  Key files are stored in ~/.config/MX-Linux/nocsd.  If a keyfile is present, then CSD will be disabled on the next login of the user.</li>
 	</ul>
 	
 	
