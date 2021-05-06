@@ -27,3 +27,4 @@ bin/* usr/bin
 zrestore-software-brightness.desktop etc/xdg/autostart
 mx-tweak-tray-app-autostart.desktop etc/xdg/autostart
 sudoers/* etc/sudoers.d
+02gtk3-nocsd-mx etc/X11/Xsession.d
