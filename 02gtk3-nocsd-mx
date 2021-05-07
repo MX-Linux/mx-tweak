@@ -22,7 +22,8 @@
 
 #only do anything if gtk3_nocsd is installed
 
-echo "$XDG_SESSION_DESKTOP" > $HOME/fred.txt
+#debug
+#echo "$XDG_SESSION_DESKTOP" > $HOME/fred.txt
 
 if [ -n "$(command -v gtk3-nocsd)" ]; then
 	mx_csd_setting="GTK_CSD=1"
@@ -34,7 +35,9 @@ if [ -n "$(command -v gtk3-nocsd)" ]; then
 		mx_csd_preload_setting="GTK3_NOCSD_IGNORE=0"
 	fi
 
-	echo "$mx_csd_setting $mx_csd_preload_setting" >> $HOME/fred.txt
+	#debug
+	#echo "$mx_csd_setting $mx_csd_preload_setting" >> $HOME/fred.txt
+	
 	export "$mx_csd_setting"
 	export "$mx_csd_preload_setting"
 fi
