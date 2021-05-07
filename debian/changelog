@@ -1,3 +1,9 @@
+mx-tweak (21.05.02mx21) mx; urgency=medium
+
+  * remove debug info from Xsession  
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Thu, 06 May 2021 22:54:31 -0400
+
 mx-tweak (21.05.01mx21) mx; urgency=medium
 
   * add nocsd toggle for gtk3, present with gtk3-nocsd is installed 
