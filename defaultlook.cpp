@@ -948,6 +948,15 @@ void defaultlook::setuppanel()
         ui->pushButtontasklist->hide();
     }
 
+    //hide docklike settings if not present
+
+    if ( system("grep -q docklike ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml") != 0 ) {
+        ui->labelDocklikeSettings->hide();
+        ui->pushButtonDocklikeSetttings->hide();
+    }
+
+
+
     //reset all checkboxes to unchecked
 
     ui->checkVert->setChecked(false);
@@ -3308,4 +3317,9 @@ void defaultlook::on_tabWidget_currentChanged(int index)
 void defaultlook::on_checkBoxCSD_clicked()
 {
     ui->ButtonApplyEtc->setEnabled(true);
+}
+
+void defaultlook::on_pushButtonDocklikeSetttings_clicked()
+{
+    system("xfce4-panel --plugin-event=docklike:settings");
 }

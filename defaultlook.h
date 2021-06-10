@@ -312,6 +312,8 @@ private slots:
 
     void on_checkBoxCSD_clicked();
 
+    void on_pushButtonDocklikeSetttings_clicked();
+
 private:
     Ui::defaultlook *ui;
 };
