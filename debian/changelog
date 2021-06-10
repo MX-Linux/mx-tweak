@@ -1,3 +1,9 @@
+mx-tweak (21.06.01mx21) mx; urgency=medium
+
+  * add docklike plugin settings to panel tab 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Thu, 10 Jun 2021 17:08:48 -0400
+
 mx-tweak (21.05.02mx21) mx; urgency=medium
 
   * remove debug info from Xsession  
