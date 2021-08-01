@@ -1202,6 +1202,7 @@ void defaultlook::setupEtc()
 {
     QString home_path = QDir::homePath();
     QString DESKTOP = runCmd("echo $XDG_SESSION_DESKTOP").output;
+    qDebug() << "setupetc nocsd desktop is:" << DESKTOP;
 
     ui->checkBoxLightdmReset->setChecked(false);
     QString test = runCmd("pgrep lightdm").output;
@@ -1266,8 +1267,12 @@ void defaultlook::setupEtc()
 
     //setup NOCSD GTK3 option
     if (!QFileInfo::exists("/usr/bin/gtk3-nocsd")){
+        qDebug() << "gtk3-nocsd not found";
         ui->checkBoxCSD->hide();
+    } else {
+        qDebug() << "gtk3-nocsd found";
     }
+    qDebug() << "home path nocsd is" << home_path + "/.config/MX-Linux/nocsd/" + DESKTOP;
     if (QFileInfo::exists(home_path + "/.config/MX-Linux/nocsd/" + DESKTOP)){
         ui->checkBoxCSD->setChecked(false);
     } else {
@@ -2119,13 +2124,21 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     QString user_name_space_override_option;
     udisks_option.clear();
 
+    qDebug() << "applyetc DESKTOP is " << DESKTOP;
+    qDebug() << "home path applyetc is " << home_path + "/.config/MX-Linux/nocsd/" + DESKTOP;
     if (ui->checkBoxCSD->isChecked()){
         if ( QFileInfo::exists(home_path + "/.config/MX-Linux/nocsd/" + DESKTOP)){
             runCmd("rm " + home_path + "/.config/MX-Linux/nocsd/" + DESKTOP);
         }
     } else {
-        runCmd("mkdir -p " + home_path + "/.config/MX-Linux/nocsd/");
-        runCmd("touch " + home_path + "/.config/MX-Linux/nocsd/" + DESKTOP );
+        int test = runCmd("mkdir -p " + home_path + "/.config/MX-Linux/nocsd/").exitCode;
+        if ( test != 0 ) {
+            qDebug() << "could not make directory";
+        }
+        test = runCmd("touch " + home_path + "/.config/MX-Linux/nocsd/" + DESKTOP ).exitCode;
+        if ( test != 0 ) {
+            qDebug() << "could not write nocsd desktop file";
+        }
     }
 
 
