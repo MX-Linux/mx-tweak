@@ -1873,18 +1873,21 @@ void defaultlook::setupComboTheme()
         QFileInfo xsettings_theme_home(home_path + "/.themes/" + xsettings_gtk_theme);
         QFileInfo xfwm4_theme_home("" + home_path + "/.themes/" + xfwm4_window_decorations);
         QFileInfo icon_theme_home("" + home_path + "/.icons/" + xsettings_icon_theme);
+        QFileInfo xsettings_theme_home_alt(home_path + "/.local/share/themes/" + xsettings_gtk_theme);
+        QFileInfo xfwm4_theme_home_alt("" + home_path + "/.local/share/themes/" + xfwm4_window_decorations);
+        QFileInfo icon_theme_home_alt("" + home_path + "/.local/share/icons/" + xsettings_icon_theme);
         if (verbose) qDebug() << "xsettings_theme_home path" << xsettings_theme_home.absoluteFilePath();
 
-        if ( xsettings_theme.exists() || xsettings_theme_home.exists() ) {
+        if ( xsettings_theme.exists() || xsettings_theme_home.exists() || xsettings_theme_home_alt.exists()) {
             xsettings_gtk_theme_present = true;
             if (verbose) qDebug() << "xsettings_gtk_theme_present" << xsettings_gtk_theme_present;
         }
 
-        if ( xfwm4_theme.exists() || xfwm4_theme_home.exists() ) {
+        if ( xfwm4_theme.exists() || xfwm4_theme_home.exists() || xfwm4_theme_home_alt.exists()) {
             xfwm4_theme_present = true;
         }
 
-        if ( icon_theme.exists() || icon_theme_home.exists() ) {
+        if ( icon_theme.exists() || icon_theme_home.exists() || xfwm4_theme_home_alt.exists()) {
             icontheme_present = true;
         }
 
@@ -1925,17 +1928,20 @@ void defaultlook::setupComboTheme()
         QFileInfo xsettings_theme_home(home_path + "/.themes/" + xsettings_gtk_theme);
         QFileInfo xfwm4_theme_home("" + home_path + "/.themes/" + xfwm4_window_decorations);
         QFileInfo icon_theme_home("" + home_path + "/.icons/" + xsettings_icon_theme);
+        QFileInfo xsettings_theme_home_alt(home_path + "/.local/share/themes/" + xsettings_gtk_theme);
+        QFileInfo xfwm4_theme_home_alt("" + home_path + "/.local/share/themes/" + xfwm4_window_decorations);
+        QFileInfo icon_theme_home_alt("" + home_path + "/.local/share/icons/" + xsettings_icon_theme);
         if (verbose) qDebug() << "xsettings_theme_home path" << xsettings_theme_home.absoluteFilePath();
 
-        if (xsettings_theme.exists() || xsettings_theme_home.exists() ) {
+        if (xsettings_theme.exists() || xsettings_theme_home.exists() || xsettings_theme_home_alt.exists()) {
             xsettings_gtk_theme_present = true;
         }
 
-        if (xfwm4_theme.exists() || xfwm4_theme_home.exists()) {
+        if (xfwm4_theme.exists() || xfwm4_theme_home.exists() || xfwm4_theme_home_alt.exists()) {
             xfwm4_theme_present = true;
         }
 
-        if (icon_theme.exists() || icon_theme_home.exists()) {
+        if (icon_theme.exists() || icon_theme_home.exists() || icon_theme_home_alt.exists()) {
             icontheme_present = true;
         }
 
@@ -3227,10 +3233,14 @@ void defaultlook::populatethemelists(QString value)
         themes = runCmd("find /usr/share/themes/*/" + value + " -maxdepth 0 2>/dev/null|cut -d\"/\" -f5").output;
         themes.append("\n");
         themes.append(runCmd("find $HOME/.themes/*/" + value + " -maxdepth 0 2>/dev/null|cut -d\"/\" -f5").output);
+        themes.append("\n");
+        themes.append(runCmd("find $HOME/.local/share/themes/*/" + value + " -maxdepth 0 2>/dev/null|cut -d\"/\" -f7").output);
     } else {
         themes = runCmd("find /usr/share/icons/*/index.theme -maxdepth 1 2>/dev/null|cut -d\"/\" -f5").output;
         themes.append("\n");
         themes.append(runCmd("find $HOME/.icons/*/index.theme -maxdepth 1 2>/dev/null|cut -d\"/\" -f5").output);
+        themes.append("\n");
+        themes.append(runCmd("find $HOME/.local/share/icons/*/index.theme -maxdepth 1 2>/dev/null|cut -d\"/\" -f7").output);
     }
     themelist = themes.split("\n");
     themelist.removeDuplicates();
