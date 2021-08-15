@@ -32,6 +32,7 @@
 #include <QLineEdit>
 #include <QLabel>
 #include <QMessageBox>
+#include <QStringList>
 
 #include "xfwm_compositor_settings.h"
 #include "window_buttons.h"
@@ -561,7 +562,9 @@ void defaultlook::fliptovertical()
         QString value = changeIterator.next();
         cmdstring = QString(cmdstring + "-s " + value + " ");
         if (verbose) if (verbose) qDebug() << cmdstring;
-    }QString switchID;
+    }
+
+    QString switchID;
 
     //flip the panel plugins and pray for a miracle
 
@@ -890,6 +893,26 @@ void defaultlook::on_toolButtonXFCEpanelSettings_clicked()
     system("xfce4-panel --preferences");
     system("xprop -spy -name \"Panel Preferences\" >/dev/null");
     this->show();
+    QString test;
+    bool flag;
+
+    //restart panel if background style of any panel is 1 - solid color, affects transparency
+    QStringList panelproperties = runCmd("xfconf-query -c xfce4-panel --list |grep background-style").output.split('\n');
+
+    QStringListIterator changeIterator(panelproperties);
+
+    while (changeIterator.hasNext()) {
+        QString value = changeIterator.next();
+        test = runCmd("xfconf-query -c xfce4-panel -p " + value).output;
+        if ( test == "1" ){
+            flag = true;
+        }
+    }
+
+    if (flag){
+        system("xfce4-panel --restart");
+    }
+
     setuppanel();
 }
 
