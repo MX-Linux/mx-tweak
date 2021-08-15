@@ -54,12 +54,12 @@
     <name>defaultlook</name>
     <message>
         <location filename="../defaultlook.ui" line="20"/>
-        <location filename="../defaultlook.cpp" line="52"/>
-        <location filename="../defaultlook.cpp" line="71"/>
-        <location filename="../defaultlook.cpp" line="656"/>
-        <location filename="../defaultlook.cpp" line="663"/>
-        <location filename="../defaultlook.cpp" line="680"/>
-        <location filename="../defaultlook.cpp" line="691"/>
+        <location filename="../defaultlook.cpp" line="53"/>
+        <location filename="../defaultlook.cpp" line="72"/>
+        <location filename="../defaultlook.cpp" line="659"/>
+        <location filename="../defaultlook.cpp" line="666"/>
+        <location filename="../defaultlook.cpp" line="683"/>
+        <location filename="../defaultlook.cpp" line="694"/>
         <source>MX Tweak</source>
         <translation>MX Tweak</translation>
     </message>
@@ -100,294 +100,300 @@
         <translation>Ρυθμίσεις Xfce</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="164"/>
+        <location filename="../defaultlook.ui" line="311"/>
+        <location filename="../defaultlook.ui" line="318"/>
         <source>Options</source>
         <translation>Επιλογές</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="184"/>
+        <location filename="../defaultlook.ui" line="250"/>
         <source>Backup current panel configuration</source>
         <translation>Αποθήκευση της τρέχουσας διαμόρφωσης του ταμπλό</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="191"/>
+        <location filename="../defaultlook.ui" line="290"/>
         <source>Restore backup panel configuration</source>
         <translation>Επαναφορά της αποθηκευμένης διαμόρφωσης του ταμπλό</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="198"/>
+        <location filename="../defaultlook.ui" line="223"/>
         <source>Restore default panel</source>
         <translation>Επαναφορά προεπιλεγμένου ταμπλό</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="211"/>
-        <location filename="../defaultlook.ui" line="1334"/>
+        <location filename="../defaultlook.ui" line="177"/>
+        <location filename="../defaultlook.ui" line="1348"/>
         <source>Affects 1st panel</source>
         <translation>Επηρεάζει το 1ο ταμπλό</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="218"/>
+        <location filename="../defaultlook.ui" line="304"/>
         <source>Display panel vertically</source>
         <translation>Κάθετη απεικόνιση του ταμπλό</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="238"/>
-        <location filename="../defaultlook.ui" line="1352"/>
+        <location filename="../defaultlook.ui" line="270"/>
+        <location filename="../defaultlook.ui" line="1366"/>
         <source>Bottom</source>
         <translation>Κάτω</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="243"/>
-        <location filename="../defaultlook.ui" line="1362"/>
+        <location filename="../defaultlook.ui" line="275"/>
+        <location filename="../defaultlook.ui" line="1376"/>
         <source>Top</source>
         <translation>Πάνω</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="251"/>
+        <location filename="../defaultlook.ui" line="283"/>
         <source>Display panel horizontally</source>
         <translation>Οριζόντια απεικόνιση του ταμπλό</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="271"/>
-        <location filename="../defaultlook.ui" line="1357"/>
+        <location filename="../defaultlook.ui" line="210"/>
+        <location filename="../defaultlook.ui" line="1371"/>
         <source>Left</source>
         <translation>Αριστερά</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="276"/>
-        <location filename="../defaultlook.ui" line="1367"/>
+        <location filename="../defaultlook.ui" line="215"/>
+        <location filename="../defaultlook.ui" line="1381"/>
         <source>Right</source>
         <translation>Δεξιά</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="284"/>
+        <location filename="../defaultlook.ui" line="164"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Affects all panels&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Επηρεάζει όλα τα ταμπλό&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="304"/>
+        <location filename="../defaultlook.ui" line="230"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Buttons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Κουμπιά παραθύρων&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="319"/>
-        <location filename="../defaultlook.ui" line="363"/>
-        <location filename="../defaultlook.ui" line="519"/>
-        <location filename="../defaultlook.ui" line="761"/>
-        <location filename="../defaultlook.ui" line="884"/>
-        <location filename="../defaultlook.ui" line="891"/>
-        <location filename="../defaultlook.ui" line="984"/>
-        <location filename="../defaultlook.ui" line="1310"/>
-        <location filename="../defaultlook.ui" line="1492"/>
-        <location filename="../defaultlook.ui" line="1631"/>
+        <location filename="../defaultlook.ui" line="333"/>
+        <location filename="../defaultlook.ui" line="377"/>
+        <location filename="../defaultlook.ui" line="533"/>
+        <location filename="../defaultlook.ui" line="858"/>
+        <location filename="../defaultlook.ui" line="865"/>
+        <location filename="../defaultlook.ui" line="872"/>
+        <location filename="../defaultlook.ui" line="998"/>
+        <location filename="../defaultlook.ui" line="1324"/>
+        <location filename="../defaultlook.ui" line="1506"/>
+        <location filename="../defaultlook.ui" line="1617"/>
         <source>Apply</source>
         <translation>Εφαρμογή</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="342"/>
+        <location filename="../defaultlook.ui" line="356"/>
         <source>Theme</source>
         <translation>Θέμα</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="472"/>
+        <location filename="../defaultlook.ui" line="486"/>
         <source>Theme Options</source>
         <translation>Επιλογές</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="400"/>
+        <location filename="../defaultlook.ui" line="414"/>
         <source>Fix some website fields when using dark theme</source>
         <translation>Διόρθωση ορισμένων πεδίων ιστοσελίδας όταν χρησιμοποιείται σκοτεινό θέμα</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="403"/>
+        <location filename="../defaultlook.ui" line="417"/>
         <source>Firefox dark theme tweak</source>
         <translation>Διόρθωση σκοτεινού θέματος στο Firefox</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="386"/>
+        <location filename="../defaultlook.ui" line="400"/>
         <source>Fix HexChat input box in dark theme</source>
         <translation>Διόρθωση πλαισίου εισαγωγής στο HexChat σε σκοτεινό θέμα</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="495"/>
+        <location filename="../defaultlook.ui" line="509"/>
         <source>Undo</source>
         <translation>Αναίρεση</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="393"/>
+        <location filename="../defaultlook.ui" line="407"/>
         <source>Preview</source>
         <translation>Προεπισκόπηση</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="455"/>
+        <location filename="../defaultlook.ui" line="469"/>
         <source>Remove User Theme Set</source>
         <translation>Αφαίρεση θέματος</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="444"/>
+        <location filename="../defaultlook.ui" line="458"/>
         <source>Save Current Settings as a Theme Set</source>
         <translation>Αποθήκευση ρυθμίσεων σαν θέμα</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="505"/>
-        <location filename="../defaultlook.ui" line="546"/>
+        <location filename="../defaultlook.ui" line="519"/>
+        <location filename="../defaultlook.ui" line="560"/>
         <source>Compositor</source>
         <translation>Συνθέτης</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="685"/>
+        <location filename="../defaultlook.ui" line="699"/>
         <source>Launch compton-conf configuration tool</source>
         <translation>Εκτέλεση του εργαλείου διαμόρφωσης Compton-conf</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="688"/>
+        <location filename="../defaultlook.ui" line="702"/>
         <source>Compton settings</source>
         <translation>Ρυθμίσεις Compton</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="671"/>
+        <location filename="../defaultlook.ui" line="685"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce Compositor Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ρυθμίσεις συνθέτη Xfce&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="674"/>
+        <location filename="../defaultlook.ui" line="688"/>
         <source>Xfwm Settings</source>
         <translation>Ρυθμίσεις Xfwm</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="653"/>
+        <location filename="../defaultlook.ui" line="667"/>
         <source>None</source>
         <translation>Κανένα</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="658"/>
+        <location filename="../defaultlook.ui" line="672"/>
         <source>Xfwm (Xfce) Compositor</source>
         <translation>Συνθέτης Xfwm (Xfce)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="663"/>
+        <location filename="../defaultlook.ui" line="677"/>
         <source>Compton </source>
         <translation>Compton </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="553"/>
+        <location filename="../defaultlook.ui" line="567"/>
         <source>Edit compton.conf directly in text editor</source>
         <translation>Επεξεργασία του compton.conf με τον επεξεργαστή κειμένου</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="556"/>
+        <location filename="../defaultlook.ui" line="570"/>
         <source>Edit compton.conf</source>
         <translation>Επεξεργασία του compton.conf</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="539"/>
+        <location filename="../defaultlook.ui" line="553"/>
         <source>Transparency and shadow options</source>
         <translation>Επιλογές διαφάνειας και σκιάς</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="606"/>
+        <location filename="../defaultlook.ui" line="297"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="620"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Changing the VBlank mode may help alleviate some screen tearing issues.  See Help for more information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Η αλλαγή στη λειτουργία VBlank μπορεί να βοηθήσει στην επίλυση ορισμένων ζητημάτων απεικόνισης. Δείτε τη βοήθεια για περισσότερες πληροφορίες.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="609"/>
+        <location filename="../defaultlook.ui" line="623"/>
         <source>VBlank</source>
         <translation>VBlank</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="617"/>
+        <location filename="../defaultlook.ui" line="631"/>
         <source>auto</source>
         <translation>auto</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="622"/>
+        <location filename="../defaultlook.ui" line="636"/>
         <source>glx</source>
         <translation>glx</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="627"/>
+        <location filename="../defaultlook.ui" line="641"/>
         <source>xpresent</source>
         <translation>xpresent</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="632"/>
+        <location filename="../defaultlook.ui" line="646"/>
         <source>off</source>
         <translation>off</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="702"/>
-        <location filename="../defaultlook.cpp" line="3280"/>
+        <location filename="../defaultlook.ui" line="716"/>
+        <location filename="../defaultlook.cpp" line="3356"/>
         <source>Display</source>
         <translation>Οθόνη</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="720"/>
+        <location filename="../defaultlook.ui" line="724"/>
         <source>Hardware Backlight</source>
         <translation>Οπίσθιος φωτισμός</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="727"/>
+        <location filename="../defaultlook.ui" line="731"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Display Tweaks&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ρυθμίσεις οθόνης&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="754"/>
+        <location filename="../defaultlook.ui" line="758"/>
         <source>Choose Display for xrandr tweaks</source>
         <translation>Επιλέξτε οθόνη για τροποποιήσεις xrandr</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="787"/>
+        <location filename="../defaultlook.ui" line="768"/>
         <source>Resolution</source>
         <translation>Ανάλυση</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="794"/>
+        <location filename="../defaultlook.ui" line="775"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Saving is per display&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Αποθήκευση ανά οθόνη&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="797"/>
+        <location filename="../defaultlook.ui" line="778"/>
         <source>Save</source>
         <translation>Αποθήκευση</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="804"/>
+        <location filename="../defaultlook.ui" line="785"/>
         <source>Software (xrandr) Brightness</source>
         <translation>Λογισμικό (xrandr) Φωτεινότητα</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="811"/>
-        <location filename="../defaultlook.ui" line="825"/>
+        <location filename="../defaultlook.ui" line="792"/>
+        <location filename="../defaultlook.ui" line="889"/>
         <source>TextLabel</source>
         <translation>Επικεφαλίδα</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="818"/>
+        <location filename="../defaultlook.ui" line="799"/>
         <source>GTK scaling</source>
         <translation>Κλίμακα GTK</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="845"/>
+        <location filename="../defaultlook.ui" line="819"/>
         <source>xrandr Scaling</source>
         <translation>Κλίμακα xrandr</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="901"/>
+        <location filename="../defaultlook.ui" line="915"/>
         <source>Config Options</source>
         <translation>Επιλογές διαμόρφωσης</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="909"/>
+        <location filename="../defaultlook.ui" line="923"/>
         <source>Reset Thunar custom right-click actions to system defaults</source>
         <translation>Επαναφορά ενεργειών του δεξιού κλικ στο Thunar στις προεπιλογές του συστήματος</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="916"/>
+        <location filename="../defaultlook.ui" line="930"/>
         <source>Enable single-click on desktop</source>
         <translation>Ενεργοποίηση του απλό κλικ στην επιφάνεια εργασίας</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="923"/>
+        <location filename="../defaultlook.ui" line="937"/>
         <source>Enable single-click in Thunar File Manager</source>
         <translation>Ενεργοποίηση του απλό κλικ στο Thunar</translation>
     </message>
@@ -396,360 +402,365 @@
         <translation type="vanished">Εμφάνιση εικονιδίου systray (περιοχή ειδοποίησης)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="937"/>
-        <location filename="../defaultlook.ui" line="1452"/>
+        <location filename="../defaultlook.ui" line="951"/>
+        <location filename="../defaultlook.ui" line="1466"/>
         <source>Show windows from all workspaces in panel</source>
         <translation>Εμφάνιση των παραθύρων από όλους τους χώρους εργασίας στο ταμπλό</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="944"/>
+        <location filename="../defaultlook.ui" line="958"/>
         <source>Disable shortening of long filenames on the desktop</source>
         <translation>Απενεργοποίηση σύμπτυξης μεγάλων ονομάτων αρχείων στην επιφάνεια εργασίας</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="951"/>
+        <location filename="../defaultlook.ui" line="965"/>
         <source>Enable hibernate on Log Out menu </source>
         <translation>Ενεργοποίηση της αδρανοποίησης στο μενού αποσύνδεσης </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="958"/>
+        <location filename="../defaultlook.ui" line="972"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
         <translation>                   σημείωση: σε κατάσταση αδρανοποίησης, το swap πρέπει να είναι &gt;= RAM</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="998"/>
+        <location filename="../defaultlook.ui" line="1012"/>
         <source>Fluxbox</source>
         <translation>Fluxbox </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1006"/>
-        <location filename="../defaultlook.ui" line="1459"/>
+        <location filename="../defaultlook.ui" line="1020"/>
+        <location filename="../defaultlook.ui" line="1473"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Επαναφορά προεπιλογών&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1013"/>
+        <location filename="../defaultlook.ui" line="1027"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Desktop Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Εικονίδια επιφάνειας εργασίας&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1020"/>
+        <location filename="../defaultlook.ui" line="1034"/>
         <source>Reset DefaultDock</source>
         <translation>Επαναφορά DefaultDock</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1027"/>
+        <location filename="../defaultlook.ui" line="1041"/>
         <source>Toggle desktop icons</source>
         <translation>Εναλλαγή εικονιδίων επιφάνειας εργασίας</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1035"/>
-        <location filename="../defaultlook.ui" line="1066"/>
+        <location filename="../defaultlook.ui" line="1049"/>
+        <location filename="../defaultlook.ui" line="1080"/>
         <source>On</source>
         <translation>Ενεργοποίηση</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1040"/>
-        <location filename="../defaultlook.ui" line="1071"/>
+        <location filename="../defaultlook.ui" line="1054"/>
+        <location filename="../defaultlook.ui" line="1085"/>
         <source>Off</source>
         <translation>Απενεργοποίηση</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1048"/>
+        <location filename="../defaultlook.ui" line="1062"/>
         <source>Reset Fluxbox Menu</source>
         <translation>Επαναφορά μενού Fluxbox</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1055"/>
+        <location filename="../defaultlook.ui" line="1069"/>
         <source>Toggle icon captions</source>
         <translation>Εναλλαγή λεζάντων εικονιδίων</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1076"/>
+        <location filename="../defaultlook.ui" line="1090"/>
         <source>On Hover</source>
         <translation>Στο Hover</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1097"/>
+        <location filename="../defaultlook.ui" line="1111"/>
         <source>Reset ALL mx-fluxbox settings</source>
         <translation>Επαναφέρετε ΟΛΕΣ τις ρυθμίσεις mx-fluxbox</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1104"/>
+        <location filename="../defaultlook.ui" line="1118"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1107"/>
+        <location filename="../defaultlook.ui" line="1121"/>
         <source>Upgrade existing menu entries</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1114"/>
+        <location filename="../defaultlook.ui" line="1128"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ρυθμίσεις γραμμής εργαλείων&lt;/span&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1121"/>
-        <location filename="../defaultlook.ui" line="1229"/>
-        <location filename="../defaultlook.ui" line="1341"/>
+        <location filename="../defaultlook.ui" line="1135"/>
+        <location filename="../defaultlook.ui" line="1243"/>
+        <location filename="../defaultlook.ui" line="1355"/>
         <source>Placement</source>
         <translation>Τοποθέτηση</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1195"/>
+        <location filename="../defaultlook.ui" line="1209"/>
         <source>Width</source>
         <translation>Πλάτος</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1205"/>
-        <location filename="../defaultlook.ui" line="1303"/>
+        <location filename="../defaultlook.ui" line="1219"/>
+        <location filename="../defaultlook.ui" line="1317"/>
         <source>Autohide</source>
         <translation>Αυτόματη απόκρυψη</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1212"/>
+        <location filename="../defaultlook.ui" line="1226"/>
         <source>Height</source>
         <translation>Υψος</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1222"/>
+        <location filename="../defaultlook.ui" line="1236"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ρυθμίσεις dock&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1320"/>
+        <location filename="../defaultlook.ui" line="1334"/>
         <source>Plasma</source>
         <translation>Plasma</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1466"/>
+        <location filename="../defaultlook.ui" line="1480"/>
         <source>Reset KDE/Plasma defaults</source>
         <translation>Επαναφορά προεπιλογών KDE/Plasma</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1445"/>
+        <location filename="../defaultlook.ui" line="1459"/>
         <source>Enable single-click</source>
         <translation>Ενεργοποίηση του απλό κλικ</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1438"/>
+        <location filename="../defaultlook.ui" line="1452"/>
         <source>Workspace</source>
         <translation>Επιφάνεια εργασίας</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1375"/>
+        <location filename="../defaultlook.ui" line="1389"/>
         <source>Systray Icon Size</source>
         <translation>Μέγεθος εικονιδίου Systray</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="350"/>
+        <location filename="../defaultlook.ui" line="364"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="410"/>
+        <location filename="../defaultlook.ui" line="424"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Manager&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="417"/>
+        <location filename="../defaultlook.ui" line="431"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Themes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="424"/>
+        <location filename="../defaultlook.ui" line="438"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="930"/>
+        <location filename="../defaultlook.ui" line="944"/>
         <source>Enable Desktop Zoom </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1386"/>
+        <location filename="../defaultlook.ui" line="1400"/>
         <source>Default</source>
         <translation>Εξ ορισμού</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1391"/>
+        <location filename="../defaultlook.ui" line="1405"/>
         <source>Small</source>
         <translation>Μικρό</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1396"/>
+        <location filename="../defaultlook.ui" line="1410"/>
         <source>Medium</source>
         <translation>Μεσαίο</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1401"/>
+        <location filename="../defaultlook.ui" line="1415"/>
         <source>Large</source>
         <translation>Μεγάλο</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1406"/>
+        <location filename="../defaultlook.ui" line="1420"/>
         <source>Larger</source>
         <translation>Μεγαλύτερος</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1411"/>
+        <location filename="../defaultlook.ui" line="1425"/>
         <source>Largest</source>
         <translation>Μεγαλύτερο</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1506"/>
+        <location filename="../defaultlook.ui" line="1520"/>
         <source>Other</source>
         <translation>Άλλα</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1514"/>
+        <location filename="../defaultlook.ui" line="1597"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>Επαναφορά θέματος του Lightdm (οθόνη σύνδεσης) στο προεπιλεγμένο του συστήματος</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1521"/>
+        <location filename="../defaultlook.ui" line="1635"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>Ενεργοποίηση προσάρτησης των εσωτερικών δίσκων από μη χρήστες root</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1528"/>
+        <location filename="../defaultlook.ui" line="1583"/>
         <source>Enable kernel sandbox</source>
         <translation>Ενεργοποίηση sandbox του πυρήνα</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1535"/>
+        <location filename="../defaultlook.ui" line="1604"/>
         <source>Use libinput driver for touchpad instead of synaptics touchpad driver (requires restart)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1542"/>
+        <location filename="../defaultlook.ui" line="1576"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>Χρησιμοποιήστε το πρόγραμμα οδήγησης intel αντί του προεπιλεγμένου προγράμματος οδήγησης &quot;modesetting&quot; (απαιτείται επανεκκίνηση)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1549"/>
+        <location filename="../defaultlook.ui" line="1590"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>          ΣΗΜΕΙΩΣΗ: Θα δημιουργηθεί αντίγραφο ασφαλείας του αρχείου /etc/X11/xorg.conf.d/20-intel.conf στον αρχικό φάκελο του χρήστη</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1556"/>
+        <location filename="../defaultlook.ui" line="1642"/>
         <source>Use tearfree amdgpu option</source>
         <translation>Χρήση της επιλογής tearfree για amdgpu</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1563"/>
+        <location filename="../defaultlook.ui" line="1628"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>          ΣΗΜΕΙΩΣΗ: Θα δημιουργηθεί αντίγραφο ασφαλείας του αρχείου /etc/X11/xorg.conf.d/20-amd.conf  στον αρχικό φάκελο του χρήστη</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1570"/>
+        <location filename="../defaultlook.ui" line="1535"/>
         <source>Use tearfree radeon driver option</source>
         <translation>Χρήση της επιλογής tearfree για radeon</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1577"/>
+        <location filename="../defaultlook.ui" line="1542"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>          ΣΗΜΕΙΩΣΗ: Θα δημιουργηθεί αντίγραφο ασφαλείας του αρχείου /etc/X11/xorg.conf.d/20-radeon.conf στον αρχικό φάκελο του χρήστη</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1591"/>
+        <location filename="../defaultlook.ui" line="1528"/>
         <source>Password for administrative tasks:</source>
         <translation>Κωδικός πρόσβασης για εργασίες διαχειριστή:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1598"/>
+        <location filename="../defaultlook.ui" line="1562"/>
         <source>&amp;User</source>
         <translation>Χρήστης</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1605"/>
+        <location filename="../defaultlook.ui" line="1649"/>
         <source>Root</source>
         <translation>Root</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1704"/>
+        <location filename="../defaultlook.ui" line="1656"/>
+        <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1725"/>
         <source>About</source>
         <translation>Περί</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1715"/>
+        <location filename="../defaultlook.ui" line="1736"/>
         <source>Help</source>
         <translation>Βοήθεια</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1732"/>
+        <location filename="../defaultlook.ui" line="1753"/>
         <source>Quit application</source>
         <translation>Κλείσιμο εφαρμογής</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1735"/>
+        <location filename="../defaultlook.ui" line="1756"/>
         <source>Close</source>
         <translation>Κλείσιμο</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1742"/>
+        <location filename="../defaultlook.ui" line="1763"/>
         <source>Alt+N</source>
         <translation>Alt+N</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="53"/>
+        <location filename="../defaultlook.cpp" line="54"/>
         <source>--display switch only valid for Xfce</source>
         <translation>--διακόπτης οθόνης. Ισχύει μόνο για Xfce</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="655"/>
+        <location filename="../defaultlook.cpp" line="658"/>
         <source>About MX Tweak</source>
         <translation>Περί του MX Tweak</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="656"/>
+        <location filename="../defaultlook.cpp" line="659"/>
         <source>Version: </source>
         <translation>Έκδοση: </translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="657"/>
+        <location filename="../defaultlook.cpp" line="660"/>
         <source>App for quick default ui theme changes and tweaks</source>
         <translation>Πρόγραμμα για γρήγορες αλλαγές και διορθώσεις του προεπιλεγμένου θέματος</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="659"/>
+        <location filename="../defaultlook.cpp" line="662"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Πνευματικά δικαιώματα (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="660"/>
         <location filename="../defaultlook.cpp" line="663"/>
+        <location filename="../defaultlook.cpp" line="666"/>
         <source>License</source>
         <translation>Άδεια</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="661"/>
+        <location filename="../defaultlook.cpp" line="664"/>
         <source>Cancel</source>
         <translation>Ακύρωση</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="692"/>
+        <location filename="../defaultlook.cpp" line="695"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
         <translation>Ολοκληρώθηκε! Το Firefox μπορεί να χρειαστεί επανεκκίνηση για να ισχύσουν οι αλλαγές</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="883"/>
+        <location filename="../defaultlook.cpp" line="886"/>
         <source>Panel settings</source>
         <translation>Ρυθμίσεις ταμπλό</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="884"/>
+        <location filename="../defaultlook.cpp" line="887"/>
         <source>Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
         <translation>Οι τρέχουσες ρυθμίσεις του ταμπλό σας αποθηκεύτηκαν σαν αντίγραφο ασφαλείας, σε έναν κρυφό φάκελο με όνομα .restore στον αρχικό φάκελο του χρήστη (~/.restore /)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1534"/>
+        <location filename="../defaultlook.cpp" line="1582"/>
         <source>settings</source>
         <translation>ρυθμίσεις</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1875"/>
+        <location filename="../defaultlook.cpp" line="1926"/>
         <source>Choose a theme set</source>
         <translation>Επιλέξτε θέμα</translation>
     </message>
