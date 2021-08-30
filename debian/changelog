@@ -1,3 +1,9 @@
+mx-tweak (21.08.03mx21) mx; urgency=medium
+
+  * restart panel when preferences are selected and solid color is panel setting
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Mon, 30 Aug 2021 18:40:26 -0400
+
 mx-tweak (21.08.02mx21) mx; urgency=medium
 
   * search for folders for themes 
