@@ -32,6 +32,7 @@
 #include <QLineEdit>
 #include <QLabel>
 #include <QMessageBox>
+#include <QStringList>
 
 #include "xfwm_compositor_settings.h"
 #include "window_buttons.h"
@@ -561,7 +562,9 @@ void defaultlook::fliptovertical()
         QString value = changeIterator.next();
         cmdstring = QString(cmdstring + "-s " + value + " ");
         if (verbose) if (verbose) qDebug() << cmdstring;
-    }QString switchID;
+    }
+
+    QString switchID;
 
     //flip the panel plugins and pray for a miracle
 
@@ -890,6 +893,26 @@ void defaultlook::on_toolButtonXFCEpanelSettings_clicked()
     system("xfce4-panel --preferences");
     system("xprop -spy -name \"Panel Preferences\" >/dev/null");
     this->show();
+    QString test;
+    bool flag;
+
+    //restart panel if background style of any panel is 1 - solid color, affects transparency
+    QStringList panelproperties = runCmd("xfconf-query -c xfce4-panel --list |grep background-style").output.split('\n');
+
+    QStringListIterator changeIterator(panelproperties);
+
+    while (changeIterator.hasNext()) {
+        QString value = changeIterator.next();
+        test = runCmd("xfconf-query -c xfce4-panel -p " + value).output;
+        if ( test == "1" ){
+            flag = true;
+        }
+    }
+
+    if (flag){
+        system("xfce4-panel --restart");
+    }
+
     setuppanel();
 }
 
@@ -947,6 +970,15 @@ void defaultlook::setuppanel()
         ui->labelTasklist->hide();
         ui->pushButtontasklist->hide();
     }
+
+    //hide docklike settings if not present
+
+    if ( system("grep -q docklike ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml") != 0 ) {
+        ui->labelDocklikeSettings->hide();
+        ui->pushButtonDocklikeSetttings->hide();
+    }
+
+
 
     //reset all checkboxes to unchecked
 
@@ -1193,6 +1225,7 @@ void defaultlook::setupEtc()
 {
     QString home_path = QDir::homePath();
     QString DESKTOP = runCmd("echo $XDG_SESSION_DESKTOP").output;
+    qDebug() << "setupetc nocsd desktop is:" << DESKTOP;
 
     ui->checkBoxLightdmReset->setChecked(false);
     QString test = runCmd("pgrep lightdm").output;
@@ -1257,8 +1290,12 @@ void defaultlook::setupEtc()
 
     //setup NOCSD GTK3 option
     if (!QFileInfo::exists("/usr/bin/gtk3-nocsd")){
+        qDebug() << "gtk3-nocsd not found";
         ui->checkBoxCSD->hide();
+    } else {
+        qDebug() << "gtk3-nocsd found";
     }
+    qDebug() << "home path nocsd is" << home_path + "/.config/MX-Linux/nocsd/" + DESKTOP;
     if (QFileInfo::exists(home_path + "/.config/MX-Linux/nocsd/" + DESKTOP)){
         ui->checkBoxCSD->setChecked(false);
     } else {
@@ -1859,18 +1896,21 @@ void defaultlook::setupComboTheme()
         QFileInfo xsettings_theme_home(home_path + "/.themes/" + xsettings_gtk_theme);
         QFileInfo xfwm4_theme_home("" + home_path + "/.themes/" + xfwm4_window_decorations);
         QFileInfo icon_theme_home("" + home_path + "/.icons/" + xsettings_icon_theme);
+        QFileInfo xsettings_theme_home_alt(home_path + "/.local/share/themes/" + xsettings_gtk_theme);
+        QFileInfo xfwm4_theme_home_alt("" + home_path + "/.local/share/themes/" + xfwm4_window_decorations);
+        QFileInfo icon_theme_home_alt("" + home_path + "/.local/share/icons/" + xsettings_icon_theme);
         if (verbose) qDebug() << "xsettings_theme_home path" << xsettings_theme_home.absoluteFilePath();
 
-        if ( xsettings_theme.exists() || xsettings_theme_home.exists() ) {
+        if ( xsettings_theme.exists() || xsettings_theme_home.exists() || xsettings_theme_home_alt.exists()) {
             xsettings_gtk_theme_present = true;
             if (verbose) qDebug() << "xsettings_gtk_theme_present" << xsettings_gtk_theme_present;
         }
 
-        if ( xfwm4_theme.exists() || xfwm4_theme_home.exists() ) {
+        if ( xfwm4_theme.exists() || xfwm4_theme_home.exists() || xfwm4_theme_home_alt.exists()) {
             xfwm4_theme_present = true;
         }
 
-        if ( icon_theme.exists() || icon_theme_home.exists() ) {
+        if ( icon_theme.exists() || icon_theme_home.exists() || xfwm4_theme_home_alt.exists()) {
             icontheme_present = true;
         }
 
@@ -1911,17 +1951,20 @@ void defaultlook::setupComboTheme()
         QFileInfo xsettings_theme_home(home_path + "/.themes/" + xsettings_gtk_theme);
         QFileInfo xfwm4_theme_home("" + home_path + "/.themes/" + xfwm4_window_decorations);
         QFileInfo icon_theme_home("" + home_path + "/.icons/" + xsettings_icon_theme);
+        QFileInfo xsettings_theme_home_alt(home_path + "/.local/share/themes/" + xsettings_gtk_theme);
+        QFileInfo xfwm4_theme_home_alt("" + home_path + "/.local/share/themes/" + xfwm4_window_decorations);
+        QFileInfo icon_theme_home_alt("" + home_path + "/.local/share/icons/" + xsettings_icon_theme);
         if (verbose) qDebug() << "xsettings_theme_home path" << xsettings_theme_home.absoluteFilePath();
 
-        if (xsettings_theme.exists() || xsettings_theme_home.exists() ) {
+        if (xsettings_theme.exists() || xsettings_theme_home.exists() || xsettings_theme_home_alt.exists()) {
             xsettings_gtk_theme_present = true;
         }
 
-        if (xfwm4_theme.exists() || xfwm4_theme_home.exists()) {
+        if (xfwm4_theme.exists() || xfwm4_theme_home.exists() || xfwm4_theme_home_alt.exists()) {
             xfwm4_theme_present = true;
         }
 
-        if (icon_theme.exists() || icon_theme_home.exists()) {
+        if (icon_theme.exists() || icon_theme_home.exists() || icon_theme_home_alt.exists()) {
             icontheme_present = true;
         }
 
@@ -2110,13 +2153,21 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     QString user_name_space_override_option;
     udisks_option.clear();
 
+    qDebug() << "applyetc DESKTOP is " << DESKTOP;
+    qDebug() << "home path applyetc is " << home_path + "/.config/MX-Linux/nocsd/" + DESKTOP;
     if (ui->checkBoxCSD->isChecked()){
         if ( QFileInfo::exists(home_path + "/.config/MX-Linux/nocsd/" + DESKTOP)){
             runCmd("rm " + home_path + "/.config/MX-Linux/nocsd/" + DESKTOP);
         }
     } else {
-        runCmd("mkdir -p " + home_path + "/.config/MX-Linux/nocsd/");
-        runCmd("touch " + home_path + "/.config/MX-Linux/nocsd/" + DESKTOP );
+        int test = runCmd("mkdir -p " + home_path + "/.config/MX-Linux/nocsd/").exitCode;
+        if ( test != 0 ) {
+            qDebug() << "could not make directory";
+        }
+        test = runCmd("touch " + home_path + "/.config/MX-Linux/nocsd/" + DESKTOP ).exitCode;
+        if ( test != 0 ) {
+            qDebug() << "could not write nocsd desktop file";
+        }
     }
 
 
@@ -3205,10 +3256,14 @@ void defaultlook::populatethemelists(QString value)
         themes = runCmd("find /usr/share/themes/*/" + value + " -maxdepth 0 2>/dev/null|cut -d\"/\" -f5").output;
         themes.append("\n");
         themes.append(runCmd("find $HOME/.themes/*/" + value + " -maxdepth 0 2>/dev/null|cut -d\"/\" -f5").output);
+        themes.append("\n");
+        themes.append(runCmd("find $HOME/.local/share/themes/*/" + value + " -maxdepth 0 2>/dev/null|cut -d\"/\" -f7").output);
     } else {
         themes = runCmd("find /usr/share/icons/*/index.theme -maxdepth 1 2>/dev/null|cut -d\"/\" -f5").output;
         themes.append("\n");
         themes.append(runCmd("find $HOME/.icons/*/index.theme -maxdepth 1 2>/dev/null|cut -d\"/\" -f5").output);
+        themes.append("\n");
+        themes.append(runCmd("find $HOME/.local/share/icons/*/index.theme -maxdepth 1 2>/dev/null|cut -d\"/\" -f7").output);
     }
     themelist = themes.split("\n");
     themelist.removeDuplicates();
@@ -3308,4 +3363,9 @@ void defaultlook::on_tabWidget_currentChanged(int index)
 void defaultlook::on_checkBoxCSD_clicked()
 {
     ui->ButtonApplyEtc->setEnabled(true);
+}
+
+void defaultlook::on_pushButtonDocklikeSetttings_clicked()
+{
+    system("xfce4-panel --plugin-event=docklike:settings");
 }
