@@ -122,7 +122,7 @@ if [ -d /etc/polkit-1/localauthority.conf.d/ ]; then
     fi
     
     cp /usr/share/mx-tweak/55-tweak-override.conf /etc/polkit-1/localauthority.conf.d
-
+    
 }
 
 disable_sudo_override()
@@ -137,17 +137,17 @@ enable_sandbox()
 		mkdir -p /etc/systclt.d
 	fi
 	sysctl kernel.unprivileged_userns_clone=1
-	sysctl kernel.yama.ptrace_scope=1
+	#sysctl kernel.yama.ptrace_scope=1
 	echo "kernel.unprivileged_userns_clone=1"> /etc/sysctl.d/99-sandbox-mx.conf
-	echo "kernel.yama.ptrace_scope=1">>/etc/sysctl.d/99-sandbox-mx.conf
+	#echo "kernel.yama.ptrace_scope=1">>/etc/sysctl.d/99-sandbox-mx.conf
 }
 
 disable_sandbox()
 {
 	sysctl kernel.unprivileged_userns_clone=0
-	sysctl kernel.yama.ptrace_scope=0
+	#sysctl kernel.yama.ptrace_scope=0
 	echo "kernel.unprivileged_userns_clone=0"> /etc/sysctl.d/99-sandbox-mx.conf
-	echo "kernel.yama.ptrace_scope=0">>/etc/sysctl.d/99-sandbox-mx.conf
+	#echo "kernel.yama.ptrace_scope=0">>/etc/sysctl.d/99-sandbox-mx.conf
 }
 
 
