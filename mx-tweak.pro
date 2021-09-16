@@ -44,6 +44,7 @@ TRANSLATIONS += translations/mx-tweak_am.ts \
                 translations/mx-tweak_de.ts \
                 translations/mx-tweak_el.ts \
                 translations/mx-tweak_es.ts \
+                translations/mx-tweak_es_ES.ts \
                 translations/mx-tweak_et.ts \
                 translations/mx-tweak_eu.ts \
                 translations/mx-tweak_fa.ts \
