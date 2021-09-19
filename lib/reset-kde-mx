@@ -12,9 +12,11 @@ kwriteconfig --file ~/.config/kcminputrc --group Mouse --key cursorTheme breeze_
 
 kwriteconfig --file ~/.config/kdeglobals --group General --key BrowserApplication firefox.desktop
 
-kwriteconfig --file ~/.config/kdeglobals --group General --key Name Breeze
+kwriteconfig --file ~/.config/kdeglobals --group General --key Name MX-Comfort-Breeze
 
-kwriteconfig --file ~/.config/kdeglobals --group Icons --key Theme Papirus
+kwriteconfig --file ~/.config/kdeglobals --group General --key ColorScheme MXcomfortbreeze
+
+kwriteconfig --file ~/.config/kdeglobals --group Icons --key Theme Papirus-mxblue-darkpanes
 
 kwriteconfig --file ~/.config/kdeglobals --group General --key shadeSortColumn true
 
