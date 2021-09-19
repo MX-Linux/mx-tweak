@@ -1276,10 +1276,11 @@ void defaultlook::setupEtc()
     //setup user namespaces option (99-sandbox-mx.conf)
     sandboxflag = false;
     QString userns_clone = runCmd("/usr/sbin/sysctl -n kernel.unprivileged_userns_clone").output;
-    QString yama_ptrace = runCmd("/usr/sbin/sysctl -n kernel.yama.ptrace_scope").output;
+    //QString yama_ptrace = runCmd("/usr/sbin/sysctl -n kernel.yama.ptrace_scope").output;
     if (verbose) qDebug() << "userns_clone is: " << userns_clone;
     if (userns_clone == "0" || userns_clone == "1"){
-        if (userns_clone == "1" && yama_ptrace == "1"){
+        //if (userns_clone == "1" && yama_ptrace == "1"){
+        if (userns_clone == "1"){
             ui->checkBoxSandbox->setChecked(true);
         } else {
             ui->checkBoxSandbox->setChecked(false);
