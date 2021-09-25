@@ -149,7 +149,7 @@
       <enum>QTabWidget::North</enum>
      </property>
      <property name="currentIndex">
-      <number>5</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="Panel">
       <attribute name="title">
@@ -217,13 +217,6 @@
            </item>
           </widget>
          </item>
-         <item row="5" column="0">
-          <widget class="QCheckBox" name="radioDefaultPanel">
-           <property name="text">
-            <string>Restore default panel</string>
-           </property>
-          </widget>
-         </item>
          <item row="8" column="0">
           <widget class="QLabel" name="labelTasklist">
            <property name="text">
@@ -243,13 +236,6 @@
             </size>
            </property>
           </spacer>
-         </item>
-         <item row="6" column="0" colspan="2">
-          <widget class="QCheckBox" name="radioBackupPanel">
-           <property name="text">
-            <string>Backup current panel configuration</string>
-           </property>
-          </widget>
          </item>
          <item row="2" column="1">
           <widget class="QComboBox" name="comboboxHorzPostition">
@@ -277,31 +263,10 @@
            </item>
           </widget>
          </item>
-         <item row="2" column="0">
-          <widget class="QCheckBox" name="checkHorz">
-           <property name="text">
-            <string>Display panel horizontally</string>
-           </property>
-          </widget>
-         </item>
-         <item row="7" column="0" colspan="2">
-          <widget class="QCheckBox" name="radioRestoreBackup">
-           <property name="text">
-            <string>Restore backup panel configuration</string>
-           </property>
-          </widget>
-         </item>
          <item row="10" column="0">
           <widget class="QLabel" name="labelDocklikeSettings">
            <property name="text">
             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="0">
-          <widget class="QCheckBox" name="checkVert">
-           <property name="text">
-            <string>Display panel vertically</string>
            </property>
           </widget>
          </item>
@@ -316,6 +281,41 @@
           <widget class="QPushButton" name="pushButtonDocklikeSetttings">
            <property name="text">
             <string>Options</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QRadioButton" name="checkHorz">
+           <property name="text">
+            <string>Display panel horizontally</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QRadioButton" name="checkVert">
+           <property name="text">
+            <string>Display panel vertically</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QRadioButton" name="radioDefaultPanel">
+           <property name="text">
+            <string>Restore default panel</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0" colspan="2">
+          <widget class="QRadioButton" name="radioBackupPanel">
+           <property name="text">
+            <string>Backup current panel configuration</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="0" colspan="2">
+          <widget class="QRadioButton" name="radioRestoreBackup">
+           <property name="text">
+            <string>Restore backup panel configuration</string>
            </property>
           </widget>
          </item>
