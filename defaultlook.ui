@@ -289,12 +289,18 @@
            <property name="text">
             <string>Display panel horizontally</string>
            </property>
+           <property name="autoExclusive">
+            <bool>false</bool>
+           </property>
           </widget>
          </item>
          <item row="3" column="0">
           <widget class="QRadioButton" name="checkVert">
            <property name="text">
             <string>Display panel vertically</string>
+           </property>
+           <property name="autoExclusive">
+            <bool>false</bool>
            </property>
           </widget>
          </item>
@@ -303,6 +309,9 @@
            <property name="text">
             <string>Restore default panel</string>
            </property>
+           <property name="autoExclusive">
+            <bool>false</bool>
+           </property>
           </widget>
          </item>
          <item row="6" column="0" colspan="2">
@@ -310,12 +319,18 @@
            <property name="text">
             <string>Backup current panel configuration</string>
            </property>
+           <property name="autoExclusive">
+            <bool>false</bool>
+           </property>
           </widget>
          </item>
          <item row="7" column="0" colspan="2">
           <widget class="QRadioButton" name="radioRestoreBackup">
            <property name="text">
             <string>Restore backup panel configuration</string>
+           </property>
+           <property name="autoExclusive">
+            <bool>false</bool>
            </property>
           </widget>
          </item>
