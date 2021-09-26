@@ -1,3 +1,10 @@
+mx-tweak (21.09.03mx21) mx; urgency=medium
+
+  * new translations
+  * radio buttons on panel tab 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 25 Sep 2021 21:35:58 -0400
+
 mx-tweak (21.09.02mx21) mx; urgency=medium
 
   * revise size of fluxbox spinboxes 
