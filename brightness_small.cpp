@@ -6,6 +6,7 @@
 #include "QMenu"
 #include "QDialog"
 #include "QKeyEvent"
+#include "QScreen"
 
 brightness_small::brightness_small(QWidget *parent, QStringList args) :
     QMainWindow(parent),
@@ -75,8 +76,8 @@ void brightness_small::iconActivated(QSystemTrayIcon::ActivationReason reason)
         setupBrightness();
         setupGamma();
         setupbacklight();
-        this->move(QCursor::pos());
         this->adjustSize();
+        setPosition();
         this->show();
         break;
     default:
@@ -84,7 +85,16 @@ void brightness_small::iconActivated(QSystemTrayIcon::ActivationReason reason)
     }
 }
 
-
+void brightness_small::setPosition()
+{
+    QPoint pos = QCursor::pos();
+    QScreen *screen = QGuiApplication::screenAt(pos);
+    if (pos.y() + this->size().height() > screen->availableVirtualGeometry().height())
+        pos.setY(screen->availableVirtualGeometry().height() - this->size().height());
+    if (pos.x() + this->size().width() > screen->availableVirtualGeometry().width())
+        pos.setX(screen->availableVirtualGeometry().width() - this->size().width());
+    this->move(pos);
+}
 // Util function for getting bash command output and error code
 Result3 brightness_small::runCmd(QString cmd)
 {
