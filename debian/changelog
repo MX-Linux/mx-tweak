@@ -1,3 +1,16 @@
+mx-tweak (21.10.01mx21) mx; urgency=medium
+
+  * set postition fuction from mx-usb-unmounter (adrian) 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Mon, 11 Oct 2021 20:31:08 -0400
+
+mx-tweak (21.09.03mx21) mx; urgency=medium
+
+  * new translations
+  * radio buttons on panel tab 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 25 Sep 2021 21:35:58 -0400
+
 mx-tweak (21.09.02mx21) mx; urgency=medium
 
   * revise size of fluxbox spinboxes 

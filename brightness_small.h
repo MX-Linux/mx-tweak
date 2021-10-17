@@ -66,6 +66,8 @@ private slots:
 
     void on_toolButtonExpandBacklight_clicked();
 
+    void setPosition();
+
 private:
     Ui::brightness_small *ui;
     QSystemTrayIcon *trayicon;
