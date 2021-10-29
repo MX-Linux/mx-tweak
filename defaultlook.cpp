@@ -33,6 +33,7 @@
 #include <QLabel>
 #include <QMessageBox>
 #include <QStringList>
+#include <QDateTime>
 
 #include "xfwm_compositor_settings.h"
 #include "window_buttons.h"
@@ -82,11 +83,6 @@ void defaultlook::setup()
         isOther = false;
         whichpanel();
         message_flag = false;
-        QFileInfo backuppanel(home_path + "/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml");
-        if (!backuppanel.exists()) {
-            backupPanel();
-            message2();
-        }
         //setup theme tab
         setuptheme();
         ui->buttonThemeUndo->setEnabled(false);
@@ -958,6 +954,15 @@ void defaultlook::on_comboboxVertpostition_currentIndexChanged(const QString &ar
 }
 void defaultlook::setuppanel()
 {
+    QString home_path = QDir::homePath();
+    QFileInfo backuppanel(home_path + "/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml");
+    if (!backuppanel.exists()) {
+        backupPanel();
+        //message2();
+    }
+    QDateTime lastmodified = backuppanel.lastModified();
+    ui->radioRestoreBackup->setToolTip(lastmodified.toString());
+
     panelflag = false;
     ui->buttonApply->setEnabled(false);
     if (ui->buttonApply->icon().isNull()) {
