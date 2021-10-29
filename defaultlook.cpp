@@ -962,6 +962,9 @@ void defaultlook::setuppanel()
     }
     QDateTime lastmodified = backuppanel.lastModified();
     ui->labelBackupDate->setText(lastmodified.toString());
+    ui->radioBackupPanel->setToolTip(home_path + "/.restore");
+    ui->radioRestoreBackup->setToolTip(home_path + "/.restore");
+    ui->radioDefaultPanel->setToolTip("/etc/skel/.config/xfce4");
 
 
     panelflag = false;
