@@ -961,7 +961,8 @@ void defaultlook::setuppanel()
         //message2();
     }
     QDateTime lastmodified = backuppanel.lastModified();
-    ui->radioRestoreBackup->setToolTip(lastmodified.toString());
+    ui->labelBackupDate->setText(lastmodified.toString());
+
 
     panelflag = false;
     ui->buttonApply->setEnabled(false);
