@@ -1730,7 +1730,7 @@ void defaultlook::setupresolutions()
     QStringList resolutionslist = resolutions.split("\n");
     ui->comboBoxresolutions->addItems(resolutionslist);
     //set current resolution as default
-    QString resolution = runCmd("xrandr |grep " + ui->comboBoxDisplay->currentText() + " |cut -d' ' -f3 |cut -d'+' -f1").output;
+    QString resolution = runCmd("xrandr |grep " + ui->comboBoxDisplay->currentText() + " |cut -d+ -f1 |grep -oE '[^ ]+$'").output;
     if (verbose) qDebug() << "resolution is : " << resolution;
     ui->comboBoxresolutions->setCurrentText(resolution);
 }
