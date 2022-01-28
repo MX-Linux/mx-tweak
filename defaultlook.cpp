@@ -3319,14 +3319,14 @@ void defaultlook::settheme(QString type, QString theme)
 {   //set new theme
     QString cmd;
     if ( type == "gtk-3.0" ){
-        cmd = "xfconf-query -c xsettings -p /Net/ThemeName -s " + theme;
+        cmd = "xfconf-query -c xsettings -p /Net/ThemeName -s \"" + theme + "\"";
     }
     if ( type == "xfwm4" ) {
-        cmd = "xfconf-query -c xfwm4 -p /general/theme -s " + theme;
+        cmd = "xfconf-query -c xfwm4 -p /general/theme -s \"" + theme + "\"";
     }
 
     if ( type == "icon" ) {
-        cmd = "xfconf-query -c xsettings -p /Net/IconThemeName -s " + theme;
+        cmd = "xfconf-query -c xsettings -p /Net/IconThemeName -s \"" + theme + "\"";
     }
 
     system(cmd.toUtf8());
