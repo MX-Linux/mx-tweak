@@ -1,3 +1,9 @@
+mx-tweak (22.01.02mx21) mx; urgency=medium
+
+  * handle spaces in theme file names 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Fri, 28 Jan 2022 18:42:58 -0500
+
 mx-tweak (22.01.01mx21) mx; urgency=medium
 
   * fix xrandr resolution harvesting
