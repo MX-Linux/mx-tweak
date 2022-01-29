@@ -1,3 +1,27 @@
+mx-tweak (22.01.02mx21) mx; urgency=medium
+
+  * handle spaces in theme file names 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Fri, 28 Jan 2022 18:42:58 -0500
+
+mx-tweak (22.01.01mx21) mx; urgency=medium
+
+  * fix xrandr resolution harvesting
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 22 Jan 2022 17:10:09 -0500
+
+mx-tweak (21.12.01mx21) mx; urgency=medium
+
+  * change xrandr parsing for brightness
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Thu, 09 Dec 2021 22:50:07 -0500
+
+mx-tweak (21.10.02mx21) mx; urgency=medium
+
+  * use time stamp on backup instead of popup
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Fri, 29 Oct 2021 19:03:26 -0400
+
 mx-tweak (21.10.01mx21) mx; urgency=medium
 
   * set postition fuction from mx-usb-unmounter (adrian) 
