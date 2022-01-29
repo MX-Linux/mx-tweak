@@ -33,6 +33,7 @@
 #include <QLabel>
 #include <QMessageBox>
 #include <QStringList>
+#include <QDateTime>
 
 #include "xfwm_compositor_settings.h"
 #include "window_buttons.h"
@@ -82,11 +83,6 @@ void defaultlook::setup()
         isOther = false;
         whichpanel();
         message_flag = false;
-        QFileInfo backuppanel(home_path + "/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml");
-        if (!backuppanel.exists()) {
-            backupPanel();
-            message2();
-        }
         //setup theme tab
         setuptheme();
         ui->buttonThemeUndo->setEnabled(false);
@@ -958,6 +954,19 @@ void defaultlook::on_comboboxVertpostition_currentIndexChanged(const QString &ar
 }
 void defaultlook::setuppanel()
 {
+    QString home_path = QDir::homePath();
+    QFileInfo backuppanel(home_path + "/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml");
+    if (!backuppanel.exists()) {
+        backupPanel();
+        //message2();
+    }
+    QDateTime lastmodified = backuppanel.lastModified();
+    ui->labelBackupDate->setText(lastmodified.toString());
+    ui->radioBackupPanel->setToolTip(home_path + "/.restore");
+    ui->radioRestoreBackup->setToolTip(home_path + "/.restore");
+    ui->radioDefaultPanel->setToolTip("/etc/skel/.config/xfce4");
+
+
     panelflag = false;
     ui->buttonApply->setEnabled(false);
     if (ui->buttonApply->icon().isNull()) {
@@ -1721,7 +1730,7 @@ void defaultlook::setupresolutions()
     QStringList resolutionslist = resolutions.split("\n");
     ui->comboBoxresolutions->addItems(resolutionslist);
     //set current resolution as default
-    QString resolution = runCmd("xrandr |grep " + ui->comboBoxDisplay->currentText() + " |cut -d' ' -f3 |cut -d'+' -f1").output;
+    QString resolution = runCmd("xrandr |grep " + ui->comboBoxDisplay->currentText() + " |cut -d+ -f1 |grep -oE '[^ ]+$'").output;
     if (verbose) qDebug() << "resolution is : " << resolution;
     ui->comboBoxresolutions->setCurrentText(resolution);
 }
@@ -1802,7 +1811,7 @@ void defaultlook::setgtkscaling()
 void defaultlook::setupBrightness()
 {
     //get brightness value for currently shown display
-    QString brightness=runCmd("LANG=C xrandr --verbose | awk '/" + ui->comboBoxDisplay->currentText() +"/{flag=1;next}/CONNECTOR_ID/{flag=0}flag'|grep Brightness|cut -d' ' -f2").output;
+    QString brightness=runCmd("LANG=C xrandr --verbose | awk '/" + ui->comboBoxDisplay->currentText() +"/{flag=1;next}/Clones/{flag=0}flag'|grep Brightness|cut -d' ' -f2").output;
     int brightness_slider_value = brightness.toFloat() * 100;
     ui->horizontalSliderBrightness->setValue(brightness_slider_value);
     if (verbose) qDebug() << "brightness string is " << brightness;
@@ -3310,14 +3319,14 @@ void defaultlook::settheme(QString type, QString theme)
 {   //set new theme
     QString cmd;
     if ( type == "gtk-3.0" ){
-        cmd = "xfconf-query -c xsettings -p /Net/ThemeName -s " + theme;
+        cmd = "xfconf-query -c xsettings -p /Net/ThemeName -s \"" + theme + "\"";
     }
     if ( type == "xfwm4" ) {
-        cmd = "xfconf-query -c xfwm4 -p /general/theme -s " + theme;
+        cmd = "xfconf-query -c xfwm4 -p /general/theme -s \"" + theme + "\"";
     }
 
     if ( type == "icon" ) {
-        cmd = "xfconf-query -c xsettings -p /Net/IconThemeName -s " + theme;
+        cmd = "xfconf-query -c xsettings -p /Net/IconThemeName -s \"" + theme + "\"";
     }
 
     system(cmd.toUtf8());
