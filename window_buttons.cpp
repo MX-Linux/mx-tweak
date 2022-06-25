@@ -184,7 +184,7 @@ void window_buttons::on_checkBoxdrawframes_toggled(bool  /*checked*/)
 
 void window_buttons::on_checkBoxswitchwindowsmousewheel_toggled(bool /*checked*/)
 {
-    QString param = ui->checkBoxswitchwindowsmousewheel->isChecked() ? "true" : "false";
+    QString param = ui->checkBoxswitchwindowsmousewheel->isChecked() ? QStringLiteral("true") : QStringLiteral("false");
     QString cmd = "xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/window-scrolling -t bool" + " -s " + param  + " --create";
     system(cmd.toUtf8());
 }
