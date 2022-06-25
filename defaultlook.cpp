@@ -668,7 +668,7 @@ void defaultlook::on_buttonHelp_clicked()
         url = "https://mxlinux.org/wiki/help-files/help-tweak-ajustements";
     }
 
-    QString cmd = QString("mx-viewer %1 '%2' &").arg(url).arg(tr("MX Tweak"));
+    QString cmd = QString("mx-viewer %1 '%2' &").arg(url, tr("MX Tweak"));
     system(cmd.toUtf8());
 
 }
