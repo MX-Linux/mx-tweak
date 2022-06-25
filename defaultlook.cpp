@@ -184,7 +184,7 @@ Result defaultlook::runCmd(const QString &cmd)
 {
     QEventLoop loop;
     proc = new QProcess(this);
-    proc->setReadChannelMode(QProcess::MergedChannels);
+    proc->setProcessChannelMode(QProcess::MergedChannels);
     connect(proc, SIGNAL(finished(int)), &loop, SLOT(quit()));
     proc->start("/bin/bash", QStringList() << "-c" << cmd);
     loop.exec();
@@ -647,7 +647,7 @@ void defaultlook::on_buttonAbout_clicked()
                        tr("MX Tweak") + "</h2></b></p><p align=\"center\">" + tr("Version: ") + version + "</p><p align=\"center\"><h3>" +
                        tr("App for quick default ui theme changes and tweaks") +
                        "</h3></p><p align=\"center\"><a href=\"http://mxlinux.org\">http://mxlinux.org</a><br /></p><p align=\"center\">" +
-                       tr("Copyright (c) MX Linux") + "<br /><br /></p>", 0, this);
+                       tr("Copyright (c) MX Linux") + "<br /><br /></p>");
     msgBox.addButton(tr("License"), QMessageBox::AcceptRole);
     msgBox.addButton(tr("Cancel"), QMessageBox::NoRole);
     if (msgBox.exec() == QMessageBox::AcceptRole) {
@@ -1577,8 +1577,8 @@ void defaultlook::CheckComptonRunning()
         QFileInfo compton("/usr/bin/compton");
 
         //adjust for picom
-        if (compton.readLink() == "/usr/bin/picom" ){
-            QFileInfo picom(compton.readLink());
+        if (compton.symLinkTarget() == "/usr/bin/picom" ){
+            QFileInfo picom(compton.symLinkTarget());
             ui->comboBoxCompositor->setItemText(2,picom.baseName());
             ui->buttonConfigureCompton->setText(picom.baseName() + " " + tr("settings"));
         } else {
