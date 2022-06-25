@@ -51,7 +51,7 @@ defaultlook::defaultlook(QWidget *parent, const QStringList &args) :
         if(checkXFCE()){
             displayflag = true;
         } else {
-            QMessageBox::information(0, tr("MX Tweak"),
+            QMessageBox::information(nullptr, tr("MX Tweak"),
                                  tr("--display switch only valid for Xfce"));
         }
     }
@@ -188,7 +188,7 @@ Result defaultlook::runCmd(const QString &cmd)
     connect(proc, SIGNAL(finished(int)), &loop, SLOT(quit()));
     proc->start("/bin/bash", QStringList() << "-c" << cmd);
     loop.exec();
-    disconnect(proc, 0, 0, 0);
+    disconnect(proc, nullptr, nullptr, nullptr);
     Result result = {proc->exitCode(), proc->readAll().trimmed()};
     delete proc;
     return result;
@@ -679,7 +679,7 @@ void defaultlook::message()
     if ( system(cmd.toUtf8()) != 0 ) {
         if (verbose) if (verbose) qDebug() << "Firefox not running" ;
     } else {
-        QMessageBox::information(0, tr("MX Tweak"),
+        QMessageBox::information(nullptr, tr("MX Tweak"),
                              tr("Finished! Firefox may require a restart for changes to take effect"));
     }
 }
@@ -871,7 +871,7 @@ void defaultlook::left_or_right()
 
 void defaultlook::message2()
 {
-    QMessageBox::information(0, tr("Panel settings"),
+    QMessageBox::information(nullptr, tr("Panel settings"),
                              tr("Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)"));
 }
 

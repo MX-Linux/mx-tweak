@@ -104,7 +104,7 @@ Result3 brightness_small::runCmd(const QString &cmd)
     connect(proc, SIGNAL(finished(int)), &loop, SLOT(quit()));
     proc->start("/bin/bash", QStringList() << "-c" << cmd);
     loop.exec();
-    disconnect(proc, 0, 0, 0);
+    disconnect(proc, nullptr, nullptr, nullptr);
     Result3 result = {proc->exitCode(), proc->readAll().trimmed()};
     delete proc;
     return result;

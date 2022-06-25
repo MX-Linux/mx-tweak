@@ -26,7 +26,7 @@ result3 window_buttons::runCmd(const QString &cmd)
     connect(proc, SIGNAL(finished(int)), &loop, SLOT(quit()));
     proc->start("/bin/bash", QStringList() << "-c" << cmd);
     loop.exec();
-    disconnect(proc, 0, 0, 0);
+    disconnect(proc, nullptr, nullptr, nullptr);
     result3 result3 = {proc->exitCode(), proc->readAll().trimmed()};
     delete proc;
     return result3;
@@ -52,13 +52,7 @@ void window_buttons::setup()
     test = runCmd("LANG=C xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/flat-buttons").output;
     qDebug() << "flatbuttons is: " << test;
 
-    if ( test.contains("does not exist")) {
-        ui->checkBoxshowflatbuttons->setChecked(false);
-    } else if ( test == "true") {
-        ui->checkBoxshowflatbuttons->setChecked(true);
-    } else {
-        ui->checkBoxshowflatbuttons->setChecked(false);
-    }
+    ui->checkBoxshowflatbuttons->setChecked(test == "true" && !test.contains("does not exist"));
 
     test = runCmd("LANG=C xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/show-handle").output;
     qDebug() << "show handles is: " << test;
@@ -96,24 +90,12 @@ void window_buttons::setup()
     test = runCmd("LANG=C xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/switch-workspace-on-unminimize").output;
     qDebug() << "restore minimize is: " << test;
 
-    if ( test.contains("does not exist")) {
-        ui->checkBoxrestoreminwindows->setChecked(false);
-    } else if ( test == "true") {
-        ui->checkBoxrestoreminwindows->setChecked(true);
-    } else {
-        ui->checkBoxrestoreminwindows->setChecked(false);
-    }
+    ui->checkBoxrestoreminwindows->setChecked(test == "true" && !test.contains("does not exist"));
 
     test = runCmd("LANG=C xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/show-wireframes").output;
     qDebug() << "draw window frames is: " << test;
 
-    if ( test.contains("does not exist")) {
-        ui->checkBoxdrawframes->setChecked(false);
-    } else if ( test == "true") {
-        ui->checkBoxdrawframes->setChecked(true);
-    } else {
-        ui->checkBoxdrawframes->setChecked(false);
-    }
+    ui->checkBoxdrawframes->setChecked(test == "true" && !test.contains("does not exist"));
 
     test = runCmd("LANG=C xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/window-scrolling").output;
     qDebug() << "window scrolling is: " << test;
@@ -122,23 +104,12 @@ void window_buttons::setup()
     test = runCmd("LANG=C xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/include-all-workspaces").output;
     qDebug() << "include-all-workspaces is: " << test;
 
-    if ( test.contains("does not exist")) {
-        ui->checkBoxwindowsallworkspaces->setChecked(false);
-    } else if ( test == "true") {
-        ui->checkBoxwindowsallworkspaces->setChecked(true);
-    } else {
-        ui->checkBoxwindowsallworkspaces->setChecked(false);
-    }
+    ui->checkBoxwindowsallworkspaces->setChecked(test == "true" && !test.contains("does not exist"));
+
     test = runCmd("LANG=C xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/show-only-minimized").output;
     qDebug() << "show-only-minimized is: " << test;
 
-    if ( test.contains("does not exist")) {
-        ui->checkBoxonlyminwindows->setChecked(false);
-    } else if ( test == "true") {
-        ui->checkBoxonlyminwindows->setChecked(true);
-    } else {
-        ui->checkBoxonlyminwindows->setChecked(false);
-    }
+    ui->checkBoxonlyminwindows->setChecked(test == "true" && !test.contains("does not exist"));
 
     test = runCmd("LANG=C xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/include-all-monitors").output;
     qDebug() << "include-all-monitors is: " << test;
