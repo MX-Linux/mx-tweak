@@ -37,7 +37,7 @@ void window_buttons::setup()
     setWindowTitle(tr("Window Buttons"));
 
     plugintasklist.clear();
-    plugintasklist = runCmd("cat ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml | grep \\\"tasklist\\\"|cut -d '=' -f2 | cut -d '' -f1| cut -d '\"' -f2").output;
+    plugintasklist = runCmd(R"(cat ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml | grep \"tasklist\"|cut -d '=' -f2 | cut -d '' -f1| cut -d '"' -f2)").output;
     qDebug() << "tasklist is " << plugintasklist;
 
     //setup initial values
