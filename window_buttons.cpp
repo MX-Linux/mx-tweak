@@ -47,14 +47,7 @@ void window_buttons::setup()
     QString test = runCmd("LANG=C xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/show-labels").output;
     qDebug() << "show button labels is: " << test;
 
-    if ( test.contains("does not exist")) {
-        ui->checkBoxbuttonlabels->setChecked(true);
-    } else if ( test == "true") {
-        ui->checkBoxbuttonlabels->setChecked(true);
-    } else {
-        ui->checkBoxbuttonlabels->setChecked(false);
-    }
-
+    ui->checkBoxbuttonlabels->setChecked(test.contains("does not exist") || test == "true");
 
     test = runCmd("LANG=C xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/flat-buttons").output;
     qDebug() << "flatbuttons is: " << test;
@@ -70,13 +63,7 @@ void window_buttons::setup()
     test = runCmd("LANG=C xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/show-handle").output;
     qDebug() << "show handles is: " << test;
 
-    if ( test.contains("does not exist")) {
-        ui->checkBoxshowhandle->setChecked(true);
-    } else if ( test == "true") {
-        ui->checkBoxshowhandle->setChecked(true);
-    } else {
-        ui->checkBoxshowhandle->setChecked(false);
-    }
+    ui->checkBoxshowhandle->setChecked(test.contains("does not exist") || test == "true");
 
     test = runCmd("LANG=C xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/sort-order").output;
     qDebug() << "sort order is: " << test;
@@ -130,14 +117,7 @@ void window_buttons::setup()
 
     test = runCmd("LANG=C xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/window-scrolling").output;
     qDebug() << "window scrolling is: " << test;
-
-    if ( test.contains("does not exist")) {
-        ui->checkBoxswitchwindowsmousewheel->setChecked(true);
-    } else if ( test == "true") {
-        ui->checkBoxswitchwindowsmousewheel->setChecked(true);
-    } else {
-        ui->checkBoxswitchwindowsmousewheel->setChecked(false);
-    }
+    ui->checkBoxswitchwindowsmousewheel->setChecked(test.contains("does not exist" || test == "true"));
 
     test = runCmd("LANG=C xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/include-all-workspaces").output;
     qDebug() << "include-all-workspaces is: " << test;
@@ -163,14 +143,7 @@ void window_buttons::setup()
     test = runCmd("LANG=C xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/include-all-monitors").output;
     qDebug() << "include-all-monitors is: " << test;
 
-    if ( test.contains("does not exist")) {
-        ui->checkBoxwindowsallmonitors->setChecked(true);
-    } else if ( test == "true") {
-        ui->checkBoxwindowsallmonitors->setChecked(true);
-    } else {
-        ui->checkBoxwindowsallmonitors->setChecked(false);
-    }
-
+    ui->checkBoxwindowsallmonitors->setChecked(test.contains("does not exist") || test == "true");
 }
 
 void window_buttons::on_pushButton_clicked()
@@ -180,26 +153,14 @@ void window_buttons::on_pushButton_clicked()
 
 void window_buttons::on_checkBoxbuttonlabels_toggled(bool  /*checked*/)
 {
-    QString param;
-    if ( ui->checkBoxbuttonlabels->isChecked()) {
-        param = "true";
-    } else {
-        param = "false";
-    }
-
+    QString param = ui->checkBoxbuttonlabels->isChecked() ? "true" : "false";
     QString cmd = "xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/show-labels -t bool" + " -s " + param  + " --create";
     system(cmd.toUtf8());
 }
 
 void window_buttons::on_checkBoxshowflatbuttons_toggled(bool  /*checked*/)
 {
-    QString param;
-    if ( ui->checkBoxshowflatbuttons->isChecked()) {
-        param = "true";
-    } else {
-        param = "false";
-    }
-
+    QString param = ui->checkBoxshowflatbuttons->isChecked() ? "true" : "false";
     QString cmd = "xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/flat-buttons -t bool" + " -s " + param  + " --create";
     system(cmd.toUtf8());
 }
@@ -207,13 +168,7 @@ void window_buttons::on_checkBoxshowflatbuttons_toggled(bool  /*checked*/)
 
 void window_buttons::on_checkBoxshowhandle_toggled(bool  /*checked*/)
 {
-    QString param;
-    if ( ui->checkBoxshowhandle->isChecked()) {
-        param = "true";
-    } else {
-        param = "false";
-    }
-
+    QString param = ui->checkBoxshowhandle->isChecked() ? "true" : "false";
     QString cmd = "xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/show-handle -t bool" + " -s " + param  + " --create";
     system(cmd.toUtf8());
 }
@@ -244,79 +199,42 @@ void window_buttons::on_comboBoxmiddleclickaction_currentIndexChanged(int index)
 
 void window_buttons::on_checkBoxrestoreminwindows_toggled(bool  /*checked*/)
 {
-    QString param;
-    if ( ui->checkBoxrestoreminwindows->isChecked()) {
-        param = "true";
-    } else {
-        param = "false";
-    }
-
+    QString param = ui->checkBoxrestoreminwindows->isChecked() ? "true" : "false";
     QString cmd = "xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/switch-workspace-on-unminimize -t bool" + " -s " + param  + " --create";
     system(cmd.toUtf8());
 }
 
 void window_buttons::on_checkBoxdrawframes_toggled(bool  /*checked*/)
 {
-    QString param;
-    if ( ui->checkBoxdrawframes->isChecked()) {
-        param = "true";
-    } else {
-        param = "false";
-    }
-
+    QString param = ui->checkBoxdrawframes->isChecked() ? "true" : "false";
     QString cmd = "xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/show-wireframes -t bool" + " -s " + param  + " --create";
     system(cmd.toUtf8());
 }
 
-void window_buttons::on_checkBoxswitchwindowsmousewheel_toggled(bool checked)
+void window_buttons::on_checkBoxswitchwindowsmousewheel_toggled(bool /*checked*/)
 {
-    Q_UNUSED(checked);
-    QString param;
-    if ( ui->checkBoxswitchwindowsmousewheel->isChecked()) {
-        param = "true";
-    } else {
-        param = "false";
-    }
-
+    QString param = ui->checkBoxswitchwindowsmousewheel->isChecked() ? "true" : "false";
     QString cmd = "xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/window-scrolling -t bool" + " -s " + param  + " --create";
     system(cmd.toUtf8());
 }
 
 void window_buttons::on_checkBoxwindowsallworkspaces_toggled(bool  /*checked*/)
 {
-    QString param;
-    if ( ui->checkBoxwindowsallworkspaces->isChecked()) {
-        param = "true";
-    } else {
-        param = "false";
-    }
-
+    QString param = ui->checkBoxwindowsallworkspaces->isChecked() ? "true" : "false";
     QString cmd = "xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/include-all-workspaces boolean -t bool" + " -s " + param  + " --create";
     system(cmd.toUtf8());
 }
 
 void window_buttons::on_checkBoxonlyminwindows_toggled(bool  /*checked*/)
 {
-    QString param;
-    if ( ui->checkBoxonlyminwindows->isChecked()) {
-        param = "true";
-    } else {
-        param = "false";
-    }
-
+    QString param =ui->checkBoxonlyminwindows->isChecked() ? "true" : "false";
     QString cmd = "xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/show-only-minimized boolean -t bool" + " -s " + param  + " --create";
     system(cmd.toUtf8());
 }
 
 void window_buttons::on_checkBoxwindowsallmonitors_toggled(bool  /*checked*/)
 {
-    QString param;
-    if ( ui->checkBoxwindowsallmonitors->isChecked()) {
-        param = "true";
-    } else {
-        param = "false";
-    }
-
+    QString param = ui->checkBoxwindowsallmonitors->isChecked() ? "true" : "false";
     QString cmd = "xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/include-all-monitors -t bool" + " -s " + param  + " --create";
     system(cmd.toUtf8());
 }
