@@ -99,7 +99,7 @@ void window_buttons::setup()
 
     test = runCmd("LANG=C xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/window-scrolling").output;
     qDebug() << "window scrolling is: " << test;
-    ui->checkBoxswitchwindowsmousewheel->setChecked(test.contains("does not exist" || test == "true"));
+    ui->checkBoxswitchwindowsmousewheel->setChecked(test.contains("does not exist") || test == "true");
 
     test = runCmd("LANG=C xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/include-all-workspaces").output;
     qDebug() << "include-all-workspaces is: " << test;
