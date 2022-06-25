@@ -40,7 +40,7 @@ public:
     void saveBrightness();
     void setupDisplay();
     bool brightnessflag = false;
-    void launchfulldisplaydialog();
+    static void launchfulldisplaydialog();
     QString g1;
     QString g2;
     QString g3;
