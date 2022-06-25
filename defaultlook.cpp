@@ -47,7 +47,7 @@ defaultlook::defaultlook(QWidget *parent, const QStringList &args) :
 {
     ui->setupUi(this);
     setWindowFlags(Qt::Window); // for the close, min and max buttons
-    if ( args.contains("--display")) {
+    if ( args.contains(QStringLiteral("--display"))) {
         if(checkXFCE()){
             displayflag = true;
         } else {
@@ -56,7 +56,7 @@ defaultlook::defaultlook(QWidget *parent, const QStringList &args) :
         }
     }
 
-    if (args.contains("--verbose")){
+    if (args.contains(QStringLiteral("--verbose"))){
         verbose=true;
     }
         setup();
@@ -172,7 +172,7 @@ void defaultlook::setup()
             runCmd("cp /usr/share/mx-tweak-data/mx.tweak.template " + userdir.absolutePath());
         }
     }
-    version = getVersion("mx-tweak");
+    version = getVersion(QStringLiteral("mx-tweak"));
     if (displayflag){
         ui->tabWidget->setCurrentIndex(3);
     }
@@ -186,7 +186,7 @@ Result defaultlook::runCmd(const QString &cmd)
     proc = new QProcess(this);
     proc->setProcessChannelMode(QProcess::MergedChannels);
     connect(proc, SIGNAL(finished(int)), &loop, SLOT(quit()));
-    proc->start("/bin/bash", QStringList() << "-c" << cmd);
+    proc->start(QStringLiteral("/bin/bash"), QStringList() << QStringLiteral("-c") << cmd);
     loop.exec();
     disconnect(proc, nullptr, nullptr, nullptr);
     Result result = {proc->exitCode(), proc->readAll().trimmed()};
@@ -199,8 +199,8 @@ void defaultlook::whichpanel()
 {
     // take the first panel we see as default
     QString panel_content;
-    panel_content = runCmd("LC_ALL=en_US.UTF-8 xfconf-query -c xfce4-panel -p /panels | grep -v Value | grep -v ^$").output;
-    panelIDs = panel_content.split("\n");
+    panel_content = runCmd(QStringLiteral("LC_ALL=en_US.UTF-8 xfconf-query -c xfce4-panel -p /panels | grep -v Value | grep -v ^$")).output;
+    panelIDs = panel_content.split(QStringLiteral("\n"));
     panel = panelIDs.value(0);
     if (verbose) if (verbose) qDebug() << "panels found: " << panelIDs;
     if (verbose) if (verbose) qDebug() << "panel to use: " << panel;
@@ -211,38 +211,38 @@ void defaultlook::fliptohorizontal()
     QString file_content;
     QStringList pluginIDs;
     file_content = runCmd("LC_ALL=en_US.UTF-8 xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/plugin-ids | grep -v Value | grep -v ^$").output;
-    pluginIDs = file_content.split("\n");
+    pluginIDs = file_content.split(QStringLiteral("\n"));
     if (verbose) if (verbose) qDebug() << pluginIDs;
 
     // figure out moving the systray, if it exists
 
     // figure out systrayID, pusleaudio plugin, and tasklistID
 
-    QString systrayID = runCmd(R"(grep \"systray\" ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml)").output;
-    systrayID=systrayID.remove("\"").section("-",1,1).section(" ",0,0);
+    QString systrayID = runCmd(QStringLiteral(R"(grep \"systray\" ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml)")).output;
+    systrayID=systrayID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
     if (verbose) if (verbose) qDebug() << "systray: " << systrayID;
 
-    QString tasklistID = runCmd("grep tasklist ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
-    tasklistID=tasklistID.remove("\"").section("-",1,1).section(" ",0,0);
+    QString tasklistID = runCmd(QStringLiteral("grep tasklist ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml")).output;
+    tasklistID=tasklistID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
     if (verbose) if (verbose) qDebug() << "tasklist: " << tasklistID;
 
-    QString pulseaudioID = runCmd("grep pulseaudio ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
-    pulseaudioID=pulseaudioID.remove("\"").section("-",1,1).section(" ",0,0);
+    QString pulseaudioID = runCmd(QStringLiteral("grep pulseaudio ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml")).output;
+    pulseaudioID=pulseaudioID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
     if (verbose) if (verbose) qDebug() << "pulseaudio: " << pulseaudioID;
 
-    QString powerID = runCmd("grep power-manager-plugin ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
-    powerID=powerID.remove("\"").section("-",1,1).section(" ",0,0);
+    QString powerID = runCmd(QStringLiteral("grep power-manager-plugin ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml")).output;
+    powerID=powerID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
     if (verbose) if (verbose) qDebug() << "powerID: " << powerID;
 
-    QString workspacesID = runCmd("grep pager ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
-    workspacesID=workspacesID.remove("\"").section("-",1,1).section(" ",0,0);
+    QString workspacesID = runCmd(QStringLiteral("grep pager ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml")).output;
+    workspacesID=workspacesID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
     if (verbose) if (verbose) qDebug() << "workspacesID: " << workspacesID;
 
-    if (tasklistID == ""){
-        QString docklikeID = runCmd("grep docklike ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
-        docklikeID=docklikeID.remove("\"").section("-",1,1).section(" ",0,0);
+    if (tasklistID == QLatin1String("")){
+        QString docklikeID = runCmd(QStringLiteral("grep docklike ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml")).output;
+        docklikeID=docklikeID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
         if (verbose) if (verbose) qDebug() << "docklikeID: " << docklikeID;
-        if (docklikeID != ""){
+        if (docklikeID != QLatin1String("")){
         tasklistID = docklikeID;
         if (verbose) if (verbose) qDebug() << "new tasklist: " << tasklistID;
         }
@@ -250,7 +250,7 @@ void defaultlook::fliptohorizontal()
 
     // if systray exists, do a bunch of stuff to relocate it a list of plugins.  If not present, do nothing to list
 
-    if (systrayID !=""){
+    if (systrayID !=QLatin1String("")){
 
         //get tasklist index in list
         int tasklistindex = pluginIDs.indexOf(tasklistID);
@@ -267,7 +267,7 @@ void defaultlook::fliptohorizontal()
 
         //move the notification area (systray) to above window buttons (tasklist) in the list if tasklist exists
 
-        if (tasklistID !="") {
+        if (tasklistID !=QLatin1String("")) {
             pluginIDs.removeAll(systrayID);
             tasklistindex = pluginIDs.indexOf(tasklistID);
             if (verbose) if (verbose) qDebug() << "tasklistIDindex 2" << tasklistindex;
@@ -276,7 +276,7 @@ void defaultlook::fliptohorizontal()
 
             //move the expanding separator
 
-            if (test == "true") {
+            if (test == QLatin1String("true")) {
                 pluginIDs.removeAll(expsepID);
                 tasklistindex = pluginIDs.indexOf(tasklistID);
                 if (verbose) if (verbose) qDebug() << "tasklistIDindex 2" << tasklistindex;
@@ -287,16 +287,16 @@ void defaultlook::fliptohorizontal()
 
         //if the tasklist isn't present, try to make a decision about where to put the systray
 
-        if (tasklistID == "") {
+        if (tasklistID == QLatin1String("")) {
 
 
             //try to move to in front of clock if present
 
-            QString clockID = runCmd(R"(grep -m1 "clock\|datetime" ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml)").output;
+            QString clockID = runCmd(QStringLiteral(R"(grep -m1 "clock\|datetime" ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml)")).output;
             QString switchID;
-            clockID=clockID.remove("\"").section("-",1,1).section(" ",0,0);
+            clockID=clockID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
             if (verbose) if (verbose) qDebug() << "clockID: " << clockID;
-            if (clockID != "") {
+            if (clockID != QLatin1String("")) {
                 switchID = clockID;
 
                 //if clock found check if next plugin down is a separator and if so put it there
@@ -304,7 +304,7 @@ void defaultlook::fliptohorizontal()
                 int clocksepindex = pluginIDs.indexOf(clockID) + 1;
                 QString clocksepcheck = runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + pluginIDs.value(clocksepindex)).output;
                 if (verbose) if (verbose) qDebug() << "clocksepcheck: " << clocksepcheck;
-                if (clocksepcheck == "separator") {
+                if (clocksepcheck == QLatin1String("separator")) {
                     switchID = pluginIDs.value(clocksepindex);
                 }
 
@@ -325,7 +325,7 @@ void defaultlook::fliptohorizontal()
         }
 
         //if pulsaudio plugin is present, move it to in front of systray
-        if (pulseaudioID != "") {
+        if (pulseaudioID != QLatin1String("")) {
             int switchIDindex = 0;
             pluginIDs.removeAll(pulseaudioID);
             switchIDindex = pluginIDs.indexOf(systrayID) + 1;
@@ -333,7 +333,7 @@ void defaultlook::fliptohorizontal()
             if (verbose) if (verbose) qDebug() << "reorderd PA list" << pluginIDs;
         }
         //if power-manager plugin is present, move it to in behind of systray
-        if (powerID != "") {
+        if (powerID != QLatin1String("")) {
             int switchIDindex = 0;
             pluginIDs.removeAll(powerID);
             switchIDindex = pluginIDs.indexOf(systrayID);
@@ -368,7 +368,7 @@ void defaultlook::fliptohorizontal()
 
     //change mode of tasklist labels if it exists
 
-    if (tasklistID != "") {
+    if (tasklistID != QLatin1String("")) {
         runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + tasklistID + "/show-labels -s true");
     }
 
@@ -376,14 +376,14 @@ void defaultlook::fliptohorizontal()
     //xfconf-query -c xfce4-panel --property /plugins/plugin-" + workspaceID + "/rows --type int --set 1"
     //check current workspaces rows
         QString workspacesrows = runCmd("xfconf-query -c xfce4-panel --property /plugins/plugin-" + workspacesID + "/rows").output;
-        if ( workspacesrows == "1" || workspacesrows == "2") {
+        if ( workspacesrows == QLatin1String("1") || workspacesrows == QLatin1String("2")) {
             runCmd("xfconf-query -c xfce4-panel --property /plugins/plugin-" + workspacesID + "/rows --type int --set 1");
         }
 
     //deteremine top or bottom horizontal placement
     top_or_bottom();
 
-    runCmd("xfce4-panel --restart");
+    runCmd(QStringLiteral("xfce4-panel --restart"));
 }
 
 void defaultlook::fliptovertical()
@@ -391,37 +391,37 @@ void defaultlook::fliptovertical()
     QString file_content;
     QStringList pluginIDs;
     file_content = runCmd("LC_ALL=en_US.UTF-8 xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/plugin-ids | grep -v Value | grep -v ^$").output;
-    pluginIDs = file_content.split("\n");
+    pluginIDs = file_content.split(QStringLiteral("\n"));
     if (verbose) if (verbose) qDebug() << pluginIDs;
 
 
     // figure out moving the systray, if it exists
 
-    QString systrayID = runCmd(R"(grep \"systray\" ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml)").output;
-    systrayID=systrayID.remove("\"").section("-",1,1).section(" ",0,0);
+    QString systrayID = runCmd(QStringLiteral(R"(grep \"systray\" ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml)")).output;
+    systrayID=systrayID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
     if (verbose) if (verbose) qDebug() << "systray: " << systrayID;
 
-    QString tasklistID = runCmd("grep tasklist ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
-    tasklistID=tasklistID.remove("\"").section("-",1,1).section(" ",0,0);
+    QString tasklistID = runCmd(QStringLiteral("grep tasklist ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml")).output;
+    tasklistID=tasklistID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
     if (verbose) if (verbose) qDebug() << "tasklist: " << tasklistID;
 
-    QString pulseaudioID = runCmd("grep pulseaudio ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
-    pulseaudioID=pulseaudioID.remove("\"").section("-",1,1).section(" ",0,0);
+    QString pulseaudioID = runCmd(QStringLiteral("grep pulseaudio ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml")).output;
+    pulseaudioID=pulseaudioID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
     if (verbose) if (verbose) qDebug() << "pulseaudio: " << pulseaudioID;
 
-    QString powerID = runCmd("grep power-manager-plugin ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
-    powerID=powerID.remove("\"").section("-",1,1).section(" ",0,0);
+    QString powerID = runCmd(QStringLiteral("grep power-manager-plugin ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml")).output;
+    powerID=powerID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
     if (verbose) if (verbose) qDebug() << "powerID: " << powerID;
 
-    QString workspacesID = runCmd("grep pager ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
-    workspacesID=workspacesID.remove("\"").section("-",1,1).section(" ",0,0);
+    QString workspacesID = runCmd(QStringLiteral("grep pager ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml")).output;
+    workspacesID=workspacesID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
     if (verbose) if (verbose) qDebug() << "workspacesID: " << workspacesID;
 
-    if (tasklistID == ""){
-        QString docklikeID = runCmd("grep docklike ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
-        docklikeID=docklikeID.remove("\"").section("-",1,1).section(" ",0,0);
+    if (tasklistID == QLatin1String("")){
+        QString docklikeID = runCmd(QStringLiteral("grep docklike ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml")).output;
+        docklikeID=docklikeID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
         if (verbose) if (verbose) qDebug() << "docklikeID: " << docklikeID;
-        if (docklikeID != ""){
+        if (docklikeID != QLatin1String("")){
         tasklistID = docklikeID;
         if (verbose) if (verbose) qDebug() << "new tasklist: " << tasklistID;
         }
@@ -429,20 +429,20 @@ void defaultlook::fliptovertical()
 
     //if systray exists, do a bunch of stuff to try to move it in a logical way
 
-    if (systrayID !=""){
+    if (systrayID !=QLatin1String("")){
 
         // figure out whiskerID, appmenuID, systrayID, tasklistID, and pagerID
 
-        QString whiskerID = runCmd("grep whisker ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
-        whiskerID=whiskerID.remove("\"").section("-",1,1).section(" ",0,0);
+        QString whiskerID = runCmd(QStringLiteral("grep whisker ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml")).output;
+        whiskerID=whiskerID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
         if (verbose) if (verbose) qDebug() << "whisker: " << whiskerID;
 
-        QString pagerID = runCmd("grep pager ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
-        pagerID=pagerID.remove("\"").section("-",1,1).section(" ",0,0);
+        QString pagerID = runCmd(QStringLiteral("grep pager ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml")).output;
+        pagerID=pagerID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
         if (verbose) if (verbose) qDebug() << "pager: " << pagerID;
 
-        QString appmenuID = runCmd("grep applicationsmenu ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
-        appmenuID=appmenuID.remove("\"").section("-",1,1).section(" ",0,0);
+        QString appmenuID = runCmd(QStringLiteral("grep applicationsmenu ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml")).output;
+        appmenuID=appmenuID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
         if (verbose) if (verbose) qDebug() << "appmenuID: " << appmenuID;
 
         //get tasklist index in list
@@ -463,11 +463,11 @@ void defaultlook::fliptovertical()
         //1.  determine if menu is present, place in front of menu
 
         QString switchID;
-        if (whiskerID != "") {
+        if (whiskerID != QLatin1String("")) {
             switchID = whiskerID;
             if (verbose) if (verbose) qDebug() << "switchID whisker: " << switchID;
         } else {
-            if (appmenuID != "") {
+            if (appmenuID != QLatin1String("")) {
                 switchID = appmenuID;
                 if (verbose) if (verbose) qDebug() << "switchID appmenu: " << switchID;
             }
@@ -486,9 +486,9 @@ void defaultlook::fliptovertical()
 
         //3.  if so, check third plugin is pager.  if so, place tasklist in front of pager
 
-        if (switchID != ""){
+        if (switchID != QLatin1String("")){
             QString test = runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + pluginIDs.value(1)).output;
-            if (test == "pager") {
+            if (test == QLatin1String("pager")) {
                 if (verbose) if (verbose) qDebug() << "test parm" << test;
                 switchID = pluginIDs.value(1);
                 if (verbose) if (verbose) qDebug() << "switchID pager: " << switchID;
@@ -497,7 +497,7 @@ void defaultlook::fliptovertical()
 
         // if the menu doesn't exist, give a default value that is sane but might not be correct
 
-        if (switchID == "") {
+        if (switchID == QLatin1String("")) {
             switchID = pluginIDs.value(1);
             if (verbose) if (verbose) qDebug() << "switchID default: " << switchID;
         }
@@ -513,7 +513,7 @@ void defaultlook::fliptovertical()
 
 
         //if pulsaudio plugin is present, move it to in front of systray
-        if (pulseaudioID != "") {
+        if (pulseaudioID != QLatin1String("")) {
             int switchIDindex = 0;
             pluginIDs.removeAll(pulseaudioID);
             switchIDindex = pluginIDs.indexOf(systrayID) + 1;
@@ -522,7 +522,7 @@ void defaultlook::fliptovertical()
         }
 
         //if powerID plugin is present, move it to in behind of systray
-        if (powerID != "") {
+        if (powerID != QLatin1String("")) {
             int switchIDindex = 0;
             pluginIDs.removeAll(powerID);
             switchIDindex = pluginIDs.indexOf(systrayID);
@@ -531,7 +531,7 @@ void defaultlook::fliptovertical()
         }
         //move the expanding separator
 
-        if (testexpandsep == "true") {
+        if (testexpandsep == QLatin1String("true")) {
             pluginIDs.removeAll(expsepID);
             tasklistindex = pluginIDs.indexOf(tasklistID);
             if (verbose) if (verbose) qDebug() << "tasklistIDindex 2" << tasklistindex;
@@ -566,7 +566,7 @@ void defaultlook::fliptovertical()
 
     //change mode of tasklist labels if they exist
 
-    if (tasklistID != "") {
+    if (tasklistID != QLatin1String("")) {
         runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + tasklistID + "/show-labels -s false");
     }
 
@@ -574,7 +574,7 @@ void defaultlook::fliptovertical()
     //xfconf-query -c xfce4-panel --property /plugins/plugin-" + workspaceID + "/rows --type int --set 2"
     //check current workspaces rows
         QString workspacesrows = runCmd("xfconf-query -c xfce4-panel --property /plugins/plugin-" + workspacesID + "/rows").output;
-        if ( workspacesrows == "1" || workspacesrows == "2") {
+        if ( workspacesrows == QLatin1String("1") || workspacesrows == QLatin1String("2")) {
             runCmd("xfconf-query -c xfce4-panel --property /plugins/plugin-" + workspacesID + "/rows --type int --set 2");
         }
 
@@ -596,13 +596,13 @@ void defaultlook::on_buttonApply_clicked()
     //backups and default panel
     if (ui->radioDefaultPanel->isChecked()) {
         restoreDefaultPanel();
-        runCmd("sleep .5");
+        runCmd(QStringLiteral("sleep .5"));
         whichpanel();
     }
 
     if (ui->radioRestoreBackup->isChecked()) {
         restoreBackup();
-        runCmd("sleep .5");
+        runCmd(QStringLiteral("sleep .5"));
         whichpanel();
     }
 
@@ -614,21 +614,21 @@ void defaultlook::on_buttonApply_clicked()
     if (ui->checkHorz->isChecked()) {
         QString test = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/mode").output;
 
-        if (test == "1" || test =="2") {
+        if (test == QLatin1String("1") || test ==QLatin1String("2")) {
             fliptohorizontal();
         }
 
 
-        runCmd("sleep .5");
+        runCmd(QStringLiteral("sleep .5"));
     }
 
     if (ui->checkVert->isChecked()) {
         QString test = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/mode").output;
 
-        if (test == "" || test =="0") {
+        if (test == QLatin1String("") || test ==QLatin1String("0")) {
             fliptovertical();
         }
-        runCmd("sleep .5");
+        runCmd(QStringLiteral("sleep .5"));
     }
     setuppanel();
 }
@@ -662,20 +662,20 @@ void defaultlook::on_buttonHelp_clicked()
     QLocale locale;
     QString lang = locale.bcp47Name();
 
-    QString url = "file:///usr/share/doc/mx-tweak/help/mx-tweak.html";
+    QString url = QStringLiteral("file:///usr/share/doc/mx-tweak/help/mx-tweak.html");
 
-    if (lang.startsWith("fr")) {
-        url = "https://mxlinux.org/wiki/help-files/help-tweak-ajustements";
+    if (lang.startsWith(QLatin1String("fr"))) {
+        url = QStringLiteral("https://mxlinux.org/wiki/help-files/help-tweak-ajustements");
     }
 
-    QString cmd = QString("mx-viewer %1 '%2' &").arg(url, tr("MX Tweak"));
+    QString cmd = QStringLiteral("mx-viewer %1 '%2' &").arg(url, tr("MX Tweak"));
     system(cmd.toUtf8());
 
 }
 
 void defaultlook::message() const
 {
-    QString cmd = "ps -aux |grep -v grep|grep firefox";
+    QString cmd = QStringLiteral("ps -aux |grep -v grep|grep firefox");
     if ( system(cmd.toUtf8()) != 0 ) {
         if (verbose) if (verbose) qDebug() << "Firefox not running" ;
     } else {
@@ -686,27 +686,27 @@ void defaultlook::message() const
 
 bool defaultlook::checkXFCE()
 {
-    QString test = runCmd("echo $XDG_CURRENT_DESKTOP").output;
+    QString test = runCmd(QStringLiteral("echo $XDG_CURRENT_DESKTOP")).output;
     if (verbose) if (verbose) qDebug() << test;
-    return (test == "XFCE");
+    return (test == QLatin1String("XFCE"));
 }
 
 bool defaultlook::checkFluxbox()
 {
-    QString test = runCmd("pgrep fluxbox").output;
+    QString test = runCmd(QStringLiteral("pgrep fluxbox")).output;
     if (verbose) if (verbose) qDebug() << test;
     return (!test.isEmpty());
 }
 
 bool defaultlook::checklightdm()
 {
-    QFileInfo test("/etc/lightdm/lightdm-gtk-greeter.conf");
+    QFileInfo test(QStringLiteral("/etc/lightdm/lightdm-gtk-greeter.conf"));
     return (test.exists());
 }
 
 bool defaultlook::checkPlasma()
 {
-    QString test = runCmd("pgrep plasma").output;
+    QString test = runCmd(QStringLiteral("pgrep plasma")).output;
     if (verbose) if (verbose) qDebug() << test;
     return (!test.isEmpty());
 }
@@ -714,25 +714,25 @@ bool defaultlook::checkPlasma()
 // backs up the current panel configuration
 void defaultlook::backupPanel()
 {
-    runCmd("rm -Rf ~/.restore; mkdir -p ~/.restore/.config/xfce4; \
+    runCmd(QStringLiteral("rm -Rf ~/.restore; mkdir -p ~/.restore/.config/xfce4; \
            mkdir -p ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml; \
             cp -Rf ~/.config/xfce4/panel ~/.restore/.config/xfce4; \
-    cp -f ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/");
+    cp -f ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/"));
 }
 
 void defaultlook::restoreDefaultPanel()
 {
     // copy template files
-    runCmd("xfce4-panel --quit;pkill xfconfd; rm -Rf ~/.config/xfce4/panel; cp -Rf /etc/skel/.config/xfce4/panel ~/.config/xfce4; sleep 1; \
+    runCmd(QStringLiteral("xfce4-panel --quit;pkill xfconfd; rm -Rf ~/.config/xfce4/panel; cp -Rf /etc/skel/.config/xfce4/panel ~/.config/xfce4; sleep 1; \
            cp -f /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml; \
-             sleep 5; xfce4-panel");
+             sleep 5; xfce4-panel"));
 }
 
 void defaultlook::restoreBackup()
 {
-    runCmd("xfce4-panel --quit; pkill xfconfd; rm -Rf ~/.config/xfce4/panel; cp -Rf ~/.restore/.config/xfce4/panel ~/.config/xfce4; sleep 1; \
+    runCmd(QStringLiteral("xfce4-panel --quit; pkill xfconfd; rm -Rf ~/.config/xfce4/panel; cp -Rf ~/.restore/.config/xfce4/panel ~/.config/xfce4; sleep 1; \
            cp -f ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml; \
-            sleep 5; xfce4-panel ");
+            sleep 5; xfce4-panel "));
 }
 
 void defaultlook::on_checkHorz_clicked()
@@ -816,11 +816,11 @@ void defaultlook::top_or_bottom()
 
     QString top_bottom;
     if (ui->comboboxHorzPostition->currentIndex() == 0) {
-        top_bottom = "12";
+        top_bottom = QStringLiteral("12");
     }
 
     if (ui->comboboxHorzPostition->currentIndex() == 1) {
-        top_bottom = "11";
+        top_bottom = QStringLiteral("11");
     }
 
     if (verbose) if (verbose) qDebug() << "position index is : " << ui->comboboxHorzPostition->currentIndex();
@@ -839,11 +839,11 @@ void defaultlook::left_or_right()
 
     QString left_right;
     if (ui->comboboxVertpostition->currentIndex() == 0) {
-        left_right = "5";
+        left_right = QStringLiteral("5");
     }
 
     if (ui->comboboxVertpostition->currentIndex() == 1) {
-        left_right = "1";
+        left_right = QStringLiteral("1");
     }
 
     if (verbose) qDebug() << "position index is : " << ui->comboboxVertpostition->currentIndex();
@@ -866,17 +866,17 @@ void defaultlook::on_toolButtonXFCEpanelSettings_clicked()
     system("xprop -spy -name \"Panel Preferences\" >/dev/null");
     this->show();
     QString test;
-    bool flag = 0;
+    bool flag = false;
 
     //restart panel if background style of any panel is 1 - solid color, affects transparency
-    QStringList panelproperties = runCmd("xfconf-query -c xfce4-panel --list |grep background-style").output.split('\n');
+    QStringList panelproperties = runCmd(QStringLiteral("xfconf-query -c xfce4-panel --list |grep background-style")).output.split('\n');
 
     QStringListIterator changeIterator(panelproperties);
 
     while (changeIterator.hasNext()) {
         QString value = changeIterator.next();
         test = runCmd("xfconf-query -c xfce4-panel -p " + value).output;
-        if ( test == "1" ){
+        if ( test == QLatin1String("1") ){
             flag = true;
         }
     }
@@ -907,10 +907,10 @@ void defaultlook::on_comboboxHorzPostition_currentIndexChanged(const QString & /
     if (verbose) qDebug() << "top or bottom output " << ui->comboboxHorzPostition->currentText();
     QString test = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/mode").output;
     if (verbose) qDebug() << "test value, blank or 0 runs left_or_right" << test;
-    if (test == "") {
+    if (test == QLatin1String("")) {
         top_or_bottom();
     }
-    if (test == "0") {
+    if (test == QLatin1String("0")) {
         top_or_bottom();
     }
 }
@@ -921,10 +921,10 @@ void defaultlook::on_comboboxVertpostition_currentIndexChanged(const QString & /
     if (verbose) qDebug() << "left or right output " << ui->comboboxVertpostition->currentText();
     QString test = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/mode").output;
     if (verbose) qDebug() << "test value, 1 or 2 runs top_or_bottom" << test;
-    if (test == "1") {
+    if (test == QLatin1String("1")) {
         left_or_right();
     }
-    if (test == "2") {
+    if (test == QLatin1String("2")) {
         left_or_right();
     }
 }
@@ -940,7 +940,7 @@ void defaultlook::setuppanel()
     ui->labelBackupDate->setText(lastmodified.toString());
     ui->radioBackupPanel->setToolTip(home_path + "/.restore");
     ui->radioRestoreBackup->setToolTip(home_path + "/.restore");
-    ui->radioDefaultPanel->setToolTip("/etc/skel/.config/xfce4");
+    ui->radioDefaultPanel->setToolTip(QStringLiteral("/etc/skel/.config/xfce4"));
 
 
     panelflag = false;
@@ -978,29 +978,29 @@ void defaultlook::setuppanel()
     //if panel is already horizontal, set vertical option available, and vice versa  "" and "0" are horizontal
 
     QString test = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/mode").output;
-     QString test2 = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel + "/position").output.section(";", 0,0);
+     QString test2 = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel + "/position").output.section(QStringLiteral(";"), 0,0);
     if (verbose) qDebug() << "test2" << test2;
 
-    if (test == "" || test == "0") {
+    if (test == QLatin1String("") || test == QLatin1String("0")) {
         ui->checkVert->setEnabled(true);
         ui->checkHorz->setChecked(true);
-        if (test2 == "p=11" || test2 == "p=6" || test2 == "p=2") {
+        if (test2 == QLatin1String("p=11") || test2 == QLatin1String("p=6") || test2 == QLatin1String("p=2")) {
             ui->comboboxHorzPostition->setCurrentIndex(1);
         }
 
     }
 
-    if (test == "1" || test == "2") {
+    if (test == QLatin1String("1") || test == QLatin1String("2")) {
         ui->checkVert->setChecked(true);
         ui->checkHorz->setEnabled(true);
-        if (test2 == "p=1") {
+        if (test2 == QLatin1String("p=1")) {
             ui->comboboxVertpostition->setCurrentIndex(1);
         }
     }
 
     // if backup available, make the restore backup option available
 
-    QString cmd = QString("test -f ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml");
+    QString cmd = QStringLiteral("test -f ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml");
     if (system(cmd.toUtf8()) == 0) {
         ui->radioRestoreBackup->setEnabled(true);
     } else {
@@ -1013,8 +1013,8 @@ void defaultlook::setuppanel()
 void defaultlook::setupPlasma()
 {
     //get panel ID
-    plasmaPanelId = runCmd("grep --max-count 1 -B 8 panel $HOME/.config/plasma-org.kde.plasma.desktop-appletsrc |grep Containment").output;
-    QString panellocation = readPlasmaPanelConfig("location");
+    plasmaPanelId = runCmd(QStringLiteral("grep --max-count 1 -B 8 panel $HOME/.config/plasma-org.kde.plasma.desktop-appletsrc |grep Containment")).output;
+    QString panellocation = readPlasmaPanelConfig(QStringLiteral("location"));
 
     //location combo index - 0=bottom, 1=left, 2=top, 3=right
     //location plasma settings - 4=bottom, 3 top, 5 left, 6 right
@@ -1035,24 +1035,24 @@ void defaultlook::setupPlasma()
     }
 
     //setup singleclick
-    QString singleclick = runCmd("kreadconfig5 --group KDE --key SingleClick").output;
-    if (singleclick == "false"){
+    QString singleclick = runCmd(QStringLiteral("kreadconfig5 --group KDE --key SingleClick")).output;
+    if (singleclick == QLatin1String("false")){
         ui->checkBoxPlasmaSingleClick->setChecked(false);
     } else {
         ui->checkBoxPlasmaSingleClick->setChecked(true);
     }
 
     //get taskmanager ID and setup showOnlyCurrentDesktop
-    plasmataskmanagerID = runCmd("grep --max-count 1 -B 2 taskmanager $HOME/.config/plasma-org.kde.plasma.desktop-appletsrc |grep Containment").output;
-    QString showOnlyCurrentDesktop = readTaskmanagerConfig("showOnlyCurrentDesktop");
-    if (showOnlyCurrentDesktop == "true"){
+    plasmataskmanagerID = runCmd(QStringLiteral("grep --max-count 1 -B 2 taskmanager $HOME/.config/plasma-org.kde.plasma.desktop-appletsrc |grep Containment")).output;
+    QString showOnlyCurrentDesktop = readTaskmanagerConfig(QStringLiteral("showOnlyCurrentDesktop"));
+    if (showOnlyCurrentDesktop == QLatin1String("true")){
         ui->checkBoxPlasmaShowAllWorkspaces->setChecked(false);
     } else {
         ui->checkBoxPlasmaShowAllWorkspaces->setChecked(true);
     }
 
     //setup icon size
-    QString systrayid = runCmd("grep -B 3 extraItems $HOME/.config/plasma-org.kde.plasma.desktop-appletsrc |grep Containment").output.section("[",2,2).section("]",0,0);
+    QString systrayid = runCmd(QStringLiteral("grep -B 3 extraItems $HOME/.config/plasma-org.kde.plasma.desktop-appletsrc |grep Containment")).output.section(QStringLiteral("["),2,2).section(QStringLiteral("]"),0,0);
     if (verbose) qDebug() << "systrayid is" << systrayid;
     //read in config and set combobox
     QString value = runCmd("kreadconfig5 --file ~/.config/plasma-org.kde.plasma.desktop-appletsrc --group Containments --group " + systrayid + " --group General --key iconSize").output;
@@ -1094,14 +1094,14 @@ void defaultlook::setupPlasma()
 }
 QString defaultlook::readTaskmanagerConfig(const QString &key)
 {
-    QString ID = plasmataskmanagerID.section("[",2,2).section("]",0,0);
-    QString Applet = plasmataskmanagerID.section("[",4,4).section("]",0,0);
+    QString ID = plasmataskmanagerID.section(QStringLiteral("["),2,2).section(QStringLiteral("]"),0,0);
+    QString Applet = plasmataskmanagerID.section(QStringLiteral("["),4,4).section(QStringLiteral("]"),0,0);
     if (verbose) qDebug() << "plasma taskmanager ID is " << ID;
     if (verbose) qDebug() << "plasma taskmanger Applet ID is " << Applet;
     //read key
     QString value = runCmd("kreadconfig5 --file plasma-org.kde.plasma.desktop-appletsrc --group Containments --group " + ID + " --group Applets --group " + Applet + " --key " + key).output;
     if (value.isEmpty()){
-           value = "false";
+           value = QStringLiteral("false");
     }
     if (verbose) qDebug() << "key is " << value;
     return value;
@@ -1110,7 +1110,7 @@ QString defaultlook::readTaskmanagerConfig(const QString &key)
 QString defaultlook::readPlasmaPanelConfig(const QString &key)
 {
     QString ID;
-    ID = plasmaPanelId.section("[",2,2).section("]",0,0);
+    ID = plasmaPanelId.section(QStringLiteral("["),2,2).section(QStringLiteral("]"),0,0);
     if (verbose) qDebug() << "plasma panel ID" << ID;
     //read key
     QString value = runCmd("kreadconfig5 --file plasma-org.kde.plasma.desktop-appletsrc --group Containments --group " + ID + " --key " + key).output;
@@ -1123,12 +1123,12 @@ void defaultlook::setupFluxbox()
 {
 
     //resets
-    QFileInfo resetALL("/usr/bin/mxflux_install.sh");
-    QFileInfo resetDefaultDock("/etc/skel/.fluxbox/scripts/DefaultDock.mxdk");
-    QFileInfo resetDefaultMenu("/etc/skel/.fluxbox/menu-mx");
-    QFileInfo idesktogglepresent("/usr/bin/idesktoggle");
-    QFileInfo ideskpresent("/usr/bin/idesk");
-    QFileInfo menumigrate("/usr/bin/menu-migrate");
+    QFileInfo resetALL(QStringLiteral("/usr/bin/mxflux_install.sh"));
+    QFileInfo resetDefaultDock(QStringLiteral("/etc/skel/.fluxbox/scripts/DefaultDock.mxdk"));
+    QFileInfo resetDefaultMenu(QStringLiteral("/etc/skel/.fluxbox/menu-mx"));
+    QFileInfo idesktogglepresent(QStringLiteral("/usr/bin/idesktoggle"));
+    QFileInfo ideskpresent(QStringLiteral("/usr/bin/idesk"));
+    QFileInfo menumigrate(QStringLiteral("/usr/bin/menu-migrate"));
 
     if (!menumigrate.exists()){
         ui->checkBoxMenuMigrate->setDisabled(true);
@@ -1151,16 +1151,16 @@ void defaultlook::setupFluxbox()
         ui->comboBoxfluxcaptions->setDisabled(true);
     } else {
         QString test;
-        test = runCmd("grep \\#Caption $HOME/.idesktop/*.lnk").output;
+        test = runCmd(QStringLiteral("grep \\#Caption $HOME/.idesktop/*.lnk")).output;
         if (test.isEmpty()){
             ui->comboBoxfluxcaptions->setCurrentIndex(0);
-            test = runCmd("grep CaptionOnHover $HOME/.ideskrc |grep -v ToolTip").output.section(":",1,1).trimmed();
+            test = runCmd(QStringLiteral("grep CaptionOnHover $HOME/.ideskrc |grep -v ToolTip")).output.section(QStringLiteral(":"),1,1).trimmed();
             if (verbose) qDebug() << "hover test" << test;
-            if (test.contains("true")){
+            if (test.contains(QLatin1String("true"))){
                 ui->comboBoxfluxcaptions->setCurrentIndex(2);
             }
         }
-        test = runCmd("grep \\#Icon $HOME/.idesktop/*.lnk").output;
+        test = runCmd(QStringLiteral("grep \\#Icon $HOME/.idesktop/*.lnk")).output;
         if (test.isEmpty()){
             ui->comboBoxfluxIcons->setCurrentIndex(0);
         }
@@ -1171,33 +1171,33 @@ void defaultlook::setupFluxbox()
     fluxcaptionflag =false;
 
     //toolbar autohide
-    QString toolbarautohide = runCmd("grep screen0.toolbar.autoHide $HOME/.fluxbox/init").output.section(":",1,1).trimmed();
+    QString toolbarautohide = runCmd(QStringLiteral("grep screen0.toolbar.autoHide $HOME/.fluxbox/init")).output.section(QStringLiteral(":"),1,1).trimmed();
     if (verbose) qDebug() << "Toolbar autohide" << toolbarautohide;
-    if (toolbarautohide == "true"){
+    if (toolbarautohide == QLatin1String("true")){
         ui->checkboxfluxtoolbarautohide->setChecked(true);
     } else {
         ui->checkboxfluxtoolbarautohide->setChecked(false);
     }
     //toolbar location
-    QString toolbarlocation = runCmd("grep screen0.toolbar.placement $HOME/.fluxbox/init").output.section(":",1,1).trimmed();
+    QString toolbarlocation = runCmd(QStringLiteral("grep screen0.toolbar.placement $HOME/.fluxbox/init")).output.section(QStringLiteral(":"),1,1).trimmed();
     if (verbose) qDebug() << "Toolbar location" << toolbarlocation;
     ui->combofluxtoolbarlocatoin->setCurrentText(toolbarlocation);
     //slit location
-    QString slitlocation = runCmd("grep screen0.slit.placement $HOME/.fluxbox/init").output.section(":",1,1).trimmed();
+    QString slitlocation = runCmd(QStringLiteral("grep screen0.slit.placement $HOME/.fluxbox/init")).output.section(QStringLiteral(":"),1,1).trimmed();
     if (verbose) qDebug() << "Slit location" << slitlocation;
     ui->combofluxslitlocation->setCurrentText(slitlocation);
     //toolbar width;
-    QString toolbarwidth = runCmd("grep screen0.toolbar.widthPercent $HOME/.fluxbox/init").output.section(":",1,1).trimmed();
+    QString toolbarwidth = runCmd(QStringLiteral("grep screen0.toolbar.widthPercent $HOME/.fluxbox/init")).output.section(QStringLiteral(":"),1,1).trimmed();
     if (verbose) qDebug() << "Toolbar width" << toolbarwidth;
     ui->spinBoxFluxToolbarWidth->setValue(toolbarwidth.toInt());
     //toolbar height
-    QString toolbarheight = runCmd("grep screen0.toolbar.height $HOME/.fluxbox/init").output.section(":",1,1).trimmed();
+    QString toolbarheight = runCmd(QStringLiteral("grep screen0.toolbar.height $HOME/.fluxbox/init")).output.section(QStringLiteral(":"),1,1).trimmed();
     if (verbose) qDebug() << "Toolbar height" << toolbarheight;
     ui->spinBoxFluxToolbarHeight->setValue(toolbarheight.toInt());
     //slit autohide
-    QString slitautohide = runCmd("grep screen0.slit.autoHide $HOME/.fluxbox/init").output.section(":",1,1).trimmed();
+    QString slitautohide = runCmd(QStringLiteral("grep screen0.slit.autoHide $HOME/.fluxbox/init")).output.section(QStringLiteral(":"),1,1).trimmed();
     if (verbose) qDebug() << "slit autohide" << slitautohide;
-    if (slitautohide == "true"){
+    if (slitautohide == QLatin1String("true")){
         ui->checkboxfluxSlitautohide->setChecked(true);
     } else {
         ui->checkboxfluxSlitautohide->setChecked(false);
@@ -1208,11 +1208,11 @@ void defaultlook::setupFluxbox()
 void defaultlook::setupEtc()
 {
     QString home_path = QDir::homePath();
-    QString DESKTOP = runCmd("echo $XDG_SESSION_DESKTOP").output;
+    QString DESKTOP = runCmd(QStringLiteral("echo $XDG_SESSION_DESKTOP")).output;
     qDebug() << "setupetc nocsd desktop is:" << DESKTOP;
 
     ui->checkBoxLightdmReset->setChecked(false);
-    QString test = runCmd("pgrep lightdm").output;
+    QString test = runCmd(QStringLiteral("pgrep lightdm")).output;
     if (test.isEmpty()){
           ui->checkBoxLightdmReset->hide();
     }
@@ -1232,7 +1232,7 @@ void defaultlook::setupEtc()
     //set values for checkboxes
 
     //setup udisks option
-    QFileInfo fileinfo("/etc/tweak-udisks.chk");
+    QFileInfo fileinfo(QStringLiteral("/etc/tweak-udisks.chk"));
     if (fileinfo.exists()) {
         ui->checkBoxMountInternalDrivesNonRoot->setChecked(true);
     } else {
@@ -1241,7 +1241,7 @@ void defaultlook::setupEtc()
 
     //setup sudo override function
 
-    QFileInfo sudo_override_file("/etc/polkit-1/localauthority.conf.d/55-tweak-override.conf");
+    QFileInfo sudo_override_file(QStringLiteral("/etc/polkit-1/localauthority.conf.d/55-tweak-override.conf"));
     if (sudo_override_file.exists()) {
         ui->radioSudoUser->setChecked(true);
     } else {
@@ -1249,8 +1249,8 @@ void defaultlook::setupEtc()
     }
 
     //if root accout disabled, disable root authentication changes
-    test = runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-check.sh").output;
-    if ( test.contains("NP")){
+    test = runCmd(QStringLiteral("pkexec /usr/lib/mx-tweak/mx-tweak-check.sh")).output;
+    if ( test.contains(QLatin1String("NP"))){
         ui->radioSudoRoot->setEnabled(false);
         ui->radioSudoUser->setEnabled(false);
         ui->label_11->setEnabled(false);
@@ -1259,12 +1259,12 @@ void defaultlook::setupEtc()
 
     //setup user namespaces option (99-sandbox-mx.conf)
     sandboxflag = false;
-    QString userns_clone = runCmd("/usr/sbin/sysctl -n kernel.unprivileged_userns_clone").output;
+    QString userns_clone = runCmd(QStringLiteral("/usr/sbin/sysctl -n kernel.unprivileged_userns_clone")).output;
     //QString yama_ptrace = runCmd("/usr/sbin/sysctl -n kernel.yama.ptrace_scope").output;
     if (verbose) qDebug() << "userns_clone is: " << userns_clone;
-    if (userns_clone == "0" || userns_clone == "1"){
+    if (userns_clone == QLatin1String("0") || userns_clone == QLatin1String("1")){
         //if (userns_clone == "1" && yama_ptrace == "1"){
-        if (userns_clone == "1"){
+        if (userns_clone == QLatin1String("1")){
             ui->checkBoxSandbox->setChecked(true);
         } else {
             ui->checkBoxSandbox->setChecked(false);
@@ -1274,7 +1274,7 @@ void defaultlook::setupEtc()
     }
 
     //setup NOCSD GTK3 option
-    if (!QFileInfo::exists("/usr/bin/gtk3-nocsd")){
+    if (!QFileInfo::exists(QStringLiteral("/usr/bin/gtk3-nocsd"))){
         qDebug() << "gtk3-nocsd not found";
         ui->checkBoxCSD->hide();
     } else {
@@ -1293,51 +1293,51 @@ void defaultlook::setupEtc()
     libinput_touchpadflag = false;
     //setup Intel checkbox
 
-    QString partcheck = runCmd(R"(for i in $(lspci -n | awk '{print $2,$1}' | grep -E '^(0300|0302|0380)' | cut -f2 -d\ ); do lspci -kns "$i"; done)").output;
+    QString partcheck = runCmd(QStringLiteral(R"(for i in $(lspci -n | awk '{print $2,$1}' | grep -E '^(0300|0302|0380)' | cut -f2 -d\ ); do lspci -kns "$i"; done)")).output;
     if (verbose) qDebug()<< "partcheck = " << partcheck;
 
-    if ( partcheck.contains("i915")) {
+    if ( partcheck.contains(QLatin1String("i915"))) {
         ui->checkboxIntelDriver->show();
         ui->labelIntel->show();
     }
 
-    if ( partcheck.contains("Kernel driver in use: amdgpu")) {
+    if ( partcheck.contains(QLatin1String("Kernel driver in use: amdgpu"))) {
         ui->checkboxAMDtearfree->show();
         ui->labelamdgpu->show();
     }
 
-    if ( partcheck.contains("Kernel driver in use: radeon")) {
+    if ( partcheck.contains(QLatin1String("Kernel driver in use: radeon"))) {
         ui->checkboxRadeontearfree->show();
         ui->labelradeon->show();
     }
 
-    QFileInfo intelfile("/etc/X11/xorg.conf.d/20-intel.conf");
+    QFileInfo intelfile(QStringLiteral("/etc/X11/xorg.conf.d/20-intel.conf"));
     if ( intelfile.exists()) {
         ui->checkboxIntelDriver->setChecked(true);
     }else {
         ui->checkboxIntelDriver->setChecked(false);
     }
 
-    QFileInfo amdfile("/etc/X11/xorg.conf.d/20-amd.conf");
+    QFileInfo amdfile(QStringLiteral("/etc/X11/xorg.conf.d/20-amd.conf"));
     if ( amdfile.exists()) {
         ui->checkboxAMDtearfree->setChecked(true);
     }else {
         ui->checkboxAMDtearfree->setChecked(false);
     }
 
-    QFileInfo radeonfile("/etc/X11/xorg.conf.d/20-radeon.conf");
+    QFileInfo radeonfile(QStringLiteral("/etc/X11/xorg.conf.d/20-radeon.conf"));
     if ( radeonfile.exists()) {
         ui->checkboxRadeontearfree->setChecked(true);
     }else {
         ui->checkboxRadeontearfree->setChecked(false);
     }
 
-    partcheck = runCmd("xinput |grep -i touchpad").output;
+    partcheck = runCmd(QStringLiteral("xinput |grep -i touchpad")).output;
     if (!partcheck.isEmpty()){
         ui->checkBoxlibinput->show();
     }
 
-    QFileInfo libinputfile("/etc/X11/xorg.conf.d/30-touchpad.conf");
+    QFileInfo libinputfile(QStringLiteral("/etc/X11/xorg.conf.d/30-touchpad.conf"));
     if ( libinputfile.exists()) {
         ui->checkBoxlibinput->setChecked(true);
     }else {
@@ -1361,9 +1361,9 @@ void defaultlook::setuptheme()
     ui->checkFirefox->hide();
     ui->checkHexchat->hide();
 
-    populatethemelists("gtk-3.0");
-    populatethemelists("xfwm4");
-    populatethemelists("icons");
+    populatethemelists(QStringLiteral("gtk-3.0"));
+    populatethemelists(QStringLiteral("xfwm4"));
+    populatethemelists(QStringLiteral("icons"));
 
     //only enable options that make sense
 
@@ -1381,7 +1381,7 @@ void defaultlook::setuptheme()
         //check for absolutePath()setting
        QString code = runCmd("grep 'gui_input_style = 0' " + file_hexchat.absoluteFilePath()).output;
         if (verbose) qDebug() << "hexchat command :" << code;
-        if (code == "gui_input_style = 0") {
+        if (code == QLatin1String("gui_input_style = 0")) {
             ui->checkHexchat->setChecked(true);
         }
     }
@@ -1392,13 +1392,13 @@ void defaultlook::setupCompositor()
     //set comboboxvblank to current setting
 
     vblankflag = false;
-    vblankinitial = runCmd("xfconf-query -c xfwm4 -p /general/vblank_mode").output;
+    vblankinitial = runCmd(QStringLiteral("xfconf-query -c xfwm4 -p /general/vblank_mode")).output;
     if (verbose) qDebug() << "vblank = " << vblankinitial;
     ui->comboBoxvblank->setCurrentText(vblankinitial);
 
     //deal with compositors
 
-    QString cmd = "ps -aux |grep -v grep |grep -q compiz";
+    QString cmd = QStringLiteral("ps -aux |grep -v grep |grep -q compiz");
     if (system(cmd.toUtf8()) == 0) {
         ui->tabWidget->removeTab(2);
     } else {
@@ -1443,16 +1443,16 @@ void defaultlook::setupConfigoptions()
   if (checkXFCE()){
       //check single click status
       QString test;
-      test = runCmd("xfconf-query  -c xfce4-desktop -p /desktop-icons/single-click").output;
-      if ( test == "true") {
+      test = runCmd(QStringLiteral("xfconf-query  -c xfce4-desktop -p /desktop-icons/single-click")).output;
+      if ( test == QLatin1String("true")) {
           ui->checkBoxSingleClick->setChecked(true);
       } else {
           ui->checkBoxSingleClick->setChecked(false);
       }
 
       //check single click thunar status
-      test = runCmd("xfconf-query  -c thunar -p /misc-single-click").output;
-      if ( test == "true") {
+      test = runCmd(QStringLiteral("xfconf-query  -c thunar -p /misc-single-click")).output;
+      if ( test == QLatin1String("true")) {
           ui->checkBoxThunarSingleClick->setChecked(true);
       } else {
           ui->checkBoxThunarSingleClick->setChecked(false);
@@ -1462,11 +1462,11 @@ void defaultlook::setupConfigoptions()
       //frame has been removed from systray
 
       // show all workspaces - tasklist/show buttons feature
-      plugintasklist = runCmd(R"(grep \"tasklist\" ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml |cut -d '=' -f2 | cut -d '' -f1| cut -d '"' -f2)").output;
+      plugintasklist = runCmd(QStringLiteral(R"(grep \"tasklist\" ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml |cut -d '=' -f2 | cut -d '' -f1| cut -d '"' -f2)")).output;
       if (verbose) qDebug() << "tasklist is " << plugintasklist;
       if ( ! plugintasklist.isEmpty()){
           test = runCmd("xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/include-all-workspaces").output;
-          if ( test == "true") {
+          if ( test == QLatin1String("true")) {
               ui->checkBoxShowAllWorkspaces->setChecked(true);
           } else {
               ui->checkBoxShowAllWorkspaces->setChecked(false);
@@ -1477,8 +1477,8 @@ void defaultlook::setupConfigoptions()
 
       //switch zoom_desktop
 
-      test = runCmd("xfconf-query -c xfwm4 -p /general/zoom_desktop").output;
-      if ( test == "true") {
+      test = runCmd(QStringLiteral("xfconf-query -c xfwm4 -p /general/zoom_desktop")).output;
+      if ( test == QLatin1String("true")) {
           ui->checkBoxDesktopZoom->setChecked(true);
       } else {
           ui->checkBoxDesktopZoom->setChecked(false);
@@ -1494,15 +1494,15 @@ void defaultlook::setupConfigoptions()
 
       //setup hibernate switch
       //first, hide if running live
-      test = runCmd("df -T / |tail -n1 |awk '{print $2}'").output;
+      test = runCmd(QStringLiteral("df -T / |tail -n1 |awk '{print $2}'")).output;
       if (verbose) qDebug() << test;
-      if ( test == "aufs" || test == "overlay" ) {
+      if ( test == QLatin1String("aufs") || test == QLatin1String("overlay") ) {
           ui->checkBoxHibernate->hide();
           ui->label_hibernate->hide();
       }
 
       //hide hibernate if there is no swap
-      QString swaptest = runCmd("/usr/sbin/swapon --show").output;
+      QString swaptest = runCmd(QStringLiteral("/usr/sbin/swapon --show")).output;
       if (verbose) qDebug() << "swaptest swap present is " << swaptest;
       if (swaptest.isEmpty()) {
           ui->checkBoxHibernate->hide();
@@ -1511,9 +1511,9 @@ void defaultlook::setupConfigoptions()
 
       // also hide hibernate if /etc/uswsusp.conf is missing
       //only on mx-21 and up
-      test = runCmd("cat /etc/mx-version").output;
-      if ( test.contains("MX-19")){
-          QFileInfo file("/etc/uswsusp.conf");
+      test = runCmd(QStringLiteral("cat /etc/mx-version")).output;
+      if ( test.contains(QLatin1String("MX-19"))){
+          QFileInfo file(QStringLiteral("/etc/uswsusp.conf"));
           if (file.exists()) {
               if (verbose) qDebug() << "uswsusp.conf found";
           }else {
@@ -1523,7 +1523,7 @@ void defaultlook::setupConfigoptions()
       }
 
       //and hide hibernate if swap is encrypted
-      QString cmd = "grep swap /etc/crypttab |grep -q luks";
+      QString cmd = QStringLiteral("grep swap /etc/crypttab |grep -q luks");
       int swaptest2 = system(cmd.toUtf8());
       if (verbose) qDebug() << "swaptest encrypted is " << swaptest2;
       if (swaptest2 == 0) {
@@ -1532,8 +1532,8 @@ void defaultlook::setupConfigoptions()
       }
 
       //set checkbox
-      test = runCmd("xfconf-query -c xfce4-session -p /shutdown/ShowHibernate").output;
-      if ( test == "true") {
+      test = runCmd(QStringLiteral("xfconf-query -c xfce4-session -p /shutdown/ShowHibernate")).output;
+      if ( test == QLatin1String("true")) {
           ui->checkBoxHibernate->setChecked(true);
           hibernate_flag = true;
       } else {
@@ -1558,10 +1558,10 @@ void defaultlook::CheckComptonRunning()
         if (verbose) qDebug() << "Compton is NOT running";
 
         //check if compton is present on system, remove from choices if not
-        QFileInfo compton("/usr/bin/compton");
+        QFileInfo compton(QStringLiteral("/usr/bin/compton"));
 
         //adjust for picom
-        if (compton.symLinkTarget() == "/usr/bin/picom" ){
+        if (compton.symLinkTarget() == QLatin1String("/usr/bin/picom") ){
             QFileInfo picom(compton.symLinkTarget());
             ui->comboBoxCompositor->setItemText(2,picom.baseName());
             ui->buttonConfigureCompton->setText(picom.baseName() + " " + tr("settings"));
@@ -1576,9 +1576,9 @@ void defaultlook::CheckComptonRunning()
 
         //check if xfce compositor is enabled
         QString test;
-        test = runCmd("xfconf-query -c xfwm4 -p /general/use_compositing").output;
+        test = runCmd(QStringLiteral("xfconf-query -c xfwm4 -p /general/use_compositing")).output;
         if (verbose) qDebug() << "etc test is "<< test;
-        if (test == "true") {
+        if (test == QLatin1String("true")) {
             ui->comboBoxCompositor->setCurrentIndex(1);
         }else{
             ui->comboBoxCompositor->setCurrentIndex(0);
@@ -1605,12 +1605,12 @@ void defaultlook::CheckAptNotifierRunning() const
 void defaultlook::setupscale()
 {
     //setup scale for currently shown display and in the active profile
-    QString xscale = "1";
-    QString yscale = "1";
+    QString xscale = QStringLiteral("1");
+    QString yscale = QStringLiteral("1");
     double scale = 1;
 
     //get active profile
-    QString activeprofile = runCmd("LANG=C xfconf-query --channel displays -p /ActiveProfile").output;
+    QString activeprofile = runCmd(QStringLiteral("LANG=C xfconf-query --channel displays -p /ActiveProfile")).output;
     //get scales for display show in combobox
     int exitcode = runCmd("LANG=C xfconf-query --channel displays -p /" + activeprofile + "/" + ui->comboBoxDisplay->currentText() +"/Scale/X").exitCode;
     if ( exitcode == 0 ){
@@ -1643,7 +1643,7 @@ void defaultlook::setscale()
     QString resolution = runCmd("xrandr |grep " + ui->comboBoxDisplay->currentText() + " |cut -d' ' -f3 |cut -d'+' -f1").output;
     if (verbose) qDebug() << "resolution is : " << resolution;
     QString scalestring = QString::number(scale, 'G', 5);
-    QString activeprofile = runCmd("LANG=C xfconf-query --channel displays -p /ActiveProfile").output;
+    QString activeprofile = runCmd(QStringLiteral("LANG=C xfconf-query --channel displays -p /ActiveProfile")).output;
 
     //set missing variables
     setmissingxfconfvariables(activeprofile, resolution);
@@ -1677,8 +1677,8 @@ void defaultlook::on_comboBoxDisplay_currentIndexChanged(int  /*index*/)
 void defaultlook::setupDisplay()
 {
     //populate combobox
-    QString displaydata = runCmd("LANG=C xrandr |grep -w connected | cut -d' ' -f1").output;
-    QStringList displaylist = displaydata.split("\n");
+    QString displaydata = runCmd(QStringLiteral("LANG=C xrandr |grep -w connected | cut -d' ' -f1")).output;
+    QStringList displaylist = displaydata.split(QStringLiteral("\n"));
     ui->comboBoxDisplay->clear();
     ui->comboBoxDisplay->addItems(displaylist);
     setupBrightness();
@@ -1689,7 +1689,7 @@ void defaultlook::setupDisplay()
     brightnessflag = true;
 
     //get gtk scaling value
-    QString GTKScale = runCmd("LANG=C xfconf-query --channel xsettings -p /Gdk/WindowScalingFactor").output;
+    QString GTKScale = runCmd(QStringLiteral("LANG=C xfconf-query --channel xsettings -p /Gdk/WindowScalingFactor")).output;
     ui->spinBoxgtkscaling->setValue(GTKScale.toInt());
     //disable resolution stuff
 }
@@ -1702,7 +1702,7 @@ void defaultlook::setupresolutions()
     if (verbose) qDebug() << "get resolution command is :" << cmd;
     QString resolutions = runCmd(cmd).output;
     if (verbose) qDebug() << "resolutions are :" << resolutions;
-    QStringList resolutionslist = resolutions.split("\n");
+    QStringList resolutionslist = resolutions.split(QStringLiteral("\n"));
     ui->comboBoxresolutions->addItems(resolutionslist);
     //set current resolution as default
     QString resolution = runCmd("xrandr |grep " + ui->comboBoxDisplay->currentText() + " |cut -d+ -f1 |grep -oE '[^ ]+$'").output;
@@ -1712,7 +1712,7 @@ void defaultlook::setupresolutions()
 
 void defaultlook::setresolution()
 {
-    QString activeprofile = runCmd("LANG=C xfconf-query --channel displays -p /ActiveProfile").output;
+    QString activeprofile = runCmd(QStringLiteral("LANG=C xfconf-query --channel displays -p /ActiveProfile")).output;
     QString display = ui->comboBoxDisplay->currentText();
     QString resolution = ui->comboBoxresolutions->currentText();
     QString cmd = "xrandr --output " + display + " --mode " + resolution;
@@ -1745,17 +1745,17 @@ void defaultlook::setrefreshrate(const QString &display, const QString &resoluti
     refreshrate=refreshrate.simplified();
     QStringList refreshratelist = refreshrate.split(QRegExp("\\s"));
     refreshratelist.removeAll(resolution);
-    if (verbose) qDebug() << "defualt refreshreate list is :" << refreshratelist.at(0).section("*",0,0);
-    runCmd("xfconf-query --channel displays -p /" + activeprofile + "/" + display + "/RefreshRate -t double -s " + refreshratelist.at(0).section("*",0,0) + " --create; sleep 1");
+    if (verbose) qDebug() << "defualt refreshreate list is :" << refreshratelist.at(0).section(QStringLiteral("*"),0,0);
+    runCmd("xfconf-query --channel displays -p /" + activeprofile + "/" + display + "/RefreshRate -t double -s " + refreshratelist.at(0).section(QStringLiteral("*"),0,0) + " --create; sleep 1");
 }
 
 void defaultlook::setupbacklight()
 {
     //check for backlights
-    QString test = runCmd("ls /sys/class/backlight").output;
+    QString test = runCmd(QStringLiteral("ls /sys/class/backlight")).output;
     if ( ! test.isEmpty()) {
         //get backlight value for currently
-        QString backlight=runCmd("sudo /usr/lib/mx-tweak/backlight-brightness -g").output;
+        QString backlight=runCmd(QStringLiteral("sudo /usr/lib/mx-tweak/backlight-brightness -g")).output;
         int backlight_slider_value = backlight.toInt();
         ui->horizsliderhardwarebacklight->setValue(backlight_slider_value);
         ui->horizsliderhardwarebacklight->setToolTip(backlight);
@@ -1780,7 +1780,7 @@ void defaultlook::setbacklight()
 void defaultlook::setgtkscaling()
 {
     runCmd("xfconf-query --channel xsettings -p /Gdk/WindowScalingFactor -t int -s " + QString::number(ui->spinBoxgtkscaling->value()));
-    runCmd("xfce4-panel --restart");
+    runCmd(QStringLiteral("xfce4-panel --restart"));
 }
 
 void defaultlook::setupBrightness()
@@ -1798,10 +1798,10 @@ void defaultlook::setupGamma()
 {
     QString gamma = runCmd("/usr/lib/mx-tweak/mx-tweak-lib-randr.sh " + ui->comboBoxDisplay->currentText() + " gamma").output;
     gamma=gamma.simplified();
-    gamma = gamma.section(":",1,3).simplified();
-    double gamma1 = 1.0 / gamma.section(":",0,0).toDouble();
-    double gamma2 = 1.0 / gamma.section(":",1,1).toDouble();
-    double gamma3 = 1.0 / gamma.section(":",2,2).toDouble();
+    gamma = gamma.section(QStringLiteral(":"),1,3).simplified();
+    double gamma1 = 1.0 / gamma.section(QStringLiteral(":"),0,0).toDouble();
+    double gamma2 = 1.0 / gamma.section(QStringLiteral(":"),1,1).toDouble();
+    double gamma3 = 1.0 / gamma.section(QStringLiteral(":"),2,2).toDouble();
     g1 = QString::number(gamma1,'G', 3);
     g2 = QString::number(gamma2,'G', 3);
     g3 = QString::number(gamma3,'G', 3);
@@ -1858,20 +1858,20 @@ void defaultlook::setupComboTheme()
     bool xfwm4_theme_present = false;
     ui->comboTheme->clear();
     QStringList theme_list;
-    QStringList filter("*.tweak");
-    QDirIterator it("/usr/share/mx-tweak-data", filter, QDir::Files, QDirIterator::Subdirectories);
+    QStringList filter(QStringLiteral("*.tweak"));
+    QDirIterator it(QStringLiteral("/usr/share/mx-tweak-data"), filter, QDir::Files, QDirIterator::Subdirectories);
     while (it.hasNext()) {
         xsettings_gtk_theme_present = false;
         icontheme_present = false;
         xfwm4_theme_present = false;
         QFileInfo file_info(it.next());
         QString filename = file_info.absoluteFilePath();
-        QString name = runCmd("cat '" + filename + "'|grep Name=").output.section("=",1,1);
-        QString xsettings_gtk_theme = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xsettings_gtk_theme=").output.section("=",1,1);
+        QString name = runCmd("cat '" + filename + "'|grep Name=").output.section(QStringLiteral("="),1,1);
+        QString xsettings_gtk_theme = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xsettings_gtk_theme=").output.section(QStringLiteral("="),1,1);
         if (verbose) qDebug() << "xsettings_gtk_theme = " << xsettings_gtk_theme;
-        QString xsettings_icon_theme = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xsettings_icon_theme=").output.section("=",1,1);
+        QString xsettings_icon_theme = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xsettings_icon_theme=").output.section(QStringLiteral("="),1,1);
         if (verbose) qDebug() << "xsettings_icon_theme = " << xsettings_icon_theme;
-        QString xfwm4_window_decorations = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xfwm4_window_decorations=").output.section("=",1,1);
+        QString xfwm4_window_decorations = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xfwm4_window_decorations=").output.section(QStringLiteral("="),1,1);
         if (verbose) qDebug() << "xfwm4_window_decorations = " << xfwm4_window_decorations;
 
         //check theme existence, only list if all 3 elements present
@@ -1919,13 +1919,13 @@ void defaultlook::setupComboTheme()
         QString home_path = QDir::homePath();
         QFileInfo file_info(it2.next());
         QString filename = file_info.absoluteFilePath();
-        QString name = runCmd("cat '" + filename + "'|grep Name=").output.section("=",1,1);
+        QString name = runCmd("cat '" + filename + "'|grep Name=").output.section(QStringLiteral("="),1,1);
 
-        QString xsettings_gtk_theme = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xsettings_gtk_theme=").output.section("=",1,1);
+        QString xsettings_gtk_theme = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xsettings_gtk_theme=").output.section(QStringLiteral("="),1,1);
         if (verbose) qDebug() << "xsettings_gtk_theme = " << xsettings_gtk_theme;
-        QString xsettings_icon_theme = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xsettings_icon_theme=").output.section("=",1,1);
+        QString xsettings_icon_theme = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xsettings_icon_theme=").output.section(QStringLiteral("="),1,1);
         if (verbose) qDebug() << "xsettings_icon_theme = " << xsettings_icon_theme;
-        QString xfwm4_window_decorations = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xfwm4_window_decorations=").output.section("=",1,1);
+        QString xfwm4_window_decorations = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xfwm4_window_decorations=").output.section(QStringLiteral("="),1,1);
         if (verbose) qDebug() << "xfwm4_window_decorations = " << xfwm4_window_decorations;
 
         //check theme existence, only list if all 3 elements present
@@ -1982,22 +1982,22 @@ void defaultlook::on_buttonThemeApply_clicked()
     QString themename = theme_info.value(ui->comboTheme->currentText());
     QFileInfo fileinfo(themename);
     //initialize variables
-    QString backgroundColor = runCmd("cat '" + fileinfo.absoluteFilePath() + "' |grep background-rgba=").output.section("=" , 1,1);
+    QString backgroundColor = runCmd("cat '" + fileinfo.absoluteFilePath() + "' |grep background-rgba=").output.section(QStringLiteral("=") , 1,1);
     if (verbose) qDebug() << "backgroundColor = " << backgroundColor;
-    QString color1 = backgroundColor.section(",",0,0);
-    QString color2 = backgroundColor.section(",", 1, 1);
-    QString color3 = backgroundColor.section(",",2,2);
-    QString color4 = backgroundColor.section(",",3,3);
+    QString color1 = backgroundColor.section(QStringLiteral(","),0,0);
+    QString color2 = backgroundColor.section(QStringLiteral(","), 1, 1);
+    QString color3 = backgroundColor.section(QStringLiteral(","),2,2);
+    QString color4 = backgroundColor.section(QStringLiteral(","),3,3);
     if (verbose) qDebug() << "sep colors" << color1 << color2 << color3 << color4;
-    QString background_image = runCmd("cat '" + fileinfo.absoluteFilePath() + "' |grep background-image=").output.section("=",1,1);
+    QString background_image = runCmd("cat '" + fileinfo.absoluteFilePath() + "' |grep background-image=").output.section(QStringLiteral("="),1,1);
     if (verbose) qDebug() << "backgroundImage = " << background_image;
-    QString background_style = runCmd("cat '" + fileinfo.absoluteFilePath() + "' |grep background-style=").output.section("=",1,1);
+    QString background_style = runCmd("cat '" + fileinfo.absoluteFilePath() + "' |grep background-style=").output.section(QStringLiteral("="),1,1);
     if (verbose) qDebug() << "backgroundstyle = " << background_style;
-    QString xsettings_gtk_theme = runCmd("cat '" + fileinfo.absoluteFilePath() + "' |grep xsettings_gtk_theme=").output.section("=",1,1);
+    QString xsettings_gtk_theme = runCmd("cat '" + fileinfo.absoluteFilePath() + "' |grep xsettings_gtk_theme=").output.section(QStringLiteral("="),1,1);
     if (verbose) qDebug() << "xsettings_gtk_theme = " << xsettings_gtk_theme;
-    QString xsettings_icon_theme = runCmd("cat '" + fileinfo.absoluteFilePath() + "' |grep xsettings_icon_theme=").output.section("=",1,1);
+    QString xsettings_icon_theme = runCmd("cat '" + fileinfo.absoluteFilePath() + "' |grep xsettings_icon_theme=").output.section(QStringLiteral("="),1,1);
     if (verbose) qDebug() << "xsettings_icon_theme = " << xsettings_icon_theme;
-    QString xfwm4_window_decorations = runCmd("cat '" + fileinfo.absoluteFilePath() + "' |grep xfwm4_window_decorations=").output.section("=",1,1);
+    QString xfwm4_window_decorations = runCmd("cat '" + fileinfo.absoluteFilePath() + "' |grep xfwm4_window_decorations=").output.section(QStringLiteral("="),1,1);
     if (verbose) qDebug() << "xfwm4_window_decorations = " << xfwm4_window_decorations;
 
     //  use xfconf system to change values
@@ -2006,15 +2006,15 @@ void defaultlook::on_buttonThemeApply_clicked()
 
     //set gtk theme
         runCmd("xfconf-query -c xsettings -p /Net/ThemeName -s " + xsettings_gtk_theme);
-        runCmd("sleep .5");
+        runCmd(QStringLiteral("sleep .5"));
 
     //set window decorations theme
         runCmd("xfconf-query -c xfwm4 -p /general/theme -s " + xfwm4_window_decorations);
-        runCmd("sleep .5");
+        runCmd(QStringLiteral("sleep .5"));
 
     //set icon theme
         runCmd("xfconf-query -c xsettings -p /Net/IconThemeName -s " + xsettings_icon_theme);
-        runCmd("sleep .5");
+        runCmd(QStringLiteral("sleep .5"));
 
     //deal with panel customizations for each panel
 
@@ -2025,7 +2025,7 @@ void defaultlook::on_buttonThemeApply_clicked()
 
         //set panel background mode
 
-        if (background_style == "1" || background_style == "2" || background_style == "0") {
+        if (background_style == QLatin1String("1") || background_style == QLatin1String("2") || background_style == QLatin1String("0")) {
             runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-style -t int -s " + background_style + " --create");
         } else {
             runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-style -t int -s 0 --create");
@@ -2043,7 +2043,7 @@ void defaultlook::on_buttonThemeApply_clicked()
 
         //set panel color
 
-        if (backgroundColor != "") {
+        if (backgroundColor != QLatin1String("")) {
             runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-rgba -t double -t double -t double -t double -s " + color1 + " -s " + color2 + " -s " + color3 + " -s " + color4 + " --create");
         }
     }
@@ -2077,9 +2077,9 @@ void defaultlook::on_buttonThemeApply_clicked()
     //check theme overrides
 
     if (ui->checkFirefox->isChecked()) {
-        runCmd("touch /home/$USER/.config/FirefoxDarkThemeOverride.check");
+        runCmd(QStringLiteral("touch /home/$USER/.config/FirefoxDarkThemeOverride.check"));
     } else {
-        runCmd("rm /home/$USER/.config/FirefoxDarkThemeOverride.check");
+        runCmd(QStringLiteral("rm /home/$USER/.config/FirefoxDarkThemeOverride.check"));
     }
 
     //deal with hexchat
@@ -2119,7 +2119,7 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     QString radeon_option;
     QString lightdm_option;
     QString libinput_option;
-    QString DESKTOP = runCmd("echo $XDG_SESSION_DESKTOP").output;
+    QString DESKTOP = runCmd(QStringLiteral("echo $XDG_SESSION_DESKTOP")).output;
     QString home_path = QDir::homePath();
     ui->ButtonApplyEtc->setEnabled(false);
 
@@ -2128,8 +2128,8 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     libinput_option.clear();
 
     //deal with udisks option
-    QFileInfo fileinfo("/etc/tweak-udisks.chk");
-    QFileInfo sudo_override("/etc/polkit-1/localauthority.conf.d/55-tweak-override.conf");
+    QFileInfo fileinfo(QStringLiteral("/etc/tweak-udisks.chk"));
+    QFileInfo sudo_override(QStringLiteral("/etc/polkit-1/localauthority.conf.d/55-tweak-override.conf"));
     QString cmd;
     QString udisks_option;
     QString sudo_override_option;
@@ -2158,83 +2158,83 @@ void defaultlook::on_ButtonApplyEtc_clicked()
         if (fileinfo.exists()) {
             if (verbose) qDebug() << "no change to internal drive mount settings";
         } else {
-            udisks_option = "enable_user_mount";
+            udisks_option = QStringLiteral("enable_user_mount");
         }
     } else {
         if (fileinfo.exists()) {
-            udisks_option = "disable_user_mount";
+            udisks_option = QStringLiteral("disable_user_mount");
         } else {
             if (verbose) qDebug() << "no change to internal drive mount settings";
         }
     }
 
     if (ui->checkBoxLightdmReset->isChecked()) {
-        lightdm_option = "lightdm_reset";
+        lightdm_option = QStringLiteral("lightdm_reset");
     }
 
     if ( Intel_flag ) {
-        QFileInfo check_intel("/etc/X11/xorg.conf.d/20-intel.conf");
+        QFileInfo check_intel(QStringLiteral("/etc/X11/xorg.conf.d/20-intel.conf"));
         if ( check_intel.exists()){
             //backup existing 20-intel.conf file to home folder
-            cmd = "cp /etc/X11/xorg.conf.d/20-intel.conf /home/$USER/20-intel.conf.$(date +%Y%m%H%M%S)";
+            cmd = QStringLiteral("cp /etc/X11/xorg.conf.d/20-intel.conf /home/$USER/20-intel.conf.$(date +%Y%m%H%M%S)");
             system(cmd.toUtf8());
         }
         if (ui->checkboxIntelDriver->isChecked()) {
             //copy mx-tweak version to xorg.conf.d directory
-            intel_option = "enable_intel";
+            intel_option = QStringLiteral("enable_intel");
         } else {
             //remove 20-intel.conf
-            intel_option = "disable_intel";
+            intel_option = QStringLiteral("disable_intel");
         }
     }
 
     if ( amdgpuflag ) {
-        QFileInfo check_amd("/etc/X11/xorg.conf.d/20-amd.conf");
+        QFileInfo check_amd(QStringLiteral("/etc/X11/xorg.conf.d/20-amd.conf"));
         if ( check_amd.exists()){
             //backup existing 20-amd.conf file to home folder
-            cmd = "cp /etc/X11/xorg.conf.d/20-amd.conf /home/$USER/20-amd.conf.$(date +%Y%m%H%M%S)";
+            cmd = QStringLiteral("cp /etc/X11/xorg.conf.d/20-amd.conf /home/$USER/20-amd.conf.$(date +%Y%m%H%M%S)");
             system(cmd.toUtf8());
         }
         if (ui->checkboxAMDtearfree->isChecked()) {
             //copy mx-tweak version to xorg.conf.d directory
-            amd_option = "enable_amd";
+            amd_option = QStringLiteral("enable_amd");
         } else {
             //remove 20-amd.conf
-            amd_option = "disable_amd";
+            amd_option = QStringLiteral("disable_amd");
         }
     }
 
     if ( radeon_flag ) {
-        QFileInfo check_radeon("/etc/X11/xorg.conf.d/20-radeon.conf");
+        QFileInfo check_radeon(QStringLiteral("/etc/X11/xorg.conf.d/20-radeon.conf"));
         if ( check_radeon.exists()){
             //backup existing 20-radeon.conf file to home folder
-            cmd = "cp /etc/X11/xorg.conf.d/20-radeon.conf /home/$USER/20-radeon.conf.$(date +%Y%m%H%M%S)";
+            cmd = QStringLiteral("cp /etc/X11/xorg.conf.d/20-radeon.conf /home/$USER/20-radeon.conf.$(date +%Y%m%H%M%S)");
             system(cmd.toUtf8());
         }
         if (ui->checkboxRadeontearfree->isChecked()) {
             //copy mx-tweak version to xorg.conf.d directory
-            radeon_option = "enable_radeon";
+            radeon_option = QStringLiteral("enable_radeon");
         } else {
             //remove 20-radeon.conf
-            radeon_option = "disable_radeon";
+            radeon_option = QStringLiteral("disable_radeon");
         }
     }
 
     //libinput_touchpad
 
     if ( libinput_touchpadflag ) {
-        QFileInfo check_libinput("/etc/X11/xorg.conf.d/30-touchpad.conf");
+        QFileInfo check_libinput(QStringLiteral("/etc/X11/xorg.conf.d/30-touchpad.conf"));
         if ( check_libinput.exists()){
             //backup existing 20-radeon.conf file to home folder
-            cmd = "cp /etc/X11/xorg.conf.d/30-touchpad.conf /home/$USER/30-touchpad.conf.$(date +%Y%m%H%M%S)";
+            cmd = QStringLiteral("cp /etc/X11/xorg.conf.d/30-touchpad.conf /home/$USER/30-touchpad.conf.$(date +%Y%m%H%M%S)");
             system(cmd.toUtf8());
         }
         if (ui->checkBoxlibinput->isChecked()) {
             //copy mx-tweak version to xorg.conf.d directory
-            libinput_option = "enable_libinput_touchpad";
+            libinput_option = QStringLiteral("enable_libinput_touchpad");
         } else {
             //remove 20-radeon.conf
-            libinput_option = "disable_libinput_touchpad";
+            libinput_option = QStringLiteral("disable_libinput_touchpad");
         }
     }
 
@@ -2244,11 +2244,11 @@ void defaultlook::on_ButtonApplyEtc_clicked()
         if (sudo_override.exists()) {
             if (verbose) qDebug() << "no change to admin password settings";
         } else {
-            sudo_override_option = "enable_sudo_override";
+            sudo_override_option = QStringLiteral("enable_sudo_override");
         }
     } else {
         if (sudo_override.exists()) {
-            sudo_override_option = "disable_sudo_override";
+            sudo_override_option = QStringLiteral("disable_sudo_override");
         } else {
             if (verbose) qDebug() << "no change to admin password settings";
         }
@@ -2257,9 +2257,9 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     //deal with user namespace override
     if (sandboxflag){
         if (ui->checkBoxSandbox->isChecked()){
-            user_name_space_override_option = "enable_sandbox";
+            user_name_space_override_option = QStringLiteral("enable_sandbox");
         } else {
-            user_name_space_override_option = "disable_sandbox";
+            user_name_space_override_option = QStringLiteral("disable_sandbox");
         }
     }
 
@@ -2325,12 +2325,12 @@ void defaultlook::savethemeundo()
 
         if (runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-color").exitCode == 0) {
             undovalue = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-color |cut -d ':' -f2").output.trimmed();
-            undovalue.replace("\n", ",");
+            undovalue.replace(QLatin1String("\n"), QLatin1String(","));
             if (verbose) qDebug() << "backup color test" << undovalue;
-            QString color1 = undovalue.section(",",0,0);
-            QString color2 = undovalue.section(",", 1, 1);
-            QString color3 = undovalue.section(",",2,2);
-            QString color4 = undovalue.section(",",3,3);
+            QString color1 = undovalue.section(QStringLiteral(","),0,0);
+            QString color2 = undovalue.section(QStringLiteral(","), 1, 1);
+            QString color3 = undovalue.section(QStringLiteral(","),2,2);
+            QString color4 = undovalue.section(QStringLiteral(","),3,3);
             if (verbose) qDebug() << "sep colors" << color1 << color2 << color3 << color4;
             //runCmd("echo xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-color -s " + color1 + " -s " + color2 + " -s " + color3 + " -s " + color4 + " >> undo.txt");
             undocommand = undocommand + "xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-color -s " + color1 + " -s " + color2 + " -s " + color3 + " -s " + color4 + " ; ";
@@ -2343,8 +2343,8 @@ void defaultlook::savethemeundo()
     //backup theme settings for xfwm4 and xsettings
 
     // gtk theme
-    if (runCmd("xfconf-query -c xsettings -p /Net/ThemeName").exitCode == 0) {
-        undovalue = runCmd("xfconf-query -c xsettings -p /Net/ThemeName").output;
+    if (runCmd(QStringLiteral("xfconf-query -c xsettings -p /Net/ThemeName")).exitCode == 0) {
+        undovalue = runCmd(QStringLiteral("xfconf-query -c xsettings -p /Net/ThemeName")).output;
         //runCmd("echo xfconf-query -c xsettings -p /Net/ThemeName -s " + undovalue + " >> undo.txt");
         undocommand = undocommand + "xfconf-query -c xsettings -p /Net/ThemeName -s " + undovalue + " ; ";
     }else{
@@ -2353,18 +2353,18 @@ void defaultlook::savethemeundo()
     }
 
     // xfwm4 theme
-    if (runCmd("xfconf-query -c xfwm4 -p /general/theme").exitCode == 0) {
-        undovalue = runCmd("xfconf-query -c xfwm4 -p /general/theme").output;
+    if (runCmd(QStringLiteral("xfconf-query -c xfwm4 -p /general/theme")).exitCode == 0) {
+        undovalue = runCmd(QStringLiteral("xfconf-query -c xfwm4 -p /general/theme")).output;
         //runCmd("echo xfconf-query -c xfwm4 -p /general/theme -s " + undovalue + " >> undo.txt");
         undocommand = undocommand + "xfconf-query -c xfwm4 -p /general/theme -s " + undovalue + " ; ";
     }else{
-        runCmd("echo xfconf-query -c xfwm4 -p /general/theme -r >> undo.txt");
+        runCmd(QStringLiteral("echo xfconf-query -c xfwm4 -p /general/theme -r >> undo.txt"));
         undocommand = undocommand + "xfconf-query -c xfwm4 -p /general/theme -r ; ";
     }
 
     // icon theme
-    if (runCmd("xfconf-query -c xsettings -p /Net/IconThemeName").exitCode == 0) {
-        undovalue = runCmd("xfconf-query -c xsettings -p /Net/IconThemeName").output;
+    if (runCmd(QStringLiteral("xfconf-query -c xsettings -p /Net/IconThemeName")).exitCode == 0) {
+        undovalue = runCmd(QStringLiteral("xfconf-query -c xsettings -p /Net/IconThemeName")).output;
         //runCmd("echo xfconf-query -c xsettings -p /Net/IconThemeName -s " + undovalue + " >> undo.txt");
         undocommand = undocommand + "xfconf-query -c xsettings -p /Net/IconThemeName -s " + undovalue + " ; ";
     }else{
@@ -2401,7 +2401,7 @@ void defaultlook::themeundo()
 void defaultlook::on_buttonThemeUndo_clicked()
 {
     themeundo();
-    runCmd("xfce4-panel --restart");
+    runCmd(QStringLiteral("xfce4-panel --restart"));
     if (undotheme.isEmpty()) {
         ui->buttonThemeUndo->setEnabled(false);
     }
@@ -2424,7 +2424,7 @@ void defaultlook::on_buttonCompositorApply_clicked()
 
     if (ui->comboBoxCompositor->currentIndex() == 2) {
         //turn off xfce compositor
-        runCmd("xfconf-query -c xfwm4 -p /general/use_compositing -s false");
+        runCmd(QStringLiteral("xfconf-query -c xfwm4 -p /general/use_compositing -s false"));
         //launch compton
         system("pkill -x compton");
         system("compton-launch.sh");
@@ -2435,14 +2435,14 @@ void defaultlook::on_buttonCompositorApply_clicked()
         //turn off compton
         system("pkill -x compton");
         //launch xfce compositor
-        runCmd("xfconf-query -c xfwm4 -p /general/use_compositing -s true");
+        runCmd(QStringLiteral("xfconf-query -c xfwm4 -p /general/use_compositing -s true"));
         //restart apt-notifier if necessary
         CheckAptNotifierRunning();
     }
     if (ui->comboBoxCompositor->currentIndex() == 0) {
         //turn off compton and xfce compositor
         //turn off xfce compositor
-        runCmd("xfconf-query -c xfwm4 -p /general/use_compositing -s false");
+        runCmd(QStringLiteral("xfconf-query -c xfwm4 -p /general/use_compositing -s false"));
         system("pkill -x compton");
         CheckAptNotifierRunning();
 
@@ -2464,7 +2464,7 @@ void defaultlook::on_buttonCompositorApply_clicked()
     if ( vblankflag ) {
         runCmd("xfconf-query -c xfwm4 -p /general/vblank_mode -t string -s " + ui->comboBoxvblank->currentText() + " --create");
         //restart xfwm4 to take advantage of the setting
-        runCmd("xfwm4 --replace");
+        runCmd(QStringLiteral("xfwm4 --replace"));
     }
 }
 
@@ -2525,11 +2525,11 @@ void defaultlook::on_pushButtonPreview_clicked()
     QFileInfo fileinfo(themename);
 
     //initialize variables
-    QString file_name = runCmd("cat '" + fileinfo.absoluteFilePath() + "' |grep screenshot=").output.section("=" , 1,1);
+    QString file_name = runCmd("cat '" + fileinfo.absoluteFilePath() + "' |grep screenshot=").output.section(QStringLiteral("=") , 1,1);
     QString path = fileinfo.absolutePath();
     QString full_file_path = path + "/" + file_name;
 
-    QMessageBox preview_box(QMessageBox::NoIcon, file_name, "" , QMessageBox::Close, this);
+    QMessageBox preview_box(QMessageBox::NoIcon, file_name, QLatin1String("") , QMessageBox::Close, this);
     preview_box.setIconPixmap(QPixmap(full_file_path));
     preview_box.exec();
 
@@ -2562,30 +2562,30 @@ void defaultlook::on_ButtonApplyMiscDefualts_clicked()
     }
 
     if (ui->checkBoxSingleClick->isChecked()) {
-        runCmd("xfconf-query  -c xfce4-desktop -p /desktop-icons/single-click -s true");
+        runCmd(QStringLiteral("xfconf-query  -c xfce4-desktop -p /desktop-icons/single-click -s true"));
     }else {
-        runCmd("xfconf-query  -c xfce4-desktop -p /desktop-icons/single-click -s false");
+        runCmd(QStringLiteral("xfconf-query  -c xfce4-desktop -p /desktop-icons/single-click -s false"));
     }
 
     if (ui->checkBoxThunarSingleClick->isChecked()) {
-        runCmd("xfconf-query  -c thunar -p /misc-single-click -s true");
+        runCmd(QStringLiteral("xfconf-query  -c thunar -p /misc-single-click -s true"));
     } else {
-        runCmd("xfconf-query  -c thunar -p /misc-single-click -s false");
+        runCmd(QStringLiteral("xfconf-query  -c thunar -p /misc-single-click -s false"));
     }
 
     //systray frame removed
 
     //set desktop zoom
     if (ui->checkBoxDesktopZoom->isChecked()) {
-        runCmd("xfconf-query -c xfwm4 -p /general/zoom_desktop -s true");
+        runCmd(QStringLiteral("xfconf-query -c xfwm4 -p /general/zoom_desktop -s true"));
     } else {
-        runCmd("xfconf-query -c xfwm4 -p /general/zoom_desktop -s false");
+        runCmd(QStringLiteral("xfconf-query -c xfwm4 -p /general/zoom_desktop -s false"));
     }
 
     if (ui->checkBoxThunarCAReset->isChecked()) {
-        cmd = "cp /home/$USER/.config/Thunar/uca.xml /home/$USER/.config/Thunar/uca.xml.$(date +%Y%m%H%M%S)";
+        cmd = QStringLiteral("cp /home/$USER/.config/Thunar/uca.xml /home/$USER/.config/Thunar/uca.xml.$(date +%Y%m%H%M%S)");
         system(cmd.toUtf8());
-        runCmd("cp /etc/skel/.config/Thunar/uca.xml /home/$USER/.config/Thunar/uca.xml");
+        runCmd(QStringLiteral("cp /etc/skel/.config/Thunar/uca.xml /home/$USER/.config/Thunar/uca.xml"));
     }
 
     //deal with no-ellipse-filenames option
@@ -2626,7 +2626,7 @@ void defaultlook::on_ButtonApplyMiscDefualts_clicked()
     //deal with hibernate
     if (ui->checkBoxHibernate->isChecked() != hibernate_flag) {
         if (ui->checkBoxHibernate->isChecked()) {
-            hibernate_option =  "hibernate";
+            hibernate_option =  QStringLiteral("hibernate");
             system("xfconf-query -c xfce4-session -p /shutdown/ShowHibernate -s true --create");
         } else {
             system("xfconf-query -c xfce4-session -p /shutdown/ShowHibernate -s false --create");
@@ -2635,8 +2635,8 @@ void defaultlook::on_ButtonApplyMiscDefualts_clicked()
 
     //only do this part on MX-19.  MX-21 and later do not have uswsusp
     if ( !hibernate_option.isEmpty() ) {
-        QString test = runCmd("cat /etc/mx-version").output;
-        if ( test.contains("MX-19")) {
+        QString test = runCmd(QStringLiteral("cat /etc/mx-version")).output;
+        if ( test.contains(QLatin1String("MX-19"))) {
             runCmd("x-terminal-emulator -e 'pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + hibernate_option + "'");
         }
     }
@@ -2710,7 +2710,7 @@ void defaultlook::on_pushButtonSettingsToThemeSet_clicked()
     };
 
     QString panel;
-    QString data = runCmd("xfconf-query -c xfce4-panel -p /panels --list").output;
+    QString data = runCmd(QStringLiteral("xfconf-query -c xfce4-panel -p /panels --list")).output;
     int panelNum = 0;
     for(panelNum = 1;; panelNum++)
     {
@@ -2741,11 +2741,11 @@ void defaultlook::on_pushButtonSettingsToThemeSet_clicked()
         backgroundImage = runCmd("xfconf-query -c /panels/" + panel + "/background-image").output;
     }
 
-    QString iconThemeName = runCmd("xfconf-query -c xsettings -p /Net/IconThemeName").output;
-    QString themeName = runCmd("xfconf-query -c xsettings -p /Net/ThemeName").output;
-    QString windowDecorationsTheme = runCmd("xfconf-query -c xfwm4 -p /general/theme").output;
+    QString iconThemeName = runCmd(QStringLiteral("xfconf-query -c xsettings -p /Net/IconThemeName")).output;
+    QString themeName = runCmd(QStringLiteral("xfconf-query -c xsettings -p /Net/ThemeName")).output;
+    QString windowDecorationsTheme = runCmd(QStringLiteral("xfconf-query -c xfwm4 -p /general/theme")).output;
 
-    QString whiskerThemeFileName = pathAppend(QDir::homePath(), ".config/gtk-3.0/whisker-tweak.css");
+    QString whiskerThemeFileName = pathAppend(QDir::homePath(), QStringLiteral(".config/gtk-3.0/whisker-tweak.css"));
     QFile whiskerThemeFile(whiskerThemeFileName);
     if(!whiskerThemeFile.open(QFile::ReadOnly | QFile::Text))
     {
@@ -2770,7 +2770,7 @@ void defaultlook::on_pushButtonSettingsToThemeSet_clicked()
     }
     else
     {
-        fileLines << "background-rgba=none";
+        fileLines << QStringLiteral("background-rgba=none");
     }
     if(backgroundStyle == 2)
     {
@@ -2778,17 +2778,17 @@ void defaultlook::on_pushButtonSettingsToThemeSet_clicked()
     }
     else
     {
-        fileLines << "background-image=none";
+        fileLines << QStringLiteral("background-image=none");
     }
     fileLines << "xsettings_gtk_theme=" + themeName;
     fileLines << "xsettings_icon_theme=" + iconThemeName;
     fileLines << "xfwm4_window_decorations=" + windowDecorationsTheme;
-    fileLines << "<begin_gtk_whisker_theme_code>";
+    fileLines << QStringLiteral("<begin_gtk_whisker_theme_code>");
     for(const QString &line : whiskerThemeData.split('\n'))
     {
         fileLines << line;
     }
-    fileLines << "<end_gtk_whisker_theme_code>";
+    fileLines << QStringLiteral("<end_gtk_whisker_theme_code>");
     QFile file(pathAppend(QDir::homePath(), ".local/share/mx-tweak-data/" + fileName + ".tweak"));
     if(!file.open(QFile::WriteOnly | QFile::Text))
     {
@@ -2812,13 +2812,13 @@ void defaultlook::on_pushButtonRemoveUserThemeSet_clicked()
     if(result != QDialog::Accepted)
         return;
     QString theme = dialog.themeSelector()->currentText();
-    if(theme == "Select User Theme Set to Remove")
+    if(theme == QLatin1String("Select User Theme Set to Remove"))
         return;
-    result = QMessageBox::warning(this, "Remove User Theme Set", "Are you sure you want to remove " + theme + " theme set?", QMessageBox::Ok | QMessageBox::Cancel);
+    result = QMessageBox::warning(this, QStringLiteral("Remove User Theme Set"), "Are you sure you want to remove " + theme + " theme set?", QMessageBox::Ok | QMessageBox::Cancel);
     if(result != QMessageBox::Ok)
         return;
     QString file = dialog.getFilename(theme);
-    file.replace(' ', "\\ ");
+    file.replace(' ', QLatin1String("\\ "));
     auto cmd = runCmd("rm " + file);
     if(cmd.exitCode != 0)
     {
@@ -2876,17 +2876,17 @@ void defaultlook::on_ApplyFluxboxResets_clicked()
     if (fluxcaptionflag){
         switch(ui->comboBoxfluxcaptions->currentIndex()){
         case 0:
-            runCmd("/usr/bin/idesktoggle caption on");
-            runCmd("/usr/bin/idesktoggle CaptionOnHover off");
+            runCmd(QStringLiteral("/usr/bin/idesktoggle caption on"));
+            runCmd(QStringLiteral("/usr/bin/idesktoggle CaptionOnHover off"));
             break;
 
         case 1:
-            runCmd("/usr/bin/idesktoggle caption off");
+            runCmd(QStringLiteral("/usr/bin/idesktoggle caption off"));
             break;
 
         case 2:
-            runCmd("/usr/bin/idesktoggle caption on");
-            runCmd("/usr/bin/idesktoggle CaptionOnHover On");
+            runCmd(QStringLiteral("/usr/bin/idesktoggle caption on"));
+            runCmd(QStringLiteral("/usr/bin/idesktoggle CaptionOnHover On"));
             break;
         }
     }
@@ -2894,11 +2894,11 @@ void defaultlook::on_ApplyFluxboxResets_clicked()
     if (fluxiconflag){
         switch(ui->comboBoxfluxIcons->currentIndex()){
         case 0:
-            runCmd("/usr/bin/idesktoggle Icon on");
+            runCmd(QStringLiteral("/usr/bin/idesktoggle Icon on"));
             break;
 
         case 1:
-            runCmd("/usr/bin/idesktoggle Icon off");
+            runCmd(QStringLiteral("/usr/bin/idesktoggle Icon off"));
             break;
         }
     }
@@ -2909,42 +2909,42 @@ void defaultlook::on_ApplyFluxboxResets_clicked()
     QString initline;
     QString value;
     if (ui->checkboxfluxSlitautohide->isChecked()){
-        value = "true";
+        value = QStringLiteral("true");
     } else {
-        value = "false";
+        value = QStringLiteral("false");
     }
-    initline = runCmd("grep screen0.slit.autoHide  $HOME/.fluxbox/init").output;
+    initline = runCmd(QStringLiteral("grep screen0.slit.autoHide  $HOME/.fluxbox/init")).output;
     fluxboxchangeinitvariable(initline,value);
 
     //set slit placement
     //setup toolbar location
     value = ui->combofluxslitlocation->currentText();
-    initline = runCmd("grep screen0.slit.placement  $HOME/.fluxbox/init").output;
+    initline = runCmd(QStringLiteral("grep screen0.slit.placement  $HOME/.fluxbox/init")).output;
     fluxboxchangeinitvariable(initline,value);
     fluxboxchangedock();
 
     //setup toolbar autohide
     if (ui->checkboxfluxtoolbarautohide->isChecked()){
-        value = "true";
+        value = QStringLiteral("true");
     } else {
-        value = "false";
+        value = QStringLiteral("false");
     }
-    initline = runCmd("grep screen0.toolbar.autoHide  $HOME/.fluxbox/init").output;
+    initline = runCmd(QStringLiteral("grep screen0.toolbar.autoHide  $HOME/.fluxbox/init")).output;
     fluxboxchangeinitvariable(initline,value);
 
     //setup toolbar location
     value = ui->combofluxtoolbarlocatoin->currentText();
-    initline = runCmd("grep screen0.toolbar.placement  $HOME/.fluxbox/init").output;
+    initline = runCmd(QStringLiteral("grep screen0.toolbar.placement  $HOME/.fluxbox/init")).output;
     fluxboxchangeinitvariable(initline,value);
 
     //setup toolbar widthpercent
     value = QString::number(ui->spinBoxFluxToolbarWidth->value(), 'G', 5);
-    initline = runCmd("grep screen0.toolbar.widthPercent  $HOME/.fluxbox/init").output;
+    initline = runCmd(QStringLiteral("grep screen0.toolbar.widthPercent  $HOME/.fluxbox/init")).output;
     fluxboxchangeinitvariable(initline,value);
 
     //setup toolbar height
     value = QString::number(ui->spinBoxFluxToolbarHeight->value(), 'G', 5);
-    initline = runCmd("grep screen0.toolbar.height  $HOME/.fluxbox/init").output;
+    initline = runCmd(QStringLiteral("grep screen0.toolbar.height  $HOME/.fluxbox/init")).output;
     fluxboxchangeinitvariable(initline,value);
 
     //Reset Everything
@@ -2952,38 +2952,38 @@ void defaultlook::on_ApplyFluxboxResets_clicked()
         ui->checkboxfluxresetdock->setChecked(false);
         ui->checkboxfluxresetmenu->setChecked(false);
         ui->checkBoxMenuMigrate->setChecked(false);
-        runCmd("/usr/bin/mxflux_install.sh");
-        runCmd("pkill wmalauncher");
-        runCmd("$HOME/.fluxbox/scripts/DefaultDock.mxdk");
+        runCmd(QStringLiteral("/usr/bin/mxflux_install.sh"));
+        runCmd(QStringLiteral("pkill wmalauncher"));
+        runCmd(QStringLiteral("$HOME/.fluxbox/scripts/DefaultDock.mxdk"));
 
     }
 
     //Reset Menu
     if (ui->checkboxfluxresetmenu->isChecked() && !ui->checkboxfluxreseteverything->isChecked()){
         //determine menu in use
-        QString menumx = runCmd("grep session.menuFile $HOME/.fluxbox/init").output.section(":",1,1).trimmed();
+        QString menumx = runCmd(QStringLiteral("grep session.menuFile $HOME/.fluxbox/init")).output.section(QStringLiteral(":"),1,1).trimmed();
         if (verbose) qDebug() << "menu mx is " << menumx;
         //backup menu
         runCmd("cp " + menumx + " " + menumx + ".$(date +%Y%m%d%H%M%S)");
         //copy menu-mx from /etc/skel/.fluxbox
-        runCmd("cp /etc/skel/.fluxbox/menu-mx $HOME/.fluxbox");
+        runCmd(QStringLiteral("cp /etc/skel/.fluxbox/menu-mx $HOME/.fluxbox"));
         //run localize-fluxbox-menu to generate new menu
-        runCmd("localize_fluxbox_menu-mx");
+        runCmd(QStringLiteral("localize_fluxbox_menu-mx"));
     }
 
     //Migrate Menu
     if (ui->checkBoxMenuMigrate->isChecked() && !ui->checkboxfluxreseteverything->isChecked()){
         //run menu-migrate script
-        runCmd("/usr/bin/menu-migrate");
+        runCmd(QStringLiteral("/usr/bin/menu-migrate"));
     }
 
     //Reset Dock
     if (ui->checkboxfluxresetdock->isChecked() && !ui->checkboxfluxreseteverything->isChecked()){
         //copy backup dock and copy one from usr/share/mxflux/.fluxbox/scripts
-        runCmd("cp $HOME/.fluxbox/scripts/DefaultDock.mxdk $HOME/.fluxbox/scripts/DefaultDock.mxdk.$(date +%Y%m%d%H%M%S)");
-        runCmd("cp /etc/skel/.fluxbox/scripts/DefaultDock.mxdk $HOME/.fluxbox/scripts/DefaultDock.mxdk");
-        runCmd("pkill wmalauncher");
-        runCmd("$HOME/.fluxbox/scripts/DefaultDock.mxdk");
+        runCmd(QStringLiteral("cp $HOME/.fluxbox/scripts/DefaultDock.mxdk $HOME/.fluxbox/scripts/DefaultDock.mxdk.$(date +%Y%m%d%H%M%S)"));
+        runCmd(QStringLiteral("cp /etc/skel/.fluxbox/scripts/DefaultDock.mxdk $HOME/.fluxbox/scripts/DefaultDock.mxdk"));
+        runCmd(QStringLiteral("pkill wmalauncher"));
+        runCmd(QStringLiteral("$HOME/.fluxbox/scripts/DefaultDock.mxdk"));
     }
 
     //when all done, restart fluxbox
@@ -2991,16 +2991,16 @@ void defaultlook::on_ApplyFluxboxResets_clicked()
     ui->checkboxfluxresetmenu->setChecked(false);
     ui->checkboxfluxreseteverything->setChecked(false);
     ui->checkBoxMenuMigrate->setChecked(false);
-    runCmd("sleep 2; /usr/bin/fluxbox-remote restart");
+    runCmd(QStringLiteral("sleep 2; /usr/bin/fluxbox-remote restart"));
     setupFluxbox();
 }
 
 void defaultlook::fluxboxchangeinitvariable(const QString &initline, const QString &value)
 {
     if (verbose) qDebug() << "checking for init value changes";
-    QString initialvalue = initline.section(":",1,1).trimmed();
+    QString initialvalue = initline.section(QStringLiteral(":"),1,1).trimmed();
     if ( initialvalue != value){
-        QString cmd = "sed -i 's/^" + initline +"/" + initline.section(":",0,0).trimmed() + ":    " + value + "/' $HOME/.fluxbox/init";
+        QString cmd = "sed -i 's/^" + initline +"/" + initline.section(QStringLiteral(":"),0,0).trimmed() + ":    " + value + "/' $HOME/.fluxbox/init";
         if (verbose) qDebug() << "init change command " << cmd;
         runCmd(cmd);
     }
@@ -3011,8 +3011,8 @@ void defaultlook::fluxboxchangedock()
     if (verbose) qDebug() << "comment slit changes in mxdk files";
 
     if (slitflag){
-        runCmd("sed -i 's/^fluxbox-remote/#&/' $HOME/.fluxbox/scripts/*.mxdk");
-        runCmd("sed -i 's/^sed/#&/' $HOME/.fluxbox/scripts/*.mxdk");
+        runCmd(QStringLiteral("sed -i 's/^fluxbox-remote/#&/' $HOME/.fluxbox/scripts/*.mxdk"));
+        runCmd(QStringLiteral("sed -i 's/^sed/#&/' $HOME/.fluxbox/scripts/*.mxdk"));
     }
 }
 
@@ -3117,7 +3117,7 @@ void defaultlook::on_ButtonApplyPlasma_clicked()
         plasmasingleclickflag = false;
         plasmaworkspacesflag = false;
         //reset plasma script Adrian
-        runCmd("/usr/lib/mx-tweak/reset-kde-mx");
+        runCmd(QStringLiteral("/usr/lib/mx-tweak/reset-kde-mx"));
     }
 
     //location combo index - 0=bottom, 1=left, 2=top, 3=right
@@ -3126,21 +3126,21 @@ void defaultlook::on_ButtonApplyPlasma_clicked()
     if (plasmaplacementflag){
         switch(ui->comboPlasmaPanelLocation->currentIndex()){
         case 0:
-            writePlasmaPanelConfig("location", "4");
-            writePlasmaPanelConfig("formfactor", "2");
+            writePlasmaPanelConfig(QStringLiteral("location"), QStringLiteral("4"));
+            writePlasmaPanelConfig(QStringLiteral("formfactor"), QStringLiteral("2"));
             break;
 
         case 1:
-            writePlasmaPanelConfig("location", "5");
-            writePlasmaPanelConfig("formfactor", "3");
+            writePlasmaPanelConfig(QStringLiteral("location"), QStringLiteral("5"));
+            writePlasmaPanelConfig(QStringLiteral("formfactor"), QStringLiteral("3"));
             break;
         case 2:
-            writePlasmaPanelConfig("location", "3");
-            writePlasmaPanelConfig("formfactor", "2");
+            writePlasmaPanelConfig(QStringLiteral("location"), QStringLiteral("3"));
+            writePlasmaPanelConfig(QStringLiteral("formfactor"), QStringLiteral("2"));
             break;
         case 3:
-            writePlasmaPanelConfig("location", "6");
-            writePlasmaPanelConfig("formfactor", "3");
+            writePlasmaPanelConfig(QStringLiteral("location"), QStringLiteral("6"));
+            writePlasmaPanelConfig(QStringLiteral("formfactor"), QStringLiteral("3"));
             break;
         }
     }
@@ -3148,9 +3148,9 @@ void defaultlook::on_ButtonApplyPlasma_clicked()
     if (plasmasingleclickflag){
         QString value;
         if (ui->checkBoxPlasmaSingleClick->isChecked()){
-            value = "true";
+            value = QStringLiteral("true");
         } else {
-            value = "false";
+            value = QStringLiteral("false");
         }
         runCmd("kwriteconfig5 --group KDE --key SingleClick " + value);
         runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-kde-edit.sh \"kwriteconfig5 --file /root/.config/kdeglobals --group KDE --key SingleClick " + value + "\"");
@@ -3164,26 +3164,26 @@ void defaultlook::on_ButtonApplyPlasma_clicked()
         //1=0,2=1,3=2,4=3,5=4,6=5
         switch(value){
         case 0:
-            systrayiconvalue = "1";
+            systrayiconvalue = QStringLiteral("1");
             break;
         case 1:
-            systrayiconvalue = "2";
+            systrayiconvalue = QStringLiteral("2");
             break;
         case 2:
-            systrayiconvalue = "3";
+            systrayiconvalue = QStringLiteral("3");
             break;
         case 3:
-            systrayiconvalue = "4";
+            systrayiconvalue = QStringLiteral("4");
             break;
         case 4:
-            systrayiconvalue = "5";
+            systrayiconvalue = QStringLiteral("5");
             break;
         case 5:
-            systrayiconvalue = "6";
+            systrayiconvalue = QStringLiteral("6");
             break;
-        default: systrayiconvalue = "1";
+        default: systrayiconvalue = QStringLiteral("1");
         }
-        QString systrayid = runCmd("grep -B 3 extraItems $HOME/.config/plasma-org.kde.plasma.desktop-appletsrc |grep Containment").output.section("[",2,2).section("]",0,0);
+        QString systrayid = runCmd(QStringLiteral("grep -B 3 extraItems $HOME/.config/plasma-org.kde.plasma.desktop-appletsrc |grep Containment")).output.section(QStringLiteral("["),2,2).section(QStringLiteral("]"),0,0);
         runCmd("kwriteconfig5 --file ~/.config/plasma-org.kde.plasma.desktop-appletsrc --group Containments --group " + systrayid + " --group General --key iconSize " + systrayiconvalue);
     }
 
@@ -3191,19 +3191,19 @@ void defaultlook::on_ButtonApplyPlasma_clicked()
     if (plasmaworkspacesflag) {
         QString value;
         if (ui->checkBoxPlasmaShowAllWorkspaces->isChecked()){
-            value = "false";
+            value = QStringLiteral("false");
         } else {
-            value = "true";
+            value = QStringLiteral("true");
         }
-        writeTaskmanagerConfig("showOnlyCurrentDesktop", value);
+        writeTaskmanagerConfig(QStringLiteral("showOnlyCurrentDesktop"), value);
     }
 
     //time to reset kwin and plasmashell
     if (plasmaworkspacesflag || plasmasingleclickflag || plasmaplacementflag || plasmaresetflag || plasmasystrayiconsizeflag){
         //restart kwin first
-        runCmd("sleep 1; qdbus org.kde.KWin /KWin reconfigure");
+        runCmd(QStringLiteral("sleep 1; qdbus org.kde.KWin /KWin reconfigure"));
         //then plasma
-        QString cmd ="sleep 1; plasmashell --replace &";
+        QString cmd =QStringLiteral("sleep 1; plasmashell --replace &");
         system(cmd.toUtf8());
     }
     setupPlasma();
@@ -3213,14 +3213,14 @@ void defaultlook::on_ButtonApplyPlasma_clicked()
 void defaultlook::writePlasmaPanelConfig(const QString &key, const QString &value)
 {
     QString ID;
-    ID = plasmaPanelId.section("[",2,2).section("]",0,0);
+    ID = plasmaPanelId.section(QStringLiteral("["),2,2).section(QStringLiteral("]"),0,0);
     runCmd("kwriteconfig5 --file plasma-org.kde.plasma.desktop-appletsrc --group Containments --group " + ID + " --key " + key + " " + value);
 }
 
 void defaultlook::writeTaskmanagerConfig(const QString &key, const QString &value)
 {
-    QString ID = plasmataskmanagerID.section("[",2,2).section("]",0,0);
-    QString Applet = plasmataskmanagerID.section("[",4,4).section("]",0,0);
+    QString ID = plasmataskmanagerID.section(QStringLiteral("["),2,2).section(QStringLiteral("]"),0,0);
+    QString Applet = plasmataskmanagerID.section(QStringLiteral("["),4,4).section(QStringLiteral("]"),0,0);
     runCmd("kwriteconfig5 --file plasma-org.kde.plasma.desktop-appletsrc --group Containments --group " + ID + " --group Applets --group " + Applet + " --key " + key + " " + value);
 
 }
@@ -3236,52 +3236,52 @@ void defaultlook::populatethemelists(const QString &value)
 {
     QString themes;
     QStringList themelist;
-    if ( value == "gtk-3.0" || value == "xfwm4"){
+    if ( value == QLatin1String("gtk-3.0") || value == QLatin1String("xfwm4")){
         themes = runCmd("find /usr/share/themes/*/" + value + " -maxdepth 0 2>/dev/null|cut -d\"/\" -f5").output;
         themes.append("\n");
         themes.append(runCmd("find $HOME/.themes/*/" + value + " -maxdepth 0 2>/dev/null|cut -d\"/\" -f5").output);
         themes.append("\n");
         themes.append(runCmd("find $HOME/.local/share/themes/*/" + value + " -maxdepth 0 2>/dev/null|cut -d\"/\" -f7").output);
     } else {
-        themes = runCmd("find /usr/share/icons/*/index.theme -maxdepth 1 2>/dev/null|cut -d\"/\" -f5").output;
+        themes = runCmd(QStringLiteral("find /usr/share/icons/*/index.theme -maxdepth 1 2>/dev/null|cut -d\"/\" -f5")).output;
         themes.append("\n");
-        themes.append(runCmd("find $HOME/.icons/*/index.theme -maxdepth 1 2>/dev/null|cut -d\"/\" -f5").output);
+        themes.append(runCmd(QStringLiteral("find $HOME/.icons/*/index.theme -maxdepth 1 2>/dev/null|cut -d\"/\" -f5")).output);
         themes.append("\n");
-        themes.append(runCmd("find $HOME/.local/share/icons/*/index.theme -maxdepth 1 2>/dev/null|cut -d\"/\" -f7").output);
+        themes.append(runCmd(QStringLiteral("find $HOME/.local/share/icons/*/index.theme -maxdepth 1 2>/dev/null|cut -d\"/\" -f7")).output);
     }
-    themelist = themes.split("\n");
+    themelist = themes.split(QStringLiteral("\n"));
     themelist.removeDuplicates();
-    themelist.removeAll("");
+    themelist.removeAll(QLatin1String(""));
     themelist.sort();
-    if ( value == "gtk-3.0" ){
+    if ( value == QLatin1String("gtk-3.0") ){
         ui->listWidgetTheme->addItems(themelist);
         //set current
-        QString current = runCmd("xfconf-query -c xsettings -p /Net/ThemeName").output;
+        QString current = runCmd(QStringLiteral("xfconf-query -c xsettings -p /Net/ThemeName")).output;
         //index of theme in list
         ui->listWidgetTheme->setCurrentRow(themelist.indexOf(current));
     }
-    if ( value == "xfwm4"){
+    if ( value == QLatin1String("xfwm4")){
         ui->listWidgetWMtheme->addItems(themelist);
-        QString current = runCmd("xfconf-query -c xfwm4 -p /general/theme").output;
+        QString current = runCmd(QStringLiteral("xfconf-query -c xfwm4 -p /general/theme")).output;
         ui->listWidgetWMtheme->setCurrentRow(themelist.indexOf(current));
     }
 
-    if ( value == "icons"){
+    if ( value == QLatin1String("icons")){
         if (verbose) qDebug() << "themelist" << themelist;
         QStringList iconthemelist = themelist;
         for (const QString &item : iconthemelist) {
             QString icontheme = item;
             if (verbose) qDebug() << "icontheme" << icontheme;
             QString test = runCmd("find /usr/share/icons/" + icontheme + " -maxdepth 1 -mindepth 1 -type d |cut -d\"/\" -f6").output;
-            if ( test == "cursors" ) {
+            if ( test == QLatin1String("cursors") ) {
                 themelist.removeAll(icontheme);
             }
         }
-        themelist.removeAll("default.kde4");
-        themelist.removeAll("default");
-        themelist.removeAll("hicolor");
+        themelist.removeAll(QStringLiteral("default.kde4"));
+        themelist.removeAll(QStringLiteral("default"));
+        themelist.removeAll(QStringLiteral("hicolor"));
         ui->listWidgeticons->addItems(themelist);
-        QString current = runCmd("xfconf-query -c xsettings -p /Net/IconThemeName").output;
+        QString current = runCmd(QStringLiteral("xfconf-query -c xsettings -p /Net/IconThemeName")).output;
         ui->listWidgeticons->setCurrentRow(themelist.indexOf(current));
     }
 
@@ -3292,14 +3292,14 @@ void defaultlook::populatethemelists(const QString &value)
 void defaultlook::settheme(const QString &type, const QString &theme)
 {   //set new theme
     QString cmd;
-    if ( type == "gtk-3.0" ){
+    if ( type == QLatin1String("gtk-3.0") ){
         cmd = "xfconf-query -c xsettings -p /Net/ThemeName -s \"" + theme + "\"";
     }
-    if ( type == "xfwm4" ) {
+    if ( type == QLatin1String("xfwm4") ) {
         cmd = "xfconf-query -c xfwm4 -p /general/theme -s \"" + theme + "\"";
     }
 
-    if ( type == "icon" ) {
+    if ( type == QLatin1String("icon") ) {
         cmd = "xfconf-query -c xsettings -p /Net/IconThemeName -s \"" + theme + "\"";
     }
 
@@ -3309,21 +3309,21 @@ void defaultlook::settheme(const QString &type, const QString &theme)
 void defaultlook::on_listWidgetTheme_currentTextChanged(const QString &currentText) const
 {
     if ( themeflag ){
-    settheme("gtk-3.0", currentText);
+        settheme(QStringLiteral("gtk-3.0"), currentText);
     }
 }
 
 void defaultlook::on_listWidgetWMtheme_currentTextChanged(const QString &currentText) const
 {
     if ( themeflag ){
-    settheme("xfwm4", currentText);
+        settheme(QStringLiteral("xfwm4"), currentText);
     }
 }
 
 void defaultlook::on_listWidgeticons_currentTextChanged(const QString &currentText) const
 {
     if ( themeflag ){
-    settheme("icon", currentText);
+        settheme(QStringLiteral("icon"), currentText);
     }
 }
 
