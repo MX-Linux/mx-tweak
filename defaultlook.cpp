@@ -559,9 +559,6 @@ void defaultlook::fliptovertical()
         cmdstring = QString(cmdstring + "-s " + value + " ");
         if (verbose) if (verbose) qDebug() << cmdstring;
     }
-
-    QString switchID;
-
     //flip the panel plugins and pray for a miracle
 
 
@@ -926,7 +923,7 @@ void defaultlook::on_toolButtonXFCEWMsettings_clicked()
     this->show();
 }
 
-void defaultlook::on_comboboxHorzPostition_currentIndexChanged(const QString &arg1)
+void defaultlook::on_comboboxHorzPostition_currentIndexChanged(const QString & /*arg1*/)
 {
     if (verbose) qDebug() << "top or bottom output " << ui->comboboxHorzPostition->currentText();
     QString test = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/mode").output;
@@ -940,7 +937,7 @@ void defaultlook::on_comboboxHorzPostition_currentIndexChanged(const QString &ar
 }
 
 
-void defaultlook::on_comboboxVertpostition_currentIndexChanged(const QString &arg1)
+void defaultlook::on_comboboxVertpostition_currentIndexChanged(const QString & /*arg1*/)
 {
     if (verbose) qDebug() << "left or right output " << ui->comboboxVertpostition->currentText();
     QString test = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/mode").output;
@@ -1039,7 +1036,6 @@ void defaultlook::setupPlasma()
     //get panel ID
     plasmaPanelId = runCmd("grep --max-count 1 -B 8 panel $HOME/.config/plasma-org.kde.plasma.desktop-appletsrc |grep Containment").output;
     QString panellocation = readPlasmaPanelConfig("location");
-    QString panelformfactor = readPlasmaPanelConfig("formfactor");
 
     //location combo index - 0=bottom, 1=left, 2=top, 3=right
     //location plasma settings - 4=bottom, 3 top, 5 left, 6 right
@@ -1262,7 +1258,7 @@ void defaultlook::setupEtc()
         ui->checkBoxMountInternalDrivesNonRoot->setChecked(true);
     } else {
         ui->checkBoxMountInternalDrivesNonRoot->setChecked(false);
-    } 
+    }
 
     //setup sudo override function
 
@@ -1691,7 +1687,7 @@ void defaultlook::on_buttonApplyDisplayScaling_clicked()
     setscale();
 }
 
-void defaultlook::on_comboBoxDisplay_currentIndexChanged(int index)
+void defaultlook::on_comboBoxDisplay_currentIndexChanged(int  /*index*/)
 {
     setupBrightness();
     setupscale();
@@ -1833,7 +1829,7 @@ void defaultlook::setupGamma()
     if (verbose) qDebug() << "gamma is " << g1 << " " << g2 << " " << g3;
 }
 
-void defaultlook::on_horizontalSliderBrightness_valueChanged(int value)
+void defaultlook::on_horizontalSliderBrightness_valueChanged(int  /*value*/)
 {
     QString slider_value = QString::number(ui->horizontalSliderBrightness->value());
     ui->horizontalSliderBrightness->setToolTip(slider_value);
@@ -1908,7 +1904,6 @@ void defaultlook::setupComboTheme()
         QFileInfo icon_theme_home("" + home_path + "/.icons/" + xsettings_icon_theme);
         QFileInfo xsettings_theme_home_alt(home_path + "/.local/share/themes/" + xsettings_gtk_theme);
         QFileInfo xfwm4_theme_home_alt("" + home_path + "/.local/share/themes/" + xfwm4_window_decorations);
-        QFileInfo icon_theme_home_alt("" + home_path + "/.local/share/icons/" + xsettings_icon_theme);
         if (verbose) qDebug() << "xsettings_theme_home path" << xsettings_theme_home.absoluteFilePath();
 
         if ( xsettings_theme.exists() || xsettings_theme_home.exists() || xsettings_theme_home_alt.exists()) {
@@ -1991,7 +1986,7 @@ void defaultlook::setupComboTheme()
     ui->comboTheme->setCurrentIndex(0);
 }
 
-void defaultlook::on_comboTheme_activated(const QString &arg1)
+void defaultlook::on_comboTheme_activated(const QString & /*arg1*/)
 {
     if (ui->comboTheme->currentIndex() != 0) {
         ui->buttonThemeApply->setEnabled(true);
@@ -2156,7 +2151,6 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     //deal with udisks option
     QFileInfo fileinfo("/etc/tweak-udisks.chk");
     QFileInfo sudo_override("/etc/polkit-1/localauthority.conf.d/55-tweak-override.conf");
-    QFileInfo user_namespace_override("/etc/sysctl.d/99-sandbox-mx.conf");
     QString cmd;
     QString udisks_option;
     QString sudo_override_option;
@@ -2503,7 +2497,7 @@ void defaultlook::on_buttonEditComptonConf_clicked()
         runCmd("xdg-open " + file_conf.absoluteFilePath());
 }
 
-void defaultlook::on_comboBoxCompositor_currentIndexChanged(const QString &arg1)
+void defaultlook::on_comboBoxCompositor_currentIndexChanged(const QString & /*arg1*/)
 {
     if (ui->comboBoxCompositor->currentIndex() == 0) {
         ui->buttonCompositorApply->setEnabled(true);
@@ -2855,7 +2849,7 @@ void defaultlook::on_pushButtonRemoveUserThemeSet_clicked()
     setupComboTheme();
 }
 
-void defaultlook::on_comboBoxvblank_activated(const QString &arg1)
+void defaultlook::on_comboBoxvblank_activated(const QString & /*arg1*/)
 {
     if ( vblankinitial == ui->comboBoxvblank->currentText()){
         vblankflag = false;
@@ -2875,7 +2869,7 @@ void defaultlook::on_buttonGTKscaling_clicked()
     setgtkscaling();
 }
 
-void defaultlook::on_horizsliderhardwarebacklight_actionTriggered(int action)
+void defaultlook::on_horizsliderhardwarebacklight_actionTriggered(int  /*action*/)
 {
     setbacklight();
 }
@@ -3068,7 +3062,7 @@ void defaultlook::on_checkboxfluxreseteverything_clicked()
     ui->checkBoxMenuMigrate->setChecked(false);
 }
 
-void defaultlook::on_combofluxtoolbarlocatoin_currentIndexChanged(int index)
+void defaultlook::on_combofluxtoolbarlocatoin_currentIndexChanged(int  /*index*/)
 {
     ui->ApplyFluxboxResets->setEnabled(true);
 }
@@ -3078,17 +3072,17 @@ void defaultlook::on_checkboxfluxtoolbarautohide_clicked()
     ui->ApplyFluxboxResets->setEnabled(true);
 }
 
-void defaultlook::on_spinBoxFluxToolbarWidth_valueChanged(int arg1)
+void defaultlook::on_spinBoxFluxToolbarWidth_valueChanged(int  /*arg1*/)
 {
     ui->ApplyFluxboxResets->setEnabled(true);
 }
 
-void defaultlook::on_spinBoxFluxToolbarHeight_valueChanged(int arg1)
+void defaultlook::on_spinBoxFluxToolbarHeight_valueChanged(int  /*arg1*/)
 {
     ui->ApplyFluxboxResets->setEnabled(true);
 }
 
-void defaultlook::on_combofluxslitlocation_currentIndexChanged(int index)
+void defaultlook::on_combofluxslitlocation_currentIndexChanged(int  /*index*/)
 {
     ui->ApplyFluxboxResets->setEnabled(true);
     slitflag = true;
@@ -3100,19 +3094,19 @@ void defaultlook::on_checkboxfluxSlitautohide_clicked()
 }
 
 
-void defaultlook::on_comboBoxfluxIcons_currentIndexChanged(int index)
+void defaultlook::on_comboBoxfluxIcons_currentIndexChanged(int  /*index*/)
 {
     ui->ApplyFluxboxResets->setEnabled(true);
     fluxiconflag = true;
 }
 
-void defaultlook::on_comboBoxfluxcaptions_currentIndexChanged(int index)
+void defaultlook::on_comboBoxfluxcaptions_currentIndexChanged(int  /*index*/)
 {
     ui->ApplyFluxboxResets->setEnabled(true);
     fluxcaptionflag = true;
 }
 
-void defaultlook::on_comboPlasmaPanelLocation_currentIndexChanged(int index)
+void defaultlook::on_comboPlasmaPanelLocation_currentIndexChanged(int  /*index*/)
 {
     ui->ButtonApplyPlasma->setEnabled(true);
     plasmaplacementflag = true;
@@ -3251,7 +3245,7 @@ void defaultlook::writeTaskmanagerConfig(const QString &key, const QString &valu
 
 }
 
-void defaultlook::on_comboBoxPlasmaSystrayIcons_currentIndexChanged(int index)
+void defaultlook::on_comboBoxPlasmaSystrayIcons_currentIndexChanged(int  /*index*/)
 {
     ui->ButtonApplyPlasma->setEnabled(true);
     plasmasystrayiconsizeflag = true;

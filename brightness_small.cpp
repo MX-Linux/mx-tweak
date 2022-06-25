@@ -190,7 +190,7 @@ void brightness_small::setupGamma()
     qDebug() << "gamma is " << g1 << " " << g2 << " " << g3;
 }
 
-void brightness_small::on_horizontalSliderBrightness_valueChanged(int value)
+void brightness_small::on_horizontalSliderBrightness_valueChanged(int  /*value*/)
 {
     QString slider_value = QString::number(ui->horizontalSliderBrightness->value());
     ui->horizontalSliderBrightness->setToolTip(slider_value);
@@ -231,7 +231,7 @@ void brightness_small::saveBrightness()
 
 }
 
-void brightness_small::on_comboBoxDisplay_currentIndexChanged(int index)
+void brightness_small::on_comboBoxDisplay_currentIndexChanged(int  /*index*/)
 {
     if (brightnessflag) {
         setupBrightness();
@@ -249,7 +249,7 @@ void brightness_small::setupDisplay()
     brightnessflag = true;
 }
 
-void brightness_small::on_horizsliderhardwarebacklight_actionTriggered(int action)
+void brightness_small::on_horizsliderhardwarebacklight_actionTriggered(int  /*action*/)
 {
     setbacklight();
 }
