@@ -6,7 +6,7 @@ theming_to_tweak::theming_to_tweak(QWidget *parent) :
     ui(new Ui::theming_to_tweak)
 {
     ui->setupUi(this);
-    connect(ui->lineEdit_Name, &QLineEdit::textChanged, [=](){
+    connect(ui->lineEdit_Name, &QLineEdit::textChanged, this, [=](){
         QString text = ui->lineEdit_Name->text();
         text.replace('\'', QString());
         ui->lineEdit_Name->setText(text);
