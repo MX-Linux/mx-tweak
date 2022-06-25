@@ -1995,7 +1995,7 @@ void defaultlook::on_buttonThemeApply_clicked()
     savethemeundo();
     ui->buttonThemeApply->setEnabled(false);
     ui->buttonThemeUndo->setEnabled(true);
-    QString themename = theme_info[ui->comboTheme->currentText()];
+    QString themename = theme_info.value(ui->comboTheme->currentText());
     QFileInfo fileinfo(themename);
     //initialize variables
     QString backgroundColor = runCmd("cat '" + fileinfo.absoluteFilePath() + "' |grep background-rgba=").output.section("=" , 1,1);
@@ -2409,7 +2409,7 @@ qDebug () << "undo command list is " << undotheme;
 
 void defaultlook::themeundo()
 {
-   QString cmd = undotheme.last();
+   QString cmd = undotheme.constLast();
    system(cmd.toUtf8());
    undotheme.removeLast();
 }
@@ -2537,7 +2537,7 @@ void defaultlook::on_checkBoxMountInternalDrivesNonRoot_clicked()
 
 void defaultlook::on_pushButtonPreview_clicked()
 {
-    QString themename = theme_info[ui->comboTheme->currentText()];
+    QString themename = theme_info.value(ui->comboTheme->currentText());
     QFileInfo fileinfo(themename);
 
     //initialize variables
