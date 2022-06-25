@@ -2697,7 +2697,7 @@ QString defaultlook::getVersion(const QString &name)
 void defaultlook::on_pushButtonSettingsToThemeSet_clicked()
 {
     QString fileName;
-    theming_to_tweak* dialog = new theming_to_tweak;
+    auto *dialog = new theming_to_tweak;
     int userInput = dialog->exec();
     if(userInput == QDialog::Rejected)
         return;
