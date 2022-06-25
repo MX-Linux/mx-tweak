@@ -2741,6 +2741,7 @@ void defaultlook::on_pushButtonSettingsToThemeSet_clicked()
 
     QVector<double> backgroundColor;
     QString backgroundImage;
+    backgroundColor.reserve(4);
     if(backgroundStyle == 1)
     {
         QStringList lines = runCmd("LANG=C xfconf-query -c xfce4-panel -p /panels/" + panel + "/background-rgba").output.split('\n');
