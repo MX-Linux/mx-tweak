@@ -139,11 +139,11 @@ public:
     void setgtkscaling();
     void setupresolutions();
     void setresolution();
-    void setrefreshrate(const QString &arg1, const QString &arg2, const QString &arg3);
+    void setrefreshrate(const QString &display, const QString &resolution, const QString &activeprofile);
     void setupGamma();
 
-    void setmissingxfconfvariables(const QString &arg1, const QString &arg2);
-    void fluxboxchangeinitvariable(const QString &arg1, const QString &arg2);
+    void setmissingxfconfvariables(const QString &activeprofile, const QString &resolution);
+    void fluxboxchangeinitvariable(const QString &initline, const QString &value);
     void fluxboxchangedock();
 
 public slots:

@@ -31,7 +31,7 @@ public:
     explicit brightness_small(QWidget *parent = 0, const QStringList &args = QStringList());
     ~brightness_small();
     Result3 runCmd(const QString &cmd);
-    void setmissingxfconfvariables(const QString &arg1, const QString &arg2);
+    void setmissingxfconfvariables(const QString &activeprofile, const QString &resolution);
     void setupbacklight();
     void setbacklight();
     void setupBrightness();
