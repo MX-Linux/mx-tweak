@@ -110,5 +110,5 @@ ExecResult remove_user_theme_set::runCmd(const QString &cmd)
 
 QString remove_user_theme_set::getFilename(const QString &name)
 {
-    return theme_info[name];
+    return theme_info.value(name);
 }
