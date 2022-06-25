@@ -673,7 +673,7 @@ void defaultlook::on_buttonHelp_clicked()
 
 }
 
-void defaultlook::message()
+void defaultlook::message() const
 {
     QString cmd = "ps -aux |grep -v grep|grep firefox";
     if ( system(cmd.toUtf8()) != 0 ) {
@@ -1602,7 +1602,7 @@ void defaultlook::CheckComptonRunning()
     }
 }
 
-void defaultlook::CheckAptNotifierRunning()
+void defaultlook::CheckAptNotifierRunning() const
 {
     if ( system("ps -aux |grep -v grep| grep python |grep --quiet apt-notifier") == 0 ) {
         if (verbose) qDebug() << "apt-notifier is running";
@@ -3322,21 +3322,21 @@ void defaultlook::settheme(const QString &type, const QString &theme)
     system(cmd.toUtf8());
 }
 
-void defaultlook::on_listWidgetTheme_currentTextChanged(const QString &currentText)
+void defaultlook::on_listWidgetTheme_currentTextChanged(const QString &currentText) const
 {
     if ( themeflag ){
     settheme("gtk-3.0", currentText);
     }
 }
 
-void defaultlook::on_listWidgetWMtheme_currentTextChanged(const QString &currentText)
+void defaultlook::on_listWidgetWMtheme_currentTextChanged(const QString &currentText) const
 {
     if ( themeflag ){
     settheme("xfwm4", currentText);
     }
 }
 
-void defaultlook::on_listWidgeticons_currentTextChanged(const QString &currentText)
+void defaultlook::on_listWidgeticons_currentTextChanged(const QString &currentText) const
 {
     if ( themeflag ){
     settheme("icon", currentText);
