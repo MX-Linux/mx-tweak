@@ -218,7 +218,7 @@ void defaultlook::fliptohorizontal()
 
     // figure out systrayID, pusleaudio plugin, and tasklistID
 
-    QString systrayID = runCmd("grep \\\"systray\\\" ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
+    QString systrayID = runCmd(R"(grep \"systray\" ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml)").output;
     systrayID=systrayID.remove("\"").section("-",1,1).section(" ",0,0);
     if (verbose) if (verbose) qDebug() << "systray: " << systrayID;
 
@@ -292,7 +292,7 @@ void defaultlook::fliptohorizontal()
 
             //try to move to in front of clock if present
 
-            QString clockID = runCmd("grep -m1 \"clock\\|datetime\" ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
+            QString clockID = runCmd(R"(grep -m1 "clock\|datetime" ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml)").output;
             QString switchID;
             clockID=clockID.remove("\"").section("-",1,1).section(" ",0,0);
             if (verbose) if (verbose) qDebug() << "clockID: " << clockID;
@@ -397,7 +397,7 @@ void defaultlook::fliptovertical()
 
     // figure out moving the systray, if it exists
 
-    QString systrayID = runCmd("grep \\\"systray\\\" ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
+    QString systrayID = runCmd(R"(grep \"systray\" ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml)").output;
     systrayID=systrayID.remove("\"").section("-",1,1).section(" ",0,0);
     if (verbose) if (verbose) qDebug() << "systray: " << systrayID;
 
@@ -646,7 +646,7 @@ void defaultlook::on_buttonAbout_clicked()
                        tr("About MX Tweak"), "<p align=\"center\"><b><h2>" +
                        tr("MX Tweak") + "</h2></b></p><p align=\"center\">" + tr("Version: ") + version + "</p><p align=\"center\"><h3>" +
                        tr("App for quick default ui theme changes and tweaks") +
-                       "</h3></p><p align=\"center\"><a href=\"http://mxlinux.org\">http://mxlinux.org</a><br /></p><p align=\"center\">" +
+                       R"(</h3></p><p align="center"><a href="http://mxlinux.org">http://mxlinux.org</a><br /></p><p align="center">)" +
                        tr("Copyright (c) MX Linux") + "<br /><br /></p>");
     msgBox.addButton(tr("License"), QMessageBox::AcceptRole);
     msgBox.addButton(tr("Cancel"), QMessageBox::NoRole);
@@ -1309,7 +1309,7 @@ void defaultlook::setupEtc()
     libinput_touchpadflag = false;
     //setup Intel checkbox
 
-    QString partcheck = runCmd("for i in $(lspci -n | awk '{print $2,$1}' | grep -E '^(0300|0302|0380)' | cut -f2 -d\\ ); do lspci -kns \"$i\"; done").output;
+    QString partcheck = runCmd(R"(for i in $(lspci -n | awk '{print $2,$1}' | grep -E '^(0300|0302|0380)' | cut -f2 -d\ ); do lspci -kns "$i"; done)").output;
     if (verbose) qDebug()<< "partcheck = " << partcheck;
 
     if ( partcheck.contains("i915")) {
@@ -1478,7 +1478,7 @@ void defaultlook::setupConfigoptions()
       //frame has been removed from systray
 
       // show all workspaces - tasklist/show buttons feature
-      plugintasklist = runCmd("grep \\\"tasklist\\\" ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml |cut -d '=' -f2 | cut -d '' -f1| cut -d '\"' -f2").output;
+      plugintasklist = runCmd(R"(grep \"tasklist\" ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml |cut -d '=' -f2 | cut -d '' -f1| cut -d '"' -f2)").output;
       if (verbose) qDebug() << "tasklist is " << plugintasklist;
       if ( ! plugintasklist.isEmpty()){
           test = runCmd("xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/include-all-workspaces").output;
