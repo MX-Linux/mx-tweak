@@ -35,7 +35,7 @@ brightness_small::brightness_small(QWidget *parent, const QStringList &args) :
     if (args.contains("--full") || QFileInfo::exists(config_file_path)) {
         expand = true;
     }
-    if (expand){
+    if (expand) {
         ui->label_xbacklight->show();
         ui->horizsliderhardwarebacklight->show();
         ui->backlight_label->show();
@@ -289,25 +289,17 @@ void brightness_small::on_buttonSave_clicked()
 
 void brightness_small::on_toolButtonExpandBacklight_clicked()
 {
-    QString home_path = QDir::homePath();
-    QString config_file_path = home_path + "/.config/MX-Linux/MX-Tweak/expand";
+    QString config_file_path = QDir::homePath() + "/.config/MX-Linux/MX-Tweak/expand";
     //expand toggle
-    if ( ! expand ){
-        expand = true;
-    } else {
-        expand = false;
-    }
-
-    if (! expand){
-
-        QString cmd = "rm " + config_file_path;
-        system(cmd.toUtf8());
+    expand = !expand;
+    if (! expand) {
+        QFile::remove(config_file_path);
         ui->label_xbacklight->hide();
         ui->horizsliderhardwarebacklight->hide();
         ui->backlight_label->hide();
     } else {
-        QString cmd = "touch " + config_file_path;
-        system(cmd.toUtf8());
+        QFile file(config_file_path);
+        file.open(QIODevice::NewOnly);
         ui->label_xbacklight->show();
         ui->horizsliderhardwarebacklight->show();
         ui->backlight_label->show();
