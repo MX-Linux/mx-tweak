@@ -28,10 +28,10 @@ protected:
     QTimer *timer;
 
 public:
-    explicit brightness_small(QWidget *parent = 0, QStringList args = QStringList());
+    explicit brightness_small(QWidget *parent = 0, const QStringList &args = QStringList());
     ~brightness_small();
-    Result3 runCmd(QString cmd);
-    void setmissingxfconfvariables(QString arg1, QString arg2);
+    Result3 runCmd(const QString &cmd);
+    void setmissingxfconfvariables(const QString &arg1, const QString &arg2);
     void setupbacklight();
     void setbacklight();
     void setupBrightness();

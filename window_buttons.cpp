@@ -18,7 +18,7 @@ window_buttons::~window_buttons()
 }
 
 // Util function for getting bash command output and error code
-result3 window_buttons::runCmd(QString cmd)
+result3 window_buttons::runCmd(const QString &cmd)
 {
     QEventLoop loop;
     proc = new QProcess(this);

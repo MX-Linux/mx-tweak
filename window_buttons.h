@@ -26,7 +26,7 @@ public:
     explicit window_buttons(QWidget *parent = 0);
     ~window_buttons();
     void setup();
-    result3 runCmd(QString cmd);
+    result3 runCmd(const QString &cmd);
     QString plugintasklist;
 
 private slots:

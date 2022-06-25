@@ -25,7 +25,7 @@ public:
     ~xfwm_compositor_settings();
 
     void setup();
-    result2 runCmd(QString cmd);
+    result2 runCmd(const QString &cmd);
 
 private slots:
     void on_checkBoxRedirect_clicked();

@@ -41,7 +41,7 @@
 #include "remove_user_theme_set.h"
 #include "brightness_small.h"
 
-defaultlook::defaultlook(QWidget *parent, QStringList args) :
+defaultlook::defaultlook(QWidget *parent, const QStringList &args) :
     QDialog(parent),
     ui(new Ui::defaultlook)
 {
@@ -185,7 +185,7 @@ void defaultlook::setup()
 }
 
 // Util function for getting bash command output and error code
-Result defaultlook::runCmd(QString cmd)
+Result defaultlook::runCmd(const QString &cmd)
 {
     QEventLoop loop;
     proc = new QProcess(this);
@@ -1117,7 +1117,7 @@ void defaultlook::setupPlasma()
    plasmasystrayiconsizeflag = false;
 
 }
-QString defaultlook::readTaskmanagerConfig(QString key)
+QString defaultlook::readTaskmanagerConfig(const QString &key)
 {
     QString ID = plasmataskmanagerID.section("[",2,2).section("]",0,0);
     QString Applet = plasmataskmanagerID.section("[",4,4).section("]",0,0);
@@ -1132,7 +1132,7 @@ QString defaultlook::readTaskmanagerConfig(QString key)
     return value;
 }
 
-QString defaultlook::readPlasmaPanelConfig(QString key)
+QString defaultlook::readPlasmaPanelConfig(const QString &key)
 {
     QString ID;
     ID = plasmaPanelId.section("[",2,2).section("]",0,0);
@@ -1749,7 +1749,7 @@ void defaultlook::setresolution()
     setrefreshrate(display, resolution, activeprofile);
 }
 
-void defaultlook::setmissingxfconfvariables(QString activeprofile, QString resolution)
+void defaultlook::setmissingxfconfvariables(const QString &activeprofile, const QString &resolution)
 {
     //set resolution, set active, set scales, set display name
 
@@ -1763,7 +1763,7 @@ void defaultlook::setmissingxfconfvariables(QString activeprofile, QString resol
     runCmd("xfconf-query --channel displays -p /" + activeprofile + "/" + ui->comboBoxDisplay->currentText() + "/Active -t bool -s true --create");
 }
 
-void defaultlook::setrefreshrate(QString display, QString resolution, QString activeprofile)
+void defaultlook::setrefreshrate(const QString &display, const QString &resolution, const QString &activeprofile)
 {
     //set refreshrate too
     QString refreshrate = runCmd("/usr/lib/mx-tweak/mx-tweak-lib-randr.sh " + display + " refreshrate").output;
@@ -2716,7 +2716,7 @@ void defaultlook::on_pushButtontasklist_clicked()
 }
 
 // Get version of the program
-QString defaultlook::getVersion(QString name)
+QString defaultlook::getVersion(const QString &name)
 {
     return runCmd("dpkg-query -f '${Version}' -W " + name).output;
 }
@@ -3021,7 +3021,7 @@ void defaultlook::on_ApplyFluxboxResets_clicked()
     setupFluxbox();
 }
 
-void defaultlook::fluxboxchangeinitvariable(QString initline, QString value)
+void defaultlook::fluxboxchangeinitvariable(const QString &initline, const QString &value)
 {
     if (verbose) qDebug() << "checking for init value changes";
     QString initialvalue = initline.section(":",1,1).trimmed();
@@ -3236,14 +3236,14 @@ void defaultlook::on_ButtonApplyPlasma_clicked()
 
 }
 
-void defaultlook::writePlasmaPanelConfig(QString key, QString value)
+void defaultlook::writePlasmaPanelConfig(const QString &key, const QString &value)
 {
     QString ID;
     ID = plasmaPanelId.section("[",2,2).section("]",0,0);
     runCmd("kwriteconfig5 --file plasma-org.kde.plasma.desktop-appletsrc --group Containments --group " + ID + " --key " + key + " " + value);
 }
 
-void defaultlook::writeTaskmanagerConfig(QString key, QString value)
+void defaultlook::writeTaskmanagerConfig(const QString &key, const QString &value)
 {
     QString ID = plasmataskmanagerID.section("[",2,2).section("]",0,0);
     QString Applet = plasmataskmanagerID.section("[",4,4).section("]",0,0);
@@ -3258,7 +3258,7 @@ void defaultlook::on_comboBoxPlasmaSystrayIcons_currentIndexChanged(int index)
 }
 
 
-void defaultlook::populatethemelists(QString value)
+void defaultlook::populatethemelists(const QString &value)
 {
     QString themes;
     QStringList themelist;
@@ -3315,7 +3315,7 @@ void defaultlook::populatethemelists(QString value)
     themeflag = true;
 }
 
-void defaultlook::settheme(QString type, QString theme)
+void defaultlook::settheme(const QString &type, const QString &theme)
 {   //set new theme
     QString cmd;
     if ( type == "gtk-3.0" ){

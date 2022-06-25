@@ -17,7 +17,7 @@ xfwm_compositor_settings::~xfwm_compositor_settings()
 }
 
 // Util function for getting bash command output and error code
-result2 xfwm_compositor_settings::runCmd(QString cmd)
+result2 xfwm_compositor_settings::runCmd(const QString &cmd)
 {
     QEventLoop loop;
     proc = new QProcess(this);

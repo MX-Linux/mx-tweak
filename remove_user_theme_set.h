@@ -27,9 +27,9 @@ public:
 
     void setupThemeSelector();
 
-    ExecResult runCmd(QString cmd);
+    ExecResult runCmd(const QString &cmd);
 
-    QString getFilename(QString name);
+    QString getFilename(const QString &name);
 
 private:
     Ui::remove_user_theme_set *ui;
