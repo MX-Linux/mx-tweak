@@ -33,7 +33,7 @@ void remove_user_theme_set::setupThemeSelector()
     //build theme list
     ui->comboBoxThemes->clear();
     QStringList theme_list;
-    QStringList filter("*.tweak");
+    QStringList filter(QStringLiteral("*.tweak"));
     bool xsettings_gtk_theme_present = false;
     bool icontheme_present = false;
     bool xfwm4_theme_present = false;
@@ -47,13 +47,13 @@ void remove_user_theme_set::setupThemeSelector()
     while (it2.hasNext()) {
         QFileInfo file_info(it2.next());
         QString filename = file_info.absoluteFilePath();
-        QString name = runCmd("cat '" + filename + "'|grep Name=").output.section("=",1,1);
+        QString name = runCmd("cat '" + filename + "'|grep Name=").output.section(QStringLiteral("="),1,1);
 
-        QString xsettings_gtk_theme = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xsettings_gtk_theme=").output.section("=",1,1);
+        QString xsettings_gtk_theme = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xsettings_gtk_theme=").output.section(QStringLiteral("="),1,1);
         qDebug() << "xsettings_gtk_theme = " << xsettings_gtk_theme;
-        QString xsettings_icon_theme = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xsettings_icon_theme=").output.section("=",1,1);
+        QString xsettings_icon_theme = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xsettings_icon_theme=").output.section(QStringLiteral("="),1,1);
         qDebug() << "xsettings_icon_theme = " << xsettings_icon_theme;
-        QString xfwm4_window_decorations = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xfwm4_window_decorations=").output.section("=",1,1);
+        QString xfwm4_window_decorations = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xfwm4_window_decorations=").output.section(QStringLiteral("="),1,1);
         qDebug() << "xfwm4_window_decorations = " << xfwm4_window_decorations;
 
         //check theme existence, only list if all 3 elements present
@@ -86,7 +86,7 @@ void remove_user_theme_set::setupThemeSelector()
         }
     }
 
-    theme_list.insert(0, "Select User Theme Set to Remove");
+    theme_list.insert(0, QStringLiteral("Select User Theme Set to Remove"));
     ui->comboBoxThemes->addItems(theme_list);
     ui->comboBoxThemes->setCurrentIndex(0);
 
@@ -98,7 +98,7 @@ ExecResult remove_user_theme_set::runCmd(const QString &cmd)
     auto *proc = new QProcess(this);
     proc->setProcessChannelMode(QProcess::MergedChannels);
     connect(proc, SIGNAL(finished(int)), &loop, SLOT(quit()));
-    proc->start("/bin/bash", QStringList() << "-c" << cmd);
+    proc->start(QStringLiteral("/bin/bash"), QStringList() << QStringLiteral("-c") << cmd);
     loop.exec();
     disconnect(proc, nullptr, nullptr, nullptr);
     ExecResult result;

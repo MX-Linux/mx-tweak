@@ -13,7 +13,7 @@ brightness_small::brightness_small(QWidget *parent, const QStringList &args) :
     ui(new Ui::brightness_small)
 {
     //check to see if running, if so, exit quick
-    QString check = runCmd("ps -aux |grep -E 'mx-tweak.*--tray'|grep -v grep|wc -l").output;
+    QString check = runCmd(QStringLiteral("ps -aux |grep -E 'mx-tweak.*--tray'|grep -v grep|wc -l")).output;
 
     if ( check.toInt() >= 2) {
         qDebug() << "check is " << check;
@@ -22,17 +22,17 @@ brightness_small::brightness_small(QWidget *parent, const QStringList &args) :
     ui->setupUi(this);
     setWindowFlags(Qt::CustomizeWindowHint); // for the close, min and max buttons
     QIcon save;
-    save = QIcon::fromTheme("gtk-save");
+    save = QIcon::fromTheme(QStringLiteral("gtk-save"));
     ui->buttonSave->setIcon(save);
     setupDisplay();
     QIcon icon;
-    icon = QIcon::fromTheme("brightness-systray");
+    icon = QIcon::fromTheme(QStringLiteral("brightness-systray"));
     setWindowIcon(icon);
     setWindowTitle(tr("MX-Tweak"));
     expand = false;
     QString home_path = QDir::homePath();
     QString config_file_path = home_path + "/.config/MX-Linux/MX-Tweak/expand";
-    if (args.contains("--full") || QFileInfo::exists(config_file_path)) {
+    if (args.contains(QStringLiteral("--full")) || QFileInfo::exists(config_file_path)) {
         expand = true;
     }
     if (expand) {
@@ -54,12 +54,12 @@ brightness_small::brightness_small(QWidget *parent, const QStringList &args) :
     menu = new QMenu(this);
 
     if (system("echo $XDG_CURRENT_DESKTOP | grep -q XFCE") == 0) {
-            full = new QAction(QIcon::fromTheme("video-display"), tr("Display"), this);
+            full = new QAction(QIcon::fromTheme(QStringLiteral("video-display")), tr("Display"), this);
             connect(full, &QAction::triggered, this, &brightness_small::launchfulldisplaydialog);
              menu->addAction(full);
              menu->addSeparator();
         }
-        quitAction = new QAction(QIcon::fromTheme("gtk-quit"), tr("&Quit"), this);
+        quitAction = new QAction(QIcon::fromTheme(QStringLiteral("gtk-quit")), tr("&Quit"), this);
         connect(quitAction, &QAction::triggered, qApp, &QGuiApplication::quit);
         menu->addAction(quitAction);
 
@@ -102,7 +102,7 @@ Result3 brightness_small::runCmd(const QString &cmd)
     proc = new QProcess(this);
     proc->setProcessChannelMode(QProcess::MergedChannels);
     connect(proc, SIGNAL(finished(int)), &loop, SLOT(quit()));
-    proc->start("/bin/bash", QStringList() << "-c" << cmd);
+    proc->start(QStringLiteral("/bin/bash"), QStringList() << QStringLiteral("-c") << cmd);
     loop.exec();
     disconnect(proc, nullptr, nullptr, nullptr);
     Result3 result = {proc->exitCode(), proc->readAll().trimmed()};
@@ -138,10 +138,10 @@ void brightness_small::setmissingxfconfvariables(const QString &activeprofile, c
 void brightness_small::setupbacklight()
 {
     //check for backlights
-    QString test = runCmd("ls /sys/class/backlight").output;
+    QString test = runCmd(QStringLiteral("ls /sys/class/backlight")).output;
     if ( ! test.isEmpty()) {
         //get backlight value for currently
-        QString backlight=runCmd("sudo /usr/lib/mx-tweak/backlight-brightness -g").output;
+        QString backlight=runCmd(QStringLiteral("sudo /usr/lib/mx-tweak/backlight-brightness -g")).output;
         int backlight_slider_value = backlight.toInt();
         ui->horizsliderhardwarebacklight->setValue(backlight_slider_value);
         ui->horizsliderhardwarebacklight->setToolTip(backlight);
@@ -180,10 +180,10 @@ void brightness_small::setupGamma()
 {
     QString gamma = runCmd("/usr/lib/mx-tweak/mx-tweak-lib-randr.sh " + ui->comboBoxDisplay->currentText() + " gamma").output;
     gamma=gamma.simplified();
-    gamma = gamma.section(":",1,3).simplified();
-    double gamma1 = 1.0 / gamma.section(":",0,0).toDouble();
-    double gamma2 = 1.0 / gamma.section(":",1,1).toDouble();
-    double gamma3 = 1.0 / gamma.section(":",2,2).toDouble();
+    gamma = gamma.section(QStringLiteral(":"),1,3).simplified();
+    double gamma1 = 1.0 / gamma.section(QStringLiteral(":"),0,0).toDouble();
+    double gamma2 = 1.0 / gamma.section(QStringLiteral(":"),1,1).toDouble();
+    double gamma3 = 1.0 / gamma.section(QStringLiteral(":"),2,2).toDouble();
     g1 = QString::number(gamma1,'G', 3);
     g2 = QString::number(gamma2,'G', 3);
     g3 = QString::number(gamma3,'G', 3);
@@ -242,8 +242,8 @@ void brightness_small::on_comboBoxDisplay_currentIndexChanged(int  /*index*/)
 void brightness_small::setupDisplay()
 {
     //populate combobox
-    QString displaydata = runCmd("LANG=C xrandr |grep -w connected | cut -d' ' -f1").output;
-    QStringList displaylist = displaydata.split("\n");
+    QString displaydata = runCmd(QStringLiteral("LANG=C xrandr |grep -w connected | cut -d' ' -f1")).output;
+    QStringList displaylist = displaydata.split(QStringLiteral("\n"));
     ui->comboBoxDisplay->clear();
     ui->comboBoxDisplay->addItems(displaylist);
     brightnessflag = true;
@@ -278,7 +278,7 @@ void brightness_small::keyPressEvent(QKeyEvent *event)
 
 void brightness_small::launchfulldisplaydialog()
 {
-    QString cmd = "mx-tweak --display";
+    QString cmd = QStringLiteral("mx-tweak --display");
     system(cmd.toUtf8());
 }
 

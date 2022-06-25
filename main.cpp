@@ -33,14 +33,14 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
 
     QTranslator qtTran;
-    qtTran.load(QString("qt_") + QLocale::system().name());
+    qtTran.load(QStringLiteral("qt_") + QLocale::system().name());
     a.installTranslator(&qtTran);
 
     QTranslator appTran;
-    appTran.load(QString("mx-tweak_") + QLocale::system().name(), "/usr/share/mx-tweak/locale");
+    appTran.load(QStringLiteral("mx-tweak_") + QLocale::system().name(), QStringLiteral("/usr/share/mx-tweak/locale"));
     a.installTranslator(&appTran);
 
-    if (a.arguments().contains("--tray")){
+    if (a.arguments().contains(QStringLiteral("--tray"))){
         brightness_small fred(nullptr,a.arguments());
         return a.exec();
         //    } else {
