@@ -49,10 +49,10 @@ protected:
     QTimer *timer;
 
 public:
-    explicit defaultlook(QWidget *parent = 0, QStringList args = QStringList());
+    explicit defaultlook(QWidget *parent = 0, const QStringList &args = QStringList());
     ~defaultlook();
-    Result runCmd(QString cmd);
-    QString getVersion(QString name);
+    Result runCmd(const QString &cmd);
+    QString getVersion(const QString &name);
     QString version;
     QString output;
     QStringList panelIDs;
@@ -95,15 +95,15 @@ public:
     void setupuiselections();
     void setuppanel();
     void setuptheme();
-    void populatethemelists(QString value);
-    void settheme(QString type, QString theme);
+    void populatethemelists(const QString &value);
+    void settheme(const QString &type, const QString &theme);
     void setupEtc();
     void setupFluxbox();
     void setupPlasma();
-    QString readPlasmaPanelConfig(QString Key);
-    QString readTaskmanagerConfig(QString Key);
-    void writePlasmaPanelConfig(QString key, QString value);
-    void writeTaskmanagerConfig(QString key, QString value);
+    QString readPlasmaPanelConfig(const QString &Key);
+    QString readTaskmanagerConfig(const QString &Key);
+    void writePlasmaPanelConfig(const QString &key, const QString &value);
+    void writeTaskmanagerConfig(const QString &key, const QString &value);
     void setupDisplay();
     void setupConfigoptions();
     void setupComboTheme();
@@ -139,11 +139,11 @@ public:
     void setgtkscaling();
     void setupresolutions();
     void setresolution();
-    void setrefreshrate(QString arg1, QString arg2, QString arg3);
+    void setrefreshrate(const QString &arg1, const QString &arg2, const QString &arg3);
     void setupGamma();
 
-    void setmissingxfconfvariables(QString arg1, QString arg2);
-    void fluxboxchangeinitvariable(QString arg1, QString arg2);
+    void setmissingxfconfvariables(const QString &arg1, const QString &arg2);
+    void fluxboxchangeinitvariable(const QString &arg1, const QString &arg2);
     void fluxboxchangedock();
 
 public slots:

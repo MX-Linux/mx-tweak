@@ -8,7 +8,7 @@
 #include "QKeyEvent"
 #include "QScreen"
 
-brightness_small::brightness_small(QWidget *parent, QStringList args) :
+brightness_small::brightness_small(QWidget *parent, const QStringList &args) :
     QMainWindow(parent),
     ui(new Ui::brightness_small)
 {
@@ -96,7 +96,7 @@ void brightness_small::setPosition()
     this->move(pos);
 }
 // Util function for getting bash command output and error code
-Result3 brightness_small::runCmd(QString cmd)
+Result3 brightness_small::runCmd(const QString &cmd)
 {
     QEventLoop loop;
     proc = new QProcess(this);
@@ -121,7 +121,7 @@ brightness_small::~brightness_small()
 }
 
 //following function is not actually used by the tray application
-void brightness_small::setmissingxfconfvariables(QString activeprofile, QString resolution)
+void brightness_small::setmissingxfconfvariables(const QString &activeprofile, const QString &resolution)
 {
     //set resolution, set active, set scales, set display name
 

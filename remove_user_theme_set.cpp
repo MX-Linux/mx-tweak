@@ -92,7 +92,7 @@ void remove_user_theme_set::setupThemeSelector()
 
 }
 
-ExecResult remove_user_theme_set::runCmd(QString cmd)
+ExecResult remove_user_theme_set::runCmd(const QString &cmd)
 {
     QEventLoop loop;
     QProcess* proc = new QProcess(this);
@@ -108,7 +108,7 @@ ExecResult remove_user_theme_set::runCmd(QString cmd)
     return result;
 }
 
-QString remove_user_theme_set::getFilename(QString name)
+QString remove_user_theme_set::getFilename(const QString &name)
 {
     return theme_info[name];
 }
