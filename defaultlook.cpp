@@ -3266,7 +3266,7 @@ void defaultlook::populatethemelists(const QString &value)
         if (verbose) qDebug() << "themelist" << themelist;
         QStringList iconthemelist = themelist;
         for (const QString &item : iconthemelist) {
-            QString icontheme = item;
+            const QString& icontheme = item;
             if (verbose) qDebug() << "icontheme" << icontheme;
             QString test = runCmd("find /usr/share/icons/" + icontheme + " -maxdepth 1 -mindepth 1 -type d |cut -d\"/\" -f6").output;
             if ( test == QLatin1String("cursors") ) {
