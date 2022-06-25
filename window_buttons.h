@@ -38,11 +38,11 @@ private slots:
 
     void on_checkBoxshowhandle_toggled(bool checked);
 
-    void on_comboBoxsortingorder_currentIndexChanged(int index);
+    void on_comboBoxsortingorder_currentIndexChanged(int index) const;
 
-    void on_comboBoxwindowgrouping_currentIndexChanged(int index);
+    void on_comboBoxwindowgrouping_currentIndexChanged(int index) const;
 
-    void on_comboBoxmiddleclickaction_currentIndexChanged(int index);
+    void on_comboBoxmiddleclickaction_currentIndexChanged(int index) const;
 
     void on_checkBoxrestoreminwindows_toggled(bool checked);
 
