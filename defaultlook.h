@@ -45,8 +45,8 @@ class defaultlook : public QDialog
     Q_OBJECT
 
 protected:
-    QProcess *proc;
-    QTimer *timer;
+    QProcess *proc{};
+    QTimer *timer{};
 
 public:
     explicit defaultlook(QWidget *parent = 0, const QStringList &args = QStringList());
@@ -59,19 +59,19 @@ public:
     QString panel;
     QString plasmaPanelId;
     QString plasmataskmanagerID;
-    bool message_flag;
+    bool message_flag{};
     QHash<QString, QString>  theme_info;
     QString pluginidsystray;
     QString plugintasklist;
     QStringList undotheme;
     bool verbose = false;
-    bool panelflag;
-    bool hibernate_flag;
-    bool Intel_flag;
-    bool radeon_flag;
-    bool amdgpuflag;
-    bool libinput_touchpadflag;
-    bool vblankflag;
+    bool panelflag{};
+    bool hibernate_flag{};
+    bool Intel_flag{};
+    bool radeon_flag{};
+    bool amdgpuflag{};
+    bool libinput_touchpadflag{};
+    bool vblankflag{};
     bool displayflag = false;
     bool displaysetupflag = false;
     bool brightnessflag = false;
@@ -79,11 +79,11 @@ public:
     bool slitflag = false;
     bool fluxcaptionflag = false;
     bool fluxiconflag = false;
-    bool plasmaplacementflag;
-    bool plasmaworkspacesflag;
-    bool plasmasingleclickflag;
-    bool plasmaresetflag;
-    bool plasmasystrayiconsizeflag;
+    bool plasmaplacementflag{};
+    bool plasmaworkspacesflag{};
+    bool plasmasingleclickflag{};
+    bool plasmaresetflag{};
+    bool plasmasystrayiconsizeflag{};
     bool themeflag = false;
 
     QString g1;

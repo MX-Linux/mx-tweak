@@ -19,8 +19,8 @@ class window_buttons : public QDialog
     Q_OBJECT
 
 protected:
-    QProcess *proc;
-    QTimer *timer;
+    QProcess *proc{};
+    QTimer *timer{};
 
 public:
     explicit window_buttons(QWidget *parent = 0);
