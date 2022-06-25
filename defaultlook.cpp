@@ -2831,11 +2831,7 @@ void defaultlook::on_pushButtonRemoveUserThemeSet_clicked()
 
 void defaultlook::on_comboBoxvblank_activated(const QString & /*arg1*/)
 {
-    if ( vblankinitial == ui->comboBoxvblank->currentText()){
-        vblankflag = false;
-    } else {
-        vblankflag = true;
-    }
+    vblankflag = vblankinitial != ui->comboBoxvblank->currentText();
     ui->buttonCompositorApply->setEnabled(true);
 }
 
@@ -3336,7 +3332,7 @@ void defaultlook::on_checkBoxlibinput_clicked()
 
 void defaultlook::on_tabWidget_currentChanged(int index)
 {
-    if (displaysetupflag == false){
+    if (!displaysetupflag){
         if (ui->tabWidget->tabText(index) == tr("Display")){
             setupDisplay();
             displaysetupflag = true;
