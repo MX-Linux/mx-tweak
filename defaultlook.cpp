@@ -77,10 +77,7 @@ void defaultlook::setup()
         ui->checkBoxLightdmReset->hide();
     }
 
-    bool isOther = true;
-
     if (checkXFCE()) {
-        isOther = false;
         whichpanel();
         message_flag = false;
         //setup theme tab
@@ -104,7 +101,6 @@ void defaultlook::setup()
 
     //setup fluxbox
     else if (checkFluxbox()){
-        isOther = false;
         setupFluxbox();
         ui->tabWidget->removeTab(6);
         ui->label_4->hide();
@@ -124,7 +120,6 @@ void defaultlook::setup()
 
     //setup plasma
     else if (checkPlasma()){
-        isOther = false;
         ui->label_4->hide();
         ui->label_5->hide();
         ui->label_6->hide();
