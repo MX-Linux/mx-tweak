@@ -24,8 +24,8 @@ class brightness_small : public QMainWindow
     Q_OBJECT
 
 protected:
-    QProcess *proc;
-    QTimer *timer;
+    QProcess *proc{};
+    QTimer *timer{};
 
 public:
     explicit brightness_small(QWidget *parent = 0, const QStringList &args = QStringList());

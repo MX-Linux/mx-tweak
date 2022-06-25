@@ -17,8 +17,8 @@ class xfwm_compositor_settings : public QDialog
     Q_OBJECT
 
 protected:
-    QProcess *proc;
-    QTimer *timer;
+    QProcess *proc{};
+    QTimer *timer{};
 
 public:
     explicit xfwm_compositor_settings(QWidget *parent = 0);
