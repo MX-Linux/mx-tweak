@@ -95,7 +95,7 @@ void remove_user_theme_set::setupThemeSelector()
 ExecResult remove_user_theme_set::runCmd(const QString &cmd)
 {
     QEventLoop loop;
-    QProcess* proc = new QProcess(this);
+    auto *proc = new QProcess(this);
     proc->setProcessChannelMode(QProcess::MergedChannels);
     connect(proc, SIGNAL(finished(int)), &loop, SLOT(quit()));
     proc->start("/bin/bash", QStringList() << "-c" << cmd);
