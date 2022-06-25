@@ -168,7 +168,7 @@ void brightness_small::setupBrightness()
 {
     //get brightness value for currently shown display
     QString brightness=runCmd("LANG=C xrandr --verbose | awk '/" + ui->comboBoxDisplay->currentText() +"/{flag=1;next}/Clones/{flag=0}flag'|grep Brightness|cut -d' ' -f2").output;
-    int brightness_slider_value = brightness.toFloat() * 100;
+    int brightness_slider_value = static_cast<int>(brightness.toFloat() * 100);
     ui->horizontalSliderBrightness->setValue(brightness_slider_value);
     qDebug() << "brightness string is " << brightness;
     qDebug() << " brightness_slider_value is " << brightness_slider_value;
