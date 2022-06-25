@@ -144,7 +144,7 @@ void window_buttons::on_checkBoxshowhandle_toggled(bool  /*checked*/)
     system(cmd.toUtf8());
 }
 
-void window_buttons::on_comboBoxsortingorder_currentIndexChanged(int index)
+void window_buttons::on_comboBoxsortingorder_currentIndexChanged(int index) const
 {
     QString param = QString::number(index);
     QString cmd = "xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/sort-order -t int" + " -s " + param  + " --create";
@@ -152,14 +152,14 @@ void window_buttons::on_comboBoxsortingorder_currentIndexChanged(int index)
 }
 
 
-void window_buttons::on_comboBoxwindowgrouping_currentIndexChanged(int index)
+void window_buttons::on_comboBoxwindowgrouping_currentIndexChanged(int index) const
 {
     QString param = QString::number(index);
     QString cmd = "xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/grouping -t int" + " -s " + param  + " --create";
     system(cmd.toUtf8());
 }
 
-void window_buttons::on_comboBoxmiddleclickaction_currentIndexChanged(int index)
+void window_buttons::on_comboBoxmiddleclickaction_currentIndexChanged(int index) const
 {
     QString param = QString::number(index);
     QString cmd = "xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/middle-click -t int" + " -s " + param  + " --create";
