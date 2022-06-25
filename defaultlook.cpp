@@ -103,7 +103,7 @@ void defaultlook::setup()
     }
 
     //setup fluxbox
-    if (checkFluxbox()){
+    else if (checkFluxbox()){
         isOther = false;
         setupFluxbox();
         ui->tabWidget->removeTab(6);
@@ -123,7 +123,7 @@ void defaultlook::setup()
     }
 
     //setup plasma
-    if (checkPlasma()){
+    else if (checkPlasma()){
         isOther = false;
         ui->label_4->hide();
         ui->label_5->hide();
@@ -143,7 +143,7 @@ void defaultlook::setup()
     }
 
     //for other non-supported desktops, show only
-    if (isOther){
+    else {
         ui->label_4->hide();
         ui->label_5->hide();
         ui->label_6->hide();
