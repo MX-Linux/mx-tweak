@@ -178,7 +178,7 @@ void window_buttons::on_pushButton_clicked()
     close();
 }
 
-void window_buttons::on_checkBoxbuttonlabels_toggled(bool checked)
+void window_buttons::on_checkBoxbuttonlabels_toggled(bool  /*checked*/)
 {
     QString param;
     if ( ui->checkBoxbuttonlabels->isChecked()) {
@@ -191,7 +191,7 @@ void window_buttons::on_checkBoxbuttonlabels_toggled(bool checked)
     system(cmd.toUtf8());
 }
 
-void window_buttons::on_checkBoxshowflatbuttons_toggled(bool checked)
+void window_buttons::on_checkBoxshowflatbuttons_toggled(bool  /*checked*/)
 {
     QString param;
     if ( ui->checkBoxshowflatbuttons->isChecked()) {
@@ -205,7 +205,7 @@ void window_buttons::on_checkBoxshowflatbuttons_toggled(bool checked)
 }
 
 
-void window_buttons::on_checkBoxshowhandle_toggled(bool checked)
+void window_buttons::on_checkBoxshowhandle_toggled(bool  /*checked*/)
 {
     QString param;
     if ( ui->checkBoxshowhandle->isChecked()) {
@@ -242,7 +242,7 @@ void window_buttons::on_comboBoxmiddleclickaction_currentIndexChanged(int index)
 
 
 
-void window_buttons::on_checkBoxrestoreminwindows_toggled(bool checked)
+void window_buttons::on_checkBoxrestoreminwindows_toggled(bool  /*checked*/)
 {
     QString param;
     if ( ui->checkBoxrestoreminwindows->isChecked()) {
@@ -255,7 +255,7 @@ void window_buttons::on_checkBoxrestoreminwindows_toggled(bool checked)
     system(cmd.toUtf8());
 }
 
-void window_buttons::on_checkBoxdrawframes_toggled(bool checked)
+void window_buttons::on_checkBoxdrawframes_toggled(bool  /*checked*/)
 {
     QString param;
     if ( ui->checkBoxdrawframes->isChecked()) {
@@ -282,7 +282,7 @@ void window_buttons::on_checkBoxswitchwindowsmousewheel_toggled(bool checked)
     system(cmd.toUtf8());
 }
 
-void window_buttons::on_checkBoxwindowsallworkspaces_toggled(bool checked)
+void window_buttons::on_checkBoxwindowsallworkspaces_toggled(bool  /*checked*/)
 {
     QString param;
     if ( ui->checkBoxwindowsallworkspaces->isChecked()) {
@@ -295,7 +295,7 @@ void window_buttons::on_checkBoxwindowsallworkspaces_toggled(bool checked)
     system(cmd.toUtf8());
 }
 
-void window_buttons::on_checkBoxonlyminwindows_toggled(bool checked)
+void window_buttons::on_checkBoxonlyminwindows_toggled(bool  /*checked*/)
 {
     QString param;
     if ( ui->checkBoxonlyminwindows->isChecked()) {
@@ -308,7 +308,7 @@ void window_buttons::on_checkBoxonlyminwindows_toggled(bool checked)
     system(cmd.toUtf8());
 }
 
-void window_buttons::on_checkBoxwindowsallmonitors_toggled(bool checked)
+void window_buttons::on_checkBoxwindowsallmonitors_toggled(bool  /*checked*/)
 {
     QString param;
     if ( ui->checkBoxwindowsallmonitors->isChecked()) {
