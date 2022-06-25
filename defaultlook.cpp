@@ -688,43 +688,27 @@ bool defaultlook::checkXFCE()
 {
     QString test = runCmd("echo $XDG_CURRENT_DESKTOP").output;
     if (verbose) if (verbose) qDebug() << test;
-    if ( test == "XFCE") {
-        return true;
-    } else {
-        return false;
-    }
+    return (test == "XFCE");
 }
 
 bool defaultlook::checkFluxbox()
 {
     QString test = runCmd("pgrep fluxbox").output;
     if (verbose) if (verbose) qDebug() << test;
-    if ( !test.isEmpty()) {
-        return true;
-    } else {
-        return false;
-    }
+    return (!test.isEmpty());
 }
 
 bool defaultlook::checklightdm()
 {
     QFileInfo test("/etc/lightdm/lightdm-gtk-greeter.conf");
-    if ( test.exists()) {
-        return true;
-    } else {
-        return false;
-    }
+    return (test.exists());
 }
 
 bool defaultlook::checkPlasma()
 {
     QString test = runCmd("pgrep plasma").output;
     if (verbose) if (verbose) qDebug() << test;
-    if ( !test.isEmpty()) {
-        return true;
-    } else {
-        return false;
-    }
+    return (!test.isEmpty());
 }
 
 // backs up the current panel configuration
