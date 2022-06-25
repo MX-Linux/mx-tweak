@@ -96,7 +96,7 @@ public:
     void setuppanel();
     void setuptheme();
     void populatethemelists(const QString &value);
-    void settheme(const QString &type, const QString &theme);
+    static void settheme(const QString &type, const QString &theme);
     void setupEtc();
     void setupFluxbox();
     void setupPlasma();
@@ -114,7 +114,7 @@ public:
     void message();
     bool checkXFCE();
     bool checkFluxbox();
-    bool checklightdm();
+    static bool checklightdm();
     bool checkPlasma();
     void CheckComptonRunning();
     void setupCompositor();
@@ -126,7 +126,7 @@ public:
 
     void top_or_bottom();
     void left_or_right();
-    void message2();
+    static void message2();
     void savethemeundo();
     void themeundo();
 
@@ -154,11 +154,11 @@ public slots:
 private slots:
     void on_buttonApply_clicked();
 
-    void on_buttonCancel_clicked();
+    static void on_buttonCancel_clicked();
 
     void on_buttonAbout_clicked();
 
-    void on_buttonHelp_clicked();
+    static void on_buttonHelp_clicked();
 
     void on_radioDefaultPanel_clicked();
 
@@ -204,7 +204,7 @@ private slots:
 
     void on_comboBoxCompositor_currentIndexChanged(const QString &arg1);
 
-    void on_buttonConfigureXfwm_clicked();
+    static void on_buttonConfigureXfwm_clicked();
 
     void on_checkBoxShowAllWorkspaces_clicked();
 
@@ -224,7 +224,7 @@ private slots:
 
     void on_checkboxIntelDriver_clicked();
 
-    void on_pushButtontasklist_clicked();
+    static void on_pushButtontasklist_clicked();
 
     void on_checkboxAMDtearfree_clicked();
 
@@ -312,7 +312,7 @@ private slots:
 
     void on_checkBoxCSD_clicked();
 
-    void on_pushButtonDocklikeSetttings_clicked();
+    static void on_pushButtonDocklikeSetttings_clicked();
 
 private:
     Ui::defaultlook *ui;
