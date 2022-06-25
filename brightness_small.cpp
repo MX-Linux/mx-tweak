@@ -100,7 +100,7 @@ Result3 brightness_small::runCmd(const QString &cmd)
 {
     QEventLoop loop;
     proc = new QProcess(this);
-    proc->setReadChannelMode(QProcess::MergedChannels);
+    proc->setProcessChannelMode(QProcess::MergedChannels);
     connect(proc, SIGNAL(finished(int)), &loop, SLOT(quit()));
     proc->start("/bin/bash", QStringList() << "-c" << cmd);
     loop.exec();
