@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
     a.installTranslator(&appTran);
 
     if (a.arguments().contains("--tray")){
-        brightness_small fred(0,a.arguments());
+        brightness_small fred(nullptr,a.arguments());
         return a.exec();
         //    } else {
         //        if (system("echo $XDG_CURRENT_DESKTOP | grep -q XFCE") != 0){
@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
         //                                     QApplication::tr("This app is Xfce-only"));
         //            exit(0);
     }
-    defaultlook w(0, a.arguments());
+    defaultlook w(nullptr, a.arguments());
     w.show();
     return a.exec();
 }

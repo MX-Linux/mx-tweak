@@ -100,7 +100,7 @@ ExecResult remove_user_theme_set::runCmd(const QString &cmd)
     connect(proc, SIGNAL(finished(int)), &loop, SLOT(quit()));
     proc->start("/bin/bash", QStringList() << "-c" << cmd);
     loop.exec();
-    disconnect(proc, 0, 0, 0);
+    disconnect(proc, nullptr, nullptr, nullptr);
     ExecResult result;
     result.exitCode = proc->exitCode();
     result.output = proc->readAll().trimmed();
