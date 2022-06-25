@@ -111,14 +111,14 @@ public:
     void fliptohorizontal();
     void fliptovertical();
     void whichpanel();
-    void message();
+    void message() const;
     bool checkXFCE();
     bool checkFluxbox();
     static bool checklightdm();
     bool checkPlasma();
     void CheckComptonRunning();
     void setupCompositor();
-    void CheckAptNotifierRunning();
+    void CheckAptNotifierRunning() const;
 
     void backupPanel();
     void restoreDefaultPanel();
@@ -300,11 +300,11 @@ private slots:
 
     void on_checkBoxDesktopZoom_clicked();
 
-    void on_listWidgetTheme_currentTextChanged(const QString &currentText);
+    void on_listWidgetTheme_currentTextChanged(const QString &currentText) const;
 
-    void on_listWidgetWMtheme_currentTextChanged(const QString &currentText);
+    void on_listWidgetWMtheme_currentTextChanged(const QString &currentText) const;
 
-    void on_listWidgeticons_currentTextChanged(const QString &currentText);
+    void on_listWidgeticons_currentTextChanged(const QString &currentText) const;
 
     void on_checkBoxlibinput_clicked();
 
