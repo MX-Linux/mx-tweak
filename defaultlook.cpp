@@ -316,7 +316,7 @@ void defaultlook::fliptohorizontal()
 
             // move the systray
 
-            int switchIDindex;
+            int switchIDindex = 0;
             pluginIDs.removeAll(systrayID);
             switchIDindex = pluginIDs.indexOf(switchID) + 1;
             if (verbose) if (verbose) qDebug() << "switchIDindex 2" << switchIDindex;
@@ -326,7 +326,7 @@ void defaultlook::fliptohorizontal()
 
         //if pulsaudio plugin is present, move it to in front of systray
         if (pulseaudioID != "") {
-            int switchIDindex;
+            int switchIDindex = 0;
             pluginIDs.removeAll(pulseaudioID);
             switchIDindex = pluginIDs.indexOf(systrayID) + 1;
             pluginIDs.insert(switchIDindex, pulseaudioID);
@@ -334,7 +334,7 @@ void defaultlook::fliptohorizontal()
         }
         //if power-manager plugin is present, move it to in behind of systray
         if (powerID != "") {
-            int switchIDindex;
+            int switchIDindex = 0;
             pluginIDs.removeAll(powerID);
             switchIDindex = pluginIDs.indexOf(systrayID);
             pluginIDs.insert(switchIDindex, powerID);
@@ -514,7 +514,7 @@ void defaultlook::fliptovertical()
 
         //if pulsaudio plugin is present, move it to in front of systray
         if (pulseaudioID != "") {
-            int switchIDindex;
+            int switchIDindex = 0;
             pluginIDs.removeAll(pulseaudioID);
             switchIDindex = pluginIDs.indexOf(systrayID) + 1;
             pluginIDs.insert(switchIDindex, pulseaudioID);
@@ -523,7 +523,7 @@ void defaultlook::fliptovertical()
 
         //if powerID plugin is present, move it to in behind of systray
         if (powerID != "") {
-            int switchIDindex;
+            int switchIDindex = 0;
             pluginIDs.removeAll(powerID);
             switchIDindex = pluginIDs.indexOf(systrayID);
             pluginIDs.insert(switchIDindex, powerID);
@@ -882,7 +882,7 @@ void defaultlook::on_toolButtonXFCEpanelSettings_clicked()
     system("xprop -spy -name \"Panel Preferences\" >/dev/null");
     this->show();
     QString test;
-    bool flag;
+    bool flag = 0;
 
     //restart panel if background style of any panel is 1 - solid color, affects transparency
     QStringList panelproperties = runCmd("xfconf-query -c xfce4-panel --list |grep background-style").output.split('\n');
@@ -2727,7 +2727,7 @@ void defaultlook::on_pushButtonSettingsToThemeSet_clicked()
 
     QString panel;
     QString data = runCmd("xfconf-query -c xfce4-panel -p /panels --list").output;
-    int panelNum;
+    int panelNum = 0;
     for(panelNum = 1;; panelNum++)
     {
         if(data.contains("panel-" + QString::number(panelNum)))
@@ -2735,7 +2735,7 @@ void defaultlook::on_pushButtonSettingsToThemeSet_clicked()
     }
     panel = "panel-" + QString::number(panelNum);
 
-    int backgroundStyle;
+    int backgroundStyle = 0;
     data = runCmd("xfconf-query -c xfce4-panel -p /panels/" + panel + "/background-style").output;
     backgroundStyle = data.toInt(); //there may be newlines in output but qt ignores it
 
