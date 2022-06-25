@@ -2776,7 +2776,7 @@ void defaultlook::on_pushButtonSettingsToThemeSet_clicked()
     if(backgroundStyle == 1)
     {
         QString line;
-        for(double num : backgroundColor)
+        for(double num : qAsConst(backgroundColor))
         {
             line.append(QString::number(num) + ',');
         }
@@ -2799,7 +2799,7 @@ void defaultlook::on_pushButtonSettingsToThemeSet_clicked()
     fileLines << "xsettings_icon_theme=" + iconThemeName;
     fileLines << "xfwm4_window_decorations=" + windowDecorationsTheme;
     fileLines << "<begin_gtk_whisker_theme_code>";
-    for(QString line : whiskerThemeData.split('\n'))
+    for(const QString &line : whiskerThemeData.split('\n'))
     {
         fileLines << line;
     }
@@ -2811,7 +2811,7 @@ void defaultlook::on_pushButtonSettingsToThemeSet_clicked()
         return;
     }
     QTextStream fileStream(&file);
-    for(QString line : fileLines)
+    for(const QString &line : qAsConst(fileLines))
     {
         fileStream << line + '\n';
     }
