@@ -1,13 +1,13 @@
-#include "remove_user_theme_set.h"
-#include "ui_remove_user_theme_set.h"
-
-#include "defaultlook.h"
-
+#include <QDebug>
 #include <QDir>
 #include <QDirIterator>
-#include <QFileInfo>
 #include <QFile>
-#include <QDebug>
+#include <QFileInfo>
+
+#include "cmd.h"
+#include "defaultlook.h"
+#include "remove_user_theme_set.h"
+#include "ui_remove_user_theme_set.h"
 
 remove_user_theme_set::remove_user_theme_set(QWidget *parent) :
     QDialog(parent),
@@ -15,7 +15,6 @@ remove_user_theme_set::remove_user_theme_set(QWidget *parent) :
 {
     ui->setupUi(this);
     setupThemeSelector();
-
 }
 
 remove_user_theme_set::~remove_user_theme_set()
@@ -39,8 +38,6 @@ void remove_user_theme_set::setupThemeSelector()
     bool xfwm4_theme_present = false;
 
     //add user entries in ~/.local/share/mx-tweak-data
-
-
 
     QString home_path = QDir::homePath();
     QDirIterator it2(home_path + "/.local/share/mx-tweak-data", filter, QDir::Files, QDirIterator::Subdirectories);
@@ -90,22 +87,6 @@ void remove_user_theme_set::setupThemeSelector()
     ui->comboBoxThemes->addItems(theme_list);
     ui->comboBoxThemes->setCurrentIndex(0);
 
-}
-
-ExecResult remove_user_theme_set::runCmd(const QString &cmd)
-{
-    QEventLoop loop;
-    auto *proc = new QProcess(this);
-    proc->setProcessChannelMode(QProcess::MergedChannels);
-    connect(proc, SIGNAL(finished(int)), &loop, SLOT(quit()));
-    proc->start(QStringLiteral("/bin/bash"), QStringList() << QStringLiteral("-c") << cmd);
-    loop.exec();
-    disconnect(proc, nullptr, nullptr, nullptr);
-    ExecResult result;
-    result.exitCode = proc->exitCode();
-    result.output = proc->readAll().trimmed();
-    delete proc;
-    return result;
 }
 
 QString remove_user_theme_set::getFilename(const QString &name)

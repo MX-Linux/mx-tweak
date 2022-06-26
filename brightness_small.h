@@ -14,23 +14,13 @@ namespace Ui {
 class brightness_small;
 }
 
-struct Result3 {
-    int exitCode;
-    QString output;
-};
-
 class brightness_small : public QMainWindow
 {
     Q_OBJECT
 
-protected:
-    QProcess *proc{};
-    QTimer *timer{};
-
 public:
     explicit brightness_small(QWidget *parent = 0, const QStringList &args = QStringList());
     ~brightness_small();
-    Result3 runCmd(const QString &cmd);
     void setmissingxfconfvariables(const QString &activeprofile, const QString &resolution);
     void setupbacklight();
     void setbacklight();
@@ -47,25 +37,15 @@ public:
     bool expand;
 
 private slots:
-    void on_comboBoxDisplay_currentIndexChanged(int index);
-
-    void on_horizontalSliderBrightness_valueChanged(int value);
-
-    void on_horizsliderhardwarebacklight_actionTriggered(int action);
-
-    void messageClicked();
-
-    void iconActivated(QSystemTrayIcon::ActivationReason reason);
-
-    void keyPressEvent(QKeyEvent *event);
-
     void changeEvent(QEvent *event);
-
-
+    void iconActivated(QSystemTrayIcon::ActivationReason reason);
+    void keyPressEvent(QKeyEvent *event);
+    void messageClicked();
     void on_buttonSave_clicked();
-
+    void on_comboBoxDisplay_currentIndexChanged(int index);
+    void on_horizontalSliderBrightness_valueChanged(int value);
+    void on_horizsliderhardwarebacklight_actionTriggered(int action);
     void on_toolButtonExpandBacklight_clicked();
-
     void setPosition();
 
 private:

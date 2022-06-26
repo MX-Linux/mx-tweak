@@ -1,7 +1,9 @@
-#include "window_buttons.h"
-#include "ui_window_buttons.h"
-#include "defaultlook.h"
 #include "QDebug"
+
+#include "cmd.h"
+#include "defaultlook.h"
+#include "ui_window_buttons.h"
+#include "window_buttons.h"
 
 window_buttons::window_buttons(QWidget *parent) :
     QDialog(parent),
@@ -15,21 +17,6 @@ window_buttons::window_buttons(QWidget *parent) :
 window_buttons::~window_buttons()
 {
     delete ui;
-}
-
-// Util function for getting bash command output and error code
-result3 window_buttons::runCmd(const QString &cmd)
-{
-    QEventLoop loop;
-    proc = new QProcess(this);
-    proc->setProcessChannelMode(QProcess::MergedChannels);
-    connect(proc, SIGNAL(finished(int)), &loop, SLOT(quit()));
-    proc->start(QStringLiteral("/bin/bash"), QStringList() << QStringLiteral("-c") << cmd);
-    loop.exec();
-    disconnect(proc, nullptr, nullptr, nullptr);
-    result3 result3 = {proc->exitCode(), proc->readAll().trimmed()};
-    delete proc;
-    return result3;
 }
 
 void window_buttons::setup()
@@ -165,8 +152,6 @@ void window_buttons::on_comboBoxmiddleclickaction_currentIndexChanged(int index)
     QString cmd = "xfconf-query -c xfce4-panel -p /plugins/" + plugintasklist + "/middle-click -t int" + " -s " + param  + " --create";
     system(cmd.toUtf8());
 }
-
-
 
 void window_buttons::on_checkBoxrestoreminwindows_toggled(bool  /*checked*/)
 {
