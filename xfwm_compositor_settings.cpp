@@ -26,46 +26,22 @@ void xfwm_compositor_settings::setup()
 
     QString value;
     value = runCmd(QStringLiteral("xfconf-query -c xfwm4 -p /general/unredirect_overlays")).output;
-    if (value == QLatin1String("true")) {
-        ui->checkBoxRedirect->setChecked(true);
-    } else {
-        ui->checkBoxRedirect->setChecked(false);
-    }
+    ui->checkBoxRedirect->setChecked(value == QLatin1String("true"));
 
     value = runCmd(QStringLiteral("xfconf-query -c xfwm4 -p /general/sync_to_vblank")).output;
-    if (value == QLatin1String("true")) {
-        ui->checkBoxVsync->setChecked(true);
-    } else {
-        ui->checkBoxVsync->setChecked(false);
-    }
+    ui->checkBoxVsync->setChecked(value == QLatin1String("true"));
 
     value = runCmd(QStringLiteral("xfconf-query -c xfwm4 -p /general/cycle_preview")).output;
-    if (value == QLatin1String("true")) {
-        ui->checkBoxPreview->setChecked(true);
-    } else {
-        ui->checkBoxPreview->setChecked(false);
-    }
+    ui->checkBoxPreview->setChecked(value == QLatin1String("true"));
 
     value = runCmd(QStringLiteral("xfconf-query -c xfwm4 -p /general/show_popup_shadow")).output;
-    if (value == QLatin1String("true")) {
-        ui->checkBoxPopupShadows->setChecked(true);
-    } else {
-        ui->checkBoxPopupShadows->setChecked(false);
-    }
+    ui->checkBoxPopupShadows->setChecked(value == QLatin1String("true"));
 
     value = runCmd(QStringLiteral("xfconf-query -c xfwm4 -p /general/show_dock_shadow")).output;
-    if (value == QLatin1String("true")) {
-        ui->checkBoxDockShadows->setChecked(true);
-    } else {
-        ui->checkBoxDockShadows->setChecked(false);
-    }
+    ui->checkBoxDockShadows->setChecked(value == QLatin1String("true"));
 
     value = runCmd(QStringLiteral("xfconf-query -c xfwm4 -p /general/show_frame_shadow")).output;
-    if (value == QLatin1String("true")) {
-        ui->checkBoxFrameShadows->setChecked(true);
-    } else {
-        ui->checkBoxFrameShadows->setChecked(false);
-    }
+    ui->checkBoxFrameShadows->setChecked(value == QLatin1String("true"));
 
     value = runCmd(QStringLiteral("xfconf-query -c xfwm4 -p /general/frame_opacity")).output;
     ui->horizontalSliderWIndowDecorations->setValue(value.toInt());

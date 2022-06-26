@@ -950,13 +950,8 @@ void defaultlook::setuppanel()
     // if backup available, make the restore backup option available
 
     QString cmd = QStringLiteral("test -f ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml");
-    if (system(cmd.toUtf8()) == 0) {
-        ui->radioRestoreBackup->setEnabled(true);
-    } else {
-        ui->radioRestoreBackup->setEnabled(false);
-    }
+    ui->radioRestoreBackup->setEnabled(system(cmd.toUtf8()) == 0);
     panelflag = true;
-
 }
 
 void defaultlook::setupPlasma()
@@ -1137,14 +1132,10 @@ void defaultlook::setupFluxbox()
     //slit autohide
     QString slitautohide = runCmd(QStringLiteral("grep screen0.slit.autoHide $HOME/.fluxbox/init")).output.section(QStringLiteral(":"),1,1).trimmed();
     if (verbose) qDebug() << "slit autohide" << slitautohide;
-    if (slitautohide == QLatin1String("true")){
-        ui->checkboxfluxSlitautohide->setChecked(true);
-    } else {
-        ui->checkboxfluxSlitautohide->setChecked(false);
-    }
+    ui->checkboxfluxSlitautohide->setChecked(slitautohide == QLatin1String("true"));
     ui->ApplyFluxboxResets->setDisabled(true);
-
 }
+
 void defaultlook::setupEtc()
 {
     QString home_path = QDir::homePath();
@@ -1243,37 +1234,21 @@ void defaultlook::setupEtc()
     }
 
     QFileInfo intelfile(QStringLiteral("/etc/X11/xorg.conf.d/20-intel.conf"));
-    if ( intelfile.exists()) {
-        ui->checkboxIntelDriver->setChecked(true);
-    }else {
-        ui->checkboxIntelDriver->setChecked(false);
-    }
+    ui->checkboxIntelDriver->setChecked(intelfile.exists());
 
     QFileInfo amdfile(QStringLiteral("/etc/X11/xorg.conf.d/20-amd.conf"));
-    if ( amdfile.exists()) {
-        ui->checkboxAMDtearfree->setChecked(true);
-    }else {
-        ui->checkboxAMDtearfree->setChecked(false);
-    }
+    ui->checkboxAMDtearfree->setChecked(amdfile.exists());
 
     QFileInfo radeonfile(QStringLiteral("/etc/X11/xorg.conf.d/20-radeon.conf"));
-    if ( radeonfile.exists()) {
-        ui->checkboxRadeontearfree->setChecked(true);
-    }else {
-        ui->checkboxRadeontearfree->setChecked(false);
-    }
+    ui->checkboxRadeontearfree->setChecked(radeonfile.exists());
 
     partcheck = runCmd(QStringLiteral("xinput |grep -i touchpad")).output;
-    if (!partcheck.isEmpty()){
+    if (!partcheck.isEmpty()) {
         ui->checkBoxlibinput->show();
     }
 
     QFileInfo libinputfile(QStringLiteral("/etc/X11/xorg.conf.d/30-touchpad.conf"));
-    if ( libinputfile.exists()) {
-        ui->checkBoxlibinput->setChecked(true);
-    }else {
-        ui->checkBoxlibinput->setChecked(false);
-    }
+    ui->checkBoxlibinput->setChecked(libinputfile.exists());
 }
 
 void defaultlook::setuptheme()
