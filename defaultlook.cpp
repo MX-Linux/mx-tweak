@@ -2165,7 +2165,7 @@ void defaultlook::on_checkboxNoEllipse_clicked()
 void defaultlook::savethemeundo()
 {
     QString home_path = QDir::homePath();
-    system("rm -f undo.txt");
+    QFile::remove(QStringLiteral("undo.txt"));
     QString undovalue;
     QStringListIterator changeIterator(panelIDs);
     QString undocommand;
