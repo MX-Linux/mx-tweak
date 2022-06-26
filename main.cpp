@@ -21,12 +21,13 @@
  * You should have received a copy of the GNU General Public License
  * along with mx-tweak.  If not, see <http://www.gnu.org/licenses/>.
  **********************************************************************/
-#include "defaultlook.h"
+
 #include <QApplication>
-#include <unistd.h>
-#include <QTranslator>
 #include <QLocale>
+#include <QTranslator>
+#include <unistd.h>
 #include "brightness_small.h"
+#include "defaultlook.h"
 
 int main(int argc, char *argv[])
 {
@@ -34,23 +35,23 @@ int main(int argc, char *argv[])
 
     QTranslator qtTran;
     qtTran.load(QStringLiteral("qt_") + QLocale::system().name());
-    a.installTranslator(&qtTran);
+    QApplication::installTranslator(&qtTran);
 
     QTranslator appTran;
     appTran.load(QStringLiteral("mx-tweak_") + QLocale::system().name(), QStringLiteral("/usr/share/mx-tweak/locale"));
-    a.installTranslator(&appTran);
+    QApplication::installTranslator(&appTran);
 
-    if (a.arguments().contains(QStringLiteral("--tray"))){
-        brightness_small fred(nullptr,a.arguments());
-        return a.exec();
+    if (QApplication::arguments().contains(QStringLiteral("--tray"))){
+        brightness_small fred(nullptr,QApplication::arguments());
+        return QApplication::exec();
         //    } else {
         //        if (system("echo $XDG_CURRENT_DESKTOP | grep -q XFCE") != 0){
         //            QMessageBox::information(0, QApplication::tr("MX Tweak"),
         //                                     QApplication::tr("This app is Xfce-only"));
         //            exit(0);
     }
-    defaultlook w(nullptr, a.arguments());
+    defaultlook w(nullptr, QApplication::arguments());
     w.show();
-    return a.exec();
+    return QApplication::exec();
 }
 

@@ -1,12 +1,14 @@
-#include "brightness_small.h"
-#include "ui_brightness_small.h"
 #include "QDebug"
-#include "QDir"
-#include "QSystemTrayIcon"
-#include "QMenu"
 #include "QDialog"
+#include "QDir"
 #include "QKeyEvent"
+#include "QMenu"
 #include "QScreen"
+#include "QSystemTrayIcon"
+
+#include "brightness_small.h"
+#include "cmd.h"
+#include "ui_brightness_small.h"
 
 brightness_small::brightness_small(QWidget *parent, const QStringList &args) :
     QMainWindow(parent),
@@ -17,7 +19,7 @@ brightness_small::brightness_small(QWidget *parent, const QStringList &args) :
 
     if ( check.toInt() >= 2) {
         qDebug() << "check is " << check;
-        exit(1);
+        exit(EXIT_FAILURE);
     }
     ui->setupUi(this);
     setWindowFlags(Qt::CustomizeWindowHint); // for the close, min and max buttons
@@ -48,20 +50,19 @@ brightness_small::brightness_small(QWidget *parent, const QStringList &args) :
     trayicon->setIcon(icon);
     trayicon->show();
 
-
     this->adjustSize();
 
     menu = new QMenu(this);
 
     if (system("echo $XDG_CURRENT_DESKTOP | grep -q XFCE") == 0) {
-            full = new QAction(QIcon::fromTheme(QStringLiteral("video-display")), tr("Display"), this);
-            connect(full, &QAction::triggered, this, &brightness_small::launchfulldisplaydialog);
-             menu->addAction(full);
-             menu->addSeparator();
-        }
-        quitAction = new QAction(QIcon::fromTheme(QStringLiteral("gtk-quit")), tr("&Quit"), this);
-        connect(quitAction, &QAction::triggered, qApp, &QGuiApplication::quit);
-        menu->addAction(quitAction);
+        full = new QAction(QIcon::fromTheme(QStringLiteral("video-display")), tr("Display"), this);
+        connect(full, &QAction::triggered, this, &brightness_small::launchfulldisplaydialog);
+        menu->addAction(full);
+        menu->addSeparator();
+    }
+    quitAction = new QAction(QIcon::fromTheme(QStringLiteral("gtk-quit")), tr("&Quit"), this);
+    connect(quitAction, &QAction::triggered, qApp, &QGuiApplication::quit);
+    menu->addAction(quitAction);
 
     connect(trayicon, &QSystemTrayIcon::messageClicked, this, &brightness_small::messageClicked);
     connect(trayicon, &QSystemTrayIcon::activated, this, &brightness_small::iconActivated);
@@ -94,20 +95,6 @@ void brightness_small::setPosition()
     if (pos.x() + this->size().width() > screen->availableVirtualGeometry().width())
         pos.setX(screen->availableVirtualGeometry().width() - this->size().width());
     this->move(pos);
-}
-// Util function for getting bash command output and error code
-Result3 brightness_small::runCmd(const QString &cmd)
-{
-    QEventLoop loop;
-    proc = new QProcess(this);
-    proc->setProcessChannelMode(QProcess::MergedChannels);
-    connect(proc, SIGNAL(finished(int)), &loop, SLOT(quit()));
-    proc->start(QStringLiteral("/bin/bash"), QStringList() << QStringLiteral("-c") << cmd);
-    loop.exec();
-    disconnect(proc, nullptr, nullptr, nullptr);
-    Result3 result = {proc->exitCode(), proc->readAll().trimmed()};
-    delete proc;
-    return result;
 }
 
 void brightness_small::messageClicked()
@@ -228,7 +215,6 @@ void brightness_small::saveBrightness()
     }
     //save config in file named after the display
     runCmd("echo 'xrandr --output " + ui->comboBoxDisplay->currentText() + " --brightness " + brightness + " --gamma " + g1 + ":" + g2 + ":" + g3 + "'>" + config_file_path + "/" + ui->comboBoxDisplay->currentText());
-
 }
 
 void brightness_small::on_comboBoxDisplay_currentIndexChanged(int  /*index*/)
@@ -259,7 +245,7 @@ void brightness_small::changeEvent(QEvent *event)
 {
     QWidget::changeEvent(event);
     if (event->type() == QEvent::ActivationChange) {
-        if(this->isActiveWindow()) {
+        if (this->isActiveWindow()) {
             qDebug() << "focusinEvent";
         } else {
             qDebug() << "focusOutEvent";

@@ -21,6 +21,7 @@ SOURCES += main.cpp\
     brightness_small.cpp
 
 HEADERS  += defaultlook.h \
+    cmd.h \
     xfwm_compositor_settings.h \
     window_buttons.h \
     theming_to_tweak.h \

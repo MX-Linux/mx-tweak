@@ -26,33 +26,42 @@
 #define DEFAULTLOOK_H
 
 #include <QDialog>
-#include <QMessageBox>
-#include <QProcess>
 #include <QFile>
 #include <QHash>
+#include <QMessageBox>
 
 namespace Ui {
 class defaultlook;
 }
 
-struct Result {
-    int exitCode;
-    QString output;
-};
+namespace IconSize {
+enum {Default, Small, Medium, Large, Larger, Largest};
+}
+
+namespace PanelIndex { // location combo index - 0=bottom, 1=left, 2=top, 3=right
+enum {Bottom, Left, Top, Right};
+}
+
+namespace PanelLocation { // location plasma settings - 4=bottom, 3 top, 5 left, 6 right
+enum {Top = 3, Bottom, Left, Right};
+}
+
+namespace Tab {
+enum {Panel, Theme, Compositor, Display, Config, Fluxbox, Plasma, Others};
+}
+
+namespace ValueSize { // kde value starts from 1 vs. combobox index 1=0,2=1,3=2,4=3,5=4,6=5
+enum {Default = 1, Small, Medium, Large, Larger, Largest};
+}
 
 class defaultlook : public QDialog
 {
     Q_OBJECT
 
-protected:
-    QProcess *proc{};
-    QTimer *timer{};
-
 public:
     explicit defaultlook(QWidget *parent = 0, const QStringList &args = QStringList());
     ~defaultlook();
-    Result runCmd(const QString &cmd);
-    QString getVersion(const QString &name);
+    static QString getVersion(const QString &name);
     QString version;
     QString output;
     QStringList panelIDs;
@@ -100,10 +109,10 @@ public:
     void setupEtc();
     void setupFluxbox();
     void setupPlasma();
-    QString readPlasmaPanelConfig(const QString &Key);
-    QString readTaskmanagerConfig(const QString &Key);
-    void writePlasmaPanelConfig(const QString &key, const QString &value);
-    void writeTaskmanagerConfig(const QString &key, const QString &value);
+    QString readPlasmaPanelConfig(const QString &Key) const;
+    QString readTaskmanagerConfig(const QString &Key) const;
+    void writePlasmaPanelConfig(const QString &key, const QString &value) const;
+    void writeTaskmanagerConfig(const QString &key, const QString &value) const;
     void setupDisplay();
     void setupConfigoptions();
     void setupComboTheme();
@@ -112,17 +121,17 @@ public:
     void fliptovertical();
     void whichpanel();
     void message() const;
-    bool checkXFCE();
-    bool checkFluxbox();
+    bool checkXFCE() const;
+    bool checkFluxbox() const;
     static bool checklightdm();
-    bool checkPlasma();
+    bool checkPlasma() const;
     void CheckComptonRunning();
     void setupCompositor();
     void CheckAptNotifierRunning() const;
 
-    void backupPanel();
-    void restoreDefaultPanel();
-    void restoreBackup();
+    static void backupPanel();
+    static void restoreDefaultPanel();
+    static void restoreBackup();
 
     void top_or_bottom();
     void left_or_right();
@@ -139,180 +148,94 @@ public:
     void setgtkscaling();
     void setupresolutions();
     void setresolution();
-    void setrefreshrate(const QString &display, const QString &resolution, const QString &activeprofile);
+    void setrefreshrate(const QString &display, const QString &resolution, const QString &activeprofile) const;
     void setupGamma();
 
     void setmissingxfconfvariables(const QString &activeprofile, const QString &resolution);
-    void fluxboxchangeinitvariable(const QString &initline, const QString &value);
-    void fluxboxchangedock();
-
-public slots:
-
-
-
+    void fluxboxchangeinitvariable(const QString &initline, const QString &value) const;
+    void fluxboxchangedock() const;
 
 private slots:
-    void on_buttonApply_clicked();
-
     static void on_buttonCancel_clicked();
-
-    void on_buttonAbout_clicked();
-
-    static void on_buttonHelp_clicked();
-
-    void on_radioDefaultPanel_clicked();
-
-    void on_radioBackupPanel_clicked();
-
-    void on_radioRestoreBackup_clicked();
-
-    void on_checkHorz_clicked();
-
-    void on_checkVert_clicked();
-
-    void on_checkFirefox_clicked();
-
-    void on_checkHexchat_clicked();
-
-    void on_toolButtonXFCEpanelSettings_clicked();
-
-    void on_toolButtonXFCEAppearance_clicked();
-
-    void on_toolButtonXFCEWMsettings_clicked();
-
-    void on_comboboxHorzPostition_currentIndexChanged(const QString &arg1);
-
-    void on_buttonThemeApply_clicked();
-
-    void on_comboTheme_activated(const QString &arg1);
-
-    void on_ButtonApplyEtc_clicked();
-
-    void on_checkBoxSingleClick_clicked();
-
-    void on_checkBoxThunarSingleClick_clicked();
-
-    void on_comboboxVertpostition_currentIndexChanged(const QString &arg1);
-
-    void on_buttonThemeUndo_clicked();
-
-    void on_buttonConfigureCompton_clicked();
-
-    void on_buttonCompositorApply_clicked();
-
-    void on_buttonEditComptonConf_clicked();
-
-    void on_comboBoxCompositor_currentIndexChanged(const QString &arg1);
-
     static void on_buttonConfigureXfwm_clicked();
-
-    void on_checkBoxShowAllWorkspaces_clicked();
-
-    void on_checkBoxMountInternalDrivesNonRoot_clicked();
-
-    void on_checkboxNoEllipse_clicked();
-
-    void on_pushButtonPreview_clicked();
-
-    void on_checkBoxHibernate_clicked();
-
-    void on_ButtonApplyMiscDefualts_clicked();
-
-    void on_checkBoxLightdmReset_clicked();
-
-    void on_checkBoxThunarCAReset_clicked();
-
-    void on_checkboxIntelDriver_clicked();
-
-    static void on_pushButtontasklist_clicked();
-
-    void on_checkboxAMDtearfree_clicked();
-
-    void on_checkboxRadeontearfree_clicked();
-
-    void on_pushButtonSettingsToThemeSet_clicked();
-
-    void on_pushButtonRemoveUserThemeSet_clicked();
-
-    void on_comboBoxvblank_activated(const QString &arg1);
-
-    void on_horizontalSliderBrightness_valueChanged(int value);
-
-    void on_buttonApplyDisplayScaling_clicked();
-
-    void on_comboBoxDisplay_currentIndexChanged(int index);
-
-    void saveBrightness();
-
-    void on_buttonSaveBrightness_clicked();
-
-
-    void on_buttonGTKscaling_clicked();
-
-    void on_horizsliderhardwarebacklight_actionTriggered(int action);
-
-
-    void on_buttonapplyresolution_clicked();
-
-    void on_radioSudoUser_clicked();
-    void on_radioSudoRoot_clicked();
-
-    void on_checkBoxSandbox_clicked();
-
-    void on_ApplyFluxboxResets_clicked();
-
-    void on_checkboxfluxresetdock_clicked();
-
-    void on_checkboxfluxresetmenu_clicked();
-
-    void on_checkboxfluxreseteverything_clicked();
-
-    void on_combofluxtoolbarlocatoin_currentIndexChanged(int index);
-
-    void on_checkboxfluxtoolbarautohide_clicked();
-
-    void on_spinBoxFluxToolbarWidth_valueChanged(int arg1);
-
-    void on_spinBoxFluxToolbarHeight_valueChanged(int arg1);
-
-    void on_combofluxslitlocation_currentIndexChanged(int index);
-
-    void on_checkboxfluxSlitautohide_clicked();
-
-
-    void on_comboBoxfluxIcons_currentIndexChanged(int index);
-
-    void on_comboBoxfluxcaptions_currentIndexChanged(int index);
-
-    void on_comboPlasmaPanelLocation_currentIndexChanged(int index);
-
-    void on_checkBoxPlasmaSingleClick_clicked();
-
-    void on_checkBoxPlasmaShowAllWorkspaces_clicked();
-
-    void on_checkboxplasmaresetdock_clicked();
-
-    void on_ButtonApplyPlasma_clicked();
-
-    void on_comboBoxPlasmaSystrayIcons_currentIndexChanged(int index);
-
-    void on_checkBoxMenuMigrate_clicked();
-
-    void on_checkBoxDesktopZoom_clicked();
-
-    void on_listWidgetTheme_currentTextChanged(const QString &currentText) const;
-
-    void on_listWidgetWMtheme_currentTextChanged(const QString &currentText) const;
-
-    void on_listWidgeticons_currentTextChanged(const QString &currentText) const;
-
-    void on_checkBoxlibinput_clicked();
-
-    void on_tabWidget_currentChanged(int index);
-
-    void on_checkBoxCSD_clicked();
-
+    static void on_buttonHelp_clicked();
     static void on_pushButtonDocklikeSetttings_clicked();
+    static void on_pushButtontasklist_clicked();
+    void on_ApplyFluxboxResets_clicked();
+    void on_ButtonApplyEtc_clicked();
+    void on_ButtonApplyMiscDefualts_clicked();
+    void on_ButtonApplyPlasma_clicked();
+    void on_buttonAbout_clicked();
+    void on_buttonApplyDisplayScaling_clicked();
+    void on_buttonApply_clicked();
+    void on_buttonCompositorApply_clicked();
+    void on_buttonConfigureCompton_clicked();
+    static void on_buttonEditComptonConf_clicked();
+    void on_buttonGTKscaling_clicked();
+    void on_buttonSaveBrightness_clicked();
+    void on_buttonThemeApply_clicked();
+    void on_buttonThemeUndo_clicked();
+    void on_buttonapplyresolution_clicked();
+    void on_checkBoxCSD_clicked();
+    void on_checkBoxDesktopZoom_clicked();
+    void on_checkBoxHibernate_clicked();
+    void on_checkBoxLightdmReset_clicked();
+    void on_checkBoxMenuMigrate_clicked();
+    void on_checkBoxMountInternalDrivesNonRoot_clicked();
+    void on_checkBoxPlasmaShowAllWorkspaces_clicked();
+    void on_checkBoxPlasmaSingleClick_clicked();
+    void on_checkBoxSandbox_clicked();
+    void on_checkBoxShowAllWorkspaces_clicked();
+    void on_checkBoxSingleClick_clicked();
+    void on_checkBoxThunarCAReset_clicked();
+    void on_checkBoxThunarSingleClick_clicked();
+    void on_checkBoxlibinput_clicked();
+    void on_checkFirefox_clicked();
+    void on_checkHexchat_clicked();
+    void on_checkHorz_clicked();
+    void on_checkVert_clicked();
+    void on_checkboxAMDtearfree_clicked();
+    void on_checkboxIntelDriver_clicked();
+    void on_checkboxNoEllipse_clicked();
+    void on_checkboxRadeontearfree_clicked();
+    void on_checkboxfluxSlitautohide_clicked();
+    void on_checkboxfluxresetdock_clicked();
+    void on_checkboxfluxreseteverything_clicked();
+    void on_checkboxfluxresetmenu_clicked();
+    void on_checkboxfluxtoolbarautohide_clicked();
+    void on_checkboxplasmaresetdock_clicked();
+    void on_comboBoxCompositor_currentIndexChanged(const QString &arg1);
+    void on_comboBoxDisplay_currentIndexChanged(int index);
+    void on_comboBoxPlasmaSystrayIcons_currentIndexChanged(int index);
+    void on_comboBoxfluxIcons_currentIndexChanged(int index);
+    void on_comboBoxfluxcaptions_currentIndexChanged(int index);
+    void on_comboBoxvblank_activated(const QString &arg1);
+    void on_comboPlasmaPanelLocation_currentIndexChanged(int index);
+    void on_comboTheme_activated(const QString &arg1);
+    void on_comboboxHorzPostition_currentIndexChanged(const QString &arg1);
+    void on_comboboxVertpostition_currentIndexChanged(const QString &arg1);
+    void on_combofluxslitlocation_currentIndexChanged(int index);
+    void on_combofluxtoolbarlocatoin_currentIndexChanged(int index);
+    void on_horizontalSliderBrightness_valueChanged(int value);
+    void on_horizsliderhardwarebacklight_actionTriggered(int action);
+    void on_listWidgetTheme_currentTextChanged(const QString &currentText) const;
+    void on_listWidgetWMtheme_currentTextChanged(const QString &currentText) const;
+    void on_listWidgeticons_currentTextChanged(const QString &currentText) const;
+    void on_pushButtonPreview_clicked();
+    void on_pushButtonRemoveUserThemeSet_clicked();
+    void on_pushButtonSettingsToThemeSet_clicked();
+    void on_radioBackupPanel_clicked();
+    void on_radioDefaultPanel_clicked();
+    void on_radioRestoreBackup_clicked();
+    void on_radioSudoRoot_clicked();
+    void on_radioSudoUser_clicked();
+    void on_spinBoxFluxToolbarHeight_valueChanged(int arg1);
+    void on_spinBoxFluxToolbarWidth_valueChanged(int arg1);
+    void on_tabWidget_currentChanged(int index);
+    void on_toolButtonXFCEAppearance_clicked();
+    void on_toolButtonXFCEWMsettings_clicked();
+    void on_toolButtonXFCEpanelSettings_clicked();
+    void saveBrightness();
 
 private:
     Ui::defaultlook *ui;

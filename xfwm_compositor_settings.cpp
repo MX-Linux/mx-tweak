@@ -1,6 +1,7 @@
-#include "xfwm_compositor_settings.h"
-#include "ui_xfwm_compositor_settings.h"
+#include "cmd.h"
 #include "defaultlook.h"
+#include "ui_xfwm_compositor_settings.h"
+#include "xfwm_compositor_settings.h"
 
 xfwm_compositor_settings::xfwm_compositor_settings(QWidget *parent) :
     QDialog(parent),
@@ -16,24 +17,7 @@ xfwm_compositor_settings::~xfwm_compositor_settings()
     delete ui;
 }
 
-// Util function for getting bash command output and error code
-result2 xfwm_compositor_settings::runCmd(const QString &cmd)
-{
-    QEventLoop loop;
-    proc = new QProcess(this);
-    proc->setProcessChannelMode(QProcess::MergedChannels);
-    connect(proc, SIGNAL(finished(int)), &loop, SLOT(quit()));
-    proc->start(QStringLiteral("/bin/bash"), QStringList() << QStringLiteral("-c") << cmd);
-    loop.exec();
-    disconnect(proc, nullptr, nullptr, nullptr);
-    result2 result2 = {proc->exitCode(), proc->readAll().trimmed()};
-    delete proc;
-    return result2;
-}
-
 //setup some initial values
-
-
 void xfwm_compositor_settings::setup()
 {
     this->setWindowTitle(tr("Xfwm Compositor Settings"));
@@ -102,7 +86,6 @@ void xfwm_compositor_settings::setup()
     value = runCmd(QStringLiteral("xfconf-query -c xfwm4 -p /general/popup_opacity")).output;
     ui->horizontalSliderPopup->setValue(value.toInt());
     ui->horizontalSliderPopup->setToolTip(value);
-
 }
 
 void xfwm_compositor_settings::on_checkBoxRedirect_clicked()
@@ -127,7 +110,6 @@ void xfwm_compositor_settings::on_checkBoxVsync_clicked()
     }
     system(cmd.toUtf8());
 }
-
 
 void xfwm_compositor_settings::on_checkBoxPreview_clicked()
 {
