@@ -4,13 +4,13 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
-
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+QT       += core gui widgets
+CONFIG   += c++1z
 
 TARGET = mx-tweak
 TEMPLATE = app
 
+DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += main.cpp\
         defaultlook.cpp \
