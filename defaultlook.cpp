@@ -111,16 +111,13 @@ void defaultlook::setup()
         ui->toolButtonXFCEAppearance->hide();
         ui->toolButtonXFCEWMsettings->hide();
         ui->toolButtonXFCEpanelSettings->hide();
-        ui->tabWidget->setCurrentIndex(5);
-        ui->tabWidget->removeTab(4);
-        ui->tabWidget->removeTab(3);
-        ui->tabWidget->removeTab(2);
-        ui->tabWidget->removeTab(1);
-        ui->tabWidget->removeTab(0);
+        ui->tabWidget->setCurrentIndex(Tab::Fluxbox);
+        for (int i = 4; i >= 0; --i)
+            ui->tabWidget->removeTab(i);
     }
 
     //setup plasma
-    else if (checkPlasma()){
+    else if (checkPlasma()) {
         ui->label_4->hide();
         ui->label_5->hide();
         ui->label_6->hide();
@@ -128,13 +125,9 @@ void defaultlook::setup()
         ui->toolButtonXFCEAppearance->hide();
         ui->toolButtonXFCEWMsettings->hide();
         ui->toolButtonXFCEpanelSettings->hide();
-        ui->tabWidget->setCurrentIndex(6);
-        ui->tabWidget->removeTab(5);
-        ui->tabWidget->removeTab(4);
-        ui->tabWidget->removeTab(3);
-        ui->tabWidget->removeTab(2);
-        ui->tabWidget->removeTab(1);
-        ui->tabWidget->removeTab(0);
+        ui->tabWidget->setCurrentIndex(Tab::Plasma);
+        for (int i = 5; i >= 0; --i)
+            ui->tabWidget->removeTab(i);
         setupPlasma();
     }
 
@@ -147,14 +140,9 @@ void defaultlook::setup()
         ui->toolButtonXFCEAppearance->hide();
         ui->toolButtonXFCEWMsettings->hide();
         ui->toolButtonXFCEpanelSettings->hide();
-        ui->tabWidget->setCurrentIndex(7);
-        ui->tabWidget->removeTab(6);
-        ui->tabWidget->removeTab(5);
-        ui->tabWidget->removeTab(4);
-        ui->tabWidget->removeTab(3);
-        ui->tabWidget->removeTab(2);
-        ui->tabWidget->removeTab(1);
-        ui->tabWidget->removeTab(0);
+        ui->tabWidget->setCurrentIndex(Tab::Others);
+        for (int i = 6; i >= 0; --i)
+            ui->tabWidget->removeTab(i);
     }
 
     //setup other tab;
@@ -1342,7 +1330,7 @@ void defaultlook::setupCompositor()
 
     QString cmd = QStringLiteral("ps -aux |grep -v grep |grep -q compiz");
     if (system(cmd.toUtf8()) == 0) {
-        ui->tabWidget->removeTab(2);
+        ui->tabWidget->removeTab(Tab::Compositor);
     } else {
         ui->buttonCompositorApply->setEnabled(false);
         if (ui->buttonCompositorApply->icon().isNull()) {
@@ -2631,18 +2619,15 @@ void defaultlook::on_pushButtonSettingsToThemeSet_clicked()
     QVector<double> backgroundColor;
     QString backgroundImage;
     backgroundColor.reserve(4);
-    if(backgroundStyle == 1)
-    {
+    if (backgroundStyle == 1) {
         QStringList lines = runCmd("LANG=C xfconf-query -c xfce4-panel -p /panels/" + panel + "/background-rgba").output.split('\n');
         lines.removeAt(0);
         lines.removeAt(0);
-        for(int i = 0; i < 4; i++)
+        for (int i = 0; i < 4; i++)
         {
             backgroundColor << lines.at(i).toDouble();
         }
-    }
-    else if(backgroundStyle == 2)
-    {
+    } else if (backgroundStyle == 2) {
         backgroundImage = runCmd("xfconf-query -c /panels/" + panel + "/background-image").output;
     }
 
@@ -3195,10 +3180,10 @@ void defaultlook::on_checkBoxlibinput_clicked()
 
 }
 
-void defaultlook::on_tabWidget_currentChanged(int index)
+void defaultlook::on_tabWidget_currentChanged(int /*index*/)
 {
-    if (!displaysetupflag){
-        if (ui->tabWidget->tabText(index) == tr("Display")){
+    if (!displaysetupflag) {
+        if (ui->tabWidget->currentIndex() == Tab::Display) {
             setupDisplay();
             displaysetupflag = true;
         }
