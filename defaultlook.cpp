@@ -77,8 +77,7 @@ void defaultlook::setup()
     if (!checklightdm()) {
         ui->checkBoxLightdmReset->hide();
     }
-    bool testbool = checkXFCE();
-    if (verbose) qDebug() << "test bool is " << testbool;
+
     if (checkXFCE()) {
         whichpanel();
         message_flag = false;
