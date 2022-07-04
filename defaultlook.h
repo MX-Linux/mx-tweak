@@ -104,6 +104,7 @@ public:
     void setupuiselections();
     void setuppanel();
     void setuptheme();
+    void setupthemechoosers();
     void populatethemelists(const QString &value);
     static void settheme(const QString &type, const QString &theme);
     void setupEtc();
