@@ -646,7 +646,7 @@ void defaultlook::message() const
 bool defaultlook::checkXFCE() const
 {
     QString test = runCmd(QStringLiteral("echo $XDG_CURRENT_DESKTOP")).output;
-    if (verbose) qDebug() << test;
+    if (verbose) qDebug() << "current desktop test is " << test;
     return (test == QLatin1String("XFCE"));
 }
 
@@ -1140,7 +1140,7 @@ void defaultlook::setupEtc()
 {
     QString home_path = QDir::homePath();
     QString DESKTOP = runCmd(QStringLiteral("echo $XDG_SESSION_DESKTOP")).output;
-    qDebug() << "setupetc nocsd desktop is:" << DESKTOP;
+    if (verbose) qDebug() << "setupetc nocsd desktop is:" << DESKTOP;
 
     ui->checkBoxLightdmReset->setChecked(false);
     QString test = runCmd(QStringLiteral("pgrep lightdm")).output;
@@ -1197,12 +1197,12 @@ void defaultlook::setupEtc()
 
     //setup NOCSD GTK3 option
     if (!QFileInfo::exists(QStringLiteral("/usr/bin/gtk3-nocsd"))) {
-        qDebug() << "gtk3-nocsd not found";
+        if (verbose) qDebug() << "gtk3-nocsd not found";
         ui->checkBoxCSD->hide();
     } else {
-        qDebug() << "gtk3-nocsd found";
+        if (verbose) qDebug() << "gtk3-nocsd found";
     }
-    qDebug() << "home path nocsd is" << home_path + "/.config/MX-Linux/nocsd/" + DESKTOP;
+    if (verbose) qDebug() << "home path nocsd is" << home_path + "/.config/MX-Linux/nocsd/" + DESKTOP;
     if (QFileInfo::exists(home_path + "/.config/MX-Linux/nocsd/" + DESKTOP)) {
         ui->checkBoxCSD->setChecked(false);
     } else {
@@ -2013,8 +2013,8 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     QString user_name_space_override_option;
     udisks_option.clear();
 
-    qDebug() << "applyetc DESKTOP is " << DESKTOP;
-    qDebug() << "home path applyetc is " << home_path + "/.config/MX-Linux/nocsd/" + DESKTOP;
+    if (verbose) qDebug() << "applyetc DESKTOP is " << DESKTOP;
+    if (verbose) qDebug() << "home path applyetc is " << home_path + "/.config/MX-Linux/nocsd/" + DESKTOP;
     if (ui->checkBoxCSD->isChecked()) {
         if ( QFileInfo::exists(home_path + "/.config/MX-Linux/nocsd/" + DESKTOP)) {
             runCmd("rm " + home_path + "/.config/MX-Linux/nocsd/" + DESKTOP);
@@ -2022,11 +2022,11 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     } else {
         int test = runCmd("mkdir -p " + home_path + "/.config/MX-Linux/nocsd/").exitCode;
         if ( test != 0 ) {
-            qDebug() << "could not make directory";
+            if (verbose) qDebug() << "could not make directory";
         }
         test = runCmd("touch " + home_path + "/.config/MX-Linux/nocsd/" + DESKTOP ).exitCode;
         if ( test != 0 ) {
-            qDebug() << "could not write nocsd desktop file";
+            if (verbose) qDebug() << "could not write nocsd desktop file";
         }
     }
 
@@ -3056,6 +3056,7 @@ void defaultlook::on_comboBoxPlasmaSystrayIcons_currentIndexChanged(int  /*index
 
 void defaultlook::populatethemelists(const QString &value)
 {
+    themeflag = false;
     QString themes;
     QStringList themelist;
     if ( value == QLatin1String("gtk-3.0") || value == QLatin1String("xfwm4")) {
@@ -3074,8 +3075,9 @@ void defaultlook::populatethemelists(const QString &value)
     themelist = themes.split(QStringLiteral("\n"));
     themelist.removeDuplicates();
     themelist.removeAll(QLatin1String(""));
-    themelist.sort();
+    themelist.sort(Qt::CaseInsensitive);
     if ( value == QLatin1String("gtk-3.0") ) {
+        ui->listWidgetTheme->clear();
         ui->listWidgetTheme->addItems(themelist);
         //set current
         QString current = runCmd(QStringLiteral("xfconf-query -c xsettings -p /Net/ThemeName")).output;
@@ -3083,6 +3085,8 @@ void defaultlook::populatethemelists(const QString &value)
         ui->listWidgetTheme->setCurrentRow(themelist.indexOf(current));
     }
     if ( value == QLatin1String("xfwm4")) {
+
+        ui->listWidgetWMtheme->clear();
         ui->listWidgetWMtheme->addItems(themelist);
         QString current = runCmd(QStringLiteral("xfconf-query -c xfwm4 -p /general/theme")).output;
         ui->listWidgetWMtheme->setCurrentRow(themelist.indexOf(current));
@@ -3102,6 +3106,7 @@ void defaultlook::populatethemelists(const QString &value)
         themelist.removeAll(QStringLiteral("default.kde4"));
         themelist.removeAll(QStringLiteral("default"));
         themelist.removeAll(QStringLiteral("hicolor"));
+        ui->listWidgeticons->clear();
         ui->listWidgeticons->addItems(themelist);
         QString current = runCmd(QStringLiteral("xfconf-query -c xsettings -p /Net/IconThemeName")).output;
         ui->listWidgeticons->setCurrentRow(themelist.indexOf(current));

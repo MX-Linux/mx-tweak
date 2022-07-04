@@ -1,3 +1,11 @@
+mx-tweak (22.07.01mx21) mx; urgency=medium
+
+  * fix building of theme lists when theme set chooser is used
+  * sort alphabetical even if theme name is lowercase
+  * many style changes and optimizations (thanks adrian) 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 03 Jul 2022 22:24:38 -0400
+
 mx-tweak (22.01.02mx21) mx; urgency=medium
 
   * handle spaces in theme file names 
