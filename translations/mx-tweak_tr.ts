@@ -497,7 +497,7 @@
     <message>
         <location filename="defaultlook.ui" line="1118"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Varsa, mevcut fluxbox menüsüne yeni varsayılan menü öğeleri ekleyin.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1121"/>
@@ -640,7 +640,7 @@
     <message>
         <location filename="defaultlook.ui" line="1604"/>
         <source>Use libinput driver for touchpad instead of synaptics touchpad driver (requires restart)</source>
-        <translation type="unfinished"/>
+        <translation>Dokunmatik yüzey için synaptics dokunmatik yüzey sürücüsü yerine libinput sürücüsünü kullanın (yeniden başlatma gerektirir)</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1628"/>
@@ -665,7 +665,7 @@
     <message>
         <location filename="defaultlook.ui" line="1656"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
-        <translation type="unfinished"/>
+        <translation>Onları destekleyen GTK3 uygulamalarında İstemci Tarafı Dekorasyonlarını (CSD) kullanın (oturumun yeniden başlatılmasını gerektirir)</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1725"/>

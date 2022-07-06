@@ -413,7 +413,7 @@
     <message>
         <location filename="defaultlook.ui" line="944"/>
         <source>Enable Desktop Zoom </source>
-        <translation>Activar Ampliação na Área de Trabalho</translation>
+        <translation>Activar Ampliação na Área de Trabalho </translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="951"/>
@@ -429,12 +429,12 @@
     <message>
         <location filename="defaultlook.ui" line="965"/>
         <source>Enable hibernate on Log Out menu </source>
-        <translation>Activar &apos;Hibernar&apos; no menu Sair</translation>
+        <translation>Activar &apos;Hibernar&apos; no menu Sair </translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="972"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
-        <translation>nota: para o sistema poder hibernar, a partição swap tem que ser &gt;= RAM instalada</translation>
+        <translation>                   nota: para o sistema poder hibernar, a partição swap tem que ser &gt;= RAM</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1012"/>
@@ -635,7 +635,7 @@
     <message>
         <location filename="defaultlook.ui" line="1597"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
-        <translation>Restabelecer o tema pré-definido do écrã de entrada (LightDM) </translation>
+        <translation>Restabelecer o tema pré-definido do écrã de entrada (LightDM)</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1604"/>

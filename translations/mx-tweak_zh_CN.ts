@@ -439,7 +439,7 @@
     <message>
         <location filename="defaultlook.ui" line="1012"/>
         <source>Fluxbox</source>
-        <translation type="unfinished"/>
+        <translation>Fluxbox</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1020"/>

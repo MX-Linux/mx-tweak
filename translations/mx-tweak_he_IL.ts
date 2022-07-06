@@ -281,7 +281,7 @@
     <message>
         <location filename="defaultlook.ui" line="631"/>
         <source>auto</source>
-        <translation type="unfinished"/>
+        <translation>אוטומטי</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="636"/>
@@ -296,7 +296,7 @@
     <message>
         <location filename="defaultlook.ui" line="646"/>
         <source>off</source>
-        <translation type="unfinished"/>
+        <translation>כבוי</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="667"/>
@@ -590,7 +590,7 @@
     <message>
         <location filename="defaultlook.ui" line="1480"/>
         <source>Reset KDE/Plasma defaults</source>
-        <translation type="unfinished"/>
+        <translation>שחזור לברירת המחדל של KDE/‏Plasma</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1520"/>
@@ -705,7 +705,7 @@
     <message>
         <location filename="defaultlook.cpp" line="659"/>
         <source>Version: </source>
-        <translation>גרסה:</translation>
+        <translation>גירסה:</translation>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="660"/>
