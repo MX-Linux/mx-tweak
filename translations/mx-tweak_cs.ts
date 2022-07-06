@@ -4,7 +4,7 @@
     <message>
         <location filename="brightness_small.ui" line="14"/>
         <source>MainWindow</source>
-        <translation type="unfinished"/>
+        <translation>Hlavní okno</translation>
     </message>
     <message>
         <location filename="brightness_small.ui" line="39"/>
@@ -14,7 +14,7 @@
     <message>
         <location filename="brightness_small.ui" line="59"/>
         <source>Software (xrandr) Brightness</source>
-        <translation type="unfinished"/>
+        <translation>Jas (xrandr software)</translation>
     </message>
     <message>
         <location filename="brightness_small.ui" line="66"/>
@@ -25,27 +25,27 @@
     <message>
         <location filename="brightness_small.ui" line="80"/>
         <source>Hardware Backlight</source>
-        <translation type="unfinished"/>
+        <translation>Jas zařízení</translation>
     </message>
     <message>
         <location filename="brightness_small.ui" line="94"/>
         <source>&gt;&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&gt;&gt;</translation>
     </message>
     <message>
         <location filename="brightness_small.cpp" line="30"/>
         <source>MX-Tweak</source>
-        <translation type="unfinished"/>
+        <translation>MX-Vyladění</translation>
     </message>
     <message>
         <location filename="brightness_small.cpp" line="56"/>
         <source>Display</source>
-        <translation type="unfinished"/>
+        <translation>Monitor</translation>
     </message>
     <message>
         <location filename="brightness_small.cpp" line="61"/>
         <source>&amp;Quit</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Konec</translation>
     </message>
 </context>
 <context>
@@ -190,7 +190,7 @@
     <message>
         <location filename="defaultlook.ui" line="364"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ikony&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="400"/>
@@ -215,17 +215,17 @@
     <message>
         <location filename="defaultlook.ui" line="424"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Manager&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Správce oken&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="431"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Themes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Motivy&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="438"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Aplikace&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="458"/>
@@ -337,32 +337,32 @@
         <location filename="defaultlook.ui" line="716"/>
         <location filename="defaultlook.cpp" line="3356"/>
         <source>Display</source>
-        <translation type="unfinished"/>
+        <translation>Monitor</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="724"/>
         <source>Hardware Backlight</source>
-        <translation type="unfinished"/>
+        <translation>Hardwarové podsvícení</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="731"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Display Tweaks&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Vyladění Monitoru&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="758"/>
         <source>Choose Display for xrandr tweaks</source>
-        <translation type="unfinished"/>
+        <translation>Vyberte monitor pro ladění pomocí xrandr</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="768"/>
         <source>Resolution</source>
-        <translation type="unfinished"/>
+        <translation>Rozlišení</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="775"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Saving is per display&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ukládání pro každý monitor zvášť&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="778"/>
@@ -372,7 +372,7 @@
     <message>
         <location filename="defaultlook.ui" line="785"/>
         <source>Software (xrandr) Brightness</source>
-        <translation type="unfinished"/>
+        <translation>Jas (xrandr software)</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="792"/>
@@ -383,12 +383,12 @@
     <message>
         <location filename="defaultlook.ui" line="799"/>
         <source>GTK scaling</source>
-        <translation type="unfinished"/>
+        <translation>GTK Zvětšení </translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="819"/>
         <source>xrandr Scaling</source>
-        <translation type="unfinished"/>
+        <translation>xrandr Zvětšení</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="915"/>
@@ -398,7 +398,7 @@
     <message>
         <location filename="defaultlook.ui" line="923"/>
         <source>Reset Thunar custom right-click actions to system defaults</source>
-        <translation>Obnovit uživatelské akce pravého tlačítka myši v Thunar do výchozího nastavení</translation>
+        <translation>Obnovit uživatelské akce pravého tlačítka myši Správce souborů Thunar do výchozího nastavení</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="930"/>
@@ -408,18 +408,18 @@
     <message>
         <location filename="defaultlook.ui" line="937"/>
         <source>Enable single-click in Thunar File Manager</source>
-        <translation>Povolit spouštění jedním kliknutím v Thunar správci souborů</translation>
+        <translation>Povolit spouštění jedním kliknutím v Správci souborů Thunar</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="944"/>
         <source>Enable Desktop Zoom </source>
-        <translation type="unfinished"/>
+        <translation>Povolit přiblížení Plochy</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="951"/>
         <location filename="defaultlook.ui" line="1466"/>
         <source>Show windows from all workspaces in panel</source>
-        <translation>Zobrazit v panelu okna všech pracovních ploch</translation>
+        <translation>V panelu zobrazit okna ze všech pracovních ploch</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="958"/>
@@ -429,12 +429,12 @@
     <message>
         <location filename="defaultlook.ui" line="965"/>
         <source>Enable hibernate on Log Out menu </source>
-        <translation>Povolit hibernaci v menu odhlášení</translation>
+        <translation>Zapnout Hibernaci v menu odhlášení</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="972"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
-        <translation>                   poznámka: pro hibernaci je potřeba swap &gt;= RAM</translation>
+        <translation>                   poznámka: pro hibernaci je potřeba aby swap ≥ RAM</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1012"/>
@@ -445,107 +445,107 @@
         <location filename="defaultlook.ui" line="1020"/>
         <location filename="defaultlook.ui" line="1473"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Obnovit výchozí nastavení&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1027"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Desktop Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ikony na Ploše&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1034"/>
         <source>Reset DefaultDock</source>
-        <translation type="unfinished"/>
+        <translation>Obnovit nastavení Docku</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1041"/>
         <source>Toggle desktop icons</source>
-        <translation type="unfinished"/>
+        <translation>Zapnout/vypnout Ikony na Ploše</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1049"/>
         <location filename="defaultlook.ui" line="1080"/>
         <source>On</source>
-        <translation type="unfinished"/>
+        <translation>On</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1054"/>
         <location filename="defaultlook.ui" line="1085"/>
         <source>Off</source>
-        <translation type="unfinished"/>
+        <translation>Off</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1062"/>
         <source>Reset Fluxbox Menu</source>
-        <translation type="unfinished"/>
+        <translation>Obnovit Menu Fluxbox</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1069"/>
         <source>Toggle icon captions</source>
-        <translation type="unfinished"/>
+        <translation>Zapout/vypnout popisky Ikon</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1090"/>
         <source>On Hover</source>
-        <translation type="unfinished"/>
+        <translation>Vznášející se</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1111"/>
         <source>Reset ALL mx-fluxbox settings</source>
-        <translation type="unfinished"/>
+        <translation>Obnovit VŠECHNA nastavení pro mx-fluxbox</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1118"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Do aktuálního menu fluxbox přidat nové předvolené položky, ak nějaké jsou.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1121"/>
         <source>Upgrade existing menu entries</source>
-        <translation type="unfinished"/>
+        <translation>Zaktualizovat již existující položky v menu</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1128"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Nastavení Panelu&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1135"/>
         <location filename="defaultlook.ui" line="1243"/>
         <location filename="defaultlook.ui" line="1355"/>
         <source>Placement</source>
-        <translation type="unfinished"/>
+        <translation>Umístění</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1209"/>
         <source>Width</source>
-        <translation type="unfinished"/>
+        <translation>Šířka</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1219"/>
         <location filename="defaultlook.ui" line="1317"/>
         <source>Autohide</source>
-        <translation type="unfinished"/>
+        <translation>Automatické skrývání</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1226"/>
         <source>Height</source>
-        <translation type="unfinished"/>
+        <translation>Výška</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1236"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Nastavení Docku&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1334"/>
         <source>Plasma</source>
-        <translation type="unfinished"/>
+        <translation>Plasma</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1389"/>
         <source>Systray Icon Size</source>
-        <translation type="unfinished"/>
+        <translation>Velikost ikon v oznamovací oblasti</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1400"/>
@@ -555,42 +555,42 @@
     <message>
         <location filename="defaultlook.ui" line="1405"/>
         <source>Small</source>
-        <translation type="unfinished"/>
+        <translation>Malé</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1410"/>
         <source>Medium</source>
-        <translation type="unfinished"/>
+        <translation>Střední</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1415"/>
         <source>Large</source>
-        <translation type="unfinished"/>
+        <translation>Velké</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1420"/>
         <source>Larger</source>
-        <translation type="unfinished"/>
+        <translation>Větší</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1425"/>
         <source>Largest</source>
-        <translation type="unfinished"/>
+        <translation>Největší</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1452"/>
         <source>Workspace</source>
-        <translation type="unfinished"/>
+        <translation>Pracovní plocha</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1459"/>
         <source>Enable single-click</source>
-        <translation type="unfinished"/>
+        <translation>Povolit jedno-klik</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1480"/>
         <source>Reset KDE/Plasma defaults</source>
-        <translation type="unfinished"/>
+        <translation>Obnovit KDE/Plasma nastavení</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1520"/>
@@ -600,7 +600,7 @@
     <message>
         <location filename="defaultlook.ui" line="1528"/>
         <source>Password for administrative tasks:</source>
-        <translation type="unfinished"/>
+        <translation>Heslo pro administrátorské úkony:</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1535"/>
@@ -610,22 +610,22 @@
     <message>
         <location filename="defaultlook.ui" line="1542"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
-        <translation>          POZNÁMKA: existující /etc/X11/xorg.conf.d/20-radeon.conf bude zálohován do domovské složky</translation>
+        <translation>          POZNÁMKA: existující /etc/X11/xorg.conf.d/20-radeon.conf bude zazálohován do domovské složky</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1562"/>
         <source>&amp;User</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Uživatel</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1576"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
-        <translation type="unfinished"/>
+        <translation>Použít ovladač intel namísto předvoleného ovladače &quot;modesetting&quot;  (vyžaduje restart)</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1583"/>
         <source>Enable kernel sandbox</source>
-        <translation type="unfinished"/>
+        <translation>Povolit kernel sandbox</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1590"/>
@@ -640,12 +640,12 @@
     <message>
         <location filename="defaultlook.ui" line="1604"/>
         <source>Use libinput driver for touchpad instead of synaptics touchpad driver (requires restart)</source>
-        <translation type="unfinished"/>
+        <translation>Pro touchpad použít ovladač libinput namísto synaptics touchpad driver (vyžaduje restart)</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1628"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
-        <translation>          POZNÁMKA: existující /etc/X11/xorg.conf.d/20-amd.conf bude zálohován do domovské složky</translation>
+        <translation>          POZNÁMKA: existující /etc/X11/xorg.conf.d/20-amd.conf bude zazálohován do domovské složky</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1635"/>
@@ -660,12 +660,12 @@
     <message>
         <location filename="defaultlook.ui" line="1649"/>
         <source>Root</source>
-        <translation type="unfinished"/>
+        <translation>Root</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1656"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
-        <translation type="unfinished"/>
+        <translation>Použít Client Side Decorations (CSD) v GTK3 aplikacích pokud toto podporují (vyžaduje restart)</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1725"/>
@@ -695,7 +695,7 @@
     <message>
         <location filename="defaultlook.cpp" line="54"/>
         <source>--display switch only valid for Xfce</source>
-        <translation type="unfinished"/>
+        <translation>--vypnutí monitoru je platné pouze pro Xfce</translation>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="658"/>
@@ -741,12 +741,12 @@
     <message>
         <location filename="defaultlook.cpp" line="887"/>
         <source>Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
-        <translation type="unfinished"/>
+        <translation>Vaše aktuální nastavení panelu bylo zazálohováno do skryté složky s názvem .restore ve vaší domovské složce (~/.restore/)</translation>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="1582"/>
         <source>settings</source>
-        <translation type="unfinished"/>
+        <translation>nastavení</translation>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="1926"/>

@@ -190,7 +190,7 @@
     <message>
         <location filename="defaultlook.ui" line="364"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Значки&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="400"/>
@@ -210,22 +210,22 @@
     <message>
         <location filename="defaultlook.ui" line="417"/>
         <source>Firefox dark theme tweak</source>
-        <translation>Настройка темной темы Firefox</translation>
+        <translation>Настройка тёмной темы Firefox</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="424"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Manager&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Менеджер окон&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="431"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Themes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Темы&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="438"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Приложения&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="458"/>
@@ -271,7 +271,7 @@
     <message>
         <location filename="defaultlook.ui" line="620"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Changing the VBlank mode may help alleviate some screen tearing issues.  See Help for more information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Изменение режима VBlank может смягчить некоторые проблемы тиринга. Для подробностей, смотрите Справку.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Изменение режима VBlank может смягчить некоторые проблемы тиринга. Для подробностей смотрите Справку.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="623"/>
@@ -296,12 +296,12 @@
     <message>
         <location filename="defaultlook.ui" line="646"/>
         <source>off</source>
-        <translation>выкл.</translation>
+        <translation>откл.</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="667"/>
         <source>None</source>
-        <translation>Никакой</translation>
+        <translation>Нет</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="672"/>
@@ -347,12 +347,12 @@
     <message>
         <location filename="defaultlook.ui" line="731"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Display Tweaks&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Опции экрана&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Параметры экрана&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="758"/>
         <source>Choose Display for xrandr tweaks</source>
-        <translation>Выберите Экран для твиков xrandr</translation>
+        <translation>Выберите экран для настроек xrandr</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="768"/>
@@ -393,7 +393,7 @@
     <message>
         <location filename="defaultlook.ui" line="915"/>
         <source>Config Options</source>
-        <translation>Опции конфигурации</translation>
+        <translation>Параметры конфигурации</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="923"/>
@@ -413,7 +413,7 @@
     <message>
         <location filename="defaultlook.ui" line="944"/>
         <source>Enable Desktop Zoom </source>
-        <translation type="unfinished"/>
+        <translation>Включить масштабирование рабочего стола</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="951"/>
@@ -450,102 +450,102 @@
     <message>
         <location filename="defaultlook.ui" line="1027"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Desktop Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Значки на Рабочем столе&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1034"/>
         <source>Reset DefaultDock</source>
-        <translation type="unfinished"/>
+        <translation>Сброс дока</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1041"/>
         <source>Toggle desktop icons</source>
-        <translation type="unfinished"/>
+        <translation>Значки на Рабочем столе</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1049"/>
         <location filename="defaultlook.ui" line="1080"/>
         <source>On</source>
-        <translation type="unfinished"/>
+        <translation>Вкл</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1054"/>
         <location filename="defaultlook.ui" line="1085"/>
         <source>Off</source>
-        <translation type="unfinished"/>
+        <translation>Откл.</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1062"/>
         <source>Reset Fluxbox Menu</source>
-        <translation type="unfinished"/>
+        <translation>Сброс меню Fluxbox</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1069"/>
         <source>Toggle icon captions</source>
-        <translation type="unfinished"/>
+        <translation>Подписи значков</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1090"/>
         <source>On Hover</source>
-        <translation type="unfinished"/>
+        <translation>При наведении</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1111"/>
         <source>Reset ALL mx-fluxbox settings</source>
-        <translation type="unfinished"/>
+        <translation>Сбросить ВСЕ настройки mx-fluxbox</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1118"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Добавить элементы по умолчанию к существующему меню fluxbox.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1121"/>
         <source>Upgrade existing menu entries</source>
-        <translation type="unfinished"/>
+        <translation>Обновить существующие элементы</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1128"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Панель инструментов&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1135"/>
         <location filename="defaultlook.ui" line="1243"/>
         <location filename="defaultlook.ui" line="1355"/>
         <source>Placement</source>
-        <translation type="unfinished"/>
+        <translation>Размещение</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1209"/>
         <source>Width</source>
-        <translation type="unfinished"/>
+        <translation>Ширина</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1219"/>
         <location filename="defaultlook.ui" line="1317"/>
         <source>Autohide</source>
-        <translation type="unfinished"/>
+        <translation>Скрывать автоматически</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1226"/>
         <source>Height</source>
-        <translation type="unfinished"/>
+        <translation>Высота</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1236"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Настройки дока&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1334"/>
         <source>Plasma</source>
-        <translation type="unfinished"/>
+        <translation>Plasma</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1389"/>
         <source>Systray Icon Size</source>
-        <translation type="unfinished"/>
+        <translation>Размер значка в трее</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1400"/>
@@ -555,42 +555,42 @@
     <message>
         <location filename="defaultlook.ui" line="1405"/>
         <source>Small</source>
-        <translation type="unfinished"/>
+        <translation>Малый</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1410"/>
         <source>Medium</source>
-        <translation type="unfinished"/>
+        <translation>Средний</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1415"/>
         <source>Large</source>
-        <translation type="unfinished"/>
+        <translation>Большой</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1420"/>
         <source>Larger</source>
-        <translation type="unfinished"/>
+        <translation>Крупнее</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1425"/>
         <source>Largest</source>
-        <translation type="unfinished"/>
+        <translation>Самый крупный</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1452"/>
         <source>Workspace</source>
-        <translation type="unfinished"/>
+        <translation>Рабочее место</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1459"/>
         <source>Enable single-click</source>
-        <translation type="unfinished"/>
+        <translation>Использовать одиночный щелчок</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1480"/>
         <source>Reset KDE/Plasma defaults</source>
-        <translation type="unfinished"/>
+        <translation>Сброс настроек KDE/Plasma</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1520"/>
@@ -600,7 +600,7 @@
     <message>
         <location filename="defaultlook.ui" line="1528"/>
         <source>Password for administrative tasks:</source>
-        <translation>Пароль для целей администрирования:</translation>
+        <translation>Пароль для задач администрирования:</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1535"/>
@@ -615,7 +615,7 @@
     <message>
         <location filename="defaultlook.ui" line="1562"/>
         <source>&amp;User</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Пользователь</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1576"/>
@@ -640,7 +640,7 @@
     <message>
         <location filename="defaultlook.ui" line="1604"/>
         <source>Use libinput driver for touchpad instead of synaptics touchpad driver (requires restart)</source>
-        <translation type="unfinished"/>
+        <translation>Использовать для тачпада драйвер libinput вместо synaptics (требуется перезапуск)</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1628"/>
@@ -650,7 +650,7 @@
     <message>
         <location filename="defaultlook.ui" line="1635"/>
         <source>Enable mounting of internal drives by non-root users</source>
-        <translation>Включить монтирование внешних носителей для не-рут пользователей</translation>
+        <translation>Включить монтирование внешних носителей для не-root пользователей</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1642"/>
@@ -665,7 +665,7 @@
     <message>
         <location filename="defaultlook.ui" line="1656"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
-        <translation type="unfinished"/>
+        <translation>Использовать клиентские декорации окон (CSD) для приложений GTK3 (требуется перезапуск сеанса)</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1725"/>
@@ -710,7 +710,7 @@
     <message>
         <location filename="defaultlook.cpp" line="660"/>
         <source>App for quick default ui theme changes and tweaks</source>
-        <translation>Приложение для доводки штатного оформления и твиков</translation>
+        <translation>Приложение для быстрой доводки штатного оформления</translation>
     </message>
     <message>
         <location filename="defaultlook.cpp" line="662"/>
@@ -831,7 +831,7 @@
     <message>
         <location filename="window_buttons.ui" line="84"/>
         <source>None, allow drag-and-drop</source>
-        <translation>Отсутствует, использовать перетаскивание</translation>
+        <translation>Нет, разрешить перетаскивание</translation>
     </message>
     <message>
         <location filename="window_buttons.ui" line="92"/>

@@ -185,7 +185,7 @@
     <message>
         <location filename="defaultlook.ui" line="356"/>
         <source>Theme</source>
-        <translation type="unfinished"/>
+        <translation>Tema</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="364"/>
@@ -519,7 +519,7 @@
     <message>
         <location filename="defaultlook.ui" line="1209"/>
         <source>Width</source>
-        <translation type="unfinished"/>
+        <translation>Lebar</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1219"/>
@@ -530,7 +530,7 @@
     <message>
         <location filename="defaultlook.ui" line="1226"/>
         <source>Height</source>
-        <translation type="unfinished"/>
+        <translation>Tinggi</translation>
     </message>
     <message>
         <location filename="defaultlook.ui" line="1236"/>
