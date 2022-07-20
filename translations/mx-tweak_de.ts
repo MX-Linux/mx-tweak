@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="de">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="de">
 <context>
     <name>brightness_small</name>
     <message>
@@ -123,19 +121,9 @@
         <translation>Rechts</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="310"/>
-        <source>Restore default panel</source>
-        <translation>Standardleiste wiederherstellen</translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="223"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Buttons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Fensterknöpfe&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="320"/>
-        <source>Backup current panel configuration</source>
-        <translation>Aktuelle Leistenkonfiguration sichern</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="256"/>
@@ -150,14 +138,20 @@
         <translation>Oben</translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="269"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="276"/>
+        <location filename="../defaultlook.ui" line="283"/>
+        <source>Options</source>
+        <translation>Einstellungen</translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="290"/>
         <source>Display panel horizontally</source>
         <translation>Leiste waagerecht anzeigen</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="330"/>
-        <source>Restore backup panel configuration</source>
-        <translation>Gesicherte Leistenkonfiguration wiederhestellen</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="300"/>
@@ -165,15 +159,19 @@
         <translation>Leiste senkrecht anzeigen</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="269"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <location filename="../defaultlook.ui" line="310"/>
+        <source>Restore default panel</source>
+        <translation>Standardleiste wiederherstellen</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="276"/>
-        <location filename="../defaultlook.ui" line="283"/>
-        <source>Options</source>
-        <translation>Einstellungen</translation>
+        <location filename="../defaultlook.ui" line="320"/>
+        <source>Backup current panel configuration</source>
+        <translation>Aktuelle Leistenkonfiguration sichern</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="330"/>
+        <source>Restore backup panel configuration</source>
+        <translation>Gesicherte Leistenkonfiguration wiederhestellen</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="351"/>
@@ -448,25 +446,9 @@
         <translation>Fluxbox </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1311"/>
-        <location filename="../defaultlook.ui" line="1518"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;auf Standardeinstellungen zurücksetzen&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1339"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Desktop Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Desktop-Symbole&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1149"/>
-        <source>Reset DefaultDock</source>
-        <translation>auf Standard-Dock zurücksetzen</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1163"/>
-        <source>Toggle desktop icons</source>
-        <translation>Umschalten der Desktop-Symbole</translation>
+        <location filename="../defaultlook.ui" line="1038"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar-Einstellungen&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1072"/>
@@ -481,9 +463,58 @@
         <translation>Aus</translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="1082"/>
+        <source>On Hover</source>
+        <translation>Beim Überfahren</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1100"/>
+        <location filename="../defaultlook.ui" line="1121"/>
+        <source>Autohide</source>
+        <translation>automatisch ausblenden</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1128"/>
+        <source>Reset ALL mx-fluxbox settings</source>
+        <translation>ALLE MX-Fluxbox Eintstellungen zurücksetzen</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1142"/>
+        <location filename="../defaultlook.ui" line="1156"/>
+        <location filename="../defaultlook.ui" line="1400"/>
+        <source>Placement</source>
+        <translation>Platzierung</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1149"/>
+        <source>Reset DefaultDock</source>
+        <translation>auf Standard-Dock zurücksetzen</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1163"/>
+        <source>Toggle desktop icons</source>
+        <translation>Umschalten der Desktop-Symbole</translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="1170"/>
         <source>Reset Fluxbox Menu</source>
         <translation>Fluxbox Menü zurücksetzen</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1311"/>
+        <location filename="../defaultlook.ui" line="1518"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;auf Standardeinstellungen zurücksetzen&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1318"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock-Einstellungen&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1325"/>
+        <source>Width</source>
+        <translation>Breite</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1332"/>
@@ -491,14 +522,14 @@
         <translation>auf Bildunterschriften umschalten</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1082"/>
-        <source>On Hover</source>
-        <translation>Beim Überfahren</translation>
+        <location filename="../defaultlook.ui" line="1339"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Desktop Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Desktop-Symbole&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1128"/>
-        <source>Reset ALL mx-fluxbox settings</source>
-        <translation>ALLE MX-Fluxbox Eintstellungen zurücksetzen</translation>
+        <location filename="../defaultlook.ui" line="1346"/>
+        <source>Height</source>
+        <translation>Höhe</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1353"/>
@@ -509,39 +540,6 @@
         <location filename="../defaultlook.ui" line="1356"/>
         <source>Upgrade existing menu entries</source>
         <translation>Vorhandene Menüeinträge aktualisieren</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1038"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar-Einstellungen&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1142"/>
-        <location filename="../defaultlook.ui" line="1156"/>
-        <location filename="../defaultlook.ui" line="1400"/>
-        <source>Placement</source>
-        <translation>Platzierung</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1325"/>
-        <source>Width</source>
-        <translation>Breite</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1100"/>
-        <location filename="../defaultlook.ui" line="1121"/>
-        <source>Autohide</source>
-        <translation>automatisch ausblenden</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1346"/>
-        <source>Height</source>
-        <translation>Höhe</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1318"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock-Einstellungen&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1379"/>

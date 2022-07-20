@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="ca">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="ca">
 <context>
     <name>brightness_small</name>
     <message>
@@ -123,19 +121,9 @@
         <translation>Dreta</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="310"/>
-        <source>Restore default panel</source>
-        <translation>Restaura el plafó per omissió</translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="223"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Buttons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Botons de les finestres&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="320"/>
-        <source>Backup current panel configuration</source>
-        <translation>Còpia de seguretat de la configuració del plafó</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="256"/>
@@ -150,14 +138,20 @@
         <translation>A dalt</translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="269"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Mode acoblador&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="276"/>
+        <location filename="../defaultlook.ui" line="283"/>
+        <source>Options</source>
+        <translation>Opcions </translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="290"/>
         <source>Display panel horizontally</source>
         <translation>Mostra el plafó hoitzontal</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="330"/>
-        <source>Restore backup panel configuration</source>
-        <translation>Restaura la configuració del plafó</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="300"/>
@@ -165,15 +159,19 @@
         <translation>Mostra el plafó vertical</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="269"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <location filename="../defaultlook.ui" line="310"/>
+        <source>Restore default panel</source>
+        <translation>Restaura el plafó per omissió</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="276"/>
-        <location filename="../defaultlook.ui" line="283"/>
-        <source>Options</source>
-        <translation>Opcions </translation>
+        <location filename="../defaultlook.ui" line="320"/>
+        <source>Backup current panel configuration</source>
+        <translation>Còpia de seguretat de la configuració del plafó</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="330"/>
+        <source>Restore backup panel configuration</source>
+        <translation>Restaura la configuració del plafó</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="351"/>
@@ -448,25 +446,9 @@
         <translation>Fluxbox </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1311"/>
-        <location filename="../defaultlook.ui" line="1518"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reinicia als valors per omissió&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1339"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Desktop Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Icones de l&apos;escriptori&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1149"/>
-        <source>Reset DefaultDock</source>
-        <translation>Reinicia l&apos;acoblador per omissió</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1163"/>
-        <source>Toggle desktop icons</source>
-        <translation>Canvia les icones de l&apos;escriptori</translation>
+        <location filename="../defaultlook.ui" line="1038"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Paràmetres de la barra d&apos;eines&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1072"/>
@@ -481,9 +463,58 @@
         <translation>No</translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="1082"/>
+        <source>On Hover</source>
+        <translation>En mantenir</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1100"/>
+        <location filename="../defaultlook.ui" line="1121"/>
+        <source>Autohide</source>
+        <translation>Auto-amaga</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1128"/>
+        <source>Reset ALL mx-fluxbox settings</source>
+        <translation>Reinicia TOTS els paràmetres de Fluxbox</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1142"/>
+        <location filename="../defaultlook.ui" line="1156"/>
+        <location filename="../defaultlook.ui" line="1400"/>
+        <source>Placement</source>
+        <translation>Posició</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1149"/>
+        <source>Reset DefaultDock</source>
+        <translation>Reinicia l&apos;acoblador per omissió</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1163"/>
+        <source>Toggle desktop icons</source>
+        <translation>Canvia les icones de l&apos;escriptori</translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="1170"/>
         <source>Reset Fluxbox Menu</source>
         <translation>Reinicia el menú del Fluxbox</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1311"/>
+        <location filename="../defaultlook.ui" line="1518"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reinicia als valors per omissió&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1318"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Paràmetres de l&apos;acoblador&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1325"/>
+        <source>Width</source>
+        <translation>Amplada</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1332"/>
@@ -491,14 +522,14 @@
         <translation>Canvia els títols de les icones</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1082"/>
-        <source>On Hover</source>
-        <translation>En mantenir</translation>
+        <location filename="../defaultlook.ui" line="1339"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Desktop Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Icones de l&apos;escriptori&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1128"/>
-        <source>Reset ALL mx-fluxbox settings</source>
-        <translation>Reinicia TOTS els paràmetres de Fluxbox</translation>
+        <location filename="../defaultlook.ui" line="1346"/>
+        <source>Height</source>
+        <translation>Altura</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1353"/>
@@ -509,39 +540,6 @@
         <location filename="../defaultlook.ui" line="1356"/>
         <source>Upgrade existing menu entries</source>
         <translation>Actualitza les entrades actuals del menú</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1038"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Paràmetres de la barra d&apos;eines&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1142"/>
-        <location filename="../defaultlook.ui" line="1156"/>
-        <location filename="../defaultlook.ui" line="1400"/>
-        <source>Placement</source>
-        <translation>Posició</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1325"/>
-        <source>Width</source>
-        <translation>Amplada</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1100"/>
-        <location filename="../defaultlook.ui" line="1121"/>
-        <source>Autohide</source>
-        <translation>Auto-amaga</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1346"/>
-        <source>Height</source>
-        <translation>Altura</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1318"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Paràmetres de l&apos;acoblador&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1379"/>

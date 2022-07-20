@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="ja">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="ja">
 <context>
     <name>brightness_small</name>
     <message>
@@ -114,7 +112,7 @@
         <location filename="../defaultlook.ui" line="210"/>
         <location filename="../defaultlook.ui" line="1416"/>
         <source>Left</source>
-        <translation>右</translation>
+        <translation>左</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="215"/>
@@ -123,31 +121,32 @@
         <translation>左</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="310"/>
-        <source>Restore default panel</source>
-        <translation>既定のパネルを復旧</translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="223"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Buttons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;ウィンドウボタン&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="320"/>
-        <source>Backup current panel configuration</source>
-        <translation>現在のパネルの設定をバックアップ</translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="256"/>
         <location filename="../defaultlook.ui" line="1411"/>
         <source>Bottom</source>
-        <translation>下部</translation>
+        <translation>下</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="261"/>
         <location filename="../defaultlook.ui" line="1421"/>
         <source>Top</source>
-        <translation>上部</translation>
+        <translation>上</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="269"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;ドックライク&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="276"/>
+        <location filename="../defaultlook.ui" line="283"/>
+        <source>Options</source>
+        <translation>オプション</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="290"/>
@@ -155,25 +154,24 @@
         <translation>パネルを水平方向に表示</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="330"/>
-        <source>Restore backup panel configuration</source>
-        <translation>バックアップしたパネル設定を復旧</translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="300"/>
         <source>Display panel vertically</source>
         <translation>パネルを垂直方向に表示</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="269"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <location filename="../defaultlook.ui" line="310"/>
+        <source>Restore default panel</source>
+        <translation>既定のパネルを復旧</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="276"/>
-        <location filename="../defaultlook.ui" line="283"/>
-        <source>Options</source>
-        <translation>オプション</translation>
+        <location filename="../defaultlook.ui" line="320"/>
+        <source>Backup current panel configuration</source>
+        <translation>現在のパネルの設定をバックアップ</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="330"/>
+        <source>Restore backup panel configuration</source>
+        <translation>バックアップしたパネル設定を復旧</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="351"/>
@@ -448,25 +446,9 @@
         <translation>Fluxbox</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1311"/>
-        <location filename="../defaultlook.ui" line="1518"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;初期設定に戻す&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1339"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Desktop Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;デスクトップのアイコン&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1149"/>
-        <source>Reset DefaultDock</source>
-        <translation>規定の Dock をリセット</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1163"/>
-        <source>Toggle desktop icons</source>
-        <translation>デスクトップのアイコンを切り替えます</translation>
+        <location filename="../defaultlook.ui" line="1038"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;ツールバーの設定&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1072"/>
@@ -481,9 +463,58 @@
         <translation>オフ</translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="1082"/>
+        <source>On Hover</source>
+        <translation>停止</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1100"/>
+        <location filename="../defaultlook.ui" line="1121"/>
+        <source>Autohide</source>
+        <translation>自動的に隠す</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1128"/>
+        <source>Reset ALL mx-fluxbox settings</source>
+        <translation>mx-fluxbox の設定をすべてリセットします</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1142"/>
+        <location filename="../defaultlook.ui" line="1156"/>
+        <location filename="../defaultlook.ui" line="1400"/>
+        <source>Placement</source>
+        <translation>配置</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1149"/>
+        <source>Reset DefaultDock</source>
+        <translation>規定の Dock をリセット</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1163"/>
+        <source>Toggle desktop icons</source>
+        <translation>デスクトップのアイコンを切り替えます</translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="1170"/>
         <source>Reset Fluxbox Menu</source>
         <translation>Fluxbox メニューをリセット</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1311"/>
+        <location filename="../defaultlook.ui" line="1518"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;初期設定に戻す&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1318"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock の設定&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1325"/>
+        <source>Width</source>
+        <translation>横幅</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1332"/>
@@ -491,14 +522,14 @@
         <translation>アイコンのキャプションを切り替え</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1082"/>
-        <source>On Hover</source>
-        <translation>停止</translation>
+        <location filename="../defaultlook.ui" line="1339"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Desktop Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;デスクトップのアイコン&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1128"/>
-        <source>Reset ALL mx-fluxbox settings</source>
-        <translation>mx-fluxbox の設定をすべてリセットします</translation>
+        <location filename="../defaultlook.ui" line="1346"/>
+        <source>Height</source>
+        <translation>高さ</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1353"/>
@@ -509,39 +540,6 @@
         <location filename="../defaultlook.ui" line="1356"/>
         <source>Upgrade existing menu entries</source>
         <translation>既存のメニューエントリをアップグレード</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1038"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;ツールバーの設定&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1142"/>
-        <location filename="../defaultlook.ui" line="1156"/>
-        <location filename="../defaultlook.ui" line="1400"/>
-        <source>Placement</source>
-        <translation>配置</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1325"/>
-        <source>Width</source>
-        <translation>横幅</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1100"/>
-        <location filename="../defaultlook.ui" line="1121"/>
-        <source>Autohide</source>
-        <translation>自動的に隠す</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1346"/>
-        <source>Height</source>
-        <translation>高さ</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1318"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock の設定&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1379"/>

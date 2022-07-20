@@ -1,4 +1,4 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="am">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="zh_HK">
 <context>
     <name>brightness_small</name>
     <message>
@@ -9,7 +9,7 @@
     <message>
         <location filename="../brightness_small.ui" line="39"/>
         <source>Save</source>
-        <translation>ማስቀመጫ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../brightness_small.ui" line="59"/>
@@ -20,7 +20,7 @@
         <location filename="../brightness_small.ui" line="66"/>
         <location filename="../brightness_small.ui" line="87"/>
         <source>TextLabel</source>
-        <translation>የ ጽሁፍ ምልክት</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../brightness_small.ui" line="80"/>
@@ -59,18 +59,18 @@
         <location filename="../defaultlook.cpp" line="631"/>
         <location filename="../defaultlook.cpp" line="641"/>
         <source>MX Tweak</source>
-        <translation>MX ማሻሻያ </translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="32"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the panel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ክፍል ማስተካከያ&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="46"/>
         <location filename="../defaultlook.ui" line="156"/>
         <source>Panel</source>
-        <translation>ክፍል</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="66"/>
@@ -90,17 +90,17 @@
     <message>
         <location filename="../defaultlook.ui" line="114"/>
         <source>Appearance</source>
-        <translation>አቀራረብ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="129"/>
         <source>Xfce Settings</source>
-        <translation>የ Xfce ማሰናጃ </translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="164"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Affects all panels&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;ሁሉም አካሎች ላይ ተፅእኖ ይፈጥራል&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="177"/>
@@ -112,30 +112,30 @@
         <location filename="../defaultlook.ui" line="210"/>
         <location filename="../defaultlook.ui" line="1416"/>
         <source>Left</source>
-        <translation>በ ግራ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="215"/>
         <location filename="../defaultlook.ui" line="1426"/>
         <source>Right</source>
-        <translation>በ ቀኝ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="223"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Buttons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;የ መስኮት ቁልፎች&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="256"/>
         <location filename="../defaultlook.ui" line="1411"/>
         <source>Bottom</source>
-        <translation>ከ ታች</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="261"/>
         <location filename="../defaultlook.ui" line="1421"/>
         <source>Top</source>
-        <translation>ከ ላይ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="269"/>
@@ -146,17 +146,17 @@
         <location filename="../defaultlook.ui" line="276"/>
         <location filename="../defaultlook.ui" line="283"/>
         <source>Options</source>
-        <translation>ምርጫዎች</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="290"/>
         <source>Display panel horizontally</source>
-        <translation>ክፍል በ አግድም ማሳያ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="300"/>
         <source>Display panel vertically</source>
-        <translation>ክፍል በ ቁመት ማሳያ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="310"/>
@@ -185,12 +185,12 @@
         <location filename="../defaultlook.ui" line="1551"/>
         <location filename="../defaultlook.ui" line="1662"/>
         <source>Apply</source>
-        <translation>መፈጸሚያ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="374"/>
         <source>Theme</source>
-        <translation>ገፅታ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="382"/>
@@ -205,7 +205,7 @@
     <message>
         <location filename="../defaultlook.ui" line="425"/>
         <source>Preview</source>
-        <translation>ቅድመ እይታ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="432"/>
@@ -245,12 +245,12 @@
     <message>
         <location filename="../defaultlook.ui" line="504"/>
         <source>Theme Options</source>
-        <translation>የ ገጽታ ምርጫዎች</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="527"/>
         <source>Undo</source>
-        <translation>መተው</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="537"/>
@@ -266,12 +266,12 @@
     <message>
         <location filename="../defaultlook.ui" line="585"/>
         <source>Edit compton.conf directly in text editor</source>
-        <translation>የ compton.conf በ ቀጥታ ጽሁፍ ማረሚያ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="588"/>
         <source>Edit compton.conf</source>
-        <translation>Compton ማሰናጃ ማረሚያ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="638"/>
@@ -286,7 +286,7 @@
     <message>
         <location filename="../defaultlook.ui" line="649"/>
         <source>auto</source>
-        <translation>በራሱ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="654"/>
@@ -301,12 +301,12 @@
     <message>
         <location filename="../defaultlook.ui" line="664"/>
         <source>off</source>
-        <translation>ማጥፊያ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="685"/>
         <source>None</source>
-        <translation>ምንም</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="690"/>
@@ -326,17 +326,17 @@
     <message>
         <location filename="../defaultlook.ui" line="706"/>
         <source>Xfwm Settings</source>
-        <translation>Xfwm ማሰናጃ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="717"/>
         <source>Launch compton-conf configuration tool</source>
-        <translation>compton -ማስጀመሪያ-ማሰናጃ: የ ማሰናጃ መሳሪያዎች</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="720"/>
         <source>Compton settings</source>
-        <translation>Compton ማሰናጃ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="734"/>
@@ -371,7 +371,7 @@
     <message>
         <location filename="../defaultlook.ui" line="796"/>
         <source>Save</source>
-        <translation>ማስቀመጫ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="803"/>
@@ -382,7 +382,7 @@
         <location filename="../defaultlook.ui" line="810"/>
         <location filename="../defaultlook.ui" line="907"/>
         <source>TextLabel</source>
-        <translation>የ ጽሁፍ ምልክት</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="817"/>
@@ -397,7 +397,7 @@
     <message>
         <location filename="../defaultlook.ui" line="933"/>
         <source>Config Options</source>
-        <translation>የ ማሰናጃ ምርጫዎች</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="941"/>
@@ -443,7 +443,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1030"/>
         <source>Fluxbox</source>
-        <translation>Fluxbox</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1038"/>
@@ -554,7 +554,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1445"/>
         <source>Default</source>
-        <translation>ነባር</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1450"/>
@@ -599,7 +599,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1565"/>
         <source>Other</source>
-        <translation>ሌላ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1573"/>
@@ -674,27 +674,27 @@
     <message>
         <location filename="../defaultlook.ui" line="1770"/>
         <source>About</source>
-        <translation>ስለ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1781"/>
         <source>Help</source>
-        <translation>እርዳታ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1798"/>
         <source>Quit application</source>
-        <translation>መተግበሪያ ማጥፊያ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1801"/>
         <source>Close</source>
-        <translation>መዝጊያ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1808"/>
         <source>Alt+N</source>
-        <translation>Alt+N</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="56"/>
@@ -704,12 +704,12 @@
     <message>
         <location filename="../defaultlook.cpp" line="607"/>
         <source>About MX Tweak</source>
-        <translation>ስለ የ MX ማስተካከያ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="608"/>
         <source>Version: </source>
-        <translation>እትም</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="609"/>
@@ -719,18 +719,18 @@
     <message>
         <location filename="../defaultlook.cpp" line="611"/>
         <source>Copyright (c) MX Linux</source>
-        <translation>የ ቅጂ መብት (c) MX Linux</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="612"/>
         <location filename="../defaultlook.cpp" line="615"/>
         <source>License</source>
-        <translation>ፍቃድ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="613"/>
         <source>Cancel</source>
-        <translation>መሰረዣ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="642"/>
@@ -740,7 +740,7 @@
     <message>
         <location filename="../defaultlook.cpp" line="809"/>
         <source>Panel settings</source>
-        <translation>ክፍል ማሰናጃ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="810"/>
@@ -755,7 +755,7 @@
     <message>
         <location filename="../defaultlook.cpp" line="1789"/>
         <source>Choose a theme set</source>
-        <translation>የ ገጽታ ማሰናጃ ይምረጡ</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -785,22 +785,22 @@
         <location filename="../window_buttons.ui" line="14"/>
         <location filename="../window_buttons.cpp" line="24"/>
         <source>Window Buttons</source>
-        <translation>የ መስኮት ቁልፎች</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="28"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Appearance&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;አቀራረብ&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="35"/>
         <source>Show button labels</source>
-        <translation>የ ቁልፍ ምልክት ማሳያ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="42"/>
         <source>Show flat buttons</source>
-        <translation>ጠፍጣፋ ቁልፍ ማሳያ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="49"/>
@@ -810,22 +810,22 @@
     <message>
         <location filename="../window_buttons.ui" line="56"/>
         <source>Sorting Order:</source>
-        <translation>መለያ ደንብ:</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="64"/>
         <source>Timestamp</source>
-        <translation>የ ሰአት ማህተም</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="69"/>
         <source>Group title and timestamp</source>
-        <translation>የ ቡድን አርእስት እና የ ሰአት ማህተም</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="74"/>
         <source>Window Title</source>
-        <translation>የ መስኮት አርእስት</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="79"/>
@@ -840,7 +840,7 @@
     <message>
         <location filename="../window_buttons.ui" line="92"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Behavior&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;ባህሪ&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="99"/>
@@ -850,17 +850,17 @@
     <message>
         <location filename="../window_buttons.ui" line="107"/>
         <source>Never</source>
-        <translation>በፍጹም</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="112"/>
         <source>Always</source>
-        <translation>ሁልጊዜ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="120"/>
         <source>Middle click action:</source>
-        <translation>ምንም</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="128"/>
@@ -870,12 +870,12 @@
     <message>
         <location filename="../window_buttons.ui" line="133"/>
         <source>Close window</source>
-        <translation>መስኮት መዝጊያ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="138"/>
         <source>Minimize window</source>
-        <translation>መስኮት ማሰነሻ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="146"/>
@@ -895,7 +895,7 @@
     <message>
         <location filename="../window_buttons.ui" line="167"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Filtering&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;በ ማጣራት ላይ&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="174"/>
@@ -915,7 +915,7 @@
     <message>
         <location filename="../window_buttons.ui" line="238"/>
         <source>Close</source>
-        <translation>መዝጊያ</translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -923,17 +923,17 @@
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="14"/>
         <source>Dialog</source>
-        <translation>ንግግር</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="42"/>
         <source>Popup Windows</source>
-        <translation>ብቅ ባይ መስኮት</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="49"/>
         <source>Windows during move</source>
-        <translation>መስኮት በሚንቀሳቀስ ጊዜ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="56"/>
@@ -943,7 +943,7 @@
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="79"/>
         <source>Window decorations</source>
-        <translation>መስኮት ማስጌጫ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="86"/>
@@ -968,7 +968,7 @@
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="130"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Feature Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;ገጽታ ማሰናጃ &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="137"/>
@@ -993,7 +993,7 @@
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="212"/>
         <source>Close</source>
-        <translation>መዝጊያ</translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.cpp" line="23"/>
