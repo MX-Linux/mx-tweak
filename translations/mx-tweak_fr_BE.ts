@@ -1,51 +1,51 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="am">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="fr_BE">
 <context>
     <name>brightness_small</name>
     <message>
         <location filename="../brightness_small.ui" line="14"/>
         <source>MainWindow</source>
-        <translation type="unfinished"/>
+        <translation>Fenêtre Principale</translation>
     </message>
     <message>
         <location filename="../brightness_small.ui" line="39"/>
         <source>Save</source>
-        <translation>ማስቀመጫ</translation>
+        <translation>Enregistrer</translation>
     </message>
     <message>
         <location filename="../brightness_small.ui" line="59"/>
         <source>Software (xrandr) Brightness</source>
-        <translation type="unfinished"/>
+        <translation>Luminosité logicielle (xrandr)</translation>
     </message>
     <message>
         <location filename="../brightness_small.ui" line="66"/>
         <location filename="../brightness_small.ui" line="87"/>
         <source>TextLabel</source>
-        <translation>የ ጽሁፍ ምልክት</translation>
+        <translation>Étiquette de texte</translation>
     </message>
     <message>
         <location filename="../brightness_small.ui" line="80"/>
         <source>Hardware Backlight</source>
-        <translation type="unfinished"/>
+        <translation>Rétroéclairage matériel</translation>
     </message>
     <message>
         <location filename="../brightness_small.ui" line="94"/>
         <source>&gt;&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&gt;&gt;</translation>
     </message>
     <message>
         <location filename="../brightness_small.cpp" line="33"/>
         <source>MX-Tweak</source>
-        <translation type="unfinished"/>
+        <translation>MX Ajustements</translation>
     </message>
     <message>
         <location filename="../brightness_small.cpp" line="58"/>
         <source>Display</source>
-        <translation type="unfinished"/>
+        <translation>Affichage</translation>
     </message>
     <message>
         <location filename="../brightness_small.cpp" line="63"/>
         <source>&amp;Quit</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Quitter</translation>
     </message>
 </context>
 <context>
@@ -59,119 +59,119 @@
         <location filename="../defaultlook.cpp" line="631"/>
         <location filename="../defaultlook.cpp" line="641"/>
         <source>MX Tweak</source>
-        <translation>MX ማሻሻያ </translation>
+        <translation>MX Ajustements</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="32"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the panel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ክፍል ማስተካከያ&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Personnalisez le tableau de bord&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="46"/>
         <location filename="../defaultlook.ui" line="156"/>
         <source>Panel</source>
-        <translation>ክፍል</translation>
+        <translation>Tableau de bord</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="66"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configure window behavior and shortcuts&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configurez le comportement des fenêtres et les raccourcis&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="80"/>
         <source>Window Manager</source>
-        <translation type="unfinished"/>
+        <translation>Gestionnaire des fenêtres</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="100"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the look of your desktop&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Personnalisez l&apos;apparence de votre bureau&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="114"/>
         <source>Appearance</source>
-        <translation>አቀራረብ</translation>
+        <translation>Apparence</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="129"/>
         <source>Xfce Settings</source>
-        <translation>የ Xfce ማሰናጃ </translation>
+        <translation>Paramètres de Xfce</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="164"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Affects all panels&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;ሁሉም አካሎች ላይ ተፅእኖ ይፈጥራል&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Effets sur tous les tableaux de bord&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="177"/>
         <location filename="../defaultlook.ui" line="1393"/>
         <source>Affects 1st panel</source>
-        <translation type="unfinished"/>
+        <translation>Effets sur le 1er tableau de bord</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="210"/>
         <location filename="../defaultlook.ui" line="1416"/>
         <source>Left</source>
-        <translation>በ ግራ</translation>
+        <translation>Gauche</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="215"/>
         <location filename="../defaultlook.ui" line="1426"/>
         <source>Right</source>
-        <translation>በ ቀኝ</translation>
+        <translation>Droite</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="223"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Buttons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;የ መስኮት ቁልፎች&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Boutons des fenêtres&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="256"/>
         <location filename="../defaultlook.ui" line="1411"/>
         <source>Bottom</source>
-        <translation>ከ ታች</translation>
+        <translation>Bas</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="261"/>
         <location filename="../defaultlook.ui" line="1421"/>
         <source>Top</source>
-        <translation>ከ ላይ</translation>
+        <translation>Haut</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="269"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="276"/>
         <location filename="../defaultlook.ui" line="283"/>
         <source>Options</source>
-        <translation>ምርጫዎች</translation>
+        <translation>Options</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="290"/>
         <source>Display panel horizontally</source>
-        <translation>ክፍል በ አግድም ማሳያ</translation>
+        <translation>Afficher le tableau de bord horizontalement</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="300"/>
         <source>Display panel vertically</source>
-        <translation>ክፍል በ ቁመት ማሳያ</translation>
+        <translation>Afficher le tableau de bord verticalement</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="310"/>
         <source>Restore default panel</source>
-        <translation type="unfinished"/>
+        <translation>Rétablir le tableau de bord par défaut</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="320"/>
         <source>Backup current panel configuration</source>
-        <translation type="unfinished"/>
+        <translation>Enregistrer la configuration actuelle du tableau de bord</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="330"/>
         <source>Restore backup panel configuration</source>
-        <translation type="unfinished"/>
+        <translation>Rétablir la configuration actuelle du tableau de bord</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="351"/>
@@ -185,511 +185,511 @@
         <location filename="../defaultlook.ui" line="1551"/>
         <location filename="../defaultlook.ui" line="1662"/>
         <source>Apply</source>
-        <translation>መፈጸሚያ</translation>
+        <translation>Appliquer</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="374"/>
         <source>Theme</source>
-        <translation>ገፅታ</translation>
+        <translation>Thème</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="382"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Icônes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="418"/>
         <source>Fix HexChat input box in dark theme</source>
-        <translation type="unfinished"/>
+        <translation>Corriger la fenêtre de saisie de HexChat avec un thème sombre</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="425"/>
         <source>Preview</source>
-        <translation>ቅድመ እይታ</translation>
+        <translation>Aperçu</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="432"/>
         <source>Fix some website fields when using dark theme</source>
-        <translation type="unfinished"/>
+        <translation>Corrige les champs de remplissage sur certains sites avec un thème sombre</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="435"/>
         <source>Firefox dark theme tweak</source>
-        <translation type="unfinished"/>
+        <translation>Ajustement pour le thème sombre de Firefox</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="442"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Manager&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Gestionnaire de fenêtre&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="449"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Themes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Thèmes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="456"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="476"/>
         <source>Save Current Settings as a Theme Set</source>
-        <translation type="unfinished"/>
+        <translation>Enregistrer Réglages Actuels comme un Jeu de Thème</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="487"/>
         <source>Remove User Theme Set</source>
-        <translation type="unfinished"/>
+        <translation>Supprimer Jeu de Thème Utilisateur</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="504"/>
         <source>Theme Options</source>
-        <translation>የ ገጽታ ምርጫዎች</translation>
+        <translation>Options du thème</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="527"/>
         <source>Undo</source>
-        <translation>መተው</translation>
+        <translation>Annuler</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="537"/>
         <location filename="../defaultlook.ui" line="578"/>
         <source>Compositor</source>
-        <translation type="unfinished"/>
+        <translation>Compositeur</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="571"/>
         <source>Transparency and shadow options</source>
-        <translation type="unfinished"/>
+        <translation>Options de transparence et d&apos;ombrage</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="585"/>
         <source>Edit compton.conf directly in text editor</source>
-        <translation>የ compton.conf በ ቀጥታ ጽሁፍ ማረሚያ</translation>
+        <translation>Éditer directement compton.conf dans un éditeur de texte</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="588"/>
         <source>Edit compton.conf</source>
-        <translation>Compton ማሰናጃ ማረሚያ</translation>
+        <translation>Éditer compton.conf</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="638"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Changing the VBlank mode may help alleviate some screen tearing issues.  See Help for more information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Modifier le mode VBlank pourrait aider à atténuer certains problèmes de déchirure d&apos;écran.  Consulter l&apos;aide pour plus d&apos;information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="641"/>
         <source>VBlank</source>
-        <translation type="unfinished"/>
+        <translation>VBlank</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="649"/>
         <source>auto</source>
-        <translation>በራሱ</translation>
+        <translation>auto</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="654"/>
         <source>glx</source>
-        <translation type="unfinished"/>
+        <translation>glx</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="659"/>
         <source>xpresent</source>
-        <translation type="unfinished"/>
+        <translation>xpresent</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="664"/>
         <source>off</source>
-        <translation>ማጥፊያ</translation>
+        <translation>off</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="685"/>
         <source>None</source>
-        <translation>ምንም</translation>
+        <translation>Aucun</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="690"/>
         <source>Xfwm (Xfce) Compositor</source>
-        <translation type="unfinished"/>
+        <translation>Compositeur Xfwm (Xfce)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="695"/>
         <source>Compton </source>
-        <translation type="unfinished"/>
+        <translation>Compton</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="703"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce Compositor Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Paramètres du  compositeur de Xfce&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="706"/>
         <source>Xfwm Settings</source>
-        <translation>Xfwm ማሰናጃ</translation>
+        <translation>Paramètres de Xfwm</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="717"/>
         <source>Launch compton-conf configuration tool</source>
-        <translation>compton -ማስጀመሪያ-ማሰናጃ: የ ማሰናጃ መሳሪያዎች</translation>
+        <translation>Lancer l&apos;outil de configuration compton-conf</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="720"/>
         <source>Compton settings</source>
-        <translation>Compton ማሰናጃ</translation>
+        <translation>Paramètres de Compton</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="734"/>
         <source>Display</source>
-        <translation type="unfinished"/>
+        <translation>Affichage</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="742"/>
         <source>Hardware Backlight</source>
-        <translation type="unfinished"/>
+        <translation>Rétroéclairage matériel</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="749"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Display Tweaks&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ajustements de l&apos;affichage&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="776"/>
         <source>Choose Display for xrandr tweaks</source>
-        <translation type="unfinished"/>
+        <translation>Choix de l&apos;affichage pour les ajustements de xrandr</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="786"/>
         <source>Resolution</source>
-        <translation type="unfinished"/>
+        <translation>Définition</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="793"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Saving is per display&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;L&apos;enregistrement se fait par affichage&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="796"/>
         <source>Save</source>
-        <translation>ማስቀመጫ</translation>
+        <translation>Enregistrer</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="803"/>
         <source>Software (xrandr) Brightness</source>
-        <translation type="unfinished"/>
+        <translation>Luminosité logicielle (xrandr)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="810"/>
         <location filename="../defaultlook.ui" line="907"/>
         <source>TextLabel</source>
-        <translation>የ ጽሁፍ ምልክት</translation>
+        <translation>Étiquette de texte</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="817"/>
         <source>GTK scaling</source>
-        <translation type="unfinished"/>
+        <translation>Mise à l&apos;échelle GTK</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="837"/>
         <source>xrandr Scaling</source>
-        <translation type="unfinished"/>
+        <translation>Mise à l&apos;échelle xrandr</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="933"/>
         <source>Config Options</source>
-        <translation>የ ማሰናጃ ምርጫዎች</translation>
+        <translation>Options de configuration</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="941"/>
         <source>Reset Thunar custom right-click actions to system defaults</source>
-        <translation type="unfinished"/>
+        <translation>Réinitialiser les actions personnalisées via clic droit de Thunar</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="948"/>
         <source>Enable single-click on desktop</source>
-        <translation type="unfinished"/>
+        <translation>Activer le simple clic sur le bureau</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="955"/>
         <source>Enable single-click in Thunar File Manager</source>
-        <translation type="unfinished"/>
+        <translation>Activer le simple clic dans le gestionnaire de fichier Thunar</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="962"/>
         <source>Enable Desktop Zoom </source>
-        <translation type="unfinished"/>
+        <translation>Activer le zoom du bureau</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="969"/>
         <location filename="../defaultlook.ui" line="1511"/>
         <source>Show windows from all workspaces in panel</source>
-        <translation type="unfinished"/>
+        <translation>Afficher les fenêtres de tous les espaces de travail dans le tableau de bord</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="976"/>
         <source>Disable shortening of long filenames on the desktop</source>
-        <translation type="unfinished"/>
+        <translation>Désactiver l&apos;abréviation des noms de fichiers longs sur le bureau</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="983"/>
         <source>Enable hibernate on Log Out menu </source>
-        <translation type="unfinished"/>
+        <translation>Activer l&apos;hibernation à partir du menu de déconnexion</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="990"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
-        <translation type="unfinished"/>
+        <translation>                   note: pour basculer en hibernation, le fichier d&apos;échange doit être &gt;= RAM</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1030"/>
         <source>Fluxbox</source>
-        <translation>Fluxbox</translation>
+        <translation>Fluxbox </translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1038"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Paramètres de la Barre d&apos;outils&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1072"/>
         <location filename="../defaultlook.ui" line="1108"/>
         <source>On</source>
-        <translation type="unfinished"/>
+        <translation>Marche</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1077"/>
         <location filename="../defaultlook.ui" line="1113"/>
         <source>Off</source>
-        <translation type="unfinished"/>
+        <translation>Arrêt</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1082"/>
         <source>On Hover</source>
-        <translation type="unfinished"/>
+        <translation>Au survol de la souris</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1100"/>
         <location filename="../defaultlook.ui" line="1121"/>
         <source>Autohide</source>
-        <translation type="unfinished"/>
+        <translation>Masquage automatique</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1128"/>
         <source>Reset ALL mx-fluxbox settings</source>
-        <translation type="unfinished"/>
+        <translation>Réinitialiser TOUS les paramètres de mx-fluxbox</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1142"/>
         <location filename="../defaultlook.ui" line="1156"/>
         <location filename="../defaultlook.ui" line="1400"/>
         <source>Placement</source>
-        <translation type="unfinished"/>
+        <translation>Disposition</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1149"/>
         <source>Reset DefaultDock</source>
-        <translation type="unfinished"/>
+        <translation>Réinitialisation du dock par défaut</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1163"/>
         <source>Toggle desktop icons</source>
-        <translation type="unfinished"/>
+        <translation>Basculer les icônes du bureau</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1170"/>
         <source>Reset Fluxbox Menu</source>
-        <translation type="unfinished"/>
+        <translation>Réinitialisation du Menu Fluxbox</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1311"/>
         <location filename="../defaultlook.ui" line="1518"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Retablissement des valeurs par défaut&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1318"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Paramètres du Dock&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1325"/>
         <source>Width</source>
-        <translation type="unfinished"/>
+        <translation>Largeur</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1332"/>
         <source>Toggle icon captions</source>
-        <translation type="unfinished"/>
+        <translation>Basculer les légendes des icônes</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1339"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Desktop Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Icônes du bureau&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1346"/>
         <source>Height</source>
-        <translation type="unfinished"/>
+        <translation>Hauteur</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1353"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ajouter de nouveaux éléments au menu par défaut, le cas échéant, au menu Fluxbox existant.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1356"/>
         <source>Upgrade existing menu entries</source>
-        <translation type="unfinished"/>
+        <translation>Mettre à jour les entrées de menu existantes</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1379"/>
         <source>Plasma</source>
-        <translation type="unfinished"/>
+        <translation>Plasma</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1434"/>
         <source>Systray Icon Size</source>
-        <translation type="unfinished"/>
+        <translation>Taille des icônes du Systray</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1445"/>
         <source>Default</source>
-        <translation>ነባር</translation>
+        <translation>Thème par défaut</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1450"/>
         <source>Small</source>
-        <translation type="unfinished"/>
+        <translation>Petite</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1455"/>
         <source>Medium</source>
-        <translation type="unfinished"/>
+        <translation>Moyenne</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1460"/>
         <source>Large</source>
-        <translation type="unfinished"/>
+        <translation>Grande</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1465"/>
         <source>Larger</source>
-        <translation type="unfinished"/>
+        <translation>Très grande</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1470"/>
         <source>Largest</source>
-        <translation type="unfinished"/>
+        <translation>La plus grande</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1497"/>
         <source>Workspace</source>
-        <translation type="unfinished"/>
+        <translation>Espace de travail</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1504"/>
         <source>Enable single-click</source>
-        <translation type="unfinished"/>
+        <translation>Activer le simple clic</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1525"/>
         <source>Reset KDE/Plasma defaults</source>
-        <translation type="unfinished"/>
+        <translation>Réinitialisation des valeurs par défaut de KDE/Plasma</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1565"/>
         <source>Other</source>
-        <translation>ሌላ</translation>
+        <translation>Autre</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1573"/>
         <source>Password for administrative tasks:</source>
-        <translation type="unfinished"/>
+        <translation>Mot de passe pour les tâches administratives :</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1580"/>
         <source>Use tearfree radeon driver option</source>
-        <translation type="unfinished"/>
+        <translation>Utiliser option sans tearing du pilote radeon</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1587"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
-        <translation type="unfinished"/>
+        <translation>NOTE: l&apos;actuelle configuration /etc/X11/xorg.conf.d/20-radeon.conf sera sauvegardée dans le répertoire utilsateur</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1607"/>
         <source>&amp;User</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Utilisateur</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1621"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
-        <translation type="unfinished"/>
+        <translation>Utiliser le pilote intel à la place du pilote par défaut &quot;modesetting&quot; (nécessite un redémarrage)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1628"/>
         <source>Enable kernel sandbox</source>
-        <translation type="unfinished"/>
+        <translation>Activer le bac à sable des noyaux</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1635"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
-        <translation type="unfinished"/>
+        <translation>          NOTE:  /etc/X11/xorg.conf.d/20-intel.conf existant sera sauvegardé dans le dossier personnel</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1642"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
-        <translation type="unfinished"/>
+        <translation>Réinitialiser le thème de Lightdm (écran de connexion)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1649"/>
         <source>Use libinput driver for touchpad instead of synaptics touchpad driver (requires restart)</source>
-        <translation type="unfinished"/>
+        <translation>Utiliser le pilote libinput pour le touchpad au lieu du pilote synaptics touchpad (nécessite un redémarrage)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1673"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
-        <translation type="unfinished"/>
+        <translation>NOTE: l&apos;actuelle configuration /etc/X11/xorg.conf.d/20-amd.conf sera sauvegardée dans le répertoire utilisateur</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1680"/>
         <source>Enable mounting of internal drives by non-root users</source>
-        <translation type="unfinished"/>
+        <translation>Activer le montage de disques internes par des utilisateurs non root</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1687"/>
         <source>Use tearfree amdgpu option</source>
-        <translation type="unfinished"/>
+        <translation>Utiliser option sans tearing amdgpu</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1694"/>
         <source>Root</source>
-        <translation type="unfinished"/>
+        <translation>Root</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1701"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
-        <translation type="unfinished"/>
+        <translation>Utiliser les décorations côté client (CSD - Client Side Decorations) sur les applications GTK3 qui les supportent (nécessite un redémarrage de session)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1770"/>
         <source>About</source>
-        <translation>ስለ</translation>
+        <translation>À propos</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1781"/>
         <source>Help</source>
-        <translation>እርዳታ</translation>
+        <translation>Aide</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1798"/>
         <source>Quit application</source>
-        <translation>መተግበሪያ ማጥፊያ</translation>
+        <translation>Quitter l&apos;application</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1801"/>
         <source>Close</source>
-        <translation>መዝጊያ</translation>
+        <translation>Fermer</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1808"/>
@@ -699,63 +699,63 @@
     <message>
         <location filename="../defaultlook.cpp" line="56"/>
         <source>--display switch only valid for Xfce</source>
-        <translation type="unfinished"/>
+        <translation>-- le changement d&apos;affichage ne marche que pour Xfce</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="607"/>
         <source>About MX Tweak</source>
-        <translation>ስለ የ MX ማስተካከያ</translation>
+        <translation>À propos de MX Ajustements</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="608"/>
         <source>Version: </source>
-        <translation>እትም</translation>
+        <translation>Version : </translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="609"/>
         <source>App for quick default ui theme changes and tweaks</source>
-        <translation type="unfinished"/>
+        <translation>Une application pour changer et ajuster rapidement les thèmes de l&apos;interface par défaut</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="611"/>
         <source>Copyright (c) MX Linux</source>
-        <translation>የ ቅጂ መብት (c) MX Linux</translation>
+        <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="612"/>
         <location filename="../defaultlook.cpp" line="615"/>
         <source>License</source>
-        <translation>ፍቃድ</translation>
+        <translation>Licence</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="613"/>
         <source>Cancel</source>
-        <translation>መሰረዣ</translation>
+        <translation>Annuler</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="642"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
-        <translation type="unfinished"/>
+        <translation>Terminé! Firefox peut nécessiter un redémarrage pour activer les changements </translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="809"/>
         <source>Panel settings</source>
-        <translation>ክፍል ማሰናጃ</translation>
+        <translation>Paramètres du tableau de bord</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="810"/>
         <source>Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
-        <translation type="unfinished"/>
+        <translation>Les paramètres actuels de votre tableau de bord ont été enregistrés dans un dossier caché nommé .restore dans votre dossier personnel (~/.restore/)</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="1449"/>
         <source>settings</source>
-        <translation type="unfinished"/>
+        <translation>paramètres</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="1789"/>
         <source>Choose a theme set</source>
-        <translation>የ ገጽታ ማሰናጃ ይምረጡ</translation>
+        <translation>Choisir un jeu de thèmes</translation>
     </message>
 </context>
 <context>
@@ -763,7 +763,7 @@
     <message>
         <location filename="../remove_user_theme_set.ui" line="14"/>
         <source>Remove User Theme Set</source>
-        <translation type="unfinished"/>
+        <translation>Supprimer Jeu de Thème Utilisateur</translation>
     </message>
 </context>
 <context>
@@ -771,12 +771,12 @@
     <message>
         <location filename="../theming_to_tweak.ui" line="14"/>
         <source>New Theme Set</source>
-        <translation type="unfinished"/>
+        <translation>Nouveau Jeu de Thème</translation>
     </message>
     <message>
         <location filename="../theming_to_tweak.ui" line="20"/>
         <source>Enter name for new theme set</source>
-        <translation type="unfinished"/>
+        <translation>Entrer un nom pour le nouveau jeu de thème</translation>
     </message>
 </context>
 <context>
@@ -785,137 +785,137 @@
         <location filename="../window_buttons.ui" line="14"/>
         <location filename="../window_buttons.cpp" line="24"/>
         <source>Window Buttons</source>
-        <translation>የ መስኮት ቁልፎች</translation>
+        <translation>Boutons des fenêtres</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="28"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Appearance&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;አቀራረብ&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Apparence&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="35"/>
         <source>Show button labels</source>
-        <translation>የ ቁልፍ ምልክት ማሳያ</translation>
+        <translation>Afficher le nom des boutons</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="42"/>
         <source>Show flat buttons</source>
-        <translation>ጠፍጣፋ ቁልፍ ማሳያ</translation>
+        <translation>Afficher les boutons plats</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="49"/>
         <source>Show handle</source>
-        <translation type="unfinished"/>
+        <translation>Afficher la poignée</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="56"/>
         <source>Sorting Order:</source>
-        <translation>መለያ ደንብ:</translation>
+        <translation>Ordre de tri :</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="64"/>
         <source>Timestamp</source>
-        <translation>የ ሰአት ማህተም</translation>
+        <translation>Horodatage</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="69"/>
         <source>Group title and timestamp</source>
-        <translation>የ ቡድን አርእስት እና የ ሰአት ማህተም</translation>
+        <translation>Titre du groupe et horodatage</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="74"/>
         <source>Window Title</source>
-        <translation>የ መስኮት አርእስት</translation>
+        <translation>Titre de la fenêtre</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="79"/>
         <source>Group title and window title</source>
-        <translation type="unfinished"/>
+        <translation>Titre du groupe et de la fenêtre</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="84"/>
         <source>None, allow drag-and-drop</source>
-        <translation type="unfinished"/>
+        <translation>Aucun, autoriser le glisser-déposer</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="92"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Behavior&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;ባህሪ&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Comportement&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="99"/>
         <source>Window grouping:</source>
-        <translation type="unfinished"/>
+        <translation>Groupement de fenêtres :</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="107"/>
         <source>Never</source>
-        <translation>በፍጹም</translation>
+        <translation>Jamais</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="112"/>
         <source>Always</source>
-        <translation>ሁልጊዜ</translation>
+        <translation>Toujours</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="120"/>
         <source>Middle click action:</source>
-        <translation>ምንም</translation>
+        <translation>Action du clic du milieu :</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="128"/>
         <source>Nothing</source>
-        <translation type="unfinished"/>
+        <translation>Aucune</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="133"/>
         <source>Close window</source>
-        <translation>መስኮት መዝጊያ</translation>
+        <translation>Fermer la fenêtre</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="138"/>
         <source>Minimize window</source>
-        <translation>መስኮት ማሰነሻ</translation>
+        <translation>Minimiser la fenêtre</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="146"/>
         <source>Restore minimized windows to current workspace</source>
-        <translation type="unfinished"/>
+        <translation>Restaurer les fenêtres réduites dans l’espace de travail actif</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="153"/>
         <source>Draw window frame when hovering over a button</source>
-        <translation type="unfinished"/>
+        <translation>Afficher le cadre de la fenêtre au survol d’un bouton</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="160"/>
         <source>Switch windows using the mouse wheel</source>
-        <translation type="unfinished"/>
+        <translation>Changer de fenêtre à l’aide de la molette de la souris</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="167"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Filtering&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;በ ማጣራት ላይ&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Filtrage&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="174"/>
         <source>Show windows from all workspaces or viewports</source>
-        <translation type="unfinished"/>
+        <translation>Afficher les fenêtres de tous les espaces de travail ou fenêtres</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="181"/>
         <source>Show only minimized windows</source>
-        <translation type="unfinished"/>
+        <translation>Afficher uniquement les fenêtres réduites</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="188"/>
         <source>Show windows from all monitors</source>
-        <translation type="unfinished"/>
+        <translation>Afficher les fenêtres de tous les moniteurs</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="238"/>
         <source>Close</source>
-        <translation>መዝጊያ</translation>
+        <translation>Fermer</translation>
     </message>
 </context>
 <context>
@@ -923,82 +923,82 @@
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="14"/>
         <source>Dialog</source>
-        <translation>ንግግር</translation>
+        <translation>Boîte de dialogue</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="42"/>
         <source>Popup Windows</source>
-        <translation>ብቅ ባይ መስኮት</translation>
+        <translation>Fenêtres contextuelles (popup)</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="49"/>
         <source>Windows during move</source>
-        <translation>መስኮት በሚንቀሳቀስ ጊዜ</translation>
+        <translation>Fenêtres lors du déplacement</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="56"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Opacity Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Paramètres d&apos;opacité&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="79"/>
         <source>Window decorations</source>
-        <translation>መስኮት ማስጌጫ</translation>
+        <translation>Décors des fenêtres</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="86"/>
         <source>Show shadows under dock windows</source>
-        <translation type="unfinished"/>
+        <translation>Afficher des ombres sous les fenêtres ancrées</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="93"/>
         <source>Show shadows under popup windows</source>
-        <translation type="unfinished"/>
+        <translation>Afficher des ombres sous les fenêtres contextuelles (popup)</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="100"/>
         <source>Windows during resize</source>
-        <translation type="unfinished"/>
+        <translation>Fenêtres lors du redimensionnement</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="123"/>
         <source>Show shadows under regular windows</source>
-        <translation type="unfinished"/>
+        <translation>Afficher des ombres sous les fenêtres régulières</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="130"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Feature Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;ገጽታ ማሰናጃ &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Paramètres de fonction&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="137"/>
         <source>Show windows preview in place of icons when cycling</source>
-        <translation type="unfinished"/>
+        <translation>Afficher un aperçu des fenêtres plutôt que des icônes lors de l&apos;alternance</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="144"/>
         <source>Display fullscreen overlay windows directly</source>
-        <translation type="unfinished"/>
+        <translation>Afficher directement le recouvrement de fenêtres en plein écran</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="183"/>
         <source>Inactive windows</source>
-        <translation type="unfinished"/>
+        <translation>Fenêtres inactives</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="190"/>
         <source>Synchronize drawing to vertical blank</source>
-        <translation type="unfinished"/>
+        <translation>Synchroniser le rendu avec le rafraîchissement vertical</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="212"/>
         <source>Close</source>
-        <translation>መዝጊያ</translation>
+        <translation>Fermer</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.cpp" line="23"/>
         <source>Xfwm Compositor Settings</source>
-        <translation type="unfinished"/>
+        <translation>Paramètres du compositeur Xfmw</translation>
     </message>
 </context>
 </TS>
