@@ -1,0 +1,8 @@
+[main]
+host = https://www.transifex.com
+
+[antix-development.mx-tweak]
+file_filter = ./mx-tweak_<lang>.ts
+source_file = mx-tweak_en.ts
+source_lang = en
+type = ts
