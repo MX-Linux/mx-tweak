@@ -1,12 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="sq">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="sq">
 <context>
     <name>brightness_small</name>
     <message>
         <location filename="../brightness_small.ui" line="14"/>
         <source>MainWindow</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../brightness_small.ui" line="39"/>
@@ -123,19 +121,9 @@
         <translation>Djathtas</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="310"/>
-        <source>Restore default panel</source>
-        <translation>Rikthe panelin parazgjedhje</translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="223"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Buttons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Butona Dritaresh&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="320"/>
-        <source>Backup current panel configuration</source>
-        <translation>Kopjeruaj formësimin e tanishëm të paneleve</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="256"/>
@@ -150,14 +138,20 @@
         <translation>Në krye</translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="269"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="276"/>
+        <location filename="../defaultlook.ui" line="283"/>
+        <source>Options</source>
+        <translation>Mundësi</translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="290"/>
         <source>Display panel horizontally</source>
         <translation>Shfaqe panelin horizontalisht</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="330"/>
-        <source>Restore backup panel configuration</source>
-        <translation>Rikthe formësim paneli të kopjeruajtur</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="300"/>
@@ -165,15 +159,19 @@
         <translation>Shfaqe panelin vertikalisht</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="269"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <location filename="../defaultlook.ui" line="310"/>
+        <source>Restore default panel</source>
+        <translation>Rikthe panelin parazgjedhje</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="276"/>
-        <location filename="../defaultlook.ui" line="283"/>
-        <source>Options</source>
-        <translation>Mundësi</translation>
+        <location filename="../defaultlook.ui" line="320"/>
+        <source>Backup current panel configuration</source>
+        <translation>Kopjeruaj formësimin e tanishëm të paneleve</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="330"/>
+        <source>Restore backup panel configuration</source>
+        <translation>Rikthe formësim paneli të kopjeruajtur</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="351"/>
@@ -448,25 +446,9 @@
         <translation>Fluxbox</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1311"/>
-        <location filename="../defaultlook.ui" line="1518"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Rikthe Parazgjedhjet&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1339"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Desktop Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ikona Desktopi&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1149"/>
-        <source>Reset DefaultDock</source>
-        <translation>Rikthe DefaultDock-un te parazgjedhjet</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1163"/>
-        <source>Toggle desktop icons</source>
-        <translation>Shfaq/Fshih ikona desktopi</translation>
+        <location filename="../defaultlook.ui" line="1038"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Rregullime Paneli&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1072"/>
@@ -481,9 +463,58 @@
         <translation>Off</translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="1082"/>
+        <source>On Hover</source>
+        <translation>Kur Kalohet Kursori Përsipër</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1100"/>
+        <location filename="../defaultlook.ui" line="1121"/>
+        <source>Autohide</source>
+        <translation>Vetëfshihe</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1128"/>
+        <source>Reset ALL mx-fluxbox settings</source>
+        <translation>Rikthe te parazgjedhjet KREJT rregullimet për mx-fluxbox</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1142"/>
+        <location filename="../defaultlook.ui" line="1156"/>
+        <location filename="../defaultlook.ui" line="1400"/>
+        <source>Placement</source>
+        <translation>Vendosje</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1149"/>
+        <source>Reset DefaultDock</source>
+        <translation>Rikthe DefaultDock-un te parazgjedhjet</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1163"/>
+        <source>Toggle desktop icons</source>
+        <translation>Shfaq/Fshih ikona desktopi</translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="1170"/>
         <source>Reset Fluxbox Menu</source>
         <translation>Rikthe te parazgjedhjet Menunë Fluxbox</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1311"/>
+        <location filename="../defaultlook.ui" line="1518"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Rikthe Parazgjedhjet&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1318"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Rregullime Dock-u&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1325"/>
+        <source>Width</source>
+        <translation>Gjerësi</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1332"/>
@@ -491,14 +522,14 @@
         <translation>Shfaq/Fshih përshkrime ikonash</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1082"/>
-        <source>On Hover</source>
-        <translation>Kur Kalohet Kursori Përsipër</translation>
+        <location filename="../defaultlook.ui" line="1339"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Desktop Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ikona Desktopi&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1128"/>
-        <source>Reset ALL mx-fluxbox settings</source>
-        <translation>Rikthe te parazgjedhjet KREJT rregullimet për mx-fluxbox</translation>
+        <location filename="../defaultlook.ui" line="1346"/>
+        <source>Height</source>
+        <translation>Lartësi</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1353"/>
@@ -509,39 +540,6 @@
         <location filename="../defaultlook.ui" line="1356"/>
         <source>Upgrade existing menu entries</source>
         <translation>Përmirëso zëra ekzistues menuje</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1038"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Rregullime Paneli&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1142"/>
-        <location filename="../defaultlook.ui" line="1156"/>
-        <location filename="../defaultlook.ui" line="1400"/>
-        <source>Placement</source>
-        <translation>Vendosje</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1325"/>
-        <source>Width</source>
-        <translation>Gjerësi</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1100"/>
-        <location filename="../defaultlook.ui" line="1121"/>
-        <source>Autohide</source>
-        <translation>Vetëfshihe</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1346"/>
-        <source>Height</source>
-        <translation>Lartësi</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1318"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Rregullime Dock-u&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1379"/>
@@ -661,7 +659,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1687"/>
         <source>Use tearfree amdgpu option</source>
-        <translation type="unfinished"></translation>
+        <translation>Përdor mundësinë tearfree amdgpu</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1694"/>
@@ -970,7 +968,7 @@
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="130"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Feature Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Rregullime Veçorie&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="137"/>
@@ -990,7 +988,7 @@
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="190"/>
         <source>Synchronize drawing to vertical blank</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="212"/>

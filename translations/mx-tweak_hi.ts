@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="hi">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="hi">
 <context>
     <name>brightness_small</name>
     <message>
@@ -123,19 +121,9 @@
         <translation>दाएं</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="310"/>
-        <source>Restore default panel</source>
-        <translation>डिफ़ॉल्ट पैनल पुनः स्थापित करें</translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="223"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Buttons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;विंडो बटन&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="320"/>
-        <source>Backup current panel configuration</source>
-        <translation>वर्तमान पैनल विन्यास बैकअप करें</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="256"/>
@@ -150,14 +138,20 @@
         <translation>शीर्ष</translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="269"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="276"/>
+        <location filename="../defaultlook.ui" line="283"/>
+        <source>Options</source>
+        <translation>विकल्प</translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="290"/>
         <source>Display panel horizontally</source>
         <translation>पैनल को क्षैतिज प्रदर्शित करें</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="330"/>
-        <source>Restore backup panel configuration</source>
-        <translation>बैकअप पैनल विन्यास पुनः स्थापित करें</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="300"/>
@@ -165,15 +159,19 @@
         <translation>पैनल को लंबवत प्रदर्शित करें</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="269"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <location filename="../defaultlook.ui" line="310"/>
+        <source>Restore default panel</source>
+        <translation>डिफ़ॉल्ट पैनल पुनः स्थापित करें</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="276"/>
-        <location filename="../defaultlook.ui" line="283"/>
-        <source>Options</source>
-        <translation>विकल्प</translation>
+        <location filename="../defaultlook.ui" line="320"/>
+        <source>Backup current panel configuration</source>
+        <translation>वर्तमान पैनल विन्यास बैकअप करें</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="330"/>
+        <source>Restore backup panel configuration</source>
+        <translation>बैकअप पैनल विन्यास पुनः स्थापित करें</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="351"/>
@@ -197,7 +195,7 @@
     <message>
         <location filename="../defaultlook.ui" line="382"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="418"/>
@@ -222,17 +220,17 @@
     <message>
         <location filename="../defaultlook.ui" line="442"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Manager&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="449"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Themes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="456"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="476"/>
@@ -419,7 +417,7 @@
     <message>
         <location filename="../defaultlook.ui" line="962"/>
         <source>Enable Desktop Zoom </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="969"/>
@@ -448,25 +446,9 @@
         <translation>फ्लक्सबॉक्स</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1311"/>
-        <location filename="../defaultlook.ui" line="1518"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;डिफ़ॉल्ट पुनः सेट करें&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1339"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Desktop Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;डेस्कटॉप आइकन&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1149"/>
-        <source>Reset DefaultDock</source>
-        <translation>डिफ़ॉल्ट डॉक पुनः सेट करें</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1163"/>
-        <source>Toggle desktop icons</source>
-        <translation>डेस्कटॉप आइकन चालू/बंद</translation>
+        <location filename="../defaultlook.ui" line="1038"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;साधन पट्टी सेटिंग्स&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1072"/>
@@ -481,39 +463,20 @@
         <translation>बंद</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1170"/>
-        <source>Reset Fluxbox Menu</source>
-        <translation>फ्लक्सबॉक्स मेन्यू पुनः स्थापित करें</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1332"/>
-        <source>Toggle icon captions</source>
-        <translation>आइकन अनुशीर्षक चालू/बंद</translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="1082"/>
         <source>On Hover</source>
         <translation>माउस होवर करने पर</translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="1100"/>
+        <location filename="../defaultlook.ui" line="1121"/>
+        <source>Autohide</source>
+        <translation>स्वतः अदृश्य</translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="1128"/>
         <source>Reset ALL mx-fluxbox settings</source>
         <translation>सभी एमएक्स-फ्लक्सबॉक्स सेटिंग्स पुनः सेट करें</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1353"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1356"/>
-        <source>Upgrade existing menu entries</source>
-        <translation>मौजूदा मेन्यू प्रविष्टियाँ अपग्रेड करें</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1038"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;साधन पट्टी सेटिंग्स&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1142"/>
@@ -523,15 +486,45 @@
         <translation>स्थिति</translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="1149"/>
+        <source>Reset DefaultDock</source>
+        <translation>डिफ़ॉल्ट डॉक पुनः सेट करें</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1163"/>
+        <source>Toggle desktop icons</source>
+        <translation>डेस्कटॉप आइकन चालू/बंद</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1170"/>
+        <source>Reset Fluxbox Menu</source>
+        <translation>फ्लक्सबॉक्स मेन्यू पुनः स्थापित करें</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1311"/>
+        <location filename="../defaultlook.ui" line="1518"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;डिफ़ॉल्ट पुनः सेट करें&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1318"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;डॉक सेटिंग्स&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="1325"/>
         <source>Width</source>
         <translation>चौड़ाई</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1100"/>
-        <location filename="../defaultlook.ui" line="1121"/>
-        <source>Autohide</source>
-        <translation>स्वतः अदृश्य</translation>
+        <location filename="../defaultlook.ui" line="1332"/>
+        <source>Toggle icon captions</source>
+        <translation>आइकन अनुशीर्षक चालू/बंद</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1339"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Desktop Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;डेस्कटॉप आइकन&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1346"/>
@@ -539,9 +532,14 @@
         <translation>ऊँचाई</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1318"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;डॉक सेटिंग्स&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <location filename="../defaultlook.ui" line="1353"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1356"/>
+        <source>Upgrade existing menu entries</source>
+        <translation>मौजूदा मेन्यू प्रविष्टियाँ अपग्रेड करें</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1379"/>
@@ -646,7 +644,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1649"/>
         <source>Use libinput driver for touchpad instead of synaptics touchpad driver (requires restart)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1673"/>
@@ -671,7 +669,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1701"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1770"/>
