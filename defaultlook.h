@@ -238,6 +238,8 @@ private slots:
     void on_toolButtonXFCEpanelSettings_clicked();
     void saveBrightness();
 
+    void on_checkBoxFileDialogActionButtonsPosition_clicked();
+
 private:
     Ui::defaultlook *ui;
 };

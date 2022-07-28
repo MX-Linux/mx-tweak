@@ -1154,7 +1154,6 @@ void defaultlook::setupEtc()
     ui->labelamdgpu->hide();
     ui->checkboxRadeontearfree->hide();
     ui->labelradeon->hide();
-    ui->checkBoxlibinput->hide();
 
     ui->ButtonApplyEtc->setEnabled(false);
     if (ui->ButtonApplyEtc->icon().isNull()) {
@@ -1241,11 +1240,6 @@ void defaultlook::setupEtc()
 
     QFileInfo radeonfile(QStringLiteral("/etc/X11/xorg.conf.d/20-radeon.conf"));
     ui->checkboxRadeontearfree->setChecked(radeonfile.exists());
-
-    partcheck = runCmd(QStringLiteral("xinput |grep -i touchpad")).output;
-    if (!partcheck.isEmpty()) {
-        ui->checkBoxlibinput->show();
-    }
 
     QFileInfo libinputfile(QStringLiteral("/etc/X11/xorg.conf.d/30-touchpad.conf"));
     ui->checkBoxlibinput->setChecked(libinputfile.exists());
@@ -1375,6 +1369,10 @@ void defaultlook::setupConfigoptions()
         //setup no-ellipse option
         QFileInfo fileinfo2(home_path + "/.config/gtk-3.0/no-ellipse-desktop-filenames.css");
         ui->checkboxNoEllipse->setChecked(fileinfo2.exists());
+
+        //setup classic file dialog buttons
+        test = runCmd(QStringLiteral("xfconf-query -c xsettings -p /Gtk/DialogsUseHeader")).output;
+        ui->checkBoxFileDialogActionButtonsPosition->setChecked(test == QLatin1String("false"));
 
         //setup hibernate switch
         //first, hide if running live
@@ -2101,7 +2099,7 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     if ( libinput_touchpadflag ) {
         QFileInfo check_libinput(QStringLiteral("/etc/X11/xorg.conf.d/30-touchpad.conf"));
         if ( check_libinput.exists()) {
-            //backup existing 20-radeon.conf file to home folder
+            //backup existing 30-touchpad.conf file to home folder
             cmd = QStringLiteral("cp /etc/X11/xorg.conf.d/30-touchpad.conf /home/$USER/30-touchpad.conf.$(date +%Y%m%H%M%S)");
             system(cmd.toUtf8());
         }
@@ -2457,6 +2455,13 @@ void defaultlook::on_ButtonApplyMiscDefualts_clicked()
         cmd = QStringLiteral("cp /home/$USER/.config/Thunar/uca.xml /home/$USER/.config/Thunar/uca.xml.$(date +%Y%m%H%M%S)");
         system(cmd.toUtf8());
         runCmd(QStringLiteral("cp /etc/skel/.config/Thunar/uca.xml /home/$USER/.config/Thunar/uca.xml"));
+    }
+
+    //deal with gtk dialog button settings
+    if (ui->checkBoxFileDialogActionButtonsPosition->isChecked()){
+        runCmd("xfconf-query -c xsettings -p /Gtk/DialogsUseHeader -s false");
+    } else {
+        runCmd("xfconf-query -c xsettings -p /Gtk/DialogsUseHeader -s true");
     }
 
     //deal with no-ellipse-filenames option
@@ -3178,4 +3183,9 @@ void defaultlook::on_checkBoxCSD_clicked()
 void defaultlook::on_pushButtonDocklikeSetttings_clicked()
 {
     system("xfce4-panel --plugin-event=docklike:settings");
+}
+
+void defaultlook::on_checkBoxFileDialogActionButtonsPosition_clicked()
+{
+    ui->ButtonApplyMiscDefualts->setEnabled(true);
 }
