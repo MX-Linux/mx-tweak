@@ -149,7 +149,7 @@
       <enum>QTabWidget::North</enum>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>7</number>
      </property>
      <widget class="QWidget" name="Panel">
       <attribute name="title">
@@ -935,10 +935,10 @@
       <layout class="QGridLayout" name="gridLayout_18">
        <item row="0" column="0">
         <layout class="QGridLayout" name="gridLayout_11">
-         <item row="0" column="0" colspan="2">
-          <widget class="QCheckBox" name="checkBoxThunarCAReset">
+         <item row="2" column="0">
+          <widget class="QCheckBox" name="checkBoxThunarSingleClick">
            <property name="text">
-            <string>Reset Thunar custom right-click actions to system defaults</string>
+            <string>Enable single-click in Thunar File Manager</string>
            </property>
           </widget>
          </item>
@@ -949,17 +949,10 @@
            </property>
           </widget>
          </item>
-         <item row="2" column="0">
-          <widget class="QCheckBox" name="checkBoxThunarSingleClick">
+         <item row="6" column="0" colspan="2">
+          <widget class="QCheckBox" name="checkboxNoEllipse">
            <property name="text">
-            <string>Enable single-click in Thunar File Manager</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="0">
-          <widget class="QCheckBox" name="checkBoxDesktopZoom">
-           <property name="text">
-            <string>Enable Desktop Zoom </string>
+            <string>Disable shortening of long filenames on the desktop</string>
            </property>
           </widget>
          </item>
@@ -970,28 +963,28 @@
            </property>
           </widget>
          </item>
-         <item row="5" column="0" colspan="2">
-          <widget class="QCheckBox" name="checkboxNoEllipse">
-           <property name="text">
-            <string>Disable shortening of long filenames on the desktop</string>
-           </property>
-          </widget>
-         </item>
-         <item row="6" column="0" colspan="2">
-          <widget class="QCheckBox" name="checkBoxHibernate">
-           <property name="text">
-            <string>Enable hibernate on Log Out menu </string>
-           </property>
-          </widget>
-         </item>
-         <item row="7" column="0" colspan="2">
+         <item row="8" column="0" colspan="2">
           <widget class="QLabel" name="label_hibernate">
            <property name="text">
             <string>                   note: to hibernate, swap needs to be &gt;= RAM</string>
            </property>
           </widget>
          </item>
-         <item row="8" column="1">
+         <item row="0" column="0" colspan="2">
+          <widget class="QCheckBox" name="checkBoxThunarCAReset">
+           <property name="text">
+            <string>Reset Thunar custom right-click actions to system defaults</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="0" colspan="2">
+          <widget class="QCheckBox" name="checkBoxHibernate">
+           <property name="text">
+            <string>Enable hibernate on Log Out menu </string>
+           </property>
+          </widget>
+         </item>
+         <item row="9" column="1">
           <spacer name="verticalSpacer_10">
            <property name="orientation">
             <enum>Qt::Vertical</enum>
@@ -1004,7 +997,14 @@
            </property>
           </spacer>
          </item>
-         <item row="9" column="0" colspan="2">
+         <item row="3" column="0">
+          <widget class="QCheckBox" name="checkBoxDesktopZoom">
+           <property name="text">
+            <string>Enable Desktop Zoom </string>
+           </property>
+          </widget>
+         </item>
+         <item row="10" column="0" colspan="2">
           <widget class="QPushButton" name="ButtonApplyMiscDefualts">
            <property name="minimumSize">
             <size>
@@ -1018,6 +1018,13 @@
            <property name="icon">
             <iconset theme="dialog-ok">
              <normaloff>.</normaloff>.</iconset>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QCheckBox" name="checkBoxFileDialogActionButtonsPosition">
+           <property name="text">
+            <string>Show GTK File Dialog action buttons at bottom of dialogs</string>
            </property>
           </widget>
          </item>
