@@ -185,7 +185,7 @@
         <location filename="../defaultlook.ui" line="1016"/>
         <location filename="../defaultlook.ui" line="1142"/>
         <location filename="../defaultlook.ui" line="1558"/>
-        <location filename="../defaultlook.ui" line="1669"/>
+        <location filename="../defaultlook.ui" line="1642"/>
         <source>Apply</source>
         <translation>Aplica</translation>
     </message>
@@ -614,92 +614,102 @@
         <translation>Contrasenya d&apos;administrador: </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1587"/>
+        <location filename="../defaultlook.ui" line="1601"/>
         <source>Use tearfree radeon driver option</source>
         <translation>Usa el l&apos;opció del controlador radeon sense estrips</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1594"/>
+        <location filename="../defaultlook.ui" line="1587"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>          NOTA: s&apos;ha fet còpia de seguretat del fitxer actual /etc/X11/xorg.conf.d/20-radeon.conf al directori d&apos;usuari</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1614"/>
+        <location filename="../defaultlook.ui" line="1594"/>
         <source>&amp;User</source>
         <translation>&amp;Usuari</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1628"/>
+        <location filename="../defaultlook.ui" line="1681"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>Useu el controlador intel en comptes del controlador &quot;modesetting&quot; (cal reiniciar)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1635"/>
+        <location filename="../defaultlook.ui" line="1660"/>
         <source>Enable kernel sandbox</source>
         <translation>Activa l&apos;entorn de proves (sandbox)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1642"/>
+        <location filename="../defaultlook.ui" line="1608"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>          NOTA: es farà còpia de seguretat del fitxer /etc/X11/xorg.conf.d/20-intel.conf al directori d&apos;usuari</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1649"/>
+        <location filename="../defaultlook.ui" line="1701"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>Reinicia Lightdm (pantalla d&apos;entrada) al tema per omissió</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1656"/>
+        <location filename="../defaultlook.ui" line="1667"/>
         <source>Use libinput driver for touchpad instead of synaptics touchpad driver (requires restart)</source>
         <translation>Usa el controlador libinput del ratolí tàctil en comptes del controlador synaptics (cal reiniciar) </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1680"/>
+        <location filename="../defaultlook.ui" line="1653"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>          NOTA: s&apos;ha fet còpia de seguretat del fitxer actual /etc/X11/xorg.conf.d/20-amd.conf al directori d&apos;usuari</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1687"/>
+        <location filename="../defaultlook.ui" line="1708"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>Activa el muntatge de discos interns per qualsevol usuari</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1694"/>
+        <location filename="../defaultlook.ui" line="1615"/>
         <source>Use tearfree amdgpu option</source>
         <translation>Usa l&apos;opció AMDGPU sense estrips</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1701"/>
+        <location filename="../defaultlook.ui" line="1674"/>
         <source>Root</source>
         <translation>Arrel</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1708"/>
+        <location filename="../defaultlook.ui" line="1622"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
         <translation>Usa les Client Side Decorations (CSD) a les aplicacions GTK3 que hi siguin compatibles (cal reinici de sessió)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1777"/>
+        <location filename="../defaultlook.ui" line="1715"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1718"/>
+        <source>Enable Bluetooth Adapters on boot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1787"/>
         <source>About</source>
         <translation>Quant a </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1788"/>
+        <location filename="../defaultlook.ui" line="1798"/>
         <source>Help</source>
         <translation>Ajuda </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1805"/>
+        <location filename="../defaultlook.ui" line="1815"/>
         <source>Quit application</source>
         <translation>Surt de l&apos;aplicació</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1808"/>
+        <location filename="../defaultlook.ui" line="1818"/>
         <source>Close</source>
         <translation>Tanca</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1815"/>
+        <location filename="../defaultlook.ui" line="1825"/>
         <source>Alt+N</source>
         <translation>Alt+N</translation>
     </message>
@@ -755,12 +765,12 @@
         <translation>S&apos;ha fet còpia de seguretat dels vostres paràmetres del plafó en un fitxer amagat anomenat .restore al vostre directori d&apos;usuari (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1447"/>
+        <location filename="../defaultlook.cpp" line="1457"/>
         <source>settings</source>
         <translation>paràmetres</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1787"/>
+        <location filename="../defaultlook.cpp" line="1797"/>
         <source>Choose a theme set</source>
         <translation>Trieu un conjunt de temes</translation>
     </message>
