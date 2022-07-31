@@ -1194,6 +1194,16 @@ void defaultlook::setupEtc()
         ui->checkBoxSandbox->hide();
     }
 
+    //setup bluetooth auto enable
+    bluetoothautoenableflag = false;
+    test = runCmd(QStringLiteral("grep ^AutoEnable /etc/bluetooth/main.conf")).output;
+    test = test.section("=",1,1);
+    if ( test == "true"){
+        ui->checkBoxbluetoothAutoEnable->setChecked(true);
+    } else {
+        ui->checkBoxbluetoothAutoEnable->setChecked(false);
+    }
+
     //setup NOCSD GTK3 option
     if (!QFileInfo::exists(QStringLiteral("/usr/bin/gtk3-nocsd"))) {
         if (verbose) qDebug() << "gtk3-nocsd not found";
@@ -1994,6 +2004,7 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     QString radeon_option;
     QString lightdm_option;
     QString libinput_option;
+    QString bluetooth_option;
     QString DESKTOP = runCmd(QStringLiteral("echo $XDG_SESSION_DESKTOP")).output;
     QString home_path = QDir::homePath();
     ui->ButtonApplyEtc->setEnabled(false);
@@ -2001,6 +2012,7 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     intel_option.clear();
     lightdm_option.clear();
     libinput_option.clear();
+    bluetooth_option.clear();
 
     //deal with udisks option
     QFileInfo fileinfo(QStringLiteral("/etc/tweak-udisks.chk"));
@@ -2094,6 +2106,24 @@ void defaultlook::on_ButtonApplyEtc_clicked()
         }
     }
 
+    //bluetooth auto enable
+    if (bluetoothautoenableflag) {
+        if (ui->checkBoxbluetoothAutoEnable->isChecked()) {
+            bluetooth_option = QStringLiteral("enable_bluetooth");
+            //blueman
+            if (QFile::exists("/usr/bin/blueman")) {
+                runCmd(QStringLiteral("gsettings set org.blueman.plugins.powermanager auto-power-on true"));
+            }
+        } else {
+            bluetooth_option = QStringLiteral("disable_bluetooth");
+            //blueman
+            if (QFile::exists("/usr/bin/blueman")) {
+                runCmd(QStringLiteral("gsettings set org.blueman.plugins.powermanager auto-power-on false"));
+            }
+
+        }
+    }
+
     //libinput_touchpad
 
     if ( libinput_touchpadflag ) {
@@ -2137,8 +2167,8 @@ void defaultlook::on_ButtonApplyEtc_clicked()
         }
     }
 
-    if ( ! udisks_option.isEmpty() || ! sudo_override_option.isEmpty() || ! user_name_space_override_option.isEmpty() || ! intel_option.isEmpty() || ! lightdm_option.isEmpty() || ! amd_option.isEmpty() || ! radeon_option.isEmpty() || ! libinput_option.isEmpty() ) {
-        runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + udisks_option + " " + sudo_override_option + " " + user_name_space_override_option + " " + intel_option + " " + amd_option + " " + radeon_option + " " + libinput_option + " " + lightdm_option);
+    if ( ! udisks_option.isEmpty() || ! sudo_override_option.isEmpty() || ! user_name_space_override_option.isEmpty() || ! intel_option.isEmpty() || ! lightdm_option.isEmpty() || ! amd_option.isEmpty() || ! radeon_option.isEmpty() || ! libinput_option.isEmpty() || !bluetooth_option.isEmpty()) {
+        runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + udisks_option + " " + sudo_override_option + " " + user_name_space_override_option + " " + intel_option + " " + amd_option + " " + radeon_option + " " + libinput_option + " " + bluetooth_option + " " + lightdm_option);
     }
     //reset gui
     setupEtc();
@@ -3188,4 +3218,15 @@ void defaultlook::on_pushButtonDocklikeSetttings_clicked()
 void defaultlook::on_checkBoxFileDialogActionButtonsPosition_clicked()
 {
     ui->ButtonApplyMiscDefualts->setEnabled(true);
+}
+
+void defaultlook::on_checkBoxbluetoothAutoEnable_clicked()
+{
+    ui->ButtonApplyEtc->setEnabled(true);
+    if (!bluetoothautoenableflag) {
+        bluetoothautoenableflag = true;
+    } else {
+        bluetoothautoenableflag = false;
+    }
+    qDebug() << "bluetooth flag is " << bluetoothautoenableflag;
 }

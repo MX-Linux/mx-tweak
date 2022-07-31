@@ -185,7 +185,7 @@
         <location filename="../defaultlook.ui" line="1016"/>
         <location filename="../defaultlook.ui" line="1142"/>
         <location filename="../defaultlook.ui" line="1558"/>
-        <location filename="../defaultlook.ui" line="1669"/>
+        <location filename="../defaultlook.ui" line="1642"/>
         <source>Apply</source>
         <translation>Toepassen</translation>
     </message>
@@ -614,92 +614,102 @@
         <translation>Wachtwoord voor administratieve taken:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1587"/>
+        <location filename="../defaultlook.ui" line="1601"/>
         <source>Use tearfree radeon driver option</source>
         <translation>Gebruik tearvrij radeon driver optie</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1594"/>
+        <location filename="../defaultlook.ui" line="1587"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>NOOT: bestaande /etc/X11/xorg.conf.d/20-radeon.conf zal gebackupped worden in de home folder</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1614"/>
+        <location filename="../defaultlook.ui" line="1594"/>
         <source>&amp;User</source>
         <translation>&amp;User</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1628"/>
+        <location filename="../defaultlook.ui" line="1681"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>Gebruik intel driver in plaats van standaard &quot;modesetting&quot; driver (vereist herstart)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1635"/>
+        <location filename="../defaultlook.ui" line="1660"/>
         <source>Enable kernel sandbox</source>
         <translation>Schakel kernel sandbox in</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1642"/>
+        <location filename="../defaultlook.ui" line="1608"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>NOOT: bestaande /etc/X11/xorg.conf.d/20-intel.conf zal gebackupped worden in de home folder</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1649"/>
+        <location filename="../defaultlook.ui" line="1701"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>Herstel Lightdm (login scherm) naar systeem standaard thema</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1656"/>
+        <location filename="../defaultlook.ui" line="1667"/>
         <source>Use libinput driver for touchpad instead of synaptics touchpad driver (requires restart)</source>
         <translation>Gebruik libinput driver voor touchpad in plaats van synaptics touchpad driver (vereist herstart)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1680"/>
+        <location filename="../defaultlook.ui" line="1653"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>NOOT: bestaande /etc/X11/xorg.conf.d/20-amd.conf zal gebackupped worden in de home folder</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1687"/>
+        <location filename="../defaultlook.ui" line="1708"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>Maak koppelen van interne schijven door niet-root gebruikers mogelijk</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1694"/>
+        <location filename="../defaultlook.ui" line="1615"/>
         <source>Use tearfree amdgpu option</source>
         <translation>Gebruik tearvrij amdgpu optie</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1701"/>
+        <location filename="../defaultlook.ui" line="1674"/>
         <source>Root</source>
         <translation>Root</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1708"/>
+        <location filename="../defaultlook.ui" line="1622"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
         <translation>Gebruik Client Side Decoraties (CSD) op GTK3 applicaties die dat ondersteunen (vereist sessie herstart)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1777"/>
+        <location filename="../defaultlook.ui" line="1715"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1718"/>
+        <source>Enable Bluetooth Adapters on boot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1787"/>
         <source>About</source>
         <translation>Over</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1788"/>
+        <location filename="../defaultlook.ui" line="1798"/>
         <source>Help</source>
         <translation>Hulp</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1805"/>
+        <location filename="../defaultlook.ui" line="1815"/>
         <source>Quit application</source>
         <translation>Verlaat de applicatie</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1808"/>
+        <location filename="../defaultlook.ui" line="1818"/>
         <source>Close</source>
         <translation>Sluiten</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1815"/>
+        <location filename="../defaultlook.ui" line="1825"/>
         <source>Alt+N</source>
         <translation>Alt+N</translation>
     </message>
@@ -755,12 +765,12 @@
         <translation>Uw huidige paneelinstellingen zijn gebackupt in een verborgen folder genaamd .restore in uw home folder (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1447"/>
+        <location filename="../defaultlook.cpp" line="1457"/>
         <source>settings</source>
         <translation>instellingen</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1787"/>
+        <location filename="../defaultlook.cpp" line="1797"/>
         <source>Choose a theme set</source>
         <translation>Kies een thema set</translation>
     </message>

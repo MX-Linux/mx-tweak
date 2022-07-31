@@ -185,7 +185,7 @@
         <location filename="../defaultlook.ui" line="1016"/>
         <location filename="../defaultlook.ui" line="1142"/>
         <location filename="../defaultlook.ui" line="1558"/>
-        <location filename="../defaultlook.ui" line="1669"/>
+        <location filename="../defaultlook.ui" line="1642"/>
         <source>Apply</source>
         <translation>使用</translation>
     </message>
@@ -614,93 +614,103 @@
         <translation>管理任務的密碼：</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1587"/>
+        <location filename="../defaultlook.ui" line="1601"/>
         <source>Use tearfree radeon driver option</source>
         <translation>使用無淚radeon驅動程序選項</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1594"/>
+        <location filename="../defaultlook.ui" line="1587"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>          注意：現有的/etc/X11/xorg.conf.d/20-radeon.conf將備份到主文件夾</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1614"/>
+        <location filename="../defaultlook.ui" line="1594"/>
         <source>&amp;User</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1628"/>
+        <location filename="../defaultlook.ui" line="1681"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>使用英特爾驅動代替默認的「模式設置」驅動（需要重啟）。</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1635"/>
+        <location filename="../defaultlook.ui" line="1660"/>
         <source>Enable kernel sandbox</source>
         <translation>啟用內核沙箱</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1642"/>
+        <location filename="../defaultlook.ui" line="1608"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>註：現所採用的 /etc/X11/xorg.conf.d/20-intel.conf 會備份到家目錄當中</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1649"/>
+        <location filename="../defaultlook.ui" line="1701"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>將 Lightdm（登入畫面）回復成系統預設的佈景</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1656"/>
+        <location filename="../defaultlook.ui" line="1667"/>
         <source>Use libinput driver for touchpad instead of synaptics touchpad driver (requires restart)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1680"/>
+        <location filename="../defaultlook.ui" line="1653"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>         注意：現有的/etc/X11/xorg.conf.d/20-amd.conf將備份到主文件夾
 </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1687"/>
+        <location filename="../defaultlook.ui" line="1708"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>容許並非 root 的使用者掛載內接式硬碟</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1694"/>
+        <location filename="../defaultlook.ui" line="1615"/>
         <source>Use tearfree amdgpu option</source>
         <translation>使用無淚amdgpu選項</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1701"/>
+        <location filename="../defaultlook.ui" line="1674"/>
         <source>Root</source>
         <translation>最高用戶</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1708"/>
+        <location filename="../defaultlook.ui" line="1622"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1777"/>
+        <location filename="../defaultlook.ui" line="1715"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1718"/>
+        <source>Enable Bluetooth Adapters on boot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1787"/>
         <source>About</source>
         <translation>關於</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1788"/>
+        <location filename="../defaultlook.ui" line="1798"/>
         <source>Help</source>
         <translation>說明</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1805"/>
+        <location filename="../defaultlook.ui" line="1815"/>
         <source>Quit application</source>
         <translation>退出程式</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1808"/>
+        <location filename="../defaultlook.ui" line="1818"/>
         <source>Close</source>
         <translation>關閉</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1815"/>
+        <location filename="../defaultlook.ui" line="1825"/>
         <source>Alt+N</source>
         <translation>Alt+N</translation>
     </message>
@@ -756,12 +766,12 @@
         <translation>您當前的面板設置已備份到主文件夾（~/ .restore/）中名為.restore的隱藏文件夾中。</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1447"/>
+        <location filename="../defaultlook.cpp" line="1457"/>
         <source>settings</source>
         <translation>設定</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1787"/>
+        <location filename="../defaultlook.cpp" line="1797"/>
         <source>Choose a theme set</source>
         <translation>選擇一套佈景組合</translation>
     </message>

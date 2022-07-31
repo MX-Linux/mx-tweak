@@ -80,6 +80,7 @@ public:
     bool radeon_flag{};
     bool amdgpuflag{};
     bool libinput_touchpadflag{};
+    bool bluetoothautoenableflag{};
     bool vblankflag{};
     bool displayflag = false;
     bool displaysetupflag = false;
@@ -239,6 +240,8 @@ private slots:
     void saveBrightness();
 
     void on_checkBoxFileDialogActionButtonsPosition_clicked();
+
+    void on_checkBoxbluetoothAutoEnable_clicked();
 
 private:
     Ui::defaultlook *ui;
