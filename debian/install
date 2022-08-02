@@ -4,7 +4,7 @@ mx-tweak-systray.desktop    usr/share/applications
 translations/*.qm 	 usr/share/mx-tweak/locale
 icons/*                 usr/share/mx-tweak/icons
 license.html            usr/share/doc/mx-tweak
-help/*					usr/share/doc/mx-tweak/help
+help/*					usr/share/doc/mx-tweak
 #firefox			usr/local/bin
 hexchat.conf            usr/share/mx-tweak
 mx-tweak.png		usr/share/icons/hicolor/48x48/apps

@@ -1,0 +1,40 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 02 Aug 2022 19:12:44 -0400
+Source: mx-tweak
+Architecture: source
+Version: 22.8mx21
+Distribution: mx
+Urgency: medium
+Maintainer: dolphinoracle <dolphinoracle@gmail.com>
+Changed-By: Adrian <adrian@mxlinux.org>
+Changes:
+ mx-tweak (22.8mx21) mx; urgency=medium
+ .
+   * Remove mx-viewer dependency
+Checksums-Sha1:
+ c2f577db6f40fed7d355329f84496d20d4a76a0b 1174 mx-tweak_22.8mx21.dsc
+ ea8d111cc4409e239bec642e710ced57e3b7d705 498924 mx-tweak_22.8mx21.tar.xz
+ 1ef000e744790bc22b59ed5c87d0c07a207df7a2 10242 mx-tweak_22.8mx21_amd64.buildinfo
+Checksums-Sha256:
+ 818afaaeeff9ae6c9e71a064a303c3493e14bcb1a8361882e71f8c7fda6f6d7d 1174 mx-tweak_22.8mx21.dsc
+ ca336165b0d46d5f368ea2d2245ad2233c7badb1234d499c3eb75919ca769a9e 498924 mx-tweak_22.8mx21.tar.xz
+ 8eb19670167a7ba7a305749eae5cc82f04d34c80d7aa1d4b734109c9a2bf41a4 10242 mx-tweak_22.8mx21_amd64.buildinfo
+Files:
+ 3cff052dba877fc3ecadd6af05c65af0 1174 admin optional mx-tweak_22.8mx21.dsc
+ 4031399f61bb44da8956846592a8d866 498924 admin optional mx-tweak_22.8mx21.tar.xz
+ fdb94f83ff69b290c25b751bf735a8f4 10242 admin optional mx-tweak_22.8mx21_amd64.buildinfo
+
+-----BEGIN PGP SIGNATURE-----
+
+iQFHBAEBCgAxFiEE8ndToY6S45N+YzXncJOMeAZ57pgFAmLps6wTHGFkcmlhbkBt
+eGxpbnV4Lm9yZwAKCRBwk4x4BnnumNbWCACPwfUfRiH8KYEG3tS5on9ELdd1qRkQ
+8/Dt5sbHPmk8ekAqP2ypOxDEuK/FzaJnD1kMiHGHRDDk2344Amx5ncQ38zkj0uzE
+BH1DhgpYFo4MSD7gxyuSM6TDHfwsNhWOGbb55nE+vBsuUckTheEK42HxV+6NgTGH
+d9AhhZiMhqOq0U7dWvvcc8Aar2eKOKAyx9zwumOmhw5k7l9hiLTejb8frOF3n0db
+mrtaZSQSKdzoczf0cdIvFKl9gZXXGsaNNWTrin1yw4Yo/HRrRdE+S/kke65LlOoS
+mX3bCVqEs/JUw8YoZWdqO28l64V9MC9Pz91o57jt4YGdFCBjJ+0Sjqea
+=PqYe
+-----END PGP SIGNATURE-----
