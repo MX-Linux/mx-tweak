@@ -1,0 +1,46 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Format: 1.8
+Date: Tue, 02 Aug 2022 19:12:44 -0400
+Source: mx-tweak
+Binary: mx-tweak
+Architecture: source amd64
+Version: 22.8mx21
+Distribution: mx
+Urgency: medium
+Maintainer: dolphinoracle <dolphinoracle@gmail.com>
+Changed-By: Adrian <adrian@mxlinux.org>
+Description:
+ mx-tweak   - MX Tweak
+Changes:
+ mx-tweak (22.8mx21) mx; urgency=medium
+ .
+   * Remove mx-viewer dependency
+Checksums-Sha1:
+ c2f577db6f40fed7d355329f84496d20d4a76a0b 1174 mx-tweak_22.8mx21.dsc
+ ea8d111cc4409e239bec642e710ced57e3b7d705 498924 mx-tweak_22.8mx21.tar.xz
+ 1ef000e744790bc22b59ed5c87d0c07a207df7a2 10242 mx-tweak_22.8mx21_amd64.buildinfo
+ 2e9a1a018f986a71df2fd4584bae5e1a656425a7 591796 mx-tweak_22.8mx21_amd64.deb
+Checksums-Sha256:
+ 818afaaeeff9ae6c9e71a064a303c3493e14bcb1a8361882e71f8c7fda6f6d7d 1174 mx-tweak_22.8mx21.dsc
+ ca336165b0d46d5f368ea2d2245ad2233c7badb1234d499c3eb75919ca769a9e 498924 mx-tweak_22.8mx21.tar.xz
+ 8eb19670167a7ba7a305749eae5cc82f04d34c80d7aa1d4b734109c9a2bf41a4 10242 mx-tweak_22.8mx21_amd64.buildinfo
+ 7565cd19138451ef0f87d348bf338c8a916d186c6f146fdf11475197433f589d 591796 mx-tweak_22.8mx21_amd64.deb
+Files:
+ 3cff052dba877fc3ecadd6af05c65af0 1174 admin optional mx-tweak_22.8mx21.dsc
+ 4031399f61bb44da8956846592a8d866 498924 admin optional mx-tweak_22.8mx21.tar.xz
+ fdb94f83ff69b290c25b751bf735a8f4 10242 admin optional mx-tweak_22.8mx21_amd64.buildinfo
+ b230a9167f67c6bd27fe81be99909624 591796 admin optional mx-tweak_22.8mx21_amd64.deb
+
+-----BEGIN PGP SIGNATURE-----
+
+iQFHBAEBCgAxFiEE8ndToY6S45N+YzXncJOMeAZ57pgFAmLps6wTHGFkcmlhbkBt
+eGxpbnV4Lm9yZwAKCRBwk4x4BnnumGBTCADDyV+YVLD3hpFBrsL2xrviIw7vYANZ
+oOvMpXQ5ZxAjJqq3k1pVdqkg421VFFbKw108I4d5IhM4o/hdTkM8CxnGcnaHKg1l
+xfcCkI5KadHLyKCrpT+7rIia2R/iu9TZYf4lR1Vov1W/V5RgbnZNlPyjG4lyYwfK
+54QQ3ZEa2u/J8bTz8BLR6W6O0FcGR4wS2Z26uuBnPVWGSC8rP0d1ZRpJgNrTcKLL
+YuvhGa4syaqAUjRHFpbPyP2PY04dm43w/0n7tWQH/3r3l2bIYDOekPKK23Cy2HNM
+W1ZyewStW2SQj/CFzXqTfDrB2PUQA5tLxBNKcg2opZ6a6t/1R9rPb9CO
+=daUs
+-----END PGP SIGNATURE-----

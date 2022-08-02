@@ -13,6 +13,7 @@ TEMPLATE = app
 DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += main.cpp\
+    about.cpp \
         defaultlook.cpp \
     xfwm_compositor_settings.cpp \
     window_buttons.cpp \
@@ -21,7 +22,9 @@ SOURCES += main.cpp\
     brightness_small.cpp
 
 HEADERS  += defaultlook.h \
+    about.h \
     cmd.h \
+    version.h \
     xfwm_compositor_settings.h \
     window_buttons.h \
     theming_to_tweak.h \

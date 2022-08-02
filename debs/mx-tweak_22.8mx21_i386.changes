@@ -1,0 +1,25 @@
+Format: 1.8
+Date: Tue, 02 Aug 2022 19:12:44 -0400
+Source: mx-tweak
+Binary: mx-tweak
+Architecture: i386
+Version: 22.8mx21
+Distribution: mx
+Urgency: medium
+Maintainer: dolphinoracle <dolphinoracle@gmail.com>
+Changed-By: Adrian <adrian@mxlinux.org>
+Description:
+ mx-tweak   - MX Tweak
+Changes:
+ mx-tweak (22.8mx21) mx; urgency=medium
+ .
+   * Remove mx-viewer dependency
+Checksums-Sha1:
+ 0e3abcebabd2fe6dab336704ff6deb570479f89c 9392 mx-tweak_22.8mx21_i386.buildinfo
+ 41d62736faafc49837b44727deb4d6b4b6948edc 600416 mx-tweak_22.8mx21_i386.deb
+Checksums-Sha256:
+ ed33b1c7f6de66f8caed727ba65586b6e0610d352de242d7a03ee53c4751cf74 9392 mx-tweak_22.8mx21_i386.buildinfo
+ 828eb5c0d4aebc624409722f69898909a04dc5f38a35021aa6656406b7a7fc2c 600416 mx-tweak_22.8mx21_i386.deb
+Files:
+ 43478ba6ff05ec26d78a9038e1a8fd14 9392 admin optional mx-tweak_22.8mx21_i386.buildinfo
+ 5de63db9f5d08ddc23359421f0b82fa2 600416 admin optional mx-tweak_22.8mx21_i386.deb

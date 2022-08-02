@@ -33,12 +33,14 @@
 #include <QMessageBox>
 #include <QStringList>
 
+#include "about.h"
 #include "brightness_small.h"
 #include "cmd.h"
 #include "defaultlook.h"
 #include "remove_user_theme_set.h"
 #include "theming_to_tweak.h"
 #include "ui_defaultlook.h"
+#include "version.h"
 #include "window_buttons.h"
 #include "xfwm_compositor_settings.h"
 
@@ -603,17 +605,13 @@ void defaultlook::on_buttonCancel_clicked()
 void defaultlook::on_buttonAbout_clicked()
 {
     this->hide();
-    QMessageBox msgBox(QMessageBox::NoIcon,
-                       tr("About MX Tweak"), "<p align=\"center\"><b><h2>" +
-                       tr("MX Tweak") + "</h2></b></p><p align=\"center\">" + tr("Version: ") + version + "</p><p align=\"center\"><h3>" +
+    displayAboutMsgBox(tr("About MX Tweak"),
+                       "<p align=\"center\"><b><h2>" + tr("MX Tweak") + "</h2></b></p><p align=\"center\">" +
+                       tr("Version: ") + VERSION + "</p><p align=\"center\"><h3>" +
                        tr("App for quick default ui theme changes and tweaks") +
-                       R"(</h3></p><p align="center"><a href="http://mxlinux.org">http://mxlinux.org</a><br /></p><p align="center">)" +
-                       tr("Copyright (c) MX Linux") + "<br /><br /></p>");
-    msgBox.addButton(tr("License"), QMessageBox::AcceptRole);
-    msgBox.addButton(tr("Cancel"), QMessageBox::NoRole);
-    if (msgBox.exec() == QMessageBox::AcceptRole) {
-        system("mx-viewer file:///usr/share/doc/mx-tweak/license.html '" + tr("MX Tweak").toUtf8() + " " + tr("License").toUtf8() + "'");
-    }
+                       "</h3></p><p align=\"center\"><a href=\"http://mxlinux.org\">http://mxlinux.org</a><br /></p>"
+                       "<p align=\"center\">" + tr("Copyright (c) MX Linux") + "<br /><br /></p>",
+                       QStringLiteral("/usr/share/doc/mx-tweak/license.html"), tr("%1 License").arg(this->windowTitle()));
     this->show();
 }
 
@@ -627,9 +625,7 @@ void defaultlook::on_buttonHelp_clicked()
     if (lang.startsWith(QLatin1String("fr"))) {
         url = QStringLiteral("https://mxlinux.org/wiki/help-files/help-tweak-ajustements");
     }
-
-    QString cmd = QStringLiteral("mx-viewer %1 '%2' &").arg(url, tr("MX Tweak"));
-    system(cmd.toUtf8());
+    displayDoc(url, tr("%1 Help").arg(tr("MX Tweak")));
 }
 
 void defaultlook::message() const
