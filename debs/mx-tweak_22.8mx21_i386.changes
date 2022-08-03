@@ -15,11 +15,11 @@ Changes:
  .
    * Remove mx-viewer dependency
 Checksums-Sha1:
- 0e3abcebabd2fe6dab336704ff6deb570479f89c 9392 mx-tweak_22.8mx21_i386.buildinfo
- 41d62736faafc49837b44727deb4d6b4b6948edc 600416 mx-tweak_22.8mx21_i386.deb
+ 8ab4b8d6baba2d2f609f0f74ea53d9a163b2dade 9392 mx-tweak_22.8mx21_i386.buildinfo
+ 2090bd36289c18828c4338b092a6c8ce0590b5f0 600216 mx-tweak_22.8mx21_i386.deb
 Checksums-Sha256:
- ed33b1c7f6de66f8caed727ba65586b6e0610d352de242d7a03ee53c4751cf74 9392 mx-tweak_22.8mx21_i386.buildinfo
- 828eb5c0d4aebc624409722f69898909a04dc5f38a35021aa6656406b7a7fc2c 600416 mx-tweak_22.8mx21_i386.deb
+ 2b1f8276a370fb1d1d288197c05d7d0f9cb58252feaf4af6600e68ca066181c3 9392 mx-tweak_22.8mx21_i386.buildinfo
+ 0a6498ac780e712108389fc8123520fc265518587a0164e0e323d6ef4068ef6c 600216 mx-tweak_22.8mx21_i386.deb
 Files:
- 43478ba6ff05ec26d78a9038e1a8fd14 9392 admin optional mx-tweak_22.8mx21_i386.buildinfo
- 5de63db9f5d08ddc23359421f0b82fa2 600416 admin optional mx-tweak_22.8mx21_i386.deb
+ c66db290651949d3746e9c8a5d473a89 9392 admin optional mx-tweak_22.8mx21_i386.buildinfo
+ 060e7106c7c514affb2eca93859ae023 600216 admin optional mx-tweak_22.8mx21_i386.deb

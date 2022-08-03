@@ -620,7 +620,7 @@ void defaultlook::on_buttonHelp_clicked()
     QLocale locale;
     QString lang = locale.bcp47Name();
 
-    QString url = QStringLiteral("file:///usr/share/doc/mx-tweak/help/mx-tweak.html");
+    QString url = QStringLiteral("file:///usr/share/doc/mx-tweak/mx-tweak.html");
 
     if (lang.startsWith(QLatin1String("fr"))) {
         url = QStringLiteral("https://mxlinux.org/wiki/help-files/help-tweak-ajustements");
