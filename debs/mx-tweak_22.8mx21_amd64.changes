@@ -18,29 +18,29 @@ Changes:
  .
    * Remove mx-viewer dependency
 Checksums-Sha1:
- c2f577db6f40fed7d355329f84496d20d4a76a0b 1174 mx-tweak_22.8mx21.dsc
- ea8d111cc4409e239bec642e710ced57e3b7d705 498924 mx-tweak_22.8mx21.tar.xz
- 1ef000e744790bc22b59ed5c87d0c07a207df7a2 10242 mx-tweak_22.8mx21_amd64.buildinfo
- 2e9a1a018f986a71df2fd4584bae5e1a656425a7 591796 mx-tweak_22.8mx21_amd64.deb
+ 3cc50d547fe74ade753602e7bc80792b0aae533b 1174 mx-tweak_22.8mx21.dsc
+ 97124215a7ab4d05a1d6d05417e5f59a44c14264 498932 mx-tweak_22.8mx21.tar.xz
+ aa93941f4ce69946b4eea41e960d05a9ca99c424 10242 mx-tweak_22.8mx21_amd64.buildinfo
+ 55ca8fe30864a38bcc6229446b7fc721e428aa2e 591212 mx-tweak_22.8mx21_amd64.deb
 Checksums-Sha256:
- 818afaaeeff9ae6c9e71a064a303c3493e14bcb1a8361882e71f8c7fda6f6d7d 1174 mx-tweak_22.8mx21.dsc
- ca336165b0d46d5f368ea2d2245ad2233c7badb1234d499c3eb75919ca769a9e 498924 mx-tweak_22.8mx21.tar.xz
- 8eb19670167a7ba7a305749eae5cc82f04d34c80d7aa1d4b734109c9a2bf41a4 10242 mx-tweak_22.8mx21_amd64.buildinfo
- 7565cd19138451ef0f87d348bf338c8a916d186c6f146fdf11475197433f589d 591796 mx-tweak_22.8mx21_amd64.deb
+ d645eed6457ece0159a1335fb50a1904a9ef605990e71596508f7714d6b91eda 1174 mx-tweak_22.8mx21.dsc
+ f7d1d2e864821865d5ecc32c2a28dc9bed9b89bc47375726ce8154fe456e0005 498932 mx-tweak_22.8mx21.tar.xz
+ 0307581a2588a5b79cbae93f1986d9b63213d71e543b81dcf943dd27ec7a8b7d 10242 mx-tweak_22.8mx21_amd64.buildinfo
+ 6d56bf73273b61e6e5f1fe3079d0fc17c49aaf234da234065d74675bf6047b05 591212 mx-tweak_22.8mx21_amd64.deb
 Files:
- 3cff052dba877fc3ecadd6af05c65af0 1174 admin optional mx-tweak_22.8mx21.dsc
- 4031399f61bb44da8956846592a8d866 498924 admin optional mx-tweak_22.8mx21.tar.xz
- fdb94f83ff69b290c25b751bf735a8f4 10242 admin optional mx-tweak_22.8mx21_amd64.buildinfo
- b230a9167f67c6bd27fe81be99909624 591796 admin optional mx-tweak_22.8mx21_amd64.deb
+ 3767b71c87f73c6fdce33a67d1dc3f8f 1174 admin optional mx-tweak_22.8mx21.dsc
+ 5ebd9271ac1f5326a7383a6c91cfac45 498932 admin optional mx-tweak_22.8mx21.tar.xz
+ c7b896e16c4b963bfac7a579b9eeec76 10242 admin optional mx-tweak_22.8mx21_amd64.buildinfo
+ aa8c307f80f0ebc97d4e0ca39122816a 591212 admin optional mx-tweak_22.8mx21_amd64.deb
 
 -----BEGIN PGP SIGNATURE-----
 
-iQFHBAEBCgAxFiEE8ndToY6S45N+YzXncJOMeAZ57pgFAmLps6wTHGFkcmlhbkBt
-eGxpbnV4Lm9yZwAKCRBwk4x4BnnumGBTCADDyV+YVLD3hpFBrsL2xrviIw7vYANZ
-oOvMpXQ5ZxAjJqq3k1pVdqkg421VFFbKw108I4d5IhM4o/hdTkM8CxnGcnaHKg1l
-xfcCkI5KadHLyKCrpT+7rIia2R/iu9TZYf4lR1Vov1W/V5RgbnZNlPyjG4lyYwfK
-54QQ3ZEa2u/J8bTz8BLR6W6O0FcGR4wS2Z26uuBnPVWGSC8rP0d1ZRpJgNrTcKLL
-YuvhGa4syaqAUjRHFpbPyP2PY04dm43w/0n7tWQH/3r3l2bIYDOekPKK23Cy2HNM
-W1ZyewStW2SQj/CFzXqTfDrB2PUQA5tLxBNKcg2opZ6a6t/1R9rPb9CO
-=daUs
+iQFHBAEBCgAxFiEE8ndToY6S45N+YzXncJOMeAZ57pgFAmLp0VMTHGFkcmlhbkBt
+eGxpbnV4Lm9yZwAKCRBwk4x4BnnumEvdB/9MqjRn0tNelWiVE6PaTX0bqs2ahZ+V
+BsL9CVv7pXYXDB4nji672ZkiuSRthu/u2PSXvST7X2y42h/hT9j0SW0sJSviTBlR
+nTEFbgduaEHRpz2PCO5RUH/mvagmAN0qz2907E0bkPrcGcy8tvhQyfCx15FZQDKn
+GpR0V7vqAYqP+1KvSKuojL7sh20894qR2avvb4ykSf2SPxqhO7LcFv6HMcBblhyi
+Bcrdy+89O8cO1QsnXjFhrQs/EAzTRT257X3qyOtGGKLvIB84qMoz00yzlcMMEyr9
+Aam7DYjySA11nPl7DrckKlAau35/g+mlrqXkfidURAGTsCLrI9MkCu7y
+=xUcR
 -----END PGP SIGNATURE-----
