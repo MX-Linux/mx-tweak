@@ -107,7 +107,7 @@ public:
     void setuptheme();
     void setupthemechoosers();
     void populatethemelists(const QString &value);
-    static void settheme(const QString &type, const QString &theme);
+    static void settheme(const QString &type, const QString &theme, const QString &desktop);
     void setupEtc();
     void setupFluxbox();
     void setupPlasma();
@@ -220,7 +220,7 @@ private slots:
     void on_combofluxtoolbarlocatoin_currentIndexChanged(int index);
     void on_horizontalSliderBrightness_valueChanged(int value);
     void on_horizsliderhardwarebacklight_actionTriggered(int action);
-    void on_listWidgetTheme_currentTextChanged(const QString &currentText) const;
+    void on_listWidgetTheme_currentTextChanged(const QString &currentText);
     void on_listWidgetWMtheme_currentTextChanged(const QString &currentText) const;
     void on_listWidgeticons_currentTextChanged(const QString &currentText) const;
     void on_pushButtonPreview_clicked();
@@ -242,6 +242,11 @@ private slots:
     void on_checkBoxFileDialogActionButtonsPosition_clicked();
 
     void on_checkBoxbluetoothAutoEnable_clicked();
+
+
+    void on_checkBoxFluxShowToolbar_clicked();
+
+    void on_buttonManageTint2_clicked();
 
 private:
     Ui::defaultlook *ui;
