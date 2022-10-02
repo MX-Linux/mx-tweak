@@ -2,6 +2,30 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="ja">
 <context>
+    <name>QObject</name>
+    <message>
+        <location filename="../about.cpp" line="40"/>
+        <source>License</source>
+        <translation type="unfinished">ライセンス</translation>
+    </message>
+    <message>
+        <location filename="../about.cpp" line="41"/>
+        <location filename="../about.cpp" line="51"/>
+        <source>Changelog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../about.cpp" line="42"/>
+        <source>Cancel</source>
+        <translation type="unfinished">キャンセル</translation>
+    </message>
+    <message>
+        <location filename="../about.cpp" line="63"/>
+        <source>&amp;Close</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>brightness_small</name>
     <message>
         <location filename="../brightness_small.ui" line="14"/>
@@ -54,12 +78,11 @@
     <name>defaultlook</name>
     <message>
         <location filename="../defaultlook.ui" line="20"/>
-        <location filename="../defaultlook.cpp" line="55"/>
-        <location filename="../defaultlook.cpp" line="74"/>
-        <location filename="../defaultlook.cpp" line="608"/>
-        <location filename="../defaultlook.cpp" line="615"/>
-        <location filename="../defaultlook.cpp" line="631"/>
-        <location filename="../defaultlook.cpp" line="641"/>
+        <location filename="../defaultlook.cpp" line="57"/>
+        <location filename="../defaultlook.cpp" line="76"/>
+        <location filename="../defaultlook.cpp" line="609"/>
+        <location filename="../defaultlook.cpp" line="628"/>
+        <location filename="../defaultlook.cpp" line="637"/>
         <source>MX Tweak</source>
         <translation>MX Tweak</translation>
     </message>
@@ -714,63 +737,70 @@
         <translation>Alt+N</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="56"/>
+        <location filename="../defaultlook.cpp" line="58"/>
         <source>--display switch only valid for Xfce</source>
         <translation>--Xfce専用のスイッチを表示</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="607"/>
+        <location filename="../defaultlook.cpp" line="608"/>
         <source>About MX Tweak</source>
         <translation>MX Tweak について</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="608"/>
+        <location filename="../defaultlook.cpp" line="610"/>
         <source>Version: </source>
         <translation>バージョン: </translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="609"/>
+        <location filename="../defaultlook.cpp" line="611"/>
         <source>App for quick default ui theme changes and tweaks</source>
         <translation>既定の UI テーマの変更や調整を素早く行えるアプリ</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="611"/>
+        <location filename="../defaultlook.cpp" line="613"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="612"/>
-        <location filename="../defaultlook.cpp" line="615"/>
+        <location filename="../defaultlook.cpp" line="614"/>
+        <source>%1 License</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.cpp" line="628"/>
+        <source>%1 Help</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>License</source>
-        <translation>ライセンス</translation>
+        <translation type="vanished">ライセンス</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="613"/>
         <source>Cancel</source>
-        <translation>キャンセル</translation>
+        <translation type="vanished">キャンセル</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="642"/>
+        <location filename="../defaultlook.cpp" line="638"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
         <translation>完了しました！ Firefox では変更を有効にするため再起動が必要な場合があります</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="809"/>
+        <location filename="../defaultlook.cpp" line="805"/>
         <source>Panel settings</source>
         <translation>パネルの設定</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="810"/>
+        <location filename="../defaultlook.cpp" line="806"/>
         <source>Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
         <translation>現在のパネル設定は、ホームフォルダ (~/) 以下にある .restore という隠しフォルダにバックアップされました</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1457"/>
+        <location filename="../defaultlook.cpp" line="1453"/>
         <source>settings</source>
         <translation>設定</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1797"/>
+        <location filename="../defaultlook.cpp" line="1793"/>
         <source>Choose a theme set</source>
         <translation>テーマセットを選択</translation>
     </message>
