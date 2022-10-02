@@ -63,6 +63,8 @@ defaultlook::defaultlook(QWidget *parent, const QStringList &args) :
         verbose = true;
     }
     setup();
+
+
 }
 
 defaultlook::~defaultlook()
@@ -104,18 +106,33 @@ void defaultlook::setup()
 
     //setup fluxbox
     else if (checkFluxbox()) {
+        setuptheme();
         setupFluxbox();
+        ui->comboTheme->hide();
+        ui->label->hide();
+        ui->buttonThemeApply->hide();
+        ui->buttonThemeUndo->hide();
+        ui->pushButtonPreview->hide();
+        ui->pushButtonRemoveUserThemeSet->hide();
         ui->tabWidget->removeTab(Tab::Plasma);
+        ui->tabWidget->removeTab(Tab::Panel);
         ui->label_4->hide();
         ui->label_5->hide();
         ui->label_6->hide();
         ui->label_7->hide();
+        ui->listWidgetTheme->hide();
+        ui->listWidgeticons->hide();
+        ui->label_28->hide();
+        ui->label_30->hide();
         ui->toolButtonXFCEAppearance->hide();
         ui->toolButtonXFCEWMsettings->hide();
         ui->toolButtonXFCEpanelSettings->hide();
-        ui->tabWidget->setCurrentIndex(Tab::Fluxbox);
-        for (int i = 4; i >= 0; --i)
-            ui->tabWidget->removeTab(i);
+        ui->tabWidget->removeTab(2);
+        ui->tabWidget->removeTab(2);
+        ui->tabWidget->removeTab(1);
+        ui->tabWidget->setCurrentIndex(1);
+
+
     }
 
     //setup plasma
@@ -641,15 +658,15 @@ void defaultlook::message() const
 
 bool defaultlook::checkXFCE() const
 {
-    QString test = runCmd(QStringLiteral("echo $XDG_CURRENT_DESKTOP")).output;
-    if (verbose) qDebug() << "current desktop test is " << test;
-    return (test == QLatin1String("XFCE"));
+    QString test = runCmd(QStringLiteral("pgrep xfce4-session")).output;
+    if (verbose) qDebug() << "current xfce desktop test is " << test;
+    return (!test.isEmpty());
 }
 
 bool defaultlook::checkFluxbox() const
 {
     QString test = runCmd(QStringLiteral("pgrep fluxbox")).output;
-    if (verbose) qDebug() << test;
+    if (verbose) qDebug() << "current fluxbox test is" << test;
     return (!test.isEmpty());
 }
 
@@ -974,7 +991,7 @@ void defaultlook::setupPlasma()
 
     //setup singleclick
     QString singleclick = runCmd(QStringLiteral("kreadconfig5 --group KDE --key SingleClick")).output;
-    ui->checkBoxPlasmaSingleClick->setChecked(singleclick == QLatin1String("false"));
+    ui->checkBoxPlasmaSingleClick->setChecked(singleclick != QLatin1String("false"));
 
     //get taskmanager ID and setup showOnlyCurrentDesktop
     plasmataskmanagerID = runCmd(QStringLiteral("grep --max-count 1 -B 2 taskmanager $HOME/.config/plasma-org.kde.plasma.desktop-appletsrc |grep Containment")).output;
@@ -1108,6 +1125,13 @@ void defaultlook::setupFluxbox()
         ui->checkboxfluxtoolbarautohide->setChecked(true);
     } else {
         ui->checkboxfluxtoolbarautohide->setChecked(false);
+    }
+    QString toolbarvisible = runCmd(QStringLiteral("grep session.screen0.toolbar.visible: $HOME/.fluxbox/init")).output.section(QStringLiteral(":"),1,1).trimmed();
+    if (verbose) qDebug() << "Toolbar visible" << toolbarautohide;
+    if (toolbarvisible == QLatin1String("true")) {
+        ui->checkBoxFluxShowToolbar->setChecked(true);
+    } else {
+        ui->checkBoxFluxShowToolbar->setChecked(false);
     }
     //toolbar location
     QString toolbarlocation = runCmd(QStringLiteral("grep screen0.toolbar.placement $HOME/.fluxbox/init")).output.section(QStringLiteral(":"),1,1).trimmed();
@@ -1267,29 +1291,34 @@ void defaultlook::setuptheme()
     ui->checkHexchat->hide();
 
     populatethemelists(QStringLiteral("gtk-3.0"));
-    populatethemelists(QStringLiteral("xfwm4"));
     populatethemelists(QStringLiteral("icons"));
 
+    if (checkXFCE()){
+         populatethemelists(QStringLiteral("xfwm4"));
+    } else if (checkFluxbox()) {
+         populatethemelists(QStringLiteral("fluxbox"));
+    }
+//dead code
     //only enable options that make sense
 
     // check theme overrides
 
-    QString home_path = QDir::homePath();
-    QFileInfo file(home_path + "/.config/FirefoxDarkThemeOverride.check");
-    if (file.exists()) {
-        ui->checkFirefox->setChecked(true);
-    }
+//    QString home_path = QDir::homePath();
+//    QFileInfo file(home_path + "/.config/FirefoxDarkThemeOverride.check");
+//    if (file.exists()) {
+//        ui->checkFirefox->setChecked(true);
+//    }
 
-    //check status of hex chat dark tweak
-    QFileInfo file_hexchat(home_path + "/.config/hexchat/hexchat.conf");
-    if (file_hexchat.exists()) {
-        //check for absolutePath()setting
-        QString code = runCmd("grep 'gui_input_style = 0' " + file_hexchat.absoluteFilePath()).output;
-        if (verbose) qDebug() << "hexchat command :" << code;
-        if (code == QLatin1String("gui_input_style = 0")) {
-            ui->checkHexchat->setChecked(true);
-        }
-    }
+//    //check status of hex chat dark tweak
+//    QFileInfo file_hexchat(home_path + "/.config/hexchat/hexchat.conf");
+//    if (file_hexchat.exists()) {
+//        //check for absolutePath()setting
+//        QString code = runCmd("grep 'gui_input_style = 0' " + file_hexchat.absoluteFilePath()).output;
+//        if (verbose) qDebug() << "hexchat command :" << code;
+//        if (code == QLatin1String("gui_input_style = 0")) {
+//            ui->checkHexchat->setChecked(true);
+//        }
+//    }
 }
 
 void defaultlook::setupCompositor()
@@ -2597,6 +2626,15 @@ QString defaultlook::getVersion(const QString &name)
 
 void defaultlook::on_pushButtonSettingsToThemeSet_clicked()
 {
+    if (checkFluxbox()) {
+        if (QFile("/usr/bin/mxfb-look").exists()){
+            this->hide();
+            system("/usr/bin/mxfb-look");
+            setuptheme();
+            this->show();
+            return;
+        }
+    }
     QString fileName;
     auto *dialog = new theming_to_tweak;
     int userInput = dialog->exec();
@@ -2805,6 +2843,15 @@ void defaultlook::on_ApplyFluxboxResets_clicked()
         value = QStringLiteral("false");
     }
     initline = runCmd(QStringLiteral("grep screen0.toolbar.autoHide  $HOME/.fluxbox/init")).output;
+    fluxboxchangeinitvariable(initline,value);
+
+    //setup toolbar visible
+    if (ui->checkBoxFluxShowToolbar->isChecked()) {
+        value = QStringLiteral("true");
+    } else {
+        value = QStringLiteral("false");
+    }
+    initline = runCmd(QStringLiteral("grep session.screen0.toolbar.visible  $HOME/.fluxbox/init")).output;
     fluxboxchangeinitvariable(initline,value);
 
     //setup toolbar location
@@ -3096,22 +3143,39 @@ void defaultlook::populatethemelists(const QString &value)
         themes.append(runCmd("find $HOME/.themes/*/" + value + " -maxdepth 0 2>/dev/null|cut -d\"/\" -f5").output);
         themes.append("\n");
         themes.append(runCmd("find $HOME/.local/share/themes/*/" + value + " -maxdepth 0 2>/dev/null|cut -d\"/\" -f7").output);
-    } else {
+    }
+
+    if (value == QLatin1String("icons")){
         themes = runCmd(QStringLiteral("find /usr/share/icons/*/index.theme -maxdepth 1 2>/dev/null|cut -d\"/\" -f5")).output;
         themes.append("\n");
         themes.append(runCmd(QStringLiteral("find $HOME/.icons/*/index.theme -maxdepth 1 2>/dev/null|cut -d\"/\" -f5")).output);
         themes.append("\n");
         themes.append(runCmd(QStringLiteral("find $HOME/.local/share/icons/*/index.theme -maxdepth 1 2>/dev/null|cut -d\"/\" -f7")).output);
     }
+
+    if ( value == QLatin1String("fluxbox")) {
+        themes = runCmd("find /usr/share/fluxbox/styles/ -maxdepth 1 2>/dev/null |cut -d\"/\" -f6").output;
+        themes.append("\n");
+        themes.append(runCmd("find $HOME/.fluxbox/styles/ -maxdepth 1 2>/dev/null |cut -d\"/\" -f6").output);
+        themes.append("\n");
+    }
+
+
+
     themelist = themes.split(QStringLiteral("\n"));
     themelist.removeDuplicates();
     themelist.removeAll(QLatin1String(""));
     themelist.sort(Qt::CaseInsensitive);
+    QString current;
     if ( value == QLatin1String("gtk-3.0") ) {
         ui->listWidgetTheme->clear();
         ui->listWidgetTheme->addItems(themelist);
         //set current
-        QString current = runCmd(QStringLiteral("xfconf-query -c xsettings -p /Net/ThemeName")).output;
+        if (checkXFCE()){
+            current = runCmd(QStringLiteral("xfconf-query -c xsettings -p /Net/ThemeName")).output;
+        } else if (checkFluxbox()){
+            current = runCmd(QStringLiteral("grep gtk-theme-name ~/.config/gtk-3.0/settings.ini | cut -d\"=\" -f2")).output;
+        }
         //index of theme in list
         ui->listWidgetTheme->setCurrentRow(themelist.indexOf(current));
     }
@@ -3119,7 +3183,15 @@ void defaultlook::populatethemelists(const QString &value)
 
         ui->listWidgetWMtheme->clear();
         ui->listWidgetWMtheme->addItems(themelist);
-        QString current = runCmd(QStringLiteral("xfconf-query -c xfwm4 -p /general/theme")).output;
+        current = runCmd(QStringLiteral("xfconf-query -c xfwm4 -p /general/theme")).output;
+        ui->listWidgetWMtheme->setCurrentRow(themelist.indexOf(current));
+    }
+
+    if ( value == QLatin1String("fluxbox")) {
+
+        ui->listWidgetWMtheme->clear();
+        ui->listWidgetWMtheme->addItems(themelist);
+        QString current = runCmd(QStringLiteral("grep styleFile $HOME/.fluxbox/init |grep -v ^# | cut -d\"/\" -f6")).output;
         ui->listWidgetWMtheme->setCurrentRow(themelist.indexOf(current));
     }
 
@@ -3139,48 +3211,95 @@ void defaultlook::populatethemelists(const QString &value)
         themelist.removeAll(QStringLiteral("hicolor"));
         ui->listWidgeticons->clear();
         ui->listWidgeticons->addItems(themelist);
-        QString current = runCmd(QStringLiteral("xfconf-query -c xsettings -p /Net/IconThemeName")).output;
+        //current icon set
+        if (checkXFCE()){
+            current = runCmd(QStringLiteral("xfconf-query -c xsettings -p /Net/IconThemeName")).output;
+        } else if (checkFluxbox()){
+            current = runCmd(QStringLiteral("grep gtk-icon-theme-name $HOME/.config/gtk-3.0/settings.ini |grep -v ^# | cut -d\"=\" -f2")).output;
+        }
         ui->listWidgeticons->setCurrentRow(themelist.indexOf(current));
     }
 
     themeflag = true;
 }
 
-void defaultlook::settheme(const QString &type, const QString &theme)
+void defaultlook::settheme(const QString &type, const QString &theme, const QString &desktop)
 {   //set new theme
     QString cmd;
-    if ( type == QLatin1String("gtk-3.0") ) {
-        cmd = "xfconf-query -c xsettings -p /Net/ThemeName -s \"" + theme + "\"";
-    }
-    if ( type == QLatin1String("xfwm4") ) {
-        cmd = "xfconf-query -c xfwm4 -p /general/theme -s \"" + theme + "\"";
-    }
+    if ( desktop == "XFCE" ) {
+        if ( type == QLatin1String("gtk-3.0") ) {
+            cmd = "xfconf-query -c xsettings -p /Net/ThemeName -s \"" + theme + "\"";
+        }
+        if ( type == QLatin1String("xfwm4") ) {
+            cmd = "xfconf-query -c xfwm4 -p /general/theme -s \"" + theme + "\"";
+        }
 
-    if ( type == QLatin1String("icon") ) {
-        cmd = "xfconf-query -c xsettings -p /Net/IconThemeName -s \"" + theme + "\"";
+        if ( type == QLatin1String("icons") ) {
+            cmd = "xfconf-query -c xsettings -p /Net/IconThemeName -s \"" + theme + "\"";
+        }
+    } else if ( desktop == "fluxbox" ){
+        QString home_path = QDir::homePath();
+        if ( type == QLatin1String("gtk-3.0") ) {
+            cmd = "sed -i 's/gtk-theme-name=.*/gtk-theme-name=" + theme + "/' $HOME/.config/gtk-3.0/settings.ini";
+            system(cmd.toUtf8());
+            cmd = "yad --form --title \"Preview\"  --button:gtk-ok --field=Button:FBTN --field=Combobox:CBE --field=Checkbox:CHK --close-on-unfocus";
+            system(cmd.toUtf8());
+            cmd = "sed -i 's/gtk-theme-name=\".*/gtk-theme-name=\"" + theme + "\"/' $HOME/.gtkrc-2.0";
+        }
+        if ( type == QLatin1String("fluxbox") ) {
+            QString filepath = home_path + "/.fluxbox/styles/" + theme;
+            if (QFile(filepath).exists()){
+                home_path.replace("/", "\\/");
+                cmd = "sed -i 's/session.styleFile:.*/session.styleFile: " + home_path + "\\/.fluxbox\\/styles\\/" + theme + "/' $HOME/.fluxbox/init && fluxbox-remote reconfigure";
+            } else {
+                cmd = "sed -i 's/session.styleFile:.*/session.styleFile: \\/usr\\/share\\/fluxbox\\/styles\\/" + theme + "/' $HOME/.fluxbox/init && fluxbox-remote reconfigure";
+            }
+        }
+        //for fluxbox, edit ~/.config/gtk-3.0/settings.ini and ~/.gtkrc-2.0 has quotes
+        if ( type == QLatin1String("icons") ) {
+            cmd = "sed -i 's/gtk-icon-theme-name=.*/gtk-icon-theme-name=" + theme + "/' $HOME/.config/gtk-3.0/settings.ini";
+            system(cmd.toUtf8());
+            cmd = cmd = "yad --form --title \"Preview\"  --button:gtk-ok --field=Button:FBTN --field=Combobox:CBE --field=Checkbox:CHK --close-on-unfocus";
+            system(cmd.toUtf8());
+            cmd = "sed -i 's/gtk-icon-theme-name=\".*/gtk-icon-theme-name=\"" + theme + "\"/' $HOME/.gtkrc-2.0";
+        }        
     }
-
     system(cmd.toUtf8());
 }
 
-void defaultlook::on_listWidgetTheme_currentTextChanged(const QString &currentText) const
+void defaultlook::on_listWidgetTheme_currentTextChanged(const QString &currentText)
 {
     if ( themeflag ) {
-        settheme(QStringLiteral("gtk-3.0"), currentText);
+        QString desktop;
+        if (checkXFCE()){
+            settheme(QStringLiteral("gtk-3.0"), currentText, "XFCE");
+        } else if (checkFluxbox()){
+            settheme(QStringLiteral("gtk-3.0"), currentText, "fluxbox");
+        }
     }
 }
 
 void defaultlook::on_listWidgetWMtheme_currentTextChanged(const QString &currentText) const
 {
     if ( themeflag ) {
-        settheme(QStringLiteral("xfwm4"), currentText);
+        QString desktop;
+        if (checkXFCE()){
+            settheme(QStringLiteral("xfwm4"), currentText, "XFCE");
+        } else if (checkFluxbox()){
+            settheme(QStringLiteral("fluxbox"), currentText, "fluxbox");
+        }
     }
 }
+
 
 void defaultlook::on_listWidgeticons_currentTextChanged(const QString &currentText) const
 {
     if ( themeflag ) {
-        settheme(QStringLiteral("icon"), currentText);
+        if (checkXFCE()){
+            settheme(QStringLiteral("icons"), currentText, "XFCE");
+        } else if (checkFluxbox()){
+            settheme(QStringLiteral("icons"), currentText, "fluxbox");
+        }
     }
 }
 
@@ -3225,4 +3344,17 @@ void defaultlook::on_checkBoxbluetoothAutoEnable_clicked()
         bluetoothautoenableflag = false;
     }
     qDebug() << "bluetooth flag is " << bluetoothautoenableflag;
+}
+
+void defaultlook::on_checkBoxFluxShowToolbar_clicked()
+{
+    ui->ApplyFluxboxResets->setEnabled(true);
+}
+
+void defaultlook::on_buttonManageTint2_clicked()
+{
+    this->hide();
+    system("/usr/bin/mxfb-tint2-manager");
+    this->show();
+
 }

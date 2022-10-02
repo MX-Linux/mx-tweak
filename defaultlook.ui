@@ -149,7 +149,7 @@
       <enum>QTabWidget::North</enum>
      </property>
      <property name="currentIndex">
-      <number>7</number>
+      <number>5</number>
      </property>
      <widget class="QWidget" name="Panel">
       <attribute name="title">
@@ -1136,13 +1136,6 @@
            </property>
           </widget>
          </item>
-         <item row="11" column="0">
-          <widget class="QPushButton" name="ApplyFluxboxResets">
-           <property name="text">
-            <string>Apply</string>
-           </property>
-          </widget>
-         </item>
          <item row="9" column="0">
           <widget class="QLabel" name="label_slit_location">
            <property name="text">
@@ -1376,6 +1369,30 @@
             </size>
            </property>
           </spacer>
+         </item>
+         <item row="7" column="1">
+          <widget class="QCheckBox" name="checkBoxFluxShowToolbar">
+           <property name="text">
+            <string>Show Toolbar</string>
+           </property>
+          </widget>
+         </item>
+         <item row="11" column="0" colspan="6">
+          <widget class="QPushButton" name="ApplyFluxboxResets">
+           <property name="text">
+            <string>Apply</string>
+           </property>
+          </widget>
+         </item>
+         <item row="9" column="3" colspan="2">
+          <widget class="QPushButton" name="buttonManageTint2">
+           <property name="text">
+            <string>Mange Tint2 Panel</string>
+           </property>
+           <property name="icon">
+            <iconset theme="systemtray"/>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
