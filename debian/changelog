@@ -1,3 +1,10 @@
+mx-tweak (22.10.01mx21) mx; urgency=medium
+
+  * fluxbox themer function, show/hide fluxbox toolbar
+  * KDE single click fix 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 01 Oct 2022 22:43:18 -0400
+
 mx-tweak (22.8mx21) mx; urgency=medium
 
   * Remove mx-viewer dependency
