@@ -573,8 +573,9 @@ void defaultlook::fliptovertical()
 
 void defaultlook::on_buttonApply_clicked()
 {
-    ui->buttonApply->setEnabled(false);
-
+    if (! validateflag){
+        ui->buttonApply->setEnabled(false);
+    }
     //backups and default panel
     if (ui->radioDefaultPanel->isChecked()) {
         restoreDefaultPanel();
@@ -610,7 +611,9 @@ void defaultlook::on_buttonApply_clicked()
         }
         runCmd(QStringLiteral("sleep .5"));
     }
-    setuppanel();
+    if (! validateflag ){
+        setuppanel();
+    }
 }
 
 
@@ -695,7 +698,8 @@ void defaultlook::backupPanel()
     if ( rxtest > 0 ){
         QMessageBox::information(nullptr, tr("MX Tweak"),
                                  tr("Plese remove special characters") + "@,$,%,&,*,(,),[,],{,},|,\\,?" + tr("from file name"));
-    } else {
+        validateflag = true;
+        } else {
 
         QString home_path = QDir::homePath();
         QString path = home_path + "/.restore/" + ui->lineEditBackupName->text() + ".tar.xz";
@@ -1006,6 +1010,7 @@ void defaultlook::setuppanel()
         ui->radioRestoreBackup->setEnabled(false);
         ui->comboBoxAvailableBackups->hide();
     }
+
     panelflag = true;
 }
 

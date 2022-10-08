@@ -95,6 +95,7 @@ public:
     bool plasmaresetflag{};
     bool plasmasystrayiconsizeflag{};
     bool themeflag = false;
+    bool validateflag = false;
 
     QString g1;
     QString g2;
