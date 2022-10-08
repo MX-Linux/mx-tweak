@@ -686,7 +686,7 @@ bool defaultlook::checkPlasma() const
 // backs up the current panel configuration
 void defaultlook::backupPanel()
 {
-    runCmd("tar --create --file=$HOME/.restore/" + ui->lineEditBackupName->text() + ".tar --directory=$HOME/.config/xfce4 panel xfconf/xfce-perchannel-xml/xfce4-panel.xml");
+    runCmd("tar --create --xz --file=$HOME/.restore/\"" + ui->lineEditBackupName->text() + ".tar.xz\" --directory=$HOME/.config/xfce4 panel xfconf/xfce-perchannel-xml/xfce4-panel.xml");
 }
 
 void defaultlook::restoreDefaultPanel()
@@ -700,7 +700,7 @@ void defaultlook::restoreDefaultPanel()
 void defaultlook::restoreBackup()
 {
     runCmd("xfce4-panel --quit; pkill xfconfd; rm -Rf ~/.config/xfce4/panel ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml; \
-           tar -xf $HOME/.restore/" + ui->comboBoxAvailableBackups->currentText() + " --directory=$HOME/.config/xfce4; \
+           tar -xf $HOME/.restore/\"" + ui->comboBoxAvailableBackups->currentText() + "\" --directory=$HOME/.config/xfce4; \
            sleep 5; xfce4-panel &");
 }
 
@@ -903,7 +903,7 @@ void defaultlook::setuppanel()
     ui->comboBoxAvailableBackups->clear();
     ui->lineEditBackupName->hide();
     ui->lineEditBackupName->setText("panel_backup_" + QDateTime::currentDateTime().toString("dd.MM.yyyy.hh.mm.ss"));
-    QStringList availablebackups = QDir(home_path + "/.restore").entryList(QStringList() << "*.tar",QDir::Files);
+    QStringList availablebackups = QDir(home_path + "/.restore").entryList(QStringList() << "*.tar.xz",QDir::Files);
     ui->comboBoxAvailableBackups->addItems(availablebackups);
 
     ui->radioBackupPanel->setToolTip(home_path + "/.restore");
@@ -3367,6 +3367,6 @@ void defaultlook::on_buttonManageTint2_clicked()
 
 void defaultlook::migratepanel(const QString &date) const
 {
-    runCmd("tar --create --file=\"$HOME/.restore/panel_backup_" + date +".tar\" --directory=$HOME/.restore/.config/xfce4 panel xfconf/xfce-perchannel-xml/xfce4-panel.xml");
+    runCmd("tar --create --xz --file=\"$HOME/.restore/panel_backup_" + date +".tar.xz\" --directory=$HOME/.restore/.config/xfce4 panel xfconf/xfce-perchannel-xml/xfce4-panel.xml");
     runCmd("rm -R $HOME/.restore/.config/xfce4/panel $HOME/.restore/.config/xfce4/xfconf");
 }
