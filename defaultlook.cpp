@@ -722,7 +722,7 @@ void defaultlook::restoreBackup()
                                      tr("File is not a valid tar.xz archive file"));
         break;
     case 2:  QMessageBox::information(nullptr, tr("MX Tweak"),
-                                      tr("Archive does not contain a panel file"));
+                                      tr("Archive does not contain a panel config"));
         break;
     }
 }
