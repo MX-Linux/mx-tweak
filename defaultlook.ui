@@ -1397,7 +1397,7 @@
          <item row="9" column="3" colspan="2">
           <widget class="QPushButton" name="buttonManageTint2">
            <property name="text">
-            <string>Mange Tint2 Panel</string>
+            <string>Manage Tint2 Panel</string>
            </property>
            <property name="icon">
             <iconset theme="systemtray">

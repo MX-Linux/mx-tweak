@@ -80,12 +80,13 @@
         <location filename="../defaultlook.ui" line="20"/>
         <location filename="../defaultlook.cpp" line="57"/>
         <location filename="../defaultlook.cpp" line="78"/>
-        <location filename="../defaultlook.cpp" line="626"/>
-        <location filename="../defaultlook.cpp" line="645"/>
-        <location filename="../defaultlook.cpp" line="654"/>
-        <location filename="../defaultlook.cpp" line="694"/>
-        <location filename="../defaultlook.cpp" line="721"/>
-        <location filename="../defaultlook.cpp" line="724"/>
+        <location filename="../defaultlook.cpp" line="629"/>
+        <location filename="../defaultlook.cpp" line="648"/>
+        <location filename="../defaultlook.cpp" line="657"/>
+        <location filename="../defaultlook.cpp" line="699"/>
+        <location filename="../defaultlook.cpp" line="709"/>
+        <location filename="../defaultlook.cpp" line="737"/>
+        <location filename="../defaultlook.cpp" line="740"/>
         <source>MX Tweak</source>
         <translation>MX Tweak</translation>
     </message>
@@ -580,11 +581,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1400"/>
-        <source>Mange Tint2 Panel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="1414"/>
         <source>Plasma</source>
         <translation>Plasma</translation>
@@ -715,6 +711,11 @@
         <translation>Gebruik Client Side Decoraties (CSD) op GTK3 applicaties die dat ondersteunen (vereist sessie herstart)</translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="1400"/>
+        <source>Manage Tint2 Panel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="1743"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
@@ -755,32 +756,32 @@
         <translation>--display schakel enkel geldig voor Xfce</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="625"/>
+        <location filename="../defaultlook.cpp" line="628"/>
         <source>About MX Tweak</source>
         <translation>Over MX Tweak</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="627"/>
+        <location filename="../defaultlook.cpp" line="630"/>
         <source>Version: </source>
         <translation>Versie:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="628"/>
+        <location filename="../defaultlook.cpp" line="631"/>
         <source>App for quick default ui theme changes and tweaks</source>
         <translation>App voor snelle standaard ui thema veranderingen en fijninstellingen</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="630"/>
+        <location filename="../defaultlook.cpp" line="633"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="631"/>
+        <location filename="../defaultlook.cpp" line="634"/>
         <source>%1 License</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="645"/>
+        <location filename="../defaultlook.cpp" line="648"/>
         <source>%1 Help</source>
         <translation type="unfinished"></translation>
     </message>
@@ -793,42 +794,52 @@
         <translation type="vanished">Ongedaan maken</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="655"/>
+        <location filename="../defaultlook.cpp" line="658"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
         <translation>Klaar! Firefox kan een herstart vereisen om de veranderingen door te voeren</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="695"/>
+        <location filename="../defaultlook.cpp" line="700"/>
+        <source>Plese remove special characters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.cpp" line="700"/>
+        <source>from file name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.cpp" line="710"/>
         <source>File name already exists.  Choose another name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="722"/>
+        <location filename="../defaultlook.cpp" line="738"/>
         <source>File is not a valid tar.xz archive file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="725"/>
+        <location filename="../defaultlook.cpp" line="741"/>
         <source>Archive does not contain a panel config</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="845"/>
+        <location filename="../defaultlook.cpp" line="861"/>
         <source>Panel settings</source>
         <translation>Paneel instellingen</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="846"/>
+        <location filename="../defaultlook.cpp" line="862"/>
         <source>Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
         <translation>Uw huidige paneelinstellingen zijn gebackupt in een verborgen folder genaamd .restore in uw home folder (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1511"/>
+        <location filename="../defaultlook.cpp" line="1529"/>
         <source>settings</source>
         <translation>instellingen</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1851"/>
+        <location filename="../defaultlook.cpp" line="1869"/>
         <source>Choose a theme set</source>
         <translation>Kies een thema set</translation>
     </message>

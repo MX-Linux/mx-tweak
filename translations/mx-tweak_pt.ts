@@ -80,12 +80,13 @@
         <location filename="../defaultlook.ui" line="20"/>
         <location filename="../defaultlook.cpp" line="57"/>
         <location filename="../defaultlook.cpp" line="78"/>
-        <location filename="../defaultlook.cpp" line="626"/>
-        <location filename="../defaultlook.cpp" line="645"/>
-        <location filename="../defaultlook.cpp" line="654"/>
-        <location filename="../defaultlook.cpp" line="694"/>
-        <location filename="../defaultlook.cpp" line="721"/>
-        <location filename="../defaultlook.cpp" line="724"/>
+        <location filename="../defaultlook.cpp" line="629"/>
+        <location filename="../defaultlook.cpp" line="648"/>
+        <location filename="../defaultlook.cpp" line="657"/>
+        <location filename="../defaultlook.cpp" line="699"/>
+        <location filename="../defaultlook.cpp" line="709"/>
+        <location filename="../defaultlook.cpp" line="737"/>
+        <location filename="../defaultlook.cpp" line="740"/>
         <source>MX Tweak</source>
         <translation>MX Ajustes Rápidos</translation>
     </message>
@@ -580,11 +581,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1400"/>
-        <source>Mange Tint2 Panel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="1414"/>
         <source>Plasma</source>
         <translation>Plasma</translation>
@@ -715,6 +711,11 @@
         <translation>Usar acessórios de janelas do lado do cliente (Client Side Decorations - CSD) em aplicações GTK3 que os suportem (requer reinício da sessão)</translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="1400"/>
+        <source>Manage Tint2 Panel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="1743"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
@@ -755,32 +756,32 @@
         <translation>mudança de ecrã (--display) válida apenas para o Xfce</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="625"/>
+        <location filename="../defaultlook.cpp" line="628"/>
         <source>About MX Tweak</source>
         <translation>Sobre o MX Ajustes Rápidos</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="627"/>
+        <location filename="../defaultlook.cpp" line="630"/>
         <source>Version: </source>
         <translation>Versão: </translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="628"/>
+        <location filename="../defaultlook.cpp" line="631"/>
         <source>App for quick default ui theme changes and tweaks</source>
         <translation>Aplicação para rapidamente fazer alterações ao tema pré-definido da interface de utilizador e outros ajustes</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="630"/>
+        <location filename="../defaultlook.cpp" line="633"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Direitos de autor (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="631"/>
+        <location filename="../defaultlook.cpp" line="634"/>
         <source>%1 License</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="645"/>
+        <location filename="../defaultlook.cpp" line="648"/>
         <source>%1 Help</source>
         <translation type="unfinished"></translation>
     </message>
@@ -793,42 +794,52 @@
         <translation type="vanished">Cancelar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="655"/>
+        <location filename="../defaultlook.cpp" line="658"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
         <translation>Concluído! O Firefox pode ter que ser reiniciado para as alterações terem efeito</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="695"/>
+        <location filename="../defaultlook.cpp" line="700"/>
+        <source>Plese remove special characters</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.cpp" line="700"/>
+        <source>from file name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.cpp" line="710"/>
         <source>File name already exists.  Choose another name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="722"/>
+        <location filename="../defaultlook.cpp" line="738"/>
         <source>File is not a valid tar.xz archive file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="725"/>
+        <location filename="../defaultlook.cpp" line="741"/>
         <source>Archive does not contain a panel config</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="845"/>
+        <location filename="../defaultlook.cpp" line="861"/>
         <source>Panel settings</source>
         <translation>Definições do painel</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="846"/>
+        <location filename="../defaultlook.cpp" line="862"/>
         <source>Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
         <translation>As actuais definições do painel foram guardadas numa pasta oculta chamada .restore na pasta pessoal (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1511"/>
+        <location filename="../defaultlook.cpp" line="1529"/>
         <source>settings</source>
         <translation>definições</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1851"/>
+        <location filename="../defaultlook.cpp" line="1869"/>
         <source>Choose a theme set</source>
         <translation>Escolher um tema</translation>
     </message>
