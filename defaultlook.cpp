@@ -686,16 +686,28 @@ bool defaultlook::checkPlasma() const
 // backs up the current panel configuration
 void defaultlook::backupPanel()
 {
-    QString home_path = QDir::homePath();
-    QString path = home_path + "/.restore/" + ui->lineEditBackupName->text() + ".tar.xz";
-    qDebug() << path;
-    //check filename existence
-    if ( QFileInfo(path).exists()){
+    //validate file name
+    qDebug() << "ui file name " << ui->lineEditBackupName->text();
+    //QRegExp rx("(@|\\$|%|\\&|\\*|(|)|{|}|[|]|/|\\|\\?");
+    QRegExp rx("\\$|@|%|\\&|\\*|\\(|\\)|\\[|\\]|\\{|\\}|\\||\\?");
+    int rxtest = rx.indexIn(ui->lineEditBackupName->text());
+    qDebug() << "rxtest" << rxtest;
+    if ( rxtest > 0 ){
         QMessageBox::information(nullptr, tr("MX Tweak"),
-                                                 tr("File name already exists.  Choose another name"));
+                                 tr("Plese remove special characters") + "@,$,%,&,*,(,),[,],{,},|,\\,?" + tr("from file name"));
     } else {
-        path = "$HOME/.restore/\"" + ui->lineEditBackupName->text() + ".tar.xz\"";
-        runCmd("tar --create --xz --file=" + path + " --directory=$HOME/.config/xfce4 panel xfconf/xfce-perchannel-xml/xfce4-panel.xml");
+
+        QString home_path = QDir::homePath();
+        QString path = home_path + "/.restore/" + ui->lineEditBackupName->text() + ".tar.xz";
+        qDebug() << path;
+        //check filename existence
+        if ( QFileInfo(path).exists()){
+            QMessageBox::information(nullptr, tr("MX Tweak"),
+                                     tr("File name already exists.  Choose another name"));
+        } else {
+            path = "$HOME/.restore/\"" + ui->lineEditBackupName->text() + ".tar.xz\"";
+            runCmd("tar --create --xz --file=" + path + " --directory=$HOME/.config/xfce4 panel xfconf/xfce-perchannel-xml/xfce4-panel.xml");
+        }
     }
 }
 
@@ -990,6 +1002,7 @@ void defaultlook::setuppanel()
     // if backup available, make the restore backup option available
 
     if ( availablebackups.isEmpty()){
+        backupPanel();
         ui->radioRestoreBackup->setEnabled(false);
         ui->comboBoxAvailableBackups->hide();
     }
@@ -3409,4 +3422,9 @@ int defaultlook::validatearchive(const QString &path) const{
     return 2;
     }
     return 0;
+}
+
+void defaultlook::on_lineEditBackupName_returnPressed()
+{
+    ui->buttonApply->setDefault(true);
 }
