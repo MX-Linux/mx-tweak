@@ -133,6 +133,7 @@ public:
 
     void backupPanel();
     void migratepanel(const QString &date) const;
+    int validatearchive(const QString &path) const;
     static void restoreDefaultPanel();
     void restoreBackup();
 
