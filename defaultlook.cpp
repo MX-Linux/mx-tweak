@@ -686,10 +686,7 @@ bool defaultlook::checkPlasma() const
 // backs up the current panel configuration
 void defaultlook::backupPanel()
 {
-    runCmd(QStringLiteral("rm -Rf ~/.restore; mkdir -p ~/.restore/.config/xfce4; \
-           mkdir -p ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml; \
-           cp -Rf ~/.config/xfce4/panel ~/.restore/.config/xfce4; \
-            cp -f ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/"));
+    runCmd("tar --create --file=$HOME/.restore/" + ui->lineEditBackupName->text() + ".tar --directory=$HOME/.config/xfce4 panel xfconf/xfce-perchannel-xml/xfce4-panel.xml");
 }
 
 void defaultlook::restoreDefaultPanel()
@@ -697,14 +694,14 @@ void defaultlook::restoreDefaultPanel()
     // copy template files
     runCmd(QStringLiteral("xfce4-panel --quit;pkill xfconfd; rm -Rf ~/.config/xfce4/panel; cp -Rf /etc/skel/.config/xfce4/panel ~/.config/xfce4; sleep 1; \
            cp -f /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml; \
-           sleep 5; xfce4-panel"));
+           sleep 5; xfce4-panel &"));
 }
 
 void defaultlook::restoreBackup()
 {
-    runCmd(QStringLiteral("xfce4-panel --quit; pkill xfconfd; rm -Rf ~/.config/xfce4/panel; cp -Rf ~/.restore/.config/xfce4/panel ~/.config/xfce4; sleep 1; \
-           cp -f ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml; \
-           sleep 5; xfce4-panel "));
+    runCmd("xfce4-panel --quit; pkill xfconfd; rm -Rf ~/.config/xfce4/panel ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml; \
+           tar -xf $HOME/.restore/" + ui->comboBoxAvailableBackups->currentText() + " --directory=$HOME/.config/xfce4; \
+           sleep 5; xfce4-panel &");
 }
 
 void defaultlook::on_checkHorz_clicked()
@@ -748,6 +745,7 @@ void defaultlook::on_radioDefaultPanel_clicked()
         ui->radioBackupPanel->setChecked(false);
         ui->checkVert->setChecked(false);
         ui->radioRestoreBackup->setChecked(false);
+        ui->lineEditBackupName->hide();
     }
 }
 
@@ -759,6 +757,7 @@ void defaultlook::on_radioBackupPanel_clicked()
         ui->checkVert->setChecked(false);
         ui->radioDefaultPanel->setChecked(false);
         ui->radioRestoreBackup->setChecked(false);
+        ui->lineEditBackupName->show();
     }
 }
 
@@ -770,6 +769,7 @@ void defaultlook::on_radioRestoreBackup_clicked()
         ui->radioBackupPanel->setChecked(false);
         ui->radioDefaultPanel->setChecked(false);
         ui->checkVert->setChecked(false);
+        ui->lineEditBackupName->hide();
     }
 }
 
@@ -896,12 +896,16 @@ void defaultlook::setuppanel()
 {
     QString home_path = QDir::homePath();
     QFileInfo backuppanel(home_path + "/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml");
-    if (!backuppanel.exists()) {
-        backupPanel();
+    if (backuppanel.exists()) {
+        migratepanel(backuppanel.lastModified().toString("dd.MM.yyyy.hh.mm.ss"));
         //message2();
     }
-    QDateTime lastmodified = backuppanel.lastModified();
-    ui->labelBackupDate->setText(lastmodified.toString());
+    ui->comboBoxAvailableBackups->clear();
+    ui->lineEditBackupName->hide();
+    ui->lineEditBackupName->setText("panel_backup_" + QDateTime::currentDateTime().toString("dd.MM.yyyy.hh.mm.ss"));
+    QStringList availablebackups = QDir(home_path + "/.restore").entryList(QStringList() << "*.tar",QDir::Files);
+    ui->comboBoxAvailableBackups->addItems(availablebackups);
+
     ui->radioBackupPanel->setToolTip(home_path + "/.restore");
     ui->radioRestoreBackup->setToolTip(home_path + "/.restore");
     ui->radioDefaultPanel->setToolTip(QStringLiteral("/etc/skel/.config/xfce4"));
@@ -962,8 +966,10 @@ void defaultlook::setuppanel()
 
     // if backup available, make the restore backup option available
 
-    QString cmd = QStringLiteral("test -f ~/.restore/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml");
-    ui->radioRestoreBackup->setEnabled(system(cmd.toUtf8()) == 0);
+    if ( availablebackups.isEmpty()){
+        ui->radioRestoreBackup->setEnabled(false);
+        ui->comboBoxAvailableBackups->hide();
+    }
     panelflag = true;
 }
 
@@ -3357,4 +3363,10 @@ void defaultlook::on_buttonManageTint2_clicked()
     system("/usr/bin/mxfb-tint2-manager");
     this->show();
 
+}
+
+void defaultlook::migratepanel(const QString &date) const
+{
+    runCmd("tar --create --file=\"$HOME/.restore/panel_backup_" + date +".tar\" --directory=$HOME/.restore/.config/xfce4 panel xfconf/xfce-perchannel-xml/xfce4-panel.xml");
+    runCmd("rm -R $HOME/.restore/.config/xfce4/panel $HOME/.restore/.config/xfce4/xfconf");
 }
