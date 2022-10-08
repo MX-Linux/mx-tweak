@@ -686,7 +686,17 @@ bool defaultlook::checkPlasma() const
 // backs up the current panel configuration
 void defaultlook::backupPanel()
 {
-    runCmd("tar --create --xz --file=$HOME/.restore/\"" + ui->lineEditBackupName->text() + ".tar.xz\" --directory=$HOME/.config/xfce4 panel xfconf/xfce-perchannel-xml/xfce4-panel.xml");
+    QString home_path = QDir::homePath();
+    QString path = home_path + "/.restore/" + ui->lineEditBackupName->text() + ".tar.xz";
+    qDebug() << path;
+    //check filename existence
+    if ( QFileInfo(path).exists()){
+        QMessageBox::information(nullptr, tr("MX Tweak"),
+                                                 tr("File name already exists.  Choose another name"));
+    } else {
+        path = "$HOME/.restore/\"" + ui->lineEditBackupName->text() + ".tar.xz\"";
+        runCmd("tar --create --xz --file=" + path + " --directory=$HOME/.config/xfce4 panel xfconf/xfce-perchannel-xml/xfce4-panel.xml");
+    }
 }
 
 void defaultlook::restoreDefaultPanel()
@@ -702,14 +712,14 @@ void defaultlook::restoreBackup()
     //validate file first
 
 
-    switch(validatearchive("$HOME/.restore/\"" + ui->comboBoxAvailableBackups->currentText() + "\"")){
+    switch(validatearchive("$HOME/.restore/\"" + ui->comboBoxAvailableBackups->currentText() + ".tar.xz\"")){
     case 0:
         runCmd("xfce4-panel --quit; pkill xfconfd; rm -Rf ~/.config/xfce4/panel ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml; \
-           tar -xf $HOME/.restore/\"" + ui->comboBoxAvailableBackups->currentText() + "\" --directory=$HOME/.config/xfce4; \
+           tar -xf $HOME/.restore/\"" + ui->comboBoxAvailableBackups->currentText() + ".tar.xz\" --directory=$HOME/.config/xfce4; \
            sleep 5; xfce4-panel &");
         break;
     case 1: QMessageBox::information(nullptr, tr("MX Tweak"),
-                                     tr("File is not a valid xz archive file"));
+                                     tr("File is not a valid tar.xz archive file"));
         break;
     case 2:  QMessageBox::information(nullptr, tr("MX Tweak"),
                                       tr("Archive does not contain a panel file"));
@@ -917,8 +927,8 @@ void defaultlook::setuppanel()
     ui->lineEditBackupName->hide();
     ui->lineEditBackupName->setText("panel_backup_" + QDateTime::currentDateTime().toString("dd.MM.yyyy.hh.mm.ss"));
     QStringList availablebackups = QDir(home_path + "/.restore").entryList(QStringList() << "*.tar.xz",QDir::Files);
+    availablebackups.replaceInStrings(".tar.xz", "");
     ui->comboBoxAvailableBackups->addItems(availablebackups);
-
     ui->radioBackupPanel->setToolTip(home_path + "/.restore");
     ui->radioRestoreBackup->setToolTip(home_path + "/.restore");
     ui->radioDefaultPanel->setToolTip(QStringLiteral("/etc/skel/.config/xfce4"));
@@ -3385,7 +3395,7 @@ void defaultlook::migratepanel(const QString &date) const
 }
 
 int defaultlook::validatearchive(const QString &path) const{
-    QString test = runCmd("file --mime-type --brief \"" + path + "\"").output;
+    QString test = runCmd("file --mime-type --brief " + path).output;
     if ( verbose ) qDebug() << test;
     //validate mime type
     if ( test != "application/x-xz"){
@@ -3393,7 +3403,7 @@ int defaultlook::validatearchive(const QString &path) const{
     }
     //validate contents
 
-    test = runCmd("tar --list --file \"" + path + "\"").output;
+    test = runCmd("tar --list --file " + path).output;
     if ( verbose ) qDebug() << test;
     if (!test.contains("xfconf/xfce-perchannel-xml/xfce4-panel.xml")) {
     return 2;
