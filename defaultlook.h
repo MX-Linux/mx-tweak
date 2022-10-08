@@ -250,6 +250,8 @@ private slots:
 
     void on_buttonManageTint2_clicked();
 
+    void on_lineEditBackupName_returnPressed();
+
 private:
     Ui::defaultlook *ui;
 };
