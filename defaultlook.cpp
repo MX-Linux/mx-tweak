@@ -700,13 +700,20 @@ void defaultlook::restoreDefaultPanel()
 void defaultlook::restoreBackup()
 {
     //validate file first
-    if ( validatearchive("$HOME/.restore/\"" + ui->comboBoxAvailableBackups->currentText() + "\"") == 0 ){
+
+
+    switch(validatearchive("$HOME/.restore/\"" + ui->comboBoxAvailableBackups->currentText() + "\"")){
+    case 0:
         runCmd("xfce4-panel --quit; pkill xfconfd; rm -Rf ~/.config/xfce4/panel ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml; \
            tar -xf $HOME/.restore/\"" + ui->comboBoxAvailableBackups->currentText() + "\" --directory=$HOME/.config/xfce4; \
            sleep 5; xfce4-panel &");
-    } else {
-        QMessageBox::information(nullptr, tr("MX Tweak"),
-                                 tr("File is not a valid xz archive file"));
+        break;
+    case 1: QMessageBox::information(nullptr, tr("MX Tweak"),
+                                     tr("File is not a valid xz archive file"));
+        break;
+    case 2:  QMessageBox::information(nullptr, tr("MX Tweak"),
+                                      tr("Archive does not contain a panel file"));
+        break;
     }
 }
 
@@ -3378,10 +3385,18 @@ void defaultlook::migratepanel(const QString &date) const
 }
 
 int defaultlook::validatearchive(const QString &path) const{
-    QString mime = runCmd("file --mime-type --brief " + path).output;
-    if ( verbose ) qDebug() << mime;
-    if ( mime != "application/x-xz"){
+    QString test = runCmd("file --mime-type --brief \"" + path + "\"").output;
+    if ( verbose ) qDebug() << test;
+    //validate mime type
+    if ( test != "application/x-xz"){
         return 1;
+    }
+    //validate contents
+
+    test = runCmd("tar --list --file \"" + path + "\"").output;
+    if ( verbose ) qDebug() << test;
+    if (!test.contains("xfconf/xfce-perchannel-xml/xfce4-panel.xml")) {
+    return 2;
     }
     return 0;
 }
