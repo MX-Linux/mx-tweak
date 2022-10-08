@@ -1,3 +1,9 @@
+mx-tweak (22.10.02mx21) mx; urgency=medium
+
+  * support multiple xfce backups
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 08 Oct 2022 10:18:14 -0400
+
 mx-tweak (22.10.01mx21) mx; urgency=medium
 
   * fluxbox themer function, show/hide fluxbox toolbar
