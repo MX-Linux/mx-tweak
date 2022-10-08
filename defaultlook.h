@@ -131,9 +131,10 @@ public:
     void setupCompositor();
     void CheckAptNotifierRunning() const;
 
-    static void backupPanel();
+    void backupPanel();
+    void migratepanel(const QString &date) const;
     static void restoreDefaultPanel();
-    static void restoreBackup();
+    void restoreBackup();
 
     void top_or_bottom();
     void left_or_right();
