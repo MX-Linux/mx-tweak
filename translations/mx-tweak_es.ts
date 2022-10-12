@@ -1,28 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="es">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="es">
 <context>
     <name>QObject</name>
     <message>
         <location filename="../about.cpp" line="40"/>
         <source>License</source>
-        <translation type="unfinished">Licencia</translation>
+        <translation>Licencia</translation>
     </message>
     <message>
         <location filename="../about.cpp" line="41"/>
         <location filename="../about.cpp" line="51"/>
         <source>Changelog</source>
-        <translation type="unfinished"></translation>
+        <translation>Registro de cambios</translation>
     </message>
     <message>
         <location filename="../about.cpp" line="42"/>
         <source>Cancel</source>
-        <translation type="unfinished">Cancelar</translation>
+        <translation>Cancelar</translation>
     </message>
     <message>
         <location filename="../about.cpp" line="63"/>
         <source>&amp;Close</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Cerrar</translation>
     </message>
 </context>
 <context>
@@ -169,7 +167,7 @@
     <message>
         <location filename="../defaultlook.ui" line="234"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="164"/>
@@ -472,7 +470,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1037"/>
         <source>Show GTK File Dialog action buttons at bottom of dialogs</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar los botones de acción del diálogo de archivos GTK, en la parte inferior de los diálogos</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1047"/>
@@ -527,7 +525,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1173"/>
         <source>Toggle desktop icons</source>
-        <translation>Activar iconos del escritorio</translation>
+        <translation>Activar/Desactivar iconos del escritorio</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1180"/>
@@ -553,7 +551,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1342"/>
         <source>Toggle icon captions</source>
-        <translation>Activar subtítulos de iconos</translation>
+        <translation>Activar/Desactivar subtítulos de iconos</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1349"/>
@@ -578,7 +576,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1386"/>
         <source>Show Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar barra de herramientas</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1414"/>
@@ -713,17 +711,17 @@
     <message>
         <location filename="../defaultlook.ui" line="1400"/>
         <source>Manage Tint2 Panel</source>
-        <translation type="unfinished"></translation>
+        <translation>Gestionar panel Tint2</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1743"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requiere reiniciar&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1746"/>
         <source>Enable Bluetooth Adapters on boot</source>
-        <translation type="unfinished"></translation>
+        <translation>Habilitar adaptadores Bluetooth en el arranque</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1815"/>
@@ -778,12 +776,12 @@
     <message>
         <location filename="../defaultlook.cpp" line="634"/>
         <source>%1 License</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 Licencia</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="648"/>
         <source>%1 Help</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 Ayuda</translation>
     </message>
     <message>
         <source>License</source>
@@ -801,27 +799,27 @@
     <message>
         <location filename="../defaultlook.cpp" line="700"/>
         <source>Plese remove special characters</source>
-        <translation type="unfinished"></translation>
+        <translation>Por favor, remueva los caracteres especiales.</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="700"/>
         <source>from file name</source>
-        <translation type="unfinished"></translation>
+        <translation>del nombre del archivo</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="710"/>
         <source>File name already exists.  Choose another name</source>
-        <translation type="unfinished"></translation>
+        <translation>El nombre del archivo ya existe. Elija otro nombre</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="738"/>
         <source>File is not a valid tar.xz archive file</source>
-        <translation type="unfinished"></translation>
+        <translation>El archivo no es un archivo comprimido tar.xz válido</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="741"/>
         <source>Archive does not contain a panel config</source>
-        <translation type="unfinished"></translation>
+        <translation>El archivo no contiene una configuración de panel</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="861"/>
@@ -857,7 +855,7 @@
     <message>
         <location filename="../theming_to_tweak.ui" line="14"/>
         <source>New Theme Set</source>
-        <translation>Nuevo conjunto de temas&#xa0;</translation>
+        <translation>Nuevo conjunto de temas </translation>
     </message>
     <message>
         <location filename="../theming_to_tweak.ui" line="20"/>

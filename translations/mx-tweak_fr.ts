@@ -1,28 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="fr">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="fr">
 <context>
     <name>QObject</name>
     <message>
         <location filename="../about.cpp" line="40"/>
         <source>License</source>
-        <translation type="unfinished">Licence</translation>
+        <translation>Licence</translation>
     </message>
     <message>
         <location filename="../about.cpp" line="41"/>
         <location filename="../about.cpp" line="51"/>
         <source>Changelog</source>
-        <translation type="unfinished"></translation>
+        <translation>Journal des modifications</translation>
     </message>
     <message>
         <location filename="../about.cpp" line="42"/>
         <source>Cancel</source>
-        <translation type="unfinished">Annuler</translation>
+        <translation>Annuler</translation>
     </message>
     <message>
         <location filename="../about.cpp" line="63"/>
         <source>&amp;Close</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Fermer</translation>
     </message>
 </context>
 <context>
@@ -30,7 +28,7 @@
     <message>
         <location filename="../brightness_small.ui" line="14"/>
         <source>MainWindow</source>
-        <translation>Fenêtre Principale</translation>
+        <translation>Fenêtre principale</translation>
     </message>
     <message>
         <location filename="../brightness_small.ui" line="39"/>
@@ -40,7 +38,7 @@
     <message>
         <location filename="../brightness_small.ui" line="59"/>
         <source>Software (xrandr) Brightness</source>
-        <translation>Luminosité logicielle (xrandr)</translation>
+        <translation>Luminosité logiciel (xrandr)</translation>
     </message>
     <message>
         <location filename="../brightness_small.ui" line="66"/>
@@ -61,7 +59,7 @@
     <message>
         <location filename="../brightness_small.cpp" line="33"/>
         <source>MX-Tweak</source>
-        <translation>MX Ajustements</translation>
+        <translation>MX Ajustements - Tweak</translation>
     </message>
     <message>
         <location filename="../brightness_small.cpp" line="58"/>
@@ -88,12 +86,12 @@
         <location filename="../defaultlook.cpp" line="737"/>
         <location filename="../defaultlook.cpp" line="740"/>
         <source>MX Tweak</source>
-        <translation>MX Ajustements</translation>
+        <translation>MX Ajustements - Tweak</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="32"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the panel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Personnalisez le tableau de bord&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Personnaliser le tableau de bord&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="46"/>
@@ -104,7 +102,7 @@
     <message>
         <location filename="../defaultlook.ui" line="66"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configure window behavior and shortcuts&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configurez le comportement des fenêtres et les raccourcis&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configurer le comportement des fenêtres et les raccourcis&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="80"/>
@@ -114,7 +112,7 @@
     <message>
         <location filename="../defaultlook.ui" line="100"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the look of your desktop&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Personnalisez l&apos;apparence de votre bureau&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Personnaliser l&apos;apparence de votre bureau&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="114"/>
@@ -200,7 +198,7 @@
     <message>
         <location filename="../defaultlook.ui" line="293"/>
         <source>Restore backup panel configuration</source>
-        <translation>Rétablir la configuration actuelle du tableau de bord</translation>
+        <translation>Restaurer la configuration sauvegardée du tableau de bord</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="353"/>
@@ -264,12 +262,12 @@
     <message>
         <location filename="../defaultlook.ui" line="486"/>
         <source>Save Current Settings as a Theme Set</source>
-        <translation>Enregistrer Réglages Actuels comme un Jeu de Thème</translation>
+        <translation>Enregistrer réglages actuels comme un jeu de thème</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="497"/>
         <source>Remove User Theme Set</source>
-        <translation>Supprimer Jeu de Thème Utilisateur</translation>
+        <translation>Supprimer le jeu de thème de l&apos;utilisateur</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="514"/>
@@ -295,7 +293,7 @@
     <message>
         <location filename="../defaultlook.ui" line="595"/>
         <source>Edit compton.conf directly in text editor</source>
-        <translation>Éditer directement compton.conf dans un éditeur de texte</translation>
+        <translation>Éditer compton.conf directement dans un éditeur de texte</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="598"/>
@@ -330,7 +328,7 @@
     <message>
         <location filename="../defaultlook.ui" line="674"/>
         <source>off</source>
-        <translation>off</translation>
+        <translation>arrêt</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="695"/>
@@ -350,7 +348,7 @@
     <message>
         <location filename="../defaultlook.ui" line="713"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce Compositor Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Paramètres du  compositeur de Xfce&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Paramètres du compositeur de Xfce&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="716"/>
@@ -395,7 +393,7 @@
     <message>
         <location filename="../defaultlook.ui" line="803"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Saving is per display&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;L&apos;enregistrement se fait par affichage&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;L&apos;enregistrement se fait par écran&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="806"/>
@@ -405,7 +403,7 @@
     <message>
         <location filename="../defaultlook.ui" line="813"/>
         <source>Software (xrandr) Brightness</source>
-        <translation>Luminosité logicielle (xrandr)</translation>
+        <translation>Luminosité logiciel (xrandr)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="820"/>
@@ -431,7 +429,7 @@
     <message>
         <location filename="../defaultlook.ui" line="986"/>
         <source>Reset Thunar custom right-click actions to system defaults</source>
-        <translation>Réinitialiser les actions personnalisées via clic droit de Thunar</translation>
+        <translation>Réinitialisation des actions personnalisées du clic droit de Thunar aux valeurs par défaut du système</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="958"/>
@@ -441,7 +439,7 @@
     <message>
         <location filename="../defaultlook.ui" line="951"/>
         <source>Enable single-click in Thunar File Manager</source>
-        <translation>Activer le simple clic dans le gestionnaire de fichier Thunar</translation>
+        <translation>Activer le simple clic dans le gestionnaire de fichiers Thunar</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1013"/>
@@ -472,7 +470,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1037"/>
         <source>Show GTK File Dialog action buttons at bottom of dialogs</source>
-        <translation type="unfinished"></translation>
+        <translation>Afficher les boutons d’activité de la boîte de dialogue du fichier GTK en bas des boîtes de dialogue</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1047"/>
@@ -482,7 +480,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1055"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Paramètres de la Barre d&apos;outils&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Paramètres de la barre d&apos;outils&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1089"/>
@@ -532,18 +530,18 @@
     <message>
         <location filename="../defaultlook.ui" line="1180"/>
         <source>Reset Fluxbox Menu</source>
-        <translation>Réinitialisation du Menu Fluxbox</translation>
+        <translation>Réinitialisation du menu Fluxbox</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1321"/>
         <location filename="../defaultlook.ui" line="1553"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Retablissement des valeurs par défaut&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Rétablir les valeurs par défaut&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1328"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Paramètres du Dock&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Paramètres du dock&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1335"/>
@@ -573,12 +571,12 @@
     <message>
         <location filename="../defaultlook.ui" line="1366"/>
         <source>Upgrade existing menu entries</source>
-        <translation>Mettre à jour les entrées de menu existantes</translation>
+        <translation>Mettre à jour les entrées existantes du menu</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1386"/>
         <source>Show Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Afficher la barre d&apos;outils</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1414"/>
@@ -593,7 +591,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1480"/>
         <source>Default</source>
-        <translation>Thème par défaut</translation>
+        <translation>Valeurs par défaut</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1485"/>
@@ -648,12 +646,12 @@
     <message>
         <location filename="../defaultlook.ui" line="1629"/>
         <source>Use tearfree radeon driver option</source>
-        <translation>Utiliser option sans tearing du pilote radeon</translation>
+        <translation>Utiliser l&apos;option du pilote radeon sans tearing - sans déchirure d&apos;écran</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1615"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
-        <translation>NOTE: l&apos;actuelle configuration /etc/X11/xorg.conf.d/20-radeon.conf sera sauvegardée dans le répertoire utilsateur</translation>
+        <translation>          NOTE : l&apos;actuelle configuration /etc/X11/xorg.conf.d/20-radeon.conf sera sauvegardée dans le répertoire home</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1622"/>
@@ -673,12 +671,12 @@
     <message>
         <location filename="../defaultlook.ui" line="1636"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
-        <translation>          NOTE:  /etc/X11/xorg.conf.d/20-intel.conf existant sera sauvegardé dans le dossier personnel</translation>
+        <translation>          NOTE : l&apos;actuelle configuration /etc/X11/xorg.conf.d/20-intel.conf sera sauvegardée dans le dossier home</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1729"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
-        <translation>Réinitialiser le thème de Lightdm (écran de connexion)</translation>
+        <translation>Réinitialiser Lightdm (écran de connexion) au thème par défaut du système</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1695"/>
@@ -688,17 +686,17 @@
     <message>
         <location filename="../defaultlook.ui" line="1681"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
-        <translation>NOTE: l&apos;actuelle configuration /etc/X11/xorg.conf.d/20-amd.conf sera sauvegardée dans le répertoire utilisateur</translation>
+        <translation>          NOTE : l&apos;actuelle configuration /etc/X11/xorg.conf.d/20-amd.conf sera sauvegardée dans le répertoire home</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1736"/>
         <source>Enable mounting of internal drives by non-root users</source>
-        <translation>Activer le montage de disques internes par des utilisateurs non root</translation>
+        <translation>Permettre le montage de disques internes par des utilisateurs non root</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1643"/>
         <source>Use tearfree amdgpu option</source>
-        <translation>Utiliser option sans tearing amdgpu</translation>
+        <translation>Utiliser l&apos;option amdgpu sans tearing - sans déchirure d&apos;écran</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1702"/>
@@ -713,17 +711,17 @@
     <message>
         <location filename="../defaultlook.ui" line="1400"/>
         <source>Manage Tint2 Panel</source>
-        <translation type="unfinished"></translation>
+        <translation>Gérer le panneau Tint2</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1743"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requiert un redémarrage&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1746"/>
         <source>Enable Bluetooth Adapters on boot</source>
-        <translation type="unfinished"></translation>
+        <translation>Activer les adaptateurs Bluetooth au démarrage</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1815"/>
@@ -758,7 +756,7 @@
     <message>
         <location filename="../defaultlook.cpp" line="628"/>
         <source>About MX Tweak</source>
-        <translation>À propos de MX Ajustements</translation>
+        <translation>À propos de MX Ajustements - Tweak</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="630"/>
@@ -768,7 +766,7 @@
     <message>
         <location filename="../defaultlook.cpp" line="631"/>
         <source>App for quick default ui theme changes and tweaks</source>
-        <translation>Une application pour changer et ajuster rapidement les thèmes de l&apos;interface par défaut</translation>
+        <translation>Application permettant de modifier rapidement le thème de l&apos;interface utilisateur par défaut et d&apos;y apporter des modifications.</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="633"/>
@@ -778,12 +776,12 @@
     <message>
         <location filename="../defaultlook.cpp" line="634"/>
         <source>%1 License</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 Licence</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="648"/>
         <source>%1 Help</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 Aide</translation>
     </message>
     <message>
         <source>License</source>
@@ -796,32 +794,32 @@
     <message>
         <location filename="../defaultlook.cpp" line="658"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
-        <translation>Terminé! Firefox peut nécessiter un redémarrage pour activer les changements </translation>
+        <translation>Terminé ! Firefox peut nécessiter un redémarrage pour activer les changements </translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="700"/>
         <source>Plese remove special characters</source>
-        <translation type="unfinished"></translation>
+        <translation>Veuillez supprimer les caractères spéciaux</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="700"/>
         <source>from file name</source>
-        <translation type="unfinished"></translation>
+        <translation>à partir du nom du fichier</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="710"/>
         <source>File name already exists.  Choose another name</source>
-        <translation type="unfinished"></translation>
+        <translation>Le nom du fichier existe déjà. Choisissez un autre nom</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="738"/>
         <source>File is not a valid tar.xz archive file</source>
-        <translation type="unfinished"></translation>
+        <translation>Le fichier n&apos;est pas un fichier d&apos;archive tar.xz valide</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="741"/>
         <source>Archive does not contain a panel config</source>
-        <translation type="unfinished"></translation>
+        <translation>L&apos;archive ne contient pas de configuration de panneau</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="861"/>
@@ -831,7 +829,7 @@
     <message>
         <location filename="../defaultlook.cpp" line="862"/>
         <source>Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
-        <translation>Les paramètres actuels de votre tableau de bord ont été enregistrés dans un dossier caché nommé .restore dans votre dossier personnel (~/.restore/)</translation>
+        <translation>Les paramètres actuels de votre tableau de bord ont été enregistrés dans un dossier caché nommé .restore dans votre dossier home (~/.restore/)</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="1529"/>
@@ -849,7 +847,7 @@
     <message>
         <location filename="../remove_user_theme_set.ui" line="14"/>
         <source>Remove User Theme Set</source>
-        <translation>Supprimer Jeu de Thème Utilisateur</translation>
+        <translation>Supprimer le jeu de thèmes de l&apos;utilisateur</translation>
     </message>
 </context>
 <context>
@@ -857,12 +855,12 @@
     <message>
         <location filename="../theming_to_tweak.ui" line="14"/>
         <source>New Theme Set</source>
-        <translation>Nouveau Jeu de Thème</translation>
+        <translation>Nouveau jeu de thèmes</translation>
     </message>
     <message>
         <location filename="../theming_to_tweak.ui" line="20"/>
         <source>Enter name for new theme set</source>
-        <translation>Entrer un nom pour le nouveau jeu de thème</translation>
+        <translation>Entrer un nom pour le nouveau jeu de thèmes</translation>
     </message>
 </context>
 <context>
@@ -986,7 +984,7 @@
     <message>
         <location filename="../window_buttons.ui" line="174"/>
         <source>Show windows from all workspaces or viewports</source>
-        <translation>Afficher les fenêtres de tous les espaces de travail ou fenêtres</translation>
+        <translation>Afficher les fenêtres de tous les espaces de travail ou fenêtres d&apos;affichage viewports</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="181"/>
@@ -1034,7 +1032,7 @@
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="86"/>
         <source>Show shadows under dock windows</source>
-        <translation>Afficher des ombres sous les fenêtres ancrées</translation>
+        <translation>Afficher des ombres sous les fenêtres du dock</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="93"/>
