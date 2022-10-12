@@ -1,3 +1,9 @@
+mx-tweak (22.10.03mx21) mx; urgency=medium
+
+  * update help, translations
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Tue, 11 Oct 2022 21:04:51 -0400
+
 mx-tweak (22.10.02mx21) mx; urgency=medium
 
   * support multiple xfce backups
