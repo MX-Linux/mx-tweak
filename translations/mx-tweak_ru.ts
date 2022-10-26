@@ -711,7 +711,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1400"/>
         <source>Manage Tint2 Panel</source>
-        <translation type="unfinished"/>
+        <translation>Управление панелью Tint2</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1743"/>

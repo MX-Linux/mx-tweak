@@ -1,28 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="pl">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="pl">
 <context>
     <name>QObject</name>
     <message>
         <location filename="../about.cpp" line="40"/>
         <source>License</source>
-        <translation type="unfinished">Licencja</translation>
+        <translation>Licencja</translation>
     </message>
     <message>
         <location filename="../about.cpp" line="41"/>
         <location filename="../about.cpp" line="51"/>
         <source>Changelog</source>
-        <translation type="unfinished"></translation>
+        <translation>Dziennik zmian</translation>
     </message>
     <message>
         <location filename="../about.cpp" line="42"/>
         <source>Cancel</source>
-        <translation type="unfinished">Anuluj</translation>
+        <translation>Anuluj</translation>
     </message>
     <message>
         <location filename="../about.cpp" line="63"/>
         <source>&amp;Close</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Zamknij</translation>
     </message>
 </context>
 <context>
@@ -169,7 +167,7 @@
     <message>
         <location filename="../defaultlook.ui" line="234"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="164"/>
@@ -472,7 +470,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1037"/>
         <source>Show GTK File Dialog action buttons at bottom of dialogs</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1047"/>
@@ -578,7 +576,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1386"/>
         <source>Show Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1414"/>
@@ -713,17 +711,17 @@
     <message>
         <location filename="../defaultlook.ui" line="1400"/>
         <source>Manage Tint2 Panel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1743"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1746"/>
         <source>Enable Bluetooth Adapters on boot</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1815"/>
@@ -778,12 +776,12 @@
     <message>
         <location filename="../defaultlook.cpp" line="634"/>
         <source>%1 License</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 Licencja</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="648"/>
         <source>%1 Help</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 Pomoc</translation>
     </message>
     <message>
         <source>License</source>
@@ -801,27 +799,27 @@
     <message>
         <location filename="../defaultlook.cpp" line="700"/>
         <source>Plese remove special characters</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="700"/>
         <source>from file name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="710"/>
         <source>File name already exists.  Choose another name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="738"/>
         <source>File is not a valid tar.xz archive file</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="741"/>
         <source>Archive does not contain a panel config</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="861"/>
