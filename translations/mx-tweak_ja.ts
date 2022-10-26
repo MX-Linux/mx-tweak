@@ -1,28 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="ja">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="ja">
 <context>
     <name>QObject</name>
     <message>
         <location filename="../about.cpp" line="40"/>
         <source>License</source>
-        <translation type="unfinished">ライセンス</translation>
+        <translation>ライセンス</translation>
     </message>
     <message>
         <location filename="../about.cpp" line="41"/>
         <location filename="../about.cpp" line="51"/>
         <source>Changelog</source>
-        <translation type="unfinished"></translation>
+        <translation>更新履歴</translation>
     </message>
     <message>
         <location filename="../about.cpp" line="42"/>
         <source>Cancel</source>
-        <translation type="unfinished">キャンセル</translation>
+        <translation>キャンセル</translation>
     </message>
     <message>
         <location filename="../about.cpp" line="63"/>
         <source>&amp;Close</source>
-        <translation type="unfinished"></translation>
+        <translation>閉じる(&amp;C)</translation>
     </message>
 </context>
 <context>
@@ -71,7 +69,7 @@
     <message>
         <location filename="../brightness_small.cpp" line="63"/>
         <source>&amp;Quit</source>
-        <translation>&amp;中止</translation>
+        <translation>中止(%Q)</translation>
     </message>
 </context>
 <context>
@@ -295,12 +293,12 @@
     <message>
         <location filename="../defaultlook.ui" line="595"/>
         <source>Edit compton.conf directly in text editor</source>
-        <translation>compton.conf を直接テキストエディタで編集</translation>
+        <translation>コンプトンの設定ファイルを直接テキストエディタで編集</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="598"/>
         <source>Edit compton.conf</source>
-        <translation>compton.conf を編集</translation>
+        <translation>コンプトンの設定ファイルを編集</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="648"/>
@@ -345,7 +343,7 @@
     <message>
         <location filename="../defaultlook.ui" line="705"/>
         <source>Compton </source>
-        <translation>Compton </translation>
+        <translation>コンプトン</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="713"/>
@@ -360,12 +358,12 @@
     <message>
         <location filename="../defaultlook.ui" line="727"/>
         <source>Launch compton-conf configuration tool</source>
-        <translation>Compton-conf 設定ツールを起動</translation>
+        <translation>コンプトンの設定ツールを起動</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="730"/>
         <source>Compton settings</source>
-        <translation>Compton の設定</translation>
+        <translation>コンプトンの設定</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="744"/>
@@ -472,7 +470,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1037"/>
         <source>Show GTK File Dialog action buttons at bottom of dialogs</source>
-        <translation type="unfinished"></translation>
+        <translation>GTK ファイルダイアログのアクションボタンをダイアログ下部に表示</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1047"/>
@@ -578,7 +576,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1386"/>
         <source>Show Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>ツールバーを表示</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1414"/>
@@ -658,7 +656,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1622"/>
         <source>&amp;User</source>
-        <translation>&amp;ユーザー</translation>
+        <translation>ユーザー(&amp;U)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1709"/>
@@ -713,17 +711,17 @@
     <message>
         <location filename="../defaultlook.ui" line="1400"/>
         <source>Manage Tint2 Panel</source>
-        <translation type="unfinished"></translation>
+        <translation>Tint2 パネルの管理</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1743"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;再起動が必要です&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1746"/>
         <source>Enable Bluetooth Adapters on boot</source>
-        <translation type="unfinished"></translation>
+        <translation>起動時に Bluetooth アダプタを有効にします</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1815"/>
@@ -778,12 +776,12 @@
     <message>
         <location filename="../defaultlook.cpp" line="634"/>
         <source>%1 License</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 ライセンス</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="648"/>
         <source>%1 Help</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 のヘルプ</translation>
     </message>
     <message>
         <source>License</source>
@@ -801,27 +799,27 @@
     <message>
         <location filename="../defaultlook.cpp" line="700"/>
         <source>Plese remove special characters</source>
-        <translation type="unfinished"></translation>
+        <translation>特殊文字を削除してください</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="700"/>
         <source>from file name</source>
-        <translation type="unfinished"></translation>
+        <translation>ファイル名より</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="710"/>
         <source>File name already exists.  Choose another name</source>
-        <translation type="unfinished"></translation>
+        <translation>そのファイル名は既に存在します。別の名前を選んでください。</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="738"/>
         <source>File is not a valid tar.xz archive file</source>
-        <translation type="unfinished"></translation>
+        <translation>そのファイルは無効な tar.xz 形式です</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="741"/>
         <source>Archive does not contain a panel config</source>
-        <translation type="unfinished"></translation>
+        <translation>書庫にはパネルの設定を含んでいません</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="861"/>

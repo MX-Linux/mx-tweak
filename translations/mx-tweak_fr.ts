@@ -38,7 +38,7 @@
     <message>
         <location filename="../brightness_small.ui" line="59"/>
         <source>Software (xrandr) Brightness</source>
-        <translation>Luminosité logiciel (xrandr)</translation>
+        <translation>Luminosité (logiciel xrandr)</translation>
     </message>
     <message>
         <location filename="../brightness_small.ui" line="66"/>
