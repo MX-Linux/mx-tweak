@@ -1261,15 +1261,33 @@ void defaultlook::setupEtc()
         ui->checkBoxSandbox->hide();
     }
 
-    //setup bluetooth auto enable
-    bluetoothautoenableflag = false;
-    test = runCmd(QStringLiteral("grep ^AutoEnable /etc/bluetooth/main.conf")).output;
-    test = test.section("=",1,1);
-    if ( test == "true"){
-        ui->checkBoxbluetoothAutoEnable->setChecked(true);
+    //setup bluetooth auto enable, hide box if config file doesn't exist
+    if ( QFile("/etc/bluetooth/main.conf").exists()){
+        bluetoothautoenableflag = false;
+        test = runCmd(QStringLiteral("grep ^AutoEnable /etc/bluetooth/main.conf")).output;
+        test = test.section("=",1,1);
+        if ( test == "true"){
+            ui->checkBoxbluetoothAutoEnable->setChecked(true);
+        } else {
+            ui->checkBoxbluetoothAutoEnable->setChecked(false);
+        }
     } else {
-        ui->checkBoxbluetoothAutoEnable->setChecked(false);
+        ui->checkBoxbluetoothAutoEnable->hide();
     }
+
+    //setup apt install_recommends
+    //enable checkbox only if Install-Recommends is set to 1. default is 0 or no if no existanct apt.conf
+    if ( QFile("/etc/apt/apt.conf").exists()){
+        test = runCmd(QStringLiteral("grep Install-Recommends /etc/apt/apt.conf")).output;
+        if ( test.contains("1")){
+            ui->checkBoxInstallRecommends->setChecked(true);
+        } else {
+            ui->checkBoxInstallRecommends->setChecked(false);
+        }
+    } else {
+        ui->checkBoxInstallRecommends->setChecked(false);
+    }
+
 
     //setup NOCSD GTK3 option
     if (!QFileInfo::exists(QStringLiteral("/usr/bin/gtk3-nocsd"))) {
