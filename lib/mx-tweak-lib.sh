@@ -203,6 +203,8 @@ $CMD5
 $CMD6
 $CMD7
 $CMD8
+$CMD9
+$CMD10
 }
 
 CMD1=$1
@@ -213,6 +215,8 @@ CMD5=$5
 CMD6=$6
 CMD7=$7
 CMD8=$8
+CMD9=$9
+CMD10=$10
 main
 
 exit 0
