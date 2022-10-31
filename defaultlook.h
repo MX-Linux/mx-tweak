@@ -81,6 +81,7 @@ public:
     bool amdgpuflag{};
     bool libinput_touchpadflag{};
     bool bluetoothautoenableflag{};
+    bool enable_recommendsflag{};
     bool vblankflag{};
     bool displayflag = false;
     bool displaysetupflag = false;
@@ -252,6 +253,8 @@ private slots:
     void on_buttonManageTint2_clicked();
 
     void on_lineEditBackupName_returnPressed();
+
+    void on_checkBoxInstallRecommends_clicked();
 
 private:
     Ui::defaultlook *ui;
