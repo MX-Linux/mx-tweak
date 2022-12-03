@@ -1,4 +1,6 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="da">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="da">
 <context>
     <name>QObject</name>
     <message>
@@ -28,7 +30,7 @@
     <message>
         <location filename="../brightness_small.ui" line="14"/>
         <source>MainWindow</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../brightness_small.ui" line="39"/>
@@ -38,7 +40,7 @@
     <message>
         <location filename="../brightness_small.ui" line="59"/>
         <source>Software (xrandr) Brightness</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../brightness_small.ui" line="66"/>
@@ -49,27 +51,27 @@
     <message>
         <location filename="../brightness_small.ui" line="80"/>
         <source>Hardware Backlight</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../brightness_small.ui" line="94"/>
         <source>&gt;&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../brightness_small.cpp" line="33"/>
         <source>MX-Tweak</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../brightness_small.cpp" line="58"/>
         <source>Display</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../brightness_small.cpp" line="63"/>
         <source>&amp;Quit</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -167,7 +169,7 @@
     <message>
         <location filename="../defaultlook.ui" line="234"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="164"/>
@@ -210,7 +212,7 @@
         <location filename="../defaultlook.ui" line="1026"/>
         <location filename="../defaultlook.ui" line="1393"/>
         <location filename="../defaultlook.ui" line="1586"/>
-        <location filename="../defaultlook.ui" line="1670"/>
+        <location filename="../defaultlook.ui" line="1742"/>
         <source>Apply</source>
         <translation>Anvend</translation>
     </message>
@@ -222,7 +224,7 @@
     <message>
         <location filename="../defaultlook.ui" line="392"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="428"/>
@@ -247,17 +249,17 @@
     <message>
         <location filename="../defaultlook.ui" line="452"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Manager&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="459"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Themes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="466"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="486"/>
@@ -368,32 +370,32 @@
     <message>
         <location filename="../defaultlook.ui" line="744"/>
         <source>Display</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="752"/>
         <source>Hardware Backlight</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="759"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Display Tweaks&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="786"/>
         <source>Choose Display for xrandr tweaks</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="796"/>
         <source>Resolution</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="803"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Saving is per display&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="806"/>
@@ -403,7 +405,7 @@
     <message>
         <location filename="../defaultlook.ui" line="813"/>
         <source>Software (xrandr) Brightness</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="820"/>
@@ -414,12 +416,12 @@
     <message>
         <location filename="../defaultlook.ui" line="827"/>
         <source>GTK scaling</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="847"/>
         <source>xrandr Scaling</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="943"/>
@@ -444,7 +446,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1013"/>
         <source>Enable Desktop Zoom </source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="972"/>
@@ -470,7 +472,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1037"/>
         <source>Show GTK File Dialog action buttons at bottom of dialogs</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1047"/>
@@ -480,113 +482,113 @@
     <message>
         <location filename="../defaultlook.ui" line="1055"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1089"/>
         <location filename="../defaultlook.ui" line="1125"/>
         <source>On</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1094"/>
         <location filename="../defaultlook.ui" line="1130"/>
         <source>Off</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1099"/>
         <source>On Hover</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1117"/>
         <location filename="../defaultlook.ui" line="1138"/>
         <source>Autohide</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1145"/>
         <source>Reset ALL mx-fluxbox settings</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1152"/>
         <location filename="../defaultlook.ui" line="1166"/>
         <location filename="../defaultlook.ui" line="1435"/>
         <source>Placement</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1159"/>
         <source>Reset DefaultDock</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1173"/>
         <source>Toggle desktop icons</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1180"/>
         <source>Reset Fluxbox Menu</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1321"/>
         <location filename="../defaultlook.ui" line="1553"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1328"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1335"/>
         <source>Width</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1342"/>
         <source>Toggle icon captions</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1349"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Desktop Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1356"/>
         <source>Height</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1363"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1366"/>
         <source>Upgrade existing menu entries</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1386"/>
         <source>Show Toolbar</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1414"/>
         <source>Plasma</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1469"/>
         <source>Systray Icon Size</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1480"/>
@@ -596,42 +598,42 @@
     <message>
         <location filename="../defaultlook.ui" line="1485"/>
         <source>Small</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1490"/>
         <source>Medium</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1495"/>
         <source>Large</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1500"/>
         <source>Larger</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1505"/>
         <source>Largest</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1532"/>
         <source>Workspace</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1539"/>
         <source>Enable single-click</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1560"/>
         <source>Reset KDE/Plasma defaults</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1600"/>
@@ -639,119 +641,124 @@
         <translation>Andet</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1608"/>
+        <location filename="../defaultlook.ui" line="1667"/>
         <source>Password for administrative tasks:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1629"/>
+        <location filename="../defaultlook.ui" line="1615"/>
         <source>Use tearfree radeon driver option</source>
         <translation>Brug valgmuligheden tearfree radeon-driver</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1615"/>
+        <location filename="../defaultlook.ui" line="1629"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>          BEMÆRK: eksisterende /etc/X11/xorg.conf.d/20-radeon.conf sikkerhedskopieres til hjemmemappen</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1622"/>
+        <location filename="../defaultlook.ui" line="1674"/>
         <source>&amp;User</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1709"/>
+        <location filename="../defaultlook.ui" line="1681"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1688"/>
+        <location filename="../defaultlook.ui" line="1729"/>
         <source>Enable kernel sandbox</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1636"/>
+        <location filename="../defaultlook.ui" line="1653"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>          BEMÆRK: eksisterende /etc/X11/xorg.conf.d/20-intel.conf sikkerhedskopieres til hjemmemappen</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1729"/>
+        <location filename="../defaultlook.ui" line="1695"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>Nulstil Lightdm (loginskærm) til systemets standardtema</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1695"/>
+        <location filename="../defaultlook.ui" line="1660"/>
         <source>Use libinput driver for touchpad instead of synaptics touchpad driver (requires restart)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1681"/>
+        <location filename="../defaultlook.ui" line="1622"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>          BEMÆRK: eksisterende /etc/X11/xorg.conf.d/20-amd.conf sikkerhedskopieres til hjemmemappen</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1736"/>
+        <location filename="../defaultlook.ui" line="1608"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>Aktivér montering af interne drivere af ikke-root-brugere</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1643"/>
+        <location filename="../defaultlook.ui" line="1688"/>
         <source>Use tearfree amdgpu option</source>
         <translation>Brug valgmuligheden tearfree amdgpu</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1702"/>
         <source>Root</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1650"/>
+        <location filename="../defaultlook.ui" line="1636"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1400"/>
         <source>Manage Tint2 Panel</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1743"/>
+        <location filename="../defaultlook.ui" line="1643"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1746"/>
+        <location filename="../defaultlook.ui" line="1646"/>
         <source>Enable Bluetooth Adapters on boot</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1815"/>
+        <location filename="../defaultlook.ui" line="1753"/>
+        <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1822"/>
         <source>About</source>
         <translation>Om</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1826"/>
+        <location filename="../defaultlook.ui" line="1833"/>
         <source>Help</source>
         <translation>Hjælp</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1843"/>
+        <location filename="../defaultlook.ui" line="1850"/>
         <source>Quit application</source>
         <translation>Afslut programmet</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1846"/>
+        <location filename="../defaultlook.ui" line="1853"/>
         <source>Close</source>
         <translation>Luk</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1853"/>
+        <location filename="../defaultlook.ui" line="1860"/>
         <source>Alt+N</source>
         <translation>Alt+N</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="58"/>
         <source>--display switch only valid for Xfce</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="628"/>
@@ -799,27 +806,27 @@
     <message>
         <location filename="../defaultlook.cpp" line="700"/>
         <source>Plese remove special characters</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="700"/>
         <source>from file name</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="710"/>
         <source>File name already exists.  Choose another name</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="738"/>
         <source>File is not a valid tar.xz archive file</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="741"/>
         <source>Archive does not contain a panel config</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="861"/>
@@ -829,15 +836,15 @@
     <message>
         <location filename="../defaultlook.cpp" line="862"/>
         <source>Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1529"/>
+        <location filename="../defaultlook.cpp" line="1548"/>
         <source>settings</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1869"/>
+        <location filename="../defaultlook.cpp" line="1888"/>
         <source>Choose a theme set</source>
         <translation>Vælg et temasæt</translation>
     </message>

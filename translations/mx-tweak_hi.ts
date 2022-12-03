@@ -1,4 +1,6 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="hi">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="hi">
 <context>
     <name>QObject</name>
     <message>
@@ -167,7 +169,7 @@
     <message>
         <location filename="../defaultlook.ui" line="234"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="164"/>
@@ -210,7 +212,7 @@
         <location filename="../defaultlook.ui" line="1026"/>
         <location filename="../defaultlook.ui" line="1393"/>
         <location filename="../defaultlook.ui" line="1586"/>
-        <location filename="../defaultlook.ui" line="1670"/>
+        <location filename="../defaultlook.ui" line="1742"/>
         <source>Apply</source>
         <translation>लागू करें</translation>
     </message>
@@ -222,7 +224,7 @@
     <message>
         <location filename="../defaultlook.ui" line="392"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="428"/>
@@ -247,17 +249,17 @@
     <message>
         <location filename="../defaultlook.ui" line="452"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Manager&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="459"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Themes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="466"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="486"/>
@@ -444,7 +446,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1013"/>
         <source>Enable Desktop Zoom </source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="972"/>
@@ -470,7 +472,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1037"/>
         <source>Show GTK File Dialog action buttons at bottom of dialogs</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1047"/>
@@ -566,7 +568,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1363"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1366"/>
@@ -576,7 +578,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1386"/>
         <source>Show Toolbar</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1414"/>
@@ -639,62 +641,62 @@
         <translation>अन्य</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1608"/>
+        <location filename="../defaultlook.ui" line="1667"/>
         <source>Password for administrative tasks:</source>
         <translation>प्रशासक कार्यों हेतु कूटशब्द :</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1629"/>
+        <location filename="../defaultlook.ui" line="1615"/>
         <source>Use tearfree radeon driver option</source>
         <translation>स्क्रीन समस्या समाधन हेतु radeon विकल्प उपयोग करें</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1615"/>
+        <location filename="../defaultlook.ui" line="1629"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>          ध्यान दें : मौजूदा /etc/X11/xorg.conf.d/20-radeon.conf होम फोल्डर में बैकअप होगी</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1622"/>
+        <location filename="../defaultlook.ui" line="1674"/>
         <source>&amp;User</source>
         <translation>उपयोक्ता (&amp;U)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1709"/>
+        <location filename="../defaultlook.ui" line="1681"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>डिफ़ॉल्ट &quot;modesetting&quot; ड्राइवर के स्थान पर इंटेल ड्राइवर उपयोग करें (पुनः आरंभ आवश्यक)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1688"/>
+        <location filename="../defaultlook.ui" line="1729"/>
         <source>Enable kernel sandbox</source>
         <translation>कर्नेल सैंडबॉक्स सक्रिय करें</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1636"/>
+        <location filename="../defaultlook.ui" line="1653"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>          ध्यान दें : मौजूदा /etc/X11/xorg.conf.d/20-intel.conf होम फोल्डर में बैकअप होगी</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1729"/>
+        <location filename="../defaultlook.ui" line="1695"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>लाइट-डीएम (लॉगिन स्क्रीन) को सिस्टम डिफ़ॉल्ट थीम पर पुनः सेट करें</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1695"/>
+        <location filename="../defaultlook.ui" line="1660"/>
         <source>Use libinput driver for touchpad instead of synaptics touchpad driver (requires restart)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1681"/>
+        <location filename="../defaultlook.ui" line="1622"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>          ध्यान दें : मौजूदा /etc/X11/xorg.conf.d/20-amd.conf होम फोल्डर में बैकअप होगी</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1736"/>
+        <location filename="../defaultlook.ui" line="1608"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>गैर-रूट उपयोक्ता द्वारा आंतरिक ड्राइव माउंट करना सक्रिय करें</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1643"/>
+        <location filename="../defaultlook.ui" line="1688"/>
         <source>Use tearfree amdgpu option</source>
         <translation>स्क्रीन समस्या समाधन हेतु amdgpu विकल्प उपयोग करें</translation>
     </message>
@@ -704,47 +706,52 @@
         <translation>रूट</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1650"/>
+        <location filename="../defaultlook.ui" line="1636"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1400"/>
         <source>Manage Tint2 Panel</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1743"/>
+        <location filename="../defaultlook.ui" line="1643"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1746"/>
+        <location filename="../defaultlook.ui" line="1646"/>
         <source>Enable Bluetooth Adapters on boot</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1815"/>
+        <location filename="../defaultlook.ui" line="1753"/>
+        <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1822"/>
         <source>About</source>
         <translation>बारे में</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1826"/>
+        <location filename="../defaultlook.ui" line="1833"/>
         <source>Help</source>
         <translation>सहायता</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1843"/>
+        <location filename="../defaultlook.ui" line="1850"/>
         <source>Quit application</source>
         <translation>अनुप्रयोग बंद करें</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1846"/>
+        <location filename="../defaultlook.ui" line="1853"/>
         <source>Close</source>
         <translation>बंद करें</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1853"/>
+        <location filename="../defaultlook.ui" line="1860"/>
         <source>Alt+N</source>
         <translation>Alt+N</translation>
     </message>
@@ -799,27 +806,27 @@
     <message>
         <location filename="../defaultlook.cpp" line="700"/>
         <source>Plese remove special characters</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="700"/>
         <source>from file name</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="710"/>
         <source>File name already exists.  Choose another name</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="738"/>
         <source>File is not a valid tar.xz archive file</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="741"/>
         <source>Archive does not contain a panel config</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="861"/>
@@ -832,12 +839,12 @@
         <translation>आपकी वर्तमान पैनल सेटिंग्स का आपके होम फोल्डर के .restore नामक अदृश्य फोल्डर में बैकअप कर दिया गया (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1529"/>
+        <location filename="../defaultlook.cpp" line="1548"/>
         <source>settings</source>
         <translation>सेटिंग्स</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1869"/>
+        <location filename="../defaultlook.cpp" line="1888"/>
         <source>Choose a theme set</source>
         <translation>थीम संग्रह चुनें</translation>
     </message>
