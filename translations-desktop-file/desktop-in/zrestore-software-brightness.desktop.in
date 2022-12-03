@@ -3,11 +3,12 @@ Encoding=UTF-8
 Version=0.9.4
 Type=Application
 # The desktop entry name will be displayed within the menu.
-Name=mx-tweak brightness systray
+Name=restore-software-brightness
 # # The desktop entry comment will be shown within the menu.
-Comment=starts mx-tweak brightness systray app
-Exec=mx-tweak --tray
+Comment=restore xrandr brightness values stored mx-tweak display tab
+Exec=restore-software-brightness
+OnlyShowIn=XFCE;
 StartupNotify=false
 Terminal=false
-Hidden=true
+Hidden=false
 
