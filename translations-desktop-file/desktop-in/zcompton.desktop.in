@@ -3,10 +3,11 @@ Encoding=UTF-8
 Version=0.9.4
 Type=Application
 # The desktop entry name will be displayed within the menu.
-Name=mx-tweak brightness systray
+Name=compton
 # # The desktop entry comment will be shown within the menu.
-Comment=starts mx-tweak brightness systray app
-Exec=mx-tweak --tray
+Comment=compton startup
+Exec=compton-launch.sh
+OnlyShowIn=XFCE;
 StartupNotify=false
 Terminal=false
 Hidden=true
