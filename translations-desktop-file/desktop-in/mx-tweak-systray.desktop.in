@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Brightness Systray
+Comment=brightness systray application
+Exec=mx-tweak --tray &
+Terminal=false
+Type=Application
+Icon=brightness-systray
+Categories=XFCE;Settings;DesktopSettings;MX-Setup;
+NoDisplay=false
+

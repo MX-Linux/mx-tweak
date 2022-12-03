@@ -1,0 +1,36 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-03 11:42-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: desktop-in/mx-tweak.desktop.in:4
+msgid "MX Tweak"
+msgstr ""
+
+#: desktop-in/mx-tweak.desktop.in:5
+msgid "Assorted useful tweaks"
+msgstr ""
+
+#: desktop-in/mx-tweak-systray.desktop.in:4
+#: desktop-in/mx-tweak-tray-app-autostart.desktop.in:6
+msgid "Brightness Systray"
+msgstr ""
+
+#: desktop-in/mx-tweak-systray.desktop.in:5
+#: desktop-in/mx-tweak-tray-app-autostart.desktop.in:7
+msgid "brightness systray application"
+msgstr ""

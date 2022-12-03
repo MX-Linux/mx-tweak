@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=MX Tweak
+Comment=Assorted useful tweaks
+Exec=mx-tweak
+Terminal=false
+Type=Application
+Icon=mx-tweak
+Categories=XFCE;Settings;DesktopSettings;X-XFCE-SettingsDialog;X-XFCE-PersonalSettings;MX-Setup;
+NoDisplay=false
+
