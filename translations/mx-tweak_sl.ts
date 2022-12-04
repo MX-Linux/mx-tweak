@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="sl">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="sl">
 <context>
     <name>QObject</name>
     <message>
@@ -578,7 +576,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1386"/>
         <source>Show Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Prikaži orodno vrstico</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1414"/>
@@ -713,7 +711,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1400"/>
         <source>Manage Tint2 Panel</source>
-        <translation type="unfinished"></translation>
+        <translation>Upravljaj Tint2 pano</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1643"/>
@@ -728,7 +726,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1753"/>
         <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Apt namesti dodatne &quot;priporočene&quot; pakete kot odvisnosti</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1822"/>
@@ -806,27 +804,27 @@
     <message>
         <location filename="../defaultlook.cpp" line="700"/>
         <source>Plese remove special characters</source>
-        <translation type="unfinished"></translation>
+        <translation>Odstranite posebne znake</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="700"/>
         <source>from file name</source>
-        <translation type="unfinished"></translation>
+        <translation>iz imena datoteke</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="710"/>
         <source>File name already exists.  Choose another name</source>
-        <translation type="unfinished"></translation>
+        <translation>Ime datoteke že obstaja. Izberite drugo ime</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="738"/>
         <source>File is not a valid tar.xz archive file</source>
-        <translation type="unfinished"></translation>
+        <translation>Datoteka ni ustrezna tar.xz arhivska datoteka</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="741"/>
         <source>Archive does not contain a panel config</source>
-        <translation type="unfinished"></translation>
+        <translation>Arhiv ne vsebuje konfiguracije panojev</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="861"/>

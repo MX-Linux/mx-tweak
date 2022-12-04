@@ -24,12 +24,12 @@ fi
 
 
 #remove existing translations
-#backdir="po_$(date '+%Y-%m-%d_%H%M%S')"
-#mkdir "$backdir"
-#mv po/* "$backdir/"
+backdir="po_$(date '+%Y-%m-%d_%H%M%S')"
+mkdir "$backdir"
+mv po/* "$backdir/"
 
 # get all translations
-#if command -v tx >/dev/null; then
-#   echodo tx pull -r antix-development.$APPNAME  --all
-#fi
+if command -v tx >/dev/null; then
+   echodo tx pull -r antix-development.$APPNAME  --all
+fi
 

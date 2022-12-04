@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="pt_BR">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="pt_BR">
 <context>
     <name>QObject</name>
     <message>
@@ -200,7 +198,7 @@
     <message>
         <location filename="../defaultlook.ui" line="293"/>
         <source>Restore backup panel configuration</source>
-        <translation>Restaurar a configurações do painel a partir da cópia de segurança</translation>
+        <translation>Restaurar as configurações do painel a partir da cópia de segurança</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="353"/>
@@ -300,7 +298,7 @@
     <message>
         <location filename="../defaultlook.ui" line="598"/>
         <source>Edit compton.conf</source>
-        <translation>Editar arquivo de configurações compton.conf</translation>
+        <translation>Editar o arquivo de configurações compton.conf</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="648"/>
@@ -728,7 +726,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1753"/>
         <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
-        <translation type="unfinished"></translation>
+        <translation>O comando &quot;apt&quot; instala os pacotes &quot;recomendados&quot; como dependências adicionais</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1822"/>
@@ -1049,7 +1047,7 @@
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="100"/>
         <source>Windows during resize</source>
-        <translation>Janelas durante o redimensionamento</translation>
+        <translation>Durante o redimensionamento das janelas</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="123"/>

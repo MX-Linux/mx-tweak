@@ -1,37 +1,78 @@
-# Polish translations for PACKAGE package.
-# Copyright (C) 2022 THE PACKAGE'S COPYRIGHT HOLDER
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Automatically generated, 2022.
-#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# MX Linux Polska <mxlinuxpl@gmail.com>, 2022
+# Dolphin Oracle <dolphinoracle@gmail.com>, 2022
+# anticapitalista <anticapitalista@riseup.net>, 2022
+# 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-03 11:42-0500\n"
-"PO-Revision-Date: 2022-12-03 11:42-0500\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
-"Language: pl\n"
+"POT-Creation-Date: 2022-12-03 12:46-0500\n"
+"PO-Revision-Date: 2022-12-03 16:44+0000\n"
+"Last-Translator: anticapitalista <anticapitalista@riseup.net>, 2022\n"
+"Language-Team: Polish (https://www.transifex.com/anticapitalista/teams/10162/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2);\n"
+"Language: pl\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
-#: desktop-in/mx-tweak.desktop.in:4
+#. The desktop entry name will be displayed within the menu.
+#: desktop-in/mx-tweak.desktop.in:5
 msgid "MX Tweak"
 msgstr "MX Ulepszenia"
 
-#: desktop-in/mx-tweak.desktop.in:5
+#. # The desktop entry comment will be shown within the menu.
+#: desktop-in/mx-tweak.desktop.in:7
 msgid "Assorted useful tweaks"
 msgstr "Różne użyteczne poprawki"
 
-#: desktop-in/mx-tweak-systray.desktop.in:4
-#: desktop-in/mx-tweak-tray-app-autostart.desktop.in:6
+#: desktop-in/mx-tweak.desktop.in:13 desktop-in/mx-tweak-systray.desktop.in:13
+msgid "Desktop"
+msgstr "Pulpit"
+
+#. The desktop entry name will be displayed within the menu.
+#: desktop-in/mx-tweak-systray.desktop.in:5
 msgid "Brightness Systray"
 msgstr "Jasność Systray"
 
-#: desktop-in/mx-tweak-systray.desktop.in:5
-#: desktop-in/mx-tweak-tray-app-autostart.desktop.in:7
+#. # The desktop entry comment will be shown within the menu.
+#: desktop-in/mx-tweak-systray.desktop.in:7
 msgid "brightness systray application"
+msgstr ""
+
+#. The desktop entry name will be displayed within the menu.
+#: desktop-in/mx-tweak-tray-app-autostart.desktop.in:7
+msgid "mx-tweak brightness systray"
+msgstr ""
+
+#. # The desktop entry comment will be shown within the menu.
+#: desktop-in/mx-tweak-tray-app-autostart.desktop.in:9
+msgid "starts mx-tweak brightness systray app"
+msgstr ""
+
+#. The desktop entry name will be displayed within the menu.
+#: desktop-in/zcompton.desktop.in:7
+msgid "compton"
+msgstr ""
+
+#. # The desktop entry comment will be shown within the menu.
+#: desktop-in/zcompton.desktop.in:9
+msgid "compton startup"
+msgstr ""
+
+#. The desktop entry name will be displayed within the menu.
+#: desktop-in/zrestore-software-brightness.desktop.in:7
+msgid "restore-software-brightness"
+msgstr ""
+
+#. # The desktop entry comment will be shown within the menu.
+#: desktop-in/zrestore-software-brightness.desktop.in:9
+msgid "restore xrandr brightness values stored mx-tweak display tab"
 msgstr ""
