@@ -1,0 +1,29 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=0.9.4
+Type=Application
+Name[el]=mx-tweak εικονίδιο φωτεινότητας
+Name[es]=mx-tweak bandeja de brillo
+Name[es_ES]=mx-tweak bandeja de brillo
+Name[fr]=mx-ajustement de la luminosité dans la barre d'état système / systray
+Name[fr_BE]=mx-ajustement de la luminosité dans la barre d'état système / systray
+Name[it]=luminosità del vassoio di sistema di mx-rifiniture
+Name[ja]=mx-tweak 明るさ調節トレイ
+Name[pt_BR]=Controle do Brilho da Tela na Bandeja do Sistema do Ajustes Rápidos do MX
+Name[sv]=mx-tweak ljusstyrka för systembricka
+Name=mx-tweak brightness systray
+Comment[el]=εκκινει την εφαρμογη εικονιδίου φωτεινότητας του mx-tweak
+Comment[es]=iniciar la aplicación mx-tweak bandeja de brillo 
+Comment[es_ES]=iniciar la aplicación mx-tweak bandeja de brillo 
+Comment[fr]=Lance l'application mx-ajustement de la luminosité dans la barre d'état système / systray
+Comment[fr_BE]=Lance l'application mx-ajustement de la luminosité dans la barre d'état système / systray
+Comment[it]=avvia l'app luminosità del vassoio di sistema di mx-rifiniture
+Comment[ja]=明るさの調節を行うトレイアプレットを起動します
+Comment[pt_BR]=Inicializador do aplicativo da bandeja do sistema de controle do brilho com o MX Tweak
+Comment[sv]=startar mx-tweak systembrickeapp för ljusstyrka
+Comment=starts mx-tweak brightness systray app
+Exec=mx-tweak --tray
+StartupNotify=false
+Terminal=false
+Hidden=true
+

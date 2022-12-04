@@ -27,6 +27,8 @@ backdir="ts_$(date '+%Y-%m-%d_%H%M%S')"
 mkdir "$backdir"
 mv *.ts "$backdir/"
 mv "$backdir/${APPNAME}_en.ts" ./
+rm -R "$backdir"
+
 
 # get all translations
 if command -v tx >/dev/null; then
