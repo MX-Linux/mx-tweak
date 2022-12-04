@@ -1,0 +1,78 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Dolphin Oracle <dolphinoracle@gmail.com>, 2022
+# 🎈 BALLOON | FU-SEN, 2022
+# Green, 2022
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-03 12:46-0500\n"
+"PO-Revision-Date: 2022-12-03 16:44+0000\n"
+"Last-Translator: Green, 2022\n"
+"Language-Team: Japanese (https://www.transifex.com/anticapitalista/teams/10162/ja/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. The desktop entry name will be displayed within the menu.
+#: desktop-in/mx-tweak.desktop.in:5
+msgid "MX Tweak"
+msgstr "MX Tweak"
+
+#. # The desktop entry comment will be shown within the menu.
+#: desktop-in/mx-tweak.desktop.in:7
+msgid "Assorted useful tweaks"
+msgstr "色々と便利な tweak があります"
+
+#: desktop-in/mx-tweak.desktop.in:13 desktop-in/mx-tweak-systray.desktop.in:13
+msgid "Desktop"
+msgstr "デスクトップ"
+
+#. The desktop entry name will be displayed within the menu.
+#: desktop-in/mx-tweak-systray.desktop.in:5
+msgid "Brightness Systray"
+msgstr "明るさ調節トレイアイコン"
+
+#. # The desktop entry comment will be shown within the menu.
+#: desktop-in/mx-tweak-systray.desktop.in:7
+msgid "brightness systray application"
+msgstr "明るさ調節を行うトレイアプレット"
+
+#. The desktop entry name will be displayed within the menu.
+#: desktop-in/mx-tweak-tray-app-autostart.desktop.in:7
+msgid "mx-tweak brightness systray"
+msgstr "mx-tweak 明るさ調節トレイ"
+
+#. # The desktop entry comment will be shown within the menu.
+#: desktop-in/mx-tweak-tray-app-autostart.desktop.in:9
+msgid "starts mx-tweak brightness systray app"
+msgstr "明るさの調節を行うトレイアプレットを起動します"
+
+#. The desktop entry name will be displayed within the menu.
+#: desktop-in/zcompton.desktop.in:7
+msgid "compton"
+msgstr "コンプトン"
+
+#. # The desktop entry comment will be shown within the menu.
+#: desktop-in/zcompton.desktop.in:9
+msgid "compton startup"
+msgstr "コンプトンを起動"
+
+#. The desktop entry name will be displayed within the menu.
+#: desktop-in/zrestore-software-brightness.desktop.in:7
+msgid "restore-software-brightness"
+msgstr "restore-software-brightness"
+
+#. # The desktop entry comment will be shown within the menu.
+#: desktop-in/zrestore-software-brightness.desktop.in:9
+msgid "restore xrandr brightness values stored mx-tweak display tab"
+msgstr "mx-tweak display タブに保存された xrandr の輝度設定を復元します"

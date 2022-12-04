@@ -210,7 +210,7 @@
         <location filename="../defaultlook.ui" line="1026"/>
         <location filename="../defaultlook.ui" line="1393"/>
         <location filename="../defaultlook.ui" line="1586"/>
-        <location filename="../defaultlook.ui" line="1670"/>
+        <location filename="../defaultlook.ui" line="1742"/>
         <source>Apply</source>
         <translation>Zastosuj</translation>
     </message>
@@ -639,62 +639,62 @@
         <translation>Inne</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1608"/>
+        <location filename="../defaultlook.ui" line="1667"/>
         <source>Password for administrative tasks:</source>
         <translation>Hasło do zadań administracyjnych:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1629"/>
+        <location filename="../defaultlook.ui" line="1615"/>
         <source>Use tearfree radeon driver option</source>
         <translation>Użyj opcji sterownika tearfree radeon</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1615"/>
+        <location filename="../defaultlook.ui" line="1629"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>          UWAGA: istniejący plik /etc/X11/xorg.conf.d/20-radeon.conf zostanie skopiowany do folderu domowego</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1622"/>
+        <location filename="../defaultlook.ui" line="1674"/>
         <source>&amp;User</source>
         <translation>&amp;User</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1709"/>
+        <location filename="../defaultlook.ui" line="1681"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>Użyj sterownika Intel zamiast domyślnego sterownika „modesetting” (wymaga ponownego uruchomienia)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1688"/>
+        <location filename="../defaultlook.ui" line="1729"/>
         <source>Enable kernel sandbox</source>
         <translation>Włącz kernel sandbox</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1636"/>
+        <location filename="../defaultlook.ui" line="1653"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>UWAGA: istniejący plik /etc/X11/xorg.conf.d/20-intel.conf zostanie skopiowany do folderu domowego</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1729"/>
+        <location filename="../defaultlook.ui" line="1695"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>Zresetuj Lightdm (ekran logowania) do domyślnego motywu systemowego</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1695"/>
+        <location filename="../defaultlook.ui" line="1660"/>
         <source>Use libinput driver for touchpad instead of synaptics touchpad driver (requires restart)</source>
         <translation>Użyj dla touchpada sterownika libinput zamiast sterownika synaptics (wymaga restartu)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1681"/>
+        <location filename="../defaultlook.ui" line="1622"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>          UWAGA: istniejący plik /etc/X11/xorg.conf.d/20-amd.conf zostanie skopiowany do folderu domowego</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1736"/>
+        <location filename="../defaultlook.ui" line="1608"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>Pozwól na montowanie dysków wewnętrznych przez użytkowników innych niż root</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1643"/>
+        <location filename="../defaultlook.ui" line="1688"/>
         <source>Use tearfree amdgpu option</source>
         <translation>Użyj opcji tearfree amdgpu </translation>
     </message>
@@ -704,7 +704,7 @@
         <translation>Root</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1650"/>
+        <location filename="../defaultlook.ui" line="1636"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
         <translation>Użyj dekoracji po stronie klienta (CSD - Client Side Decorations) w aplikacjach GTK3, które je wspierają (wymaga zrestartowania sesji)</translation>
     </message>
@@ -714,37 +714,42 @@
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1743"/>
+        <location filename="../defaultlook.ui" line="1643"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1746"/>
+        <location filename="../defaultlook.ui" line="1646"/>
         <source>Enable Bluetooth Adapters on boot</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1815"/>
+        <location filename="../defaultlook.ui" line="1753"/>
+        <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1822"/>
         <source>About</source>
         <translation>O programie</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1826"/>
+        <location filename="../defaultlook.ui" line="1833"/>
         <source>Help</source>
         <translation>Pomoc</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1843"/>
+        <location filename="../defaultlook.ui" line="1850"/>
         <source>Quit application</source>
         <translation>Zakończ aplikację</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1846"/>
+        <location filename="../defaultlook.ui" line="1853"/>
         <source>Close</source>
         <translation>Zamknij</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1853"/>
+        <location filename="../defaultlook.ui" line="1860"/>
         <source>Alt+N</source>
         <translation>Alt+N</translation>
     </message>
@@ -832,12 +837,12 @@
         <translation>Kopia zapasowa bieżących ustawień panelu została zapisana w ukrytym folderze o nazwie .restore w twoim folderze domowym (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1529"/>
+        <location filename="../defaultlook.cpp" line="1548"/>
         <source>settings</source>
         <translation>ustawienia</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1869"/>
+        <location filename="../defaultlook.cpp" line="1888"/>
         <source>Choose a theme set</source>
         <translation>Wybierz zestaw motywów</translation>
     </message>
