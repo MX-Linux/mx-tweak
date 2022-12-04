@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="ja">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="ja">
 <context>
     <name>QObject</name>
     <message>
@@ -71,7 +69,7 @@
     <message>
         <location filename="../brightness_small.cpp" line="63"/>
         <source>&amp;Quit</source>
-        <translation>中止(%Q)</translation>
+        <translation>中止(&amp;Q)</translation>
     </message>
 </context>
 <context>
@@ -109,7 +107,7 @@
     <message>
         <location filename="../defaultlook.ui" line="80"/>
         <source>Window Manager</source>
-        <translation>ウィンドウマネージャー</translation>
+        <translation>ウィンドウマネージャ</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="100"/>
@@ -360,7 +358,7 @@
     <message>
         <location filename="../defaultlook.ui" line="727"/>
         <source>Launch compton-conf configuration tool</source>
-        <translation>コンプトンの設定ツールを起動</translation>
+        <translation>コンプトン設定ツールを起動</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="730"/>
@@ -522,7 +520,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1159"/>
         <source>Reset DefaultDock</source>
-        <translation>規定の Dock をリセット</translation>
+        <translation>標準ドックをリセット</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1173"/>
@@ -543,7 +541,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1328"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock の設定&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;ドックの設定&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1335"/>
@@ -728,7 +726,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1753"/>
         <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
-        <translation type="unfinished"></translation>
+        <translation>APT は推奨パッケージを依存関係にあるものとして追加します</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1822"/>
@@ -788,7 +786,7 @@
     <message>
         <location filename="../defaultlook.cpp" line="648"/>
         <source>%1 Help</source>
-        <translation>%1 のヘルプ</translation>
+        <translation>%1 ヘルプ</translation>
     </message>
     <message>
         <source>License</source>
