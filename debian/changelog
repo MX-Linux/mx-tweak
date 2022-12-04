@@ -1,3 +1,9 @@
+mx-tweak (22.12.01mx21) mx; urgency=medium
+
+  * update translations
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 04 Dec 2022 11:16:22 -0500
+
 mx-tweak (22.10.05mx21) mx; urgency=medium
 
   * add install_recommends option
