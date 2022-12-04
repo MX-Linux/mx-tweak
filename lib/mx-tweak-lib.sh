@@ -48,14 +48,46 @@ disable_libinput_touchpad()
     
 }
 
-enable_bluetooth
+enable_bluetooth()
 {
 sed -i 's/^AutoEnable=.*/AutoEnable=true/' /etc/bluetooth/main.conf
 }
 
-disable_bluetooth
+disable_bluetooth()
 {
 sed -i 's/^AutoEnable=.*/AutoEnable=false/' /etc/bluetooth/main.conf
+}
+
+install_recommends()
+{
+local file
+file="/etc/apt/apt.conf"
+
+if [ -e "$file" ]; then
+	if [ -n "$(grep "Install-Recommends" "$file")" ]; then
+		sed -i 's/APT\:\:Install-Recommends .*/APT\:\:Install-Recommends "1";/' "$file"
+	else
+		echo "APT::Install-Recommends \"1\";" >> "$file"
+	fi
+else
+	echo "APT::Install-Recommends \"1\";" >> "$file"
+fi
+}
+
+noinstall_recommends()
+{
+local file
+file="/etc/apt/apt.conf"
+
+if [ -e "$file" ]; then
+	if [ -n "$(grep "Install-Recommends" "$file")" ]; then
+		sed -i 's/APT\:\:Install-Recommends .*/APT\:\:Install-Recommends "0";/' "$file"
+	else
+		echo "APT::Install-Recommends \"0\";" >> "$file"
+	fi
+else
+	echo "APT::Install-Recommends \"0\";" >> "$file"
+fi
 }
 
 #lightdm
@@ -171,6 +203,8 @@ $CMD5
 $CMD6
 $CMD7
 $CMD8
+$CMD9
+$CMD10
 }
 
 CMD1=$1
@@ -181,6 +215,8 @@ CMD5=$5
 CMD6=$6
 CMD7=$7
 CMD8=$8
+CMD9=$9
+CMD10=$10
 main
 
 exit 0

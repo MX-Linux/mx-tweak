@@ -1261,15 +1261,33 @@ void defaultlook::setupEtc()
         ui->checkBoxSandbox->hide();
     }
 
-    //setup bluetooth auto enable
-    bluetoothautoenableflag = false;
-    test = runCmd(QStringLiteral("grep ^AutoEnable /etc/bluetooth/main.conf")).output;
-    test = test.section("=",1,1);
-    if ( test == "true"){
-        ui->checkBoxbluetoothAutoEnable->setChecked(true);
+    //setup bluetooth auto enable, hide box if config file doesn't exist
+    if ( QFile("/etc/bluetooth/main.conf").exists()){
+        bluetoothautoenableflag = false;
+        test = runCmd(QStringLiteral("grep ^AutoEnable /etc/bluetooth/main.conf")).output;
+        test = test.section("=",1,1);
+        if ( test == "true"){
+            ui->checkBoxbluetoothAutoEnable->setChecked(true);
+        } else {
+            ui->checkBoxbluetoothAutoEnable->setChecked(false);
+        }
     } else {
-        ui->checkBoxbluetoothAutoEnable->setChecked(false);
+        ui->checkBoxbluetoothAutoEnable->hide();
     }
+
+    //setup apt install_recommends
+    //enable checkbox only if Install-Recommends is set to 1. default is 0 or no if no existanct apt.conf
+    if ( QFile("/etc/apt/apt.conf").exists()){
+        test = runCmd(QStringLiteral("grep Install-Recommends /etc/apt/apt.conf")).output;
+        if ( test.contains("1")){
+            ui->checkBoxInstallRecommends->setChecked(true);
+        } else {
+            ui->checkBoxInstallRecommends->setChecked(false);
+        }
+    } else {
+        ui->checkBoxInstallRecommends->setChecked(false);
+    }
+
 
     //setup NOCSD GTK3 option
     if (!QFileInfo::exists(QStringLiteral("/usr/bin/gtk3-nocsd"))) {
@@ -1289,6 +1307,7 @@ void defaultlook::setupEtc()
     amdgpuflag = false;
     radeon_flag =false;
     libinput_touchpadflag = false;
+    enable_recommendsflag = false;
     //setup Intel checkbox
 
     QString partcheck = runCmd(QStringLiteral(R"(for i in $(lspci -n | awk '{print $2,$1}' | grep -E '^(0300|0302|0380)' | cut -f2 -d\ ); do lspci -kns "$i"; done)")).output;
@@ -2077,6 +2096,7 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     QString lightdm_option;
     QString libinput_option;
     QString bluetooth_option;
+    QString recommends_option;
     QString DESKTOP = runCmd(QStringLiteral("echo $XDG_SESSION_DESKTOP")).output;
     QString home_path = QDir::homePath();
     ui->ButtonApplyEtc->setEnabled(false);
@@ -2085,6 +2105,7 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     lightdm_option.clear();
     libinput_option.clear();
     bluetooth_option.clear();
+    recommends_option.clear();
 
     //deal with udisks option
     QFileInfo fileinfo(QStringLiteral("/etc/tweak-udisks.chk"));
@@ -2196,6 +2217,14 @@ void defaultlook::on_ButtonApplyEtc_clicked()
         }
     }
 
+    //install recommends option
+    if ( enable_recommendsflag ){
+        if ( ui->checkBoxInstallRecommends->isChecked()){
+            recommends_option = "install_recommends";
+        } else
+            recommends_option = "noinstall_recommends:";
+    }
+
     //libinput_touchpad
 
     if ( libinput_touchpadflag ) {
@@ -2239,8 +2268,8 @@ void defaultlook::on_ButtonApplyEtc_clicked()
         }
     }
 
-    if ( ! udisks_option.isEmpty() || ! sudo_override_option.isEmpty() || ! user_name_space_override_option.isEmpty() || ! intel_option.isEmpty() || ! lightdm_option.isEmpty() || ! amd_option.isEmpty() || ! radeon_option.isEmpty() || ! libinput_option.isEmpty() || !bluetooth_option.isEmpty()) {
-        runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + udisks_option + " " + sudo_override_option + " " + user_name_space_override_option + " " + intel_option + " " + amd_option + " " + radeon_option + " " + libinput_option + " " + bluetooth_option + " " + lightdm_option);
+    if ( ! udisks_option.isEmpty() || ! sudo_override_option.isEmpty() || ! user_name_space_override_option.isEmpty() || ! intel_option.isEmpty() || ! lightdm_option.isEmpty() || ! amd_option.isEmpty() || ! radeon_option.isEmpty() || ! libinput_option.isEmpty() || !bluetooth_option.isEmpty() || !recommends_option.isEmpty()) {
+        runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + udisks_option + " " + sudo_override_option + " " + user_name_space_override_option + " " + intel_option + " " + amd_option + " " + radeon_option + " " + libinput_option + " " + bluetooth_option + " " + recommends_option + " " + lightdm_option);
     }
     //reset gui
     setupEtc();
@@ -3432,4 +3461,10 @@ int defaultlook::validatearchive(const QString &path) const{
 void defaultlook::on_lineEditBackupName_returnPressed()
 {
     ui->buttonApply->setDefault(true);
+}
+
+void defaultlook::on_checkBoxInstallRecommends_clicked()
+{
+    ui->ButtonApplyEtc->setEnabled(true);
+    enable_recommendsflag = true;
 }

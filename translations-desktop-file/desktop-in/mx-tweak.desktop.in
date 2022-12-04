@@ -1,0 +1,14 @@
+[Desktop Entry]
+Encoding=UTF-8
+# The desktop entry name will be displayed within the menu.
+Name=MX Tweak
+# # The desktop entry comment will be shown within the menu.
+Comment=Assorted useful tweaks
+Exec=mx-tweak
+Terminal=false
+Type=Application
+Icon=mx-tweak
+Categories=XFCE;Settings;DesktopSettings;X-XFCE-SettingsDialog;X-XFCE-PersonalSettings;MX-Setup;
+Keywords=Desktop
+NoDisplay=false
+

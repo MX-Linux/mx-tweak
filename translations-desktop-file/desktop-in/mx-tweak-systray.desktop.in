@@ -1,0 +1,14 @@
+[Desktop Entry]
+Encoding=UTF-8
+# The desktop entry name will be displayed within the menu.
+Name=Brightness Systray
+# # The desktop entry comment will be shown within the menu.
+Comment=brightness systray application
+Exec=mx-tweak --tray &
+Terminal=false
+Type=Application
+Icon=brightness-systray
+Categories=XFCE;Settings;DesktopSettings;MX-Setup;
+Keywords=Desktop
+NoDisplay=false
+
