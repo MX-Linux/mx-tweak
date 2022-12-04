@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Casper, 2022
+# Senpai <senpai99@hotmail.com>, 2022
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-12-03 12:46-0500\n"
 "PO-Revision-Date: 2022-12-03 16:44+0000\n"
-"Last-Translator: Casper, 2022\n"
+"Last-Translator: Senpai <senpai99@hotmail.com>, 2022\n"
 "Language-Team: Spanish (Spain) (https://www.transifex.com/anticapitalista/teams/10162/es_ES/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,7 +30,7 @@ msgstr "MX Tweak"
 #. # The desktop entry comment will be shown within the menu.
 #: desktop-in/mx-tweak.desktop.in:7
 msgid "Assorted useful tweaks"
-msgstr ""
+msgstr "Varios ajustes útiles"
 
 #: desktop-in/mx-tweak.desktop.in:13 desktop-in/mx-tweak-systray.desktop.in:13
 msgid "Desktop"
@@ -38,39 +39,41 @@ msgstr "Escritorio"
 #. The desktop entry name will be displayed within the menu.
 #: desktop-in/mx-tweak-systray.desktop.in:5
 msgid "Brightness Systray"
-msgstr ""
+msgstr "Bandeja de brillo"
 
 #. # The desktop entry comment will be shown within the menu.
 #: desktop-in/mx-tweak-systray.desktop.in:7
 msgid "brightness systray application"
-msgstr ""
+msgstr "aplicación de bandeja de brillo"
 
 #. The desktop entry name will be displayed within the menu.
 #: desktop-in/mx-tweak-tray-app-autostart.desktop.in:7
 msgid "mx-tweak brightness systray"
-msgstr ""
+msgstr "mx-tweak bandeja de brillo"
 
 #. # The desktop entry comment will be shown within the menu.
 #: desktop-in/mx-tweak-tray-app-autostart.desktop.in:9
 msgid "starts mx-tweak brightness systray app"
-msgstr ""
+msgstr "iniciar la aplicación mx-tweak bandeja de brillo "
 
 #. The desktop entry name will be displayed within the menu.
 #: desktop-in/zcompton.desktop.in:7
 msgid "compton"
-msgstr ""
+msgstr "Compton"
 
 #. # The desktop entry comment will be shown within the menu.
 #: desktop-in/zcompton.desktop.in:9
 msgid "compton startup"
-msgstr ""
+msgstr "Inicio de compton"
 
 #. The desktop entry name will be displayed within the menu.
 #: desktop-in/zrestore-software-brightness.desktop.in:7
 msgid "restore-software-brightness"
-msgstr ""
+msgstr "restaurar el brillo del programa"
 
 #. # The desktop entry comment will be shown within the menu.
 #: desktop-in/zrestore-software-brightness.desktop.in:9
 msgid "restore xrandr brightness values stored mx-tweak display tab"
 msgstr ""
+"restaurar los valores de brillo de xrandr almacenados en la pestaña de "
+"pantalla de mx-tweak"
