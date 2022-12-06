@@ -2222,7 +2222,7 @@ void defaultlook::on_ButtonApplyEtc_clicked()
         if ( ui->checkBoxInstallRecommends->isChecked()){
             recommends_option = "install_recommends";
         } else
-            recommends_option = "noinstall_recommends:";
+            recommends_option = "noinstall_recommends";
     }
 
     //libinput_touchpad
