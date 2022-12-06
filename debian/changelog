@@ -1,3 +1,10 @@
+mx-tweak (22.12.03mx21) mx; urgency=medium
+
+  * fix lib
+  * 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Tue, 06 Dec 2022 18:04:41 -0500
+
 mx-tweak (22.12.02mx21) mx; urgency=medium
 
   * fix desktop files 
