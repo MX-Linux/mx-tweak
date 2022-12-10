@@ -1,3 +1,16 @@
+mx-tweak (22.12.04mx21) mx; urgency=medium
+
+  * disable/enable kde autoenable of bluetooth adapters when bluetooth option toggled 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Thu, 08 Dec 2022 20:40:33 -0500
+
+mx-tweak (22.12.03mx21) mx; urgency=medium
+
+  * fix lib
+  * 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Tue, 06 Dec 2022 18:04:41 -0500
+
 mx-tweak (22.12.02mx21) mx; urgency=medium
 
   * fix desktop files 
