@@ -2207,11 +2207,19 @@ void defaultlook::on_ButtonApplyEtc_clicked()
             if (QFile::exists("/usr/bin/blueman")) {
                 runCmd(QStringLiteral("gsettings set org.blueman.plugins.powermanager auto-power-on true"));
             }
+            //kde bluedevil
+            if (QFile::exists("/usr/bin/kwriteconfig5")) {
+                runCmd(QStringLiteral("kwriteconfig5 --file kded5rc --group Module-bluedevil --key autoload true"));
+            }
         } else {
             bluetooth_option = QStringLiteral("disable_bluetooth");
             //blueman
             if (QFile::exists("/usr/bin/blueman")) {
                 runCmd(QStringLiteral("gsettings set org.blueman.plugins.powermanager auto-power-on false"));
+            }
+            //kde bluedevil
+            if (QFile::exists("/usr/bin/kwriteconfig5")) {
+                runCmd(QStringLiteral("kwriteconfig5 --file kded5rc --group Module-bluedevil --key autoload false"));
             }
 
         }
@@ -2222,7 +2230,7 @@ void defaultlook::on_ButtonApplyEtc_clicked()
         if ( ui->checkBoxInstallRecommends->isChecked()){
             recommends_option = "install_recommends";
         } else
-            recommends_option = "noinstall_recommends:";
+            recommends_option = "noinstall_recommends";
     }
 
     //libinput_touchpad
