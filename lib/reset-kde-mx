@@ -4,31 +4,31 @@
 
 # kcminputrc
 
-kwriteconfig --file ~/.config/kcminputrc --group Mouse --key cursorTheme breeze_cursors
+kwriteconfig5 --file ~/.config/kcminputrc --group Mouse --key cursorTheme breeze_cursors
 
 
 
 # kdeglobals
 
-kwriteconfig --file ~/.config/kdeglobals --group General --key BrowserApplication firefox.desktop
+kwriteconfig5 --file ~/.config/kdeglobals --group General --key BrowserApplication firefox.desktop
 
-kwriteconfig --file ~/.config/kdeglobals --group General --key Name MX-Comfort-Breeze
+kwriteconfig5 --file ~/.config/kdeglobals --group General --key Name MX-Comfort-Breeze
 
-kwriteconfig --file ~/.config/kdeglobals --group General --key ColorScheme MXcomfortbreeze
+kwriteconfig5 --file ~/.config/kdeglobals --group General --key ColorScheme MXcomfortbreeze
 
-kwriteconfig --file ~/.config/kdeglobals --group Icons --key Theme Papirus-mxblue-darkpanes
+kwriteconfig5 --file ~/.config/kdeglobals --group Icons --key Theme Papirus-mxblue-darkpanes
 
-kwriteconfig --file ~/.config/kdeglobals --group General --key shadeSortColumn true
+kwriteconfig5 --file ~/.config/kdeglobals --group General --key shadeSortColumn true
 
-kwriteconfig --file ~/.config/kdeglobals --group General --key XftAntialias true
+kwriteconfig5 --file ~/.config/kdeglobals --group General --key XftAntialias true
 
-kwriteconfig --file ~/.config/kdeglobals --group General --key XftHintStyle hintslight
+kwriteconfig5 --file ~/.config/kdeglobals --group General --key XftHintStyle hintslight
 
-kwriteconfig --file ~/.config/kdeglobals --group General --key XftSubPixel rgb
+kwriteconfig5 --file ~/.config/kdeglobals --group General --key XftSubPixel rgb
 
-kwriteconfig --file ~/.config/kdeglobals --group KDE --key LookAndFeelPackage org.mxlinux.mx.desktop
+kwriteconfig5 --file ~/.config/kdeglobals --group KDE --key LookAndFeelPackage org.mxlinux.mx.desktop
 
-kwriteconfig --file ~/.config/kdeglobals --group KDE --key contrast 4
+kwriteconfig5 --file ~/.config/kdeglobals --group KDE --key contrast 4
 
 kwriteconfig5 --group KDE --key SingleClick true
 
@@ -36,85 +36,85 @@ kwriteconfig5 --group KDE --key SingleClick true
 
 # kglobalshortcutsrc
 
-kwriteconfig --file ~/.config/kglobalshortcutsrc --group org.kde.konsole.desktop --key NewTab ",none,Open a New Tab"
+kwriteconfig5 --file ~/.config/kglobalshortcutsrc --group org.kde.konsole.desktop --key NewTab ",none,Open a New Tab"
 
-kwriteconfig --file ~/.config/kglobalshortcutsrc --group org.kde.konsole.desktop --key NewWindow "none,none,Open a New Window"
+kwriteconfig5 --file ~/.config/kglobalshortcutsrc --group org.kde.konsole.desktop --key NewWindow "none,none,Open a New Window"
 
-kwriteconfig --file ~/.config/kglobalshortcutsrc --group org.kde.konsole.desktop --key _k_friendly_name "Launch Konsole"
+kwriteconfig5 --file ~/.config/kglobalshortcutsrc --group org.kde.konsole.desktop --key _k_friendly_name "Launch Konsole"
 
-kwriteconfig --file ~/.config/kglobalshortcutsrc --group org.kde.konsole.desktop --key _launch "Ctrl+Alt+T,none,Launch Konsole"
+kwriteconfig5 --file ~/.config/kglobalshortcutsrc --group org.kde.konsole.desktop --key _launch "Ctrl+Alt+T,none,Launch Konsole"
 
-kwriteconfig --file ~/.config/kglobalshortcutsrc --group yakuake --key _k_friendly_name Yakuake
+kwriteconfig5 --file ~/.config/kglobalshortcutsrc --group yakuake --key _k_friendly_name Yakuake
 
-kwriteconfig --file ~/.config/kglobalshortcutsrc --group yakuake --key toggle-window-state "F4,F12,Open/Retract Yakuake"
+kwriteconfig5 --file ~/.config/kglobalshortcutsrc --group yakuake --key toggle-window-state "F4,F12,Open/Retract Yakuake"
 
 
 
 # klaunchrc
 
-kwriteconfig --file ~/.config/klaunchrc --group BusyCursorSettings --key Blinking false
+kwriteconfig5 --file ~/.config/klaunchrc --group BusyCursorSettings --key Blinking false
 
-kwriteconfig --file ~/.config/klaunchrc --group BusyCursorSettings --key Bouncing false
+kwriteconfig5 --file ~/.config/klaunchrc --group BusyCursorSettings --key Bouncing false
 
-kwriteconfig --file ~/.config/klaunchrc --group BusyCursorSettings --key Timeout 4
+kwriteconfig5 --file ~/.config/klaunchrc --group BusyCursorSettings --key Timeout 4
 
-kwriteconfig --file ~/.config/klaunchrc --group FeedbackStyle --key BusyCursor true
+kwriteconfig5 --file ~/.config/klaunchrc --group FeedbackStyle --key BusyCursor true
 
-kwriteconfig --file ~/.config/klaunchrc --group FeedbackStyle --key TaskbarButton true
+kwriteconfig5 --file ~/.config/klaunchrc --group FeedbackStyle --key TaskbarButton true
 
-kwriteconfig --file ~/.config/klaunchrc --group TaskbarButtonSettings --key Timeout 4
+kwriteconfig5 --file ~/.config/klaunchrc --group TaskbarButtonSettings --key Timeout 4
 
 
 
 # komparerc
 
-kwriteconfig --file ~/.config/komparerc --group "Diff Options" --key DiffProgram /usr/bin/diff
+kwriteconfig5 --file ~/.config/komparerc --group "Diff Options" --key DiffProgram /usr/bin/diff
 
 
 
 # kscreenlockerrc
 
-kwriteconfig --file ~/.config/kscreenlockerrc --group Daemon --key Autolock false
+kwriteconfig5 --file ~/.config/kscreenlockerrc --group Daemon --key Autolock false
 
-kwriteconfig --file ~/.config/kscreenlockerrc --group Daemon --key LockOnResume false
+kwriteconfig5 --file ~/.config/kscreenlockerrc --group Daemon --key LockOnResume false
 
-kwriteconfig --file ~/.config/kscreenlockerrc --group Greeter --group Wallpaper --group org.kde.image --group General --key Image file:///usr/share/backgrounds/mx_blue.jpg
+kwriteconfig5 --file ~/.config/kscreenlockerrc --group Greeter --group Wallpaper --group org.kde.image --group General --key Image file:///usr/share/backgrounds/mx_blue.jpg
 
 
 
 # ksmserverrc
 
-kwriteconfig --file ~/.config/ksmserverrc --group General --key excludeApps yakuake,conky,apt-notifier
+kwriteconfig5 --file ~/.config/ksmserverrc --group General --key excludeApps yakuake,conky,apt-notifier
 
-kwriteconfig --file ~/.config/ksmserverrc --group General --key loginMode default
+kwriteconfig5 --file ~/.config/ksmserverrc --group General --key loginMode default
 
 
 
 # ksplashrc
 
-kwriteconfig --file ~/.config/ksplashrc --group KSplash --key Engine KSplashQML
+kwriteconfig5 --file ~/.config/ksplashrc --group KSplash --key Engine KSplashQML
 
-kwriteconfig --file ~/.config/ksplashrc --group KSplash --key Theme QuarksSplashDark
+kwriteconfig5 --file ~/.config/ksplashrc --group KSplash --key Theme QuarksSplashDark
 
 
 
 # kwalletrc
 
-kwriteconfig --file ~/.config/kwalletrc --group Wallet --key Enabled false
+kwriteconfig5 --file ~/.config/kwalletrc --group Wallet --key Enabled false
 
 
 
 # kwinrc
 
-kwriteconfig --file ~/.config/kwinrc --group Desktops --key Number 2
+kwriteconfig5 --file ~/.config/kwinrc --group Desktops --key Number 2
 
-kwriteconfig --file ~/.config/kwinrc --group Desktops --key Rows 2
+kwriteconfig5 --file ~/.config/kwinrc --group Desktops --key Rows 2
 
-kwriteconfig --file ~/.config/kwinrc --group TabBox --key DesktopLayout org.kde.breeze.desktop
+kwriteconfig5 --file ~/.config/kwinrc --group TabBox --key DesktopLayout org.kde.breeze.desktop
 
-kwriteconfig --file ~/.config/kwinrc --group TabBox --key DesktopListLayout org.kde.breeze.desktop
+kwriteconfig5 --file ~/.config/kwinrc --group TabBox --key DesktopListLayout org.kde.breeze.desktop
 
-kwriteconfig --file ~/.config/kwinrc --group TabBox --key LayoutName org.kde.breeze.desktop
+kwriteconfig5 --file ~/.config/kwinrc --group TabBox --key LayoutName org.kde.breeze.desktop
 
 
 
@@ -125,9 +125,9 @@ cp /etc/skel/.config/plasma-org.kde.plasma.desktop-appletsrc ~/.config/
 
 # yakuakerc
 
-kwriteconfig --file ~/.config/yakuakerc --group Dialogs --key FirstRun false
+kwriteconfig5 --file ~/.config/yakuakerc --group Dialogs --key FirstRun false
 
-kwriteconfig --file ~/.config/yakuakerc --group Window --key KeepOpen false
+kwriteconfig5 --file ~/.config/yakuakerc --group Window --key KeepOpen false
 
 
 
