@@ -9,12 +9,14 @@ kwriteconfig5 --file ~/.config/kcminputrc --group Mouse --key cursorTheme breeze
 
 
 # kdeglobals
-
+# browser and themes
 kwriteconfig5 --file ~/.config/kdeglobals --group General --key BrowserApplication firefox.desktop
 
 kwriteconfig5 --file ~/.config/kdeglobals --group General --key Name MX-Comfort-Breeze
 
 kwriteconfig5 --file ~/.config/kdeglobals --group General --key ColorScheme MXcomfortbreeze
+
+#desktop color scheme
 
 kwriteconfig5 --file ~/.config/kdeglobals --group ColorEffects:Disabled --key Color 56,56,56
 kwriteconfig5 --file ~/.config/kdeglobals --group ColorEffects:Disabled --key ColorAmount 0
@@ -35,97 +37,101 @@ kwriteconfig5 --file ~/.config/kdeglobals --group ColorEffects:Inactive --key En
 kwriteconfig5 --file ~/.config/kdeglobals --group ColorEffects:Inactive --key ChangeSelectionColor true
 
 kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Button --key BackgroundAlternate 189,195,199
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Button --key BackgroundNormal=239,240,241
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Button --key DecorationFocus=18,102,249
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Button --key DecorationHover=15,86,217
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Button --key ForegroundActive=61,174,233
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Button --key ForegroundInactive=127,140,141
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Button --key ForegroundLink=41,128,185
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Button --key ForegroundNegative=218,68,83
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Button --key ForegroundNeutral=246,116,0
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Button --key ForegroundNormal=0,0,0
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Button --key ForegroundPositive=39,174,96
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Button --key ForegroundVisited=127,140,141
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Button --key BackgroundNormal 239,240,241
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Button --key DecorationFocus 18,102,249
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Button --key DecorationHover 15,86,217
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Button --key ForegroundActive 61,174,233
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Button --key ForegroundInactive 127,140,141
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Button --key ForegroundLink 41,128,185
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Button --key ForegroundNegative 218,68,83
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Button --key ForegroundNeutral 246,116,0
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Button --key ForegroundNormal 0,0,0
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Button --key ForegroundPositive 39,174,96
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Button --key ForegroundVisited 127,140,141
 
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Complementary --key BackgroundAlternate=59,64,69
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Complementary --key BackgroundNormal=49,54,59
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Complementary --key DecorationFocus=30,146,255
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Complementary --keyDecorationHover=61,174,230
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Complementary --key ForegroundActive=147,206,233
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Complementary --key ForegroundInactive=175,176,179
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Complementary --key ForegroundLink=61,174,230
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Complementary --key ForegroundNegative=231,76,60
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Complementary --key ForegroundNeutral=253,188,75
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Complementary --key ForegroundNormal=239,240,241
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Complementary --key ForegroundPositive=46,204,113
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Complementary --key ForegroundVisited=61,174,230
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Complementary --key BackgroundAlternate 59,64,69
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Complementary --key BackgroundNormal 49,54,59
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Complementary --key DecorationFocus 30,146,255
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Complementary --key DecorationHover 61,174,230
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Complementary --key ForegroundActive 147,206,233
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Complementary --key ForegroundInactive 175,176,179
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Complementary --key ForegroundLink 61,174,230
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Complementary --key ForegroundNegative 231,76,60
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Complementary --key ForegroundNeutral 253,188,75
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Complementary --key ForegroundNormal 239,240,241
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Complementary --key ForegroundPositive 46,204,113
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Complementary --key ForegroundVisited 61,174,230
 
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Selection --key BackgroundAlternate=29,153,243
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Selection --key BackgroundNormal=15,86,217
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Selection --key DecorationFocus=18,102,249
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Selection --key DecorationHover=15,86,217
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Selection --key ForegroundActive=252,252,252
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Selection --key ForegroundInactive=239,240,241
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Selection --key ForegroundLink=253,188,75
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Selection --key ForegroundNegative=218,68,83
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Selection --key ForegroundNeutral=246,116,0
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Selection --key ForegroundNormal=252,252,252
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Selection --key ForegroundPositive=39,174,96
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Selection --key ForegroundVisited=189,195,199
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Selection --key BackgroundAlternate 29,153,243
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Selection --key BackgroundNormal 15,86,217
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Selection --key DecorationFocus 18,102,249
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Selection --key DecorationHover 15,86,217
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Selection --key ForegroundActive 252,252,252
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Selection --key ForegroundInactive 239,240,241
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Selection --key ForegroundLink 253,188,75
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Selection --key ForegroundNegative 218,68,83
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Selection --key ForegroundNeutral 246,116,0
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Selection --key ForegroundNormal 252,252,252
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Selection --key ForegroundPositive 39,174,96
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Selection --key ForegroundVisited 189,195,199
 
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Tooltip --key BackgroundAlternate=77,77,77
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Tooltip --key BackgroundNormal=35,38,39
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Tooltip --key DecorationFocus=18,102,249
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Tooltip --key DecorationHover=15,86,217
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Tooltip --key ForegroundActive=61,174,233
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Tooltip --key ForegroundInactive=189,195,199
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Tooltip --key ForegroundLink=41,128,185
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Tooltip --key ForegroundNegative=218,68,83
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Tooltip --key ForegroundNeutral=246,116,0
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Tooltip --key ForegroundNormal=252,252,252
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Tooltip --key ForegroundPositive=39,174,96
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Tooltip --key ForegroundVisited=127,140,141=
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Tooltip --key BackgroundAlternate 77,77,77
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Tooltip --key BackgroundNormal 35,38,39
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Tooltip --key DecorationFocus 18,102,249
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Tooltip --key DecorationHover 15,86,217
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Tooltip --key ForegroundActive 61,174,233
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Tooltip --key ForegroundInactive 189,195,199
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Tooltip --key ForegroundLink 41,128,185
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Tooltip --key ForegroundNegative 218,68,83
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Tooltip --key ForegroundNeutral 246,116,0
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Tooltip --key ForegroundNormal 252,252,252
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Tooltip --key ForegroundPositive 39,174,96
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Tooltip --key ForegroundVisited 127,140,141=
 
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:View --key BackgroundAlternate=239,240,241
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:View --key BackgroundNormal=252,252,252
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:View --key DecorationFocus=18,102,249
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:View --key DecorationHover=15,86,217
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:View --key ForegroundActive=61,174,233
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:View --key ForegroundInactive=127,140,141
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:View --key ForegroundLink=41,128,185
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:View --key ForegroundNegative=218,68,83
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:View --key ForegroundNeutral=246,116,0
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:View --key ForegroundNormal=0,0,0
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:View --key ForegroundPositive=39,174,96
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:View --key ForegroundVisited=127,140,141
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:View --key BackgroundAlternate 239,240,241
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:View --key BackgroundNormal 252,252,252
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:View --key DecorationFocus 18,102,249
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:View --key DecorationHover 15,86,217
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:View --key ForegroundActive 61,174,233
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:View --key ForegroundInactive 127,140,141
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:View --key ForegroundLink 41,128,185
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:View --key ForegroundNegative 218,68,83
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:View --key ForegroundNeutral 246,116,0
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:View --key ForegroundNormal 0,0,0
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:View --key ForegroundPositive 39,174,96
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:View --key ForegroundVisited 127,140,141
 
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Window --key BackgroundAlternate=189,195,199
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Window --key BackgroundNormal=239,240,241
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Window --key DecorationFocus=18,102,249
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Window --key DecorationHover=15,86,217
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Window --key ForegroundActive=61,174,233
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Window --key ForegroundInactive=127,140,141
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Window --key ForegroundLink=41,128,185
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Window --key ForegroundNegative=218,68,83
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Window --key ForegroundNeutral=246,116,0
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Window --key ForegroundNormal=0,0,0
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Window --key ForegroundPositive=39,174,96
-kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Window --key ForegroundVisited=127,140,141
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Window --key BackgroundAlternate 189,195,199
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Window --key BackgroundNormal 239,240,241
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Window --key DecorationFocus 18,102,249
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Window --key DecorationHover 15,86,217
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Window --key ForegroundActive 61,174,233
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Window --key ForegroundInactive 127,140,141
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Window --key ForegroundLink 41,128,185
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Window --key ForegroundNegative 218,68,83
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Window --key ForegroundNeutral 246,116,0
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Window --key ForegroundNormal 0,0,0
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Window --key ForegroundPositive 39,174,96
+kwriteconfig5 --file ~/.config/kdeglobals --group Colors:Window --key ForegroundVisited 127,140,141
 
+#icons
 kwriteconfig5 --file ~/.config/kdeglobals --group Icons --key Theme Papirus-mxblue-darkpanes
 
 kwriteconfig5 --file ~/.config/kdeglobals --group General --key shadeSortColumn true
 
+#fonts
 kwriteconfig5 --file ~/.config/kdeglobals --group General --key XftAntialias true
 
 kwriteconfig5 --file ~/.config/kdeglobals --group General --key XftHintStyle hintslight
 
 kwriteconfig5 --file ~/.config/kdeglobals --group General --key XftSubPixel rgb
 
+#look and feel 
 kwriteconfig5 --file ~/.config/kdeglobals --group KDE --key LookAndFeelPackage org.mxlinux.mx.desktop
 
 kwriteconfig5 --file ~/.config/kdeglobals --group KDE --key contrast 4
 
+#single click vs. double click
 kwriteconfig5 --group KDE --key SingleClick true
 
 
