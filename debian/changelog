@@ -1,8 +1,9 @@
 mx-tweak (22.12.04mx21) mx; urgency=medium
 
   * disable/enable kde autoenable of bluetooth adapters when bluetooth option toggled 
+  * update reset-kde script
 
- -- Dolphin Oracle <dolphinoracle@gmail.com>  Thu, 08 Dec 2022 20:40:33 -0500
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 11 Dec 2022 12:05:32 -0500
 
 mx-tweak (22.12.03mx21) mx; urgency=medium
 
