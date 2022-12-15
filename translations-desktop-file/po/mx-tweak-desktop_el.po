@@ -76,5 +76,5 @@ msgstr "ανάκτηση-λογισμικού-φωτεινότητας"
 #: desktop-in/zrestore-software-brightness.desktop.in:9
 msgid "restore xrandr brightness values stored mx-tweak display tab"
 msgstr ""
-"ανάκτηση των τιμών φωτεινότητηας του xrandr αποθυκευμένες στην καρτέλα "
+"ανάκτηση των τιμών φωτεινότητας του xrandr αποθυκευμένες στην καρτέλα "
 "εμφάνισης του mx-tweak"
