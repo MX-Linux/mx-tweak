@@ -1,3 +1,9 @@
+mx-tweak (22.12.05mx21) mx; urgency=medium
+
+  * add explainer for Xfce CSD toggle in 4.18 and up 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Thu, 15 Dec 2022 18:31:03 -0500
+
 mx-tweak (22.12.04mx21) mx; urgency=medium
 
   * disable/enable kde autoenable of bluetooth adapters when bluetooth option toggled 
