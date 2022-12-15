@@ -1437,6 +1437,13 @@ void defaultlook::setupConfigoptions()
 {
     QString home_path = QDir::homePath();
     ui->ButtonApplyMiscDefualts->setEnabled(false);
+    float versioncheck = 4.18;
+
+    QString XfceVersion = runCmd("dpkg-query --show xfce4-session | awk '{print $2}'").output.section(".",0,1);
+    qDebug() << "XfceVersion = " << XfceVersion.toFloat();
+    if ( XfceVersion.toFloat() < versioncheck ){
+        ui->label_Xfce_CSD->hide();
+    }
 
     //set xfce values
     if (checkXFCE()) {
