@@ -7,6 +7,7 @@
 # mahmut özcan <mahmutozcan@protonmail.com>, 2022
 # Dolphin Oracle <dolphinoracle@gmail.com>, 2022
 # Caner Başaran <basaran.caner@gmail.com>, 2022
+# Mehmet Akif 9oglu, 2022
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-12-03 12:46-0500\n"
 "PO-Revision-Date: 2022-12-03 16:44+0000\n"
-"Last-Translator: Caner Başaran <basaran.caner@gmail.com>, 2022\n"
+"Last-Translator: Mehmet Akif 9oglu, 2022\n"
 "Language-Team: Turkish (https://www.transifex.com/anticapitalista/teams/10162/tr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,7 +32,7 @@ msgstr "MX İnce ayar"
 #. # The desktop entry comment will be shown within the menu.
 #: desktop-in/mx-tweak.desktop.in:7
 msgid "Assorted useful tweaks"
-msgstr ""
+msgstr "Çeşitli yararlı ince ayarlar"
 
 #: desktop-in/mx-tweak.desktop.in:13 desktop-in/mx-tweak-systray.desktop.in:13
 msgid "Desktop"
@@ -45,34 +46,35 @@ msgstr "Parlaklık Systray"
 #. # The desktop entry comment will be shown within the menu.
 #: desktop-in/mx-tweak-systray.desktop.in:7
 msgid "brightness systray application"
-msgstr ""
+msgstr "parlaklık ayarı sistem tepsisi uygulaması"
 
 #. The desktop entry name will be displayed within the menu.
 #: desktop-in/mx-tweak-tray-app-autostart.desktop.in:7
 msgid "mx-tweak brightness systray"
-msgstr ""
+msgstr "mx-tweak parlaklık sistem tepsisi"
 
 #. # The desktop entry comment will be shown within the menu.
 #: desktop-in/mx-tweak-tray-app-autostart.desktop.in:9
 msgid "starts mx-tweak brightness systray app"
-msgstr ""
+msgstr "mx-tweak parlaklık sistem tepsisi uygulamasını başlatır"
 
 #. The desktop entry name will be displayed within the menu.
 #: desktop-in/zcompton.desktop.in:7
 msgid "compton"
-msgstr ""
+msgstr "compton"
 
 #. # The desktop entry comment will be shown within the menu.
 #: desktop-in/zcompton.desktop.in:9
 msgid "compton startup"
-msgstr ""
+msgstr "compton başlangıç"
 
 #. The desktop entry name will be displayed within the menu.
 #: desktop-in/zrestore-software-brightness.desktop.in:7
 msgid "restore-software-brightness"
-msgstr ""
+msgstr "yazılım parlaklığını geri yükle"
 
 #. # The desktop entry comment will be shown within the menu.
 #: desktop-in/zrestore-software-brightness.desktop.in:9
 msgid "restore xrandr brightness values stored mx-tweak display tab"
 msgstr ""
+"mx-tweak ekran sekmesinde kayıtlı xrandr parlaklık değerlerini geri yükleme"
