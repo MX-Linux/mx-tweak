@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="it">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="it">
 <context>
     <name>QObject</name>
     <message>
@@ -477,7 +475,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1044"/>
         <source>( also turns off Client Side Decorations for Xfce applications)</source>
-        <translation type="unfinished"></translation>
+        <translation>(disattiva anche le decorazioni utente per le applicazioni Xfce)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1057"/>

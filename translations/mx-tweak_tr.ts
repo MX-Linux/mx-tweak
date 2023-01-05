@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="tr">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="tr">
 <context>
     <name>QObject</name>
     <message>
@@ -477,7 +475,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1044"/>
         <source>( also turns off Client Side Decorations for Xfce applications)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1057"/>
@@ -583,7 +581,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1396"/>
         <source>Show Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Araç Çubuğunu Göster</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1424"/>
@@ -733,7 +731,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1763"/>
         <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Apt, bağımlılık olarak &quot;önerilen&quot; ek paketleri kurar</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1832"/>
@@ -808,22 +806,22 @@
     <message>
         <location filename="../defaultlook.cpp" line="700"/>
         <source>from file name</source>
-        <translation type="unfinished"></translation>
+        <translation>dosya adından</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="710"/>
         <source>File name already exists.  Choose another name</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya adı zaten var. Başka bir ad seç</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="738"/>
         <source>File is not a valid tar.xz archive file</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya geçerli bir tar.xz arşiv dosyası değil</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="741"/>
         <source>Archive does not contain a panel config</source>
-        <translation type="unfinished"></translation>
+        <translation>Arşiv, panel yapılandırması içermiyor</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="861"/>

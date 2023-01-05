@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="fr_BE">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="fr_BE">
 <context>
     <name>QObject</name>
     <message>
@@ -61,7 +59,7 @@
     <message>
         <location filename="../brightness_small.cpp" line="33"/>
         <source>MX-Tweak</source>
-        <translation>MX Ajustements - Tweak</translation>
+        <translation>MX Ajustements - MX Tweak</translation>
     </message>
     <message>
         <location filename="../brightness_small.cpp" line="58"/>
@@ -88,7 +86,7 @@
         <location filename="../defaultlook.cpp" line="737"/>
         <location filename="../defaultlook.cpp" line="740"/>
         <source>MX Tweak</source>
-        <translation>MX Ajustements - Tweak</translation>
+        <translation>MX Ajustements - MX Tweak</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="32"/>
@@ -477,7 +475,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1044"/>
         <source>( also turns off Client Side Decorations for Xfce applications)</source>
-        <translation type="unfinished"></translation>
+        <translation>(désactive aussi Client Side Decorations / Décorations Côté Client pour les applications Xfce)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1057"/>
@@ -768,7 +766,7 @@
     <message>
         <location filename="../defaultlook.cpp" line="628"/>
         <source>About MX Tweak</source>
-        <translation>À propos de MX Ajustements - Tweak</translation>
+        <translation>À propos de MX Ajustements - MX Tweak</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="630"/>
