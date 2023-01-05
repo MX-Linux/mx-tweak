@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="sv">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="sv">
 <context>
     <name>QObject</name>
     <message>
@@ -264,7 +262,7 @@
     <message>
         <location filename="../defaultlook.ui" line="486"/>
         <source>Save Current Settings as a Theme Set</source>
-        <translation>Spara nuvarande Inställningar som ett Tema-set&#xa0;</translation>
+        <translation>Spara nuvarande Inställningar som ett Tema-set</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="497"/>
@@ -325,7 +323,7 @@
     <message>
         <location filename="../defaultlook.ui" line="669"/>
         <source>xpresent</source>
-        <translation>xpresent</translation>
+        <translation>x-nuvarande</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="674"/>
@@ -477,7 +475,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1044"/>
         <source>( also turns off Client Side Decorations for Xfce applications)</source>
-        <translation type="unfinished"></translation>
+        <translation>( stänger också av klientsidans dekorationer fö Xfce appar)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1057"/>

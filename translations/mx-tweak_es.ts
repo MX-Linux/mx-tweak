@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="es">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="es">
 <context>
     <name>QObject</name>
     <message>
@@ -477,7 +475,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1044"/>
         <source>( also turns off Client Side Decorations for Xfce applications)</source>
-        <translation type="unfinished"></translation>
+        <translation>(también desactivar las decoraciones del lado del cliente para aplicaciones Xfce)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1057"/>
@@ -532,7 +530,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1183"/>
         <source>Toggle desktop icons</source>
-        <translation>Activar/Desactivar iconos del escritorio</translation>
+        <translation>Des/Activar iconos del escritorio</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1190"/>
@@ -558,7 +556,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1352"/>
         <source>Toggle icon captions</source>
-        <translation>Activar/Desactivar subtítulos de iconos</translation>
+        <translation>Des/Activar subtítulos de iconos</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1359"/>
@@ -859,7 +857,7 @@
     <message>
         <location filename="../theming_to_tweak.ui" line="14"/>
         <source>New Theme Set</source>
-        <translation>Nuevo conjunto de temas&#xa0;</translation>
+        <translation>Nuevo conjunto de temas </translation>
     </message>
     <message>
         <location filename="../theming_to_tweak.ui" line="20"/>
