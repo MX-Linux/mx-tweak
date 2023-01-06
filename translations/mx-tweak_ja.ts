@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="ja">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="ja">
 <context>
     <name>QObject</name>
     <message>
@@ -477,7 +475,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1044"/>
         <source>( also turns off Client Side Decorations for Xfce applications)</source>
-        <translation type="unfinished"></translation>
+        <translation>( また、Xfce アプリケーションのクライアント側の修飾をオフにします。)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1057"/>
@@ -613,12 +611,12 @@
     <message>
         <location filename="../defaultlook.ui" line="1505"/>
         <source>Large</source>
-        <translation>おきい</translation>
+        <translation>大きい</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1510"/>
         <source>Larger</source>
-        <translation>大きく</translation>
+        <translation>もっと大きく</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1515"/>
@@ -1066,7 +1064,7 @@
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="144"/>
         <source>Display fullscreen overlay windows directly</source>
-        <translation>フルスクリーンのオーバーレイウィンドウを直接表示</translation>
+        <translation>画面全体にオーバーレイウィンドウを直接表示</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="183"/>

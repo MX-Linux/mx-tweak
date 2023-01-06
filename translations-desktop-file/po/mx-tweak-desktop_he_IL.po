@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Omer I.S. <omeritzicschwartz@gmail.com>, 2022
+# עומר א״ש <omeritzicschwartz@gmail.com>, 2022
 # Dolphin Oracle <dolphinoracle@gmail.com>, 2022
 # hell spurs <alesha2000@gmail.com>, 2022
 # 
