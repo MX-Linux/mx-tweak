@@ -1456,6 +1456,10 @@ void defaultlook::setupConfigoptions()
         test = runCmd(QStringLiteral("xfconf-query  -c thunar -p /misc-single-click")).output;
         ui->checkBoxThunarSingleClick->setChecked(test == QLatin1String("true"));
 
+        //check split window status
+        test = runCmd(QStringLiteral("xfconf-query  -c thunar -p /misc-open-new-windows-in-split-view")).output;
+        ui->checkBoxThunarSplitView->setChecked(test == QLatin1String("true"));
+
         //check systray frame status
         //frame has been removed from systray
 
@@ -2588,6 +2592,14 @@ void defaultlook::on_ButtonApplyMiscDefualts_clicked()
         runCmd(QStringLiteral("xfconf-query  -c thunar -p /misc-single-click -s false"));
     }
 
+    //split view thunar
+    if (ui->checkBoxThunarSplitView->isChecked()){
+        runCmd(QStringLiteral("xfconf-query  -c thunar -p /misc-open-new-windows-in-split-view -t bool -s true --create"));
+    } else {
+        runCmd(QStringLiteral("xfconf-query  -c thunar -p /misc-open-new-windows-in-split-view --reset"));
+
+    }
+
     //systray frame removed
 
     //set desktop zoom
@@ -2649,9 +2661,9 @@ void defaultlook::on_ButtonApplyMiscDefualts_clicked()
     if (ui->checkBoxHibernate->isChecked() != hibernate_flag) {
         if (ui->checkBoxHibernate->isChecked()) {
             hibernate_option =  QStringLiteral("hibernate");
-            system("xfconf-query -c xfce4-session -p /shutdown/ShowHibernate -s true --create");
+            system("xfconf-query -c xfce4-session -p /shutdown/ShowHibernate -t bool -s true --create");
         } else {
-            system("xfconf-query -c xfce4-session -p /shutdown/ShowHibernate -s false --create");
+            system("xfconf-query -c xfce4-session -p /shutdown/ShowHibernate -t bool -s false --create");
         }
     }
 
@@ -3482,4 +3494,9 @@ void defaultlook::on_checkBoxInstallRecommends_clicked()
 {
     ui->ButtonApplyEtc->setEnabled(true);
     enable_recommendsflag = true;
+}
+
+void defaultlook::on_checkBoxThunarSplitView_clicked()
+{
+    ui->ButtonApplyMiscDefualts->setEnabled(true);
 }

@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>857</width>
+    <width>1039</width>
     <height>655</height>
    </rect>
   </property>
@@ -945,14 +945,44 @@
       <layout class="QGridLayout" name="gridLayout_18">
        <item row="0" column="0">
         <layout class="QGridLayout" name="gridLayout_11">
-         <item row="3" column="0">
+         <item row="11" column="1">
+          <spacer name="verticalSpacer_10">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>28</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="7" column="0">
+          <widget class="QLabel" name="label_Xfce_CSD">
+           <property name="text">
+            <string>( also turns off Client Side Decorations for Xfce applications)</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
           <widget class="QCheckBox" name="checkBoxDesktopZoom">
            <property name="text">
             <string>Enable Desktop Zoom </string>
            </property>
           </widget>
          </item>
-         <item row="11" column="0" colspan="2">
+         <item row="1" column="0">
+          <widget class="QCheckBox" name="checkBoxSingleClick">
+           <property name="text">
+            <string>Enable single-click on desktop</string>
+           </property>
+          </widget>
+         </item>
+         <item row="12" column="0" colspan="2">
           <widget class="QPushButton" name="ButtonApplyMiscDefualts">
            <property name="minimumSize">
             <size>
@@ -976,51 +1006,24 @@
            </property>
           </widget>
          </item>
-         <item row="1" column="0">
-          <widget class="QCheckBox" name="checkBoxSingleClick">
+         <item row="6" column="0">
+          <widget class="QCheckBox" name="checkBoxFileDialogActionButtonsPosition">
            <property name="text">
-            <string>Enable single-click on desktop</string>
+            <string>Show GTK File Dialog action buttons at bottom of dialogs</string>
            </property>
           </widget>
          </item>
-         <item row="7" column="0" colspan="2">
-          <widget class="QCheckBox" name="checkboxNoEllipse">
-           <property name="text">
-            <string>Disable shortening of long filenames on the desktop</string>
-           </property>
-          </widget>
-         </item>
-         <item row="8" column="0" colspan="2">
+         <item row="9" column="0" colspan="2">
           <widget class="QCheckBox" name="checkBoxHibernate">
            <property name="text">
             <string>Enable hibernate on Log Out menu </string>
            </property>
           </widget>
          </item>
-         <item row="10" column="1">
-          <spacer name="verticalSpacer_10">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>28</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item row="9" column="0" colspan="2">
+         <item row="10" column="0" colspan="2">
           <widget class="QLabel" name="label_hibernate">
            <property name="text">
             <string>                   note: to hibernate, swap needs to be &gt;= RAM</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="0">
-          <widget class="QCheckBox" name="checkBoxShowAllWorkspaces">
-           <property name="text">
-            <string>Show windows from all workspaces in panel</string>
            </property>
           </widget>
          </item>
@@ -1031,20 +1034,24 @@
            </property>
           </widget>
          </item>
-         <item row="5" column="0">
-          <widget class="QCheckBox" name="checkBoxFileDialogActionButtonsPosition">
+         <item row="8" column="0" colspan="2">
+          <widget class="QCheckBox" name="checkboxNoEllipse">
            <property name="text">
-            <string>Show GTK File Dialog action buttons at bottom of dialogs</string>
+            <string>Disable shortening of long filenames on the desktop</string>
            </property>
           </widget>
          </item>
-         <item row="6" column="0">
-          <widget class="QLabel" name="label_Xfce_CSD">
+         <item row="5" column="0">
+          <widget class="QCheckBox" name="checkBoxShowAllWorkspaces">
            <property name="text">
-            <string>( also turns off Client Side Decorations for Xfce applications)</string>
+            <string>Show windows from all workspaces in panel</string>
            </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QCheckBox" name="checkBoxThunarSplitView">
+           <property name="text">
+            <string>Thunar windows always open in split view</string>
            </property>
           </widget>
          </item>

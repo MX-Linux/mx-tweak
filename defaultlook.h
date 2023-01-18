@@ -256,6 +256,8 @@ private slots:
 
     void on_checkBoxInstallRecommends_clicked();
 
+    void on_checkBoxThunarSplitView_clicked();
+
 private:
     Ui::defaultlook *ui;
 };
