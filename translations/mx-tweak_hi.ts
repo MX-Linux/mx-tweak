@@ -133,19 +133,19 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="227"/>
-        <location filename="../defaultlook.ui" line="1445"/>
+        <location filename="../defaultlook.ui" line="1452"/>
         <source>Affects 1st panel</source>
         <translation>पहला पैनल प्रभावित होगा</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="280"/>
-        <location filename="../defaultlook.ui" line="1468"/>
+        <location filename="../defaultlook.ui" line="1475"/>
         <source>Left</source>
         <translation>बाएं</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="285"/>
-        <location filename="../defaultlook.ui" line="1478"/>
+        <location filename="../defaultlook.ui" line="1485"/>
         <source>Right</source>
         <translation>दाएं</translation>
     </message>
@@ -156,13 +156,13 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="254"/>
-        <location filename="../defaultlook.ui" line="1463"/>
+        <location filename="../defaultlook.ui" line="1470"/>
         <source>Bottom</source>
         <translation>नीचे</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="259"/>
-        <location filename="../defaultlook.ui" line="1473"/>
+        <location filename="../defaultlook.ui" line="1480"/>
         <source>Top</source>
         <translation>शीर्ष</translation>
     </message>
@@ -209,10 +209,10 @@
         <location filename="../defaultlook.ui" line="886"/>
         <location filename="../defaultlook.ui" line="893"/>
         <location filename="../defaultlook.ui" line="900"/>
-        <location filename="../defaultlook.ui" line="994"/>
-        <location filename="../defaultlook.ui" line="1410"/>
-        <location filename="../defaultlook.ui" line="1603"/>
-        <location filename="../defaultlook.ui" line="1759"/>
+        <location filename="../defaultlook.ui" line="1016"/>
+        <location filename="../defaultlook.ui" line="1417"/>
+        <location filename="../defaultlook.ui" line="1610"/>
+        <location filename="../defaultlook.ui" line="1766"/>
         <source>Apply</source>
         <translation>लागू करें</translation>
     </message>
@@ -429,339 +429,344 @@
         <translation>विन्यास विकल्प</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1033"/>
+        <location filename="../defaultlook.ui" line="1047"/>
         <source>Reset Thunar custom right-click actions to system defaults</source>
         <translation>Thunar के अनुकूलित दाएं-क्लिक कार्यों को सिस्टम डिफ़ॉल्ट पर पुनः सेट करें</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="981"/>
+        <location filename="../defaultlook.ui" line="996"/>
         <source>Enable single-click on desktop</source>
         <translation>डेस्कटॉप पर एकल-क्लिक सक्रिय करें</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1005"/>
+        <location filename="../defaultlook.ui" line="951"/>
         <source>Enable single-click in Thunar File Manager</source>
         <translation>Thunar फाइल प्रबंधक पर एकल-क्लिक सक्रिय करें</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="974"/>
+        <location filename="../defaultlook.ui" line="1054"/>
         <source>Enable Desktop Zoom </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1047"/>
-        <location filename="../defaultlook.ui" line="1563"/>
+        <location filename="../defaultlook.ui" line="975"/>
+        <location filename="../defaultlook.ui" line="1570"/>
         <source>Show windows from all workspaces in panel</source>
         <translation>पैनल में सभी कार्यस्थल की विंडो प्रदर्शित करें</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1040"/>
+        <location filename="../defaultlook.ui" line="1003"/>
         <source>Disable shortening of long filenames on the desktop</source>
         <translation>डेस्कटॉप पर दीर्घ फाइल नाम संक्षिप्त करना निष्क्रिय करें</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1019"/>
+        <location filename="../defaultlook.ui" line="989"/>
         <source>Enable hibernate on Log Out menu </source>
         <translation>लॉगआउट मेन्यू में स्थगित करना सक्रिय</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1026"/>
+        <location filename="../defaultlook.ui" line="968"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
         <translation>                   ध्यान दें : स्थगित करने हेतु स्वैप आकार &gt;= RAM</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1012"/>
+        <location filename="../defaultlook.ui" line="1027"/>
         <source>Show GTK File Dialog action buttons at bottom of dialogs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="964"/>
+        <location filename="../defaultlook.ui" line="958"/>
         <source>( also turns off Client Side Decorations for Xfce applications)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1054"/>
+        <location filename="../defaultlook.ui" line="982"/>
         <source>Thunar windows always open in split view</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1064"/>
+        <location filename="../defaultlook.ui" line="1061"/>
+        <source>Thunar split view opens horizontal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1071"/>
         <source>Fluxbox</source>
         <translation>फ्लक्सबॉक्स</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1072"/>
+        <location filename="../defaultlook.ui" line="1079"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;साधन पट्टी सेटिंग्स&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1106"/>
-        <location filename="../defaultlook.ui" line="1142"/>
+        <location filename="../defaultlook.ui" line="1113"/>
+        <location filename="../defaultlook.ui" line="1149"/>
         <source>On</source>
         <translation>चालू</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1111"/>
-        <location filename="../defaultlook.ui" line="1147"/>
+        <location filename="../defaultlook.ui" line="1118"/>
+        <location filename="../defaultlook.ui" line="1154"/>
         <source>Off</source>
         <translation>बंद</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1116"/>
+        <location filename="../defaultlook.ui" line="1123"/>
         <source>On Hover</source>
         <translation>माउस होवर करने पर</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1134"/>
-        <location filename="../defaultlook.ui" line="1155"/>
+        <location filename="../defaultlook.ui" line="1141"/>
+        <location filename="../defaultlook.ui" line="1162"/>
         <source>Autohide</source>
         <translation>स्वतः अदृश्य</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1162"/>
+        <location filename="../defaultlook.ui" line="1169"/>
         <source>Reset ALL mx-fluxbox settings</source>
         <translation>सभी एमएक्स-फ्लक्सबॉक्स सेटिंग्स पुनः सेट करें</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1169"/>
-        <location filename="../defaultlook.ui" line="1183"/>
-        <location filename="../defaultlook.ui" line="1452"/>
+        <location filename="../defaultlook.ui" line="1176"/>
+        <location filename="../defaultlook.ui" line="1190"/>
+        <location filename="../defaultlook.ui" line="1459"/>
         <source>Placement</source>
         <translation>स्थिति</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1176"/>
+        <location filename="../defaultlook.ui" line="1183"/>
         <source>Reset DefaultDock</source>
         <translation>डिफ़ॉल्ट डॉक पुनः सेट करें</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1190"/>
+        <location filename="../defaultlook.ui" line="1197"/>
         <source>Toggle desktop icons</source>
         <translation>डेस्कटॉप आइकन चालू/बंद</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1197"/>
+        <location filename="../defaultlook.ui" line="1204"/>
         <source>Reset Fluxbox Menu</source>
         <translation>फ्लक्सबॉक्स मेन्यू पुनः स्थापित करें</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1338"/>
-        <location filename="../defaultlook.ui" line="1570"/>
+        <location filename="../defaultlook.ui" line="1345"/>
+        <location filename="../defaultlook.ui" line="1577"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;डिफ़ॉल्ट पुनः सेट करें&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1345"/>
+        <location filename="../defaultlook.ui" line="1352"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;डॉक सेटिंग्स&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1352"/>
+        <location filename="../defaultlook.ui" line="1359"/>
         <source>Width</source>
         <translation>चौड़ाई</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1359"/>
+        <location filename="../defaultlook.ui" line="1366"/>
         <source>Toggle icon captions</source>
         <translation>आइकन अनुशीर्षक चालू/बंद</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1366"/>
+        <location filename="../defaultlook.ui" line="1373"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Desktop Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;डेस्कटॉप आइकन&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1373"/>
+        <location filename="../defaultlook.ui" line="1380"/>
         <source>Height</source>
         <translation>ऊँचाई</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1380"/>
+        <location filename="../defaultlook.ui" line="1387"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1383"/>
+        <location filename="../defaultlook.ui" line="1390"/>
         <source>Upgrade existing menu entries</source>
         <translation>मौजूदा मेन्यू प्रविष्टियाँ अपग्रेड करें</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1403"/>
+        <location filename="../defaultlook.ui" line="1410"/>
         <source>Show Toolbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1431"/>
+        <location filename="../defaultlook.ui" line="1438"/>
         <source>Plasma</source>
         <translation>प्लाज़्मा</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1486"/>
+        <location filename="../defaultlook.ui" line="1493"/>
         <source>Systray Icon Size</source>
         <translation>सिस्टम ट्रे आइकन आकार</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1497"/>
+        <location filename="../defaultlook.ui" line="1504"/>
         <source>Default</source>
         <translation>डिफ़ॉल्ट</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1502"/>
+        <location filename="../defaultlook.ui" line="1509"/>
         <source>Small</source>
         <translation>लघु</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1507"/>
+        <location filename="../defaultlook.ui" line="1514"/>
         <source>Medium</source>
         <translation>मध्यम</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1512"/>
+        <location filename="../defaultlook.ui" line="1519"/>
         <source>Large</source>
         <translation>विशाल</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1517"/>
+        <location filename="../defaultlook.ui" line="1524"/>
         <source>Larger</source>
         <translation>विशालतर</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1522"/>
+        <location filename="../defaultlook.ui" line="1529"/>
         <source>Largest</source>
         <translation>विशालतम</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1549"/>
+        <location filename="../defaultlook.ui" line="1556"/>
         <source>Workspace</source>
         <translation>कार्यस्थल</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1556"/>
+        <location filename="../defaultlook.ui" line="1563"/>
         <source>Enable single-click</source>
         <translation>एकल-क्लिक सक्रिय करें</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1577"/>
+        <location filename="../defaultlook.ui" line="1584"/>
         <source>Reset KDE/Plasma defaults</source>
         <translation>केडीई/प्लाज़्मा डिफ़ॉल्ट पुनः सेट करें</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1617"/>
+        <location filename="../defaultlook.ui" line="1624"/>
         <source>Other</source>
         <translation>अन्य</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1684"/>
+        <location filename="../defaultlook.ui" line="1691"/>
         <source>Password for administrative tasks:</source>
         <translation>प्रशासक कार्यों हेतु कूटशब्द :</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1632"/>
+        <location filename="../defaultlook.ui" line="1639"/>
         <source>Use tearfree radeon driver option</source>
         <translation>स्क्रीन समस्या समाधन हेतु radeon विकल्प उपयोग करें</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1646"/>
+        <location filename="../defaultlook.ui" line="1653"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>          ध्यान दें : मौजूदा /etc/X11/xorg.conf.d/20-radeon.conf होम फोल्डर में बैकअप होगी</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1691"/>
+        <location filename="../defaultlook.ui" line="1698"/>
         <source>&amp;User</source>
         <translation>उपयोक्ता (&amp;U)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1698"/>
+        <location filename="../defaultlook.ui" line="1705"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>डिफ़ॉल्ट &quot;modesetting&quot; ड्राइवर के स्थान पर इंटेल ड्राइवर उपयोग करें (पुनः आरंभ आवश्यक)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1746"/>
+        <location filename="../defaultlook.ui" line="1753"/>
         <source>Enable kernel sandbox</source>
         <translation>कर्नेल सैंडबॉक्स सक्रिय करें</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1670"/>
+        <location filename="../defaultlook.ui" line="1677"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>          ध्यान दें : मौजूदा /etc/X11/xorg.conf.d/20-intel.conf होम फोल्डर में बैकअप होगी</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1712"/>
+        <location filename="../defaultlook.ui" line="1719"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>लाइट-डीएम (लॉगिन स्क्रीन) को सिस्टम डिफ़ॉल्ट थीम पर पुनः सेट करें</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1677"/>
+        <location filename="../defaultlook.ui" line="1684"/>
         <source>Use libinput driver for touchpad instead of synaptics touchpad driver (requires restart)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1639"/>
+        <location filename="../defaultlook.ui" line="1646"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>          ध्यान दें : मौजूदा /etc/X11/xorg.conf.d/20-amd.conf होम फोल्डर में बैकअप होगी</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1625"/>
+        <location filename="../defaultlook.ui" line="1632"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>गैर-रूट उपयोक्ता द्वारा आंतरिक ड्राइव माउंट करना सक्रिय करें</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1705"/>
+        <location filename="../defaultlook.ui" line="1712"/>
         <source>Use tearfree amdgpu option</source>
         <translation>स्क्रीन समस्या समाधन हेतु amdgpu विकल्प उपयोग करें</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1719"/>
+        <location filename="../defaultlook.ui" line="1726"/>
         <source>Root</source>
         <translation>रूट</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1653"/>
+        <location filename="../defaultlook.ui" line="1660"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1417"/>
+        <location filename="../defaultlook.ui" line="1424"/>
         <source>Manage Tint2 Panel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1660"/>
+        <location filename="../defaultlook.ui" line="1667"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1663"/>
+        <location filename="../defaultlook.ui" line="1670"/>
         <source>Enable Bluetooth Adapters on boot</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1770"/>
+        <location filename="../defaultlook.ui" line="1777"/>
         <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1839"/>
+        <location filename="../defaultlook.ui" line="1846"/>
         <source>About</source>
         <translation>बारे में</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1850"/>
+        <location filename="../defaultlook.ui" line="1857"/>
         <source>Help</source>
         <translation>सहायता</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1867"/>
+        <location filename="../defaultlook.ui" line="1874"/>
         <source>Quit application</source>
         <translation>अनुप्रयोग बंद करें</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1870"/>
+        <location filename="../defaultlook.ui" line="1877"/>
         <source>Close</source>
         <translation>बंद करें</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1877"/>
+        <location filename="../defaultlook.ui" line="1884"/>
         <source>Alt+N</source>
         <translation>Alt+N</translation>
     </message>
@@ -841,12 +846,12 @@
         <translation>आपकी वर्तमान पैनल सेटिंग्स का आपके होम फोल्डर के .restore नामक अदृश्य फोल्डर में बैकअप कर दिया गया (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1559"/>
+        <location filename="../defaultlook.cpp" line="1563"/>
         <source>settings</source>
         <translation>सेटिंग्स</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1899"/>
+        <location filename="../defaultlook.cpp" line="1903"/>
         <source>Choose a theme set</source>
         <translation>थीम संग्रह चुनें</translation>
     </message>

@@ -1460,6 +1460,10 @@ void defaultlook::setupConfigoptions()
         test = runCmd(QStringLiteral("xfconf-query  -c thunar -p /misc-open-new-windows-in-split-view")).output;
         ui->checkBoxThunarSplitView->setChecked(test == QLatin1String("true"));
 
+        //check split view horizontal or vertical.  default false is vertical, true is horizontal;
+        test = runCmd(QStringLiteral("xfconf-query  -c thunar -p /misc-vertical-split-pane")).output;
+        ui->checkBoxsplitviewhorizontal->setChecked(test == QLatin1String("true"));
+
         //check systray frame status
         //frame has been removed from systray
 
@@ -2600,6 +2604,13 @@ void defaultlook::on_ButtonApplyMiscDefualts_clicked()
 
     }
 
+    //split view thunar horizontal or vertical
+    if (ui->checkBoxsplitviewhorizontal->isChecked()){
+        runCmd(QStringLiteral("xfconf-query -c thunar -p /misc-vertical-split-pane -t bool -s true --create"));
+    } else {
+        runCmd(QStringLiteral("xfconf-query -c thunar -p /misc-vertical-split-pane --reset"));
+    }
+
     //systray frame removed
 
     //set desktop zoom
@@ -3497,6 +3508,11 @@ void defaultlook::on_checkBoxInstallRecommends_clicked()
 }
 
 void defaultlook::on_checkBoxThunarSplitView_clicked()
+{
+    ui->ButtonApplyMiscDefualts->setEnabled(true);
+}
+
+void defaultlook::on_checkBoxsplitviewhorizontal_clicked()
 {
     ui->ButtonApplyMiscDefualts->setEnabled(true);
 }
