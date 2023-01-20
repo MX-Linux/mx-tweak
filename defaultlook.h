@@ -97,6 +97,13 @@ public:
     bool plasmasystrayiconsizeflag{};
     bool themeflag = false;
     bool validateflag = false;
+    void thunarsplitview(bool state);
+    void thunarsplitviewhorizontal(bool state);
+    void thunarsetupsplitview();
+    void resetthunar();
+    void thunarsingleclicksetup();
+    void thunarsetsingleclick(bool state);
+
 
     QString g1;
     QString g2;

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1039</width>
-    <height>655</height>
+    <height>734</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -24,6 +24,35 @@
     <normaloff>../../../../usr/share/pixmaps/mx-tweak.png</normaloff>../../../../usr/share/pixmaps/mx-tweak.png</iconset>
   </property>
   <layout class="QGridLayout" name="gridLayout_9">
+   <item row="1" column="0">
+    <spacer name="verticalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::MinimumExpanding</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>13</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label_7">
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Xfce Settings</string>
+     </property>
+    </widget>
+   </item>
    <item row="3" column="0">
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
@@ -117,19 +146,6 @@
      </item>
     </layout>
    </item>
-   <item row="2" column="0">
-    <widget class="QLabel" name="label_7">
-     <property name="font">
-      <font>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>Xfce Settings</string>
-     </property>
-    </widget>
-   </item>
    <item row="4" column="0">
     <spacer name="verticalSpacer">
      <property name="orientation">
@@ -143,13 +159,122 @@
      </property>
     </spacer>
    </item>
+   <item row="5" column="0">
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="2">
+      <spacer name="horizontalSpacer1">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::MinimumExpanding</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>28</width>
+         <height>29</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="0" column="3">
+      <widget class="QLabel" name="labelMX">
+       <property name="maximumSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+       <property name="midLineWidth">
+        <number>0</number>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="images.qrc">:/icons/logo.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="4">
+      <spacer name="horizontalSpacer2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::MinimumExpanding</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>18</width>
+         <height>29</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="buttonAbout">
+       <property name="text">
+        <string>About</string>
+       </property>
+       <property name="icon">
+        <iconset theme="help-about">
+         <normaloff>.</normaloff>.</iconset>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="buttonHelp">
+       <property name="text">
+        <string>Help</string>
+       </property>
+       <property name="icon">
+        <iconset theme="help-contents">
+         <normaloff>.</normaloff>.</iconset>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="7">
+      <widget class="QPushButton" name="buttonCancel">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="toolTip">
+        <string>Quit application</string>
+       </property>
+       <property name="text">
+        <string>Close</string>
+       </property>
+       <property name="icon">
+        <iconset theme="window-close">
+         <normaloff>.</normaloff>.</iconset>
+       </property>
+       <property name="shortcut">
+        <string>Alt+N</string>
+       </property>
+       <property name="autoDefault">
+        <bool>true</bool>
+       </property>
+       <property name="default">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
    <item row="0" column="0">
     <widget class="QTabWidget" name="tabWidget">
      <property name="tabPosition">
       <enum>QTabWidget::North</enum>
      </property>
      <property name="currentIndex">
-      <number>4</number>
+      <number>5</number>
      </property>
      <widget class="QWidget" name="Panel">
       <attribute name="title">
@@ -1070,368 +1195,409 @@
       <attribute name="title">
        <string>Fluxbox</string>
       </attribute>
-      <layout class="QGridLayout" name="gridLayout_15">
-       <item row="0" column="0">
-        <layout class="QGridLayout" name="gridLayout_14">
-         <item row="5" column="0">
-          <widget class="QLabel" name="label_15">
+      <widget class="QWidget" name="">
+       <property name="geometry">
+        <rect>
+         <x>11</x>
+         <y>11</y>
+         <width>983</width>
+         <height>520</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_14">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_14">
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QLabel" name="label_20">
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Desktop Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QCheckBox" name="checkboxfluxresetdock">
+          <property name="text">
+           <string>Reset DefaultDock</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QLabel" name="label_26">
+          <property name="text">
+           <string>Toggle desktop icons</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QComboBox" name="comboBoxfluxIcons">
+          <item>
            <property name="text">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            <string>On</string>
            </property>
-          </widget>
-         </item>
-         <item row="2" column="5">
-          <spacer name="horizontalSpacer_6">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>138</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item row="7" column="4">
-          <widget class="QSpinBox" name="spinBoxFluxToolbarHeight">
-           <property name="minimumSize">
-            <size>
-             <width>30</width>
-             <height>0</height>
-            </size>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="4">
-          <widget class="QComboBox" name="comboBoxfluxcaptions">
-           <property name="currentIndex">
-            <number>0</number>
-           </property>
-           <item>
-            <property name="text">
-             <string>On</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Off</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>On Hover</string>
-            </property>
-           </item>
-          </widget>
-         </item>
-         <item row="6" column="4">
-          <widget class="QSpinBox" name="spinBoxFluxToolbarWidth">
-           <property name="minimumSize">
-            <size>
-             <width>30</width>
-             <height>0</height>
-            </size>
-           </property>
-          </widget>
-         </item>
-         <item row="10" column="0">
-          <widget class="QCheckBox" name="checkboxfluxSlitautohide">
+          </item>
+          <item>
            <property name="text">
-            <string>Autohide</string>
+            <string>Off</string>
            </property>
-          </widget>
-         </item>
-         <item row="1" column="4">
-          <widget class="QComboBox" name="comboBoxfluxIcons">
-           <item>
-            <property name="text">
-             <string>On</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Off</string>
-            </property>
-           </item>
-          </widget>
-         </item>
-         <item row="7" column="0">
-          <widget class="QCheckBox" name="checkboxfluxtoolbarautohide">
+          </item>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QCheckBox" name="checkboxfluxresetmenu">
+          <property name="text">
+           <string>Reset Fluxbox Menu</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QLabel" name="label_25">
+          <property name="text">
+           <string>Toggle icon captions</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="3">
+         <widget class="QComboBox" name="comboBoxfluxcaptions">
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <item>
            <property name="text">
-            <string>Autohide</string>
+            <string>On</string>
            </property>
-          </widget>
-         </item>
-         <item row="3" column="0" colspan="2">
-          <widget class="QCheckBox" name="checkboxfluxreseteverything">
+          </item>
+          <item>
            <property name="text">
-            <string>Reset ALL mx-fluxbox settings</string>
+            <string>Off</string>
            </property>
-          </widget>
-         </item>
-         <item row="9" column="0">
-          <widget class="QLabel" name="label_slit_location">
+          </item>
+          <item>
            <property name="text">
-            <string>Placement</string>
+            <string>On Hover</string>
            </property>
-          </widget>
-         </item>
-         <item row="1" column="0">
-          <widget class="QCheckBox" name="checkboxfluxresetdock">
+          </item>
+         </widget>
+        </item>
+        <item row="2" column="4">
+         <spacer name="horizontalSpacer_6">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>43</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="3" column="0">
+         <widget class="QCheckBox" name="checkboxfluxreseteverything">
+          <property name="text">
+           <string>Reset ALL mx-fluxbox settings</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="2">
+         <widget class="QLabel" name="label_32">
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Thunar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QCheckBox" name="checkBoxMenuMigrate">
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="text">
+           <string>Upgrade existing menu entries</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="2">
+         <widget class="QCheckBox" name="checkBoxThunarSingleClick_2">
+          <property name="text">
+           <string>Enable single-click in Thunar File Manager</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="2" colspan="3">
+         <widget class="QCheckBox" name="checkBoxThunarCAReset_2">
+          <property name="text">
+           <string>Reset Thunar custom right-click actions to system defaults</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="2">
+         <widget class="QCheckBox" name="checkBoxThunarSplitView_2">
+          <property name="text">
+           <string>Thunar windows always open in split view</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="2">
+         <widget class="QCheckBox" name="checkBoxsplitviewhorizontal_2">
+          <property name="text">
+           <string>Thunar split view opens horizontal</string>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="0">
+         <widget class="QLabel" name="label_15">
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="9" column="0" rowspan="2">
+         <widget class="QLabel" name="label_16">
+          <property name="text">
+           <string>Placement</string>
+          </property>
+         </widget>
+        </item>
+        <item row="9" column="1" rowspan="2">
+         <widget class="QComboBox" name="combofluxtoolbarlocatoin">
+          <property name="currentText">
+           <string notr="true">TopLeft</string>
+          </property>
+          <item>
            <property name="text">
-            <string>Reset DefaultDock</string>
-           </property>
-          </widget>
-         </item>
-         <item row="6" column="0">
-          <widget class="QLabel" name="label_16">
-           <property name="text">
-            <string>Placement</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="3">
-          <widget class="QLabel" name="label_26">
-           <property name="text">
-            <string>Toggle desktop icons</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="0" colspan="2">
-          <widget class="QCheckBox" name="checkboxfluxresetmenu">
-           <property name="text">
-            <string>Reset Fluxbox Menu</string>
-           </property>
-          </widget>
-         </item>
-         <item row="9" column="1">
-          <widget class="QComboBox" name="combofluxslitlocation">
-           <property name="currentText">
             <string notr="true">TopLeft</string>
            </property>
-           <item>
-            <property name="text">
-             <string notr="true">TopLeft</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string notr="true">TopCenter</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string notr="true">TopRight</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string notr="true">LeftTop</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string notr="true">LeftCenter</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string notr="true">LeftBottom</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string notr="true">BottomLeft</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string notr="true">BottomCenter</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string notr="true">BottomRight</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string notr="true">RightTop</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string notr="true">RightCenter</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string notr="true">RightBottom</string>
-            </property>
-           </item>
-          </widget>
-         </item>
-         <item row="6" column="1">
-          <widget class="QComboBox" name="combofluxtoolbarlocatoin">
-           <property name="currentText">
+          </item>
+          <item>
+           <property name="text">
+            <string notr="true">TopCenter</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string notr="true">TopRight</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string notr="true">LeftTop</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string notr="true">LeftCenter</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string notr="true">LeftBottom</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string notr="true">BottomLeft</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string notr="true">BottomCenter</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string notr="true">BottomRight</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string notr="true">RightTop</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string notr="true">RightCenter</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string notr="true">RightBottom</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="9" column="2">
+         <widget class="QLabel" name="label_17">
+          <property name="text">
+           <string>Width</string>
+          </property>
+         </widget>
+        </item>
+        <item row="9" column="3" rowspan="2">
+         <widget class="QSpinBox" name="spinBoxFluxToolbarWidth">
+          <property name="minimumSize">
+           <size>
+            <width>30</width>
+            <height>0</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="10" column="2">
+         <spacer name="horizontalSpacer_5">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>19</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="11" column="0">
+         <widget class="QCheckBox" name="checkboxfluxtoolbarautohide">
+          <property name="text">
+           <string>Autohide</string>
+          </property>
+         </widget>
+        </item>
+        <item row="11" column="1">
+         <widget class="QCheckBox" name="checkBoxFluxShowToolbar">
+          <property name="text">
+           <string>Show Toolbar</string>
+          </property>
+         </widget>
+        </item>
+        <item row="11" column="2">
+         <widget class="QLabel" name="label_18">
+          <property name="text">
+           <string>Height</string>
+          </property>
+         </widget>
+        </item>
+        <item row="11" column="3">
+         <widget class="QSpinBox" name="spinBoxFluxToolbarHeight">
+          <property name="minimumSize">
+           <size>
+            <width>30</width>
+            <height>0</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="12" column="0">
+         <widget class="QLabel" name="label_19">
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="13" column="0">
+         <widget class="QLabel" name="label_slit_location">
+          <property name="text">
+           <string>Placement</string>
+          </property>
+         </widget>
+        </item>
+        <item row="13" column="1">
+         <widget class="QComboBox" name="combofluxslitlocation">
+          <property name="currentText">
+           <string notr="true">TopLeft</string>
+          </property>
+          <item>
+           <property name="text">
             <string notr="true">TopLeft</string>
            </property>
-           <item>
-            <property name="text">
-             <string notr="true">TopLeft</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string notr="true">TopCenter</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string notr="true">TopRight</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string notr="true">LeftTop</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string notr="true">LeftCenter</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string notr="true">LeftBottom</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string notr="true">BottomLeft</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string notr="true">BottomCenter</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string notr="true">BottomRight</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string notr="true">RightTop</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string notr="true">RightCenter</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string notr="true">RightBottom</string>
-            </property>
-           </item>
-          </widget>
-         </item>
-         <item row="0" column="0">
-          <widget class="QLabel" name="label_14">
+          </item>
+          <item>
            <property name="text">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            <string notr="true">TopCenter</string>
            </property>
-          </widget>
-         </item>
-         <item row="8" column="0">
-          <widget class="QLabel" name="label_19">
+          </item>
+          <item>
            <property name="text">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            <string notr="true">TopRight</string>
            </property>
-          </widget>
-         </item>
-         <item row="6" column="3">
-          <widget class="QLabel" name="label_17">
+          </item>
+          <item>
            <property name="text">
-            <string>Width</string>
+            <string notr="true">LeftTop</string>
            </property>
-          </widget>
-         </item>
-         <item row="2" column="3">
-          <widget class="QLabel" name="label_25">
+          </item>
+          <item>
            <property name="text">
-            <string>Toggle icon captions</string>
+            <string notr="true">LeftCenter</string>
            </property>
-          </widget>
-         </item>
-         <item row="0" column="3">
-          <widget class="QLabel" name="label_20">
+          </item>
+          <item>
            <property name="text">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Desktop Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            <string notr="true">LeftBottom</string>
            </property>
-          </widget>
-         </item>
-         <item row="7" column="3">
-          <widget class="QLabel" name="label_18">
+          </item>
+          <item>
            <property name="text">
-            <string>Height</string>
+            <string notr="true">BottomLeft</string>
            </property>
-          </widget>
-         </item>
-         <item row="4" column="0" colspan="2">
-          <widget class="QCheckBox" name="checkBoxMenuMigrate">
-           <property name="toolTip">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-           </property>
+          </item>
+          <item>
            <property name="text">
-            <string>Upgrade existing menu entries</string>
+            <string notr="true">BottomCenter</string>
            </property>
-          </widget>
-         </item>
-         <item row="6" column="2">
-          <spacer name="horizontalSpacer_5">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item row="7" column="1">
-          <widget class="QCheckBox" name="checkBoxFluxShowToolbar">
+          </item>
+          <item>
            <property name="text">
-            <string>Show Toolbar</string>
+            <string notr="true">BottomRight</string>
            </property>
-          </widget>
-         </item>
-         <item row="11" column="0" colspan="6">
-          <widget class="QPushButton" name="ApplyFluxboxResets">
+          </item>
+          <item>
            <property name="text">
-            <string>Apply</string>
+            <string notr="true">RightTop</string>
            </property>
-          </widget>
-         </item>
-         <item row="9" column="3" colspan="2">
-          <widget class="QPushButton" name="buttonManageTint2">
+          </item>
+          <item>
            <property name="text">
-            <string>Manage Tint2 Panel</string>
+            <string notr="true">RightCenter</string>
            </property>
-           <property name="icon">
-            <iconset theme="systemtray">
-             <normaloff>.</normaloff>.</iconset>
+          </item>
+          <item>
+           <property name="text">
+            <string notr="true">RightBottom</string>
            </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-      </layout>
+          </item>
+         </widget>
+        </item>
+        <item row="13" column="2">
+         <widget class="QPushButton" name="buttonManageTint2">
+          <property name="text">
+           <string>Manage Tint2 Panel</string>
+          </property>
+          <property name="icon">
+           <iconset theme="systemtray">
+            <normaloff>.</normaloff>.</iconset>
+          </property>
+         </widget>
+        </item>
+        <item row="14" column="0">
+         <widget class="QCheckBox" name="checkboxfluxSlitautohide">
+          <property name="text">
+           <string>Autohide</string>
+          </property>
+         </widget>
+        </item>
+        <item row="15" column="0" colspan="5">
+         <widget class="QPushButton" name="ApplyFluxboxResets">
+          <property name="text">
+           <string>Apply</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
      </widget>
      <widget class="QWidget" name="tab_2">
       <attribute name="title">
@@ -1783,131 +1949,6 @@
       </layout>
      </widget>
     </widget>
-   </item>
-   <item row="5" column="0">
-    <layout class="QGridLayout" name="gridLayout_2">
-     <item row="0" column="2">
-      <spacer name="horizontalSpacer1">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeType">
-        <enum>QSizePolicy::MinimumExpanding</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>28</width>
-         <height>29</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item row="0" column="3">
-      <widget class="QLabel" name="labelMX">
-       <property name="maximumSize">
-        <size>
-         <width>32</width>
-         <height>32</height>
-        </size>
-       </property>
-       <property name="midLineWidth">
-        <number>0</number>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap resource="images.qrc">:/icons/logo.png</pixmap>
-       </property>
-       <property name="scaledContents">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="4">
-      <spacer name="horizontalSpacer2">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeType">
-        <enum>QSizePolicy::MinimumExpanding</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>18</width>
-         <height>29</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item row="0" column="0">
-      <widget class="QPushButton" name="buttonAbout">
-       <property name="text">
-        <string>About</string>
-       </property>
-       <property name="icon">
-        <iconset theme="help-about">
-         <normaloff>.</normaloff>.</iconset>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="1">
-      <widget class="QPushButton" name="buttonHelp">
-       <property name="text">
-        <string>Help</string>
-       </property>
-       <property name="icon">
-        <iconset theme="help-contents">
-         <normaloff>.</normaloff>.</iconset>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="7">
-      <widget class="QPushButton" name="buttonCancel">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="toolTip">
-        <string>Quit application</string>
-       </property>
-       <property name="text">
-        <string>Close</string>
-       </property>
-       <property name="icon">
-        <iconset theme="window-close">
-         <normaloff>.</normaloff>.</iconset>
-       </property>
-       <property name="shortcut">
-        <string>Alt+N</string>
-       </property>
-       <property name="autoDefault">
-        <bool>true</bool>
-       </property>
-       <property name="default">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item row="1" column="0">
-    <spacer name="verticalSpacer_2">
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-     <property name="sizeType">
-      <enum>QSizePolicy::MinimumExpanding</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>20</width>
-       <height>13</height>
-      </size>
-     </property>
-    </spacer>
    </item>
   </layout>
  </widget>
