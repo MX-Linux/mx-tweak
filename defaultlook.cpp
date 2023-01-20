@@ -3408,7 +3408,7 @@ void defaultlook::settheme(const QString &type, const QString &theme, const QStr
             cmd = cmd = "yad --form --title \"Preview\"  --button:gtk-ok --field=Button:FBTN --field=Combobox:CBE --field=Checkbox:CHK --close-on-unfocus";
             system(cmd.toUtf8());
             cmd = "sed -i 's/gtk-icon-theme-name=\".*/gtk-icon-theme-name=\"" + theme + "\"/' $HOME/.gtkrc-2.0";
-        }        
+        }
     }
     system(cmd.toUtf8());
 }
