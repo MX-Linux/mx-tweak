@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="sq">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="sq">
 <context>
     <name>QObject</name>
     <message>
@@ -30,7 +28,7 @@
     <message>
         <location filename="../brightness_small.ui" line="14"/>
         <source>MainWindow</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../brightness_small.ui" line="39"/>
@@ -169,7 +167,7 @@
     <message>
         <location filename="../defaultlook.ui" line="234"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="164"/>
@@ -477,17 +475,17 @@
     <message>
         <location filename="../defaultlook.ui" line="958"/>
         <source>( also turns off Client Side Decorations for Xfce applications)</source>
-        <translation type="unfinished"></translation>
+        <translation>(çaktivizon gjithashtu Zbukurime Më Anë të Klientit për aplikacione Xfce)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="982"/>
         <source>Thunar windows always open in split view</source>
-        <translation type="unfinished"></translation>
+        <translation>Dritaret e Thunar-it hapen përherë nën pamjen e ndarë</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1061"/>
         <source>Thunar split view opens horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation>Pamja e ndarë e Thunarit ndahet horizontalisht</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1071"/>
@@ -1086,7 +1084,7 @@
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="190"/>
         <source>Synchronize drawing to vertical blank</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="212"/>

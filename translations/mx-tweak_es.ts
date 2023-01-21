@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="es">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="es">
 <context>
     <name>QObject</name>
     <message>
@@ -482,12 +480,12 @@
     <message>
         <location filename="../defaultlook.ui" line="982"/>
         <source>Thunar windows always open in split view</source>
-        <translation type="unfinished"></translation>
+        <translation>Abrir siempre las ventanas de Thunar en vista dividida</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1061"/>
         <source>Thunar split view opens horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation>Abrir vista dividida de Thunar en horizontal</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1071"/>
@@ -869,7 +867,7 @@
     <message>
         <location filename="../theming_to_tweak.ui" line="14"/>
         <source>New Theme Set</source>
-        <translation>Nuevo conjunto de temas&#xa0;</translation>
+        <translation>Nuevo conjunto de temas </translation>
     </message>
     <message>
         <location filename="../theming_to_tweak.ui" line="20"/>

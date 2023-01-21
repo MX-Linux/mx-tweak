@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="fi">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="fi">
 <context>
     <name>QObject</name>
     <message>
@@ -169,7 +167,7 @@
     <message>
         <location filename="../defaultlook.ui" line="234"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="164"/>
@@ -224,7 +222,7 @@
     <message>
         <location filename="../defaultlook.ui" line="392"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="428"/>
@@ -249,7 +247,7 @@
     <message>
         <location filename="../defaultlook.ui" line="452"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Manager&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="459"/>
@@ -472,22 +470,22 @@
     <message>
         <location filename="../defaultlook.ui" line="1027"/>
         <source>Show GTK File Dialog action buttons at bottom of dialogs</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="958"/>
         <source>( also turns off Client Side Decorations for Xfce applications)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="982"/>
         <source>Thunar windows always open in split view</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1061"/>
         <source>Thunar split view opens horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1071"/>
@@ -583,7 +581,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1387"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1390"/>
@@ -593,7 +591,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1410"/>
         <source>Show Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1438"/>
@@ -698,7 +696,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1684"/>
         <source>Use libinput driver for touchpad instead of synaptics touchpad driver (requires restart)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1646"/>
@@ -723,27 +721,27 @@
     <message>
         <location filename="../defaultlook.ui" line="1660"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1424"/>
         <source>Manage Tint2 Panel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1667"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1670"/>
         <source>Enable Bluetooth Adapters on boot</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1777"/>
         <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1846"/>
@@ -813,27 +811,27 @@
     <message>
         <location filename="../defaultlook.cpp" line="700"/>
         <source>Plese remove special characters</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="700"/>
         <source>from file name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="710"/>
         <source>File name already exists.  Choose another name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="738"/>
         <source>File is not a valid tar.xz archive file</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="741"/>
         <source>Archive does not contain a panel config</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="861"/>

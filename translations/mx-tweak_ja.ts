@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="ja">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="ja">
 <context>
     <name>QObject</name>
     <message>
@@ -482,12 +480,12 @@
     <message>
         <location filename="../defaultlook.ui" line="982"/>
         <source>Thunar windows always open in split view</source>
-        <translation type="unfinished"></translation>
+        <translation>Thunar ウィンドウが常にスプリットビューで開く</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1061"/>
         <source>Thunar split view opens horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation>Thunar スプリットビューが水平方向に開く</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1071"/>

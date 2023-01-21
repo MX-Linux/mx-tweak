@@ -3600,3 +3600,23 @@ void defaultlook::thunarsetsingleclick(bool state){
         runCmd(QStringLiteral("xfconf-query  -c thunar -p /misc-single-click -s false"));
     }
 }
+
+void defaultlook::on_checkBoxThunarCAReset_2_clicked()
+{
+    ui->ApplyFluxboxResets->setEnabled(true);
+}
+
+void defaultlook::on_checkBoxThunarSplitView_2_clicked()
+{
+    ui->ApplyFluxboxResets->setEnabled(true);
+}
+
+void defaultlook::on_checkBoxsplitviewhorizontal_2_clicked()
+{
+    ui->ApplyFluxboxResets->setEnabled(true);
+}
+
+void defaultlook::on_checkBoxThunarSingleClick_2_clicked()
+{
+    ui->ApplyFluxboxResets->setEnabled(true);
+}

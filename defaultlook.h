@@ -267,6 +267,14 @@ private slots:
 
     void on_checkBoxsplitviewhorizontal_clicked();
 
+    void on_checkBoxThunarCAReset_2_clicked();
+
+    void on_checkBoxThunarSplitView_2_clicked();
+
+    void on_checkBoxsplitviewhorizontal_2_clicked();
+
+    void on_checkBoxThunarSingleClick_2_clicked();
+
 private:
     Ui::defaultlook *ui;
 };

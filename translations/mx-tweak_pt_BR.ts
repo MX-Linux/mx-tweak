@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="pt_BR">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="pt_BR">
 <context>
     <name>QObject</name>
     <message>
@@ -482,12 +480,12 @@
     <message>
         <location filename="../defaultlook.ui" line="982"/>
         <source>Thunar windows always open in split view</source>
-        <translation type="unfinished"></translation>
+        <translation>O gerenciador de arquivos Thunar sempre abre com as janelas divididas</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1061"/>
         <source>Thunar split view opens horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation>O gerenciador de arquivos Thunar abre com as janelas divididas horizontalmente</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1071"/>
