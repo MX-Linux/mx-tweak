@@ -1,3 +1,9 @@
+mx-tweak (23.01.02mx22) UNRELEASED; urgency=medium
+
+  * fix backup function when .restore doesn't exist 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 21 Jan 2023 16:18:16 -0500
+
 mx-tweak (23.01.02mx21) mx; urgency=medium
 
   * add fluxbox thunar actions
