@@ -691,8 +691,9 @@ void defaultlook::backupPanel()
 {
     //ensure .restore folder exists
     QString home_path = QDir::homePath();
-    runCmd("mkdir -p " + home_path + "/.restore/");
-
+    if ( ! QDir(home_path + "/.restore/").exists()){
+        runCmd("mkdir -p " + home_path + "/.restore/");
+    }
     //validate file name
     qDebug() << "ui file name " << ui->lineEditBackupName->text();
     //QRegExp rx("(@|\\$|%|\\&|\\*|(|)|{|}|[|]|/|\\|\\?");
@@ -798,6 +799,7 @@ void defaultlook::on_radioBackupPanel_clicked()
         ui->checkVert->setChecked(false);
         ui->radioDefaultPanel->setChecked(false);
         ui->radioRestoreBackup->setChecked(false);
+        ui->lineEditBackupName->setText("panel_backup_" + QDateTime::currentDateTime().toString("dd.MM.yyyy.hh.mm.ss"));
         ui->lineEditBackupName->show();
     }
 }
