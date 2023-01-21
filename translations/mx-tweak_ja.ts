@@ -131,19 +131,19 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="227"/>
-        <location filename="../defaultlook.ui" line="1438"/>
+        <location filename="../defaultlook.ui" line="1452"/>
         <source>Affects 1st panel</source>
         <translation>第1のパネルに影響します</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="280"/>
-        <location filename="../defaultlook.ui" line="1461"/>
+        <location filename="../defaultlook.ui" line="1475"/>
         <source>Left</source>
         <translation>左</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="285"/>
-        <location filename="../defaultlook.ui" line="1471"/>
+        <location filename="../defaultlook.ui" line="1485"/>
         <source>Right</source>
         <translation>左</translation>
     </message>
@@ -154,13 +154,13 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="254"/>
-        <location filename="../defaultlook.ui" line="1456"/>
+        <location filename="../defaultlook.ui" line="1470"/>
         <source>Bottom</source>
         <translation>下</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="259"/>
-        <location filename="../defaultlook.ui" line="1466"/>
+        <location filename="../defaultlook.ui" line="1480"/>
         <source>Top</source>
         <translation>上</translation>
     </message>
@@ -207,10 +207,10 @@
         <location filename="../defaultlook.ui" line="886"/>
         <location filename="../defaultlook.ui" line="893"/>
         <location filename="../defaultlook.ui" line="900"/>
-        <location filename="../defaultlook.ui" line="964"/>
-        <location filename="../defaultlook.ui" line="1403"/>
-        <location filename="../defaultlook.ui" line="1596"/>
-        <location filename="../defaultlook.ui" line="1752"/>
+        <location filename="../defaultlook.ui" line="1016"/>
+        <location filename="../defaultlook.ui" line="1417"/>
+        <location filename="../defaultlook.ui" line="1610"/>
+        <location filename="../defaultlook.ui" line="1766"/>
         <source>Apply</source>
         <translation>適用</translation>
     </message>
@@ -427,334 +427,344 @@
         <translation>オプションの設定</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1030"/>
+        <location filename="../defaultlook.ui" line="1047"/>
         <source>Reset Thunar custom right-click actions to system defaults</source>
         <translation>Thunar のカスタム右クリックアクションをシステムの既定にリセット</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="982"/>
+        <location filename="../defaultlook.ui" line="996"/>
         <source>Enable single-click on desktop</source>
         <translation>デスクトップでシングルクリックを有効化</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="975"/>
+        <location filename="../defaultlook.ui" line="951"/>
         <source>Enable single-click in Thunar File Manager</source>
         <translation>Thunar ファイルマネージャでシングルクリックを有効化</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="951"/>
+        <location filename="../defaultlook.ui" line="1054"/>
         <source>Enable Desktop Zoom </source>
         <translation>デスクトップズームの有効化</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1023"/>
-        <location filename="../defaultlook.ui" line="1556"/>
+        <location filename="../defaultlook.ui" line="975"/>
+        <location filename="../defaultlook.ui" line="1570"/>
         <source>Show windows from all workspaces in panel</source>
         <translation>パネルに全てのワークスペースのウィンドウを表示</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="989"/>
+        <location filename="../defaultlook.ui" line="1003"/>
         <source>Disable shortening of long filenames on the desktop</source>
         <translation>デスクトップでの長いファイル名の短縮を無効化</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="996"/>
+        <location filename="../defaultlook.ui" line="989"/>
         <source>Enable hibernate on Log Out menu </source>
         <translation>ログアウトメニューでハイバネートを有効化</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1016"/>
+        <location filename="../defaultlook.ui" line="968"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
         <translation>注意: ハイバネートするには、スワップが &gt;= RAM である必要があります</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1037"/>
+        <location filename="../defaultlook.ui" line="1027"/>
         <source>Show GTK File Dialog action buttons at bottom of dialogs</source>
         <translation>GTK ファイルダイアログのアクションボタンをダイアログ下部に表示</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1044"/>
+        <location filename="../defaultlook.ui" line="958"/>
         <source>( also turns off Client Side Decorations for Xfce applications)</source>
         <translation>( また、Xfce アプリケーションのクライアント側の修飾をオフにします。)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1057"/>
+        <location filename="../defaultlook.ui" line="982"/>
+        <source>Thunar windows always open in split view</source>
+        <translation>Thunar ウィンドウが常にスプリットビューで開く</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1061"/>
+        <source>Thunar split view opens horizontal</source>
+        <translation>Thunar スプリットビューが水平方向に開く</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1071"/>
         <source>Fluxbox</source>
         <translation>Fluxbox</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1065"/>
+        <location filename="../defaultlook.ui" line="1079"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;ツールバーの設定&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1099"/>
-        <location filename="../defaultlook.ui" line="1135"/>
+        <location filename="../defaultlook.ui" line="1113"/>
+        <location filename="../defaultlook.ui" line="1149"/>
         <source>On</source>
         <translation>オン</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1104"/>
-        <location filename="../defaultlook.ui" line="1140"/>
+        <location filename="../defaultlook.ui" line="1118"/>
+        <location filename="../defaultlook.ui" line="1154"/>
         <source>Off</source>
         <translation>オフ</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1109"/>
+        <location filename="../defaultlook.ui" line="1123"/>
         <source>On Hover</source>
         <translation>停止</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1127"/>
-        <location filename="../defaultlook.ui" line="1148"/>
+        <location filename="../defaultlook.ui" line="1141"/>
+        <location filename="../defaultlook.ui" line="1162"/>
         <source>Autohide</source>
         <translation>自動的に隠す</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1155"/>
+        <location filename="../defaultlook.ui" line="1169"/>
         <source>Reset ALL mx-fluxbox settings</source>
         <translation>mx-fluxbox の設定をすべてリセットします</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1162"/>
         <location filename="../defaultlook.ui" line="1176"/>
-        <location filename="../defaultlook.ui" line="1445"/>
+        <location filename="../defaultlook.ui" line="1190"/>
+        <location filename="../defaultlook.ui" line="1459"/>
         <source>Placement</source>
         <translation>配置</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1169"/>
+        <location filename="../defaultlook.ui" line="1183"/>
         <source>Reset DefaultDock</source>
         <translation>標準ドックをリセット</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1183"/>
+        <location filename="../defaultlook.ui" line="1197"/>
         <source>Toggle desktop icons</source>
         <translation>デスクトップのアイコンを切り替えます</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1190"/>
+        <location filename="../defaultlook.ui" line="1204"/>
         <source>Reset Fluxbox Menu</source>
         <translation>Fluxbox メニューをリセット</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1331"/>
-        <location filename="../defaultlook.ui" line="1563"/>
+        <location filename="../defaultlook.ui" line="1345"/>
+        <location filename="../defaultlook.ui" line="1577"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;初期設定に戻す&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1338"/>
+        <location filename="../defaultlook.ui" line="1352"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;ドックの設定&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1345"/>
+        <location filename="../defaultlook.ui" line="1359"/>
         <source>Width</source>
         <translation>横幅</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1352"/>
+        <location filename="../defaultlook.ui" line="1366"/>
         <source>Toggle icon captions</source>
         <translation>アイコンのキャプションを切り替え</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1359"/>
+        <location filename="../defaultlook.ui" line="1373"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Desktop Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;デスクトップのアイコン&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1366"/>
+        <location filename="../defaultlook.ui" line="1380"/>
         <source>Height</source>
         <translation>高さ</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1373"/>
+        <location filename="../defaultlook.ui" line="1387"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;新しい既定メニュー項目があれば、既存の fluxbox メニューに追加します。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1376"/>
+        <location filename="../defaultlook.ui" line="1390"/>
         <source>Upgrade existing menu entries</source>
         <translation>既存のメニューエントリをアップグレード</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1396"/>
+        <location filename="../defaultlook.ui" line="1410"/>
         <source>Show Toolbar</source>
         <translation>ツールバーを表示</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1424"/>
+        <location filename="../defaultlook.ui" line="1438"/>
         <source>Plasma</source>
         <translation>プラズマ</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1479"/>
+        <location filename="../defaultlook.ui" line="1493"/>
         <source>Systray Icon Size</source>
         <translation>トレイのアイコン・サイズ</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1490"/>
+        <location filename="../defaultlook.ui" line="1504"/>
         <source>Default</source>
         <translation>既定</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1495"/>
+        <location filename="../defaultlook.ui" line="1509"/>
         <source>Small</source>
         <translation>小さい</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1500"/>
+        <location filename="../defaultlook.ui" line="1514"/>
         <source>Medium</source>
         <translation>中くらい</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1505"/>
+        <location filename="../defaultlook.ui" line="1519"/>
         <source>Large</source>
         <translation>大きい</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1510"/>
+        <location filename="../defaultlook.ui" line="1524"/>
         <source>Larger</source>
         <translation>もっと大きく</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1515"/>
+        <location filename="../defaultlook.ui" line="1529"/>
         <source>Largest</source>
         <translation>最大</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1542"/>
+        <location filename="../defaultlook.ui" line="1556"/>
         <source>Workspace</source>
         <translation>ワークスペース</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1549"/>
+        <location filename="../defaultlook.ui" line="1563"/>
         <source>Enable single-click</source>
         <translation>シングルクリックを有効にします</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1570"/>
+        <location filename="../defaultlook.ui" line="1584"/>
         <source>Reset KDE/Plasma defaults</source>
         <translation>KDE/プラズマ の設定を元に戻します</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1610"/>
+        <location filename="../defaultlook.ui" line="1624"/>
         <source>Other</source>
         <translation>その他</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1677"/>
+        <location filename="../defaultlook.ui" line="1691"/>
         <source>Password for administrative tasks:</source>
         <translation>管理業務用のパスワード：</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1625"/>
+        <location filename="../defaultlook.ui" line="1639"/>
         <source>Use tearfree radeon driver option</source>
         <translation>TearFree radeon ドライバのオプションを使用</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1639"/>
+        <location filename="../defaultlook.ui" line="1653"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>注意: 既存の /etc/X11/xorg.conf.d/20-radeon.conf はホームフォルダにバックアップされます</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1684"/>
+        <location filename="../defaultlook.ui" line="1698"/>
         <source>&amp;User</source>
         <translation>ユーザー(&amp;U)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1691"/>
+        <location filename="../defaultlook.ui" line="1705"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>デフォルトの「モード設定用」ドライバの替わりに intel ドライバを使用 (再起動が必要)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1739"/>
+        <location filename="../defaultlook.ui" line="1753"/>
         <source>Enable kernel sandbox</source>
         <translation>カーネルサンドボックスの有効化</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1663"/>
+        <location filename="../defaultlook.ui" line="1677"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>注意: 既存の /etc/X11/xorg.conf.d/20-intel.conf はホームフォルダにバックアップされます</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1705"/>
+        <location filename="../defaultlook.ui" line="1719"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>Lightdm（ログイン画面）をシステムの既定テーマにリセット</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1670"/>
+        <location filename="../defaultlook.ui" line="1684"/>
         <source>Use libinput driver for touchpad instead of synaptics touchpad driver (requires restart)</source>
         <translation>synaptics タッチパッドドライバーの代わりに libinput ドライバーをタッチパッドに使用します (再起動が必要です)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1632"/>
+        <location filename="../defaultlook.ui" line="1646"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>注意: 既存の /etc/X11/xorg.conf.d/20-amd.conf はホームフォルダにバックアップされます。</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1618"/>
+        <location filename="../defaultlook.ui" line="1632"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>非ルートユーザーに内蔵ドライブのマウントを有効化</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1698"/>
+        <location filename="../defaultlook.ui" line="1712"/>
         <source>Use tearfree amdgpu option</source>
         <translation>TearFree amdgpu オプションを使用</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1712"/>
+        <location filename="../defaultlook.ui" line="1726"/>
         <source>Root</source>
         <translation>ルート</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1646"/>
+        <location filename="../defaultlook.ui" line="1660"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
         <translation>GTK3 をサポートするアプリケーションでクライアント側装飾 (CSD) をを使用します (セッションの再起動が必要です)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1410"/>
+        <location filename="../defaultlook.ui" line="1424"/>
         <source>Manage Tint2 Panel</source>
         <translation>Tint2 パネルの管理</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1653"/>
+        <location filename="../defaultlook.ui" line="1667"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;再起動が必要です&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1656"/>
+        <location filename="../defaultlook.ui" line="1670"/>
         <source>Enable Bluetooth Adapters on boot</source>
         <translation>起動時に Bluetooth アダプタを有効にします</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1763"/>
+        <location filename="../defaultlook.ui" line="1777"/>
         <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
         <translation>APT は推奨パッケージを依存関係にあるものとして追加します</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1832"/>
+        <location filename="../defaultlook.ui" line="1846"/>
         <source>About</source>
         <translation>情報</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1843"/>
+        <location filename="../defaultlook.ui" line="1857"/>
         <source>Help</source>
         <translation>ヘルプ</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1860"/>
+        <location filename="../defaultlook.ui" line="1874"/>
         <source>Quit application</source>
         <translation>アプリケーションの終了</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1863"/>
+        <location filename="../defaultlook.ui" line="1877"/>
         <source>Close</source>
         <translation>閉じる</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1870"/>
+        <location filename="../defaultlook.ui" line="1884"/>
         <source>Alt+N</source>
         <translation>Alt+N</translation>
     </message>
@@ -834,12 +844,12 @@
         <translation>現在のパネル設定は、ホームフォルダ (~/) 以下にある .restore という隠しフォルダにバックアップされました</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1555"/>
+        <location filename="../defaultlook.cpp" line="1563"/>
         <source>settings</source>
         <translation>設定</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1895"/>
+        <location filename="../defaultlook.cpp" line="1903"/>
         <source>Choose a theme set</source>
         <translation>テーマセットを選択</translation>
     </message>
