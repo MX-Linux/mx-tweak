@@ -691,8 +691,9 @@ void defaultlook::backupPanel()
 {
     //ensure .restore folder exists
     QString home_path = QDir::homePath();
-    runCmd("mkdir -p " + home_path + "/.restore/");
-
+    if ( ! QDir(home_path + "/.restore/").exists()){
+        runCmd("mkdir -p " + home_path + "/.restore/");
+    }
     //validate file name
     qDebug() << "ui file name " << ui->lineEditBackupName->text();
     //QRegExp rx("(@|\\$|%|\\&|\\*|(|)|{|}|[|]|/|\\|\\?");
