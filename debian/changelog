@@ -1,3 +1,9 @@
+mx-tweak (23.01.02mx21) mx; urgency=medium
+
+  * add fluxbox thunar actions
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 21 Jan 2023 13:44:01 -0500
+
 mx-tweak (23.01.01mx21) mx; urgency=medium
 
   * add thunar split view functions
