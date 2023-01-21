@@ -97,6 +97,13 @@ public:
     bool plasmasystrayiconsizeflag{};
     bool themeflag = false;
     bool validateflag = false;
+    void thunarsplitview(bool state);
+    void thunarsplitviewhorizontal(bool state);
+    void thunarsetupsplitview();
+    void resetthunar();
+    void thunarsingleclicksetup();
+    void thunarsetsingleclick(bool state);
+
 
     QString g1;
     QString g2;
@@ -255,6 +262,18 @@ private slots:
     void on_lineEditBackupName_returnPressed();
 
     void on_checkBoxInstallRecommends_clicked();
+
+    void on_checkBoxThunarSplitView_clicked();
+
+    void on_checkBoxsplitviewhorizontal_clicked();
+
+    void on_checkBoxThunarCAReset_2_clicked();
+
+    void on_checkBoxThunarSplitView_2_clicked();
+
+    void on_checkBoxsplitviewhorizontal_2_clicked();
+
+    void on_checkBoxThunarSingleClick_2_clicked();
 
 private:
     Ui::defaultlook *ui;
