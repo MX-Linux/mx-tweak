@@ -799,6 +799,7 @@ void defaultlook::on_radioBackupPanel_clicked()
         ui->checkVert->setChecked(false);
         ui->radioDefaultPanel->setChecked(false);
         ui->radioRestoreBackup->setChecked(false);
+        ui->lineEditBackupName->setText("panel_backup_" + QDateTime::currentDateTime().toString("dd.MM.yyyy.hh.mm.ss"));
         ui->lineEditBackupName->show();
     }
 }
