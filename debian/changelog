@@ -1,4 +1,4 @@
-mx-tweak (23.01.02mx22) UNRELEASED; urgency=medium
+mx-tweak (23.01.02mx22) mx; urgency=medium
 
   * fix backup function when .restore doesn't exist 
 
