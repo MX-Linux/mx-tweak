@@ -689,6 +689,10 @@ bool defaultlook::checkPlasma() const
 // backs up the current panel configuration
 void defaultlook::backupPanel()
 {
+    //ensure .restore folder exists
+    QString home_path = QDir::homePath();
+    runCmd("mkdir -p " + home_path + "/.restore/");
+
     //validate file name
     qDebug() << "ui file name " << ui->lineEditBackupName->text();
     //QRegExp rx("(@|\\$|%|\\&|\\*|(|)|{|}|[|]|/|\\|\\?");
@@ -700,8 +704,6 @@ void defaultlook::backupPanel()
                                  tr("Plese remove special characters") + "@,$,%,&,*,(,),[,],{,},|,\\,?" + tr("from file name"));
         validateflag = true;
         } else {
-
-        QString home_path = QDir::homePath();
         QString path = home_path + "/.restore/" + ui->lineEditBackupName->text() + ".tar.xz";
         qDebug() << path;
         //check filename existence
@@ -939,10 +941,18 @@ void defaultlook::setuppanel()
         migratepanel(backuppanel.lastModified().toString("dd.MM.yyyy.hh.mm.ss"));
         //message2();
     }
+
     ui->comboBoxAvailableBackups->clear();
     ui->lineEditBackupName->hide();
     ui->lineEditBackupName->setText("panel_backup_" + QDateTime::currentDateTime().toString("dd.MM.yyyy.hh.mm.ss"));
     QStringList availablebackups = QDir(home_path + "/.restore").entryList(QStringList() << "*.tar.xz",QDir::Files);
+
+    // if backup available, make the restore backup option available
+
+    if ( availablebackups.isEmpty()){
+        backupPanel();
+        availablebackups = QDir(home_path + "/.restore").entryList(QStringList() << "*.tar.xz",QDir::Files);
+    }
     availablebackups.replaceInStrings(".tar.xz", "");
     ui->comboBoxAvailableBackups->addItems(availablebackups);
     ui->radioBackupPanel->setToolTip(home_path + "/.restore");
@@ -1001,14 +1011,6 @@ void defaultlook::setuppanel()
         if (test2 == QLatin1String("p=1")) {
             ui->comboboxVertpostition->setCurrentIndex(1);
         }
-    }
-
-    // if backup available, make the restore backup option available
-
-    if ( availablebackups.isEmpty()){
-        backupPanel();
-        ui->radioRestoreBackup->setEnabled(false);
-        ui->comboBoxAvailableBackups->hide();
     }
 
     panelflag = true;
