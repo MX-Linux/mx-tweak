@@ -15,10 +15,11 @@ void displayDoc(const QString &url, const QString &title)
     bool started_as_root = false;
     // prefer mx-viewer otherwise use xdg-open (use runuser to run that as logname user)
     if (QFile::exists(QStringLiteral("/usr/bin/mx-viewer"))) {
-        QProcess::execute(QStringLiteral("mx-viewer"), {url, title});
+        QProcess::startDetached(QStringLiteral("mx-viewer"), {url, title});
     } else {
         if (getuid() != 0) {
-            QProcess::execute(QStringLiteral("xdg-open"), {url});
+            QProcess::startDetached(QStringLiteral("xdg-open"), {url});
+            return;
         } else {
             QProcess proc;
             proc.start(QStringLiteral("logname"), {}, QIODevice::ReadOnly);
