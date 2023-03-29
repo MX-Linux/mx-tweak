@@ -944,10 +944,14 @@ void defaultlook::setuppanel()
     }
 
     //hide tasklist setting if not present
+    bool tasklist = true;
+    bool docklike = true;
+    bool tasklistcombodisplay = true;
 
     if ( system("grep -q tasklist ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml") != 0 ) {
         ui->labelTasklist->hide();
         ui->pushButtontasklist->hide();
+        tasklist = false;
     }
 
     //hide docklike settings if not present
@@ -955,6 +959,23 @@ void defaultlook::setuppanel()
     if ( system("grep -q docklike ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml") != 0 ) {
         ui->labelDocklikeSettings->hide();
         ui->pushButtonDocklikeSetttings->hide();
+        docklike = false;
+    }
+
+    //display tasklist plugin selector if only one tasklist in use
+    if ( tasklist && docklike ){
+        ui->label_tasklist_plugin->hide();
+        ui->comboBoxTasklistPlugin->hide();
+        tasklistcombodisplay =  false;
+    }
+
+    //index 0 is docklike, index 1 is window buttons
+    if ( tasklist && tasklistcombodisplay ){
+        ui->comboBoxTasklistPlugin->setCurrentText("Window Buttons");
+    }
+
+    if ( docklike && tasklistcombodisplay){
+        ui->comboBoxTasklistPlugin->setCurrentText("docklike");
     }
 
     //reset all checkboxes to unchecked
