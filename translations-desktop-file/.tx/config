@@ -1,0 +1,8 @@
+[main]
+host = https://www.transifex.com
+
+[antix-development.mx-tweak-desktop]
+file_filter = po/mx-tweak-desktop_<lang>.po
+source_file = mx-tweak-desktop.pot
+source_lang = en
+type = po
