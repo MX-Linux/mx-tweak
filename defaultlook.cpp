@@ -34,7 +34,6 @@
 #include <QStringList>
 
 #include "about.h"
-#include "brightness_small.h"
 #include "cmd.h"
 #include "defaultlook.h"
 #include "remove_user_theme_set.h"
