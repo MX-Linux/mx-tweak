@@ -3600,12 +3600,13 @@ void defaultlook::on_checkBoxThunarSingleClick_2_clicked()
     ui->ApplyFluxboxResets->setEnabled(true);
 }
 
+//returns first tasklist or docklike id
 QString defaultlook::get_tasklistid(){
-    QString tasklistID = runCmd(QStringLiteral("grep tasklist ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml")).output;
+    QString tasklistID = runCmd(QStringLiteral("grep -m 1 tasklist ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml")).output;
     tasklistID=tasklistID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
     if (verbose) qDebug() << "tasklist: " << tasklistID;
     if (tasklistID == QLatin1String("")) {
-        QString docklikeID = runCmd(QStringLiteral("grep docklike ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml")).output;
+        QString docklikeID = runCmd(QStringLiteral("grep -m 1 docklike ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml")).output;
         docklikeID=docklikeID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
         if (verbose) qDebug() << "docklikeID: " << docklikeID;
         if (docklikeID != QLatin1String("")) {
