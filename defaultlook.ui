@@ -161,34 +161,28 @@
       <layout class="QGridLayout" name="gridLayout_3">
        <item row="0" column="0">
         <layout class="QGridLayout" name="gridLayout">
-         <item row="10" column="0">
-          <widget class="QPushButton" name="pushButtonDocklikeSetttings">
-           <property name="text">
-            <string>Options</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="0">
-          <widget class="QRadioButton" name="checkVert">
-           <property name="text">
-            <string>Display panel vertically</string>
-           </property>
-           <property name="autoExclusive">
-            <bool>false</bool>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="0" colspan="2">
-          <widget class="QRadioButton" name="radioBackupPanel">
-           <property name="text">
-            <string>Backup current panel configuration</string>
-           </property>
-           <property name="autoExclusive">
-            <bool>false</bool>
+         <item row="6" column="2">
+          <widget class="QComboBox" name="comboBoxAvailableBackups">
+           <property name="toolTip">
+            <string notr="true"/>
            </property>
           </widget>
          </item>
          <item row="11" column="0">
+          <widget class="QLabel" name="labelDocklikeSettings">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="0">
+          <widget class="QLabel" name="label_tasklist_plugin">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Tasklist plugin to use&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="13" column="0">
           <spacer name="verticalSpacer_9">
            <property name="orientation">
             <enum>Qt::Vertical</enum>
@@ -201,10 +195,58 @@
            </property>
           </spacer>
          </item>
-         <item row="7" column="0">
-          <widget class="QLabel" name="labelTasklist">
+         <item row="5" column="0" colspan="2">
+          <widget class="QRadioButton" name="radioBackupPanel">
            <property name="text">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Buttons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            <string>Backup current panel configuration</string>
+           </property>
+           <property name="autoExclusive">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QRadioButton" name="checkHorz">
+           <property name="text">
+            <string>Display panel horizontally</string>
+           </property>
+           <property name="autoExclusive">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>26</width>
+             <height>23</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_2">
+           <property name="font">
+            <font>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Affects 1st panel</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0" colspan="2">
+          <widget class="QRadioButton" name="radioRestoreBackup">
+           <property name="text">
+            <string>Restore backup panel configuration</string>
+           </property>
+           <property name="autoExclusive">
+            <bool>false</bool>
            </property>
           </widget>
          </item>
@@ -218,23 +260,53 @@
            </property>
           </widget>
          </item>
-         <item row="0" column="0">
-          <widget class="QLabel" name="label_2">
-           <property name="font">
-            <font>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
+         <item row="9" column="0">
+          <widget class="QLabel" name="labelTasklist">
            <property name="text">
-            <string>Affects 1st panel</string>
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Buttons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
           </widget>
          </item>
-         <item row="9" column="0">
-          <widget class="QLabel" name="labelDocklikeSettings">
+         <item row="2" column="1">
+          <widget class="QComboBox" name="comboboxVertpostition">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <item>
+            <property name="text">
+             <string>Left</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Right</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_3">
            <property name="text">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Affects all panels&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QRadioButton" name="checkVert">
+           <property name="text">
+            <string>Display panel vertically</string>
+           </property>
+           <property name="autoExclusive">
+            <bool>false</bool>
            </property>
           </widget>
          </item>
@@ -264,87 +336,28 @@
            </item>
           </widget>
          </item>
-         <item row="2" column="1">
-          <widget class="QComboBox" name="comboboxVertpostition">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>0</height>
-            </size>
-           </property>
-           <item>
-            <property name="text">
-             <string>Left</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Right</string>
-            </property>
-           </item>
-          </widget>
-         </item>
-         <item row="6" column="0" colspan="2">
-          <widget class="QRadioButton" name="radioRestoreBackup">
-           <property name="text">
-            <string>Restore backup panel configuration</string>
-           </property>
-           <property name="autoExclusive">
-            <bool>false</bool>
+         <item row="5" column="2">
+          <widget class="QLineEdit" name="lineEditBackupName">
+           <property name="toolTip">
+            <string notr="true"/>
            </property>
           </widget>
          </item>
-         <item row="8" column="0">
+         <item row="10" column="0">
           <widget class="QPushButton" name="pushButtontasklist">
            <property name="text">
             <string>Options</string>
            </property>
           </widget>
          </item>
-         <item row="1" column="0">
-          <widget class="QRadioButton" name="checkHorz">
+         <item row="12" column="0">
+          <widget class="QPushButton" name="pushButtonDocklikeSetttings">
            <property name="text">
-            <string>Display panel horizontally</string>
-           </property>
-           <property name="autoExclusive">
-            <bool>false</bool>
+            <string>Options</string>
            </property>
           </widget>
          </item>
-         <item row="3" column="0">
-          <widget class="QLabel" name="label_3">
-           <property name="text">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Affects all panels&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="3">
-          <spacer name="horizontalSpacer">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>26</width>
-             <height>23</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item row="6" column="2">
-          <widget class="QComboBox" name="comboBoxAvailableBackups">
-           <property name="toolTip">
-            <string notr="true"/>
-           </property>
-          </widget>
-         </item>
-         <item row="12" column="0" colspan="4">
+         <item row="14" column="0" colspan="4">
           <widget class="QPushButton" name="buttonApply">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
@@ -370,11 +383,21 @@
            </property>
           </widget>
          </item>
-         <item row="5" column="2">
-          <widget class="QLineEdit" name="lineEditBackupName">
+         <item row="8" column="0">
+          <widget class="QComboBox" name="comboBoxTasklistPlugin">
            <property name="toolTip">
-            <string notr="true"/>
+            <string>docklike is the modern dock plugin for the panel.  Window Buttons is the classic tasklist without dock features.</string>
            </property>
+           <item>
+            <property name="text">
+             <string notr="true">docklike</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string notr="true">Window Buttons</string>
+            </property>
+           </item>
           </widget>
          </item>
         </layout>
@@ -509,7 +532,6 @@
           <widget class="QLabel" name="label">
            <property name="font">
             <font>
-             <weight>75</weight>
              <bold>true</bold>
             </font>
            </property>
@@ -1501,7 +1523,6 @@
           <widget class="QLabel" name="label_22">
            <property name="font">
             <font>
-             <weight>75</weight>
              <bold>true</bold>
             </font>
            </property>
@@ -1605,7 +1626,6 @@
           <widget class="QLabel" name="label_23">
            <property name="font">
             <font>
-             <weight>75</weight>
              <bold>true</bold>
             </font>
            </property>
@@ -1954,7 +1974,6 @@
     <widget class="QLabel" name="label_7">
      <property name="font">
       <font>
-       <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
