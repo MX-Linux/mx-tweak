@@ -213,9 +213,7 @@ void defaultlook::fliptohorizontal()
     systrayID=systrayID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
     if (verbose) qDebug() << "systray: " << systrayID;
 
-    QString tasklistID = runCmd(QStringLiteral("grep tasklist ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml")).output;
-    tasklistID=tasklistID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
-    if (verbose) qDebug() << "tasklist: " << tasklistID;
+    QString tasklistID = get_tasklistid();
 
     QString pulseaudioID = runCmd(QStringLiteral("grep pulseaudio ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml")).output;
     pulseaudioID=pulseaudioID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
@@ -229,17 +227,7 @@ void defaultlook::fliptohorizontal()
     workspacesID = workspacesID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
     if (verbose) qDebug() << "workspacesID: " << workspacesID;
 
-    if (tasklistID == QLatin1String("")) {
-        QString docklikeID = runCmd(QStringLiteral("grep docklike ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml")).output;
-        docklikeID=docklikeID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
-        if (verbose) qDebug() << "docklikeID: " << docklikeID;
-        if (docklikeID != QLatin1String("")) {
-            tasklistID = docklikeID;
-            if (verbose) qDebug() << "new tasklist: " << tasklistID;
-        }
-    }
-
-    // if systray exists, do a bunch of stuff to relocate it a list of plugins.  If not present, do nothing to list
+   // if systray exists, do a bunch of stuff to relocate it a list of plugins.  If not present, do nothing to list
 
     if (systrayID !=QLatin1String("")) {
 
@@ -388,9 +376,7 @@ void defaultlook::fliptovertical()
     systrayID=systrayID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
     if (verbose) qDebug() << "systray: " << systrayID;
 
-    QString tasklistID = runCmd(QStringLiteral("grep tasklist ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml")).output;
-    tasklistID=tasklistID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
-    if (verbose) qDebug() << "tasklist: " << tasklistID;
+    QString tasklistID = get_tasklistid();
 
     QString pulseaudioID = runCmd(QStringLiteral("grep pulseaudio ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml")).output;
     pulseaudioID=pulseaudioID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
@@ -403,16 +389,6 @@ void defaultlook::fliptovertical()
     QString workspacesID = runCmd(QStringLiteral("grep pager ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml")).output;
     workspacesID=workspacesID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
     if (verbose) qDebug() << "workspacesID: " << workspacesID;
-
-    if (tasklistID == QLatin1String("")) {
-        QString docklikeID = runCmd(QStringLiteral("grep docklike ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml")).output;
-        docklikeID=docklikeID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
-        if (verbose) qDebug() << "docklikeID: " << docklikeID;
-        if (docklikeID != QLatin1String("")) {
-            tasklistID = docklikeID;
-            if (verbose) qDebug() << "new tasklist: " << tasklistID;
-        }
-    }
 
     //if systray exists, do a bunch of stuff to try to move it in a logical way
 
@@ -3622,4 +3598,21 @@ void defaultlook::on_checkBoxsplitviewhorizontal_2_clicked()
 void defaultlook::on_checkBoxThunarSingleClick_2_clicked()
 {
     ui->ApplyFluxboxResets->setEnabled(true);
+}
+
+QString defaultlook::get_tasklistid(){
+    QString tasklistID = runCmd(QStringLiteral("grep tasklist ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml")).output;
+    tasklistID=tasklistID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
+    if (verbose) qDebug() << "tasklist: " << tasklistID;
+    if (tasklistID == QLatin1String("")) {
+        QString docklikeID = runCmd(QStringLiteral("grep docklike ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml")).output;
+        docklikeID=docklikeID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
+        if (verbose) qDebug() << "docklikeID: " << docklikeID;
+        if (docklikeID != QLatin1String("")) {
+            tasklistID = docklikeID;
+            if (verbose) qDebug() << "new tasklist: " << tasklistID;
+        }
+    }
+    return tasklistID;
+
 }
