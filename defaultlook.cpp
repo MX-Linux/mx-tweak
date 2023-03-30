@@ -988,6 +988,13 @@ void defaultlook::setuppanel()
         docklike = false;
     }
 
+    //check status of docklike external package, hide chooser if not installed
+
+    QString check = runCmd("LANG=c dpkg-query -s xfce4-docklike-plugin |grep Status").output;
+    if ( ! check.contains("installed")){
+        docklike = true;
+    }
+
     //display tasklist plugin selector if only one tasklist in use
     if ( tasklist && docklike ){
         ui->label_tasklist_plugin->hide();
