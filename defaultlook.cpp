@@ -567,7 +567,14 @@ void defaultlook::on_buttonApply_clicked()
     if (ui->radioBackupPanel->isChecked()) {
         backupPanel();
     }
-    //read in plugin ID's
+
+    // tasklist switch
+    qDebug() << "tasklist flag is " << tasklistflag;
+    if (ui->radioButtonTasklist->isChecked()){
+        if ( tasklistflag ) tasklistchange();
+    }
+
+    //flip panels
     if (ui->checkHorz->isChecked()) {
         QString test = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/mode").output;
 
@@ -729,6 +736,7 @@ void defaultlook::on_checkHorz_clicked()
         ui->radioBackupPanel->setChecked(false);
         ui->radioDefaultPanel->setChecked(false);
         ui->radioRestoreBackup->setChecked(false);
+        ui->radioButtonTasklist->setChecked(false);
     }
 }
 
@@ -740,6 +748,7 @@ void defaultlook::on_checkVert_clicked()
         ui->radioBackupPanel->setChecked(false);
         ui->radioDefaultPanel->setChecked(false);
         ui->radioRestoreBackup->setChecked(false);
+        ui->radioButtonTasklist->setChecked(false);
     }
 }
 
@@ -763,6 +772,7 @@ void defaultlook::on_radioDefaultPanel_clicked()
         ui->checkVert->setChecked(false);
         ui->radioRestoreBackup->setChecked(false);
         ui->lineEditBackupName->hide();
+        ui->radioButtonTasklist->setChecked(false);
     }
 }
 
@@ -776,6 +786,7 @@ void defaultlook::on_radioBackupPanel_clicked()
         ui->radioRestoreBackup->setChecked(false);
         ui->lineEditBackupName->setText("panel_backup_" + QDateTime::currentDateTime().toString("dd.MM.yyyy.hh.mm.ss"));
         ui->lineEditBackupName->show();
+        ui->radioButtonTasklist->setChecked(false);
     }
 }
 
@@ -788,8 +799,23 @@ void defaultlook::on_radioRestoreBackup_clicked()
         ui->radioDefaultPanel->setChecked(false);
         ui->checkVert->setChecked(false);
         ui->lineEditBackupName->hide();
+        ui->radioButtonTasklist->setChecked(false);
     }
 }
+
+void defaultlook::on_radioButtonTasklist_clicked()
+{
+    ui->buttonApply->setEnabled(true);
+    if (ui->radioButtonTasklist->isChecked()) {
+        ui->checkHorz->setChecked(false);
+        ui->radioBackupPanel->setChecked(false);
+        ui->radioDefaultPanel->setChecked(false);
+        ui->checkVert->setChecked(false);
+        ui->lineEditBackupName->hide();
+        ui->radioRestoreBackup->setChecked(false);
+    }
+
+ }
 
 void defaultlook::top_or_bottom()
 {
@@ -948,7 +974,7 @@ void defaultlook::setuppanel()
     bool docklike = true;
     bool tasklistcombodisplay = true;
 
-    if ( system("grep -q tasklist ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml") != 0 ) {
+    if ( system("xfconf-query -c xfce4-panel -p /plugins -lv |grep tasklist") != 0 ) {
         ui->labelTasklist->hide();
         ui->pushButtontasklist->hide();
         tasklist = false;
@@ -956,7 +982,7 @@ void defaultlook::setuppanel()
 
     //hide docklike settings if not present
 
-    if ( system("grep -q docklike ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml") != 0 ) {
+    if ( system("xfconf-query -c xfce4-panel -p /plugins -lv |grep docklike") != 0 ) {
         ui->labelDocklikeSettings->hide();
         ui->pushButtonDocklikeSetttings->hide();
         docklike = false;
@@ -971,12 +997,14 @@ void defaultlook::setuppanel()
 
     //index 0 is docklike, index 1 is window buttons
     if ( tasklist && tasklistcombodisplay ){
-        ui->comboBoxTasklistPlugin->setCurrentText("Window Buttons");
+        ui->comboBoxTasklistPlugin->setCurrentIndex(1);
     }
 
     if ( docklike && tasklistcombodisplay){
-        ui->comboBoxTasklistPlugin->setCurrentText("docklike");
+        ui->comboBoxTasklistPlugin->setCurrentIndex(0);
     }
+
+    tasklistflag = false;
 
     //reset all checkboxes to unchecked
 
@@ -985,6 +1013,7 @@ void defaultlook::setuppanel()
     ui->radioBackupPanel->setChecked(false);
     ui->radioDefaultPanel->setChecked(false);
     ui->radioRestoreBackup->setChecked(false);
+    ui->radioButtonTasklist->setChecked(false);
 
     //only enable options that make sense
 
@@ -3636,5 +3665,58 @@ QString defaultlook::get_tasklistid(){
         }
     }
     return tasklistID;
+
+}
+
+
+
+
+void defaultlook::on_comboBoxTasklistPlugin_currentIndexChanged(int index)
+{
+    //toggle tasklistflag
+    //changing tasklistflag only happens if block is actually changed
+
+    if ( tasklistflag ){
+        tasklistflag = false;
+    } else {
+        tasklistflag = true;
+    }
+    qDebug() << "tasklist flag is " << tasklistflag;
+}
+
+void defaultlook::tasklistchange(){
+    //choice of tasklist
+    QString tasklistchoice;
+
+    if ( ui->comboBoxTasklistPlugin->currentIndex() == 0){
+        tasklistchoice = "docklike";
+    } else if ( ui->comboBoxTasklistPlugin->currentIndex() == 1){
+        tasklistchoice = "tasklist";
+    }
+    qDebug() << "tasklistchoice is" << tasklistchoice;
+
+
+    QString tasklistid = get_tasklistid();
+    qDebug() << "tasklistid is " << tasklistid;
+
+    if (tasklistchoice == "docklike"){
+        runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + tasklistid + "/show-handle --reset");
+        runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + tasklistid + "/show-labels --reset");
+    } else if (tasklistchoice == "tasklist"){
+        runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + tasklistid + "/show-handle -t bool -s false --create");
+         QString test = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/mode").output;
+        if (test == QLatin1String("") || test == QLatin1String("0")) { //horizontal panel
+            runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + tasklistid + "/show-labels -t bool -s true --create");
+        } else { runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + tasklistid + "/show-labels -t bool -s false --create");  //vertical panel
+        }
+    }
+
+    //switch plugin
+    runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + tasklistid + " -s " + tasklistchoice + " --create");
+
+
+    //reset panel
+    runCmd("xfce4-panel --restart");
+    runCmd(QStringLiteral("sleep .5"));
 
 }
