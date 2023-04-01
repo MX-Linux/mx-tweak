@@ -222,6 +222,7 @@
           <widget class="QLabel" name="label_2">
            <property name="font">
             <font>
+             <weight>75</weight>
              <bold>true</bold>
             </font>
            </property>
@@ -386,14 +387,14 @@
          <item row="8" column="0">
           <widget class="QRadioButton" name="radioButtonTasklist">
            <property name="text">
-            <string>Set  Tasklist plugin to:</string>
+            <string>Set Tasklist plugin to:</string>
            </property>
           </widget>
          </item>
          <item row="8" column="2">
           <widget class="QComboBox" name="comboBoxTasklistPlugin">
            <property name="toolTip">
-            <string>docklike is the modern dock plugin for the panel.  Window Buttons is the classic tasklist without dock features.</string>
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Docklike is the modern dock plugin for the panel.  Window Buttons is the classic tasklist without dock features.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
            <item>
             <property name="text">
@@ -539,6 +540,7 @@
           <widget class="QLabel" name="label">
            <property name="font">
             <font>
+             <weight>75</weight>
              <bold>true</bold>
             </font>
            </property>
@@ -1530,6 +1532,7 @@
           <widget class="QLabel" name="label_22">
            <property name="font">
             <font>
+             <weight>75</weight>
              <bold>true</bold>
             </font>
            </property>
@@ -1633,6 +1636,7 @@
           <widget class="QLabel" name="label_23">
            <property name="font">
             <font>
+             <weight>75</weight>
              <bold>true</bold>
             </font>
            </property>
@@ -1981,6 +1985,7 @@
     <widget class="QLabel" name="label_7">
      <property name="font">
       <font>
+       <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
