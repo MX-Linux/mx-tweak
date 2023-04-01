@@ -1,0 +1,9 @@
+[main]
+host = https://www.transifex.com
+
+[o:anticapitalista:p:antix-development:r:mx-tweak]
+file_filter = ./mx-tweak_<lang>.ts
+source_file = mx-tweak_en.ts
+source_lang = en
+type        = ts
+

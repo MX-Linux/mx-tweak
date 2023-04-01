@@ -122,7 +122,7 @@
         <translation>Ulkoasu</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1988"/>
+        <location filename="../defaultlook.ui" line="1993"/>
         <source>Xfce Settings</source>
         <translation>Xfce:n asetukset</translation>
     </message>
@@ -132,63 +132,63 @@
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Vaikuttaa kaikkiin paneeleihin&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="229"/>
-        <location filename="../defaultlook.ui" line="1537"/>
+        <location filename="../defaultlook.ui" line="230"/>
+        <location filename="../defaultlook.ui" line="1540"/>
         <source>Affects 1st panel</source>
         <translation>Vaikuttaa ensimmäiseen paneeliin</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="276"/>
-        <location filename="../defaultlook.ui" line="1560"/>
+        <location filename="../defaultlook.ui" line="277"/>
+        <location filename="../defaultlook.ui" line="1563"/>
         <source>Left</source>
         <translation>Vasen reuna</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="281"/>
-        <location filename="../defaultlook.ui" line="1570"/>
+        <location filename="../defaultlook.ui" line="282"/>
+        <location filename="../defaultlook.ui" line="1573"/>
         <source>Right</source>
         <translation>Oikea reuna</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="236"/>
+        <location filename="../defaultlook.ui" line="237"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Buttons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ikkunapainikkeet&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="352"/>
-        <location filename="../defaultlook.ui" line="1555"/>
+        <location filename="../defaultlook.ui" line="353"/>
+        <location filename="../defaultlook.ui" line="1558"/>
         <source>Bottom</source>
         <translation>Alareuna</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="357"/>
-        <location filename="../defaultlook.ui" line="1565"/>
+        <location filename="../defaultlook.ui" line="358"/>
+        <location filename="../defaultlook.ui" line="1568"/>
         <source>Top</source>
         <translation>Yläreuna</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="372"/>
+        <location filename="../defaultlook.ui" line="373"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="210"/>
-        <location filename="../defaultlook.ui" line="365"/>
+        <location filename="../defaultlook.ui" line="366"/>
         <source>Options</source>
         <translation>Asetukset</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="379"/>
+        <location filename="../defaultlook.ui" line="380"/>
         <source>Display panel horizontally</source>
         <translation>Näytä paneeli vaakatasossa</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="289"/>
+        <location filename="../defaultlook.ui" line="290"/>
         <source>Display panel vertically</source>
         <translation>Näytä paneeli pystytasossa</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="243"/>
+        <location filename="../defaultlook.ui" line="244"/>
         <source>Restore default panel</source>
         <translation>Palauta oletuspaneeli</translation>
     </message>
@@ -198,599 +198,599 @@
         <translation>Varmuuskopioi nykyinen paneelin konfiguraatio</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="253"/>
+        <location filename="../defaultlook.ui" line="254"/>
         <source>Restore backup panel configuration</source>
         <translation>Palauta paneelin konfiguraatio varmuuskopiosta</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="183"/>
-        <location filename="../defaultlook.ui" line="438"/>
-        <location filename="../defaultlook.ui" line="593"/>
-        <location filename="../defaultlook.ui" line="918"/>
-        <location filename="../defaultlook.ui" line="925"/>
-        <location filename="../defaultlook.ui" line="932"/>
-        <location filename="../defaultlook.ui" line="1048"/>
-        <location filename="../defaultlook.ui" line="1282"/>
-        <location filename="../defaultlook.ui" line="1694"/>
-        <location filename="../defaultlook.ui" line="1850"/>
+        <location filename="../defaultlook.ui" line="439"/>
+        <location filename="../defaultlook.ui" line="595"/>
+        <location filename="../defaultlook.ui" line="920"/>
+        <location filename="../defaultlook.ui" line="927"/>
+        <location filename="../defaultlook.ui" line="934"/>
+        <location filename="../defaultlook.ui" line="1050"/>
+        <location filename="../defaultlook.ui" line="1284"/>
+        <location filename="../defaultlook.ui" line="1698"/>
+        <location filename="../defaultlook.ui" line="1854"/>
         <source>Apply</source>
         <translation>Hyväksy</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="306"/>
+        <location filename="../defaultlook.ui" line="307"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Tasklist&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="389"/>
-        <source>Set  Tasklist plugin to:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="396"/>
-        <source>docklike is the modern dock plugin for the panel.  Window Buttons is the classic tasklist without dock features.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="417"/>
+        <location filename="../defaultlook.ui" line="418"/>
         <source>Theme</source>
         <translation>Ulkoasu</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="425"/>
+        <location filename="../defaultlook.ui" line="426"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="461"/>
+        <location filename="../defaultlook.ui" line="462"/>
         <source>Fix HexChat input box in dark theme</source>
         <translation>Korjaa HexChat:in tekstinsyöttölaatikko tumman teeman mukaiseksi</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="468"/>
+        <location filename="../defaultlook.ui" line="469"/>
         <source>Preview</source>
         <translation>Esikatselu</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="475"/>
+        <location filename="../defaultlook.ui" line="476"/>
         <source>Fix some website fields when using dark theme</source>
         <translation>Muunna verkkosivujen lomakkeet käytettässä tummaa ulkoasua</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="478"/>
+        <location filename="../defaultlook.ui" line="479"/>
         <source>Firefox dark theme tweak</source>
         <translation>Firefox:in tumman teeman viritys</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="485"/>
+        <location filename="../defaultlook.ui" line="486"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Manager&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="492"/>
+        <location filename="../defaultlook.ui" line="493"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Themes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Teemat&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="499"/>
+        <location filename="../defaultlook.ui" line="500"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Sovellus&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="519"/>
+        <location filename="../defaultlook.ui" line="520"/>
         <source>Save Current Settings as a Theme Set</source>
         <translation>Tallenna nykyiset asetukset teemana</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="530"/>
+        <location filename="../defaultlook.ui" line="531"/>
         <source>Remove User Theme Set</source>
         <translation>Poista käyttäjäteema valikoima</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="546"/>
+        <location filename="../defaultlook.ui" line="548"/>
         <source>Theme Options</source>
         <translation>Ulkoasun asetukset</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="569"/>
+        <location filename="../defaultlook.ui" line="571"/>
         <source>Undo</source>
         <translation>Peru</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="579"/>
-        <location filename="../defaultlook.ui" line="620"/>
+        <location filename="../defaultlook.ui" line="581"/>
+        <location filename="../defaultlook.ui" line="622"/>
         <source>Compositor</source>
         <translation>Komposoija</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="613"/>
+        <location filename="../defaultlook.ui" line="615"/>
         <source>Transparency and shadow options</source>
         <translation>Läpinäkyvyyden ja varjostuksen asetukset</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="627"/>
+        <location filename="../defaultlook.ui" line="629"/>
         <source>Edit compton.conf directly in text editor</source>
         <translation>Muokkaa compton.conf -tiedostoa suoraan tekstieditorissa</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="630"/>
+        <location filename="../defaultlook.ui" line="632"/>
         <source>Edit compton.conf</source>
         <translation>Muokkaa compton.conf</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="680"/>
+        <location filename="../defaultlook.ui" line="682"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Changing the VBlank mode may help alleviate some screen tearing issues.  See Help for more information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;VBlank-tilan vaihtaminen voi auttaa lieventämään joitakin ruuturepeytymän ongelmia. Katso Apua-alueelta lisätietoja.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="683"/>
+        <location filename="../defaultlook.ui" line="685"/>
         <source>VBlank</source>
         <translation>VBlank</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="691"/>
+        <location filename="../defaultlook.ui" line="693"/>
         <source>auto</source>
         <translation>automaattinen</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="696"/>
+        <location filename="../defaultlook.ui" line="698"/>
         <source>glx</source>
         <translation>glx</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="701"/>
+        <location filename="../defaultlook.ui" line="703"/>
         <source>xpresent</source>
         <translation>xpresent</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="706"/>
+        <location filename="../defaultlook.ui" line="708"/>
         <source>off</source>
         <translation>pois</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="727"/>
+        <location filename="../defaultlook.ui" line="729"/>
         <source>None</source>
         <translation>Ei mitään</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="732"/>
+        <location filename="../defaultlook.ui" line="734"/>
         <source>Xfwm (Xfce) Compositor</source>
         <translation>Xfwm (Xfce) komposoija</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="737"/>
+        <location filename="../defaultlook.ui" line="739"/>
         <source>Compton </source>
         <translation>Compton</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="745"/>
+        <location filename="../defaultlook.ui" line="747"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce Compositor Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce-komposoijan asetukset&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="748"/>
+        <location filename="../defaultlook.ui" line="750"/>
         <source>Xfwm Settings</source>
         <translation>Xfwm:n asetukset</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="759"/>
+        <location filename="../defaultlook.ui" line="761"/>
         <source>Launch compton-conf configuration tool</source>
         <translation>Käynnistä compton-conf konfigurointityökalut</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="762"/>
+        <location filename="../defaultlook.ui" line="764"/>
         <source>Compton settings</source>
         <translation>Comptonin asetukset</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="776"/>
+        <location filename="../defaultlook.ui" line="778"/>
         <source>Display</source>
         <translation>Näyttö</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="784"/>
+        <location filename="../defaultlook.ui" line="786"/>
         <source>Hardware Backlight</source>
         <translation>Laitteiston taustavalo</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="791"/>
+        <location filename="../defaultlook.ui" line="793"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Display Tweaks&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Näytön viritykset&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="818"/>
+        <location filename="../defaultlook.ui" line="820"/>
         <source>Choose Display for xrandr tweaks</source>
         <translation>Valitse näyttö xrandr-virityksille</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="828"/>
+        <location filename="../defaultlook.ui" line="830"/>
         <source>Resolution</source>
         <translation>Resoluutio-erottelykyky</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="835"/>
+        <location filename="../defaultlook.ui" line="837"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Saving is per display&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tallentuu näyttökohtaisesti&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="838"/>
+        <location filename="../defaultlook.ui" line="840"/>
         <source>Save</source>
         <translation>Tallenna</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="845"/>
+        <location filename="../defaultlook.ui" line="847"/>
         <source>Software (xrandr) Brightness</source>
         <translation>Ohjelmiston (xrandr) kirkkaus</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="852"/>
-        <location filename="../defaultlook.ui" line="949"/>
+        <location filename="../defaultlook.ui" line="854"/>
+        <location filename="../defaultlook.ui" line="951"/>
         <source>TextLabel</source>
         <translation>TextLabel</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="859"/>
+        <location filename="../defaultlook.ui" line="861"/>
         <source>GTK scaling</source>
         <translation>GTK-skaalaus</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="879"/>
+        <location filename="../defaultlook.ui" line="881"/>
         <source>xrandr Scaling</source>
         <translation>xrandr-skaalaus</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="975"/>
+        <location filename="../defaultlook.ui" line="977"/>
         <source>Config Options</source>
         <translation>Asetusten vaihtoehdot</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1079"/>
-        <location filename="../defaultlook.ui" line="1400"/>
+        <location filename="../defaultlook.ui" line="1081"/>
+        <location filename="../defaultlook.ui" line="1402"/>
         <source>Reset Thunar custom right-click actions to system defaults</source>
         <translation>Nollaa Thunar-tiedostonhallinnassa hiiren oikeanpuoleisen napsautuksen toiminnot järjestelmävakioiksi</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1028"/>
+        <location filename="../defaultlook.ui" line="1030"/>
         <source>Enable single-click on desktop</source>
         <translation>Avaa työpöydän kohteet yhdellä napsautuksella</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="983"/>
-        <location filename="../defaultlook.ui" line="1248"/>
+        <location filename="../defaultlook.ui" line="985"/>
+        <location filename="../defaultlook.ui" line="1250"/>
         <source>Enable single-click in Thunar File Manager</source>
         <translation>Avaa Thunar-tiedostonhallinnan kohteet yhdellä napsautuksella</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1086"/>
+        <location filename="../defaultlook.ui" line="1088"/>
         <source>Enable Desktop Zoom </source>
         <translation>Ota käyttöön työpöydän suurennus</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1007"/>
-        <location filename="../defaultlook.ui" line="1654"/>
+        <location filename="../defaultlook.ui" line="1009"/>
+        <location filename="../defaultlook.ui" line="1658"/>
         <source>Show windows from all workspaces in panel</source>
         <translation>Näytä ikkunat kaikista työtiloista paneelissa </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1035"/>
+        <location filename="../defaultlook.ui" line="1037"/>
         <source>Disable shortening of long filenames on the desktop</source>
         <translation>Ota pois käytöstä työpöydän pitkien tiedostonnimien lyhentäminen</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1021"/>
+        <location filename="../defaultlook.ui" line="1023"/>
         <source>Enable hibernate on Log Out menu </source>
         <translation>Aseta horrostila valittavaksi uloskirjautumisvalikkoon</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1000"/>
+        <location filename="../defaultlook.ui" line="1002"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
         <translation>                   huomautus: horrostilaan siirtyminen vaatii swap-heittovaihtotiedoston koon olla &gt;= keskusmuisti</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1059"/>
+        <location filename="../defaultlook.ui" line="1061"/>
         <source>Show GTK File Dialog action buttons at bottom of dialogs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="990"/>
+        <location filename="../defaultlook.ui" line="992"/>
         <source>( also turns off Client Side Decorations for Xfce applications)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1014"/>
-        <location filename="../defaultlook.ui" line="1446"/>
+        <location filename="../defaultlook.ui" line="1016"/>
+        <location filename="../defaultlook.ui" line="1448"/>
         <source>Thunar windows always open in split view</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1093"/>
-        <location filename="../defaultlook.ui" line="1356"/>
+        <location filename="../defaultlook.ui" line="1095"/>
+        <location filename="../defaultlook.ui" line="1358"/>
         <source>Thunar split view opens horizontal</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1103"/>
+        <location filename="../defaultlook.ui" line="1105"/>
         <source>Fluxbox</source>
         <translation>Fluxbox</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1473"/>
+        <location filename="../defaultlook.ui" line="1475"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Työkalurivin asetukset&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1126"/>
-        <location filename="../defaultlook.ui" line="1421"/>
+        <location filename="../defaultlook.ui" line="1128"/>
+        <location filename="../defaultlook.ui" line="1423"/>
         <source>On</source>
         <translation>Päällä</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1131"/>
-        <location filename="../defaultlook.ui" line="1426"/>
+        <location filename="../defaultlook.ui" line="1133"/>
+        <location filename="../defaultlook.ui" line="1428"/>
         <source>Off</source>
         <translation>Pois päältä</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1431"/>
+        <location filename="../defaultlook.ui" line="1433"/>
         <source>On Hover</source>
         <translation>Hiiren leijuessa päälle</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1234"/>
-        <location filename="../defaultlook.ui" line="1487"/>
+        <location filename="../defaultlook.ui" line="1236"/>
+        <location filename="../defaultlook.ui" line="1489"/>
         <source>Autohide</source>
         <translation>Piilota pois näkyvistä itsestään</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1241"/>
+        <location filename="../defaultlook.ui" line="1243"/>
         <source>Reset ALL mx-fluxbox settings</source>
         <translation>Nollaa KAIKKI mx-fluxbox asetukset</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1262"/>
-        <location filename="../defaultlook.ui" line="1514"/>
-        <location filename="../defaultlook.ui" line="1544"/>
+        <location filename="../defaultlook.ui" line="1264"/>
+        <location filename="../defaultlook.ui" line="1516"/>
+        <location filename="../defaultlook.ui" line="1547"/>
         <source>Placement</source>
         <translation>Sijoitus</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1111"/>
+        <location filename="../defaultlook.ui" line="1113"/>
         <source>Reset DefaultDock</source>
         <translation>Nollaa DefaultDock</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1439"/>
+        <location filename="../defaultlook.ui" line="1441"/>
         <source>Toggle desktop icons</source>
         <translation>Kytke päälle työpöydän kuvakkeet</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1255"/>
+        <location filename="../defaultlook.ui" line="1257"/>
         <source>Reset Fluxbox Menu</source>
         <translation>Nollaa Fluxbox-valikko</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1453"/>
-        <location filename="../defaultlook.ui" line="1661"/>
+        <location filename="../defaultlook.ui" line="1455"/>
+        <location filename="../defaultlook.ui" line="1665"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Nollaa oletukset&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1118"/>
+        <location filename="../defaultlook.ui" line="1120"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Telakka-asetukset&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1480"/>
+        <location filename="../defaultlook.ui" line="1482"/>
         <source>Width</source>
         <translation>Leveys</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1380"/>
+        <location filename="../defaultlook.ui" line="1382"/>
         <source>Toggle icon captions</source>
         <translation>Aseta kuvakkeiden kuvatekstit</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1363"/>
+        <location filename="../defaultlook.ui" line="1365"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Desktop Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Työpöytäkuvakkeet&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1160"/>
+        <location filename="../defaultlook.ui" line="1162"/>
         <source>Height</source>
         <translation>Korkeus</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1269"/>
+        <location filename="../defaultlook.ui" line="390"/>
+        <source>Set Tasklist plugin to:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="397"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Docklike is the modern dock plugin for the panel.  Window Buttons is the classic tasklist without dock features.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1271"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Thunar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1407"/>
+        <location filename="../defaultlook.ui" line="1409"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1410"/>
+        <location filename="../defaultlook.ui" line="1412"/>
         <source>Upgrade existing menu entries</source>
         <translation>Päivitä nykyiset valikon merkinnät</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1494"/>
+        <location filename="../defaultlook.ui" line="1496"/>
         <source>Show Toolbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1524"/>
+        <location filename="../defaultlook.ui" line="1526"/>
         <source>Plasma</source>
         <translation>Plasma</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1578"/>
+        <location filename="../defaultlook.ui" line="1581"/>
         <source>Systray Icon Size</source>
         <translation>Järjestelmäpalkin kuvakkeiden koko</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1589"/>
+        <location filename="../defaultlook.ui" line="1592"/>
         <source>Default</source>
         <translation>Oletus</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1594"/>
+        <location filename="../defaultlook.ui" line="1597"/>
         <source>Small</source>
         <translation>Pieni</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1599"/>
+        <location filename="../defaultlook.ui" line="1602"/>
         <source>Medium</source>
         <translation>Keskikokoinen</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1604"/>
+        <location filename="../defaultlook.ui" line="1607"/>
         <source>Large</source>
         <translation>Suuri</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1609"/>
+        <location filename="../defaultlook.ui" line="1612"/>
         <source>Larger</source>
         <translation>Suurempi</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1614"/>
+        <location filename="../defaultlook.ui" line="1617"/>
         <source>Largest</source>
         <translation>Suurin</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1640"/>
+        <location filename="../defaultlook.ui" line="1644"/>
         <source>Workspace</source>
         <translation>Työtila</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1647"/>
+        <location filename="../defaultlook.ui" line="1651"/>
         <source>Enable single-click</source>
         <translation>Kytke päälle kohteiden avaaminen yhdellä napsautuksella</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1668"/>
+        <location filename="../defaultlook.ui" line="1672"/>
         <source>Reset KDE/Plasma defaults</source>
         <translation>Palauta KDE/Plasma vakioasetukset</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1708"/>
+        <location filename="../defaultlook.ui" line="1712"/>
         <source>Other</source>
         <translation>Muu</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1775"/>
+        <location filename="../defaultlook.ui" line="1779"/>
         <source>Password for administrative tasks:</source>
         <translation>Salasana järjestelmänvalvojan tehtäviin:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1723"/>
+        <location filename="../defaultlook.ui" line="1727"/>
         <source>Use tearfree radeon driver option</source>
         <translation>Käytä repeytymätöntä radeon-ajuri vaihtoehtoa</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1737"/>
+        <location filename="../defaultlook.ui" line="1741"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>          HUOMAUTUS: olemassaoleva /etc/X11/xorg.conf.d/20-radeon.conf varmuuskopioidaan kotikansioon</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1782"/>
+        <location filename="../defaultlook.ui" line="1786"/>
         <source>&amp;User</source>
         <translation>&amp;Käyttäjä</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1789"/>
+        <location filename="../defaultlook.ui" line="1793"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>Käytä Intel:in ajuria vakiollisen &quot;modesetting&quot; ajurin sijaan (vaatii uudelleenkäynnistyksen)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1837"/>
+        <location filename="../defaultlook.ui" line="1841"/>
         <source>Enable kernel sandbox</source>
         <translation>Kytke päälle ytimen sandbox-tila</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1761"/>
+        <location filename="../defaultlook.ui" line="1765"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>          HUOMAUTUS: olemassaoleva /etc/X11/xorg.conf.d/20-intel.conf varmuuskopioituu kotikansioon</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1803"/>
+        <location filename="../defaultlook.ui" line="1807"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>Nollaa Lightdm (kirjautumisikkuna) saadaksesi käyttöön järjestelmän vakioteeman</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1768"/>
+        <location filename="../defaultlook.ui" line="1772"/>
         <source>Use libinput driver for touchpad instead of synaptics touchpad driver (requires restart)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1730"/>
+        <location filename="../defaultlook.ui" line="1734"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>          HUOMAUTUS: olemassaoleva /etc/X11/xorg.conf.d/20-amd.conf varmuuskopioituu kotikansioon</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1716"/>
+        <location filename="../defaultlook.ui" line="1720"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>Valtuuta sisäisten asemien liittäminen ei-juurikäyttäjille</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1796"/>
+        <location filename="../defaultlook.ui" line="1800"/>
         <source>Use tearfree amdgpu option</source>
         <translation>Käytä repeytymätöntä amdgpu-vaihtoehtoa</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1810"/>
+        <location filename="../defaultlook.ui" line="1814"/>
         <source>Root</source>
         <translation>Root-juurikäyttö</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1744"/>
+        <location filename="../defaultlook.ui" line="1748"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1149"/>
+        <location filename="../defaultlook.ui" line="1151"/>
         <source>Manage Tint2 Panel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1751"/>
+        <location filename="../defaultlook.ui" line="1755"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1754"/>
+        <location filename="../defaultlook.ui" line="1758"/>
         <source>Enable Bluetooth Adapters on boot</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1861"/>
+        <location filename="../defaultlook.ui" line="1865"/>
         <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1930"/>
+        <location filename="../defaultlook.ui" line="1934"/>
         <source>About</source>
         <translation>Tietoja</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1941"/>
+        <location filename="../defaultlook.ui" line="1945"/>
         <source>Help</source>
         <translation>Ohje</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1958"/>
+        <location filename="../defaultlook.ui" line="1962"/>
         <source>Quit application</source>
         <translation>Lopeta sovellus</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1961"/>
+        <location filename="../defaultlook.ui" line="1965"/>
         <source>Close</source>
         <translation>Sulje</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1968"/>
+        <location filename="../defaultlook.ui" line="1972"/>
         <source>Alt+N</source>
         <translation>Alt+N</translation>
     </message>
@@ -870,12 +870,12 @@
         <translation>Tämänhetkiset paneeliasetuksesi on varmuuskopioitu piilotettuun kansioon nimeltä .restore joka sijaitsee kotikansiossasi (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1599"/>
+        <location filename="../defaultlook.cpp" line="1606"/>
         <source>settings</source>
         <translation>asetukset</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1939"/>
+        <location filename="../defaultlook.cpp" line="1946"/>
         <source>Choose a theme set</source>
         <translation>Valitse teemavalikoima</translation>
     </message>
