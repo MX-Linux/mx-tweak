@@ -1,3 +1,9 @@
+mx-tweak (23.04.01) mx; urgency=medium
+
+  * add feature to switch docklike for tasklist
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 01 Apr 2023 19:38:04 -0400
+
 mx-tweak (23.01.03mx21) mx; urgency=medium
 
   * fix backup function when .restore doesn't exist 
