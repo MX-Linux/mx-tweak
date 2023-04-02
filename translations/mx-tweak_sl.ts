@@ -1,4 +1,6 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="sl">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="sl">
 <context>
     <name>QObject</name>
     <message>
@@ -44,12 +46,12 @@
         <location filename="../brightness_small.ui" line="66"/>
         <location filename="../brightness_small.ui" line="87"/>
         <source>TextLabel</source>
-        <translation>Tekstovna oznaka</translation>
+        <translation>TekstovnaOznaka</translation>
     </message>
     <message>
         <location filename="../brightness_small.ui" line="80"/>
         <source>Hardware Backlight</source>
-        <translation>Strojna ozadnja osvetlitev</translation>
+        <translation>Strojna zadnja osvetlitev</translation>
     </message>
     <message>
         <location filename="../brightness_small.ui" line="94"/>
@@ -76,15 +78,15 @@
     <name>defaultlook</name>
     <message>
         <location filename="../defaultlook.ui" line="20"/>
-        <location filename="../defaultlook.cpp" line="57"/>
-        <location filename="../defaultlook.cpp" line="78"/>
-        <location filename="../defaultlook.cpp" line="629"/>
-        <location filename="../defaultlook.cpp" line="648"/>
-        <location filename="../defaultlook.cpp" line="657"/>
-        <location filename="../defaultlook.cpp" line="699"/>
-        <location filename="../defaultlook.cpp" line="709"/>
-        <location filename="../defaultlook.cpp" line="737"/>
-        <location filename="../defaultlook.cpp" line="740"/>
+        <location filename="../defaultlook.cpp" line="56"/>
+        <location filename="../defaultlook.cpp" line="77"/>
+        <location filename="../defaultlook.cpp" line="611"/>
+        <location filename="../defaultlook.cpp" line="630"/>
+        <location filename="../defaultlook.cpp" line="639"/>
+        <location filename="../defaultlook.cpp" line="686"/>
+        <location filename="../defaultlook.cpp" line="694"/>
+        <location filename="../defaultlook.cpp" line="722"/>
+        <location filename="../defaultlook.cpp" line="725"/>
         <source>MX Tweak</source>
         <translation>MX Prilagoditve</translation>
     </message>
@@ -95,7 +97,7 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="46"/>
-        <location filename="../defaultlook.ui" line="156"/>
+        <location filename="../defaultlook.ui" line="159"/>
         <source>Panel</source>
         <translation>Pano</translation>
     </message>
@@ -117,739 +119,763 @@
     <message>
         <location filename="../defaultlook.ui" line="114"/>
         <source>Appearance</source>
-        <translation>Izgled</translation>
+        <translation>Videz</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="129"/>
+        <location filename="../defaultlook.ui" line="1993"/>
         <source>Xfce Settings</source>
         <translation>Xfce nastavitve</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="320"/>
+        <location filename="../defaultlook.ui" line="217"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Affects all panels&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Vpliva na vse panoje&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="227"/>
-        <location filename="../defaultlook.ui" line="1452"/>
+        <location filename="../defaultlook.ui" line="230"/>
+        <location filename="../defaultlook.ui" line="1540"/>
         <source>Affects 1st panel</source>
         <translation>Vpliva na prvi pano</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="280"/>
-        <location filename="../defaultlook.ui" line="1475"/>
+        <location filename="../defaultlook.ui" line="277"/>
+        <location filename="../defaultlook.ui" line="1563"/>
         <source>Left</source>
         <translation>Levo</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="285"/>
-        <location filename="../defaultlook.ui" line="1485"/>
+        <location filename="../defaultlook.ui" line="282"/>
+        <location filename="../defaultlook.ui" line="1573"/>
         <source>Right</source>
         <translation>Desno</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="204"/>
+        <location filename="../defaultlook.ui" line="237"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Buttons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Gumbi okna&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="254"/>
-        <location filename="../defaultlook.ui" line="1470"/>
+        <location filename="../defaultlook.ui" line="353"/>
+        <location filename="../defaultlook.ui" line="1558"/>
         <source>Bottom</source>
         <translation>Dno</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="259"/>
-        <location filename="../defaultlook.ui" line="1480"/>
+        <location filename="../defaultlook.ui" line="358"/>
+        <location filename="../defaultlook.ui" line="1568"/>
         <source>Top</source>
         <translation>Vrh</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="234"/>
+        <location filename="../defaultlook.ui" line="373"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Podobno sidrišču&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="164"/>
-        <location filename="../defaultlook.ui" line="303"/>
+        <location filename="../defaultlook.ui" line="210"/>
+        <location filename="../defaultlook.ui" line="366"/>
         <source>Options</source>
         <translation>Opcije</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="310"/>
+        <location filename="../defaultlook.ui" line="380"/>
         <source>Display panel horizontally</source>
         <translation>Prikaži pano vodoravno</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="171"/>
+        <location filename="../defaultlook.ui" line="290"/>
         <source>Display panel vertically</source>
         <translation>Prikaži pano navpično</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="211"/>
+        <location filename="../defaultlook.ui" line="244"/>
         <source>Restore default panel</source>
         <translation>Obnovi privzete panoje</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="181"/>
+        <location filename="../defaultlook.ui" line="167"/>
         <source>Backup current panel configuration</source>
         <translation>Varnostno kopiraj trenutno konfiguracijo panojev</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="293"/>
+        <location filename="../defaultlook.ui" line="254"/>
         <source>Restore backup panel configuration</source>
         <translation>Obnovi konfiguracijo panojev</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="353"/>
-        <location filename="../defaultlook.ui" line="405"/>
-        <location filename="../defaultlook.ui" line="561"/>
-        <location filename="../defaultlook.ui" line="886"/>
-        <location filename="../defaultlook.ui" line="893"/>
-        <location filename="../defaultlook.ui" line="900"/>
-        <location filename="../defaultlook.ui" line="1016"/>
-        <location filename="../defaultlook.ui" line="1417"/>
-        <location filename="../defaultlook.ui" line="1610"/>
-        <location filename="../defaultlook.ui" line="1766"/>
+        <location filename="../defaultlook.ui" line="183"/>
+        <location filename="../defaultlook.ui" line="439"/>
+        <location filename="../defaultlook.ui" line="595"/>
+        <location filename="../defaultlook.ui" line="920"/>
+        <location filename="../defaultlook.ui" line="927"/>
+        <location filename="../defaultlook.ui" line="934"/>
+        <location filename="../defaultlook.ui" line="1050"/>
+        <location filename="../defaultlook.ui" line="1284"/>
+        <location filename="../defaultlook.ui" line="1698"/>
+        <location filename="../defaultlook.ui" line="1854"/>
         <source>Apply</source>
         <translation>Potrdi</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="384"/>
+        <location filename="../defaultlook.ui" line="307"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Tasklist&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="418"/>
         <source>Theme</source>
         <translation>Tema</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="392"/>
+        <location filename="../defaultlook.ui" line="426"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ikone&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="428"/>
+        <location filename="../defaultlook.ui" line="462"/>
         <source>Fix HexChat input box in dark theme</source>
         <translation>Popravi HexChat polje za vnos v temni temi</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="435"/>
+        <location filename="../defaultlook.ui" line="469"/>
         <source>Preview</source>
         <translation>Predogled</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="442"/>
+        <location filename="../defaultlook.ui" line="476"/>
         <source>Fix some website fields when using dark theme</source>
         <translation>Popravi nekatera polja spletne strani, kadar uporabljaš temno temo</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="445"/>
+        <location filename="../defaultlook.ui" line="479"/>
         <source>Firefox dark theme tweak</source>
         <translation>Prilagojena temna tema za Firefox</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="452"/>
+        <location filename="../defaultlook.ui" line="486"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Manager&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Upravljanik oken&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="459"/>
+        <location filename="../defaultlook.ui" line="493"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Themes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Teme&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="466"/>
+        <location filename="../defaultlook.ui" line="500"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Aplikacije&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="486"/>
+        <location filename="../defaultlook.ui" line="520"/>
         <source>Save Current Settings as a Theme Set</source>
         <translation>Shrani trenutne nastavitve kot tematski set</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="497"/>
+        <location filename="../defaultlook.ui" line="531"/>
         <source>Remove User Theme Set</source>
         <translation>Odstranite uporabnikov tematski set</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="514"/>
+        <location filename="../defaultlook.ui" line="548"/>
         <source>Theme Options</source>
         <translation>Opcije za temo</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="537"/>
+        <location filename="../defaultlook.ui" line="571"/>
         <source>Undo</source>
         <translation>Prekliči</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="547"/>
-        <location filename="../defaultlook.ui" line="588"/>
+        <location filename="../defaultlook.ui" line="581"/>
+        <location filename="../defaultlook.ui" line="622"/>
         <source>Compositor</source>
         <translation>Kompozitor</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="581"/>
+        <location filename="../defaultlook.ui" line="615"/>
         <source>Transparency and shadow options</source>
         <translation>Opcije za prosojnost in sence</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="595"/>
+        <location filename="../defaultlook.ui" line="629"/>
         <source>Edit compton.conf directly in text editor</source>
         <translation>Uredi compton.conf neposredno v urejvalniku teksta</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="598"/>
+        <location filename="../defaultlook.ui" line="632"/>
         <source>Edit compton.conf</source>
         <translation>Uredi compton.conf</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="648"/>
+        <location filename="../defaultlook.ui" line="682"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Changing the VBlank mode may help alleviate some screen tearing issues.  See Help for more information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Spreminjanje VBlank načina lahko pomaga pri odpravljanju težav s prikazovanjem na zaslonu (prelivanje). Glej pomoč za več podatkov.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="651"/>
+        <location filename="../defaultlook.ui" line="685"/>
         <source>VBlank</source>
         <translation>VBlank</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="659"/>
+        <location filename="../defaultlook.ui" line="693"/>
         <source>auto</source>
         <translation>samodejno</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="664"/>
+        <location filename="../defaultlook.ui" line="698"/>
         <source>glx</source>
         <translation>glx</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="669"/>
+        <location filename="../defaultlook.ui" line="703"/>
         <source>xpresent</source>
         <translation>xpresent</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="674"/>
+        <location filename="../defaultlook.ui" line="708"/>
         <source>off</source>
         <translation>izklopljeno</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="695"/>
+        <location filename="../defaultlook.ui" line="729"/>
         <source>None</source>
         <translation>brez</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="700"/>
+        <location filename="../defaultlook.ui" line="734"/>
         <source>Xfwm (Xfce) Compositor</source>
         <translation>Xfwm (Xfce) kompozitor</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="705"/>
+        <location filename="../defaultlook.ui" line="739"/>
         <source>Compton </source>
         <translation>Compton </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="713"/>
+        <location filename="../defaultlook.ui" line="747"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce Compositor Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nastavitve za Xfce kompozitor&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="716"/>
+        <location filename="../defaultlook.ui" line="750"/>
         <source>Xfwm Settings</source>
         <translation>Xfwm nastavitve</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="727"/>
+        <location filename="../defaultlook.ui" line="761"/>
         <source>Launch compton-conf configuration tool</source>
         <translation>Zaženi compton-conf konfiguracijsko orodje</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="730"/>
+        <location filename="../defaultlook.ui" line="764"/>
         <source>Compton settings</source>
         <translation>Compton nastavitve</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="744"/>
+        <location filename="../defaultlook.ui" line="778"/>
         <source>Display</source>
         <translation>Zaslon</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="752"/>
+        <location filename="../defaultlook.ui" line="786"/>
         <source>Hardware Backlight</source>
         <translation>Strojna ozadnja osvetlitev</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="759"/>
+        <location filename="../defaultlook.ui" line="793"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Display Tweaks&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Zaslonske prilagoditve&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="786"/>
+        <location filename="../defaultlook.ui" line="820"/>
         <source>Choose Display for xrandr tweaks</source>
         <translation>Izberite prikaz za xrandr prilagoditve</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="796"/>
+        <location filename="../defaultlook.ui" line="830"/>
         <source>Resolution</source>
         <translation>Ločljivost</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="803"/>
+        <location filename="../defaultlook.ui" line="837"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Saving is per display&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Shranjevanje za vsak zaslon&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="806"/>
+        <location filename="../defaultlook.ui" line="840"/>
         <source>Save</source>
         <translation>Shrani</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="813"/>
+        <location filename="../defaultlook.ui" line="847"/>
         <source>Software (xrandr) Brightness</source>
         <translation>Programska (xrandr) osvetlitev</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="820"/>
-        <location filename="../defaultlook.ui" line="917"/>
+        <location filename="../defaultlook.ui" line="854"/>
+        <location filename="../defaultlook.ui" line="951"/>
         <source>TextLabel</source>
         <translation>TekstovnaOznaka</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="827"/>
+        <location filename="../defaultlook.ui" line="861"/>
         <source>GTK scaling</source>
         <translation>GTK prilagajanje velikosti</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="847"/>
+        <location filename="../defaultlook.ui" line="881"/>
         <source>xrandr Scaling</source>
         <translation>xrandr prilagajanje velikosti</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="943"/>
+        <location filename="../defaultlook.ui" line="977"/>
         <source>Config Options</source>
         <translation>Config opcije</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1047"/>
+        <location filename="../defaultlook.ui" line="1081"/>
+        <location filename="../defaultlook.ui" line="1402"/>
         <source>Reset Thunar custom right-click actions to system defaults</source>
         <translation>V Thunarju ponastavi po meri določena dejanja z desnim klikom na sistemsko privzete</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="996"/>
+        <location filename="../defaultlook.ui" line="1030"/>
         <source>Enable single-click on desktop</source>
         <translation>Vklopi enojni klik na namizju</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="951"/>
+        <location filename="../defaultlook.ui" line="985"/>
+        <location filename="../defaultlook.ui" line="1250"/>
         <source>Enable single-click in Thunar File Manager</source>
         <translation>Vklopi enojni klik v Thunar upravljalniku datotek</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1054"/>
+        <location filename="../defaultlook.ui" line="1088"/>
         <source>Enable Desktop Zoom </source>
         <translation>Vklopi povečavo namizja</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="975"/>
-        <location filename="../defaultlook.ui" line="1570"/>
+        <location filename="../defaultlook.ui" line="1009"/>
+        <location filename="../defaultlook.ui" line="1658"/>
         <source>Show windows from all workspaces in panel</source>
         <translation>V panoju prikaži okna z vseh delovnih površin</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1003"/>
+        <location filename="../defaultlook.ui" line="1037"/>
         <source>Disable shortening of long filenames on the desktop</source>
         <translation>Izklopi krajšanje dolgih imen datotek na namizju</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="989"/>
+        <location filename="../defaultlook.ui" line="1023"/>
         <source>Enable hibernate on Log Out menu </source>
         <translation>V odjavnem meniju omogoči hibernacijo</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="968"/>
+        <location filename="../defaultlook.ui" line="1002"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
         <translation>opomba: za hibernacijo mora biti velikost razdelka swap &gt;= RAM</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1027"/>
+        <location filename="../defaultlook.ui" line="1061"/>
         <source>Show GTK File Dialog action buttons at bottom of dialogs</source>
         <translation>Na dnu dialogov prikaži GTK File Dialog akcijske gumbe</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="958"/>
+        <location filename="../defaultlook.ui" line="992"/>
         <source>( also turns off Client Side Decorations for Xfce applications)</source>
-        <translation type="unfinished"/>
+        <translation>(za aplikacijo izklopi tudi okrasitve odjemalne strani)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="982"/>
+        <location filename="../defaultlook.ui" line="1016"/>
+        <location filename="../defaultlook.ui" line="1448"/>
         <source>Thunar windows always open in split view</source>
-        <translation type="unfinished"/>
+        <translation>Thunar okno se vedno odpre v razdeljenem prikazu</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1061"/>
+        <location filename="../defaultlook.ui" line="1095"/>
+        <location filename="../defaultlook.ui" line="1358"/>
         <source>Thunar split view opens horizontal</source>
-        <translation type="unfinished"/>
+        <translation>Thunar se odpre z vodoravnim razdeljenim prikazom</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1071"/>
+        <location filename="../defaultlook.ui" line="1105"/>
         <source>Fluxbox</source>
         <translation>Fluxbox</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1079"/>
+        <location filename="../defaultlook.ui" line="1475"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Nastavitve orodne vrstice&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1113"/>
-        <location filename="../defaultlook.ui" line="1149"/>
+        <location filename="../defaultlook.ui" line="1128"/>
+        <location filename="../defaultlook.ui" line="1423"/>
         <source>On</source>
         <translation>Vklop</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1118"/>
-        <location filename="../defaultlook.ui" line="1154"/>
+        <location filename="../defaultlook.ui" line="1133"/>
+        <location filename="../defaultlook.ui" line="1428"/>
         <source>Off</source>
         <translation>Izklop</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1123"/>
+        <location filename="../defaultlook.ui" line="1433"/>
         <source>On Hover</source>
         <translation>Ob prehodu</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1141"/>
-        <location filename="../defaultlook.ui" line="1162"/>
+        <location filename="../defaultlook.ui" line="1236"/>
+        <location filename="../defaultlook.ui" line="1489"/>
         <source>Autohide</source>
         <translation>Samodejno skrij</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1169"/>
+        <location filename="../defaultlook.ui" line="1243"/>
         <source>Reset ALL mx-fluxbox settings</source>
         <translation>Ponastavi VSE nastavitve mx-fluxbox</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1176"/>
-        <location filename="../defaultlook.ui" line="1190"/>
-        <location filename="../defaultlook.ui" line="1459"/>
+        <location filename="../defaultlook.ui" line="1264"/>
+        <location filename="../defaultlook.ui" line="1516"/>
+        <location filename="../defaultlook.ui" line="1547"/>
         <source>Placement</source>
         <translation>Postavitev</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1183"/>
+        <location filename="../defaultlook.ui" line="1113"/>
         <source>Reset DefaultDock</source>
-        <translation>Ponastavi Privzeto Sidrišče</translation>
+        <translation>Ponastavi PrivzetoSidrišče</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1197"/>
+        <location filename="../defaultlook.ui" line="1441"/>
         <source>Toggle desktop icons</source>
         <translation>Preklopi prikaz namiznih ikon</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1204"/>
+        <location filename="../defaultlook.ui" line="1257"/>
         <source>Reset Fluxbox Menu</source>
         <translation>Ponastavi Fluxbox meni</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1345"/>
-        <location filename="../defaultlook.ui" line="1577"/>
+        <location filename="../defaultlook.ui" line="1455"/>
+        <location filename="../defaultlook.ui" line="1665"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ponastavitev&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1352"/>
+        <location filename="../defaultlook.ui" line="1120"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;/body&gt;&lt;/p&gt;&lt;/span&gt;Nastavitve sidrišča&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1359"/>
+        <location filename="../defaultlook.ui" line="1482"/>
         <source>Width</source>
         <translation>Širina</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1366"/>
+        <location filename="../defaultlook.ui" line="1382"/>
         <source>Toggle icon captions</source>
         <translation>Preklopi prikaz oznak ikon</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1373"/>
+        <location filename="../defaultlook.ui" line="1365"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Desktop Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Namizne Ikone&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1380"/>
+        <location filename="../defaultlook.ui" line="1162"/>
         <source>Height</source>
         <translation>Višina</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1387"/>
+        <location filename="../defaultlook.ui" line="390"/>
+        <source>Set Tasklist plugin to:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="397"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Docklike is the modern dock plugin for the panel.  Window Buttons is the classic tasklist without dock features.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1271"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Thunar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1409"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Dodaj no privzete elemente menija, če kateri obstaja, obstoječemu fluxbox meniju.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1390"/>
+        <location filename="../defaultlook.ui" line="1412"/>
         <source>Upgrade existing menu entries</source>
         <translation>Nadgradi obstoječe vnose menija</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1410"/>
+        <location filename="../defaultlook.ui" line="1496"/>
         <source>Show Toolbar</source>
         <translation>Prikaži orodno vrstico</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1438"/>
+        <location filename="../defaultlook.ui" line="1526"/>
         <source>Plasma</source>
         <translation>Plasma</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1493"/>
+        <location filename="../defaultlook.ui" line="1581"/>
         <source>Systray Icon Size</source>
         <translation>Velikost ikon v sistemski pasici</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1504"/>
+        <location filename="../defaultlook.ui" line="1592"/>
         <source>Default</source>
         <translation>Privzeto</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1509"/>
+        <location filename="../defaultlook.ui" line="1597"/>
         <source>Small</source>
         <translation>Majhne</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1514"/>
+        <location filename="../defaultlook.ui" line="1602"/>
         <source>Medium</source>
         <translation>Srednje</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1519"/>
+        <location filename="../defaultlook.ui" line="1607"/>
         <source>Large</source>
         <translation>Velike</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1524"/>
+        <location filename="../defaultlook.ui" line="1612"/>
         <source>Larger</source>
         <translation>Večje</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1529"/>
+        <location filename="../defaultlook.ui" line="1617"/>
         <source>Largest</source>
         <translation>Največje</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1556"/>
+        <location filename="../defaultlook.ui" line="1644"/>
         <source>Workspace</source>
         <translation>Delovna površina</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1563"/>
+        <location filename="../defaultlook.ui" line="1651"/>
         <source>Enable single-click</source>
         <translation>Vklopi en klik</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1584"/>
+        <location filename="../defaultlook.ui" line="1672"/>
         <source>Reset KDE/Plasma defaults</source>
         <translation>Ponastavi KDE/Plasma na privzeto</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1624"/>
+        <location filename="../defaultlook.ui" line="1712"/>
         <source>Other</source>
         <translation>Drugo</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1691"/>
+        <location filename="../defaultlook.ui" line="1779"/>
         <source>Password for administrative tasks:</source>
         <translation>Geslo za adminstracijo:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1639"/>
+        <location filename="../defaultlook.ui" line="1727"/>
         <source>Use tearfree radeon driver option</source>
         <translation>Uporabi radeon opcijo za odpravljanje napak v prikazovanju </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1653"/>
+        <location filename="../defaultlook.ui" line="1741"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>POMNI: obstoječi /etc/X11/xorg.conf.d/20-radeon.conf bo varnostno kopiran v domačo home mapo</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1698"/>
+        <location filename="../defaultlook.ui" line="1786"/>
         <source>&amp;User</source>
         <translation>&amp;Uporabnik</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1705"/>
+        <location filename="../defaultlook.ui" line="1793"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>Namesto privzetega &quot;modesetting&quot; gonilnika uporabite Intel gonilnik (zahteva ponovni zagon)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1753"/>
+        <location filename="../defaultlook.ui" line="1841"/>
         <source>Enable kernel sandbox</source>
         <translation>Vklopi peskovnik za jedro</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1677"/>
+        <location filename="../defaultlook.ui" line="1765"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>POMNI: obstoječi /etc/X11/xorg.conf.d/20-intel.conf bo varnostno kopiran v domačo home mapo</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1719"/>
+        <location filename="../defaultlook.ui" line="1807"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>Ponastavi Lightdm (zaslon za prijavo) na privzeto temo sistema</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1684"/>
+        <location filename="../defaultlook.ui" line="1772"/>
         <source>Use libinput driver for touchpad instead of synaptics touchpad driver (requires restart)</source>
         <translation>Uporabi libinput gonilnik za sledilno ploščico, namesto synaptic gonilnika za sledilno ploščico (zahteva ponoven zagon)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1646"/>
+        <location filename="../defaultlook.ui" line="1734"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>POMNI: obstoječi /etc/X11/xorg.conf.d/20-amd.conf bo varnostno shranjen v domačo home mapo</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1632"/>
+        <location filename="../defaultlook.ui" line="1720"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>Omogoči priklop notranjih pogonov ne-korenskim uporabnikom</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1712"/>
+        <location filename="../defaultlook.ui" line="1800"/>
         <source>Use tearfree amdgpu option</source>
         <translation>Uporabi amdgpu opcijo za odpravljanje napak v prikazovanju </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1726"/>
+        <location filename="../defaultlook.ui" line="1814"/>
         <source>Root</source>
         <translation>Koren</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1660"/>
+        <location filename="../defaultlook.ui" line="1748"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
         <translation>Uporabi okraske Client Side Decorations (CSD) v aplikacijah GTK3, ki jih podpirajo (zahteva ponoven zagon seje) </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1424"/>
+        <location filename="../defaultlook.ui" line="1151"/>
         <source>Manage Tint2 Panel</source>
         <translation>Upravljaj Tint2 pano</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1667"/>
+        <location filename="../defaultlook.ui" line="1755"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;zahteva ponovni zagon&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1670"/>
+        <location filename="../defaultlook.ui" line="1758"/>
         <source>Enable Bluetooth Adapters on boot</source>
         <translation>Ob zagonu vklopi Bluetooth vmesnike</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1777"/>
+        <location filename="../defaultlook.ui" line="1865"/>
         <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
         <translation>Apt namesti dodatne &quot;priporočene&quot; pakete kot odvisnosti</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1846"/>
+        <location filename="../defaultlook.ui" line="1934"/>
         <source>About</source>
         <translation>O programu</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1857"/>
+        <location filename="../defaultlook.ui" line="1945"/>
         <source>Help</source>
         <translation>Pomoč</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1874"/>
+        <location filename="../defaultlook.ui" line="1962"/>
         <source>Quit application</source>
         <translation>Zapri aplikacijo</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1877"/>
+        <location filename="../defaultlook.ui" line="1965"/>
         <source>Close</source>
         <translation>Zapri</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1884"/>
+        <location filename="../defaultlook.ui" line="1972"/>
         <source>Alt+N</source>
         <translation>Alt+N</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="58"/>
+        <location filename="../defaultlook.cpp" line="57"/>
         <source>--display switch only valid for Xfce</source>
         <translation>--display stikalo ve veljavno le za Xfce</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="628"/>
+        <location filename="../defaultlook.cpp" line="610"/>
         <source>About MX Tweak</source>
         <translation>O MX fiziranju</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="630"/>
+        <location filename="../defaultlook.cpp" line="612"/>
         <source>Version: </source>
         <translation>Različica:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="631"/>
+        <location filename="../defaultlook.cpp" line="613"/>
         <source>App for quick default ui theme changes and tweaks</source>
         <translation>Aplikacija za hitro spreminjanje in prilagajanje privzete teme uporabniškega vmesnika</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="633"/>
+        <location filename="../defaultlook.cpp" line="615"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="634"/>
+        <location filename="../defaultlook.cpp" line="616"/>
         <source>%1 License</source>
         <translation>%1 licenca</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="648"/>
+        <location filename="../defaultlook.cpp" line="630"/>
         <source>%1 Help</source>
         <translation>%1 pomoč</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="658"/>
+        <location filename="../defaultlook.cpp" line="640"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
         <translation>Končano! Firefox bo morda potreboval ponovni zagon, da bodo spremembe delovale.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="700"/>
+        <location filename="../defaultlook.cpp" line="687"/>
         <source>Plese remove special characters</source>
         <translation>Odstranite posebne znake</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="700"/>
+        <location filename="../defaultlook.cpp" line="687"/>
         <source>from file name</source>
         <translation>iz imena datoteke</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="710"/>
+        <location filename="../defaultlook.cpp" line="695"/>
         <source>File name already exists.  Choose another name</source>
         <translation>Ime datoteke že obstaja. Izberite drugo ime</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="738"/>
+        <location filename="../defaultlook.cpp" line="723"/>
         <source>File is not a valid tar.xz archive file</source>
         <translation>Datoteka ni ustrezna tar.xz arhivska datoteka</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="741"/>
+        <location filename="../defaultlook.cpp" line="726"/>
         <source>Archive does not contain a panel config</source>
         <translation>Arhiv ne vsebuje konfiguracije panojev</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="861"/>
+        <location filename="../defaultlook.cpp" line="866"/>
         <source>Panel settings</source>
         <translation>Nastavitve panoja</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="862"/>
+        <location filename="../defaultlook.cpp" line="867"/>
         <source>Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
         <translation>Trenutne nastavitve orodne vrstice so se shranile v skrito mapo z imenom .restore  znotraj uporabniske domace mape (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1563"/>
+        <location filename="../defaultlook.cpp" line="1606"/>
         <source>settings</source>
         <translation>nastavitve</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1903"/>
+        <location filename="../defaultlook.cpp" line="1946"/>
         <source>Choose a theme set</source>
         <translation>Izberite tematski set</translation>
     </message>
@@ -1044,7 +1070,7 @@
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="86"/>
         <source>Show shadows under dock windows</source>
-        <translation>Prikaži sence pod priklopljenimi okni</translation>
+        <translation>Prikaži sence pod zasidranimi okni</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="93"/>

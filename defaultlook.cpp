@@ -34,7 +34,6 @@
 #include <QStringList>
 
 #include "about.h"
-#include "brightness_small.h"
 #include "cmd.h"
 #include "defaultlook.h"
 #include "remove_user_theme_set.h"
@@ -214,9 +213,7 @@ void defaultlook::fliptohorizontal()
     systrayID=systrayID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
     if (verbose) qDebug() << "systray: " << systrayID;
 
-    QString tasklistID = runCmd(QStringLiteral("grep tasklist ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml")).output;
-    tasklistID=tasklistID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
-    if (verbose) qDebug() << "tasklist: " << tasklistID;
+    QString tasklistID = get_tasklistid();
 
     QString pulseaudioID = runCmd(QStringLiteral("grep pulseaudio ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml")).output;
     pulseaudioID=pulseaudioID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
@@ -230,17 +227,7 @@ void defaultlook::fliptohorizontal()
     workspacesID = workspacesID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
     if (verbose) qDebug() << "workspacesID: " << workspacesID;
 
-    if (tasklistID == QLatin1String("")) {
-        QString docklikeID = runCmd(QStringLiteral("grep docklike ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml")).output;
-        docklikeID=docklikeID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
-        if (verbose) qDebug() << "docklikeID: " << docklikeID;
-        if (docklikeID != QLatin1String("")) {
-            tasklistID = docklikeID;
-            if (verbose) qDebug() << "new tasklist: " << tasklistID;
-        }
-    }
-
-    // if systray exists, do a bunch of stuff to relocate it a list of plugins.  If not present, do nothing to list
+   // if systray exists, do a bunch of stuff to relocate it a list of plugins.  If not present, do nothing to list
 
     if (systrayID !=QLatin1String("")) {
 
@@ -389,9 +376,7 @@ void defaultlook::fliptovertical()
     systrayID=systrayID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
     if (verbose) qDebug() << "systray: " << systrayID;
 
-    QString tasklistID = runCmd(QStringLiteral("grep tasklist ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml")).output;
-    tasklistID=tasklistID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
-    if (verbose) qDebug() << "tasklist: " << tasklistID;
+    QString tasklistID = get_tasklistid();
 
     QString pulseaudioID = runCmd(QStringLiteral("grep pulseaudio ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml")).output;
     pulseaudioID=pulseaudioID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
@@ -404,16 +389,6 @@ void defaultlook::fliptovertical()
     QString workspacesID = runCmd(QStringLiteral("grep pager ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml")).output;
     workspacesID=workspacesID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
     if (verbose) qDebug() << "workspacesID: " << workspacesID;
-
-    if (tasklistID == QLatin1String("")) {
-        QString docklikeID = runCmd(QStringLiteral("grep docklike ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml")).output;
-        docklikeID=docklikeID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
-        if (verbose) qDebug() << "docklikeID: " << docklikeID;
-        if (docklikeID != QLatin1String("")) {
-            tasklistID = docklikeID;
-            if (verbose) qDebug() << "new tasklist: " << tasklistID;
-        }
-    }
 
     //if systray exists, do a bunch of stuff to try to move it in a logical way
 
@@ -592,7 +567,14 @@ void defaultlook::on_buttonApply_clicked()
     if (ui->radioBackupPanel->isChecked()) {
         backupPanel();
     }
-    //read in plugin ID's
+
+    // tasklist switch
+    qDebug() << "tasklist flag is " << tasklistflag;
+    if (ui->radioButtonTasklist->isChecked()){
+        if ( tasklistflag ) tasklistchange();
+    }
+
+    //flip panels
     if (ui->checkHorz->isChecked()) {
         QString test = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/mode").output;
 
@@ -754,6 +736,7 @@ void defaultlook::on_checkHorz_clicked()
         ui->radioBackupPanel->setChecked(false);
         ui->radioDefaultPanel->setChecked(false);
         ui->radioRestoreBackup->setChecked(false);
+        ui->radioButtonTasklist->setChecked(false);
     }
 }
 
@@ -765,6 +748,7 @@ void defaultlook::on_checkVert_clicked()
         ui->radioBackupPanel->setChecked(false);
         ui->radioDefaultPanel->setChecked(false);
         ui->radioRestoreBackup->setChecked(false);
+        ui->radioButtonTasklist->setChecked(false);
     }
 }
 
@@ -788,6 +772,7 @@ void defaultlook::on_radioDefaultPanel_clicked()
         ui->checkVert->setChecked(false);
         ui->radioRestoreBackup->setChecked(false);
         ui->lineEditBackupName->hide();
+        ui->radioButtonTasklist->setChecked(false);
     }
 }
 
@@ -801,6 +786,7 @@ void defaultlook::on_radioBackupPanel_clicked()
         ui->radioRestoreBackup->setChecked(false);
         ui->lineEditBackupName->setText("panel_backup_" + QDateTime::currentDateTime().toString("dd.MM.yyyy.hh.mm.ss"));
         ui->lineEditBackupName->show();
+        ui->radioButtonTasklist->setChecked(false);
     }
 }
 
@@ -813,8 +799,23 @@ void defaultlook::on_radioRestoreBackup_clicked()
         ui->radioDefaultPanel->setChecked(false);
         ui->checkVert->setChecked(false);
         ui->lineEditBackupName->hide();
+        ui->radioButtonTasklist->setChecked(false);
     }
 }
+
+void defaultlook::on_radioButtonTasklist_clicked()
+{
+    ui->buttonApply->setEnabled(true);
+    if (ui->radioButtonTasklist->isChecked()) {
+        ui->checkHorz->setChecked(false);
+        ui->radioBackupPanel->setChecked(false);
+        ui->radioDefaultPanel->setChecked(false);
+        ui->checkVert->setChecked(false);
+        ui->lineEditBackupName->hide();
+        ui->radioRestoreBackup->setChecked(false);
+    }
+
+ }
 
 void defaultlook::top_or_bottom()
 {
@@ -969,18 +970,48 @@ void defaultlook::setuppanel()
     }
 
     //hide tasklist setting if not present
+    bool tasklist = true;
+    bool docklike = true;
+    bool tasklistcombodisplay = true;
 
-    if ( system("grep -q tasklist ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml") != 0 ) {
+    if ( system("xfconf-query -c xfce4-panel -p /plugins -lv |grep tasklist") != 0 ) {
         ui->labelTasklist->hide();
         ui->pushButtontasklist->hide();
+        tasklist = false;
     }
 
     //hide docklike settings if not present
 
-    if ( system("grep -q docklike ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml") != 0 ) {
+    if ( system("xfconf-query -c xfce4-panel -p /plugins -lv |grep docklike") != 0 ) {
         ui->labelDocklikeSettings->hide();
         ui->pushButtonDocklikeSetttings->hide();
+        docklike = false;
     }
+
+    //check status of docklike external package, hide chooser if not installed
+
+    QString check = runCmd("LANG=c dpkg-query -s xfce4-docklike-plugin |grep Status").output;
+    if ( ! check.contains("installed")){
+        docklike = true;
+    }
+
+    //display tasklist plugin selector if only one tasklist in use
+    if ( tasklist && docklike ){
+        ui->label_tasklist_plugin->hide();
+        ui->comboBoxTasklistPlugin->hide();
+        tasklistcombodisplay =  false;
+    }
+
+    //index 0 is docklike, index 1 is window buttons
+    if ( tasklist && tasklistcombodisplay ){
+        ui->comboBoxTasklistPlugin->setCurrentIndex(1);
+    }
+
+    if ( docklike && tasklistcombodisplay){
+        ui->comboBoxTasklistPlugin->setCurrentIndex(0);
+    }
+
+    tasklistflag = false;
 
     //reset all checkboxes to unchecked
 
@@ -989,6 +1020,7 @@ void defaultlook::setuppanel()
     ui->radioBackupPanel->setChecked(false);
     ui->radioDefaultPanel->setChecked(false);
     ui->radioRestoreBackup->setChecked(false);
+    ui->radioButtonTasklist->setChecked(false);
 
     //only enable options that make sense
 
@@ -3623,4 +3655,75 @@ void defaultlook::on_checkBoxsplitviewhorizontal_2_clicked()
 void defaultlook::on_checkBoxThunarSingleClick_2_clicked()
 {
     ui->ApplyFluxboxResets->setEnabled(true);
+}
+
+//returns first tasklist or docklike id
+QString defaultlook::get_tasklistid(){
+    QString tasklistID = runCmd(QStringLiteral("grep -m 1 tasklist ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml")).output;
+    tasklistID=tasklistID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
+    if (verbose) qDebug() << "tasklist: " << tasklistID;
+    if (tasklistID == QLatin1String("")) {
+        QString docklikeID = runCmd(QStringLiteral("grep -m 1 docklike ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml")).output;
+        docklikeID=docklikeID.remove(QStringLiteral("\"")).section(QStringLiteral("-"),1,1).section(QStringLiteral(" "),0,0);
+        if (verbose) qDebug() << "docklikeID: " << docklikeID;
+        if (docklikeID != QLatin1String("")) {
+            tasklistID = docklikeID;
+            if (verbose) qDebug() << "new tasklist: " << tasklistID;
+        }
+    }
+    return tasklistID;
+
+}
+
+
+
+
+void defaultlook::on_comboBoxTasklistPlugin_currentIndexChanged(int index)
+{
+    //toggle tasklistflag
+    //changing tasklistflag only happens if block is actually changed
+
+    if ( tasklistflag ){
+        tasklistflag = false;
+    } else {
+        tasklistflag = true;
+    }
+    qDebug() << "tasklist flag is " << tasklistflag;
+}
+
+void defaultlook::tasklistchange(){
+    //choice of tasklist
+    QString tasklistchoice;
+
+    if ( ui->comboBoxTasklistPlugin->currentIndex() == 0){
+        tasklistchoice = "docklike";
+    } else if ( ui->comboBoxTasklistPlugin->currentIndex() == 1){
+        tasklistchoice = "tasklist";
+    }
+    qDebug() << "tasklistchoice is" << tasklistchoice;
+
+
+    QString tasklistid = get_tasklistid();
+    qDebug() << "tasklistid is " << tasklistid;
+
+    if (tasklistchoice == "docklike"){
+        runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + tasklistid + "/show-handle --reset");
+        runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + tasklistid + "/show-labels --reset");
+    } else if (tasklistchoice == "tasklist"){
+        runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + tasklistid + "/show-handle -t bool -s false --create");
+         QString test = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/mode").output;
+        if (test == QLatin1String("") || test == QLatin1String("0")) { //horizontal panel
+            runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + tasklistid + "/show-labels -t bool -s true --create");
+        } else { runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + tasklistid + "/show-labels -t bool -s false --create");  //vertical panel
+        }
+    }
+
+    //switch plugin
+    runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + tasklistid + " -s " + tasklistchoice + " --create");
+
+
+    //reset panel
+    runCmd("xfce4-panel --restart");
+    runCmd(QStringLiteral("sleep .5"));
+
 }

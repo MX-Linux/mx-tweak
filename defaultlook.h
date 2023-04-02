@@ -97,12 +97,14 @@ public:
     bool plasmasystrayiconsizeflag{};
     bool themeflag = false;
     bool validateflag = false;
+    bool tasklistflag = false;
     void thunarsplitview(bool state);
     void thunarsplitviewhorizontal(bool state);
     void thunarsetupsplitview();
     void resetthunar();
     void thunarsingleclicksetup();
     void thunarsetsingleclick(bool state);
+    void tasklistchange();
 
 
     QString g1;
@@ -151,6 +153,7 @@ public:
     static void message2();
     void savethemeundo();
     void themeundo();
+    QString get_tasklistid();
 
     void setBrightness();
 
@@ -274,6 +277,10 @@ private slots:
     void on_checkBoxsplitviewhorizontal_2_clicked();
 
     void on_checkBoxThunarSingleClick_2_clicked();
+
+    void on_radioButtonTasklist_clicked();
+
+    void on_comboBoxTasklistPlugin_currentIndexChanged(int index);
 
 private:
     Ui::defaultlook *ui;
