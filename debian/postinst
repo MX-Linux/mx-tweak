@@ -3,8 +3,8 @@
 set -e
 
 #cleanup some old configs from bullseye/buster
-if [ -e  /etc/poklit-1/localauthority.conf.d/55-tweak-override.conf ]; then
-	rm /etc/poklit-1/localauthority.conf.d/55-tweak-override.conf
+if [ -e  /etc/polkit-1/localauthority.conf.d/55-tweak-override.conf ]; then
+	rm /etc/polkit-1/localauthority.conf.d/55-tweak-override.conf
 fi
 
 exit 0
