@@ -15,7 +15,7 @@ mx.tweak.template usr/share/mx-tweak-data
 zcompton.desktop		usr/share/mx-tweak
 *.conf			usr/share/mx-tweak
 50-udisks.pkla 	usr/share/mx-tweak
-55-tweak-override.conf usr/share/mx-tweak
+10-default-mx.rules usr/share/mx-tweak
 20-intel.conf   usr/share/mx-tweak
 20-amd.conf 	usr/share/mx-tweak
 20-radeon.conf	usr/share/mx-tweak
