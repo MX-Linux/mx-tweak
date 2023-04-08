@@ -1288,8 +1288,12 @@ void defaultlook::setupEtc()
 
     //setup sudo override function
 
-    QFileInfo sudo_override_file(QStringLiteral("/etc/polkit-1/rules.d/10-default-mx.rules"));
-    ui->radioSudoUser->setChecked(!sudo_override_file.exists());
+    int rootest = runCmd(QStringLiteral("pkexec /usr/lib/mx-tweak/mx-tweak-rootcheck.sh")).exitCode;
+    if ( rootest == 0 ){
+        ui->radioSudoRoot->setChecked(true);
+    } else {
+        ui->radioSudoUser->setChecked(true);
+    }
 
     //if root accout disabled, disable root authentication changes
     test = runCmd(QStringLiteral("pkexec /usr/lib/mx-tweak/mx-tweak-check.sh")).output;
@@ -2167,7 +2171,7 @@ void defaultlook::on_ButtonApplyEtc_clicked()
 
     //deal with udisks option
     QFileInfo fileinfo(QStringLiteral("/etc/tweak-udisks.chk"));
-    QFileInfo sudo_override(QStringLiteral("/etc/polkit-1/rules.d/10-default-mx.rules"));
+    int sudooverride = runCmd(QStringLiteral("pkexec /usr/lib/mx-tweak/mx-tweak-rootcheck.sh")).exitCode;
     QString cmd;
     QString udisks_option;
     QString sudo_override_option;
@@ -2312,13 +2316,13 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     //deal with sudo override
 
     if (ui->radioSudoUser->isChecked()) {
-        if (sudo_override.exists()) {
+        if (sudooverride == 0) {
             sudo_override_option = QStringLiteral("enable_sudo_override");
         } else {
             if (verbose) qDebug() << "no change to admin password settings";
         }
     } else {
-        if (sudo_override.exists()) {
+        if (sudooverride == 0) {
             if (verbose) qDebug() << "no change to admin password settings";
         } else {
             sudo_override_option = QStringLiteral("disable_sudo_override");

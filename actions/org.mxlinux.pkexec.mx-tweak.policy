@@ -23,7 +23,7 @@
     </defaults>
     <annotate key="org.freedesktop.policykit.exec.path">/usr/lib/mx-tweak/mx-tweak-kde-edit.sh</annotate>
   </action>
-  <action id="org.mxlinux.pkexec.mx-tweak.rootcheck">
+  <action id="org.mxlinux.pkexec.mx-tweak.check">
     <message>MX-Tweak:  Authentication is required to proceed</message>
     <icon_name>mx-tweak</icon_name>
     <defaults>
@@ -32,6 +32,16 @@
       <allow_active>yes</allow_active>
     </defaults>
     <annotate key="org.freedesktop.policykit.exec.path">/usr/lib/mx-tweak/mx-tweak-check.sh</annotate>
+  </action>
+  <action id="org.mxlinux.pkexec.mx-tweak.rootcheck">
+    <message>MX-Tweak:  Authentication is required to proceed</message>
+    <icon_name>mx-tweak</icon_name>
+    <defaults>
+      <allow_any>yes</allow_any>
+      <allow_inactive>yes</allow_inactive>
+      <allow_active>yes</allow_active>
+    </defaults>
+    <annotate key="org.freedesktop.policykit.exec.path">/usr/lib/mx-tweak/mx-tweak-rootcheck.sh</annotate>
   </action>
 
 </policyconfig>
