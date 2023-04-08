@@ -2,11 +2,9 @@
 
 set -e
 
-#if 55-tweak-override not present, assume root account is selected
+#cleanup some old configs from bullseye/buster
 if [ ! -e  /etc/poklit-1/localauthority.conf.d/55-tweak-override.conf ]; then
-	if [ ! -e /etc/polkit-1/rules.d/10-default-mx.rules ]; then
-  		cp /usr/share/mx-tweak/10-default-mx.rules /etc/polkit-1/rules.d/10-default-mx.rules
-	fi
+	rm /etc/poklit-1/localauthority.conf.d/55-tweak-override.conf
 fi
 
 exit 0
