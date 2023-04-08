@@ -1288,8 +1288,8 @@ void defaultlook::setupEtc()
 
     //setup sudo override function
 
-    QFileInfo sudo_override_file(QStringLiteral("/etc/polkit-1/localauthority.conf.d/55-tweak-override.conf"));
-    ui->radioSudoUser->setChecked(sudo_override_file.exists());
+    QFileInfo sudo_override_file(QStringLiteral("/etc/polkit-1/rules.d/10-default-mx.rules"));
+    ui->radioSudoUser->setChecked(!sudo_override_file.exists());
 
     //if root accout disabled, disable root authentication changes
     test = runCmd(QStringLiteral("pkexec /usr/lib/mx-tweak/mx-tweak-check.sh")).output;
