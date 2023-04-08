@@ -1,3 +1,10 @@
+mx-tweak (23.04.02mx23) mx; urgency=medium
+
+  * update for bookworm polkit configuration
+  * use 10-default-mx.rules for authentication override instead of 55-tweak-override.conf
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Fri, 07 Apr 2023 20:08:06 -0400
+
 mx-tweak (23.04.01) mx; urgency=medium
 
   * add feature to switch docklike for tasklist

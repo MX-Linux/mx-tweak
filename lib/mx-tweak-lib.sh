@@ -157,19 +157,20 @@ exit 0
 
 enable_sudo_override()
 {
-if [ -d /etc/polkit-1/rules.d/ ]; then
+
+    rm -f /etc/polkit-1/rules.d/10-default-mx.rules
+    
+}
+
+disable_sudo_override()
+{
+    if [ -d /etc/polkit-1/rules.d/ ]; then
     echo "/etc/polkit-1/rules.d found"
     else
     mkdir -p /etc/polkit-1/rules.d
     fi
     
     cp /usr/share/mx-tweak/10-default-mx.rules /etc/polkit-1/rules.d
-    
-}
-
-disable_sudo_override()
-{
-    rm -f /etc/polkit-1/rules.d/10-default-mx.rules
 
 }
 
