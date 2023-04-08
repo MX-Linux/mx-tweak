@@ -2167,7 +2167,7 @@ void defaultlook::on_ButtonApplyEtc_clicked()
 
     //deal with udisks option
     QFileInfo fileinfo(QStringLiteral("/etc/tweak-udisks.chk"));
-    QFileInfo sudo_override(QStringLiteral("/etc/polkit-1/localauthority.conf.d/55-tweak-override.conf"));
+    QFileInfo sudo_override(QStringLiteral("/etc/polkit-1/rules.d/10-default-mx.rules"));
     QString cmd;
     QString udisks_option;
     QString sudo_override_option;
@@ -2313,15 +2313,15 @@ void defaultlook::on_ButtonApplyEtc_clicked()
 
     if (ui->radioSudoUser->isChecked()) {
         if (sudo_override.exists()) {
-            if (verbose) qDebug() << "no change to admin password settings";
-        } else {
             sudo_override_option = QStringLiteral("enable_sudo_override");
+        } else {
+            if (verbose) qDebug() << "no change to admin password settings";
         }
     } else {
         if (sudo_override.exists()) {
-            sudo_override_option = QStringLiteral("disable_sudo_override");
-        } else {
             if (verbose) qDebug() << "no change to admin password settings";
+        } else {
+            sudo_override_option = QStringLiteral("disable_sudo_override");
         }
     }
 
