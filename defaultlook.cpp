@@ -1288,8 +1288,12 @@ void defaultlook::setupEtc()
 
     //setup sudo override function
 
-    QFileInfo sudo_override_file(QStringLiteral("/etc/polkit-1/localauthority.conf.d/55-tweak-override.conf"));
-    ui->radioSudoUser->setChecked(sudo_override_file.exists());
+    int rootest = runCmd(QStringLiteral("pkexec /usr/lib/mx-tweak/mx-tweak-rootcheck.sh")).exitCode;
+    if ( rootest == 0 ){
+        ui->radioSudoRoot->setChecked(true);
+    } else {
+        ui->radioSudoUser->setChecked(true);
+    }
 
     //if root accout disabled, disable root authentication changes
     test = runCmd(QStringLiteral("pkexec /usr/lib/mx-tweak/mx-tweak-check.sh")).output;
@@ -2043,6 +2047,12 @@ void defaultlook::on_buttonThemeApply_clicked()
     //set gtk theme
     runCmd("xfconf-query -c xsettings -p /Net/ThemeName -s " + xsettings_gtk_theme);
     runCmd(QStringLiteral("sleep .5"));
+    runCmd("gsettings set org.gnome.desktop.interface gtk-theme \"" + xsettings_gtk_theme + "\"");
+    if (xsettings_gtk_theme.contains("dark")){
+        runCmd("gsettings set org.gnome.desktop.interface color-scheme prefer-dark");
+    } else {
+        runCmd("gsettings set org.gnome.desktop.interface color-scheme default");
+    }
 
     //set window decorations theme
     runCmd("xfconf-query -c xfwm4 -p /general/theme -s " + xfwm4_window_decorations);
@@ -2167,7 +2177,7 @@ void defaultlook::on_ButtonApplyEtc_clicked()
 
     //deal with udisks option
     QFileInfo fileinfo(QStringLiteral("/etc/tweak-udisks.chk"));
-    QFileInfo sudo_override(QStringLiteral("/etc/polkit-1/localauthority.conf.d/55-tweak-override.conf"));
+    int sudooverride = runCmd(QStringLiteral("pkexec /usr/lib/mx-tweak/mx-tweak-rootcheck.sh")).exitCode;
     QString cmd;
     QString udisks_option;
     QString sudo_override_option;
@@ -2312,16 +2322,16 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     //deal with sudo override
 
     if (ui->radioSudoUser->isChecked()) {
-        if (sudo_override.exists()) {
-            if (verbose) qDebug() << "no change to admin password settings";
-        } else {
+        if (sudooverride == 0) {
             sudo_override_option = QStringLiteral("enable_sudo_override");
+        } else {
+            if (verbose) qDebug() << "no change to admin password settings";
         }
     } else {
-        if (sudo_override.exists()) {
-            sudo_override_option = QStringLiteral("disable_sudo_override");
-        } else {
+        if (sudooverride == 0) {
             if (verbose) qDebug() << "no change to admin password settings";
+        } else {
+            sudo_override_option = QStringLiteral("disable_sudo_override");
         }
     }
 
@@ -3408,9 +3418,18 @@ void defaultlook::populatethemelists(const QString &value)
 void defaultlook::settheme(const QString &type, const QString &theme, const QString &desktop)
 {   //set new theme
     QString cmd;
+    QString cmd1;
+    QString cmd2;
+
     if ( desktop == "XFCE" ) {
         if ( type == QLatin1String("gtk-3.0") ) {
             cmd = "xfconf-query -c xsettings -p /Net/ThemeName -s \"" + theme + "\"";
+            cmd1 ="gsettings set org.gnome.desktop.interface gtk-theme \"" + theme + "\"";
+            if (theme.contains("dark")){
+                cmd2="gsettings set org.gnome.desktop.interface color-scheme prefer-dark";
+            } else {
+                cmd2="gsettings set org.gnome.desktop.interface color-scheme default";
+            }
         }
         if ( type == QLatin1String("xfwm4") ) {
             cmd = "xfconf-query -c xfwm4 -p /general/theme -s \"" + theme + "\"";
@@ -3427,6 +3446,12 @@ void defaultlook::settheme(const QString &type, const QString &theme, const QStr
             cmd = "yad --form --title \"Preview\"  --button:gtk-ok --field=Button:FBTN --field=Combobox:CBE --field=Checkbox:CHK --close-on-unfocus";
             system(cmd.toUtf8());
             cmd = "sed -i 's/gtk-theme-name=\".*/gtk-theme-name=\"" + theme + "\"/' $HOME/.gtkrc-2.0";
+            cmd1 ="gsettings set org.gnome.desktop.interface gtk-theme \"" + theme + "\"";
+            if (theme.contains("dark")){
+                cmd2="gsettings set org.gnome.desktop.interface color-scheme prefer-dark";
+            } else {
+                cmd2="gsettings set org.gnome.desktop.interface color-scheme default";
+            }
         }
         if ( type == QLatin1String("fluxbox") ) {
             QString filepath = home_path + "/.fluxbox/styles/" + theme;
@@ -3447,6 +3472,12 @@ void defaultlook::settheme(const QString &type, const QString &theme, const QStr
         }
     }
     system(cmd.toUtf8());
+    if (!cmd1.isEmpty()){
+        system(cmd1.toUtf8());
+    }
+    if (!cmd2.isEmpty()){
+        system(cmd2.toUtf8());
+    }
 }
 
 void defaultlook::on_listWidgetTheme_currentTextChanged(const QString &currentText)

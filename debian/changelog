@@ -1,3 +1,22 @@
+mx-tweak (23.04.04mx23) mx; urgency=medium
+
+  * use gsettings tool to change gtk4 theme
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 09 Apr 2023 17:20:44 -0400
+
+mx-tweak (23.04.03mx23) mx; urgency=medium
+
+  * adjust internal mount option
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 09 Apr 2023 10:25:18 -0400
+
+mx-tweak (23.04.02mx23) mx; urgency=medium
+
+  * update for bookworm polkit configuration
+  * use 10-default-mx.rules for authentication override instead of 55-tweak-override.conf
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Fri, 07 Apr 2023 20:08:06 -0400
+
 mx-tweak (23.04.01) mx; urgency=medium
 
   * add feature to switch docklike for tasklist

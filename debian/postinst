@@ -1,0 +1,18 @@
+#! /bin/sh
+
+set -e
+
+#cleanup some old configs from bullseye/buster
+if [ -e  /etc/polkit-1/localauthority.conf.d/55-tweak-override.conf ]; then
+	rm /etc/polkit-1/localauthority.conf.d/55-tweak-override.conf
+fi
+
+if [ -e  /etc/polkit-1/localauthority/50-local.d/50-udisks.pkla ]; then
+	rm /etc/polkit-1/localauthority/50-local.d/50-udisks.pkla
+fi
+
+if [ -e  /etc/tweak-udisks.chk ]; then
+	rm /etc/tweak-udisks.chk
+fi
+
+exit 0

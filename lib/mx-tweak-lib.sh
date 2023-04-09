@@ -102,19 +102,19 @@ cp /etc/lightdm/mx$(grep DISTRIB_RELEASE /etc/lsb-release |cut -d\= -f2|cut -d\.
 #the purpose is to enable/disable user mounting of internal devices
 enable_user_mount()
 {
-    if [ -d /etc/polkit-1/localauthority/50-local.d ]; then
-    echo "/etc/polkit-1/localauthority/50-local.d found"
+    if [ -d /etc/polkit-1/rules.d]; then
+    echo "/etc/polkit-1/rules.d found"
     else
-    mkdir -p /etc/polkit-1/localauthority/50-local.d
+    mkdir -p /etc/polkit-1/rules.d
     fi
     
-    cp /usr/share/mx-tweak/50-udisks.pkla /etc/polkit-1/localauthority/50-local.d/50-udisks.pkla 
+    cp /usr/share/mx-tweak/10-udisks2.rules /etc/polkit-1/rules.d/10-udisks2.rules 
     touch /etc/tweak-udisks.chk
 }
 
 disable_user_mount()
 {
-    rm -f /etc/polkit-1/localauthority/50-local.d/50-udisks.pkla
+    rm -f /etc/polkit-1/rules.d/10-udisks2.rules 
     rm -f /etc/tweak-udisks.chk
     
 }
@@ -157,19 +157,20 @@ exit 0
 
 enable_sudo_override()
 {
-if [ -d /etc/polkit-1/localauthority.conf.d/ ]; then
-    echo "/etc/polkit-1/localauthority/50-local.d found"
-    else
-    mkdir -p /etc/polkit-1/localauthority.conf.d
-    fi
-    
-    cp /usr/share/mx-tweak/55-tweak-override.conf /etc/polkit-1/localauthority.conf.d
+
+    rm -f /etc/polkit-1/rules.d/10-default-mx.rules
     
 }
 
 disable_sudo_override()
 {
-    rm -f /etc/polkit-1/localauthority.conf.d/55-tweak-override.conf
+    if [ -d /etc/polkit-1/rules.d/ ]; then
+    echo "/etc/polkit-1/rules.d found"
+    else
+    mkdir -p /etc/polkit-1/rules.d
+    fi
+    
+    cp /usr/share/mx-tweak/10-default-mx.rules /etc/polkit-1/rules.d
 
 }
 
