@@ -108,13 +108,13 @@ enable_user_mount()
     mkdir -p /etc/polkit-1/rules.d
     fi
     
-    cp /usr/share/mx-tweak/10-udisks2.rules /etc/polkit-1/10-udisks2.rules 
+    cp /usr/share/mx-tweak/10-udisks2.rules /etc/polkit-1/rules.d/10-udisks2.rules 
     touch /etc/tweak-udisks.chk
 }
 
 disable_user_mount()
 {
-    rm -f /etc/polkit-1/10-udisks2.rules 
+    rm -f /etc/polkit-1/rules.d/10-udisks2.rules 
     rm -f /etc/tweak-udisks.chk
     
 }
