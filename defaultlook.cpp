@@ -3412,9 +3412,18 @@ void defaultlook::populatethemelists(const QString &value)
 void defaultlook::settheme(const QString &type, const QString &theme, const QString &desktop)
 {   //set new theme
     QString cmd;
+    QString cmd1;
+    QString cmd2;
+
     if ( desktop == "XFCE" ) {
         if ( type == QLatin1String("gtk-3.0") ) {
             cmd = "xfconf-query -c xsettings -p /Net/ThemeName -s \"" + theme + "\"";
+            cmd1 ="gsettings set org.gnome.desktop.interface gtk-theme \"" + theme + "\"";
+            if (theme.contains("dark")){
+                cmd2="gsettings set org.gnome.desktop.interface color-scheme prefer-dark";
+            } else {
+                cmd2="gsettings set org.gnome.desktop.interface color-scheme default";
+            }
         }
         if ( type == QLatin1String("xfwm4") ) {
             cmd = "xfconf-query -c xfwm4 -p /general/theme -s \"" + theme + "\"";
@@ -3431,6 +3440,12 @@ void defaultlook::settheme(const QString &type, const QString &theme, const QStr
             cmd = "yad --form --title \"Preview\"  --button:gtk-ok --field=Button:FBTN --field=Combobox:CBE --field=Checkbox:CHK --close-on-unfocus";
             system(cmd.toUtf8());
             cmd = "sed -i 's/gtk-theme-name=\".*/gtk-theme-name=\"" + theme + "\"/' $HOME/.gtkrc-2.0";
+            cmd1 ="gsettings set org.gnome.desktop.interface gtk-theme \"" + theme + "\"";
+            if (theme.contains("dark")){
+                cmd2="gsettings set org.gnome.desktop.interface color-scheme prefer-dark";
+            } else {
+                cmd2="gsettings set org.gnome.desktop.interface color-scheme default";
+            }
         }
         if ( type == QLatin1String("fluxbox") ) {
             QString filepath = home_path + "/.fluxbox/styles/" + theme;
@@ -3451,6 +3466,12 @@ void defaultlook::settheme(const QString &type, const QString &theme, const QStr
         }
     }
     system(cmd.toUtf8());
+    if (!cmd1.isEmpty()){
+        system(cmd1.toUtf8());
+    }
+    if (!cmd2.isEmpty()){
+        system(cmd2.toUtf8());
+    }
 }
 
 void defaultlook::on_listWidgetTheme_currentTextChanged(const QString &currentText)

@@ -1,3 +1,9 @@
+mx-tweak (23.04.04mx23) mx; urgency=medium
+
+  * use gsettings tool to change gtk4 theme
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 09 Apr 2023 17:20:44 -0400
+
 mx-tweak (23.04.03mx23) mx; urgency=medium
 
   * adjust internal mount option

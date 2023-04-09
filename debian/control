@@ -11,7 +11,8 @@ Architecture: any
 Depends: ${misc:Depends},
         ${shlibs:Depends},
         mx-viewer | xdg-utils,
-        mx-tweak-data
+        mx-tweak-data,
+        libglib2.0-bin
 Recommends: compton,
         compton-conf,
         gtk3-nocsd
