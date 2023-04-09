@@ -102,19 +102,19 @@ cp /etc/lightdm/mx$(grep DISTRIB_RELEASE /etc/lsb-release |cut -d\= -f2|cut -d\.
 #the purpose is to enable/disable user mounting of internal devices
 enable_user_mount()
 {
-    if [ -d /etc/polkit-1/localauthority/50-local.d ]; then
-    echo "/etc/polkit-1/localauthority/50-local.d found"
+    if [ -d /etc/polkit-1/rules.d]; then
+    echo "/etc/polkit-1/rules.d found"
     else
-    mkdir -p /etc/polkit-1/localauthority/50-local.d
+    mkdir -p /etc/polkit-1/rules.d
     fi
     
-    cp /usr/share/mx-tweak/50-udisks.pkla /etc/polkit-1/localauthority/50-local.d/50-udisks.pkla 
+    cp /usr/share/mx-tweak/10-udisks2.rules /etc/polkit-1/10-udisks2.rules 
     touch /etc/tweak-udisks.chk
 }
 
 disable_user_mount()
 {
-    rm -f /etc/polkit-1/localauthority/50-local.d/50-udisks.pkla
+    rm -f /etc/polkit-1/10-udisks2.rules 
     rm -f /etc/tweak-udisks.chk
     
 }

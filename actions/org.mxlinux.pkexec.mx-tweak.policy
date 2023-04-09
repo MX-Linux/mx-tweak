@@ -43,5 +43,4 @@
     </defaults>
     <annotate key="org.freedesktop.policykit.exec.path">/usr/lib/mx-tweak/mx-tweak-rootcheck.sh</annotate>
   </action>
-
 </policyconfig>
