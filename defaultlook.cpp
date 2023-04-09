@@ -2047,6 +2047,12 @@ void defaultlook::on_buttonThemeApply_clicked()
     //set gtk theme
     runCmd("xfconf-query -c xsettings -p /Net/ThemeName -s " + xsettings_gtk_theme);
     runCmd(QStringLiteral("sleep .5"));
+    runCmd("gsettings set org.gnome.desktop.interface gtk-theme \"" + xsettings_gtk_theme + "\"");
+    if (xsettings_gtk_theme.contains("dark")){
+        runCmd("gsettings set org.gnome.desktop.interface color-scheme prefer-dark");
+    } else {
+        runCmd("gsettings set org.gnome.desktop.interface color-scheme default");
+    }
 
     //set window decorations theme
     runCmd("xfconf-query -c xfwm4 -p /general/theme -s " + xfwm4_window_decorations);
