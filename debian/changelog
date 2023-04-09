@@ -1,3 +1,9 @@
+mx-tweak (23.04.03mx23) mx; urgency=medium
+
+  * adjust internal mount option
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 09 Apr 2023 10:25:18 -0400
+
 mx-tweak (23.04.02mx23) mx; urgency=medium
 
   * update for bookworm polkit configuration
