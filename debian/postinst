@@ -12,7 +12,7 @@ if [ -e  /etc/polkit-1/localauthority/50-local.d/50-udisks.pkla ]; then
 fi
 
 if [ -e  rm /etc/tweak-udisks.chk ]; then
-	rm rm /etc/tweak-udisks.chk
+	rm /etc/tweak-udisks.chk
 fi
 
 exit 0
