@@ -690,9 +690,8 @@ void defaultlook::backupPanel()
         QString path = home_path + "/.restore/" + ui->lineEditBackupName->text() + ".tar.xz";
         qDebug() << path;
         //check filename existence
-        if ( QFileInfo(path).exists()){
-            QMessageBox::information(nullptr, tr("MX Tweak"),
-                                     tr("File name already exists.  Choose another name"));
+        if (QFileInfo::exists(path)) {
+            QMessageBox::information(nullptr, tr("MX Tweak"), tr("File name already exists.  Choose another name"));
         } else {
             path = "$HOME/.restore/\"" + ui->lineEditBackupName->text() + ".tar.xz\"";
             runCmd("tar --create --xz --file=" + path + " --directory=$HOME/.config/xfce4 panel xfconf/xfce-perchannel-xml/xfce4-panel.xml");
@@ -2627,7 +2626,6 @@ void defaultlook::on_radioSudoRoot_clicked()
 
 void defaultlook::on_ButtonApplyMiscDefualts_clicked()
 {
-    QString cmd;
     QString hibernate_option;
     hibernate_option.clear();
 
@@ -3483,8 +3481,7 @@ void defaultlook::settheme(const QString &type, const QString &theme, const QStr
 void defaultlook::on_listWidgetTheme_currentTextChanged(const QString &currentText)
 {
     if ( themeflag ) {
-        QString desktop;
-        if (checkXFCE()){
+        if (checkXFCE()) {
             settheme(QStringLiteral("gtk-3.0"), currentText, "XFCE");
         } else if (checkFluxbox()){
             settheme(QStringLiteral("gtk-3.0"), currentText, "fluxbox");
@@ -3495,8 +3492,7 @@ void defaultlook::on_listWidgetTheme_currentTextChanged(const QString &currentTe
 void defaultlook::on_listWidgetWMtheme_currentTextChanged(const QString &currentText) const
 {
     if ( themeflag ) {
-        QString desktop;
-        if (checkXFCE()){
+        if (checkXFCE()) {
             settheme(QStringLiteral("xfwm4"), currentText, "XFCE");
         } else if (checkFluxbox()){
             settheme(QStringLiteral("fluxbox"), currentText, "fluxbox");
@@ -3508,7 +3504,7 @@ void defaultlook::on_listWidgetWMtheme_currentTextChanged(const QString &current
 void defaultlook::on_listWidgeticons_currentTextChanged(const QString &currentText) const
 {
     if ( themeflag ) {
-        if (checkXFCE()){
+        if (checkXFCE()) {
             settheme(QStringLiteral("icons"), currentText, "XFCE");
         } else if (checkFluxbox()){
             settheme(QStringLiteral("icons"), currentText, "fluxbox");
@@ -3551,11 +3547,7 @@ void defaultlook::on_checkBoxFileDialogActionButtonsPosition_clicked()
 void defaultlook::on_checkBoxbluetoothAutoEnable_clicked()
 {
     ui->ButtonApplyEtc->setEnabled(true);
-    if (!bluetoothautoenableflag) {
-        bluetoothautoenableflag = true;
-    } else {
-        bluetoothautoenableflag = false;
-    }
+    bluetoothautoenableflag = !bluetoothautoenableflag;
     qDebug() << "bluetooth flag is " << bluetoothautoenableflag;
 }
 
@@ -3709,16 +3701,12 @@ QString defaultlook::get_tasklistid(){
 
 
 
-void defaultlook::on_comboBoxTasklistPlugin_currentIndexChanged(int index)
+void defaultlook::on_comboBoxTasklistPlugin_currentIndexChanged(int /*index*/)
 {
     //toggle tasklistflag
     //changing tasklistflag only happens if block is actually changed
 
-    if ( tasklistflag ){
-        tasklistflag = false;
-    } else {
-        tasklistflag = true;
-    }
+    tasklistflag = !tasklistflag;
     qDebug() << "tasklist flag is " << tasklistflag;
 }
 

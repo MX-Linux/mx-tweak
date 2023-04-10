@@ -280,7 +280,7 @@ private slots:
 
     void on_radioButtonTasklist_clicked();
 
-    void on_comboBoxTasklistPlugin_currentIndexChanged(int index);
+    void on_comboBoxTasklistPlugin_currentIndexChanged(int);
 
 private:
     Ui::defaultlook *ui;
