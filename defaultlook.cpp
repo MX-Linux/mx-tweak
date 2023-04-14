@@ -1016,7 +1016,7 @@ void defaultlook::setuppanel()
     }
 
     if (!QFileInfo(home_path + "/.config/gtk-3.0/xfce4-panel-tweaks.css").exists()) {
-        QString cmd = "cp /usr/share/mx-tweak/xfce4-panel-tweaks.css " + home_path + "/.config/gtk3.0/";
+        QString cmd = "cp /usr/share/mx-tweak/xfce4-panel-tweaks.css " + home_path + "/.config/gtk-3.0/";
         system(cmd.toUtf8());
     }
     //check for existence of plugins before running these commands, hide buttons and labels if not present.
