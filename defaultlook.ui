@@ -152,7 +152,7 @@
       <enum>QTabWidget::North</enum>
      </property>
      <property name="currentIndex">
-      <number>7</number>
+      <number>6</number>
      </property>
      <widget class="QWidget" name="Panel">
       <attribute name="title">
@@ -1526,15 +1526,10 @@
       <layout class="QGridLayout" name="gridLayout_17">
        <item row="0" column="0">
         <layout class="QGridLayout" name="gridLayout_16">
-         <item row="0" column="0">
-          <widget class="QLabel" name="label_22">
-           <property name="font">
-            <font>
-             <bold>true</bold>
-            </font>
-           </property>
+         <item row="6" column="0" colspan="2">
+          <widget class="QCheckBox" name="checkboxplasmaresetdock">
            <property name="text">
-            <string>Affects 1st panel</string>
+            <string>Reset KDE/Plasma defaults</string>
            </property>
           </widget>
          </item>
@@ -1572,62 +1567,41 @@
            </item>
           </widget>
          </item>
-         <item row="1" column="2">
-          <widget class="QLabel" name="label_27">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_22">
+           <property name="font">
+            <font>
+             <bold>true</bold>
+            </font>
+           </property>
            <property name="text">
-            <string>Systray Icon Size</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            <string>Affects 1st panel</string>
            </property>
           </widget>
          </item>
-         <item row="1" column="3">
-          <widget class="QComboBox" name="comboBoxPlasmaSystrayIcons">
-           <item>
-            <property name="text">
-             <string>Default</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Small</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Medium</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Large</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Larger</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Largest</string>
-            </property>
-           </item>
-          </widget>
-         </item>
-         <item row="1" column="4">
-          <spacer name="horizontalSpacer_7">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
+         <item row="8" column="0" colspan="3">
+          <widget class="QPushButton" name="ButtonApplyPlasma">
+           <property name="minimumSize">
             <size>
-             <width>40</width>
-             <height>20</height>
+             <width>0</width>
+             <height>32</height>
             </size>
            </property>
-          </spacer>
+           <property name="text">
+            <string>Apply</string>
+           </property>
+           <property name="icon">
+            <iconset theme="dialog-ok">
+             <normaloff>.</normaloff>.</iconset>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="label_24">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
          </item>
          <item row="2" column="0">
           <widget class="QLabel" name="label_23">
@@ -1648,27 +1622,6 @@
            </property>
           </widget>
          </item>
-         <item row="4" column="0" colspan="2">
-          <widget class="QCheckBox" name="checkBoxPlasmaShowAllWorkspaces">
-           <property name="text">
-            <string>Show windows from all workspaces in panel</string>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="0">
-          <widget class="QLabel" name="label_24">
-           <property name="text">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="6" column="0" colspan="2">
-          <widget class="QCheckBox" name="checkboxplasmaresetdock">
-           <property name="text">
-            <string>Reset KDE/Plasma defaults</string>
-           </property>
-          </widget>
-         </item>
          <item row="7" column="0">
           <spacer name="verticalSpacer_12">
            <property name="orientation">
@@ -1682,20 +1635,23 @@
            </property>
           </spacer>
          </item>
-         <item row="8" column="0" colspan="5">
-          <widget class="QPushButton" name="ButtonApplyPlasma">
-           <property name="minimumSize">
+         <item row="1" column="2">
+          <spacer name="horizontalSpacer_7">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
             <size>
-             <width>0</width>
-             <height>32</height>
+             <width>40</width>
+             <height>20</height>
             </size>
            </property>
+          </spacer>
+         </item>
+         <item row="4" column="0" colspan="2">
+          <widget class="QCheckBox" name="checkBoxPlasmaShowAllWorkspaces">
            <property name="text">
-            <string>Apply</string>
-           </property>
-           <property name="icon">
-            <iconset theme="dialog-ok">
-             <normaloff>.</normaloff>.</iconset>
+            <string>Show windows from all workspaces in panel</string>
            </property>
           </widget>
          </item>
