@@ -7,7 +7,7 @@ license.html            usr/share/doc/mx-tweak
 help/*					usr/share/doc/mx-tweak
 #firefox			usr/local/bin
 hexchat.conf            usr/share/mx-tweak
-mx-tweak.png		usr/share/icons/hicolor/48x48/apps
+mx-tweak.png		usr/share/icons/hicolor/64x64/apps
 brightness-systray.png usr/share/icons/hicolor/48x48/apps
 mx-tweak.svg		usr/share/icons/hicolor/scalable/apps
 brightness-systray.png  usr/share/pixmaps
