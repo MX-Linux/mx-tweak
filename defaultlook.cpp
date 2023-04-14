@@ -593,6 +593,13 @@ void defaultlook::on_buttonApply_clicked()
         }
         runCmd(QStringLiteral("sleep .5"));
     }
+
+    if (ui->radioButtonSetPanelPluginScales->isChecked()){
+        runCmd("sed -i '/xfce4-power-manager-plugin/,/\\}/ s/scale(.*)/scale(" + QString::number(ui->doubleSpinBoxpmplugin->value()) + ")/' ~/.config/gtk-3.0/xfce4-panel-tweaks.css");
+        runCmd("sed -i '/pulseaudio/,/\\}/ s/scale(.*)/scale(" + QString::number(ui->doubleSpinBoxpaplugin->value()) + ")/' ~/.config/gtk-3.0/xfce4-panel-tweaks.css");
+        runCmd("xfce4-panel --restart");
+        setuppanel();
+    }
     if (! validateflag ){
         setuppanel();
     }
@@ -736,6 +743,9 @@ void defaultlook::on_checkHorz_clicked()
         ui->radioDefaultPanel->setChecked(false);
         ui->radioRestoreBackup->setChecked(false);
         ui->radioButtonTasklist->setChecked(false);
+        ui->radioButtonSetPanelPluginScales->setChecked(false);
+        ui->doubleSpinBoxpaplugin->setEnabled(false);
+        ui->doubleSpinBoxpmplugin->setEnabled(false);
     }
 }
 
@@ -748,6 +758,11 @@ void defaultlook::on_checkVert_clicked()
         ui->radioDefaultPanel->setChecked(false);
         ui->radioRestoreBackup->setChecked(false);
         ui->radioButtonTasklist->setChecked(false);
+        ui->radioButtonSetPanelPluginScales->setChecked(false);
+        ui->doubleSpinBoxpaplugin->setEnabled(false);
+        ui->doubleSpinBoxpmplugin->setEnabled(false);
+        ui->Label_Volume_plugin->setEnabled(false);
+        ui->Label_power_manager_plugin->setEnabled(false);
     }
 }
 
@@ -772,6 +787,11 @@ void defaultlook::on_radioDefaultPanel_clicked()
         ui->radioRestoreBackup->setChecked(false);
         ui->lineEditBackupName->hide();
         ui->radioButtonTasklist->setChecked(false);
+        ui->radioButtonSetPanelPluginScales->setChecked(false);
+        ui->doubleSpinBoxpaplugin->setEnabled(false);
+        ui->doubleSpinBoxpmplugin->setEnabled(false);
+        ui->Label_Volume_plugin->setEnabled(false);
+        ui->Label_power_manager_plugin->setEnabled(false);
     }
 }
 
@@ -786,6 +806,11 @@ void defaultlook::on_radioBackupPanel_clicked()
         ui->lineEditBackupName->setText("panel_backup_" + QDateTime::currentDateTime().toString("dd.MM.yyyy.hh.mm.ss"));
         ui->lineEditBackupName->show();
         ui->radioButtonTasklist->setChecked(false);
+        ui->radioButtonSetPanelPluginScales->setChecked(false);
+        ui->doubleSpinBoxpaplugin->setEnabled(false);
+        ui->doubleSpinBoxpmplugin->setEnabled(false);
+        ui->Label_Volume_plugin->setEnabled(false);
+        ui->Label_power_manager_plugin->setEnabled(false);
     }
 }
 
@@ -799,6 +824,11 @@ void defaultlook::on_radioRestoreBackup_clicked()
         ui->checkVert->setChecked(false);
         ui->lineEditBackupName->hide();
         ui->radioButtonTasklist->setChecked(false);
+        ui->radioButtonSetPanelPluginScales->setChecked(false);
+        ui->doubleSpinBoxpaplugin->setEnabled(false);
+        ui->doubleSpinBoxpmplugin->setEnabled(false);
+        ui->Label_Volume_plugin->setEnabled(false);
+        ui->Label_power_manager_plugin->setEnabled(false);
     }
 }
 
@@ -812,9 +842,32 @@ void defaultlook::on_radioButtonTasklist_clicked()
         ui->checkVert->setChecked(false);
         ui->lineEditBackupName->hide();
         ui->radioRestoreBackup->setChecked(false);
+        ui->radioButtonSetPanelPluginScales->setChecked(false);
+        ui->doubleSpinBoxpaplugin->setEnabled(false);
+        ui->doubleSpinBoxpmplugin->setEnabled(false);
+        ui->Label_Volume_plugin->setEnabled(false);
+        ui->Label_power_manager_plugin->setEnabled(false);
     }
 
  }
+
+void defaultlook::on_radioButtonSetPanelPluginScales_clicked()
+{
+    ui->buttonApply->setEnabled(true);
+    if (ui->radioButtonSetPanelPluginScales->isChecked()) {
+        ui->checkHorz->setChecked(false);
+        ui->radioBackupPanel->setChecked(false);
+        ui->radioDefaultPanel->setChecked(false);
+        ui->checkVert->setChecked(false);
+        ui->lineEditBackupName->hide();
+        ui->radioRestoreBackup->setChecked(false);
+        ui->radioButtonTasklist->setChecked(false);
+        ui->doubleSpinBoxpaplugin->setEnabled(true);
+        ui->doubleSpinBoxpmplugin->setEnabled(true);
+        ui->Label_Volume_plugin->setEnabled(true);
+        ui->Label_power_manager_plugin->setEnabled(true);
+    }
+}
 
 void defaultlook::top_or_bottom()
 {
@@ -944,6 +997,57 @@ void defaultlook::setuppanel()
         //message2();
     }
 
+    //setup pulseaudio plugin scale functoin
+    //get files setup if they don't exist
+    if (QFileInfo(home_path + "/.config/gtk-3.0/gtk.css").exists()) {
+        if (verbose) qDebug() << "existing gtk.css found";
+        QString cmd = "cat " + home_path + "/.config/gtk-3.0/gtk.css |grep -q xfce4-panel-tweaks.css";
+        if (system(cmd.toUtf8()) == 0 ) {
+            if (verbose) qDebug() << "include statement found";
+        } else {
+            if (verbose) qDebug() << "adding include statement";
+            QString cmd = "echo '@import url(\"xfce4-panel-tweaks.css\");' >> " + home_path + "/.config/gtk-3.0/gtk.css";
+            system(cmd.toUtf8());
+        }
+    } else {
+        if (verbose) qDebug() << "creating simple gtk.css file";
+        QString cmd = "echo '@import url(\"xfce4-panel-tweaks.css\");' >> " + home_path + "/.config/gtk-3.0/gtk.css";
+        system(cmd.toUtf8());
+    }
+
+    if (!QFileInfo(home_path + "/.config/gtk-3.0/xfce4-panel-tweaks.css").exists()) {
+        QString cmd = "cp /usr/share/mx-tweak/xfce4-panel-tweaks.css " + home_path + "/.config/gtk-3.0/";
+        system(cmd.toUtf8());
+    }
+    //check for existence of plugins before running these commands, hide buttons and labels if not present.
+    //Get value of scale
+    QString plugins = runCmd("grep plugin " + home_path + "/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
+    bool volumeplugin;
+    bool powerplugin;
+    if (plugins.contains("pulseaudio")){
+        ui->doubleSpinBoxpaplugin->setValue(runCmd("grep -A 1 pulseaudio " + home_path + "/.config/gtk-3.0/xfce4-panel-tweaks.css |grep scale |cut -d'(' -f2 |cut -d')' -f1").output.toDouble());
+        volumeplugin = true;
+    } else {
+        ui->doubleSpinBoxpaplugin->hide();
+        ui->Label_Volume_plugin->hide();
+        volumeplugin = false;
+    }
+    if (plugins.contains("power-manager-plugin")){
+        ui->doubleSpinBoxpmplugin->setValue(runCmd("grep -A 1 xfce4-power-manager-plugin " + home_path + "/.config/gtk-3.0/xfce4-panel-tweaks.css |grep scale |cut -d'(' -f2 |cut -d')' -f1").output.toDouble());
+        powerplugin = true;
+    } else {
+        ui->doubleSpinBoxpmplugin->hide();
+        ui->Label_power_manager_plugin->hide();
+        powerplugin = false;
+    }
+
+    if (! volumeplugin && ! powerplugin){
+        ui->label_panel_plugin_scales->hide();
+        ui->radioButtonSetPanelPluginScales->hide();
+    }
+
+
+
     ui->comboBoxAvailableBackups->clear();
     ui->lineEditBackupName->hide();
     ui->lineEditBackupName->setText("panel_backup_" + QDateTime::currentDateTime().toString("dd.MM.yyyy.hh.mm.ss"));
@@ -1020,6 +1124,9 @@ void defaultlook::setuppanel()
     ui->radioDefaultPanel->setChecked(false);
     ui->radioRestoreBackup->setChecked(false);
     ui->radioButtonTasklist->setChecked(false);
+    ui->radioButtonSetPanelPluginScales->setChecked(false);
+    ui->doubleSpinBoxpaplugin->setEnabled(false);
+    ui->doubleSpinBoxpmplugin->setEnabled(false);
 
     //only enable options that make sense
 
@@ -1082,34 +1189,6 @@ void defaultlook::setupPlasma()
         ui->checkBoxPlasmaShowAllWorkspaces->setChecked(false);
     } else {
         ui->checkBoxPlasmaShowAllWorkspaces->setChecked(true);
-    }
-
-    //setup icon size
-    QString systrayid = runCmd(QStringLiteral("grep -B 3 extraItems $HOME/.config/plasma-org.kde.plasma.desktop-appletsrc |grep Containment")).output.section(QStringLiteral("["),2,2).section(QStringLiteral("]"),0,0);
-    if (verbose) qDebug() << "systrayid is" << systrayid;
-    //read in config and set combobox
-    QString value = runCmd("kreadconfig5 --file ~/.config/plasma-org.kde.plasma.desktop-appletsrc --group Containments --group " + systrayid + " --group General --key iconSize").output;
-
-    switch(value.toInt()) {
-    case ValueSize::Default:
-        ui->comboBoxPlasmaSystrayIcons->setCurrentIndex(IconSize::Default);
-        break;
-    case ValueSize::Small:
-        ui->comboBoxPlasmaSystrayIcons->setCurrentIndex(IconSize::Small);
-        break;
-    case ValueSize::Medium:
-        ui->comboBoxPlasmaSystrayIcons->setCurrentIndex(IconSize::Medium);
-        break;
-    case ValueSize::Large:
-        ui->comboBoxPlasmaSystrayIcons->setCurrentIndex(IconSize::Large);
-        break;
-    case ValueSize::Larger:
-        ui->comboBoxPlasmaSystrayIcons->setCurrentIndex(IconSize::Larger);
-        break;
-    case ValueSize::Largest:
-        ui->comboBoxPlasmaSystrayIcons->setCurrentIndex(IconSize::Largest);
-        break;
-    default: ui->comboBoxPlasmaSystrayIcons->setCurrentIndex(IconSize::Default);
     }
 
     ui->ButtonApplyPlasma->setDisabled(true);
@@ -3257,34 +3336,6 @@ void defaultlook::on_ButtonApplyPlasma_clicked()
         runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-kde-edit.sh \"kwriteconfig5 --file /root/.config/kdeglobals --group KDE --key SingleClick " + value + "\"");
     }
 
-    if (plasmasystrayiconsizeflag) {
-        int index = ui->comboBoxPlasmaSystrayIcons->currentIndex();
-        QString systrayiconvalue;
-        switch(index) {
-        case IconSize::Default:
-            systrayiconvalue = QString::number(ValueSize::Default);
-            break;
-        case IconSize::Small:
-            systrayiconvalue = QString::number(ValueSize::Small);
-            break;
-        case IconSize::Medium:
-            systrayiconvalue = QString::number(ValueSize::Medium);
-            break;
-        case IconSize::Large:
-            systrayiconvalue = QString::number(ValueSize::Large);
-            break;
-        case IconSize::Larger:
-            systrayiconvalue = QString::number(ValueSize::Larger);
-            break;
-        case IconSize::Largest:
-            systrayiconvalue = QString::number(ValueSize::Largest);
-            break;
-        default: systrayiconvalue = QString::number(ValueSize::Default);
-        }
-        QString systrayid = runCmd(QStringLiteral("grep -B 3 extraItems $HOME/.config/plasma-org.kde.plasma.desktop-appletsrc |grep Containment")).output.section(QStringLiteral("["),2,2).section(QStringLiteral("]"),0,0);
-        runCmd("kwriteconfig5 --file ~/.config/plasma-org.kde.plasma.desktop-appletsrc --group Containments --group " + systrayid + " --group General --key iconSize " + systrayiconvalue);
-    }
-
     if (plasmaworkspacesflag) {
         QString value = ui->checkBoxPlasmaShowAllWorkspaces->isChecked() ? QStringLiteral("false") : QStringLiteral("true");
         writeTaskmanagerConfig(QStringLiteral("showOnlyCurrentDesktop"), value);
@@ -3746,3 +3797,6 @@ void defaultlook::tasklistchange(){
     runCmd(QStringLiteral("sleep .5"));
 
 }
+
+
+
