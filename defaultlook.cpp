@@ -1019,10 +1019,33 @@ void defaultlook::setuppanel()
         QString cmd = "cp /usr/share/mx-tweak/xfce4-panel-tweaks.css " + home_path + "/.config/gtk3.0/";
         system(cmd.toUtf8());
     }
-    //add check for existence of plugins before running these commands, hide buttons and labels if not present.
+    //check for existence of plugins before running these commands, hide buttons and labels if not present.
     //Get value of scale
-    ui->doubleSpinBoxpaplugin->setValue(runCmd("grep -A 1 pulseaudio " + home_path + "/.config/gtk-3.0/xfce4-panel-tweaks.css |grep scale |cut -d'(' -f2 |cut -d')' -f1").output.toDouble());
-    ui->doubleSpinBoxpmplugin->setValue(runCmd("grep -A 1 xfce4-power-manager-plugin " + home_path + "/.config/gtk-3.0/xfce4-panel-tweaks.css |grep scale |cut -d'(' -f2 |cut -d')' -f1").output.toDouble());
+    QString plugins = runCmd("grep plugin " + home_path + "/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml").output;
+    bool volumeplugin;
+    bool powerplugin;
+    if (plugins.contains("pulseaudio")){
+        ui->doubleSpinBoxpaplugin->setValue(runCmd("grep -A 1 pulseaudio " + home_path + "/.config/gtk-3.0/xfce4-panel-tweaks.css |grep scale |cut -d'(' -f2 |cut -d')' -f1").output.toDouble());
+        volumeplugin = true;
+    } else {
+        ui->doubleSpinBoxpaplugin->hide();
+        ui->Label_Volume_plugin->hide();
+        volumeplugin = false;
+    }
+    if (plugins.contains("power-manager-plugin")){
+        ui->doubleSpinBoxpmplugin->setValue(runCmd("grep -A 1 xfce4-power-manager-plugin " + home_path + "/.config/gtk-3.0/xfce4-panel-tweaks.css |grep scale |cut -d'(' -f2 |cut -d')' -f1").output.toDouble());
+        powerplugin = true;
+    } else {
+        ui->doubleSpinBoxpmplugin->hide();
+        ui->Label_power_manager_plugin->hide();
+        powerplugin = false;
+    }
+
+    if (! volumeplugin && ! powerplugin){
+        ui->label_panel_plugin_scales->hide();
+        ui->radioButtonSetPanelPluginScales->hide();
+    }
+
 
 
     ui->comboBoxAvailableBackups->clear();
