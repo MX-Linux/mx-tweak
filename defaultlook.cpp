@@ -1084,34 +1084,6 @@ void defaultlook::setupPlasma()
         ui->checkBoxPlasmaShowAllWorkspaces->setChecked(true);
     }
 
-    //setup icon size
-    QString systrayid = runCmd(QStringLiteral("grep -B 3 extraItems $HOME/.config/plasma-org.kde.plasma.desktop-appletsrc |grep Containment")).output.section(QStringLiteral("["),2,2).section(QStringLiteral("]"),0,0);
-    if (verbose) qDebug() << "systrayid is" << systrayid;
-    //read in config and set combobox
-    QString value = runCmd("kreadconfig5 --file ~/.config/plasma-org.kde.plasma.desktop-appletsrc --group Containments --group " + systrayid + " --group General --key iconSize").output;
-
-    switch(value.toInt()) {
-    case ValueSize::Default:
-        ui->comboBoxPlasmaSystrayIcons->setCurrentIndex(IconSize::Default);
-        break;
-    case ValueSize::Small:
-        ui->comboBoxPlasmaSystrayIcons->setCurrentIndex(IconSize::Small);
-        break;
-    case ValueSize::Medium:
-        ui->comboBoxPlasmaSystrayIcons->setCurrentIndex(IconSize::Medium);
-        break;
-    case ValueSize::Large:
-        ui->comboBoxPlasmaSystrayIcons->setCurrentIndex(IconSize::Large);
-        break;
-    case ValueSize::Larger:
-        ui->comboBoxPlasmaSystrayIcons->setCurrentIndex(IconSize::Larger);
-        break;
-    case ValueSize::Largest:
-        ui->comboBoxPlasmaSystrayIcons->setCurrentIndex(IconSize::Largest);
-        break;
-    default: ui->comboBoxPlasmaSystrayIcons->setCurrentIndex(IconSize::Default);
-    }
-
     ui->ButtonApplyPlasma->setDisabled(true);
 
     ui->checkboxplasmaresetdock->setChecked(false);
@@ -3255,34 +3227,6 @@ void defaultlook::on_ButtonApplyPlasma_clicked()
         QString value = ui->checkBoxPlasmaSingleClick->isChecked() ? QStringLiteral("true") : QStringLiteral("false");
         runCmd("kwriteconfig5 --group KDE --key SingleClick " + value);
         runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-kde-edit.sh \"kwriteconfig5 --file /root/.config/kdeglobals --group KDE --key SingleClick " + value + "\"");
-    }
-
-    if (plasmasystrayiconsizeflag) {
-        int index = ui->comboBoxPlasmaSystrayIcons->currentIndex();
-        QString systrayiconvalue;
-        switch(index) {
-        case IconSize::Default:
-            systrayiconvalue = QString::number(ValueSize::Default);
-            break;
-        case IconSize::Small:
-            systrayiconvalue = QString::number(ValueSize::Small);
-            break;
-        case IconSize::Medium:
-            systrayiconvalue = QString::number(ValueSize::Medium);
-            break;
-        case IconSize::Large:
-            systrayiconvalue = QString::number(ValueSize::Large);
-            break;
-        case IconSize::Larger:
-            systrayiconvalue = QString::number(ValueSize::Larger);
-            break;
-        case IconSize::Largest:
-            systrayiconvalue = QString::number(ValueSize::Largest);
-            break;
-        default: systrayiconvalue = QString::number(ValueSize::Default);
-        }
-        QString systrayid = runCmd(QStringLiteral("grep -B 3 extraItems $HOME/.config/plasma-org.kde.plasma.desktop-appletsrc |grep Containment")).output.section(QStringLiteral("["),2,2).section(QStringLiteral("]"),0,0);
-        runCmd("kwriteconfig5 --file ~/.config/plasma-org.kde.plasma.desktop-appletsrc --group Containments --group " + systrayid + " --group General --key iconSize " + systrayiconvalue);
     }
 
     if (plasmaworkspacesflag) {

@@ -1,5 +1,12 @@
 mx-tweak (23.04.04mx23) mx; urgency=medium
 
+  * remove non-working plasma systray icon size function
+  * new menu icons
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Thu, 13 Apr 2023 20:02:01 -0400
+
+mx-tweak (23.04.04mx23) mx; urgency=medium
+
   * use gsettings tool to change gtk4 theme
 
  -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 09 Apr 2023 17:20:44 -0400
