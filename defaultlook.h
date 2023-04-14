@@ -282,6 +282,8 @@ private slots:
 
     void on_comboBoxTasklistPlugin_currentIndexChanged(int);
 
+    void on_radioButtonSetPanelPluginScales_clicked();
+
 private:
     Ui::defaultlook *ui;
 };
