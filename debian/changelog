@@ -1,7 +1,8 @@
-mx-tweak (23.04.04mx23) mx; urgency=medium
+mx-tweak (23.04.05mx23) mx; urgency=medium
 
   * remove non-working plasma systray icon size function
   * new menu icons
+  * Xfce panel plugin scaling
 
  -- Dolphin Oracle <dolphinoracle@gmail.com>  Thu, 13 Apr 2023 20:02:01 -0400
 
