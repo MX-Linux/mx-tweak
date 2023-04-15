@@ -1602,6 +1602,10 @@ void defaultlook::setupConfigoptions()
             ui->checkBoxShowAllWorkspaces->setEnabled(false);
         }
 
+        // set percentages in notifications
+        test = runCmd(QStringLiteral("xfconf-query -c xfce4-notifyd -p /show-text-with-gauge")).output;
+        ui->checkBoxNotificatonPercentages->setChecked(test == QLatin1String("true"));
+
         //switch zoom_desktop
 
         test = runCmd(QStringLiteral("xfconf-query -c xfwm4 -p /general/zoom_desktop")).output;
@@ -2741,6 +2745,13 @@ void defaultlook::on_ButtonApplyMiscDefualts_clicked()
         thunarsplitviewhorizontal(false);
     }
     //systray frame removed
+
+    //notification percentages
+    if (ui->checkBoxNotificatonPercentages->isChecked()){
+        runCmd("xfconf-query -c xfce4-notifyd -p /show-text-with-gauge -t bool -s true --create");
+    } else {
+        runCmd("xfconf-query -c xfce4-notifyd -p /show-text-with-gauge --reset");
+    }
 
     //set desktop zoom
     if (ui->checkBoxDesktopZoom->isChecked()) {

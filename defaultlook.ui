@@ -152,7 +152,7 @@
       <enum>QTabWidget::North</enum>
      </property>
      <property name="currentIndex">
-      <number>0</number>
+      <number>4</number>
      </property>
      <widget class="QWidget" name="Panel">
       <attribute name="title">
@@ -1024,66 +1024,21 @@
       <layout class="QGridLayout" name="gridLayout_18">
        <item row="0" column="0">
         <layout class="QGridLayout" name="gridLayout_11">
-         <item row="2" column="0">
-          <widget class="QCheckBox" name="checkBoxThunarSingleClick">
-           <property name="text">
-            <string>Enable single-click in Thunar File Manager</string>
-           </property>
-          </widget>
-         </item>
-         <item row="8" column="0">
-          <widget class="QLabel" name="label_Xfce_CSD">
-           <property name="text">
-            <string>( also turns off Client Side Decorations for Xfce applications)</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="11" column="0" colspan="2">
-          <widget class="QLabel" name="label_hibernate">
-           <property name="text">
-            <string>                   note: to hibernate, swap needs to be &gt;= RAM</string>
-           </property>
-          </widget>
-         </item>
-         <item row="6" column="0">
-          <widget class="QCheckBox" name="checkBoxShowAllWorkspaces">
-           <property name="text">
-            <string>Show windows from all workspaces in panel</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="0">
-          <widget class="QCheckBox" name="checkBoxThunarSplitView">
-           <property name="text">
-            <string>Thunar windows always open in split view</string>
-           </property>
-          </widget>
-         </item>
          <item row="10" column="0" colspan="2">
-          <widget class="QCheckBox" name="checkBoxHibernate">
-           <property name="text">
-            <string>Enable hibernate on Log Out menu </string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0">
-          <widget class="QCheckBox" name="checkBoxSingleClick">
-           <property name="text">
-            <string>Enable single-click on desktop</string>
-           </property>
-          </widget>
-         </item>
-         <item row="9" column="0" colspan="2">
           <widget class="QCheckBox" name="checkboxNoEllipse">
            <property name="text">
             <string>Disable shortening of long filenames on the desktop</string>
            </property>
           </widget>
          </item>
-         <item row="13" column="0" colspan="2">
+         <item row="8" column="0">
+          <widget class="QCheckBox" name="checkBoxFileDialogActionButtonsPosition">
+           <property name="text">
+            <string>Show GTK File Dialog action buttons at bottom of dialogs</string>
+           </property>
+          </widget>
+         </item>
+         <item row="14" column="0" colspan="2">
           <widget class="QPushButton" name="ButtonApplyMiscDefualts">
            <property name="minimumSize">
             <size>
@@ -1100,14 +1055,14 @@
            </property>
           </widget>
          </item>
-         <item row="7" column="0">
-          <widget class="QCheckBox" name="checkBoxFileDialogActionButtonsPosition">
+         <item row="11" column="0" colspan="2">
+          <widget class="QCheckBox" name="checkBoxHibernate">
            <property name="text">
-            <string>Show GTK File Dialog action buttons at bottom of dialogs</string>
+            <string>Enable hibernate on Log Out menu </string>
            </property>
           </widget>
          </item>
-         <item row="12" column="1">
+         <item row="13" column="1">
           <spacer name="verticalSpacer_10">
            <property name="orientation">
             <enum>Qt::Vertical</enum>
@@ -1120,6 +1075,20 @@
            </property>
           </spacer>
          </item>
+         <item row="12" column="0" colspan="2">
+          <widget class="QLabel" name="label_hibernate">
+           <property name="text">
+            <string>                   note: to hibernate, swap needs to be &gt;= RAM</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="0">
+          <widget class="QCheckBox" name="checkBoxShowAllWorkspaces">
+           <property name="text">
+            <string>Show windows from all workspaces in panel</string>
+           </property>
+          </widget>
+         </item>
          <item row="0" column="0" colspan="2">
           <widget class="QCheckBox" name="checkBoxThunarCAReset">
            <property name="text">
@@ -1127,10 +1096,17 @@
            </property>
           </widget>
          </item>
-         <item row="5" column="0">
-          <widget class="QCheckBox" name="checkBoxDesktopZoom">
+         <item row="3" column="0">
+          <widget class="QCheckBox" name="checkBoxThunarSplitView">
            <property name="text">
-            <string>Enable Desktop Zoom </string>
+            <string>Thunar windows always open in split view</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QCheckBox" name="checkBoxSingleClick">
+           <property name="text">
+            <string>Enable single-click on desktop</string>
            </property>
           </widget>
          </item>
@@ -1138,6 +1114,37 @@
           <widget class="QCheckBox" name="checkBoxsplitviewhorizontal">
            <property name="text">
             <string>Thunar split view opens horizontal</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QCheckBox" name="checkBoxThunarSingleClick">
+           <property name="text">
+            <string>Enable single-click in Thunar File Manager</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0">
+          <widget class="QCheckBox" name="checkBoxDesktopZoom">
+           <property name="text">
+            <string>Enable Desktop Zoom </string>
+           </property>
+          </widget>
+         </item>
+         <item row="9" column="0">
+          <widget class="QLabel" name="label_Xfce_CSD">
+           <property name="text">
+            <string>( also turns off Client Side Decorations for Xfce applications)</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QCheckBox" name="checkBoxNotificatonPercentages">
+           <property name="text">
+            <string>Show percentages in notifcations when available</string>
            </property>
           </widget>
          </item>
