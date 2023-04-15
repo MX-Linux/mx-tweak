@@ -122,7 +122,7 @@
         <translation>外觀</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1991"/>
+        <location filename="../defaultlook.ui" line="1998"/>
         <source>Xfce Settings</source>
         <translation>設定 Xfce</translation>
     </message>
@@ -133,19 +133,19 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="266"/>
-        <location filename="../defaultlook.ui" line="1625"/>
+        <location filename="../defaultlook.ui" line="1632"/>
         <source>Affects 1st panel</source>
         <translation>影響到第一條邊條</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="383"/>
-        <location filename="../defaultlook.ui" line="1602"/>
+        <location filename="../defaultlook.ui" line="1609"/>
         <source>Left</source>
         <translation>左側</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="388"/>
-        <location filename="../defaultlook.ui" line="1612"/>
+        <location filename="../defaultlook.ui" line="1619"/>
         <source>Right</source>
         <translation>右側</translation>
     </message>
@@ -156,13 +156,13 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="221"/>
-        <location filename="../defaultlook.ui" line="1597"/>
+        <location filename="../defaultlook.ui" line="1604"/>
         <source>Bottom</source>
         <translation>下側</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="226"/>
-        <location filename="../defaultlook.ui" line="1607"/>
+        <location filename="../defaultlook.ui" line="1614"/>
         <source>Top</source>
         <translation>上側</translation>
     </message>
@@ -209,10 +209,10 @@
         <location filename="../defaultlook.ui" line="965"/>
         <location filename="../defaultlook.ui" line="972"/>
         <location filename="../defaultlook.ui" line="979"/>
-        <location filename="../defaultlook.ui" line="1095"/>
-        <location filename="../defaultlook.ui" line="1329"/>
-        <location filename="../defaultlook.ui" line="1638"/>
-        <location filename="../defaultlook.ui" line="1853"/>
+        <location filename="../defaultlook.ui" line="1050"/>
+        <location filename="../defaultlook.ui" line="1336"/>
+        <location filename="../defaultlook.ui" line="1645"/>
+        <location filename="../defaultlook.ui" line="1860"/>
         <source>Apply</source>
         <translation>使用</translation>
     </message>
@@ -454,158 +454,158 @@
         <translation>設定選項</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1126"/>
-        <location filename="../defaultlook.ui" line="1447"/>
+        <location filename="../defaultlook.ui" line="1095"/>
+        <location filename="../defaultlook.ui" line="1454"/>
         <source>Reset Thunar custom right-click actions to system defaults</source>
         <translation>將 Thunar 當中右鍵的自訂動作回復成系統預設的動作</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1075"/>
+        <location filename="../defaultlook.ui" line="1109"/>
         <source>Enable single-click on desktop</source>
         <translation>在桌面上啟用游標單擊</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1030"/>
-        <location filename="../defaultlook.ui" line="1295"/>
+        <location filename="../defaultlook.ui" line="1123"/>
+        <location filename="../defaultlook.ui" line="1302"/>
         <source>Enable single-click in Thunar File Manager</source>
         <translation>在 Thunar 檔案管理員中啟用游標單擊</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1133"/>
+        <location filename="../defaultlook.ui" line="1130"/>
         <source>Enable Desktop Zoom </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1054"/>
-        <location filename="../defaultlook.ui" line="1701"/>
+        <location filename="../defaultlook.ui" line="1088"/>
+        <location filename="../defaultlook.ui" line="1708"/>
         <source>Show windows from all workspaces in panel</source>
         <translation>在邊條中顯示來自所有工作區的視窗</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1082"/>
+        <location filename="../defaultlook.ui" line="1030"/>
         <source>Disable shortening of long filenames on the desktop</source>
         <translation>在桌面上，不把過長檔名簡化顯示</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1068"/>
+        <location filename="../defaultlook.ui" line="1061"/>
         <source>Enable hibernate on Log Out menu </source>
         <translation>在登出選單中啟用休眠選項</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1047"/>
+        <location filename="../defaultlook.ui" line="1081"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
         <translation>註：若欲休眠，swap 必須大於 RAM</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1106"/>
+        <location filename="../defaultlook.ui" line="1037"/>
         <source>Show GTK File Dialog action buttons at bottom of dialogs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1037"/>
+        <location filename="../defaultlook.ui" line="1137"/>
         <source>( also turns off Client Side Decorations for Xfce applications)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1061"/>
-        <location filename="../defaultlook.ui" line="1493"/>
+        <location filename="../defaultlook.ui" line="1102"/>
+        <location filename="../defaultlook.ui" line="1500"/>
         <source>Thunar windows always open in split view</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1140"/>
-        <location filename="../defaultlook.ui" line="1403"/>
+        <location filename="../defaultlook.ui" line="1116"/>
+        <location filename="../defaultlook.ui" line="1410"/>
         <source>Thunar split view opens horizontal</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1150"/>
+        <location filename="../defaultlook.ui" line="1157"/>
         <source>Fluxbox</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1520"/>
+        <location filename="../defaultlook.ui" line="1527"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1173"/>
-        <location filename="../defaultlook.ui" line="1468"/>
+        <location filename="../defaultlook.ui" line="1180"/>
+        <location filename="../defaultlook.ui" line="1475"/>
         <source>On</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1178"/>
-        <location filename="../defaultlook.ui" line="1473"/>
+        <location filename="../defaultlook.ui" line="1185"/>
+        <location filename="../defaultlook.ui" line="1480"/>
         <source>Off</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1478"/>
+        <location filename="../defaultlook.ui" line="1485"/>
         <source>On Hover</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1281"/>
-        <location filename="../defaultlook.ui" line="1534"/>
+        <location filename="../defaultlook.ui" line="1288"/>
+        <location filename="../defaultlook.ui" line="1541"/>
         <source>Autohide</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1288"/>
+        <location filename="../defaultlook.ui" line="1295"/>
         <source>Reset ALL mx-fluxbox settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1309"/>
-        <location filename="../defaultlook.ui" line="1561"/>
-        <location filename="../defaultlook.ui" line="1586"/>
+        <location filename="../defaultlook.ui" line="1316"/>
+        <location filename="../defaultlook.ui" line="1568"/>
+        <location filename="../defaultlook.ui" line="1593"/>
         <source>Placement</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1158"/>
+        <location filename="../defaultlook.ui" line="1165"/>
         <source>Reset DefaultDock</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1486"/>
+        <location filename="../defaultlook.ui" line="1493"/>
         <source>Toggle desktop icons</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1302"/>
+        <location filename="../defaultlook.ui" line="1309"/>
         <source>Reset Fluxbox Menu</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1500"/>
-        <location filename="../defaultlook.ui" line="1649"/>
+        <location filename="../defaultlook.ui" line="1507"/>
+        <location filename="../defaultlook.ui" line="1656"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1165"/>
+        <location filename="../defaultlook.ui" line="1172"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1527"/>
+        <location filename="../defaultlook.ui" line="1534"/>
         <source>Width</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1427"/>
+        <location filename="../defaultlook.ui" line="1434"/>
         <source>Toggle icon captions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1410"/>
+        <location filename="../defaultlook.ui" line="1417"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Desktop Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1207"/>
+        <location filename="../defaultlook.ui" line="1214"/>
         <source>Height</source>
         <translation type="unfinished"></translation>
     </message>
@@ -620,27 +620,27 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1316"/>
+        <location filename="../defaultlook.ui" line="1323"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Thunar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1454"/>
+        <location filename="../defaultlook.ui" line="1461"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1457"/>
+        <location filename="../defaultlook.ui" line="1464"/>
         <source>Upgrade existing menu entries</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1541"/>
+        <location filename="../defaultlook.ui" line="1548"/>
         <source>Show Toolbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1571"/>
+        <location filename="../defaultlook.ui" line="1578"/>
         <source>Plasma</source>
         <translation type="unfinished"></translation>
     </message>
@@ -649,138 +649,143 @@
         <translation type="vanished">預設</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1661"/>
+        <location filename="../defaultlook.ui" line="1668"/>
         <source>Workspace</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1668"/>
+        <location filename="../defaultlook.ui" line="1675"/>
         <source>Enable single-click</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1579"/>
+        <location filename="../defaultlook.ui" line="1586"/>
         <source>Reset KDE/Plasma defaults</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1711"/>
+        <location filename="../defaultlook.ui" line="1718"/>
         <source>Other</source>
         <translation>其它</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1778"/>
+        <location filename="../defaultlook.ui" line="1785"/>
         <source>Password for administrative tasks:</source>
         <translation>管理任務的密碼：</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1726"/>
+        <location filename="../defaultlook.ui" line="1733"/>
         <source>Use tearfree radeon driver option</source>
         <translation>使用無淚radeon驅動程序選項</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1740"/>
+        <location filename="../defaultlook.ui" line="1747"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>          注意：現有的/etc/X11/xorg.conf.d/20-radeon.conf將備份到主文件夾</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1785"/>
+        <location filename="../defaultlook.ui" line="1792"/>
         <source>&amp;User</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1792"/>
+        <location filename="../defaultlook.ui" line="1799"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>使用英特爾驅動代替默認的「模式設置」驅動（需要重啟）。</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1840"/>
+        <location filename="../defaultlook.ui" line="1847"/>
         <source>Enable kernel sandbox</source>
         <translation>啟用內核沙箱</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1764"/>
+        <location filename="../defaultlook.ui" line="1771"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>註：現所採用的 /etc/X11/xorg.conf.d/20-intel.conf 會備份到家目錄當中</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1806"/>
+        <location filename="../defaultlook.ui" line="1813"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>將 Lightdm（登入畫面）回復成系統預設的佈景</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1771"/>
+        <location filename="../defaultlook.ui" line="1778"/>
         <source>Use libinput driver for touchpad instead of synaptics touchpad driver (requires restart)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1733"/>
+        <location filename="../defaultlook.ui" line="1740"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>         注意：現有的/etc/X11/xorg.conf.d/20-amd.conf將備份到主文件夾
 </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1719"/>
+        <location filename="../defaultlook.ui" line="1726"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>容許並非 root 的使用者掛載內接式硬碟</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1799"/>
+        <location filename="../defaultlook.ui" line="1806"/>
         <source>Use tearfree amdgpu option</source>
         <translation>使用無淚amdgpu選項</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1813"/>
+        <location filename="../defaultlook.ui" line="1820"/>
         <source>Root</source>
         <translation>最高用戶</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1747"/>
+        <location filename="../defaultlook.ui" line="1754"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1196"/>
+        <location filename="../defaultlook.ui" line="1147"/>
+        <source>Show percentages in notifcations when available</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1203"/>
         <source>Manage Tint2 Panel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1754"/>
+        <location filename="../defaultlook.ui" line="1761"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1757"/>
+        <location filename="../defaultlook.ui" line="1764"/>
         <source>Enable Bluetooth Adapters on boot</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1864"/>
+        <location filename="../defaultlook.ui" line="1871"/>
         <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1933"/>
+        <location filename="../defaultlook.ui" line="1940"/>
         <source>About</source>
         <translation>關於</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1944"/>
+        <location filename="../defaultlook.ui" line="1951"/>
         <source>Help</source>
         <translation>說明</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1961"/>
+        <location filename="../defaultlook.ui" line="1968"/>
         <source>Quit application</source>
         <translation>退出程式</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1964"/>
+        <location filename="../defaultlook.ui" line="1971"/>
         <source>Close</source>
         <translation>關閉</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1971"/>
+        <location filename="../defaultlook.ui" line="1978"/>
         <source>Alt+N</source>
         <translation>Alt+N</translation>
     </message>
@@ -860,12 +865,12 @@
         <translation>您當前的面板設置已備份到主文件夾（~/ .restore/）中名為.restore的隱藏文件夾中。</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1688"/>
+        <location filename="../defaultlook.cpp" line="1692"/>
         <source>settings</source>
         <translation>設定</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2028"/>
+        <location filename="../defaultlook.cpp" line="2032"/>
         <source>Choose a theme set</source>
         <translation>選擇一套佈景組合</translation>
     </message>
