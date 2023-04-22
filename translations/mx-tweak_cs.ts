@@ -122,7 +122,12 @@
         <translation>Vzhled</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1998"/>
+        <location filename="../defaultlook.ui" line="1878"/>
+        <source>Automatic generation of fluxbox applications menu after package installation, removal, and updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2005"/>
         <source>Xfce Settings</source>
         <translation>Nastavení Xfce</translation>
     </message>
@@ -212,7 +217,7 @@
         <location filename="../defaultlook.ui" line="1050"/>
         <location filename="../defaultlook.ui" line="1336"/>
         <location filename="../defaultlook.ui" line="1645"/>
-        <location filename="../defaultlook.ui" line="1860"/>
+        <location filename="../defaultlook.ui" line="1739"/>
         <source>Apply</source>
         <translation>Použít</translation>
     </message>
@@ -693,72 +698,72 @@
         <translation>Ostatní</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1785"/>
+        <location filename="../defaultlook.ui" line="1764"/>
         <source>Password for administrative tasks:</source>
         <translation>Heslo pro administrátorské úkony:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1733"/>
+        <location filename="../defaultlook.ui" line="1726"/>
         <source>Use tearfree radeon driver option</source>
         <translation>Použít tearfree nastavení ovladače radeon</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1747"/>
+        <location filename="../defaultlook.ui" line="1785"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>          POZNÁMKA: existující /etc/X11/xorg.conf.d/20-radeon.conf bude zazálohován do domovské složky</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1792"/>
+        <location filename="../defaultlook.ui" line="1823"/>
         <source>&amp;User</source>
         <translation>&amp;Uživatel</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1799"/>
+        <location filename="../defaultlook.ui" line="1757"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>Použít ovladač intel namísto předvoleného ovladače &quot;modesetting&quot;  (vyžaduje restart)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1847"/>
+        <location filename="../defaultlook.ui" line="1864"/>
         <source>Enable kernel sandbox</source>
         <translation>Povolit kernel sandbox</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1771"/>
+        <location filename="../defaultlook.ui" line="1850"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>          POZNÁMKA: existující /etc/X11/xorg.conf.d/20-intel.conf bude zálohován do domovské složky</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1813"/>
+        <location filename="../defaultlook.ui" line="1799"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>Obnovit Lightdm (přihlašovací obrazovku) do výchozího motivu</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1778"/>
+        <location filename="../defaultlook.ui" line="1843"/>
         <source>Use libinput driver for touchpad instead of synaptics touchpad driver (requires restart)</source>
         <translation>Pro touchpad použít ovladač libinput namísto synaptics touchpad driver (vyžaduje restart)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1740"/>
+        <location filename="../defaultlook.ui" line="1778"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>          POZNÁMKA: existující /etc/X11/xorg.conf.d/20-amd.conf bude zazálohován do domovské složky</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1726"/>
+        <location filename="../defaultlook.ui" line="1871"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>Povolit uživatelům bez práv roota připojování interních disků</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1806"/>
+        <location filename="../defaultlook.ui" line="1857"/>
         <source>Use tearfree amdgpu option</source>
         <translation>Použít nastavení amdgpu tearfree</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1820"/>
+        <location filename="../defaultlook.ui" line="1750"/>
         <source>Root</source>
         <translation>Root</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1754"/>
+        <location filename="../defaultlook.ui" line="1792"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
         <translation>Použít Client Side Decorations (CSD) v GTK3 aplikacích pokud toto podporují (vyžaduje restart)</translation>
     </message>
@@ -773,42 +778,42 @@
         <translation>Ovládat Tint2 Panel</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1761"/>
+        <location filename="../defaultlook.ui" line="1806"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;vyžaduje restart&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1764"/>
+        <location filename="../defaultlook.ui" line="1809"/>
         <source>Enable Bluetooth Adapters on boot</source>
         <translation>Zapnout Bluetooth adaptéry při startu</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1871"/>
+        <location filename="../defaultlook.ui" line="1771"/>
         <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
         <translation>Příkaz Apt nainstaluje dodatečné &quot;doporučené&quot; balíky a zavislosti</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1940"/>
+        <location filename="../defaultlook.ui" line="1947"/>
         <source>About</source>
         <translation>O aplikaci</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1951"/>
+        <location filename="../defaultlook.ui" line="1958"/>
         <source>Help</source>
         <translation>Nápověda</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1968"/>
+        <location filename="../defaultlook.ui" line="1975"/>
         <source>Quit application</source>
         <translation>Ukončit aplikaci</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1971"/>
+        <location filename="../defaultlook.ui" line="1978"/>
         <source>Close</source>
         <translation>Zavřít</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1978"/>
+        <location filename="../defaultlook.ui" line="1985"/>
         <source>Alt+N</source>
         <translation>Alt+N</translation>
     </message>
@@ -888,12 +893,12 @@
         <translation>Vaše aktuální nastavení panelu bylo zazálohováno do skryté složky s názvem .restore ve vaší domovské složce (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1692"/>
+        <location filename="../defaultlook.cpp" line="1703"/>
         <source>settings</source>
         <translation>nastavení</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2032"/>
+        <location filename="../defaultlook.cpp" line="2043"/>
         <source>Choose a theme set</source>
         <translation>Vybrat sadu motivů</translation>
     </message>

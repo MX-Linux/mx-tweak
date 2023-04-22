@@ -122,7 +122,12 @@
         <translation>Εμφάνιση</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1998"/>
+        <location filename="../defaultlook.ui" line="1878"/>
+        <source>Automatic generation of fluxbox applications menu after package installation, removal, and updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2005"/>
         <source>Xfce Settings</source>
         <translation>Ρυθμίσεις Xfce</translation>
     </message>
@@ -212,7 +217,7 @@
         <location filename="../defaultlook.ui" line="1050"/>
         <location filename="../defaultlook.ui" line="1336"/>
         <location filename="../defaultlook.ui" line="1645"/>
-        <location filename="../defaultlook.ui" line="1860"/>
+        <location filename="../defaultlook.ui" line="1739"/>
         <source>Apply</source>
         <translation>Εφαρμογή</translation>
     </message>
@@ -693,72 +698,72 @@
         <translation>Άλλα</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1785"/>
+        <location filename="../defaultlook.ui" line="1764"/>
         <source>Password for administrative tasks:</source>
         <translation>Κωδικός πρόσβασης για εργασίες διαχειριστή:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1733"/>
+        <location filename="../defaultlook.ui" line="1726"/>
         <source>Use tearfree radeon driver option</source>
         <translation>Χρήση της επιλογής tearfree για radeon</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1747"/>
+        <location filename="../defaultlook.ui" line="1785"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>          ΣΗΜΕΙΩΣΗ: Θα δημιουργηθεί αντίγραφο ασφαλείας του αρχείου /etc/X11/xorg.conf.d/20-radeon.conf στον αρχικό φάκελο του χρήστη</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1792"/>
+        <location filename="../defaultlook.ui" line="1823"/>
         <source>&amp;User</source>
         <translation>Χρήστης</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1799"/>
+        <location filename="../defaultlook.ui" line="1757"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>Χρησιμοποιήστε το πρόγραμμα οδήγησης intel αντί του προεπιλεγμένου προγράμματος οδήγησης &quot;modesetting&quot; (απαιτείται επανεκκίνηση)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1847"/>
+        <location filename="../defaultlook.ui" line="1864"/>
         <source>Enable kernel sandbox</source>
         <translation>Ενεργοποίηση sandbox του πυρήνα</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1771"/>
+        <location filename="../defaultlook.ui" line="1850"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>          ΣΗΜΕΙΩΣΗ: Θα δημιουργηθεί αντίγραφο ασφαλείας του αρχείου /etc/X11/xorg.conf.d/20-intel.conf στον αρχικό φάκελο του χρήστη</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1813"/>
+        <location filename="../defaultlook.ui" line="1799"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>Επαναφορά θέματος του Lightdm (οθόνη σύνδεσης) στο προεπιλεγμένο του συστήματος</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1778"/>
+        <location filename="../defaultlook.ui" line="1843"/>
         <source>Use libinput driver for touchpad instead of synaptics touchpad driver (requires restart)</source>
         <translation>Χρησιμοποιήστε το πρόγραμμα οδήγησης libinput για το touchpad αντί του οδηγού Synaptics για το touchpad (απαιτεί επανεκκίνηση)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1740"/>
+        <location filename="../defaultlook.ui" line="1778"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>          ΣΗΜΕΙΩΣΗ: Θα δημιουργηθεί αντίγραφο ασφαλείας του αρχείου /etc/X11/xorg.conf.d/20-amd.conf  στον αρχικό φάκελο του χρήστη</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1726"/>
+        <location filename="../defaultlook.ui" line="1871"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>Ενεργοποίηση προσάρτησης των εσωτερικών δίσκων από μη χρήστες root</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1806"/>
+        <location filename="../defaultlook.ui" line="1857"/>
         <source>Use tearfree amdgpu option</source>
         <translation>Χρήση της επιλογής tearfree για amdgpu</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1820"/>
+        <location filename="../defaultlook.ui" line="1750"/>
         <source>Root</source>
         <translation>Root</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1754"/>
+        <location filename="../defaultlook.ui" line="1792"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
         <translation>Χρήση διακοσμητικών προγραμματος-πελάτη (CSD) σε εφαρμογές GTK3 που τις υποστηρίζουν (απαιτείται επανεκκίνηση session)</translation>
     </message>
@@ -773,42 +778,42 @@
         <translation>Διαχείρηση Πάνελ Tint2</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1761"/>
+        <location filename="../defaultlook.ui" line="1806"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;χρειάζεται επανεκκίνηση&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1764"/>
+        <location filename="../defaultlook.ui" line="1809"/>
         <source>Enable Bluetooth Adapters on boot</source>
         <translation>Ενεργοποίηστε τους Bluetooth προσαρμογείς κατά την εκκίνηση</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1871"/>
+        <location filename="../defaultlook.ui" line="1771"/>
         <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
         <translation>Το Apt εγκαθηστά προσθετα &quot;προτινόμενα&quot; πακετα ως εξαρτήσεις</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1940"/>
+        <location filename="../defaultlook.ui" line="1947"/>
         <source>About</source>
         <translation>Περί</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1951"/>
+        <location filename="../defaultlook.ui" line="1958"/>
         <source>Help</source>
         <translation>Βοήθεια</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1968"/>
+        <location filename="../defaultlook.ui" line="1975"/>
         <source>Quit application</source>
         <translation>Κλείσιμο εφαρμογής</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1971"/>
+        <location filename="../defaultlook.ui" line="1978"/>
         <source>Close</source>
         <translation>Κλείσιμο</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1978"/>
+        <location filename="../defaultlook.ui" line="1985"/>
         <source>Alt+N</source>
         <translation>Alt+N</translation>
     </message>
@@ -888,12 +893,12 @@
         <translation>Οι τρέχουσες ρυθμίσεις του ταμπλό σας αποθηκεύτηκαν σαν αντίγραφο ασφαλείας, σε έναν κρυφό φάκελο με όνομα .restore στον αρχικό φάκελο του χρήστη (~/.restore /)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1692"/>
+        <location filename="../defaultlook.cpp" line="1703"/>
         <source>settings</source>
         <translation>ρυθμίσεις</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2032"/>
+        <location filename="../defaultlook.cpp" line="2043"/>
         <source>Choose a theme set</source>
         <translation>Επιλέξτε θέμα</translation>
     </message>
