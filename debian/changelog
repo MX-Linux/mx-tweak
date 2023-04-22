@@ -1,3 +1,9 @@
+mx-tweak (23.04.06mx23) mx; urgency=medium
+
+  * add toggle for automatic generation of fluxbox menu 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 22 Apr 2023 11:27:31 -0400
+
 mx-tweak (23.04.05mx23) mx; urgency=medium
 
   * remove non-working plasma systray icon size function
