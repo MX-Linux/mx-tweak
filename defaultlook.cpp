@@ -1356,6 +1356,17 @@ void defaultlook::setupEtc()
     }
     //set values for checkboxes
 
+    //fluxbox menu auto generation on package install, removal, and upgrades
+    if ( QFile("/usr/bin/mxfb-menu-generator").exists()){
+        if (QFile(home_path + "/.fluxbox/mxfb-menu-generator-disabled.chk").exists()){
+            ui->checkBoxDisableFluxboxMenuGeneration->setChecked(false);
+        } else {
+            ui->checkBoxDisableFluxboxMenuGeneration->setChecked(true);
+        }
+    } else {
+        ui->checkBoxDisableFluxboxMenuGeneration->hide();
+    }
+
     //setup udisks option
     QFileInfo fileinfo(QStringLiteral("/etc/tweak-udisks.chk"));
     if (fileinfo.exists()) {
@@ -2282,7 +2293,16 @@ void defaultlook::on_ButtonApplyEtc_clicked()
             if (verbose) qDebug() << "could not write nocsd desktop file";
         }
     }
+    //fluxbox menu autogeneration
+    if ( QFile("/usr/bin/mxfb-menu-generator").exists()){
+        if (! ui->checkBoxDisableFluxboxMenuGeneration->isChecked()){
+            runCmd("touch " + home_path + "/.fluxbox/mxfb-menu-generator-disabled.chk");
+        } else {
+            runCmd("rm " + home_path + "/.fluxbox/mxfb-menu-generator-disabled.chk");
+        }
+    }
 
+    //internal drive mounting for non root users
     if (ui->checkBoxMountInternalDrivesNonRoot->isChecked()) {
         if (fileinfo.exists()) {
             if (verbose) qDebug() << "no change to internal drive mount settings";
@@ -2297,9 +2317,12 @@ void defaultlook::on_ButtonApplyEtc_clicked()
         }
     }
 
+    //reset lightdm greeter config
     if (ui->checkBoxLightdmReset->isChecked()) {
         lightdm_option = QStringLiteral("lightdm_reset");
     }
+
+    //graphics driver overrides
 
     if ( Intel_flag ) {
         QFileInfo check_intel(QStringLiteral("/etc/X11/xorg.conf.d/20-intel.conf"));
@@ -3810,4 +3833,10 @@ void defaultlook::tasklistchange(){
 }
 
 
+
+
+void defaultlook::on_checkBoxDisableFluxboxMenuGeneration_clicked()
+{
+    ui->ButtonApplyEtc->setEnabled(true);
+}
 

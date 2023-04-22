@@ -284,6 +284,8 @@ private slots:
 
     void on_radioButtonSetPanelPluginScales_clicked();
 
+    void on_checkBoxDisableFluxboxMenuGeneration_clicked();
+
 private:
     Ui::defaultlook *ui;
 };
