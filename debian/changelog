@@ -1,3 +1,9 @@
+mx-tweak (23.04.07mx23) mx; urgency=medium
+
+  * add missing css file 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Mon, 24 Apr 2023 17:23:58 -0400
+
 mx-tweak (23.04.06mx23) mx; urgency=medium
 
   * add toggle for automatic generation of fluxbox menu 
