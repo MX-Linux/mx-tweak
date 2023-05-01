@@ -1,3 +1,11 @@
+mx-tweak (23.04.08mx23) mx; urgency=medium
+
+  * add --theme switch
+  * use QCommandParser for switch processing
+  * cleanup some qDebug output
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 30 Apr 2023 21:54:38 -0400
+
 mx-tweak (23.04.07mx23) mx; urgency=medium
 
   * add missing css file 

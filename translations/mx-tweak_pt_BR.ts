@@ -24,6 +24,26 @@
         <source>&amp;Close</source>
         <translation>&amp;Fechar</translation>
     </message>
+    <message>
+        <location filename="../main.cpp" line="47"/>
+        <source>GUI for applying assorted useful tweaks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="50"/>
+        <source>launches brightness-systray</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="51"/>
+        <source>opens with display tab open.  Only valid with Xfce desktop running</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="52"/>
+        <source>Opens theme tab directly.  Valid on Xfce &amp; Fluxbox desktops</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>brightness_small</name>
@@ -79,14 +99,14 @@
     <message>
         <location filename="../defaultlook.ui" line="20"/>
         <location filename="../defaultlook.cpp" line="56"/>
-        <location filename="../defaultlook.cpp" line="77"/>
-        <location filename="../defaultlook.cpp" line="618"/>
-        <location filename="../defaultlook.cpp" line="637"/>
-        <location filename="../defaultlook.cpp" line="646"/>
-        <location filename="../defaultlook.cpp" line="693"/>
-        <location filename="../defaultlook.cpp" line="701"/>
-        <location filename="../defaultlook.cpp" line="728"/>
-        <location filename="../defaultlook.cpp" line="731"/>
+        <location filename="../defaultlook.cpp" line="81"/>
+        <location filename="../defaultlook.cpp" line="631"/>
+        <location filename="../defaultlook.cpp" line="650"/>
+        <location filename="../defaultlook.cpp" line="659"/>
+        <location filename="../defaultlook.cpp" line="706"/>
+        <location filename="../defaultlook.cpp" line="714"/>
+        <location filename="../defaultlook.cpp" line="741"/>
+        <location filename="../defaultlook.cpp" line="744"/>
         <source>MX Tweak</source>
         <translation>Ajustes Rápidos do MX</translation>
     </message>
@@ -823,82 +843,87 @@
         <translation>Alteração da exibição da tela (--display) válida apenas para o Xfce</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="617"/>
+        <location filename="../defaultlook.cpp" line="140"/>
+        <source>Style</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.cpp" line="630"/>
         <source>About MX Tweak</source>
         <translation>Sobre os Ajustes Rápidos do MX</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="619"/>
+        <location filename="../defaultlook.cpp" line="632"/>
         <source>Version: </source>
         <translation>Versão: </translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="620"/>
+        <location filename="../defaultlook.cpp" line="633"/>
         <source>App for quick default ui theme changes and tweaks</source>
         <translation>Aplicativo para fazer alterações rápidas do tema padrão da interface de usuário e para outros ajustes</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="622"/>
+        <location filename="../defaultlook.cpp" line="635"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Direitos de Autor (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="623"/>
+        <location filename="../defaultlook.cpp" line="636"/>
         <source>%1 License</source>
         <translation>Licença do %1</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="637"/>
+        <location filename="../defaultlook.cpp" line="650"/>
         <source>%1 Help</source>
         <translation>Ajuda do %1</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="647"/>
+        <location filename="../defaultlook.cpp" line="660"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
         <translation>Tudo foi feito com sucesso! O navegador de internet Firefox pode ter que ser reiniciado para efetivar as alterações</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="694"/>
+        <location filename="../defaultlook.cpp" line="707"/>
         <source>Plese remove special characters</source>
         <translation>Por favor, remova os caracteres</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="694"/>
+        <location filename="../defaultlook.cpp" line="707"/>
         <source>from file name</source>
         <translation>especiais do nome do arquivo</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="701"/>
+        <location filename="../defaultlook.cpp" line="714"/>
         <source>File name already exists.  Choose another name</source>
         <translation>O nome do arquivo já existe. Por favor, escolha um outro nome</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="729"/>
+        <location filename="../defaultlook.cpp" line="742"/>
         <source>File is not a valid tar.xz archive file</source>
         <translation>O arquivo tar.xz não é um arquivo válido</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="732"/>
+        <location filename="../defaultlook.cpp" line="745"/>
         <source>Archive does not contain a panel config</source>
         <translation>O arquivo não contém as configurações do painel</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="918"/>
+        <location filename="../defaultlook.cpp" line="931"/>
         <source>Panel settings</source>
         <translation>Configurações do Painel</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="919"/>
+        <location filename="../defaultlook.cpp" line="932"/>
         <source>Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
         <translation>As suas configurações atuais do painel foram copiadas para uma pasta oculta chamada .restore em sua pasta pessoal (~ / .restore /)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1703"/>
+        <location filename="../defaultlook.cpp" line="1716"/>
         <source>settings</source>
         <translation>Configurações</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2043"/>
+        <location filename="../defaultlook.cpp" line="2056"/>
         <source>Choose a theme set</source>
         <translation>Escolher um conjunto de temas</translation>
     </message>

@@ -84,6 +84,7 @@ public:
     bool enable_recommendsflag{};
     bool vblankflag{};
     bool displayflag = false;
+    bool themetabflag = false;
     bool displaysetupflag = false;
     bool brightnessflag = false;
     bool sandboxflag = false;
