@@ -58,6 +58,10 @@ defaultlook::defaultlook(QWidget *parent, const QStringList &args) :
         }
     }
 
+    if (args.contains(QStringLiteral("--theme"))){
+        themetabflag = true;
+    }
+
     if (args.contains(QStringLiteral("--verbose"))) {
         verbose = true;
     }
@@ -98,7 +102,11 @@ void defaultlook::setup()
         ui->tabWidget->removeTab(Tab::Plasma);
         ui->tabWidget->removeTab(Tab::Fluxbox);
         //set first tab as default
-        ui->tabWidget->setCurrentIndex(Tab::Panel);
+        if (themetabflag){
+            ui->tabWidget->setCurrentIndex(Tab::Theme);
+        } else {
+            ui->tabWidget->setCurrentIndex(Tab::Panel);
+        }
         //setup Config Options
         setupConfigoptions();
     }
@@ -129,7 +137,12 @@ void defaultlook::setup()
         ui->tabWidget->removeTab(2);
         ui->tabWidget->removeTab(2);
         ui->tabWidget->removeTab(1);
-        ui->tabWidget->setCurrentIndex(1);
+        ui->tabWidget->setTabText(0,tr("Style"));
+        if (themetabflag){
+            ui->tabWidget->setCurrentIndex(0);
+        } else {
+            ui->tabWidget->setCurrentIndex(1);
+        }
 
 
     }
@@ -569,7 +582,7 @@ void defaultlook::on_buttonApply_clicked()
     }
 
     // tasklist switch
-    qDebug() << "tasklist flag is " << tasklistflag;
+    if (verbose) qDebug() << "tasklist flag is " << tasklistflag;
     if (ui->radioButtonTasklist->isChecked()){
         if ( tasklistflag ) tasklistchange();
     }
@@ -1583,7 +1596,7 @@ void defaultlook::setupConfigoptions()
     float versioncheck = 4.18;
 
     QString XfceVersion = runCmd("dpkg-query --show xfce4-session | awk '{print $2}'").output.section(".",0,1);
-    qDebug() << "XfceVersion = " << XfceVersion.toFloat();
+    if (verbose) qDebug() << "XfceVersion = " << XfceVersion.toFloat();
     if ( XfceVersion.toFloat() < versioncheck ){
         ui->label_Xfce_CSD->hide();
     }
@@ -2572,7 +2585,7 @@ void defaultlook::savethemeundo()
 
     undotheme << undocommand;
 
-    qDebug () << "undo command list is " << undotheme;
+    if (verbose) qDebug () << "undo command list is " << undotheme;
 
 }
 
@@ -3633,7 +3646,7 @@ void defaultlook::on_checkBoxbluetoothAutoEnable_clicked()
 {
     ui->ButtonApplyEtc->setEnabled(true);
     bluetoothautoenableflag = !bluetoothautoenableflag;
-    qDebug() << "bluetooth flag is " << bluetoothautoenableflag;
+    if (verbose) qDebug() << "bluetooth flag is " << bluetoothautoenableflag;
 }
 
 void defaultlook::on_checkBoxFluxShowToolbar_clicked()
@@ -3792,7 +3805,7 @@ void defaultlook::on_comboBoxTasklistPlugin_currentIndexChanged(int /*index*/)
     //changing tasklistflag only happens if block is actually changed
 
     tasklistflag = !tasklistflag;
-    qDebug() << "tasklist flag is " << tasklistflag;
+    if (verbose) qDebug() << "tasklist flag is " << tasklistflag;
 }
 
 void defaultlook::tasklistchange(){
@@ -3804,11 +3817,11 @@ void defaultlook::tasklistchange(){
     } else if ( ui->comboBoxTasklistPlugin->currentIndex() == 1){
         tasklistchoice = "tasklist";
     }
-    qDebug() << "tasklistchoice is" << tasklistchoice;
+    if (verbose) qDebug() << "tasklistchoice is" << tasklistchoice;
 
 
     QString tasklistid = get_tasklistid();
-    qDebug() << "tasklistid is " << tasklistid;
+    if (verbose) qDebug() << "tasklistid is " << tasklistid;
 
     if (tasklistchoice == "docklike"){
         runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + tasklistid + "/show-handle --reset");
