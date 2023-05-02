@@ -1,3 +1,10 @@
+mx-tweak (23.05.01mx23) nx; urgency=medium
+
+  * full theme module for fluxbox
+  * use restart instead of reconfigure for fluxbox style updates
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Mon, 01 May 2023 23:03:45 -0400
+
 mx-tweak (23.04.08mx23) mx; urgency=medium
 
   * add --theme switch
