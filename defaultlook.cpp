@@ -3557,7 +3557,8 @@ void defaultlook::settheme(const QString &type, const QString &theme, const QStr
             } else {
                 cmd2="gsettings set org.gnome.desktop.interface color-scheme default";
             }
-            cmd = "yad --form --title \"Preview\"  --button:gtk-ok --field=Button:FBTN --field=Combobox:CBE --field=Checkbox:CHK --close-on-unfocus";
+            system("pkill preview-mx");
+            cmd = "preview-mx";
         }
         if ( type == QLatin1String("fluxbox") ) {
             QString filepath = home_path + "/.fluxbox/styles/" + theme;
@@ -3582,9 +3583,9 @@ void defaultlook::settheme(const QString &type, const QString &theme, const QStr
             } else {
                 cmd = "echo gtk-icon-theme-name=" + theme + "\" >> $HOME/.gtkrc-2.0";
             }
-
+            system("pkill preview-mx");
             system(cmd.toUtf8());
-            cmd = "yad --form --title \"Preview\"  --button:gtk-ok --field=Button:FBTN --field=Combobox:CBE --field=Checkbox:CHK --close-on-unfocus";
+            cmd = "preview-mx";
         }
     }
     system(cmd.toUtf8());
