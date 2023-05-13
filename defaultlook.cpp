@@ -129,8 +129,8 @@ void defaultlook::setup()
         ui->label_7->hide();
         //ui->listWidgetTheme->hide();
         //ui->listWidgeticons->hide();
-        ui->label_28->hide();
-        ui->label_30->hide();
+        //ui->label_28->hide();
+        //ui->label_30->hide();
         ui->toolButtonXFCEAppearance->hide();
         ui->toolButtonXFCEWMsettings->hide();
         ui->toolButtonXFCEpanelSettings->hide();

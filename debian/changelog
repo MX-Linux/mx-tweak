@@ -1,3 +1,10 @@
+mx-tweak (23.05.04mx23) mx; urgency=medium
+
+  * fix column labels
+  * mx-launcher-l10n strings in policy file
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Fri, 12 May 2023 22:30:57 -0400
+
 mx-tweak (23.05.03mx23) mx; urgency=medium
 
   * don't pkill preview-mx (it will close itself on focus loss)
