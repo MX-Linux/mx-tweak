@@ -16,5 +16,6 @@ Depends: ${misc:Depends},
 Recommends: compton,
         compton-conf,
         preview-mx,
+        mx-launcher-l10n
 Description: MX Tweak
  MX Tweak is a tool for quick tweaks to the Xfce environment supplied with MX Linux
