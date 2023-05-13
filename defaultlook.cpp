@@ -3557,7 +3557,7 @@ void defaultlook::settheme(const QString &type, const QString &theme, const QStr
             } else {
                 cmd2="gsettings set org.gnome.desktop.interface color-scheme default";
             }
-            system("pkill preview-mx");
+
             cmd = "preview-mx";
         }
         if ( type == QLatin1String("fluxbox") ) {
@@ -3583,7 +3583,7 @@ void defaultlook::settheme(const QString &type, const QString &theme, const QStr
             } else {
                 cmd = "echo gtk-icon-theme-name=" + theme + "\" >> $HOME/.gtkrc-2.0";
             }
-            system("pkill preview-mx");
+
             system(cmd.toUtf8());
             cmd = "preview-mx";
         }
