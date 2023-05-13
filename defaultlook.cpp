@@ -3551,24 +3551,41 @@ void defaultlook::settheme(const QString &type, const QString &theme, const QStr
             }
 
             cmd1 ="gsettings set org.gnome.desktop.interface gtk-theme \"" + theme + "\"";
+
             if (theme.contains("dark")){
                 cmd2="gsettings set org.gnome.desktop.interface color-scheme prefer-dark";
             } else {
                 cmd2="gsettings set org.gnome.desktop.interface color-scheme default";
             }
 
+            if (theme.contains("dark")){
+                if (system("grep gtk-application-prefer-dark-theme $HOME/.config/gtk-3.0/settings.ini") == 0) {
+                    runCmd("sed -i 's/gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=true/' $HOME/.config/gtk-3.0/settings.ini");
+                } else {
+                    runCmd("echo gtk-application-prefer-dark-theme=true/' >> $HOME/.config/gtk-3.0/settings.ini");
+                    cmd = "echo gtk-theme-name=" + theme + "\" >> $HOME/.config/gtk-3.0/settings.ini";
+                }
+            } else {
+                if (system("grep gtk-application-prefer-dark-theme $HOME/.config/gtk-3.0/settings.ini") == 0) {
+                    runCmd("sed -i 's/gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=false/' $HOME/.config/gtk-3.0/settings.ini");
+                } else {
+                    runCmd("echo gtk-application-prefer-dark-theme=false/' >> $HOME/.config/gtk-3.0/settings.ini");
+                    cmd = "echo gtk-theme-name=" + theme + "\" >> $HOME/.config/gtk-3.0/settings.ini";
+                }
+            }
+
             if ( QFile("/usr/bin/preview-mx").exists()){
                 system(cmd.toUtf8());
-                cmd = "preview-mx";
+                cmd = "preview-mx &";
             }
         }
         if ( type == QLatin1String("fluxbox") ) {
             QString filepath = home_path + "/.fluxbox/styles/" + theme;
             if (QFile(filepath).exists()){
                 home_path.replace("/", "\\/");
-                cmd = "sed -i 's/session.styleFile:.*/session.styleFile: " + home_path + "\\/.fluxbox\\/styles\\/" + theme + "/' $HOME/.fluxbox/init && fluxbox-remote reconfigure";
+                cmd = "sed -i 's/session.styleFile:.*/session.styleFile: " + home_path + "\\/.fluxbox\\/styles\\/" + theme + "/' $HOME/.fluxbox/init && fluxbox-remote reconfigure && fluxbox-remote reloadstyle";
             } else {
-                cmd = "sed -i 's/session.styleFile:.*/session.styleFile: \\/usr\\/share\\/fluxbox\\/styles\\/" + theme + "/' $HOME/.fluxbox/init && fluxbox-remote reconfigure";
+                cmd = "sed -i 's/session.styleFile:.*/session.styleFile: \\/usr\\/share\\/fluxbox\\/styles\\/" + theme + "/' $HOME/.fluxbox/init && fluxbox-remote reconfigure && fluxbox-remote reloadstyle";
             }
         }
         //for fluxbox, edit ~/.config/gtk-3.0/settings.ini and ~/.gtkrc-2.0 has quotes
@@ -3588,7 +3605,7 @@ void defaultlook::settheme(const QString &type, const QString &theme, const QStr
 
             if ( QFile("/usr/bin/preview-mx").exists()){
                 system(cmd.toUtf8());
-                cmd = "preview-mx";
+                cmd = "preview-mx &";
             }
         }
     }
