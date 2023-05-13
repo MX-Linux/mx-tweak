@@ -27,22 +27,22 @@
     <message>
         <location filename="../main.cpp" line="47"/>
         <source>GUI for applying assorted useful tweaks</source>
-        <translation type="unfinished"></translation>
+        <translation>IGU per aplicar diversos ajustos útils</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="50"/>
         <source>launches brightness-systray</source>
-        <translation type="unfinished"></translation>
+        <translation>engega brillantor-safata del sistema</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="51"/>
         <source>opens with display tab open.  Only valid with Xfce desktop running</source>
-        <translation type="unfinished"></translation>
+        <translation>obre amb la pestanya de visualització oberta. Vàlid només amb l&apos;escriptori Xfce</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="52"/>
         <source>Opens theme tab directly.  Valid on Xfce &amp; Fluxbox desktops</source>
-        <translation type="unfinished"></translation>
+        <translation>Obre directament amb la pestanya de tema. Vàlid amb els escriptoris Xfce i Fluxbox </translation>
     </message>
 </context>
 <context>
@@ -142,14 +142,29 @@
         <translation>Aspecte </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1878"/>
-        <source>Automatic generation of fluxbox applications menu after package installation, removal, and updates</source>
-        <translation type="unfinished"></translation>
+        <location filename="../defaultlook.ui" line="293"/>
+        <source>Backup current panel configuration</source>
+        <translation>Còpia de seguretat de la configuració del plafó</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2005"/>
-        <source>Xfce Settings</source>
-        <translation>Paràmetres de Xfce</translation>
+        <location filename="../defaultlook.ui" line="440"/>
+        <location filename="../defaultlook.ui" line="485"/>
+        <location filename="../defaultlook.ui" line="640"/>
+        <location filename="../defaultlook.ui" line="965"/>
+        <location filename="../defaultlook.ui" line="972"/>
+        <location filename="../defaultlook.ui" line="979"/>
+        <location filename="../defaultlook.ui" line="1050"/>
+        <location filename="../defaultlook.ui" line="1336"/>
+        <location filename="../defaultlook.ui" line="1645"/>
+        <location filename="../defaultlook.ui" line="1798"/>
+        <source>Apply</source>
+        <translation>Aplica</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="303"/>
+        <location filename="../defaultlook.ui" line="363"/>
+        <source>Options</source>
+        <translation>Opcions </translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="191"/>
@@ -161,6 +176,21 @@
         <location filename="../defaultlook.ui" line="1632"/>
         <source>Affects 1st panel</source>
         <translation>Afecta al 1r plafó </translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="396"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Buttons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Botons de les finestres&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="251"/>
+        <source>Restore default panel</source>
+        <translation>Restaura el plafó per omissió</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="330"/>
+        <source>Restore backup panel configuration</source>
+        <translation>Restaura la configuració del plafó</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="383"/>
@@ -175,9 +205,14 @@
         <translation>Dreta</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="396"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Buttons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Botons de les finestres&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <location filename="../defaultlook.ui" line="241"/>
+        <source>Display panel vertically</source>
+        <translation>Mostra el plafó vertical</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="234"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Tasklist&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Llista de tasques&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="221"/>
@@ -197,74 +232,39 @@
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Mode acoblador&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="303"/>
-        <location filename="../defaultlook.ui" line="363"/>
-        <source>Options</source>
-        <translation>Opcions </translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="167"/>
         <source>Display panel horizontally</source>
         <translation>Mostra el plafó hoitzontal</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="241"/>
-        <source>Display panel vertically</source>
-        <translation>Mostra el plafó vertical</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="251"/>
-        <source>Restore default panel</source>
-        <translation>Restaura el plafó per omissió</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="293"/>
-        <source>Backup current panel configuration</source>
-        <translation>Còpia de seguretat de la configuració del plafó</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="330"/>
-        <source>Restore backup panel configuration</source>
-        <translation>Restaura la configuració del plafó</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="440"/>
-        <location filename="../defaultlook.ui" line="485"/>
-        <location filename="../defaultlook.ui" line="640"/>
-        <location filename="../defaultlook.ui" line="965"/>
-        <location filename="../defaultlook.ui" line="972"/>
-        <location filename="../defaultlook.ui" line="979"/>
-        <location filename="../defaultlook.ui" line="1050"/>
-        <location filename="../defaultlook.ui" line="1336"/>
-        <location filename="../defaultlook.ui" line="1645"/>
-        <location filename="../defaultlook.ui" line="1739"/>
-        <source>Apply</source>
-        <translation>Aplica</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="234"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Tasklist&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Llista de tasques&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="177"/>
         <source>Volume</source>
-        <translation type="unfinished"></translation>
+        <translation>Volum </translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="198"/>
+        <source>Set Tasklist plugin to:</source>
+        <translation>Defineix el connector de la llista de tasques a:</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="273"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Panel Plugin Scales&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Escalat dels connectors del Plafó&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="323"/>
         <source>Power Manager</source>
-        <translation type="unfinished"></translation>
+        <translation>Gestor d&apos;Energia</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="353"/>
         <source>Set Scales</source>
-        <translation type="unfinished"></translation>
+        <translation>Defineix l&apos;escalat</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="417"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Docklike is the modern dock plugin for the panel.  Window Buttons is the classic tasklist without dock features.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Docklike és el connector de l&apos;acoblador  modern per al quadre.  Window Buttons és la clàssica llista de tasques sense prestacions d&apos;acoblador.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="464"/>
@@ -479,26 +479,20 @@
         <translation>Opcions de configuració</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1095"/>
-        <location filename="../defaultlook.ui" line="1454"/>
-        <source>Reset Thunar custom right-click actions to system defaults</source>
-        <translation>Reinicia les accions de Thunar amb el botó dret als valors del sistema</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1109"/>
-        <source>Enable single-click on desktop</source>
-        <translation>Activa clic únic a l&apos;escriptori</translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="1123"/>
         <location filename="../defaultlook.ui" line="1302"/>
         <source>Enable single-click in Thunar File Manager</source>
         <translation>Activa clic únic al Gestor de Fitxers Thunar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1130"/>
-        <source>Enable Desktop Zoom </source>
-        <translation>Activa el Zoom de l&apos;escriptori</translation>
+        <location filename="../defaultlook.ui" line="1137"/>
+        <source>( also turns off Client Side Decorations for Xfce applications)</source>
+        <translation>(també desactiva les decoracions del costat client de les aplicacions Xfce)</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1081"/>
+        <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
+        <translation>                   nota: per hibernar, cal una swap  &gt;= RAM</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1088"/>
@@ -507,9 +501,10 @@
         <translation>Mostra les finestres de tots els espais de treball al plafó</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1030"/>
-        <source>Disable shortening of long filenames on the desktop</source>
-        <translation>Desactiva el truncament de noms de fitxer llargs a l&apos;escriptori</translation>
+        <location filename="../defaultlook.ui" line="1102"/>
+        <location filename="../defaultlook.ui" line="1500"/>
+        <source>Thunar windows always open in split view</source>
+        <translation>Finestres del Thunar sempre obertes en vista dividida</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1061"/>
@@ -517,9 +512,14 @@
         <translation>Activa &apos;hiberna&apos; al Menú de Sortida</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1081"/>
-        <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
-        <translation>                   nota: per hibernar, cal una swap  &gt;= RAM</translation>
+        <location filename="../defaultlook.ui" line="1109"/>
+        <source>Enable single-click on desktop</source>
+        <translation>Activa clic únic a l&apos;escriptori</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1030"/>
+        <source>Disable shortening of long filenames on the desktop</source>
+        <translation>Desactiva el truncament de noms de fitxer llargs a l&apos;escriptori</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1037"/>
@@ -527,15 +527,15 @@
         <translation>Mostra els botons d&apos;acció del fitxer de diàleg GTK a sota dels diàlegs </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1137"/>
-        <source>( also turns off Client Side Decorations for Xfce applications)</source>
-        <translation>(també desactiva les decoracions del costat client de les aplicacions Xfce)</translation>
+        <location filename="../defaultlook.ui" line="1095"/>
+        <location filename="../defaultlook.ui" line="1454"/>
+        <source>Reset Thunar custom right-click actions to system defaults</source>
+        <translation>Reinicia les accions de Thunar amb el botó dret als valors del sistema</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1102"/>
-        <location filename="../defaultlook.ui" line="1500"/>
-        <source>Thunar windows always open in split view</source>
-        <translation>Finestres del Thunar sempre obertes en vista dividida</translation>
+        <location filename="../defaultlook.ui" line="1130"/>
+        <source>Enable Desktop Zoom </source>
+        <translation>Activa el Zoom de l&apos;escriptori</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1116"/>
@@ -544,14 +544,24 @@
         <translation>Vista dividida del Thunar oberta en horitzontal</translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="1147"/>
+        <source>Show percentages in notifcations when available</source>
+        <translation>Mostra el percentatge a les notificacions quan sigui possible</translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="1157"/>
         <source>Fluxbox</source>
         <translation>Fluxbox </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1527"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Paràmetres de la barra d&apos;eines&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <location filename="../defaultlook.ui" line="1165"/>
+        <source>Reset DefaultDock</source>
+        <translation>Reinicia l&apos;acoblador per omissió</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1172"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Paràmetres de l&apos;acoblador&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1180"/>
@@ -566,9 +576,14 @@
         <translation>No</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1485"/>
-        <source>On Hover</source>
-        <translation>En mantenir</translation>
+        <location filename="../defaultlook.ui" line="1203"/>
+        <source>Manage Tint2 Panel</source>
+        <translation>Gestiona el panell Tint2</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1214"/>
+        <source>Height</source>
+        <translation>Altura</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1288"/>
@@ -582,6 +597,11 @@
         <translation>Reinicia TOTS els paràmetres de Fluxbox</translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="1309"/>
+        <source>Reset Fluxbox Menu</source>
+        <translation>Reinicia el menú del Fluxbox</translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="1316"/>
         <location filename="../defaultlook.ui" line="1568"/>
         <location filename="../defaultlook.ui" line="1593"/>
@@ -589,40 +609,9 @@
         <translation>Posició</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1165"/>
-        <source>Reset DefaultDock</source>
-        <translation>Reinicia l&apos;acoblador per omissió</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1493"/>
-        <source>Toggle desktop icons</source>
-        <translation>Canvia les icones de l&apos;escriptori</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1309"/>
-        <source>Reset Fluxbox Menu</source>
-        <translation>Reinicia el menú del Fluxbox</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1507"/>
-        <location filename="../defaultlook.ui" line="1656"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reinicia als valors per omissió&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1172"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Paràmetres de l&apos;acoblador&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1534"/>
-        <source>Width</source>
-        <translation>Amplada</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1434"/>
-        <source>Toggle icon captions</source>
-        <translation>Canvia els títols de les icones</translation>
+        <location filename="../defaultlook.ui" line="1323"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Thunar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Thunar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1417"/>
@@ -630,24 +619,9 @@
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Icones de l&apos;escriptori&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1214"/>
-        <source>Height</source>
-        <translation>Altura</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="198"/>
-        <source>Set Tasklist plugin to:</source>
-        <translation>Defineix el connector de la llista de tasques a:</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="417"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Docklike is the modern dock plugin for the panel.  Window Buttons is the classic tasklist without dock features.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Docklike és el connector de l&apos;acoblador  modern per al quadre.  Window Buttons és la clàssica llista de tasques sense prestacions d&apos;acoblador.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1323"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Thunar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Thunar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <location filename="../defaultlook.ui" line="1434"/>
+        <source>Toggle icon captions</source>
+        <translation>Canvia els títols de les icones</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1461"/>
@@ -660,6 +634,32 @@
         <translation>Actualitza les entrades actuals del menú</translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="1485"/>
+        <source>On Hover</source>
+        <translation>En mantenir</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1493"/>
+        <source>Toggle desktop icons</source>
+        <translation>Canvia les icones de l&apos;escriptori</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1507"/>
+        <location filename="../defaultlook.ui" line="1656"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reinicia als valors per omissió&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1527"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Paràmetres de la barra d&apos;eines&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1534"/>
+        <source>Width</source>
+        <translation>Amplada</translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="1548"/>
         <source>Show Toolbar</source>
         <translation>Mostra la Barra d&apos;Eines</translation>
@@ -668,34 +668,6 @@
         <location filename="../defaultlook.ui" line="1578"/>
         <source>Plasma</source>
         <translation>Plasma</translation>
-    </message>
-    <message>
-        <source>Systray Icon Size</source>
-        <translation type="vanished">Mida d&apos;icones a la barra d&apos;eines</translation>
-    </message>
-    <message>
-        <source>Default</source>
-        <translation type="vanished">Per omissió</translation>
-    </message>
-    <message>
-        <source>Small</source>
-        <translation type="vanished">Petita</translation>
-    </message>
-    <message>
-        <source>Medium</source>
-        <translation type="vanished">Mitjana</translation>
-    </message>
-    <message>
-        <source>Large</source>
-        <translation type="vanished">Gran</translation>
-    </message>
-    <message>
-        <source>Larger</source>
-        <translation type="vanished">Més gran</translation>
-    </message>
-    <message>
-        <source>Largest</source>
-        <translation type="vanished">Molt gran</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1668"/>
@@ -718,124 +690,123 @@
         <translation>Altres</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1764"/>
-        <source>Password for administrative tasks:</source>
-        <translation>Contrasenya d&apos;administrador: </translation>
+        <location filename="../defaultlook.ui" line="1823"/>
+        <source>Enable mounting of internal drives by non-root users</source>
+        <translation>Activa el muntatge de discos interns per qualsevol usuari</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1726"/>
+        <location filename="../defaultlook.ui" line="1816"/>
         <source>Use tearfree radeon driver option</source>
         <translation>Usa el l&apos;opció del controlador radeon sense estrips</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1785"/>
-        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
-        <translation>          NOTA: s&apos;ha fet còpia de seguretat del fitxer actual /etc/X11/xorg.conf.d/20-radeon.conf al directori d&apos;usuari</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1823"/>
-        <source>&amp;User</source>
-        <translation>&amp;Usuari</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1757"/>
-        <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
-        <translation>Useu el controlador intel en comptes del controlador &quot;modesetting&quot; (cal reiniciar)</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1864"/>
-        <source>Enable kernel sandbox</source>
-        <translation>Activa l&apos;entorn de proves (sandbox)</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1850"/>
-        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
-        <translation>          NOTA: es farà còpia de seguretat del fitxer /etc/X11/xorg.conf.d/20-intel.conf al directori d&apos;usuari</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1799"/>
-        <source>Reset Lightdm (login screen) to system default theme</source>
-        <translation>Reinicia Lightdm (pantalla d&apos;entrada) al tema per omissió</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1843"/>
-        <source>Use libinput driver for touchpad instead of synaptics touchpad driver (requires restart)</source>
-        <translation>Usa el controlador libinput del ratolí tàctil en comptes del controlador synaptics (cal reiniciar) </translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1778"/>
+        <location filename="../defaultlook.ui" line="1809"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>          NOTA: s&apos;ha fet còpia de seguretat del fitxer actual /etc/X11/xorg.conf.d/20-amd.conf al directori d&apos;usuari</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1871"/>
-        <source>Enable mounting of internal drives by non-root users</source>
-        <translation>Activa el muntatge de discos interns per qualsevol usuari</translation>
+        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
+        <translation>          NOTA: s&apos;ha fet còpia de seguretat del fitxer actual /etc/X11/xorg.conf.d/20-radeon.conf al directori d&apos;usuari</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1857"/>
-        <source>Use tearfree amdgpu option</source>
-        <translation>Usa l&apos;opció AMDGPU sense estrips</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1750"/>
-        <source>Root</source>
-        <translation>Arrel</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1792"/>
+        <location filename="../defaultlook.ui" line="1864"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
         <translation>Usa les Client Side Decorations (CSD) a les aplicacions GTK3 que hi siguin compatibles (cal reinici de sessió)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1147"/>
-        <source>Show percentages in notifcations when available</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1203"/>
-        <source>Manage Tint2 Panel</source>
-        <translation>Gestiona el panell Tint2</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1806"/>
+        <location filename="../defaultlook.ui" line="1733"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;cal reiniciar&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1809"/>
+        <location filename="../defaultlook.ui" line="1736"/>
         <source>Enable Bluetooth Adapters on boot</source>
         <translation>Activa els adaptadors Bluetooth en arrencar</translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="1857"/>
+        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
+        <translation>          NOTA: es farà còpia de seguretat del fitxer /etc/X11/xorg.conf.d/20-intel.conf al directori d&apos;usuari</translation>
+    </message>
+    <message>
+        <source>Use libinput driver for touchpad instead of synaptics touchpad driver (requires restart)</source>
+        <translation type="vanished">Usa el controlador libinput del ratolí tàctil en comptes del controlador synaptics (cal reiniciar) </translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="1771"/>
+        <source>Password for administrative tasks:</source>
+        <translation>Contrasenya d&apos;administrador: </translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1850"/>
+        <source>&amp;User</source>
+        <translation>&amp;Usuari</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1830"/>
+        <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
+        <translation>Useu el controlador intel en comptes del controlador &quot;modesetting&quot; (cal reiniciar)</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1778"/>
+        <source>Use tearfree amdgpu option</source>
+        <translation>Usa l&apos;opció AMDGPU sense estrips</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1726"/>
+        <source>Reset Lightdm (login screen) to system default theme</source>
+        <translation>Reinicia Lightdm (pantalla d&apos;entrada) al tema per omissió</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1764"/>
+        <source>Root</source>
+        <translation>Arrel</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1743"/>
+        <source>Enable kernel sandbox</source>
+        <translation>Activa l&apos;entorn de proves (sandbox)</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1785"/>
         <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
         <translation>Apt instal·la els paquets addicionals &quot;recomanats&quot; com a dependències</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1947"/>
+        <location filename="../defaultlook.ui" line="1750"/>
+        <source>Automatic generation of fluxbox applications menu after package installation, removal, and updates</source>
+        <translation>Generació automàtica del menú d&apos;aplicacions a Fluxbox després de la instal·lació, eliminació o actualització de paquets, </translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1940"/>
         <source>About</source>
         <translation>Quant a </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1958"/>
+        <location filename="../defaultlook.ui" line="1951"/>
         <source>Help</source>
         <translation>Ajuda </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1975"/>
+        <location filename="../defaultlook.ui" line="1968"/>
         <source>Quit application</source>
         <translation>Surt de l&apos;aplicació</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1978"/>
+        <location filename="../defaultlook.ui" line="1971"/>
         <source>Close</source>
         <translation>Tanca</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1985"/>
+        <location filename="../defaultlook.ui" line="1978"/>
         <source>Alt+N</source>
         <translation>Alt+N</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1998"/>
+        <source>Xfce Settings</source>
+        <translation>Paràmetres de Xfce</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="57"/>
@@ -845,7 +816,7 @@
     <message>
         <location filename="../defaultlook.cpp" line="140"/>
         <source>Style</source>
-        <translation type="unfinished"></translation>
+        <translation>Estil</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="630"/>
@@ -918,12 +889,12 @@
         <translation>S&apos;ha fet còpia de seguretat dels vostres paràmetres del plafó en un fitxer amagat anomenat .restore al vostre directori d&apos;usuari (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1716"/>
+        <location filename="../defaultlook.cpp" line="1713"/>
         <source>settings</source>
         <translation>paràmetres</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2056"/>
+        <location filename="../defaultlook.cpp" line="2053"/>
         <source>Choose a theme set</source>
         <translation>Trieu un conjunt de temes</translation>
     </message>
