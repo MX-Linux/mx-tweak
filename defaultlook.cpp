@@ -3549,7 +3549,6 @@ void defaultlook::settheme(const QString &type, const QString &theme, const QStr
             } else {
                 cmd = "echo gtk-theme-name=\"" + theme + "\" >> $HOME/.gtkrc-2.0";
             }
-            system(cmd.toUtf8());
 
             cmd1 ="gsettings set org.gnome.desktop.interface gtk-theme \"" + theme + "\"";
             if (theme.contains("dark")){
@@ -3558,7 +3557,10 @@ void defaultlook::settheme(const QString &type, const QString &theme, const QStr
                 cmd2="gsettings set org.gnome.desktop.interface color-scheme default";
             }
 
-            cmd = "preview-mx";
+            if ( QFile("/usr/bin/preview-mx").exists()){
+                system(cmd.toUtf8());
+                cmd = "preview-mx";
+            }
         }
         if ( type == QLatin1String("fluxbox") ) {
             QString filepath = home_path + "/.fluxbox/styles/" + theme;
@@ -3584,8 +3586,10 @@ void defaultlook::settheme(const QString &type, const QString &theme, const QStr
                 cmd = "echo gtk-icon-theme-name=" + theme + "\" >> $HOME/.gtkrc-2.0";
             }
 
-            system(cmd.toUtf8());
-            cmd = "preview-mx";
+            if ( QFile("/usr/bin/preview-mx").exists()){
+                system(cmd.toUtf8());
+                cmd = "preview-mx";
+            }
         }
     }
     system(cmd.toUtf8());
