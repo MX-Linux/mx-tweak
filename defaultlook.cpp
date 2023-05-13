@@ -1462,7 +1462,6 @@ void defaultlook::setupEtc()
     Intel_flag = false;
     amdgpuflag = false;
     radeon_flag =false;
-    libinput_touchpadflag = false;
     enable_recommendsflag = false;
     //setup Intel checkbox
 
@@ -1493,8 +1492,6 @@ void defaultlook::setupEtc()
     QFileInfo radeonfile(QStringLiteral("/etc/X11/xorg.conf.d/20-radeon.conf"));
     ui->checkboxRadeontearfree->setChecked(radeonfile.exists());
 
-    QFileInfo libinputfile(QStringLiteral("/etc/X11/xorg.conf.d/30-touchpad.conf"));
-    ui->checkBoxlibinput->setChecked(libinputfile.exists());
 }
 
 void defaultlook::setuptheme()
@@ -2268,7 +2265,6 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     QString amd_option;
     QString radeon_option;
     QString lightdm_option;
-    QString libinput_option;
     QString bluetooth_option;
     QString recommends_option;
     QString DESKTOP = runCmd(QStringLiteral("echo $XDG_SESSION_DESKTOP")).output;
@@ -2277,7 +2273,6 @@ void defaultlook::on_ButtonApplyEtc_clicked()
 
     intel_option.clear();
     lightdm_option.clear();
-    libinput_option.clear();
     bluetooth_option.clear();
     recommends_option.clear();
 
@@ -2419,24 +2414,6 @@ void defaultlook::on_ButtonApplyEtc_clicked()
             recommends_option = "noinstall_recommends";
     }
 
-    //libinput_touchpad
-
-    if ( libinput_touchpadflag ) {
-        QFileInfo check_libinput(QStringLiteral("/etc/X11/xorg.conf.d/30-touchpad.conf"));
-        if ( check_libinput.exists()) {
-            //backup existing 30-touchpad.conf file to home folder
-            cmd = QStringLiteral("cp /etc/X11/xorg.conf.d/30-touchpad.conf /home/$USER/30-touchpad.conf.$(date +%Y%m%H%M%S)");
-            system(cmd.toUtf8());
-        }
-        if (ui->checkBoxlibinput->isChecked()) {
-            //copy mx-tweak version to xorg.conf.d directory
-            libinput_option = QStringLiteral("enable_libinput_touchpad");
-        } else {
-            //remove 20-radeon.conf
-            libinput_option = QStringLiteral("disable_libinput_touchpad");
-        }
-    }
-
     //deal with sudo override
 
     if (ui->radioSudoUser->isChecked()) {
@@ -2462,8 +2439,8 @@ void defaultlook::on_ButtonApplyEtc_clicked()
         }
     }
 
-    if ( ! udisks_option.isEmpty() || ! sudo_override_option.isEmpty() || ! user_name_space_override_option.isEmpty() || ! intel_option.isEmpty() || ! lightdm_option.isEmpty() || ! amd_option.isEmpty() || ! radeon_option.isEmpty() || ! libinput_option.isEmpty() || !bluetooth_option.isEmpty() || !recommends_option.isEmpty()) {
-        runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + udisks_option + " " + sudo_override_option + " " + user_name_space_override_option + " " + intel_option + " " + amd_option + " " + radeon_option + " " + libinput_option + " " + bluetooth_option + " " + recommends_option + " " + lightdm_option);
+    if ( ! udisks_option.isEmpty() || ! sudo_override_option.isEmpty() || ! user_name_space_override_option.isEmpty() || ! intel_option.isEmpty() || ! lightdm_option.isEmpty() || ! amd_option.isEmpty() || ! radeon_option.isEmpty() || !bluetooth_option.isEmpty() || !recommends_option.isEmpty()) {
+        runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + udisks_option + " " + sudo_override_option + " " + user_name_space_override_option + " " + intel_option + " " + amd_option + " " + radeon_option + " " + bluetooth_option + " " + recommends_option + " " + lightdm_option);
     }
     //reset gui
     setupEtc();
@@ -3650,13 +3627,6 @@ void defaultlook::on_listWidgeticons_currentTextChanged(const QString &currentTe
             settheme(QStringLiteral("icons"), currentText, "fluxbox");
         }
     }
-}
-
-void defaultlook::on_checkBoxlibinput_clicked()
-{
-    ui->ButtonApplyEtc->setEnabled(true);
-    libinput_touchpadflag = true;
-
 }
 
 void defaultlook::on_tabWidget_currentChanged(int /*index*/)
