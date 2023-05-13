@@ -142,28 +142,18 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="293"/>
-        <source>Backup current panel configuration</source>
+        <location filename="../defaultlook.ui" line="167"/>
+        <source>Display panel horizontally</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="440"/>
-        <location filename="../defaultlook.ui" line="485"/>
-        <location filename="../defaultlook.ui" line="640"/>
-        <location filename="../defaultlook.ui" line="965"/>
-        <location filename="../defaultlook.ui" line="972"/>
-        <location filename="../defaultlook.ui" line="979"/>
-        <location filename="../defaultlook.ui" line="1050"/>
-        <location filename="../defaultlook.ui" line="1336"/>
-        <location filename="../defaultlook.ui" line="1645"/>
-        <location filename="../defaultlook.ui" line="1739"/>
-        <source>Apply</source>
+        <location filename="../defaultlook.ui" line="177"/>
+        <source>Volume</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="303"/>
-        <location filename="../defaultlook.ui" line="363"/>
-        <source>Options</source>
+        <location filename="../defaultlook.ui" line="184"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -172,46 +162,8 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="266"/>
-        <location filename="../defaultlook.ui" line="1632"/>
-        <source>Affects 1st panel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="396"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Buttons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="251"/>
-        <source>Restore default panel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="330"/>
-        <source>Restore backup panel configuration</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="383"/>
-        <location filename="../defaultlook.ui" line="1609"/>
-        <source>Left</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="388"/>
-        <location filename="../defaultlook.ui" line="1619"/>
-        <source>Right</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="241"/>
-        <source>Display panel vertically</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="234"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Tasklist&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <location filename="../defaultlook.ui" line="198"/>
+        <source>Set Tasklist plugin to:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -227,23 +179,24 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="184"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <location filename="../defaultlook.ui" line="234"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Tasklist&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="167"/>
-        <source>Display panel horizontally</source>
+        <location filename="../defaultlook.ui" line="241"/>
+        <source>Display panel vertically</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="177"/>
-        <source>Volume</source>
+        <location filename="../defaultlook.ui" line="251"/>
+        <source>Restore default panel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="198"/>
-        <source>Set Tasklist plugin to:</source>
+        <location filename="../defaultlook.ui" line="266"/>
+        <location filename="../defaultlook.ui" line="1632"/>
+        <source>Affects 1st panel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -252,8 +205,24 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="293"/>
+        <source>Backup current panel configuration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="303"/>
+        <location filename="../defaultlook.ui" line="363"/>
+        <source>Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="323"/>
         <source>Power Manager</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="330"/>
+        <source>Restore backup panel configuration</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -262,8 +231,39 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="383"/>
+        <location filename="../defaultlook.ui" line="1609"/>
+        <source>Left</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="388"/>
+        <location filename="../defaultlook.ui" line="1619"/>
+        <source>Right</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="396"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Buttons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="417"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Docklike is the modern dock plugin for the panel.  Window Buttons is the classic tasklist without dock features.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="440"/>
+        <location filename="../defaultlook.ui" line="485"/>
+        <location filename="../defaultlook.ui" line="640"/>
+        <location filename="../defaultlook.ui" line="965"/>
+        <location filename="../defaultlook.ui" line="972"/>
+        <location filename="../defaultlook.ui" line="979"/>
+        <location filename="../defaultlook.ui" line="1050"/>
+        <location filename="../defaultlook.ui" line="1336"/>
+        <location filename="../defaultlook.ui" line="1645"/>
+        <location filename="../defaultlook.ui" line="1798"/>
+        <source>Apply</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -479,14 +479,18 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1123"/>
-        <location filename="../defaultlook.ui" line="1302"/>
-        <source>Enable single-click in Thunar File Manager</source>
+        <location filename="../defaultlook.ui" line="1030"/>
+        <source>Disable shortening of long filenames on the desktop</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1137"/>
-        <source>( also turns off Client Side Decorations for Xfce applications)</source>
+        <location filename="../defaultlook.ui" line="1037"/>
+        <source>Show GTK File Dialog action buttons at bottom of dialogs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1061"/>
+        <source>Enable hibernate on Log Out menu </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -501,14 +505,15 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1102"/>
-        <location filename="../defaultlook.ui" line="1500"/>
-        <source>Thunar windows always open in split view</source>
+        <location filename="../defaultlook.ui" line="1095"/>
+        <location filename="../defaultlook.ui" line="1454"/>
+        <source>Reset Thunar custom right-click actions to system defaults</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1061"/>
-        <source>Enable hibernate on Log Out menu </source>
+        <location filename="../defaultlook.ui" line="1102"/>
+        <location filename="../defaultlook.ui" line="1500"/>
+        <source>Thunar windows always open in split view</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -517,19 +522,15 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1030"/>
-        <source>Disable shortening of long filenames on the desktop</source>
+        <location filename="../defaultlook.ui" line="1116"/>
+        <location filename="../defaultlook.ui" line="1410"/>
+        <source>Thunar split view opens horizontal</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1037"/>
-        <source>Show GTK File Dialog action buttons at bottom of dialogs</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1095"/>
-        <location filename="../defaultlook.ui" line="1454"/>
-        <source>Reset Thunar custom right-click actions to system defaults</source>
+        <location filename="../defaultlook.ui" line="1123"/>
+        <location filename="../defaultlook.ui" line="1302"/>
+        <source>Enable single-click in Thunar File Manager</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -538,9 +539,8 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1116"/>
-        <location filename="../defaultlook.ui" line="1410"/>
-        <source>Thunar split view opens horizontal</source>
+        <location filename="../defaultlook.ui" line="1137"/>
+        <source>( also turns off Client Side Decorations for Xfce applications)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -670,6 +670,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="1586"/>
+        <source>Reset KDE/Plasma defaults</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="1668"/>
         <source>Workspace</source>
         <translation type="unfinished"></translation>
@@ -680,132 +685,122 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1586"/>
-        <source>Reset KDE/Plasma defaults</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="1718"/>
         <source>Other</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1871"/>
-        <source>Enable mounting of internal drives by non-root users</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="1726"/>
-        <source>Use tearfree radeon driver option</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1778"/>
-        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1785"/>
-        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1792"/>
-        <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1806"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1809"/>
-        <source>Enable Bluetooth Adapters on boot</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1850"/>
-        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1843"/>
-        <source>Use libinput driver for touchpad instead of synaptics touchpad driver (requires restart)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1764"/>
-        <source>Password for administrative tasks:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1823"/>
-        <source>&amp;User</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1757"/>
-        <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1857"/>
-        <source>Use tearfree amdgpu option</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1799"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1750"/>
-        <source>Root</source>
+        <location filename="../defaultlook.ui" line="1733"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1864"/>
+        <location filename="../defaultlook.ui" line="1736"/>
+        <source>Enable Bluetooth Adapters on boot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1743"/>
         <source>Enable kernel sandbox</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1771"/>
-        <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1878"/>
+        <location filename="../defaultlook.ui" line="1750"/>
         <source>Automatic generation of fluxbox applications menu after package installation, removal, and updates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1947"/>
+        <location filename="../defaultlook.ui" line="1764"/>
+        <source>Root</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1771"/>
+        <source>Password for administrative tasks:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1778"/>
+        <source>Use tearfree amdgpu option</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1785"/>
+        <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1809"/>
+        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1816"/>
+        <source>Use tearfree radeon driver option</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1823"/>
+        <source>Enable mounting of internal drives by non-root users</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1830"/>
+        <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1850"/>
+        <source>&amp;User</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1857"/>
+        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1864"/>
+        <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1871"/>
+        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1940"/>
         <source>About</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1958"/>
+        <location filename="../defaultlook.ui" line="1951"/>
         <source>Help</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1975"/>
+        <location filename="../defaultlook.ui" line="1968"/>
         <source>Quit application</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1978"/>
+        <location filename="../defaultlook.ui" line="1971"/>
         <source>Close</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1985"/>
+        <location filename="../defaultlook.ui" line="1978"/>
         <source>Alt+N</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2005"/>
+        <location filename="../defaultlook.ui" line="1998"/>
         <source>Xfce Settings</source>
         <translation type="unfinished"></translation>
     </message>
@@ -890,12 +885,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1716"/>
+        <location filename="../defaultlook.cpp" line="1713"/>
         <source>settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2056"/>
+        <location filename="../defaultlook.cpp" line="2053"/>
         <source>Choose a theme set</source>
         <translation type="unfinished"></translation>
     </message>
