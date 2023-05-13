@@ -15,6 +15,6 @@ Depends: ${misc:Depends},
         libglib2.0-bin
 Recommends: compton,
         compton-conf,
-        gtk3-nocsd
+        preview-mx,
 Description: MX Tweak
  MX Tweak is a tool for quick tweaks to the Xfce environment supplied with MX Linux
