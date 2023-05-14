@@ -137,7 +137,6 @@ void defaultlook::setup()
         ui->tabWidget->removeTab(2);
         ui->tabWidget->removeTab(2);
         ui->tabWidget->removeTab(1);
-        ui->tabWidget->setTabText(0,tr("Style"));
         if (themetabflag){
             ui->tabWidget->setCurrentIndex(0);
         } else {
