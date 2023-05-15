@@ -3763,9 +3763,9 @@ void defaultlook::thunarsingleclicksetup(){
 
 void defaultlook::thunarsetsingleclick(bool state){
     if (state) {
-        runCmd(QStringLiteral("xfconf-query  -c thunar -p /misc-single-click -s true"));
+        runCmd(QStringLiteral("xfconf-query  -c thunar -p /misc-single-click -s true --create"));
     } else {
-        runCmd(QStringLiteral("xfconf-query  -c thunar -p /misc-single-click -s false"));
+        runCmd(QStringLiteral("xfconf-query  -c thunar -p /misc-single-click -s false --create"));
     }
 }
 
