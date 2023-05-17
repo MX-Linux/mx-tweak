@@ -28,6 +28,7 @@
 #include <unistd.h>
 #include "brightness_small.h"
 #include "defaultlook.h"
+#include "QCommandLineParser"
 
 int main(int argc, char *argv[])
 {
@@ -41,15 +42,22 @@ int main(int argc, char *argv[])
     appTran.load(QStringLiteral("mx-tweak_") + QLocale::system().name(), QStringLiteral("/usr/share/mx-tweak/locale"));
     QApplication::installTranslator(&appTran);
 
-    if (QApplication::arguments().contains(QStringLiteral("--tray"))){
+
+    QCommandLineParser parser;
+    parser.setApplicationDescription(QObject::tr("GUI for applying assorted useful tweaks"));
+    parser.addHelpOption();
+    parser.addVersionOption();
+    parser.addOption({"tray", QObject::tr("launches brightness-systray")});
+    parser.addOption({"display", QObject::tr("opens with display tab open.  Only valid with Xfce desktop running")});
+    parser.addOption({"theme", QObject::tr("Opens theme tab directly.  Valid on Xfce & Fluxbox desktops")});
+    parser.process(a);
+
+
+    if (parser.isSet("tray")){
         brightness_small fred(nullptr,QApplication::arguments());
         return QApplication::exec();
-        //    } else {
-        //        if (system("echo $XDG_CURRENT_DESKTOP | grep -q XFCE") != 0){
-        //            QMessageBox::information(0, QApplication::tr("MX Tweak"),
-        //                                     QApplication::tr("This app is Xfce-only"));
-        //            exit(0);
     }
+
     defaultlook w(nullptr, QApplication::arguments());
     w.show();
     return QApplication::exec();

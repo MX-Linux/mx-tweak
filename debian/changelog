@@ -1,8 +1,83 @@
+mx-tweak (23.05.08mx23) mx; urgency=medium
+
+  * update icons
+  * set thunar single click properly when no preexisting config exists 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Mon, 15 May 2023 17:59:53 -0400
+
+mx-tweak (23.05.07mx23) mx; urgency=medium
+
+  * update translations
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 13 May 2023 19:48:27 -0400
+
+mx-tweak (23.05.06mx23) mx; urgency=medium
+
+  * remove libinput overrides
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 13 May 2023 13:29:15 -0400
+
+mx-tweak (23.05.05mx23) mx; urgency=medium
+
+  * use fluxbox-remote reloadstyle to load menu style properly
+  * set dark mode switch properly in settings.ini
+  * branch off fluxbox gtk preview so Qt list widgets change selection properly 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 13 May 2023 11:26:15 -0400
+
+mx-tweak (23.05.04mx23) mx; urgency=medium
+
+  * fix column labels
+  * mx-launcher-l10n strings in policy file
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Fri, 12 May 2023 22:30:57 -0400
+
+mx-tweak (23.05.03mx23) mx; urgency=medium
+
+  * don't pkill preview-mx (it will close itself on focus loss)
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Fri, 12 May 2023 20:18:51 -0400
+
+mx-tweak (23.05.02mx23) mx; urgency=medium
+
+  * use preview-mx to display sample gtk window
+  * use fluxbox-remote reconfigure to reload styles
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Tue, 09 May 2023 23:32:17 -0400
+
+mx-tweak (23.05.01mx23) nx; urgency=medium
+
+  * full theme module for fluxbox
+  * use restart instead of reconfigure for fluxbox style updates
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Mon, 01 May 2023 23:03:45 -0400
+
+mx-tweak (23.04.08mx23) mx; urgency=medium
+
+  * add --theme switch
+  * use QCommandParser for switch processing
+  * cleanup some qDebug output
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 30 Apr 2023 21:54:38 -0400
+
+mx-tweak (23.04.07mx23) mx; urgency=medium
+
+  * add missing css file 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Mon, 24 Apr 2023 17:23:58 -0400
+
+mx-tweak (23.04.06mx23) mx; urgency=medium
+
+  * add toggle for automatic generation of fluxbox menu 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 22 Apr 2023 11:27:31 -0400
+
 mx-tweak (23.04.05mx23) mx; urgency=medium
 
   * remove non-working plasma systray icon size function
   * new menu icons
   * Xfce panel plugin scaling
+  * toggle percentages on gauge style notifications (audio volume, brightness)
 
  -- Dolphin Oracle <dolphinoracle@gmail.com>  Thu, 13 Apr 2023 20:02:01 -0400
 
