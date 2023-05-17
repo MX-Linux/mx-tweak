@@ -3513,15 +3513,15 @@ void defaultlook::settheme(const QString &type, const QString &theme, const QStr
     } else if ( desktop == "fluxbox" ){
         QString home_path = QDir::homePath();
         if ( type == QLatin1String("gtk-3.0") ) {
-            if (system("grep gtk-theme-name $HOME/.config/gtk-3.0/settings.ini") == 0) {
+            if (runCmd("grep gtk-theme-name $HOME/.config/gtk-3.0/settings.ini").exitCode == 0) {
                 cmd = "sed -i 's/gtk-theme-name=.*/gtk-theme-name=" + theme + "/' $HOME/.config/gtk-3.0/settings.ini";
             } else {
                 cmd = "echo gtk-theme-name=" + theme + "\" >> $HOME/.config/gtk-3.0/settings.ini";
             }
             system(cmd.toUtf8());
 
-            if (system("grep gtk-theme-name $HOME/.gtkrc-2.0") == 0) {
-                cmd = "sed -i 's/gtk-theme-name=\".*/gtk-theme-name=\"" + theme + "\"/' $HOME/.gtkrc-2.0";
+            if (runCmd("grep gtk-theme-name $HOME/.gtkrc-2.0").exitCode == 0) {
+                cmd = "sed -i 's/gtk-theme-name=.*/gtk-theme-name=\"" + theme + "\"/' $HOME/.gtkrc-2.0";
             } else {
                 cmd = "echo gtk-theme-name=\"" + theme + "\" >> $HOME/.gtkrc-2.0";
             }
@@ -3535,14 +3535,14 @@ void defaultlook::settheme(const QString &type, const QString &theme, const QStr
             }
 
             if (theme.contains("dark")){
-                if (system("grep gtk-application-prefer-dark-theme $HOME/.config/gtk-3.0/settings.ini") == 0) {
+                if (runCmd("grep gtk-application-prefer-dark-theme $HOME/.config/gtk-3.0/settings.ini").exitCode == 0) {
                     runCmd("sed -i 's/gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=true/' $HOME/.config/gtk-3.0/settings.ini");
                 } else {
                     runCmd("echo gtk-application-prefer-dark-theme=true/' >> $HOME/.config/gtk-3.0/settings.ini");
                     cmd = "echo gtk-theme-name=" + theme + "\" >> $HOME/.config/gtk-3.0/settings.ini";
                 }
             } else {
-                if (system("grep gtk-application-prefer-dark-theme $HOME/.config/gtk-3.0/settings.ini") == 0) {
+                if (runCmd("grep gtk-application-prefer-dark-theme $HOME/.config/gtk-3.0/settings.ini").exitCode == 0) {
                     runCmd("sed -i 's/gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=false/' $HOME/.config/gtk-3.0/settings.ini");
                 } else {
                     runCmd("echo gtk-application-prefer-dark-theme=false/' >> $HOME/.config/gtk-3.0/settings.ini");
@@ -3567,16 +3567,16 @@ void defaultlook::settheme(const QString &type, const QString &theme, const QStr
         //for fluxbox, edit ~/.config/gtk-3.0/settings.ini and ~/.gtkrc-2.0 has quotes
         if ( type == QLatin1String("icons") ) {
 
-            if (system("grep gtk-icon-theme-name $HOME/.config/gtk-3.0/settings.ini") == 0) {
+            if (runCmd("grep gtk-icon-theme-name $HOME/.config/gtk-3.0/settings.ini").exitCode == 0) {
                 cmd = "sed -i 's/gtk-icon-theme-name=.*/gtk-icon-theme-name=" + theme + "/' $HOME/.config/gtk-3.0/settings.ini";
             } else {
                 cmd = "echo gtk-icon-theme-name=" + theme + "\" >> $HOME/.config/gtk-3.0/settings.ini";
             }
             system(cmd.toUtf8());
-            if (system("grep gtk-icon-theme-name $HOME/.config/gtk-3.0/settings.ini") == 0) {
-                cmd = "sed -i 's/gtk-icon-theme-name=\".*/gtk-icon-theme-name=\"" + theme + "\"/' $HOME/.gtkrc-2.0";
+            if (runCmd("grep gtk-icon-theme-name $HOME/.gtkrc-2.0").exitCode == 0) {
+                cmd = "sed -i 's/gtk-icon-theme-name=.*/gtk-icon-theme-name=\"" + theme + "\"/' $HOME/.gtkrc-2.0";
             } else {
-                cmd = "echo gtk-icon-theme-name=" + theme + "\" >> $HOME/.gtkrc-2.0";
+                cmd = "echo gtk-icon-theme-name=\"" + theme + "\" >> $HOME/.gtkrc-2.0";
             }
 
             if ( QFile("/usr/bin/preview-mx").exists()){
