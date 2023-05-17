@@ -79,11 +79,11 @@ public:
     bool Intel_flag{};
     bool radeon_flag{};
     bool amdgpuflag{};
-    bool libinput_touchpadflag{};
     bool bluetoothautoenableflag{};
     bool enable_recommendsflag{};
     bool vblankflag{};
     bool displayflag = false;
+    bool themetabflag = false;
     bool displaysetupflag = false;
     bool brightnessflag = false;
     bool sandboxflag = false;
@@ -205,7 +205,6 @@ private slots:
     void on_checkBoxSingleClick_clicked();
     void on_checkBoxThunarCAReset_clicked();
     void on_checkBoxThunarSingleClick_clicked();
-    void on_checkBoxlibinput_clicked();
     void on_checkFirefox_clicked();
     void on_checkHexchat_clicked();
     void on_checkHorz_clicked();
@@ -283,6 +282,8 @@ private slots:
     void on_comboBoxTasklistPlugin_currentIndexChanged(int);
 
     void on_radioButtonSetPanelPluginScales_clicked();
+
+    void on_checkBoxDisableFluxboxMenuGeneration_clicked();
 
 private:
     Ui::defaultlook *ui;

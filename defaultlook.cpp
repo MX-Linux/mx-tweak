@@ -58,6 +58,10 @@ defaultlook::defaultlook(QWidget *parent, const QStringList &args) :
         }
     }
 
+    if (args.contains(QStringLiteral("--theme"))){
+        themetabflag = true;
+    }
+
     if (args.contains(QStringLiteral("--verbose"))) {
         verbose = true;
     }
@@ -98,7 +102,11 @@ void defaultlook::setup()
         ui->tabWidget->removeTab(Tab::Plasma);
         ui->tabWidget->removeTab(Tab::Fluxbox);
         //set first tab as default
-        ui->tabWidget->setCurrentIndex(Tab::Panel);
+        if (themetabflag){
+            ui->tabWidget->setCurrentIndex(Tab::Theme);
+        } else {
+            ui->tabWidget->setCurrentIndex(Tab::Panel);
+        }
         //setup Config Options
         setupConfigoptions();
     }
@@ -119,17 +127,21 @@ void defaultlook::setup()
         ui->label_5->hide();
         ui->label_6->hide();
         ui->label_7->hide();
-        ui->listWidgetTheme->hide();
-        ui->listWidgeticons->hide();
-        ui->label_28->hide();
-        ui->label_30->hide();
+        //ui->listWidgetTheme->hide();
+        //ui->listWidgeticons->hide();
+        //ui->label_28->hide();
+        //ui->label_30->hide();
         ui->toolButtonXFCEAppearance->hide();
         ui->toolButtonXFCEWMsettings->hide();
         ui->toolButtonXFCEpanelSettings->hide();
         ui->tabWidget->removeTab(2);
         ui->tabWidget->removeTab(2);
         ui->tabWidget->removeTab(1);
-        ui->tabWidget->setCurrentIndex(1);
+        if (themetabflag){
+            ui->tabWidget->setCurrentIndex(0);
+        } else {
+            ui->tabWidget->setCurrentIndex(1);
+        }
 
 
     }
@@ -569,7 +581,7 @@ void defaultlook::on_buttonApply_clicked()
     }
 
     // tasklist switch
-    qDebug() << "tasklist flag is " << tasklistflag;
+    if (verbose) qDebug() << "tasklist flag is " << tasklistflag;
     if (ui->radioButtonTasklist->isChecked()){
         if ( tasklistflag ) tasklistchange();
     }
@@ -1356,6 +1368,17 @@ void defaultlook::setupEtc()
     }
     //set values for checkboxes
 
+    //fluxbox menu auto generation on package install, removal, and upgrades
+    if ( QFile("/usr/bin/mxfb-menu-generator").exists()){
+        if (QFile(home_path + "/.fluxbox/mxfb-menu-generator-disabled.chk").exists()){
+            ui->checkBoxDisableFluxboxMenuGeneration->setChecked(false);
+        } else {
+            ui->checkBoxDisableFluxboxMenuGeneration->setChecked(true);
+        }
+    } else {
+        ui->checkBoxDisableFluxboxMenuGeneration->hide();
+    }
+
     //setup udisks option
     QFileInfo fileinfo(QStringLiteral("/etc/tweak-udisks.chk"));
     if (fileinfo.exists()) {
@@ -1438,7 +1461,6 @@ void defaultlook::setupEtc()
     Intel_flag = false;
     amdgpuflag = false;
     radeon_flag =false;
-    libinput_touchpadflag = false;
     enable_recommendsflag = false;
     //setup Intel checkbox
 
@@ -1469,8 +1491,6 @@ void defaultlook::setupEtc()
     QFileInfo radeonfile(QStringLiteral("/etc/X11/xorg.conf.d/20-radeon.conf"));
     ui->checkboxRadeontearfree->setChecked(radeonfile.exists());
 
-    QFileInfo libinputfile(QStringLiteral("/etc/X11/xorg.conf.d/30-touchpad.conf"));
-    ui->checkBoxlibinput->setChecked(libinputfile.exists());
 }
 
 void defaultlook::setuptheme()
@@ -1572,7 +1592,7 @@ void defaultlook::setupConfigoptions()
     float versioncheck = 4.18;
 
     QString XfceVersion = runCmd("dpkg-query --show xfce4-session | awk '{print $2}'").output.section(".",0,1);
-    qDebug() << "XfceVersion = " << XfceVersion.toFloat();
+    if (verbose) qDebug() << "XfceVersion = " << XfceVersion.toFloat();
     if ( XfceVersion.toFloat() < versioncheck ){
         ui->label_Xfce_CSD->hide();
     }
@@ -1601,6 +1621,10 @@ void defaultlook::setupConfigoptions()
         } else {
             ui->checkBoxShowAllWorkspaces->setEnabled(false);
         }
+
+        // set percentages in notifications
+        test = runCmd(QStringLiteral("xfconf-query -c xfce4-notifyd -p /show-text-with-gauge")).output;
+        ui->checkBoxNotificatonPercentages->setChecked(test == QLatin1String("true"));
 
         //switch zoom_desktop
 
@@ -2240,7 +2264,6 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     QString amd_option;
     QString radeon_option;
     QString lightdm_option;
-    QString libinput_option;
     QString bluetooth_option;
     QString recommends_option;
     QString DESKTOP = runCmd(QStringLiteral("echo $XDG_SESSION_DESKTOP")).output;
@@ -2249,7 +2272,6 @@ void defaultlook::on_ButtonApplyEtc_clicked()
 
     intel_option.clear();
     lightdm_option.clear();
-    libinput_option.clear();
     bluetooth_option.clear();
     recommends_option.clear();
 
@@ -2278,7 +2300,16 @@ void defaultlook::on_ButtonApplyEtc_clicked()
             if (verbose) qDebug() << "could not write nocsd desktop file";
         }
     }
+    //fluxbox menu autogeneration
+    if ( QFile("/usr/bin/mxfb-menu-generator").exists()){
+        if (! ui->checkBoxDisableFluxboxMenuGeneration->isChecked()){
+            runCmd("touch " + home_path + "/.fluxbox/mxfb-menu-generator-disabled.chk");
+        } else {
+            runCmd("rm " + home_path + "/.fluxbox/mxfb-menu-generator-disabled.chk");
+        }
+    }
 
+    //internal drive mounting for non root users
     if (ui->checkBoxMountInternalDrivesNonRoot->isChecked()) {
         if (fileinfo.exists()) {
             if (verbose) qDebug() << "no change to internal drive mount settings";
@@ -2293,9 +2324,12 @@ void defaultlook::on_ButtonApplyEtc_clicked()
         }
     }
 
+    //reset lightdm greeter config
     if (ui->checkBoxLightdmReset->isChecked()) {
         lightdm_option = QStringLiteral("lightdm_reset");
     }
+
+    //graphics driver overrides
 
     if ( Intel_flag ) {
         QFileInfo check_intel(QStringLiteral("/etc/X11/xorg.conf.d/20-intel.conf"));
@@ -2379,24 +2413,6 @@ void defaultlook::on_ButtonApplyEtc_clicked()
             recommends_option = "noinstall_recommends";
     }
 
-    //libinput_touchpad
-
-    if ( libinput_touchpadflag ) {
-        QFileInfo check_libinput(QStringLiteral("/etc/X11/xorg.conf.d/30-touchpad.conf"));
-        if ( check_libinput.exists()) {
-            //backup existing 30-touchpad.conf file to home folder
-            cmd = QStringLiteral("cp /etc/X11/xorg.conf.d/30-touchpad.conf /home/$USER/30-touchpad.conf.$(date +%Y%m%H%M%S)");
-            system(cmd.toUtf8());
-        }
-        if (ui->checkBoxlibinput->isChecked()) {
-            //copy mx-tweak version to xorg.conf.d directory
-            libinput_option = QStringLiteral("enable_libinput_touchpad");
-        } else {
-            //remove 20-radeon.conf
-            libinput_option = QStringLiteral("disable_libinput_touchpad");
-        }
-    }
-
     //deal with sudo override
 
     if (ui->radioSudoUser->isChecked()) {
@@ -2422,8 +2438,8 @@ void defaultlook::on_ButtonApplyEtc_clicked()
         }
     }
 
-    if ( ! udisks_option.isEmpty() || ! sudo_override_option.isEmpty() || ! user_name_space_override_option.isEmpty() || ! intel_option.isEmpty() || ! lightdm_option.isEmpty() || ! amd_option.isEmpty() || ! radeon_option.isEmpty() || ! libinput_option.isEmpty() || !bluetooth_option.isEmpty() || !recommends_option.isEmpty()) {
-        runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + udisks_option + " " + sudo_override_option + " " + user_name_space_override_option + " " + intel_option + " " + amd_option + " " + radeon_option + " " + libinput_option + " " + bluetooth_option + " " + recommends_option + " " + lightdm_option);
+    if ( ! udisks_option.isEmpty() || ! sudo_override_option.isEmpty() || ! user_name_space_override_option.isEmpty() || ! intel_option.isEmpty() || ! lightdm_option.isEmpty() || ! amd_option.isEmpty() || ! radeon_option.isEmpty() || !bluetooth_option.isEmpty() || !recommends_option.isEmpty()) {
+        runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + udisks_option + " " + sudo_override_option + " " + user_name_space_override_option + " " + intel_option + " " + amd_option + " " + radeon_option + " " + bluetooth_option + " " + recommends_option + " " + lightdm_option);
     }
     //reset gui
     setupEtc();
@@ -2545,7 +2561,7 @@ void defaultlook::savethemeundo()
 
     undotheme << undocommand;
 
-    qDebug () << "undo command list is " << undotheme;
+    if (verbose) qDebug () << "undo command list is " << undotheme;
 
 }
 
@@ -2741,6 +2757,13 @@ void defaultlook::on_ButtonApplyMiscDefualts_clicked()
         thunarsplitviewhorizontal(false);
     }
     //systray frame removed
+
+    //notification percentages
+    if (ui->checkBoxNotificatonPercentages->isChecked()){
+        runCmd("xfconf-query -c xfce4-notifyd -p /show-text-with-gauge -t bool -s true --create");
+    } else {
+        runCmd("xfconf-query -c xfce4-notifyd -p /show-text-with-gauge --reset");
+    }
 
     //set desktop zoom
     if (ui->checkBoxDesktopZoom->isChecked()) {
@@ -3490,34 +3513,76 @@ void defaultlook::settheme(const QString &type, const QString &theme, const QStr
     } else if ( desktop == "fluxbox" ){
         QString home_path = QDir::homePath();
         if ( type == QLatin1String("gtk-3.0") ) {
-            cmd = "sed -i 's/gtk-theme-name=.*/gtk-theme-name=" + theme + "/' $HOME/.config/gtk-3.0/settings.ini";
+            if (system("grep gtk-theme-name $HOME/.config/gtk-3.0/settings.ini") == 0) {
+                cmd = "sed -i 's/gtk-theme-name=.*/gtk-theme-name=" + theme + "/' $HOME/.config/gtk-3.0/settings.ini";
+            } else {
+                cmd = "echo gtk-theme-name=" + theme + "\" >> $HOME/.config/gtk-3.0/settings.ini";
+            }
             system(cmd.toUtf8());
-            cmd = "yad --form --title \"Preview\"  --button:gtk-ok --field=Button:FBTN --field=Combobox:CBE --field=Checkbox:CHK --close-on-unfocus";
-            system(cmd.toUtf8());
-            cmd = "sed -i 's/gtk-theme-name=\".*/gtk-theme-name=\"" + theme + "\"/' $HOME/.gtkrc-2.0";
+
+            if (system("grep gtk-theme-name $HOME/.gtkrc-2.0") == 0) {
+                cmd = "sed -i 's/gtk-theme-name=\".*/gtk-theme-name=\"" + theme + "\"/' $HOME/.gtkrc-2.0";
+            } else {
+                cmd = "echo gtk-theme-name=\"" + theme + "\" >> $HOME/.gtkrc-2.0";
+            }
+
             cmd1 ="gsettings set org.gnome.desktop.interface gtk-theme \"" + theme + "\"";
+
             if (theme.contains("dark")){
                 cmd2="gsettings set org.gnome.desktop.interface color-scheme prefer-dark";
             } else {
                 cmd2="gsettings set org.gnome.desktop.interface color-scheme default";
+            }
+
+            if (theme.contains("dark")){
+                if (system("grep gtk-application-prefer-dark-theme $HOME/.config/gtk-3.0/settings.ini") == 0) {
+                    runCmd("sed -i 's/gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=true/' $HOME/.config/gtk-3.0/settings.ini");
+                } else {
+                    runCmd("echo gtk-application-prefer-dark-theme=true/' >> $HOME/.config/gtk-3.0/settings.ini");
+                    cmd = "echo gtk-theme-name=" + theme + "\" >> $HOME/.config/gtk-3.0/settings.ini";
+                }
+            } else {
+                if (system("grep gtk-application-prefer-dark-theme $HOME/.config/gtk-3.0/settings.ini") == 0) {
+                    runCmd("sed -i 's/gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=false/' $HOME/.config/gtk-3.0/settings.ini");
+                } else {
+                    runCmd("echo gtk-application-prefer-dark-theme=false/' >> $HOME/.config/gtk-3.0/settings.ini");
+                    cmd = "echo gtk-theme-name=" + theme + "\" >> $HOME/.config/gtk-3.0/settings.ini";
+                }
+            }
+
+            if ( QFile("/usr/bin/preview-mx").exists()){
+                system(cmd.toUtf8());
+                cmd = "preview-mx &";
             }
         }
         if ( type == QLatin1String("fluxbox") ) {
             QString filepath = home_path + "/.fluxbox/styles/" + theme;
             if (QFile(filepath).exists()){
                 home_path.replace("/", "\\/");
-                cmd = "sed -i 's/session.styleFile:.*/session.styleFile: " + home_path + "\\/.fluxbox\\/styles\\/" + theme + "/' $HOME/.fluxbox/init && fluxbox-remote reconfigure";
+                cmd = "sed -i 's/session.styleFile:.*/session.styleFile: " + home_path + "\\/.fluxbox\\/styles\\/" + theme + "/' $HOME/.fluxbox/init && fluxbox-remote reconfigure && fluxbox-remote reloadstyle";
             } else {
-                cmd = "sed -i 's/session.styleFile:.*/session.styleFile: \\/usr\\/share\\/fluxbox\\/styles\\/" + theme + "/' $HOME/.fluxbox/init && fluxbox-remote reconfigure";
+                cmd = "sed -i 's/session.styleFile:.*/session.styleFile: \\/usr\\/share\\/fluxbox\\/styles\\/" + theme + "/' $HOME/.fluxbox/init && fluxbox-remote reconfigure && fluxbox-remote reloadstyle";
             }
         }
         //for fluxbox, edit ~/.config/gtk-3.0/settings.ini and ~/.gtkrc-2.0 has quotes
         if ( type == QLatin1String("icons") ) {
-            cmd = "sed -i 's/gtk-icon-theme-name=.*/gtk-icon-theme-name=" + theme + "/' $HOME/.config/gtk-3.0/settings.ini";
+
+            if (system("grep gtk-icon-theme-name $HOME/.config/gtk-3.0/settings.ini") == 0) {
+                cmd = "sed -i 's/gtk-icon-theme-name=.*/gtk-icon-theme-name=" + theme + "/' $HOME/.config/gtk-3.0/settings.ini";
+            } else {
+                cmd = "echo gtk-icon-theme-name=" + theme + "\" >> $HOME/.config/gtk-3.0/settings.ini";
+            }
             system(cmd.toUtf8());
-            cmd = cmd = "yad --form --title \"Preview\"  --button:gtk-ok --field=Button:FBTN --field=Combobox:CBE --field=Checkbox:CHK --close-on-unfocus";
-            system(cmd.toUtf8());
-            cmd = "sed -i 's/gtk-icon-theme-name=\".*/gtk-icon-theme-name=\"" + theme + "\"/' $HOME/.gtkrc-2.0";
+            if (system("grep gtk-icon-theme-name $HOME/.config/gtk-3.0/settings.ini") == 0) {
+                cmd = "sed -i 's/gtk-icon-theme-name=\".*/gtk-icon-theme-name=\"" + theme + "\"/' $HOME/.gtkrc-2.0";
+            } else {
+                cmd = "echo gtk-icon-theme-name=" + theme + "\" >> $HOME/.gtkrc-2.0";
+            }
+
+            if ( QFile("/usr/bin/preview-mx").exists()){
+                system(cmd.toUtf8());
+                cmd = "preview-mx &";
+            }
         }
     }
     system(cmd.toUtf8());
@@ -3563,13 +3628,6 @@ void defaultlook::on_listWidgeticons_currentTextChanged(const QString &currentTe
     }
 }
 
-void defaultlook::on_checkBoxlibinput_clicked()
-{
-    ui->ButtonApplyEtc->setEnabled(true);
-    libinput_touchpadflag = true;
-
-}
-
 void defaultlook::on_tabWidget_currentChanged(int /*index*/)
 {
     if (!displaysetupflag) {
@@ -3599,7 +3657,7 @@ void defaultlook::on_checkBoxbluetoothAutoEnable_clicked()
 {
     ui->ButtonApplyEtc->setEnabled(true);
     bluetoothautoenableflag = !bluetoothautoenableflag;
-    qDebug() << "bluetooth flag is " << bluetoothautoenableflag;
+    if (verbose) qDebug() << "bluetooth flag is " << bluetoothautoenableflag;
 }
 
 void defaultlook::on_checkBoxFluxShowToolbar_clicked()
@@ -3705,9 +3763,9 @@ void defaultlook::thunarsingleclicksetup(){
 
 void defaultlook::thunarsetsingleclick(bool state){
     if (state) {
-        runCmd(QStringLiteral("xfconf-query  -c thunar -p /misc-single-click -s true"));
+        runCmd(QStringLiteral("xfconf-query  -c thunar -p /misc-single-click -s true --create"));
     } else {
-        runCmd(QStringLiteral("xfconf-query  -c thunar -p /misc-single-click -s false"));
+        runCmd(QStringLiteral("xfconf-query  -c thunar -p /misc-single-click -s false --create"));
     }
 }
 
@@ -3758,7 +3816,7 @@ void defaultlook::on_comboBoxTasklistPlugin_currentIndexChanged(int /*index*/)
     //changing tasklistflag only happens if block is actually changed
 
     tasklistflag = !tasklistflag;
-    qDebug() << "tasklist flag is " << tasklistflag;
+    if (verbose) qDebug() << "tasklist flag is " << tasklistflag;
 }
 
 void defaultlook::tasklistchange(){
@@ -3770,11 +3828,11 @@ void defaultlook::tasklistchange(){
     } else if ( ui->comboBoxTasklistPlugin->currentIndex() == 1){
         tasklistchoice = "tasklist";
     }
-    qDebug() << "tasklistchoice is" << tasklistchoice;
+    if (verbose) qDebug() << "tasklistchoice is" << tasklistchoice;
 
 
     QString tasklistid = get_tasklistid();
-    qDebug() << "tasklistid is " << tasklistid;
+    if (verbose) qDebug() << "tasklistid is " << tasklistid;
 
     if (tasklistchoice == "docklike"){
         runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + tasklistid + "/show-handle --reset");
@@ -3799,4 +3857,10 @@ void defaultlook::tasklistchange(){
 }
 
 
+
+
+void defaultlook::on_checkBoxDisableFluxboxMenuGeneration_clicked()
+{
+    ui->ButtonApplyEtc->setEnabled(true);
+}
 
