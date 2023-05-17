@@ -1911,7 +1911,7 @@
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap resource="images.qrc">:/icons/logo.png</pixmap>
+        <pixmap resource="images.qrc">:/icons/logo.svg</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>
