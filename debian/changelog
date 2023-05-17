@@ -1,4 +1,4 @@
-mx-tweak (23.05.10mx23) ; urgency=medium
+mx-tweak (23.05.10mx23) mx; urgency=medium
 
   * adjust theme setting
   * correct check for gtk2 icon theme setting
