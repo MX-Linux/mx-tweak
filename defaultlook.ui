@@ -23,9 +23,18 @@
    <iconset>
     <normaloff>../../../../usr/share/pixmaps/mx-tweak.png</normaloff>../../../../usr/share/pixmaps/mx-tweak.png</iconset>
   </property>
+  <property name="sizeGripEnabled">
+   <bool>false</bool>
+  </property>
   <layout class="QGridLayout" name="gridLayout_9">
+   <property name="sizeConstraint">
+    <enum>QLayout::SetNoConstraint</enum>
+   </property>
    <item row="3" column="0">
     <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetNoConstraint</enum>
+     </property>
      <item>
       <widget class="QToolButton" name="toolButtonXFCEpanelSettings">
        <property name="toolTip">
@@ -152,7 +161,7 @@
       <enum>QTabWidget::North</enum>
      </property>
      <property name="currentIndex">
-      <number>7</number>
+      <number>6</number>
      </property>
      <widget class="QWidget" name="Panel">
       <attribute name="title">
@@ -161,6 +170,9 @@
       <layout class="QGridLayout" name="gridLayout_3">
        <item row="0" column="0">
         <layout class="QGridLayout" name="gridLayout">
+         <property name="sizeConstraint">
+          <enum>QLayout::SetNoConstraint</enum>
+         </property>
          <item row="1" column="0">
           <widget class="QRadioButton" name="checkHorz">
            <property name="text">
@@ -466,6 +478,9 @@
       <layout class="QGridLayout" name="gridLayout_6">
        <item row="0" column="0">
         <layout class="QGridLayout" name="gridLayout_5">
+         <property name="sizeConstraint">
+          <enum>QLayout::SetNoConstraint</enum>
+         </property>
          <item row="7" column="3">
           <widget class="QLabel" name="label_30">
            <property name="text">
@@ -628,6 +643,9 @@
       <layout class="QGridLayout" name="gridLayout_10">
        <item row="0" column="0">
         <layout class="QGridLayout" name="gridLayout_4">
+         <property name="sizeConstraint">
+          <enum>QLayout::SetNoConstraint</enum>
+         </property>
          <item row="9" column="0" colspan="4">
           <widget class="QPushButton" name="buttonCompositorApply">
            <property name="sizePolicy">
@@ -825,6 +843,9 @@
       <layout class="QGridLayout" name="gridLayout_12">
        <item row="0" column="0">
         <layout class="QGridLayout" name="gridLayout_13">
+         <property name="sizeConstraint">
+          <enum>QLayout::SetNoConstraint</enum>
+         </property>
          <item row="1" column="0" colspan="2">
           <widget class="QLabel" name="label_xbacklight">
            <property name="text">
@@ -1024,6 +1045,9 @@
       <layout class="QGridLayout" name="gridLayout_18">
        <item row="0" column="0">
         <layout class="QGridLayout" name="gridLayout_11">
+         <property name="sizeConstraint">
+          <enum>QLayout::SetNoConstraint</enum>
+         </property>
          <item row="10" column="0" colspan="2">
           <widget class="QCheckBox" name="checkboxNoEllipse">
            <property name="text">
@@ -1159,6 +1183,9 @@
       <layout class="QGridLayout" name="gridLayout_15">
        <item row="0" column="0">
         <layout class="QGridLayout" name="gridLayout_14">
+         <property name="sizeConstraint">
+          <enum>QLayout::SetNoConstraint</enum>
+         </property>
          <item row="1" column="0">
           <widget class="QCheckBox" name="checkboxfluxresetdock">
            <property name="text">
@@ -1580,6 +1607,9 @@
       <layout class="QGridLayout" name="gridLayout_17">
        <item row="0" column="0">
         <layout class="QGridLayout" name="gridLayout_16">
+         <property name="sizeConstraint">
+          <enum>QLayout::SetNoConstraint</enum>
+         </property>
          <item row="6" column="0" colspan="2">
           <widget class="QCheckBox" name="checkboxplasmaresetdock">
            <property name="text">
@@ -1720,6 +1750,9 @@
       <layout class="QGridLayout" name="gridLayout_8">
        <item row="0" column="0">
         <layout class="QGridLayout" name="gridLayout_7">
+         <property name="sizeConstraint">
+          <enum>QLayout::SetNoConstraint</enum>
+         </property>
          <item row="0" column="0">
           <widget class="QCheckBox" name="checkBoxLightdmReset">
            <property name="text">
@@ -1880,6 +1913,9 @@
    </item>
    <item row="5" column="0">
     <layout class="QGridLayout" name="gridLayout_2">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetNoConstraint</enum>
+     </property>
      <item row="0" column="2">
       <spacer name="horizontalSpacer1">
        <property name="orientation">

@@ -1,3 +1,9 @@
+mx-tweak (23.05.11mx23) mx; urgency=medium
+
+  * allow smaller resizing 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 21 May 2023 19:55:38 -0400
+
 mx-tweak (23.05.10mx23) mx; urgency=medium
 
   * adjust theme setting
