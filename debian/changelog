@@ -1,3 +1,11 @@
+mx-tweak (23.05.12mx23) mx; urgency=medium
+
+  * fix setting of gtk2 themes
+  * improve fluxbox theme setting
+  * fix misplaced boolean type on thunar single click action
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Tue, 23 May 2023 19:08:15 -0400
+
 mx-tweak (23.05.11mx23) mx; urgency=medium
 
   * allow smaller resizing 

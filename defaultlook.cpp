@@ -3510,6 +3510,7 @@ void defaultlook::settheme(const QString &type, const QString &theme, const QStr
         if ( type == QLatin1String("icons") ) {
             cmd = "xfconf-query -c xsettings -p /Net/IconThemeName -s \"" + theme + "\"";
         }
+        system(cmd.toUtf8());
     } else if ( desktop == "fluxbox" ){
         QString home_path = QDir::homePath();
         if ( type == QLatin1String("gtk-3.0") ) {
@@ -3525,34 +3526,28 @@ void defaultlook::settheme(const QString &type, const QString &theme, const QStr
             } else {
                 cmd = "echo gtk-theme-name=\"" + theme + "\" >> $HOME/.gtkrc-2.0";
             }
+            system(cmd.toUtf8());
 
             cmd1 ="gsettings set org.gnome.desktop.interface gtk-theme \"" + theme + "\"";
-
             if (theme.contains("dark")){
                 cmd2="gsettings set org.gnome.desktop.interface color-scheme prefer-dark";
-            } else {
-                cmd2="gsettings set org.gnome.desktop.interface color-scheme default";
-            }
-
-            if (theme.contains("dark")){
                 if (runCmd("grep gtk-application-prefer-dark-theme $HOME/.config/gtk-3.0/settings.ini").exitCode == 0) {
                     runCmd("sed -i 's/gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=true/' $HOME/.config/gtk-3.0/settings.ini");
                 } else {
                     runCmd("echo gtk-application-prefer-dark-theme=true/' >> $HOME/.config/gtk-3.0/settings.ini");
-                    cmd = "echo gtk-theme-name=" + theme + "\" >> $HOME/.config/gtk-3.0/settings.ini";
                 }
             } else {
+                cmd2="gsettings set org.gnome.desktop.interface color-scheme default";
                 if (runCmd("grep gtk-application-prefer-dark-theme $HOME/.config/gtk-3.0/settings.ini").exitCode == 0) {
                     runCmd("sed -i 's/gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=false/' $HOME/.config/gtk-3.0/settings.ini");
                 } else {
                     runCmd("echo gtk-application-prefer-dark-theme=false/' >> $HOME/.config/gtk-3.0/settings.ini");
-                    cmd = "echo gtk-theme-name=" + theme + "\" >> $HOME/.config/gtk-3.0/settings.ini";
                 }
             }
 
             if ( QFile("/usr/bin/preview-mx").exists()){
-                system(cmd.toUtf8());
                 cmd = "preview-mx &";
+                system(cmd.toUtf8());
             }
         }
         if ( type == QLatin1String("fluxbox") ) {
@@ -3563,6 +3558,7 @@ void defaultlook::settheme(const QString &type, const QString &theme, const QStr
             } else {
                 cmd = "sed -i 's/session.styleFile:.*/session.styleFile: \\/usr\\/share\\/fluxbox\\/styles\\/" + theme + "/' $HOME/.fluxbox/init && fluxbox-remote reconfigure && fluxbox-remote reloadstyle";
             }
+            system(cmd.toUtf8());
         }
         //for fluxbox, edit ~/.config/gtk-3.0/settings.ini and ~/.gtkrc-2.0 has quotes
         if ( type == QLatin1String("icons") ) {
@@ -3578,14 +3574,14 @@ void defaultlook::settheme(const QString &type, const QString &theme, const QStr
             } else {
                 cmd = "echo gtk-icon-theme-name=\"" + theme + "\" >> $HOME/.gtkrc-2.0";
             }
+            system(cmd.toUtf8());
 
             if ( QFile("/usr/bin/preview-mx").exists()){
-                system(cmd.toUtf8());
                 cmd = "preview-mx &";
+                system(cmd.toUtf8());
             }
         }
     }
-    system(cmd.toUtf8());
     if (!cmd1.isEmpty()){
         system(cmd1.toUtf8());
     }
@@ -3763,9 +3759,9 @@ void defaultlook::thunarsingleclicksetup(){
 
 void defaultlook::thunarsetsingleclick(bool state){
     if (state) {
-        runCmd(QStringLiteral("xfconf-query  -c thunar -p /misc-single-click -s true --create"));
+        runCmd(QStringLiteral("xfconf-query  -c thunar -p /misc-single-click -t bool -s true --create"));
     } else {
-        runCmd(QStringLiteral("xfconf-query  -c thunar -p /misc-single-click -s false --create"));
+        runCmd(QStringLiteral("xfconf-query  -c thunar -p /misc-single-click -t bool -s false --create"));
     }
 }
 
@@ -3847,7 +3843,7 @@ void defaultlook::tasklistchange(){
     }
 
     //switch plugin
-    runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + tasklistid + " -s " + tasklistchoice + " --create");
+    runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + tasklistid + " -t string -s " + tasklistchoice + " --create");
 
 
     //reset panel
