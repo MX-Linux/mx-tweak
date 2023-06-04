@@ -1499,6 +1499,8 @@ void defaultlook::setuptheme()
     if (ui->buttonThemeApply->icon().isNull()) {
         ui->buttonThemeApply->setIcon(QIcon(":/icons/dialog-ok.svg"));
     }
+    ui->pushButtonPreview->hide();
+    ui->buttonThemeUndo->hide();
 
     ui->pushButtonPreview->setEnabled(false);
     //reset all checkboxes to unchecked
