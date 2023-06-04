@@ -285,6 +285,9 @@ private slots:
 
     void on_checkBoxDisableFluxboxMenuGeneration_clicked();
 
+
+    void on_listWidgetCursorThemes_currentTextChanged(const QString &currentText);
+
 private:
     Ui::defaultlook *ui;
 };
