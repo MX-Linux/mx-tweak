@@ -1510,6 +1510,7 @@ void defaultlook::setuptheme()
 
     populatethemelists(QStringLiteral("gtk-3.0"));
     populatethemelists(QStringLiteral("icons"));
+    populatethemelists(QStringLiteral("cursors"));
 
     if (checkXFCE()){
          populatethemelists(QStringLiteral("xfwm4"));
@@ -3399,6 +3400,7 @@ void defaultlook::on_comboBoxPlasmaSystrayIcons_currentIndexChanged(int  /*index
 void defaultlook::populatethemelists(const QString &value)
 {
     themeflag = false;
+    QString home_path = QDir::homePath();
     QString themes;
     QStringList themelist;
     if ( value == QLatin1String("gtk-3.0") || value == QLatin1String("xfwm4")) {
@@ -3422,6 +3424,16 @@ void defaultlook::populatethemelists(const QString &value)
         themes.append("\n");
         themes.append(runCmd("find $HOME/.fluxbox/styles/ -maxdepth 1 2>/dev/null |cut -d\"/\" -f6").output);
         themes.append("\n");
+    }
+
+    if ( value == QLatin1String("cursors")){
+        themes = runCmd(QStringLiteral("find /usr/share/icons/*/ -maxdepth 1 2>/dev/null |grep cursors |cut -d\"/\" -f5")).output;
+        themes.append("\n");
+        themes.append(runCmd(QStringLiteral("find $HOME/.icons/*/ -maxdepth 1 2>/dev/null |grep cursors |cut -d\"/\" -f5")).output);
+        themes.append("\n");
+        themes.append(runCmd(QStringLiteral("find $HOME/.local/share/icons/*/ -maxdepth 1 2>/dev/null |grep cursors |cut -d\"/\" -f7")).output);
+        themes.append("\n");
+        themes.append("default");
     }
 
 
@@ -3455,8 +3467,23 @@ void defaultlook::populatethemelists(const QString &value)
 
         ui->listWidgetWMtheme->clear();
         ui->listWidgetWMtheme->addItems(themelist);
-        QString current = runCmd(QStringLiteral("grep styleFile $HOME/.fluxbox/init |grep -v ^# | cut -d\"/\" -f6")).output;
+        current = runCmd(QStringLiteral("grep styleFile $HOME/.fluxbox/init |grep -v ^# | cut -d\"/\" -f6")).output;
         ui->listWidgetWMtheme->setCurrentRow(themelist.indexOf(current));
+    }
+
+    if ( value == QLatin1String("cursors")){
+        ui->listWidgetCursorThemes->clear();
+        ui->listWidgetCursorThemes->addItems(themelist);
+        if (checkXFCE()){
+            current = runCmd(QStringLiteral("xfconf-query -c xsettings -p /Gtk/CursorThemeName")).output;
+        } else if (checkFluxbox()){
+            if (QFile(home_path + "/.icons/default/index.theme").exists()) {
+                current = runCmd("grep Inherits $HOME/.icons/default/index.theme |cut -d= -f2").output;
+            } else {
+                  current = "default";
+            }
+        }
+        ui->listWidgetCursorThemes->setCurrentRow(themelist.indexOf(current));
     }
 
     if ( value == QLatin1String("icons")) {
@@ -3510,7 +3537,12 @@ void defaultlook::settheme(const QString &type, const QString &theme, const QStr
         if ( type == QLatin1String("icons") ) {
             cmd = "xfconf-query -c xsettings -p /Net/IconThemeName -s \"" + theme + "\"";
         }
+
+        if (type == QLatin1String("cursor")) {
+            cmd = "xfconf-query -c xsettings -p /Gtk/CursorThemeName -s \"" + theme + "\"";
+        }
         system(cmd.toUtf8());
+
     } else if ( desktop == "fluxbox" ){
         QString home_path = QDir::homePath();
         if ( type == QLatin1String("gtk-3.0") ) {
@@ -3581,6 +3613,37 @@ void defaultlook::settheme(const QString &type, const QString &theme, const QStr
                 system(cmd.toUtf8());
             }
         }
+
+        //for fluxbox, edit ~/.config/gtk-3.0/settings.ini, ~/.gtkrc-2.0 has quotes, and .icons/default/index.theme (create if it doesn't exist)
+        if ( type == QLatin1String("cursor") ) {
+
+            if (runCmd("grep gtk-cursor-theme-name $HOME/.config/gtk-3.0/settings.ini").exitCode == 0) {
+                cmd = "sed -i 's/gtk-cursor-theme-name=.*/gtk-cursor-theme-name=" + theme + "/' $HOME/.config/gtk-3.0/settings.ini";
+            } else {
+                cmd = "echo gtk-cursor-theme-name=" + theme + "\" >> $HOME/.config/gtk-3.0/settings.ini";
+            }
+            system(cmd.toUtf8());
+            if (runCmd("grep gtk-cursor-theme-name $HOME/.gtkrc-2.0").exitCode == 0) {
+                cmd = "sed -i 's/gtk-cursor-theme-name=.*/gtk-cursor-theme-name=\"" + theme + "\"/' $HOME/.gtkrc-2.0";
+            } else {
+                cmd = "echo gtk-cursor-theme-name=\"" + theme + "\" >> $HOME/.gtkrc-2.0";
+            }
+            system(cmd.toUtf8());
+            if ( theme == "default"){
+                runCmd("rm -R $HOME/.icons/default");
+            } else {
+                if ( ! QDir(home_path + "/.icons/default").exists() ){
+                    runCmd("mkdir -p $HOME/.icons/default");
+                }
+                runCmd("echo [Icon Theme] > $HOME/.icons/default/index.theme");
+                runCmd("echo Name=Default >> $HOME/.icons/default/index.theme");
+                runCmd("echo Comment=Default Cursor Theme >> $HOME/.icons/default/index.theme");
+                runCmd("echo Comment=Default Cursor Theme >> $HOME/.icons/default/index.theme");
+                runCmd("echo Inherits=" + theme + " >> $HOME/.icons/default/index.theme");
+            }
+            cmd = "fluxbox-remote restart";
+            system(cmd.toUtf8());
+        }
     }
     if (!cmd1.isEmpty()){
         system(cmd1.toUtf8());
@@ -3623,6 +3686,18 @@ void defaultlook::on_listWidgeticons_currentTextChanged(const QString &currentTe
         }
     }
 }
+
+void defaultlook::on_listWidgetCursorThemes_currentTextChanged(const QString &currentText)
+{
+    if ( themeflag ) {
+        if (checkXFCE()) {
+            settheme(QStringLiteral("cursor"), currentText, "XFCE");
+        } else if (checkFluxbox()){
+            settheme(QStringLiteral("cursor"), currentText, "fluxbox");
+        }
+    }
+}
+
 
 void defaultlook::on_tabWidget_currentChanged(int /*index*/)
 {
@@ -3859,4 +3934,6 @@ void defaultlook::on_checkBoxDisableFluxboxMenuGeneration_clicked()
 {
     ui->ButtonApplyEtc->setEnabled(true);
 }
+
+
 

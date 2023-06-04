@@ -161,7 +161,7 @@
       <enum>QTabWidget::North</enum>
      </property>
      <property name="currentIndex">
-      <number>6</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="Panel">
       <attribute name="title">
@@ -481,10 +481,63 @@
          <property name="sizeConstraint">
           <enum>QLayout::SetNoConstraint</enum>
          </property>
-         <item row="7" column="3">
-          <widget class="QLabel" name="label_30">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label">
+           <property name="font">
+            <font>
+             <bold>true</bold>
+            </font>
+           </property>
            <property name="text">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            <string>Theme Options</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QPushButton" name="pushButtonPreview">
+           <property name="text">
+            <string>Preview</string>
+           </property>
+          </widget>
+         </item>
+         <item row="8" column="1" colspan="2">
+          <widget class="QListWidget" name="listWidgetWMtheme"/>
+         </item>
+         <item row="4" column="0">
+          <widget class="QCheckBox" name="checkFirefox">
+           <property name="toolTip">
+            <string>Fix some website fields when using dark theme</string>
+           </property>
+           <property name="text">
+            <string>Firefox dark theme tweak</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QPushButton" name="pushButtonRemoveUserThemeSet">
+           <property name="text">
+            <string>Remove User Theme Set</string>
+           </property>
+           <property name="icon">
+            <iconset theme="list-remove">
+             <normaloff>.</normaloff>.</iconset>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0">
+          <widget class="QLabel" name="label_31">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Themes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="8" column="0">
+          <widget class="QListWidget" name="listWidgetTheme"/>
+         </item>
+         <item row="7" column="0">
+          <widget class="QLabel" name="label_28">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
           </widget>
          </item>
@@ -514,54 +567,6 @@
            </property>
           </widget>
          </item>
-         <item row="8" column="1" colspan="2">
-          <widget class="QListWidget" name="listWidgetWMtheme"/>
-         </item>
-         <item row="5" column="0" colspan="2">
-          <widget class="QCheckBox" name="checkHexchat">
-           <property name="text">
-            <string>Fix HexChat input box in dark theme</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="2">
-          <widget class="QPushButton" name="pushButtonPreview">
-           <property name="text">
-            <string>Preview</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="0">
-          <widget class="QCheckBox" name="checkFirefox">
-           <property name="toolTip">
-            <string>Fix some website fields when using dark theme</string>
-           </property>
-           <property name="text">
-            <string>Firefox dark theme tweak</string>
-           </property>
-          </widget>
-         </item>
-         <item row="7" column="1">
-          <widget class="QLabel" name="label_29">
-           <property name="text">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Manager&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="6" column="0">
-          <widget class="QLabel" name="label_31">
-           <property name="text">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Themes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="7" column="0">
-          <widget class="QLabel" name="label_28">
-           <property name="text">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-           </property>
-          </widget>
-         </item>
          <item row="3" column="0" colspan="5">
           <widget class="Line" name="line_3">
            <property name="orientation">
@@ -569,53 +574,10 @@
            </property>
           </widget>
          </item>
-         <item row="8" column="0">
-          <widget class="QListWidget" name="listWidgetTheme"/>
-         </item>
-         <item row="8" column="3" colspan="2">
-          <widget class="QListWidget" name="listWidgeticons"/>
-         </item>
-         <item row="9" column="0" colspan="2">
-          <widget class="QPushButton" name="pushButtonSettingsToThemeSet">
+         <item row="5" column="0" colspan="2">
+          <widget class="QCheckBox" name="checkHexchat">
            <property name="text">
-            <string>Save Current Settings as a Theme Set</string>
-           </property>
-           <property name="icon">
-            <iconset theme="document-save">
-             <normaloff>.</normaloff>.</iconset>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="1">
-          <widget class="QPushButton" name="pushButtonRemoveUserThemeSet">
-           <property name="text">
-            <string>Remove User Theme Set</string>
-           </property>
-           <property name="icon">
-            <iconset theme="list-remove">
-             <normaloff>.</normaloff>.</iconset>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="0">
-          <widget class="QLabel" name="label">
-           <property name="font">
-            <font>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="text">
-            <string>Theme Options</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0">
-          <widget class="QComboBox" name="comboTheme">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
+            <string>Fix HexChat input box in dark theme</string>
            </property>
           </widget>
          </item>
@@ -631,6 +593,54 @@
             <string>Undo</string>
            </property>
           </widget>
+         </item>
+         <item row="11" column="0" colspan="2">
+          <widget class="QPushButton" name="pushButtonSettingsToThemeSet">
+           <property name="text">
+            <string>Save Current Settings as a Theme Set</string>
+           </property>
+           <property name="icon">
+            <iconset theme="document-save">
+             <normaloff>.</normaloff>.</iconset>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="1">
+          <widget class="QLabel" name="label_29">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Manager&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QComboBox" name="comboTheme">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+          </widget>
+         </item>
+         <item row="10" column="0">
+          <widget class="QListWidget" name="listWidgeticons"/>
+         </item>
+         <item row="9" column="0">
+          <widget class="QLabel" name="label_30">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="9" column="1">
+          <widget class="QLabel" name="label_33">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Cursors&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="10" column="1">
+          <widget class="QListWidget" name="listWidgetCursorThemes"/>
          </item>
         </layout>
        </item>
