@@ -2009,7 +2009,7 @@ void defaultlook::setupComboTheme()
         xfwm4_theme_present = false;
         QFileInfo file_info(it.next());
         QString filename = file_info.absoluteFilePath();
-        QString name = runCmd("cat '" + filename + "'|grep Name=").output.section(QStringLiteral("="),1,1);
+        QString name = runCmd("cat '" + filename + "'|grep ^Name=").output.section(QStringLiteral("="),1,1);
         QString xsettings_gtk_theme = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xsettings_gtk_theme=").output.section(QStringLiteral("="),1,1);
         if (verbose) qDebug() << "xsettings_gtk_theme = " << xsettings_gtk_theme;
         QString xsettings_icon_theme = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xsettings_icon_theme=").output.section(QStringLiteral("="),1,1);
@@ -2062,7 +2062,7 @@ void defaultlook::setupComboTheme()
         QString home_path = QDir::homePath();
         QFileInfo file_info(it2.next());
         QString filename = file_info.absoluteFilePath();
-        QString name = runCmd("cat '" + filename + "'|grep Name=").output.section(QStringLiteral("="),1,1);
+        QString name = runCmd("cat '" + filename + "'|grep ^Name=").output.section(QStringLiteral("="),1,1);
 
         QString xsettings_gtk_theme = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xsettings_gtk_theme=").output.section(QStringLiteral("="),1,1);
         if (verbose) qDebug() << "xsettings_gtk_theme = " << xsettings_gtk_theme;
@@ -2142,7 +2142,8 @@ void defaultlook::on_buttonThemeApply_clicked()
     if (verbose) qDebug() << "xsettings_icon_theme = " << xsettings_icon_theme;
     QString xfwm4_window_decorations = runCmd("cat '" + fileinfo.absoluteFilePath() + "' |grep xfwm4_window_decorations=").output.section(QStringLiteral("="),1,1);
     if (verbose) qDebug() << "xfwm4_window_decorations = " << xfwm4_window_decorations;
-
+    QString cursorthemename = runCmd("cat '" + fileinfo.absoluteFilePath() + "' |grep CursorThemeName=").output.section(QStringLiteral("="),1,1);
+    if (verbose) qDebug() << "CursorThemeName = " << cursorthemename;
     //  use xfconf system to change values
 
     message_flag = true;
@@ -2164,6 +2165,11 @@ void defaultlook::on_buttonThemeApply_clicked()
     //set icon theme
     runCmd("xfconf-query -c xsettings -p /Net/IconThemeName -s " + xsettings_icon_theme);
     runCmd(QStringLiteral("sleep .5"));
+
+    //set cursor theme if exists
+    if ( ! cursorthemename.isEmpty()){
+        runCmd("xfconf-query -c xsettings -p /Gtk/CursorThemeName -s " + cursorthemename);
+    }
 
     //deal with panel customizations for each panel
 
@@ -2943,6 +2949,7 @@ void defaultlook::on_pushButtonSettingsToThemeSet_clicked()
     QString iconThemeName = runCmd(QStringLiteral("xfconf-query -c xsettings -p /Net/IconThemeName")).output;
     QString themeName = runCmd(QStringLiteral("xfconf-query -c xsettings -p /Net/ThemeName")).output;
     QString windowDecorationsTheme = runCmd(QStringLiteral("xfconf-query -c xfwm4 -p /general/theme")).output;
+    QString cursorthemename = runCmd(QStringLiteral("xfconf-query -c xsettings -p /Gtk/CursorThemeName")).output;
 
     QString whiskerThemeFileName = pathAppend(QDir::homePath(), QStringLiteral(".config/gtk-3.0/whisker-tweak.css"));
     QFile whiskerThemeFile(whiskerThemeFileName);
@@ -2974,7 +2981,9 @@ void defaultlook::on_pushButtonSettingsToThemeSet_clicked()
     fileLines << "xsettings_gtk_theme=" + themeName;
     fileLines << "xsettings_icon_theme=" + iconThemeName;
     fileLines << "xfwm4_window_decorations=" + windowDecorationsTheme;
+    fileLines << "CursorThemeName=" + cursorthemename;
     fileLines << QStringLiteral("<begin_gtk_whisker_theme_code>");
+
     for (const QString &line : whiskerThemeData.split('\n')) {
         fileLines << line;
     }
