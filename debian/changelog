@@ -1,3 +1,30 @@
+mx-tweak (23.06.01mx23) mx; urgency=medium
+
+  * add mouse cursor theme setting
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 04 Jun 2023 18:41:42 -0400
+
+mx-tweak (23.05.12mx23) mx; urgency=medium
+
+  * fix setting of gtk2 themes
+  * improve fluxbox theme setting
+  * fix misplaced boolean type on thunar single click action
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Tue, 23 May 2023 19:08:15 -0400
+
+mx-tweak (23.05.11mx23) mx; urgency=medium
+
+  * allow smaller resizing 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 21 May 2023 19:55:38 -0400
+
+mx-tweak (23.05.10mx23) mx; urgency=medium
+
+  * adjust theme setting
+  * correct check for gtk2 icon theme setting
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Wed, 17 May 2023 19:47:39 -0400
+
 mx-tweak (23.05.09mx23) mx; urgency=medium
 
   * update logo 
