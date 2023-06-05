@@ -80,6 +80,9 @@ void defaultlook::setup()
 {
     this->setWindowTitle(tr("MX Tweak"));
     this->adjustSize();
+    ui->toolButtonXFCEpanelSettings->setIcon(QIcon::fromTheme("org.xfce.panel"));
+    ui->toolButtonXFCEAppearance->setIcon(QIcon::fromTheme("org.xfce.settings.appearance"));
+    ui->toolButtonXFCEWMsettings->setIcon(QIcon::fromTheme("org.xfce.xfwm4"));
     QString home_path = QDir::homePath();
     if (!checklightdm()) {
         ui->checkBoxLightdmReset->hide();
@@ -89,6 +92,8 @@ void defaultlook::setup()
         whichpanel();
         message_flag = false;
         //setup theme tab
+        ui->pushButtonPreview->hide();
+        ui->buttonThemeUndo->hide();
         setuptheme();
         ui->buttonThemeUndo->setEnabled(false);
         //setup theme combo box
@@ -776,17 +781,6 @@ void defaultlook::on_checkVert_clicked()
         ui->Label_Volume_plugin->setEnabled(false);
         ui->Label_power_manager_plugin->setEnabled(false);
     }
-}
-
-void defaultlook::on_checkFirefox_clicked()
-{
-    ui->buttonThemeApply->setEnabled(true);
-    message_flag = true;
-}
-
-void defaultlook::on_checkHexchat_clicked()
-{
-    ui->buttonThemeApply->setEnabled(true);
 }
 
 void defaultlook::on_radioDefaultPanel_clicked()
@@ -1499,16 +1493,9 @@ void defaultlook::setuptheme()
     if (ui->buttonThemeApply->icon().isNull()) {
         ui->buttonThemeApply->setIcon(QIcon(":/icons/dialog-ok.svg"));
     }
-    ui->pushButtonPreview->hide();
-    ui->buttonThemeUndo->hide();
 
     ui->pushButtonPreview->setEnabled(false);
     //reset all checkboxes to unchecked
-
-    ui->checkFirefox->setChecked(false);
-    ui->checkHexchat->setChecked(false);
-    ui->checkFirefox->hide();
-    ui->checkHexchat->hide();
 
     populatethemelists(QStringLiteral("gtk-3.0"));
     populatethemelists(QStringLiteral("icons"));
@@ -2230,40 +2217,6 @@ void defaultlook::on_buttonThemeApply_clicked()
 
     system("xfce4-panel --restart");
 
-    //check theme overrides
-
-    if (ui->checkFirefox->isChecked()) {
-        runCmd(QStringLiteral("touch /home/$USER/.config/FirefoxDarkThemeOverride.check"));
-    } else {
-        runCmd(QStringLiteral("rm /home/$USER/.config/FirefoxDarkThemeOverride.check"));
-    }
-
-    //deal with hexchat
-    QFileInfo file_hexchat(home_path + "/.config/hexchat/hexchat.conf");
-    if (ui->checkHexchat->isChecked()) {
-        if (file_hexchat.exists()) {
-            //replace setting
-            runCmd("sed -i -r 's/gui_input_style = 1/gui_input_style = 0/' " + file_hexchat.absoluteFilePath());
-        } else {
-            //copy a config file into user directory
-            runCmd("mkdir -p " + home_path + "/.config/hexchat");
-            runCmd("cp /usr/share/mx-tweak/hexchat.conf " + file_hexchat.absoluteFilePath());
-        }
-    } else {
-        if (file_hexchat.exists()) {
-            //replace setting
-            runCmd("sed -i -r 's/gui_input_style = 0/gui_input_style = 1/' " + file_hexchat.absoluteFilePath());
-        }
-    }
-
-    // message that we are done if a theme change was made
-
-    //if (message_flag == true) {
-    //   message();
-    //  message_flag = false;
-    //}
-
-    // reset gui
     setuptheme();
 }
 
