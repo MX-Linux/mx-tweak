@@ -205,8 +205,6 @@ private slots:
     void on_checkBoxSingleClick_clicked();
     void on_checkBoxThunarCAReset_clicked();
     void on_checkBoxThunarSingleClick_clicked();
-    void on_checkFirefox_clicked();
-    void on_checkHexchat_clicked();
     void on_checkHorz_clicked();
     void on_checkVert_clicked();
     void on_checkboxAMDtearfree_clicked();
@@ -284,6 +282,9 @@ private slots:
     void on_radioButtonSetPanelPluginScales_clicked();
 
     void on_checkBoxDisableFluxboxMenuGeneration_clicked();
+
+
+    void on_listWidgetCursorThemes_currentTextChanged(const QString &currentText);
 
 private:
     Ui::defaultlook *ui;
