@@ -2,8 +2,9 @@ mx-tweak (23.06.02mx23) mx; urgency=medium
 
   * add blackbird special case "darkmode" detection
   * update translations
+  * add explainer text to mxfb menu disable file
 
- -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 10 Jun 2023 23:47:40 -0400
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 11 Jun 2023 23:47:40 -0400
 
 mx-tweak (23.06.01mx23) mx; urgency=medium
 
