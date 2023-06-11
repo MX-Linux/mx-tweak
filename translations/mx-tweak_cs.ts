@@ -27,12 +27,12 @@
     <message>
         <location filename="../main.cpp" line="47"/>
         <source>GUI for applying assorted useful tweaks</source>
-        <translation type="unfinished"></translation>
+        <translation>Grafické uživatelské rozhraní různých užitečných vylepšení</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="50"/>
         <source>launches brightness-systray</source>
-        <translation type="unfinished"></translation>
+        <translation>spouští brightness-systray</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="51"/>
@@ -42,7 +42,7 @@
     <message>
         <location filename="../main.cpp" line="52"/>
         <source>Opens theme tab directly.  Valid on Xfce &amp; Fluxbox desktops</source>
-        <translation type="unfinished"></translation>
+        <translation>Otevře přímo kartu motivu. Platí pro desktopy Xfce a Fluxbox</translation>
     </message>
 </context>
 <context>
@@ -100,13 +100,13 @@
         <location filename="../defaultlook.ui" line="20"/>
         <location filename="../defaultlook.cpp" line="56"/>
         <location filename="../defaultlook.cpp" line="81"/>
-        <location filename="../defaultlook.cpp" line="630"/>
-        <location filename="../defaultlook.cpp" line="649"/>
-        <location filename="../defaultlook.cpp" line="658"/>
-        <location filename="../defaultlook.cpp" line="705"/>
-        <location filename="../defaultlook.cpp" line="713"/>
-        <location filename="../defaultlook.cpp" line="740"/>
-        <location filename="../defaultlook.cpp" line="743"/>
+        <location filename="../defaultlook.cpp" line="635"/>
+        <location filename="../defaultlook.cpp" line="654"/>
+        <location filename="../defaultlook.cpp" line="663"/>
+        <location filename="../defaultlook.cpp" line="710"/>
+        <location filename="../defaultlook.cpp" line="718"/>
+        <location filename="../defaultlook.cpp" line="745"/>
+        <location filename="../defaultlook.cpp" line="748"/>
         <source>MX Tweak</source>
         <translation>MX Vyladění</translation>
     </message>
@@ -116,700 +116,693 @@
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Upravit vzhled hlavního panelu&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="55"/>
-        <location filename="../defaultlook.ui" line="168"/>
+        <location filename="../defaultlook.ui" line="51"/>
+        <location filename="../defaultlook.ui" line="272"/>
         <source>Panel</source>
         <translation>Panel</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="75"/>
+        <location filename="../defaultlook.ui" line="71"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configure window behavior and shortcuts&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nastavení chování oken a zástupců&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="89"/>
+        <location filename="../defaultlook.ui" line="85"/>
         <source>Window Manager</source>
         <translation>Správce oken</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="109"/>
+        <location filename="../defaultlook.ui" line="105"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the look of your desktop&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Upravit vzhled pracovní plochy&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="123"/>
+        <location filename="../defaultlook.ui" line="119"/>
         <source>Appearance</source>
         <translation>Vzhled</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="305"/>
-        <source>Backup current panel configuration</source>
-        <translation>Zálohovat aktuální nastavení panelu</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="452"/>
-        <location filename="../defaultlook.ui" line="511"/>
-        <location filename="../defaultlook.ui" line="668"/>
-        <location filename="../defaultlook.ui" line="996"/>
-        <location filename="../defaultlook.ui" line="1003"/>
-        <location filename="../defaultlook.ui" line="1010"/>
-        <location filename="../defaultlook.ui" line="1084"/>
-        <location filename="../defaultlook.ui" line="1373"/>
-        <location filename="../defaultlook.ui" line="1685"/>
-        <location filename="../defaultlook.ui" line="1841"/>
-        <source>Apply</source>
-        <translation>Použít</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="315"/>
-        <location filename="../defaultlook.ui" line="375"/>
-        <source>Options</source>
-        <translation>Možnosti</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="203"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Affects all panels&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ovlivňuje všechny panely&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="278"/>
-        <location filename="../defaultlook.ui" line="1672"/>
-        <source>Affects 1st panel</source>
-        <translation>Ovlyvňuje 1. panel</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="408"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Buttons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Tlačítka okna&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="263"/>
-        <source>Restore default panel</source>
-        <translation>Obnovit výrobní nastavení</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="342"/>
-        <source>Restore backup panel configuration</source>
-        <translation>Obnovit zálohované nastavení panelu</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="395"/>
-        <location filename="../defaultlook.ui" line="1649"/>
-        <source>Left</source>
-        <translation>Vlevo</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="400"/>
-        <location filename="../defaultlook.ui" line="1659"/>
-        <source>Right</source>
-        <translation>Vpravo</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="253"/>
-        <source>Display panel vertically</source>
-        <translation>Zobraz panel vertikálně</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="246"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Tasklist&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="233"/>
-        <location filename="../defaultlook.ui" line="1644"/>
-        <source>Bottom</source>
-        <translation>Dolů</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="238"/>
-        <location filename="../defaultlook.ui" line="1654"/>
-        <source>Top</source>
-        <translation>Nahoře</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="196"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="179"/>
+        <location filename="../defaultlook.ui" line="283"/>
         <source>Display panel horizontally</source>
         <translation>Zobraz panel horizontálně</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="189"/>
+        <location filename="../defaultlook.ui" line="293"/>
         <source>Volume</source>
         <translation>Jednotka</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="210"/>
+        <location filename="../defaultlook.ui" line="300"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="307"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Affects all panels&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ovlivňuje všechny panely&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="314"/>
         <source>Set Tasklist plugin to:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="285"/>
+        <location filename="../defaultlook.ui" line="337"/>
+        <location filename="../defaultlook.ui" line="1705"/>
+        <source>Bottom</source>
+        <translation>Dolů</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="342"/>
+        <location filename="../defaultlook.ui" line="1715"/>
+        <source>Top</source>
+        <translation>Nahoře</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="350"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Tasklist&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="357"/>
+        <source>Display panel vertically</source>
+        <translation>Zobraz panel vertikálně</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="367"/>
+        <source>Restore default panel</source>
+        <translation>Obnovit výchozí nastavení</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="382"/>
+        <location filename="../defaultlook.ui" line="1733"/>
+        <source>Affects 1st panel</source>
+        <translation>Ovlivňuje 1. panel</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="389"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Panel Plugin Scales&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="335"/>
+        <location filename="../defaultlook.ui" line="409"/>
+        <source>Backup current panel configuration</source>
+        <translation>Zálohovat aktuální nastavení panelu</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="419"/>
+        <location filename="../defaultlook.ui" line="479"/>
+        <source>Options</source>
+        <translation>Možnosti</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="439"/>
         <source>Power Manager</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="365"/>
+        <location filename="../defaultlook.ui" line="446"/>
+        <source>Restore backup panel configuration</source>
+        <translation>Obnovit zálohované nastavení panelu</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="469"/>
         <source>Set Scales</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="429"/>
+        <location filename="../defaultlook.ui" line="499"/>
+        <location filename="../defaultlook.ui" line="1710"/>
+        <source>Left</source>
+        <translation>Vlevo</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="504"/>
+        <location filename="../defaultlook.ui" line="1720"/>
+        <source>Right</source>
+        <translation>Vpravo</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="512"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Buttons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Tlačítka okna&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="533"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Docklike is the modern dock plugin for the panel.  Window Buttons is the classic tasklist without dock features.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="476"/>
+        <location filename="../defaultlook.ui" line="556"/>
+        <location filename="../defaultlook.ui" line="630"/>
+        <location filename="../defaultlook.ui" line="889"/>
+        <location filename="../defaultlook.ui" line="1057"/>
+        <location filename="../defaultlook.ui" line="1064"/>
+        <location filename="../defaultlook.ui" line="1071"/>
+        <location filename="../defaultlook.ui" line="1145"/>
+        <location filename="../defaultlook.ui" line="1434"/>
+        <location filename="../defaultlook.ui" line="1746"/>
+        <location filename="../defaultlook.ui" line="1902"/>
+        <source>Apply</source>
+        <translation>Použít</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="580"/>
         <source>Theme</source>
         <translation>Motiv</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="571"/>
+        <location filename="../defaultlook.ui" line="711"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ikony&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="534"/>
         <source>Fix HexChat input box in dark theme</source>
-        <translation>Opravit vstupní pole HexChat-u při použití tmavého motivu</translation>
+        <translation type="vanished">Opravit vstupní pole HexChat-u při použití tmavého motivu</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="618"/>
+        <location filename="../defaultlook.ui" line="617"/>
         <source>Preview</source>
         <translation>Náhled</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="625"/>
         <source>Fix some website fields when using dark theme</source>
-        <translation>Opravit některá pole na webových stránkách pří použití tmavého motivu</translation>
+        <translation type="vanished">Opravit některá pole na webových stránkách pří použití tmavého motivu</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="628"/>
         <source>Firefox dark theme tweak</source>
-        <translation>Potáhnout tmavým motivem i Firefox</translation>
+        <translation type="vanished">Potáhnout tmavým motivem i Firefox</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="599"/>
+        <location filename="../defaultlook.ui" line="694"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Manager&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Správce oken&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="487"/>
+        <location filename="../defaultlook.ui" line="728"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Themes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Motivy&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="592"/>
+        <location filename="../defaultlook.ui" line="704"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Aplikace&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="494"/>
+        <location filename="../defaultlook.ui" line="666"/>
         <source>Save Current Settings as a Theme Set</source>
         <translation>Uložit současné nastavení jako uživatelskou sadu motivů</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="541"/>
+        <location filename="../defaultlook.ui" line="687"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Cursors&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="578"/>
+        <location filename="../defaultlook.ui" line="606"/>
         <source>Remove User Theme Set</source>
         <translation>Odebrat uživatelskou sadu motivů</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="611"/>
+        <location filename="../defaultlook.ui" line="596"/>
         <source>Theme Options</source>
         <translation>Nastavení Motivů</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="641"/>
+        <location filename="../defaultlook.ui" line="656"/>
         <source>Undo</source>
         <translation>Vrátit</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="651"/>
-        <location filename="../defaultlook.ui" line="695"/>
+        <location filename="../defaultlook.ui" line="738"/>
+        <location filename="../defaultlook.ui" line="756"/>
         <source>Compositor</source>
         <translation>Kompozitor</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="688"/>
+        <location filename="../defaultlook.ui" line="749"/>
         <source>Transparency and shadow options</source>
         <translation>Volby průhlednosti a stínů</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="702"/>
+        <location filename="../defaultlook.ui" line="763"/>
         <source>Edit compton.conf directly in text editor</source>
         <translation>Editovat compton.conf v textovém editoru</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="705"/>
+        <location filename="../defaultlook.ui" line="766"/>
         <source>Edit compton.conf</source>
         <translation>Editovat compton.conf</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="755"/>
+        <location filename="../defaultlook.ui" line="791"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Changing the VBlank mode may help alleviate some screen tearing issues.  See Help for more information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Změna režimu VBlank může pomoci zmírnit některé problémy s trháním obrazovky. Další informace naleznete v nápovědě.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="758"/>
+        <location filename="../defaultlook.ui" line="794"/>
         <source>VBlank</source>
         <translation>VBlank</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="766"/>
+        <location filename="../defaultlook.ui" line="847"/>
         <source>auto</source>
         <translation>automaticky</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="771"/>
+        <location filename="../defaultlook.ui" line="852"/>
         <source>glx</source>
         <translation>glx</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="776"/>
+        <location filename="../defaultlook.ui" line="857"/>
         <source>xpresent</source>
         <translation>xpresent</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="781"/>
+        <location filename="../defaultlook.ui" line="862"/>
         <source>off</source>
         <translation>vypnuto</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="802"/>
+        <location filename="../defaultlook.ui" line="828"/>
         <source>None</source>
         <translation>Žádný</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="807"/>
+        <location filename="../defaultlook.ui" line="833"/>
         <source>Xfwm (Xfce) Compositor</source>
         <translation>Xfwm (Xfce) kompozitor</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="812"/>
+        <location filename="../defaultlook.ui" line="838"/>
         <source>Compton </source>
         <translation>Compton</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="820"/>
+        <location filename="../defaultlook.ui" line="777"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce Compositor Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nastavení kompozitoru Xfce&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="823"/>
+        <location filename="../defaultlook.ui" line="780"/>
         <source>Xfwm Settings</source>
         <translation>Nastavení Xfwm</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="834"/>
+        <location filename="../defaultlook.ui" line="801"/>
         <source>Launch compton-conf configuration tool</source>
         <translation>Spustit nástroj pro konfiguraci compton-conf</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="837"/>
+        <location filename="../defaultlook.ui" line="804"/>
         <source>Compton settings</source>
         <translation>Nastavení Comptonu</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="851"/>
+        <location filename="../defaultlook.ui" line="912"/>
         <source>Display</source>
         <translation>Monitor</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="862"/>
+        <location filename="../defaultlook.ui" line="923"/>
         <source>Hardware Backlight</source>
         <translation>Hardwarové podsvícení</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="869"/>
+        <location filename="../defaultlook.ui" line="930"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Display Tweaks&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Vyladění Monitoru&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="896"/>
+        <location filename="../defaultlook.ui" line="957"/>
         <source>Choose Display for xrandr tweaks</source>
         <translation>Vyberte monitor pro ladění pomocí xrandr</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="906"/>
+        <location filename="../defaultlook.ui" line="967"/>
         <source>Resolution</source>
         <translation>Rozlišení</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="913"/>
+        <location filename="../defaultlook.ui" line="974"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Saving is per display&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ukládání pro každý monitor zvášť&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="916"/>
+        <location filename="../defaultlook.ui" line="977"/>
         <source>Save</source>
         <translation>Uložit</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="923"/>
+        <location filename="../defaultlook.ui" line="984"/>
         <source>Software (xrandr) Brightness</source>
         <translation>Jas (xrandr software)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="930"/>
-        <location filename="../defaultlook.ui" line="1027"/>
+        <location filename="../defaultlook.ui" line="991"/>
+        <location filename="../defaultlook.ui" line="1088"/>
         <source>TextLabel</source>
         <translation>Textový popis</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="937"/>
+        <location filename="../defaultlook.ui" line="998"/>
         <source>GTK scaling</source>
         <translation>GTK Zvětšení </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="957"/>
+        <location filename="../defaultlook.ui" line="1018"/>
         <source>xrandr Scaling</source>
         <translation>xrandr Zvětšení</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1053"/>
+        <location filename="../defaultlook.ui" line="1114"/>
         <source>Config Options</source>
         <translation>Volby konfigurace</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1157"/>
-        <location filename="../defaultlook.ui" line="1339"/>
-        <source>Enable single-click in Thunar File Manager</source>
-        <translation>Povolit spouštění jedním kliknutím v Správci souborů Thunar</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1171"/>
-        <source>( also turns off Client Side Decorations for Xfce applications)</source>
-        <translation>(dekorace budou vypnuty taktéž u Xfce aplikací)</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1115"/>
-        <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
-        <translation>                   poznámka: pro hibernaci je potřeba aby swap ≥ RAM</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1122"/>
-        <location filename="../defaultlook.ui" line="1748"/>
-        <source>Show windows from all workspaces in panel</source>
-        <translation>V panelu zobrazit okna ze všech pracovních ploch</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1136"/>
-        <location filename="../defaultlook.ui" line="1537"/>
-        <source>Thunar windows always open in split view</source>
-        <translation>Okna Thunar-u otevírat vždy ve split režimu </translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1095"/>
-        <source>Enable hibernate on Log Out menu </source>
-        <translation>Povolit Hibernaci v menu odhlášení</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1143"/>
-        <source>Enable single-click on desktop</source>
-        <translation>Povolit spouštění jedním kliknutím na ploše</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1064"/>
+        <location filename="../defaultlook.ui" line="1125"/>
         <source>Disable shortening of long filenames on the desktop</source>
         <translation>Zakázat zkracování dlouhých názvů souborů na ploše</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1071"/>
+        <location filename="../defaultlook.ui" line="1132"/>
         <source>Show GTK File Dialog action buttons at bottom of dialogs</source>
         <translation>Zobrazit tlačitka akcí GTK File Dialog pod dialogy</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1129"/>
-        <location filename="../defaultlook.ui" line="1491"/>
+        <location filename="../defaultlook.ui" line="1156"/>
+        <source>Enable hibernate on Log Out menu </source>
+        <translation>Povolit Hibernaci v menu odhlášení</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1176"/>
+        <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
+        <translation>                   poznámka: pro hibernaci je potřeba aby swap ≥ RAM</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1183"/>
+        <location filename="../defaultlook.ui" line="1809"/>
+        <source>Show windows from all workspaces in panel</source>
+        <translation>V panelu zobrazit okna ze všech pracovních ploch</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1190"/>
+        <location filename="../defaultlook.ui" line="1552"/>
         <source>Reset Thunar custom right-click actions to system defaults</source>
         <translation>Obnovit uživatelské akce pravého tlačítka myši Správce souborů Thunar do výchozího nastavení</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1164"/>
-        <source>Enable Desktop Zoom </source>
-        <translation>Povolit přiblížení Plochy</translation>
+        <location filename="../defaultlook.ui" line="1197"/>
+        <location filename="../defaultlook.ui" line="1598"/>
+        <source>Thunar windows always open in split view</source>
+        <translation>Okna Thunar-u otevírat vždy ve split režimu </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1150"/>
-        <location filename="../defaultlook.ui" line="1447"/>
+        <location filename="../defaultlook.ui" line="1204"/>
+        <source>Enable single-click on desktop</source>
+        <translation>Povolit spouštění jedním kliknutím na ploše</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1211"/>
+        <location filename="../defaultlook.ui" line="1508"/>
         <source>Thunar split view opens horizontal</source>
         <translation>Horizontálně rozdělený režim Thunar-u </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1181"/>
+        <location filename="../defaultlook.ui" line="1218"/>
+        <location filename="../defaultlook.ui" line="1400"/>
+        <source>Enable single-click in Thunar File Manager</source>
+        <translation>Povolit spouštění jedním kliknutím v Správci souborů Thunar</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1225"/>
+        <source>Enable Desktop Zoom </source>
+        <translation>Povolit přiblížení Plochy</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1232"/>
+        <source>( also turns off Client Side Decorations for Xfce applications)</source>
+        <translation>(dekorace budou vypnuty taktéž u Xfce aplikací)</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1242"/>
         <source>Show percentages in notifcations when available</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1191"/>
+        <location filename="../defaultlook.ui" line="1252"/>
         <source>Fluxbox</source>
         <translation>Fluxbox </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1202"/>
+        <location filename="../defaultlook.ui" line="1263"/>
         <source>Reset DefaultDock</source>
         <translation>Obnovit nastavení Docku</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1209"/>
+        <location filename="../defaultlook.ui" line="1270"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Nastavení Docku&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1217"/>
-        <location filename="../defaultlook.ui" line="1512"/>
+        <location filename="../defaultlook.ui" line="1278"/>
+        <location filename="../defaultlook.ui" line="1573"/>
         <source>On</source>
         <translation>On</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1222"/>
-        <location filename="../defaultlook.ui" line="1517"/>
+        <location filename="../defaultlook.ui" line="1283"/>
+        <location filename="../defaultlook.ui" line="1578"/>
         <source>Off</source>
         <translation>Off</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1240"/>
+        <location filename="../defaultlook.ui" line="1301"/>
         <source>Manage Tint2 Panel</source>
         <translation>Ovládat Tint2 Panel</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1251"/>
+        <location filename="../defaultlook.ui" line="1312"/>
         <source>Height</source>
         <translation>Výška</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1325"/>
-        <location filename="../defaultlook.ui" line="1578"/>
+        <location filename="../defaultlook.ui" line="1386"/>
+        <location filename="../defaultlook.ui" line="1639"/>
         <source>Autohide</source>
         <translation>Automatické skrývání</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1332"/>
+        <location filename="../defaultlook.ui" line="1393"/>
         <source>Reset ALL mx-fluxbox settings</source>
         <translation>Obnovit VŠECHNA nastavení pro mx-fluxbox</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1346"/>
+        <location filename="../defaultlook.ui" line="1407"/>
         <source>Reset Fluxbox Menu</source>
         <translation>Obnovit Menu Fluxbox</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1353"/>
-        <location filename="../defaultlook.ui" line="1605"/>
-        <location filename="../defaultlook.ui" line="1633"/>
+        <location filename="../defaultlook.ui" line="1414"/>
+        <location filename="../defaultlook.ui" line="1666"/>
+        <location filename="../defaultlook.ui" line="1694"/>
         <source>Placement</source>
         <translation>Umístění</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1360"/>
+        <location filename="../defaultlook.ui" line="1421"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Thunar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1454"/>
+        <location filename="../defaultlook.ui" line="1515"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Desktop Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ikony na Ploše&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1471"/>
+        <location filename="../defaultlook.ui" line="1532"/>
         <source>Toggle icon captions</source>
         <translation>Zapout/vypnout popisky Ikon</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1498"/>
+        <location filename="../defaultlook.ui" line="1559"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Do aktuálního menu fluxbox přidat nové předvolené položky, ak nějaké jsou.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1501"/>
+        <location filename="../defaultlook.ui" line="1562"/>
         <source>Upgrade existing menu entries</source>
         <translation>Zaktualizovat již existující položky v menu</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1522"/>
+        <location filename="../defaultlook.ui" line="1583"/>
         <source>On Hover</source>
         <translation>Vznášející se</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1530"/>
+        <location filename="../defaultlook.ui" line="1591"/>
         <source>Toggle desktop icons</source>
         <translation>Zapnout/vypnout Ikony na Ploše</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1544"/>
-        <location filename="../defaultlook.ui" line="1696"/>
+        <location filename="../defaultlook.ui" line="1605"/>
+        <location filename="../defaultlook.ui" line="1757"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Obnovit výchozí nastavení&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1564"/>
+        <location filename="../defaultlook.ui" line="1625"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Nastavení Panelu&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1571"/>
+        <location filename="../defaultlook.ui" line="1632"/>
         <source>Width</source>
         <translation>Šířka</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1585"/>
+        <location filename="../defaultlook.ui" line="1646"/>
         <source>Show Toolbar</source>
         <translation>Zobrazit nástrojou lištu</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1615"/>
+        <location filename="../defaultlook.ui" line="1676"/>
         <source>Plasma</source>
         <translation>Plasma</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1708"/>
-        <source>Workspace</source>
-        <translation>Pracovní plocha</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1715"/>
-        <source>Enable single-click</source>
-        <translation>Povolit jedno-klik</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1626"/>
+        <location filename="../defaultlook.ui" line="1687"/>
         <source>Reset KDE/Plasma defaults</source>
         <translation>Obnovit KDE/Plasma nastavení</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1758"/>
+        <location filename="../defaultlook.ui" line="1769"/>
+        <source>Workspace</source>
+        <translation>Pracovní plocha</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1776"/>
+        <source>Enable single-click</source>
+        <translation>Povolit jedno-klik</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1819"/>
         <source>Other</source>
         <translation>Ostatní</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1866"/>
-        <source>Enable mounting of internal drives by non-root users</source>
-        <translation>Povolit uživatelům bez práv roota připojování interních disků</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1859"/>
-        <source>Use tearfree radeon driver option</source>
-        <translation>Použít tearfree nastavení ovladače radeon</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1852"/>
-        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
-        <translation>          POZNÁMKA: existující /etc/X11/xorg.conf.d/20-amd.conf bude zazálohován do domovské složky</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1914"/>
-        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
-        <translation>          POZNÁMKA: existující /etc/X11/xorg.conf.d/20-radeon.conf bude zazálohován do domovské složky</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1907"/>
-        <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
-        <translation>Použít Client Side Decorations (CSD) v GTK3 aplikacích pokud toto podporují (vyžaduje restart)</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1776"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;vyžaduje restart&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1779"/>
-        <source>Enable Bluetooth Adapters on boot</source>
-        <translation>Zapnout Bluetooth adaptéry při startu</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1900"/>
-        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
-        <translation>          POZNÁMKA: existující /etc/X11/xorg.conf.d/20-intel.conf bude zálohován do domovské složky</translation>
-    </message>
-    <message>
-        <source>Use libinput driver for touchpad instead of synaptics touchpad driver (requires restart)</source>
-        <translation type="vanished">Pro touchpad použít ovladač libinput namísto synaptics touchpad driver (vyžaduje restart)</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1814"/>
-        <source>Password for administrative tasks:</source>
-        <translation>Heslo pro administrátorské úkony:</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1893"/>
-        <source>&amp;User</source>
-        <translation>&amp;Uživatel</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1873"/>
-        <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
-        <translation>Použít ovladač intel namísto předvoleného ovladače &quot;modesetting&quot;  (vyžaduje restart)</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1821"/>
-        <source>Use tearfree amdgpu option</source>
-        <translation>Použít nastavení amdgpu tearfree</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1769"/>
+        <location filename="../defaultlook.ui" line="1830"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>Obnovit Lightdm (přihlašovací obrazovku) do výchozího motivu</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1807"/>
-        <source>Root</source>
-        <translation>Root</translation>
+        <location filename="../defaultlook.ui" line="1837"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;vyžaduje restart&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1786"/>
+        <location filename="../defaultlook.ui" line="1840"/>
+        <source>Enable Bluetooth Adapters on boot</source>
+        <translation>Zapnout Bluetooth adaptéry při startu</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1847"/>
         <source>Enable kernel sandbox</source>
         <translation>Povolit kernel sandbox</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1828"/>
-        <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
-        <translation>Příkaz Apt nainstaluje dodatečné &quot;doporučené&quot; balíky a zavislosti</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1793"/>
+        <location filename="../defaultlook.ui" line="1854"/>
         <source>Automatic generation of fluxbox applications menu after package installation, removal, and updates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1986"/>
+        <location filename="../defaultlook.ui" line="1868"/>
+        <source>Root</source>
+        <translation>Root</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1875"/>
+        <source>Password for administrative tasks:</source>
+        <translation>Heslo pro administrátorské úkony:</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1882"/>
+        <source>Use tearfree amdgpu option</source>
+        <translation>Použít nastavení amdgpu tearfree</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1889"/>
+        <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
+        <translation>Příkaz Apt nainstaluje dodatečné &quot;doporučené&quot; balíky a zavislosti</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1913"/>
+        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
+        <translation>          POZNÁMKA: existující /etc/X11/xorg.conf.d/20-amd.conf bude zazálohován do domovské složky</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1920"/>
+        <source>Use tearfree radeon driver option</source>
+        <translation>Použít tearfree nastavení ovladače radeon</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1927"/>
+        <source>Enable mounting of internal drives by non-root users</source>
+        <translation>Povolit uživatelům bez práv roota připojování interních disků</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1934"/>
+        <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
+        <translation>Použít ovladač intel namísto předvoleného ovladače &quot;modesetting&quot;  (vyžaduje restart)</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1954"/>
+        <source>&amp;User</source>
+        <translation>&amp;Uživatel</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1961"/>
+        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
+        <translation>          POZNÁMKA: existující /etc/X11/xorg.conf.d/20-intel.conf bude zálohován do domovské složky</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1968"/>
+        <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
+        <translation>Použít Client Side Decorations (CSD) v GTK3 aplikacích pokud toto podporují (vyžaduje restart)</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1975"/>
+        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
+        <translation>          POZNÁMKA: existující /etc/X11/xorg.conf.d/20-radeon.conf bude zazálohován do domovské složky</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="212"/>
         <source>About</source>
         <translation>O aplikaci</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1997"/>
+        <location filename="../defaultlook.ui" line="223"/>
         <source>Help</source>
         <translation>Nápověda</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2014"/>
+        <location filename="../defaultlook.ui" line="240"/>
         <source>Quit application</source>
         <translation>Ukončit aplikaci</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2017"/>
+        <location filename="../defaultlook.ui" line="243"/>
         <source>Close</source>
         <translation>Zavřít</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2024"/>
+        <location filename="../defaultlook.ui" line="250"/>
         <source>Alt+N</source>
         <translation>Alt+N</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2044"/>
+        <location filename="../defaultlook.ui" line="133"/>
         <source>Xfce Settings</source>
         <translation>Nastavení Xfce</translation>
     </message>
@@ -819,82 +812,82 @@
         <translation>--vypnutí monitoru je platné pouze pro Xfce</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="629"/>
+        <location filename="../defaultlook.cpp" line="634"/>
         <source>About MX Tweak</source>
         <translation>O programu MX Vyladění</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="631"/>
+        <location filename="../defaultlook.cpp" line="636"/>
         <source>Version: </source>
         <translation>Verze:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="632"/>
+        <location filename="../defaultlook.cpp" line="637"/>
         <source>App for quick default ui theme changes and tweaks</source>
         <translation>Aplikace pro rychlé změny výchozího vzhledu motivů a vyladění</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="634"/>
+        <location filename="../defaultlook.cpp" line="639"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Vlastnická práva (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="635"/>
+        <location filename="../defaultlook.cpp" line="640"/>
         <source>%1 License</source>
         <translation>Licence %1</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="649"/>
+        <location filename="../defaultlook.cpp" line="654"/>
         <source>%1 Help</source>
         <translation>Nápověda %1</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="659"/>
+        <location filename="../defaultlook.cpp" line="664"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
         <translation>Dokončeno! Firefox může pro zavedení změn vyžadovat restart</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="706"/>
+        <location filename="../defaultlook.cpp" line="711"/>
         <source>Plese remove special characters</source>
         <translation>Prosím odstraňte specielní znaky</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="706"/>
+        <location filename="../defaultlook.cpp" line="711"/>
         <source>from file name</source>
         <translation>z názvu souboru</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="713"/>
+        <location filename="../defaultlook.cpp" line="718"/>
         <source>File name already exists.  Choose another name</source>
         <translation>Soubor již existuje. Zvolte jiný název</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="741"/>
+        <location filename="../defaultlook.cpp" line="746"/>
         <source>File is not a valid tar.xz archive file</source>
         <translation>Soubor není platným archivem tar.xz</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="744"/>
+        <location filename="../defaultlook.cpp" line="749"/>
         <source>Archive does not contain a panel config</source>
         <translation>Archiv neobsahuje nastavení panelu</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="930"/>
+        <location filename="../defaultlook.cpp" line="924"/>
         <source>Panel settings</source>
         <translation>Nastavení panelu</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="931"/>
+        <location filename="../defaultlook.cpp" line="925"/>
         <source>Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
         <translation>Vaše aktuální nastavení panelu bylo zazálohováno do skryté složky s názvem .restore ve vaší domovské složce (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1715"/>
+        <location filename="../defaultlook.cpp" line="1702"/>
         <source>settings</source>
         <translation>nastavení</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2055"/>
+        <location filename="../defaultlook.cpp" line="2042"/>
         <source>Choose a theme set</source>
         <translation>Vybrat sadu motivů</translation>
     </message>
