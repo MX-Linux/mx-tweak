@@ -2265,7 +2265,7 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     //fluxbox menu autogeneration
     if ( QFile("/usr/bin/mxfb-menu-generator").exists()){
         if (! ui->checkBoxDisableFluxboxMenuGeneration->isChecked()){
-            runCmd("touch " + home_path + "/.fluxbox/mxfb-menu-generator-disabled.chk");
+            runCmd("echo '#this file is used to disable automatic updating of the All Apps menu' > " + home_path + "/.fluxbox/mxfb-menu-generator-disabled.chk");
         } else {
             runCmd("rm " + home_path + "/.fluxbox/mxfb-menu-generator-disabled.chk");
         }
