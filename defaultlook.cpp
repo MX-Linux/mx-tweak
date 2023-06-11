@@ -3488,7 +3488,7 @@ void defaultlook::settheme(const QString &type, const QString &theme, const QStr
         if ( type == QLatin1String("gtk-3.0") ) {
             cmd = "xfconf-query -c xsettings -p /Net/ThemeName -s \"" + theme + "\"";
             cmd1 ="gsettings set org.gnome.desktop.interface gtk-theme \"" + theme + "\"";
-            if (theme.contains("dark")){
+            if (theme.contains("dark") || theme.contains("Blackbird")){ //blackbird special case
                 cmd2="gsettings set org.gnome.desktop.interface color-scheme prefer-dark";
             } else {
                 cmd2="gsettings set org.gnome.desktop.interface color-scheme default";
@@ -3525,7 +3525,7 @@ void defaultlook::settheme(const QString &type, const QString &theme, const QStr
             system(cmd.toUtf8());
 
             cmd1 ="gsettings set org.gnome.desktop.interface gtk-theme \"" + theme + "\"";
-            if (theme.contains("dark")){
+            if (theme.contains("dark") || theme.contains("Blackbird")){ //blackbird special case
                 cmd2="gsettings set org.gnome.desktop.interface color-scheme prefer-dark";
                 if (runCmd("grep gtk-application-prefer-dark-theme $HOME/.config/gtk-3.0/settings.ini").exitCode == 0) {
                     runCmd("sed -i 's/gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=true/' $HOME/.config/gtk-3.0/settings.ini");
