@@ -50,6 +50,7 @@ int main(int argc, char *argv[])
     parser.addOption({"tray", QObject::tr("launches brightness-systray")});
     parser.addOption({"display", QObject::tr("opens with display tab open.  Only valid with Xfce desktop running")});
     parser.addOption({"theme", QObject::tr("Opens theme tab directly.  Valid on Xfce & Fluxbox desktops")});
+    parser.addOption({"other", QObject::tr("Opens Other tab directly.  Valid on all desktops")});
     parser.process(a);
 
 
