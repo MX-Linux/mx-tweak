@@ -44,6 +44,11 @@
         <source>Opens theme tab directly.  Valid on Xfce &amp; Fluxbox desktops</source>
         <translation>テーマタブを直接開きます。 Xfce と Fluxbox デスクトップでのみ有効です。</translation>
     </message>
+    <message>
+        <location filename="../main.cpp" line="53"/>
+        <source>Opens Other tab directly.  Valid on all desktops</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>brightness_small</name>
@@ -99,14 +104,14 @@
     <message>
         <location filename="../defaultlook.ui" line="20"/>
         <location filename="../defaultlook.cpp" line="56"/>
-        <location filename="../defaultlook.cpp" line="81"/>
-        <location filename="../defaultlook.cpp" line="635"/>
-        <location filename="../defaultlook.cpp" line="654"/>
-        <location filename="../defaultlook.cpp" line="663"/>
-        <location filename="../defaultlook.cpp" line="710"/>
-        <location filename="../defaultlook.cpp" line="718"/>
-        <location filename="../defaultlook.cpp" line="745"/>
-        <location filename="../defaultlook.cpp" line="748"/>
+        <location filename="../defaultlook.cpp" line="84"/>
+        <location filename="../defaultlook.cpp" line="651"/>
+        <location filename="../defaultlook.cpp" line="670"/>
+        <location filename="../defaultlook.cpp" line="679"/>
+        <location filename="../defaultlook.cpp" line="726"/>
+        <location filename="../defaultlook.cpp" line="734"/>
+        <location filename="../defaultlook.cpp" line="761"/>
+        <location filename="../defaultlook.cpp" line="764"/>
         <source>MX Tweak</source>
         <translation>MX Tweak</translation>
     </message>
@@ -140,6 +145,36 @@
         <location filename="../defaultlook.ui" line="119"/>
         <source>Appearance</source>
         <translation>外観</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="133"/>
+        <source>Xfce Settings</source>
+        <translation>Xfce の設定</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="212"/>
+        <source>About</source>
+        <translation>情報</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="223"/>
+        <source>Help</source>
+        <translation>ヘルプ</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="240"/>
+        <source>Quit application</source>
+        <translation>アプリケーションの終了</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="243"/>
+        <source>Close</source>
+        <translation>閉じる</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="250"/>
+        <source>Alt+N</source>
+        <translation>Alt+N</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="283"/>
@@ -272,13 +307,14 @@
         <translation>テーマ</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="711"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;アイコン&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <location filename="../defaultlook.ui" line="596"/>
+        <source>Theme Options</source>
+        <translation>テーマのオプション</translation>
     </message>
     <message>
-        <source>Fix HexChat input box in dark theme</source>
-        <translation type="vanished">ダークテーマ使用時の HexChat 入力ボックスを修正</translation>
+        <location filename="../defaultlook.ui" line="606"/>
+        <source>Remove User Theme Set</source>
+        <translation>ユーザーのテーマセット削除</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="617"/>
@@ -286,27 +322,9 @@
         <translation>プレビュー</translation>
     </message>
     <message>
-        <source>Fix some website fields when using dark theme</source>
-        <translation type="vanished">ダークテーマを使用している場合、いくつかのウェブサイトのフィールドを修正</translation>
-    </message>
-    <message>
-        <source>Firefox dark theme tweak</source>
-        <translation type="vanished">Firefox ダークテーマの tweak</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="694"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Manager&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;ウィンドウマネージャ&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="728"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Themes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;テーマ&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="704"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;アプリケーション&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <location filename="../defaultlook.ui" line="656"/>
+        <source>Undo</source>
+        <translation>元に戻す</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="666"/>
@@ -319,19 +337,24 @@
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;カーソル&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="606"/>
-        <source>Remove User Theme Set</source>
-        <translation>ユーザーのテーマセット削除</translation>
+        <location filename="../defaultlook.ui" line="694"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Manager&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;ウィンドウマネージャ&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="596"/>
-        <source>Theme Options</source>
-        <translation>テーマのオプション</translation>
+        <location filename="../defaultlook.ui" line="704"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;アプリケーション&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="656"/>
-        <source>Undo</source>
-        <translation>元に戻す</translation>
+        <location filename="../defaultlook.ui" line="711"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;アイコン&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="728"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Themes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;テーマ&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="738"/>
@@ -355,6 +378,16 @@
         <translation>コンプトンの設定ファイルを編集</translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="777"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce Compositor Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce コンポジタの設定&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="780"/>
+        <source>Xfwm Settings</source>
+        <translation>Xfwm の設定</translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="791"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Changing the VBlank mode may help alleviate some screen tearing issues.  See Help for more information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;VBlank モードを変更すると、画面分割の問題が軽減される場合があります。 詳細については、ヘルプを参照してください。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
@@ -363,6 +396,31 @@
         <location filename="../defaultlook.ui" line="794"/>
         <source>VBlank</source>
         <translation>VBlank</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="801"/>
+        <source>Launch compton-conf configuration tool</source>
+        <translation>コンプトン設定ツールを起動</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="804"/>
+        <source>Compton settings</source>
+        <translation>コンプトンの設定</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="828"/>
+        <source>None</source>
+        <translation>なし</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="833"/>
+        <source>Xfwm (Xfce) Compositor</source>
+        <translation>Xfwm (Xfce) コンポジタ</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="838"/>
+        <source>Compton </source>
+        <translation>コンプトン</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="847"/>
@@ -383,41 +441,6 @@
         <location filename="../defaultlook.ui" line="862"/>
         <source>off</source>
         <translation>オフ</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="828"/>
-        <source>None</source>
-        <translation>なし</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="833"/>
-        <source>Xfwm (Xfce) Compositor</source>
-        <translation>Xfwm (Xfce) コンポジタ</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="838"/>
-        <source>Compton </source>
-        <translation>コンプトン</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="777"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce Compositor Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce コンポジタの設定&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="780"/>
-        <source>Xfwm Settings</source>
-        <translation>Xfwm の設定</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="801"/>
-        <source>Launch compton-conf configuration tool</source>
-        <translation>コンプトン設定ツールを起動</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="804"/>
-        <source>Compton settings</source>
-        <translation>コンプトンの設定</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="912"/>
@@ -777,117 +800,87 @@
         <translation>注意: 既存の /etc/X11/xorg.conf.d/20-radeon.conf はホームフォルダにバックアップされます</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="212"/>
-        <source>About</source>
-        <translation>情報</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="223"/>
-        <source>Help</source>
-        <translation>ヘルプ</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="240"/>
-        <source>Quit application</source>
-        <translation>アプリケーションの終了</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="243"/>
-        <source>Close</source>
-        <translation>閉じる</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="250"/>
-        <source>Alt+N</source>
-        <translation>Alt+N</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="133"/>
-        <source>Xfce Settings</source>
-        <translation>Xfce の設定</translation>
-    </message>
-    <message>
         <location filename="../defaultlook.cpp" line="57"/>
         <source>--display switch only valid for Xfce</source>
         <translation>--Xfce専用のスイッチを表示</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="634"/>
+        <location filename="../defaultlook.cpp" line="650"/>
         <source>About MX Tweak</source>
         <translation>MX Tweak について</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="636"/>
+        <location filename="../defaultlook.cpp" line="652"/>
         <source>Version: </source>
         <translation>バージョン: </translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="637"/>
+        <location filename="../defaultlook.cpp" line="653"/>
         <source>App for quick default ui theme changes and tweaks</source>
         <translation>既定の UI テーマの変更や調整を素早く行えるアプリ</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="639"/>
+        <location filename="../defaultlook.cpp" line="655"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="640"/>
+        <location filename="../defaultlook.cpp" line="656"/>
         <source>%1 License</source>
         <translation>%1 ライセンス</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="654"/>
+        <location filename="../defaultlook.cpp" line="670"/>
         <source>%1 Help</source>
         <translation>%1 ヘルプ</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="664"/>
+        <location filename="../defaultlook.cpp" line="680"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
         <translation>完了しました！ Firefox では変更を有効にするため再起動が必要な場合があります</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="711"/>
+        <location filename="../defaultlook.cpp" line="727"/>
         <source>Plese remove special characters</source>
         <translation>特殊文字を削除してください</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="711"/>
+        <location filename="../defaultlook.cpp" line="727"/>
         <source>from file name</source>
         <translation>ファイル名より</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="718"/>
+        <location filename="../defaultlook.cpp" line="734"/>
         <source>File name already exists.  Choose another name</source>
         <translation>そのファイル名は既に存在します。別の名前を選んでください。</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="746"/>
+        <location filename="../defaultlook.cpp" line="762"/>
         <source>File is not a valid tar.xz archive file</source>
         <translation>そのファイルは無効な tar.xz 形式です</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="749"/>
+        <location filename="../defaultlook.cpp" line="765"/>
         <source>Archive does not contain a panel config</source>
         <translation>書庫にはパネルの設定を含んでいません</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="924"/>
+        <location filename="../defaultlook.cpp" line="940"/>
         <source>Panel settings</source>
         <translation>パネルの設定</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="925"/>
+        <location filename="../defaultlook.cpp" line="941"/>
         <source>Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
         <translation>現在のパネル設定は、ホームフォルダ (~/) 以下にある .restore という隠しフォルダにバックアップされました</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1702"/>
+        <location filename="../defaultlook.cpp" line="1718"/>
         <source>settings</source>
         <translation>設定</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2042"/>
+        <location filename="../defaultlook.cpp" line="2058"/>
         <source>Choose a theme set</source>
         <translation>テーマセットを選択</translation>
     </message>
