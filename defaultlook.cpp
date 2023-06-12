@@ -62,6 +62,9 @@ defaultlook::defaultlook(QWidget *parent, const QStringList &args) :
         themetabflag = true;
     }
 
+    if (args.contains(QStringLiteral("--other"))){
+        othertabflag = true;
+    }
     if (args.contains(QStringLiteral("--verbose"))) {
         verbose = true;
     }
@@ -104,14 +107,19 @@ void defaultlook::setup()
         setupCompositor();
         //setup display tab
         //setupDisplay();
-        ui->tabWidget->removeTab(Tab::Plasma);
-        ui->tabWidget->removeTab(Tab::Fluxbox);
         //set first tab as default
         if (themetabflag){
             ui->tabWidget->setCurrentIndex(Tab::Theme);
         } else {
             ui->tabWidget->setCurrentIndex(Tab::Panel);
         }
+        if (othertabflag){
+            ui->tabWidget->setCurrentIndex(Tab::Others);
+        } else {
+            ui->tabWidget->setCurrentIndex(Tab::Panel);
+        }
+        ui->tabWidget->removeTab(Tab::Plasma);
+        ui->tabWidget->removeTab(Tab::Fluxbox);
         //setup Config Options
         setupConfigoptions();
     }
@@ -147,6 +155,11 @@ void defaultlook::setup()
         } else {
             ui->tabWidget->setCurrentIndex(1);
         }
+        if (othertabflag){
+            ui->tabWidget->setCurrentIndex(2);
+        } else {
+            ui->tabWidget->setCurrentIndex(1);
+        }
 
 
     }
@@ -161,6 +174,9 @@ void defaultlook::setup()
         ui->toolButtonXFCEWMsettings->hide();
         ui->toolButtonXFCEpanelSettings->hide();
         ui->tabWidget->setCurrentIndex(Tab::Plasma);
+        if (othertabflag){
+            ui->tabWidget->setCurrentIndex(Tab::Others);
+        }
         for (int i = 5; i >= 0; --i)
             ui->tabWidget->removeTab(i);
         setupPlasma();
