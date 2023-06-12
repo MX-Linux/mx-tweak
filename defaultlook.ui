@@ -265,7 +265,7 @@
       <enum>QTabWidget::North</enum>
      </property>
      <property name="currentIndex">
-      <number>2</number>
+      <number>7</number>
      </property>
      <widget class="QWidget" name="Panel">
       <attribute name="title">
@@ -1851,7 +1851,7 @@
          <item row="5" column="0">
           <widget class="QCheckBox" name="checkBoxDisableFluxboxMenuGeneration">
            <property name="text">
-            <string>Automatic generation of fluxbox applications menu after package installation, removal, and updates</string>
+            <string>Generate fluxbox All Apps menu after package installation, removal, and updates</string>
            </property>
           </widget>
          </item>

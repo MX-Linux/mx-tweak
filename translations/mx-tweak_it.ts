@@ -736,8 +736,12 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1854"/>
+        <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Automatic generation of fluxbox applications menu after package installation, removal, and updates</source>
-        <translation>Generazione automatica del menu delle applicazioni fluxbox dopo l&apos;installazione, la rimozione e gli aggiornamenti del pacchetto</translation>
+        <translation type="vanished">Generazione automatica del menu delle applicazioni fluxbox dopo l&apos;installazione, la rimozione e gli aggiornamenti del pacchetto</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1868"/>
