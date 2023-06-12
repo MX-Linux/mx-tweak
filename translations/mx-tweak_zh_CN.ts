@@ -147,6 +147,36 @@
         <translation>外观</translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="133"/>
+        <source>Xfce Settings</source>
+        <translation>Xfce 设置</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="212"/>
+        <source>About</source>
+        <translation>关于</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="223"/>
+        <source>Help</source>
+        <translation>帮助</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="240"/>
+        <source>Quit application</source>
+        <translation>退出应用程序</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="243"/>
+        <source>Close</source>
+        <translation>关闭</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="250"/>
+        <source>Alt+N</source>
+        <translation>Alt+N</translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="283"/>
         <source>Display panel horizontally</source>
         <translation>纵向放置面板</translation>
@@ -277,13 +307,14 @@
         <translation>主题</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="711"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <location filename="../defaultlook.ui" line="596"/>
+        <source>Theme Options</source>
+        <translation>主题设置</translation>
     </message>
     <message>
-        <source>Fix HexChat input box in dark theme</source>
-        <translation type="vanished">修复深色模式下 HexChat 输入框</translation>
+        <location filename="../defaultlook.ui" line="606"/>
+        <source>Remove User Theme Set</source>
+        <translation>移除用户主题设置</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="617"/>
@@ -291,27 +322,9 @@
         <translation>预览</translation>
     </message>
     <message>
-        <source>Fix some website fields when using dark theme</source>
-        <translation type="vanished">修复使用深色主题时的一些网站填充</translation>
-    </message>
-    <message>
-        <source>Firefox dark theme tweak</source>
-        <translation type="vanished">火狐深色主题调整</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="694"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Manager&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="728"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Themes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="704"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <location filename="../defaultlook.ui" line="656"/>
+        <source>Undo</source>
+        <translation>撤销</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="666"/>
@@ -324,19 +337,24 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="606"/>
-        <source>Remove User Theme Set</source>
-        <translation>移除用户主题设置</translation>
+        <location filename="../defaultlook.ui" line="694"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Manager&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="596"/>
-        <source>Theme Options</source>
-        <translation>主题设置</translation>
+        <location filename="../defaultlook.ui" line="704"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="656"/>
-        <source>Undo</source>
-        <translation>撤销</translation>
+        <location filename="../defaultlook.ui" line="711"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="728"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Themes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="738"/>
@@ -360,6 +378,16 @@
         <translation>编辑 compton.conf</translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="777"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce Compositor Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce 合成器设置&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="780"/>
+        <source>Xfwm Settings</source>
+        <translation>Xfwm 设置</translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="791"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Changing the VBlank mode may help alleviate some screen tearing issues.  See Help for more information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;更改 VBlank 模式或有助于减轻某些屏幕撕裂问题。更多相关信息，请参见帮助。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
@@ -368,6 +396,31 @@
         <location filename="../defaultlook.ui" line="794"/>
         <source>VBlank</source>
         <translation>VBlank</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="801"/>
+        <source>Launch compton-conf configuration tool</source>
+        <translation>启动 compton-conf 配置工具</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="804"/>
+        <source>Compton settings</source>
+        <translation>窗口合成设置</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="828"/>
+        <source>None</source>
+        <translation>无</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="833"/>
+        <source>Xfwm (Xfce) Compositor</source>
+        <translation>Xfwm (Xfce) 合成器</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="838"/>
+        <source>Compton </source>
+        <translation>合成</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="847"/>
@@ -388,41 +441,6 @@
         <location filename="../defaultlook.ui" line="862"/>
         <source>off</source>
         <translation>关闭</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="828"/>
-        <source>None</source>
-        <translation>无</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="833"/>
-        <source>Xfwm (Xfce) Compositor</source>
-        <translation>Xfwm (Xfce) 合成器</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="838"/>
-        <source>Compton </source>
-        <translation>合成</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="777"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce Compositor Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce 合成器设置&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="780"/>
-        <source>Xfwm Settings</source>
-        <translation>Xfwm 设置</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="801"/>
-        <source>Launch compton-conf configuration tool</source>
-        <translation>启动 compton-conf 配置工具</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="804"/>
-        <source>Compton settings</source>
-        <translation>窗口合成设置</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="912"/>
@@ -780,36 +798,6 @@
         <location filename="../defaultlook.ui" line="1975"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="212"/>
-        <source>About</source>
-        <translation>关于</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="223"/>
-        <source>Help</source>
-        <translation>帮助</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="240"/>
-        <source>Quit application</source>
-        <translation>退出应用程序</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="243"/>
-        <source>Close</source>
-        <translation>关闭</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="250"/>
-        <source>Alt+N</source>
-        <translation>Alt+N</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="133"/>
-        <source>Xfce Settings</source>
-        <translation>Xfce 设置</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="57"/>

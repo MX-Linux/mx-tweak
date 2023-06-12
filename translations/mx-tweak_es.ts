@@ -147,6 +147,36 @@
         <translation>Aparencia</translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="133"/>
+        <source>Xfce Settings</source>
+        <translation>Xfce Ajustes</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="212"/>
+        <source>About</source>
+        <translation>Acerca de</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="223"/>
+        <source>Help</source>
+        <translation>Ayuda</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="240"/>
+        <source>Quit application</source>
+        <translation>Terminar aplicación</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="243"/>
+        <source>Close</source>
+        <translation>Cerrar</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="250"/>
+        <source>Alt+N</source>
+        <translation>Alt+N</translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="283"/>
         <source>Display panel horizontally</source>
         <translation>Desplegar panel horizontalmente</translation>
@@ -277,13 +307,14 @@
         <translation>Tema</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="711"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Iconos&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <location filename="../defaultlook.ui" line="596"/>
+        <source>Theme Options</source>
+        <translation>Opciones de Tema</translation>
     </message>
     <message>
-        <source>Fix HexChat input box in dark theme</source>
-        <translation type="vanished">Ajuste el cuadro de entrada HexChat a tema oscuro</translation>
+        <location filename="../defaultlook.ui" line="606"/>
+        <source>Remove User Theme Set</source>
+        <translation>Eliminar el conjunto de temas de usuario</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="617"/>
@@ -291,27 +322,9 @@
         <translation>Vista previa</translation>
     </message>
     <message>
-        <source>Fix some website fields when using dark theme</source>
-        <translation type="vanished">Corregir campos en páginas web cuando usa el tema oscuro</translation>
-    </message>
-    <message>
-        <source>Firefox dark theme tweak</source>
-        <translation type="vanished">Retocar tema oscuro de Firefox</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="694"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Manager&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Gestor de ventanas&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="728"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Themes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Temas&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="704"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Aplicación&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <location filename="../defaultlook.ui" line="656"/>
+        <source>Undo</source>
+        <translation>Deshacer</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="666"/>
@@ -324,19 +337,24 @@
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Cursores&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="606"/>
-        <source>Remove User Theme Set</source>
-        <translation>Eliminar el conjunto de temas de usuario</translation>
+        <location filename="../defaultlook.ui" line="694"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Manager&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Gestor de ventanas&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="596"/>
-        <source>Theme Options</source>
-        <translation>Opciones de Tema</translation>
+        <location filename="../defaultlook.ui" line="704"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Aplicación&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="656"/>
-        <source>Undo</source>
-        <translation>Deshacer</translation>
+        <location filename="../defaultlook.ui" line="711"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Iconos&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="728"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Themes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Temas&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="738"/>
@@ -360,6 +378,16 @@
         <translation>Editar compton.conf</translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="777"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce Compositor Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ajustes del Compositor Xfce&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="780"/>
+        <source>Xfwm Settings</source>
+        <translation>Xfwm Ajustes</translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="791"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Changing the VBlank mode may help alleviate some screen tearing issues.  See Help for more information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cambiar el modo VBlank puede ayudar a aliviar algunos problemas de rotura de pantalla. Consulte la Ayuda para obtener más información..&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
@@ -368,6 +396,31 @@
         <location filename="../defaultlook.ui" line="794"/>
         <source>VBlank</source>
         <translation>VBlank</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="801"/>
+        <source>Launch compton-conf configuration tool</source>
+        <translation>Lanzar herramienta de configuración compton-conf</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="804"/>
+        <source>Compton settings</source>
+        <translation>Ajustes Compton</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="828"/>
+        <source>None</source>
+        <translation>Ninguno</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="833"/>
+        <source>Xfwm (Xfce) Compositor</source>
+        <translation>Xfwm (Xfce) Compositor</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="838"/>
+        <source>Compton </source>
+        <translation>Compton </translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="847"/>
@@ -388,41 +441,6 @@
         <location filename="../defaultlook.ui" line="862"/>
         <source>off</source>
         <translation>apagado</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="828"/>
-        <source>None</source>
-        <translation>Ninguno</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="833"/>
-        <source>Xfwm (Xfce) Compositor</source>
-        <translation>Xfwm (Xfce) Compositor</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="838"/>
-        <source>Compton </source>
-        <translation>Compton </translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="777"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce Compositor Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ajustes del Compositor Xfce&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="780"/>
-        <source>Xfwm Settings</source>
-        <translation>Xfwm Ajustes</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="801"/>
-        <source>Launch compton-conf configuration tool</source>
-        <translation>Lanzar herramienta de configuración compton-conf</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="804"/>
-        <source>Compton settings</source>
-        <translation>Ajustes Compton</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="912"/>
@@ -780,36 +798,6 @@
         <location filename="../defaultlook.ui" line="1975"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>NOTA: el actual /etc/X11/xorg.conf.d/20-radeon.conf será respaldado en la carpeta home</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="212"/>
-        <source>About</source>
-        <translation>Acerca de</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="223"/>
-        <source>Help</source>
-        <translation>Ayuda</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="240"/>
-        <source>Quit application</source>
-        <translation>Terminar aplicación</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="243"/>
-        <source>Close</source>
-        <translation>Cerrar</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="250"/>
-        <source>Alt+N</source>
-        <translation>Alt+N</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="133"/>
-        <source>Xfce Settings</source>
-        <translation>Xfce Ajustes</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="57"/>
