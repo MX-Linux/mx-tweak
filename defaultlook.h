@@ -84,6 +84,7 @@ public:
     bool vblankflag{};
     bool displayflag = false;
     bool themetabflag = false;
+    bool othertabflag = false;
     bool displaysetupflag = false;
     bool brightnessflag = false;
     bool sandboxflag = false;
