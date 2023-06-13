@@ -68,6 +68,7 @@ defaultlook::defaultlook(QWidget *parent, const QStringList &args) :
     if (args.contains(QStringLiteral("--verbose"))) {
         verbose = true;
     }
+
     setup();
 
 
@@ -108,16 +109,15 @@ void defaultlook::setup()
         //setup display tab
         //setupDisplay();
         //set first tab as default
+        ui->tabWidget->setCurrentIndex(Tab::Panel);
         if (themetabflag){
+            qDebug() << "themetabflag is " << themetabflag;
             ui->tabWidget->setCurrentIndex(Tab::Theme);
-        } else {
-            ui->tabWidget->setCurrentIndex(Tab::Panel);
         }
         if (othertabflag){
             ui->tabWidget->setCurrentIndex(Tab::Others);
-        } else {
-            ui->tabWidget->setCurrentIndex(Tab::Panel);
         }
+
         ui->tabWidget->removeTab(Tab::Plasma);
         ui->tabWidget->removeTab(Tab::Fluxbox);
         //setup Config Options
@@ -134,8 +134,6 @@ void defaultlook::setup()
         ui->buttonThemeUndo->hide();
         ui->pushButtonPreview->hide();
         ui->pushButtonRemoveUserThemeSet->hide();
-        ui->tabWidget->removeTab(Tab::Plasma);
-        ui->tabWidget->removeTab(Tab::Panel);
         ui->label_4->hide();
         ui->label_5->hide();
         ui->label_6->hide();
@@ -147,19 +145,18 @@ void defaultlook::setup()
         ui->toolButtonXFCEAppearance->hide();
         ui->toolButtonXFCEWMsettings->hide();
         ui->toolButtonXFCEpanelSettings->hide();
-        ui->tabWidget->removeTab(2);
-        ui->tabWidget->removeTab(2);
-        ui->tabWidget->removeTab(1);
+        ui->tabWidget->setCurrentIndex(Tab::Fluxbox);
         if (themetabflag){
-            ui->tabWidget->setCurrentIndex(0);
-        } else {
-            ui->tabWidget->setCurrentIndex(1);
+            ui->tabWidget->setCurrentIndex(Tab::Theme);
         }
         if (othertabflag){
-            ui->tabWidget->setCurrentIndex(2);
-        } else {
-            ui->tabWidget->setCurrentIndex(1);
+            ui->tabWidget->setCurrentIndex(Tab::Others);
         }
+        ui->tabWidget->removeTab(Tab::Plasma);
+        ui->tabWidget->removeTab(Tab::Config);
+        ui->tabWidget->removeTab(Tab::Display);
+        ui->tabWidget->removeTab(Tab::Compositor);
+        ui->tabWidget->removeTab(Tab::Panel);
 
 
     }
