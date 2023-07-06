@@ -152,12 +152,12 @@
     <message>
         <location filename="../defaultlook.ui" line="212"/>
         <source>About</source>
-        <translation type="unfinished"/>
+        <translation>О</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="223"/>
         <source>Help</source>
-        <translation type="unfinished"/>
+        <translation>Помощь</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="240"/>
@@ -167,7 +167,7 @@
     <message>
         <location filename="../defaultlook.ui" line="243"/>
         <source>Close</source>
-        <translation type="unfinished"/>
+        <translation>Закрыть</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="250"/>
@@ -246,7 +246,7 @@
         <location filename="../defaultlook.ui" line="419"/>
         <location filename="../defaultlook.ui" line="479"/>
         <source>Options</source>
-        <translation type="unfinished"/>
+        <translation>Варианты</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="439"/>
@@ -297,7 +297,7 @@
         <location filename="../defaultlook.ui" line="1746"/>
         <location filename="../defaultlook.ui" line="1902"/>
         <source>Apply</source>
-        <translation type="unfinished"/>
+        <translation>Применить</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="580"/>
@@ -734,7 +734,7 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1854"/>
-        <source>Automatic generation of fluxbox applications menu after package installation, removal, and updates</source>
+        <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1040,7 +1040,7 @@
     <message>
         <location filename="../window_buttons.ui" line="238"/>
         <source>Close</source>
-        <translation type="unfinished"/>
+        <translation>Закрыть</translation>
     </message>
 </context>
 <context>
@@ -1118,7 +1118,7 @@
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="212"/>
         <source>Close</source>
-        <translation type="unfinished"/>
+        <translation>Закрыть</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.cpp" line="23"/>

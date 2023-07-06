@@ -1,3 +1,9 @@
+mx-tweak (23.07.01mx23) mx; urgency=medium
+
+  * update translations
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Thu, 06 Jul 2023 19:37:36 -0400
+
 mx-tweak (23.06.03mx23) mx; urgency=medium
 
   * fix tab selector switches 
