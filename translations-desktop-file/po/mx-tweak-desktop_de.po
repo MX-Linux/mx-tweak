@@ -6,8 +6,8 @@
 # Translators:
 # Vinzenz Vietzke <vinz@vinzv.de>, 2022
 # Dolphin Oracle <dolphinoracle@gmail.com>, 2022
-# delix02, 2022
 # Der Dings, 2023
+# aer, 2023
 # 
 #, fuzzy
 msgid ""
@@ -16,8 +16,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-12-03 12:46-0500\n"
 "PO-Revision-Date: 2022-12-03 16:44+0000\n"
-"Last-Translator: Der Dings, 2023\n"
-"Language-Team: German (https://www.transifex.com/anticapitalista/teams/10162/de/)\n"
+"Last-Translator: aer, 2023\n"
+"Language-Team: German (https://app.transifex.com/anticapitalista/teams/10162/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -36,7 +36,7 @@ msgstr "Eine Zusammenstellung nützlicher Einstellungen"
 
 #: desktop-in/mx-tweak.desktop.in:13 desktop-in/mx-tweak-systray.desktop.in:13
 msgid "Desktop"
-msgstr "Oberfläche"
+msgstr "Arbeitsoberfläche"
 
 #. The desktop entry name will be displayed within the menu.
 #: desktop-in/mx-tweak-systray.desktop.in:5
@@ -66,14 +66,14 @@ msgstr "compton"
 #. # The desktop entry comment will be shown within the menu.
 #: desktop-in/zcompton.desktop.in:9
 msgid "compton startup"
-msgstr ""
+msgstr "Compton Start"
 
 #. The desktop entry name will be displayed within the menu.
 #: desktop-in/zrestore-software-brightness.desktop.in:7
 msgid "restore-software-brightness"
-msgstr ""
+msgstr "Software-Helligkeit wiederherstellen"
 
 #. # The desktop entry comment will be shown within the menu.
 #: desktop-in/zrestore-software-brightness.desktop.in:9
 msgid "restore xrandr brightness values stored mx-tweak display tab"
-msgstr ""
+msgstr "Gespeicherte xrandr-Helligkeitswerte wiederherstellen"
