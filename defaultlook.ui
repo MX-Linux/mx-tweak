@@ -308,16 +308,6 @@
            </property>
           </widget>
          </item>
-         <item row="8" column="0">
-          <widget class="QRadioButton" name="radioButtonTasklist">
-           <property name="text">
-            <string>Set Tasklist plugin to:</string>
-           </property>
-           <property name="autoExclusive">
-            <bool>false</bool>
-           </property>
-          </widget>
-         </item>
          <item row="1" column="1">
           <widget class="QComboBox" name="comboboxHorzPostition">
            <property name="sizePolicy">
@@ -355,16 +345,6 @@
           <widget class="QRadioButton" name="checkVert">
            <property name="text">
             <string>Display panel vertically</string>
-           </property>
-           <property name="autoExclusive">
-            <bool>false</bool>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="0">
-          <widget class="QRadioButton" name="radioDefaultPanel">
-           <property name="text">
-            <string>Restore default panel</string>
            </property>
            <property name="autoExclusive">
             <bool>false</bool>
@@ -567,6 +547,26 @@
            </property>
            <property name="default">
             <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0" colspan="2">
+          <widget class="QRadioButton" name="radioDefaultPanel">
+           <property name="text">
+            <string>Restore default panel</string>
+           </property>
+           <property name="autoExclusive">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="8" column="0" colspan="2">
+          <widget class="QRadioButton" name="radioButtonTasklist">
+           <property name="text">
+            <string>Set Tasklist plugin to:</string>
+           </property>
+           <property name="autoExclusive">
+            <bool>false</bool>
            </property>
           </widget>
          </item>
@@ -1126,13 +1126,6 @@
            </property>
           </widget>
          </item>
-         <item row="8" column="0">
-          <widget class="QCheckBox" name="checkBoxFileDialogActionButtonsPosition">
-           <property name="text">
-            <string>Show GTK File Dialog action buttons at bottom of dialogs</string>
-           </property>
-          </widget>
-         </item>
          <item row="14" column="0" colspan="2">
           <widget class="QPushButton" name="ButtonApplyMiscDefualts">
            <property name="minimumSize">
@@ -1150,10 +1143,10 @@
            </property>
           </widget>
          </item>
-         <item row="11" column="0" colspan="2">
-          <widget class="QCheckBox" name="checkBoxHibernate">
+         <item row="12" column="0" colspan="2">
+          <widget class="QLabel" name="label_hibernate">
            <property name="text">
-            <string>Enable hibernate on Log Out menu </string>
+            <string>                   note: to hibernate, swap needs to be &gt;= RAM</string>
            </property>
           </widget>
          </item>
@@ -1170,17 +1163,17 @@
            </property>
           </spacer>
          </item>
-         <item row="12" column="0" colspan="2">
-          <widget class="QLabel" name="label_hibernate">
+         <item row="1" column="0" colspan="2">
+          <widget class="QCheckBox" name="checkBoxSingleClick">
            <property name="text">
-            <string>                   note: to hibernate, swap needs to be &gt;= RAM</string>
+            <string>Enable single-click on desktop</string>
            </property>
           </widget>
          </item>
-         <item row="7" column="0">
-          <widget class="QCheckBox" name="checkBoxShowAllWorkspaces">
+         <item row="11" column="0" colspan="2">
+          <widget class="QCheckBox" name="checkBoxHibernate">
            <property name="text">
-            <string>Show windows from all workspaces in panel</string>
+            <string>Enable hibernate on Log Out menu </string>
            </property>
           </widget>
          </item>
@@ -1191,38 +1184,52 @@
            </property>
           </widget>
          </item>
-         <item row="3" column="0">
-          <widget class="QCheckBox" name="checkBoxThunarSplitView">
-           <property name="text">
-            <string>Thunar windows always open in split view</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0">
-          <widget class="QCheckBox" name="checkBoxSingleClick">
-           <property name="text">
-            <string>Enable single-click on desktop</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="0">
-          <widget class="QCheckBox" name="checkBoxsplitviewhorizontal">
-           <property name="text">
-            <string>Thunar split view opens horizontal</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="0">
+         <item row="2" column="0" colspan="2">
           <widget class="QCheckBox" name="checkBoxThunarSingleClick">
            <property name="text">
             <string>Enable single-click in Thunar File Manager</string>
            </property>
           </widget>
          </item>
-         <item row="6" column="0">
+         <item row="3" column="0" colspan="2">
+          <widget class="QCheckBox" name="checkBoxThunarSplitView">
+           <property name="text">
+            <string>Thunar windows always open in split view</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0" colspan="2">
+          <widget class="QCheckBox" name="checkBoxsplitviewhorizontal">
+           <property name="text">
+            <string>Thunar split view opens horizontal</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0" colspan="2">
+          <widget class="QCheckBox" name="checkBoxNotificatonPercentages">
+           <property name="text">
+            <string>Show percentages in notifcations when available</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0" colspan="2">
           <widget class="QCheckBox" name="checkBoxDesktopZoom">
            <property name="text">
             <string>Enable Desktop Zoom </string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="0" colspan="2">
+          <widget class="QCheckBox" name="checkBoxShowAllWorkspaces">
+           <property name="text">
+            <string>Show windows from all workspaces in panel</string>
+           </property>
+          </widget>
+         </item>
+         <item row="8" column="0" colspan="2">
+          <widget class="QCheckBox" name="checkBoxFileDialogActionButtonsPosition">
+           <property name="text">
+            <string>Show GTK File Dialog action buttons at bottom of dialogs</string>
            </property>
           </widget>
          </item>
@@ -1233,13 +1240,6 @@
            </property>
            <property name="alignment">
             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="0">
-          <widget class="QCheckBox" name="checkBoxNotificatonPercentages">
-           <property name="text">
-            <string>Show percentages in notifcations when available</string>
            </property>
           </widget>
          </item>
@@ -1257,13 +1257,6 @@
          <property name="sizeConstraint">
           <enum>QLayout::SetNoConstraint</enum>
          </property>
-         <item row="1" column="0">
-          <widget class="QCheckBox" name="checkboxfluxresetdock">
-           <property name="text">
-            <string>Reset DefaultDock</string>
-           </property>
-          </widget>
-         </item>
          <item row="11" column="0">
           <widget class="QLabel" name="label_19">
            <property name="text">
@@ -1387,24 +1380,10 @@
            </property>
           </widget>
          </item>
-         <item row="3" column="0" colspan="2">
-          <widget class="QCheckBox" name="checkboxfluxreseteverything">
-           <property name="text">
-            <string>Reset ALL mx-fluxbox settings</string>
-           </property>
-          </widget>
-         </item>
          <item row="5" column="3" colspan="3">
           <widget class="QCheckBox" name="checkBoxThunarSingleClick_2">
            <property name="text">
             <string>Enable single-click in Thunar File Manager</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="0">
-          <widget class="QCheckBox" name="checkboxfluxresetmenu">
-           <property name="text">
-            <string>Reset Fluxbox Menu</string>
            </property>
           </widget>
          </item>
@@ -1553,16 +1532,6 @@
            </property>
           </widget>
          </item>
-         <item row="4" column="0" colspan="2">
-          <widget class="QCheckBox" name="checkBoxMenuMigrate">
-           <property name="toolTip">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-           </property>
-           <property name="text">
-            <string>Upgrade existing menu entries</string>
-           </property>
-          </widget>
-         </item>
          <item row="2" column="4">
           <widget class="QComboBox" name="comboBoxfluxcaptions">
            <property name="currentIndex">
@@ -1667,6 +1636,37 @@
            </property>
           </widget>
          </item>
+         <item row="1" column="0" colspan="3">
+          <widget class="QCheckBox" name="checkboxfluxresetdock">
+           <property name="text">
+            <string>Reset DefaultDock</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0" colspan="3">
+          <widget class="QCheckBox" name="checkboxfluxresetmenu">
+           <property name="text">
+            <string>Reset Fluxbox Menu</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0" colspan="3">
+          <widget class="QCheckBox" name="checkboxfluxreseteverything">
+           <property name="text">
+            <string>Reset ALL mx-fluxbox settings</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0" colspan="3">
+          <widget class="QCheckBox" name="checkBoxMenuMigrate">
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="text">
+            <string>Upgrade existing menu entries</string>
+           </property>
+          </widget>
+         </item>
         </layout>
        </item>
       </layout>
@@ -1681,13 +1681,6 @@
          <property name="sizeConstraint">
           <enum>QLayout::SetNoConstraint</enum>
          </property>
-         <item row="6" column="0" colspan="2">
-          <widget class="QCheckBox" name="checkboxplasmaresetdock">
-           <property name="text">
-            <string>Reset KDE/Plasma defaults</string>
-           </property>
-          </widget>
-         </item>
          <item row="1" column="0">
           <widget class="QLabel" name="label_21">
            <property name="text">
@@ -1751,13 +1744,6 @@
            </property>
           </widget>
          </item>
-         <item row="5" column="0">
-          <widget class="QLabel" name="label_24">
-           <property name="text">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-           </property>
-          </widget>
-         </item>
          <item row="2" column="0">
           <widget class="QLabel" name="label_23">
            <property name="font">
@@ -1767,13 +1753,6 @@
            </property>
            <property name="text">
             <string>Workspace</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="0">
-          <widget class="QCheckBox" name="checkBoxPlasmaSingleClick">
-           <property name="text">
-            <string>Enable single-click</string>
            </property>
           </widget>
          </item>
@@ -1803,10 +1782,31 @@
            </property>
           </spacer>
          </item>
-         <item row="4" column="0" colspan="2">
+         <item row="4" column="0" colspan="3">
           <widget class="QCheckBox" name="checkBoxPlasmaShowAllWorkspaces">
            <property name="text">
             <string>Show windows from all workspaces in panel</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0" colspan="3">
+          <widget class="QCheckBox" name="checkBoxPlasmaSingleClick">
+           <property name="text">
+            <string>Enable single-click</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0" colspan="3">
+          <widget class="QLabel" name="label_24">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0" colspan="3">
+          <widget class="QCheckBox" name="checkboxplasmaresetdock">
+           <property name="text">
+            <string>Reset KDE/Plasma defaults</string>
            </property>
           </widget>
          </item>
@@ -1824,48 +1824,23 @@
          <property name="sizeConstraint">
           <enum>QLayout::SetNoConstraint</enum>
          </property>
-         <item row="0" column="0">
+         <item row="16" column="0" colspan="3">
+          <spacer name="verticalSpacer_6">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>77</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="0" column="0" colspan="3">
           <widget class="QCheckBox" name="checkBoxLightdmReset">
            <property name="text">
             <string>Reset Lightdm (login screen) to system default theme</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="0">
-          <widget class="QCheckBox" name="checkBoxbluetoothAutoEnable">
-           <property name="toolTip">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-           </property>
-           <property name="text">
-            <string>Enable Bluetooth Adapters on boot</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="0">
-          <widget class="QCheckBox" name="checkBoxSandbox">
-           <property name="text">
-            <string>Enable kernel sandbox</string>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="0">
-          <widget class="QCheckBox" name="checkBoxDisableFluxboxMenuGeneration">
-           <property name="text">
-            <string>Generate fluxbox All Apps menu after package installation, removal, and updates</string>
-           </property>
-          </widget>
-         </item>
-         <item row="14" column="0" colspan="3">
-          <widget class="Line" name="line_2">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-          </widget>
-         </item>
-         <item row="15" column="2">
-          <widget class="QRadioButton" name="radioSudoRoot">
-           <property name="text">
-            <string>Root</string>
            </property>
           </widget>
          </item>
@@ -1873,20 +1848,6 @@
           <widget class="QLabel" name="label_11">
            <property name="text">
             <string>Password for administrative tasks:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="10" column="0">
-          <widget class="QCheckBox" name="checkboxAMDtearfree">
-           <property name="text">
-            <string>Use tearfree amdgpu option</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="0">
-          <widget class="QCheckBox" name="checkBoxInstallRecommends">
-           <property name="text">
-            <string>Apt installs additional &quot;recommends&quot; packages as dependencies</string>
            </property>
           </widget>
          </item>
@@ -1907,46 +1868,33 @@
            </property>
           </widget>
          </item>
-         <item row="11" column="0" colspan="2">
-          <widget class="QLabel" name="labelamdgpu">
-           <property name="text">
-            <string>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</string>
+         <item row="14" column="0" colspan="3">
+          <widget class="Line" name="line_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
            </property>
           </widget>
          </item>
-         <item row="12" column="0">
-          <widget class="QCheckBox" name="checkboxRadeontearfree">
-           <property name="text">
-            <string>Use tearfree radeon driver option</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0">
+         <item row="1" column="0" colspan="3">
           <widget class="QCheckBox" name="checkBoxMountInternalDrivesNonRoot">
            <property name="text">
             <string>Enable mounting of internal drives by non-root users</string>
            </property>
           </widget>
          </item>
-         <item row="8" column="0">
-          <widget class="QCheckBox" name="checkboxIntelDriver">
+         <item row="15" column="2">
+          <widget class="QRadioButton" name="radioSudoRoot">
            <property name="text">
-            <string>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</string>
+            <string>Root</string>
            </property>
           </widget>
          </item>
-         <item row="16" column="0" colspan="3">
-          <spacer name="verticalSpacer_6">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
+         <item row="2" column="0" colspan="3">
+          <widget class="QCheckBox" name="checkBoxSandbox">
+           <property name="text">
+            <string>Enable kernel sandbox</string>
            </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>77</height>
-            </size>
-           </property>
-          </spacer>
+          </widget>
          </item>
          <item row="15" column="1">
           <widget class="QRadioButton" name="radioSudoUser">
@@ -1955,21 +1903,73 @@
            </property>
           </widget>
          </item>
-         <item row="9" column="0" colspan="2">
-          <widget class="QLabel" name="labelIntel">
+         <item row="3" column="0" colspan="3">
+          <widget class="QCheckBox" name="checkBoxbluetoothAutoEnable">
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
            <property name="text">
-            <string>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</string>
+            <string>Enable Bluetooth Adapters on boot</string>
            </property>
           </widget>
          </item>
-         <item row="6" column="0">
+         <item row="4" column="0" colspan="3">
+          <widget class="QCheckBox" name="checkBoxInstallRecommends">
+           <property name="text">
+            <string>Apt installs additional &quot;recommends&quot; packages as dependencies</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0" colspan="3">
+          <widget class="QCheckBox" name="checkBoxDisableFluxboxMenuGeneration">
+           <property name="text">
+            <string>Generate fluxbox All Apps menu after package installation, removal, and updates</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0" colspan="3">
           <widget class="QCheckBox" name="checkBoxCSD">
            <property name="text">
             <string>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</string>
            </property>
           </widget>
          </item>
-         <item row="13" column="0" colspan="2">
+         <item row="8" column="0" colspan="3">
+          <widget class="QCheckBox" name="checkboxIntelDriver">
+           <property name="text">
+            <string>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="9" column="0" colspan="3">
+          <widget class="QLabel" name="labelIntel">
+           <property name="text">
+            <string>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</string>
+           </property>
+          </widget>
+         </item>
+         <item row="10" column="0" colspan="3">
+          <widget class="QCheckBox" name="checkboxAMDtearfree">
+           <property name="text">
+            <string>Use tearfree amdgpu option</string>
+           </property>
+          </widget>
+         </item>
+         <item row="11" column="0" colspan="3">
+          <widget class="QLabel" name="labelamdgpu">
+           <property name="text">
+            <string>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</string>
+           </property>
+          </widget>
+         </item>
+         <item row="12" column="0" colspan="3">
+          <widget class="QCheckBox" name="checkboxRadeontearfree">
+           <property name="text">
+            <string>Use tearfree radeon driver option</string>
+           </property>
+          </widget>
+         </item>
+         <item row="13" column="0" colspan="3">
           <widget class="QLabel" name="labelradeon">
            <property name="text">
             <string>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</string>

@@ -47,7 +47,7 @@
     <message>
         <location filename="../main.cpp" line="53"/>
         <source>Opens Other tab directly.  Valid on all desktops</source>
-        <translation type="unfinished"></translation>
+        <translation>E hap drejtpërsëdrejti skedën Tjetër. E vlefshme në krejt desktopët</translation>
     </message>
 </context>
 <context>
@@ -104,14 +104,14 @@
     <message>
         <location filename="../defaultlook.ui" line="20"/>
         <location filename="../defaultlook.cpp" line="56"/>
-        <location filename="../defaultlook.cpp" line="84"/>
-        <location filename="../defaultlook.cpp" line="651"/>
-        <location filename="../defaultlook.cpp" line="670"/>
-        <location filename="../defaultlook.cpp" line="679"/>
-        <location filename="../defaultlook.cpp" line="726"/>
-        <location filename="../defaultlook.cpp" line="734"/>
+        <location filename="../defaultlook.cpp" line="85"/>
+        <location filename="../defaultlook.cpp" line="648"/>
+        <location filename="../defaultlook.cpp" line="667"/>
+        <location filename="../defaultlook.cpp" line="676"/>
+        <location filename="../defaultlook.cpp" line="723"/>
+        <location filename="../defaultlook.cpp" line="731"/>
+        <location filename="../defaultlook.cpp" line="758"/>
         <location filename="../defaultlook.cpp" line="761"/>
-        <location filename="../defaultlook.cpp" line="764"/>
         <source>MX Tweak</source>
         <translation>MX Tweak</translation>
     </message>
@@ -197,107 +197,107 @@
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ndikon mbi krejt panelet&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="314"/>
+        <location filename="../defaultlook.ui" line="566"/>
         <source>Set Tasklist plugin to:</source>
         <translation>Si shtojcë Liste punësh vër:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="337"/>
-        <location filename="../defaultlook.ui" line="1705"/>
+        <location filename="../defaultlook.ui" line="327"/>
+        <location filename="../defaultlook.ui" line="1698"/>
         <source>Bottom</source>
         <translation>Në fund</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="342"/>
-        <location filename="../defaultlook.ui" line="1715"/>
+        <location filename="../defaultlook.ui" line="332"/>
+        <location filename="../defaultlook.ui" line="1708"/>
         <source>Top</source>
         <translation>Në krye</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="350"/>
+        <location filename="../defaultlook.ui" line="340"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Tasklist&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Listë punësh&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="357"/>
+        <location filename="../defaultlook.ui" line="347"/>
         <source>Display panel vertically</source>
         <translation>Shfaqe panelin vertikalisht</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="367"/>
+        <location filename="../defaultlook.ui" line="556"/>
         <source>Restore default panel</source>
         <translation>Rikthe panelin parazgjedhje</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="382"/>
-        <location filename="../defaultlook.ui" line="1733"/>
+        <location filename="../defaultlook.ui" line="362"/>
+        <location filename="../defaultlook.ui" line="1726"/>
         <source>Affects 1st panel</source>
         <translation>Ndikon mbi panelin e 1-rë</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="389"/>
+        <location filename="../defaultlook.ui" line="369"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Panel Plugin Scales&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Shkallë Shtojce Paneli&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="409"/>
+        <location filename="../defaultlook.ui" line="389"/>
         <source>Backup current panel configuration</source>
         <translation>Kopjeruaj formësimin e tanishëm të paneleve</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="419"/>
-        <location filename="../defaultlook.ui" line="479"/>
+        <location filename="../defaultlook.ui" line="399"/>
+        <location filename="../defaultlook.ui" line="459"/>
         <source>Options</source>
         <translation>Mundësi</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="439"/>
+        <location filename="../defaultlook.ui" line="419"/>
         <source>Power Manager</source>
         <translation>Përgjegjës Energjie</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="446"/>
+        <location filename="../defaultlook.ui" line="426"/>
         <source>Restore backup panel configuration</source>
         <translation>Rikthe formësim paneli të kopjeruajtur</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="469"/>
+        <location filename="../defaultlook.ui" line="449"/>
         <source>Set Scales</source>
         <translation>Caktoni Shkallë</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="499"/>
-        <location filename="../defaultlook.ui" line="1710"/>
+        <location filename="../defaultlook.ui" line="479"/>
+        <location filename="../defaultlook.ui" line="1703"/>
         <source>Left</source>
         <translation>Majtas</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="504"/>
-        <location filename="../defaultlook.ui" line="1720"/>
+        <location filename="../defaultlook.ui" line="484"/>
+        <location filename="../defaultlook.ui" line="1713"/>
         <source>Right</source>
         <translation>Djathtas</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="512"/>
+        <location filename="../defaultlook.ui" line="492"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Buttons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Butona Dritaresh&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="533"/>
+        <location filename="../defaultlook.ui" line="513"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Docklike is the modern dock plugin for the panel.  Window Buttons is the classic tasklist without dock features.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Docklike është një shtojcë moderne për panelin.  Butona Dritareje është lista klasike e punëve pa veçori paneli.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="556"/>
+        <location filename="../defaultlook.ui" line="536"/>
         <location filename="../defaultlook.ui" line="630"/>
         <location filename="../defaultlook.ui" line="889"/>
         <location filename="../defaultlook.ui" line="1057"/>
         <location filename="../defaultlook.ui" line="1064"/>
         <location filename="../defaultlook.ui" line="1071"/>
-        <location filename="../defaultlook.ui" line="1145"/>
-        <location filename="../defaultlook.ui" line="1434"/>
-        <location filename="../defaultlook.ui" line="1746"/>
-        <location filename="../defaultlook.ui" line="1902"/>
+        <location filename="../defaultlook.ui" line="1138"/>
+        <location filename="../defaultlook.ui" line="1413"/>
+        <location filename="../defaultlook.ui" line="1739"/>
+        <location filename="../defaultlook.ui" line="1863"/>
         <source>Apply</source>
         <translation>Zbatoje</translation>
     </message>
@@ -509,67 +509,67 @@
         <translation>Çaktivizo shkurtimin në desktop të emrave të gjatë të kartelave</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1132"/>
+        <location filename="../defaultlook.ui" line="1232"/>
         <source>Show GTK File Dialog action buttons at bottom of dialogs</source>
         <translation>Shfaq butona veprimesh Dialogu GTK Kartelash në fund të dialogëve</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1156"/>
+        <location filename="../defaultlook.ui" line="1176"/>
         <source>Enable hibernate on Log Out menu </source>
         <translation>Aktivizo plogështim te menuja Dilni </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1176"/>
+        <location filename="../defaultlook.ui" line="1149"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
         <translation>                   shënim: për ta plogështuar, swap-i duhet të jetë &gt;= RAM</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1183"/>
-        <location filename="../defaultlook.ui" line="1809"/>
+        <location filename="../defaultlook.ui" line="1225"/>
+        <location filename="../defaultlook.ui" line="1788"/>
         <source>Show windows from all workspaces in panel</source>
         <translation>Shfaq te paneli dritare prej krejt hapësirave të punës</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1190"/>
-        <location filename="../defaultlook.ui" line="1552"/>
+        <location filename="../defaultlook.ui" line="1183"/>
+        <location filename="../defaultlook.ui" line="1531"/>
         <source>Reset Thunar custom right-click actions to system defaults</source>
         <translation>Rikthe veprime vetjake djathtasklikimi në Thunar te parazgjedhjet e sistemit</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1197"/>
-        <location filename="../defaultlook.ui" line="1598"/>
+        <location filename="../defaultlook.ui" line="1567"/>
         <source>Thunar windows always open in split view</source>
         <translation>Dritaret e Thunar-it hapen përherë nën pamjen e ndarë</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1204"/>
+        <location filename="../defaultlook.ui" line="1169"/>
         <source>Enable single-click on desktop</source>
         <translation>Aktivizo klikim njësh në desktop</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1211"/>
-        <location filename="../defaultlook.ui" line="1508"/>
+        <location filename="../defaultlook.ui" line="1204"/>
+        <location filename="../defaultlook.ui" line="1487"/>
         <source>Thunar split view opens horizontal</source>
         <translation>Pamja e ndarë e Thunarit ndahet horizontalisht</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1218"/>
-        <location filename="../defaultlook.ui" line="1400"/>
+        <location filename="../defaultlook.ui" line="1190"/>
+        <location filename="../defaultlook.ui" line="1386"/>
         <source>Enable single-click in Thunar File Manager</source>
         <translation>Aktivizo klikim njësh në Përgjegjës Thunar Kartelash</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1225"/>
+        <location filename="../defaultlook.ui" line="1218"/>
         <source>Enable Desktop Zoom </source>
         <translation>Aktivizo Zoom Në Desktop </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1232"/>
+        <location filename="../defaultlook.ui" line="1239"/>
         <source>( also turns off Client Side Decorations for Xfce applications)</source>
         <translation>(çaktivizon gjithashtu Zbukurime Më Anë të Klientit për aplikacione Xfce)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1242"/>
+        <location filename="../defaultlook.ui" line="1211"/>
         <source>Show percentages in notifcations when available</source>
         <translation>Shfaq përqindje te njoftimet, kur ka</translation>
     </message>
@@ -579,113 +579,113 @@
         <translation>Fluxbox</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1263"/>
+        <location filename="../defaultlook.ui" line="1642"/>
         <source>Reset DefaultDock</source>
         <translation>Rikthe DefaultDock-un te parazgjedhjet</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1270"/>
+        <location filename="../defaultlook.ui" line="1263"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Rregullime Dock-u&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1278"/>
-        <location filename="../defaultlook.ui" line="1573"/>
+        <location filename="../defaultlook.ui" line="1271"/>
+        <location filename="../defaultlook.ui" line="1542"/>
         <source>On</source>
         <translation>On</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1283"/>
-        <location filename="../defaultlook.ui" line="1578"/>
+        <location filename="../defaultlook.ui" line="1276"/>
+        <location filename="../defaultlook.ui" line="1547"/>
         <source>Off</source>
         <translation>Off</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1301"/>
+        <location filename="../defaultlook.ui" line="1294"/>
         <source>Manage Tint2 Panel</source>
         <translation>Administroni Panel Tint2</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1312"/>
+        <location filename="../defaultlook.ui" line="1305"/>
         <source>Height</source>
         <translation>Lartësi</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1386"/>
-        <location filename="../defaultlook.ui" line="1639"/>
+        <location filename="../defaultlook.ui" line="1379"/>
+        <location filename="../defaultlook.ui" line="1608"/>
         <source>Autohide</source>
         <translation>Vetëfshihe</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1393"/>
+        <location filename="../defaultlook.ui" line="1656"/>
         <source>Reset ALL mx-fluxbox settings</source>
         <translation>Rikthe te parazgjedhjet KREJT rregullimet për mx-fluxbox</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1407"/>
+        <location filename="../defaultlook.ui" line="1649"/>
         <source>Reset Fluxbox Menu</source>
         <translation>Rikthe te parazgjedhjet Menunë Fluxbox</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1414"/>
-        <location filename="../defaultlook.ui" line="1666"/>
-        <location filename="../defaultlook.ui" line="1694"/>
+        <location filename="../defaultlook.ui" line="1393"/>
+        <location filename="../defaultlook.ui" line="1635"/>
+        <location filename="../defaultlook.ui" line="1687"/>
         <source>Placement</source>
         <translation>Vendosje</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1421"/>
+        <location filename="../defaultlook.ui" line="1400"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Thunar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Thunar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1515"/>
+        <location filename="../defaultlook.ui" line="1494"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Desktop Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ikona Desktopi&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1532"/>
+        <location filename="../defaultlook.ui" line="1511"/>
         <source>Toggle icon captions</source>
         <translation>Shfaq/Fshih përshkrime ikonash</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1559"/>
+        <location filename="../defaultlook.ui" line="1663"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Shtoni zëra të rinj parazgjedhje menuje, në pastë, te një menu Fluxbox ekzistuese.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1562"/>
+        <location filename="../defaultlook.ui" line="1666"/>
         <source>Upgrade existing menu entries</source>
         <translation>Përmirëso zëra ekzistues menuje</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1583"/>
+        <location filename="../defaultlook.ui" line="1552"/>
         <source>On Hover</source>
         <translation>Kur Kalohet Kursori Përsipër</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1591"/>
+        <location filename="../defaultlook.ui" line="1560"/>
         <source>Toggle desktop icons</source>
         <translation>Shfaq/Fshih ikona desktopi</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1605"/>
-        <location filename="../defaultlook.ui" line="1757"/>
+        <location filename="../defaultlook.ui" line="1574"/>
+        <location filename="../defaultlook.ui" line="1802"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Rikthe Parazgjedhjet&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1625"/>
+        <location filename="../defaultlook.ui" line="1594"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Rregullime Paneli&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1632"/>
+        <location filename="../defaultlook.ui" line="1601"/>
         <source>Width</source>
         <translation>Gjerësi</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1646"/>
+        <location filename="../defaultlook.ui" line="1615"/>
         <source>Show Toolbar</source>
         <translation>Shfaq Panel</translation>
     </message>
@@ -695,17 +695,17 @@
         <translation>Plasma</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1687"/>
+        <location filename="../defaultlook.ui" line="1809"/>
         <source>Reset KDE/Plasma defaults</source>
         <translation>Rikthe parazgjedhjet e KDE/Plasma</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1769"/>
+        <location filename="../defaultlook.ui" line="1755"/>
         <source>Workspace</source>
         <translation>Hapësirë pune</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1776"/>
+        <location filename="../defaultlook.ui" line="1795"/>
         <source>Enable single-click</source>
         <translation>Aktivizo klikim njësh</translation>
     </message>
@@ -715,86 +715,82 @@
         <translation>Tjetër</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1830"/>
+        <location filename="../defaultlook.ui" line="1843"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>Riktheje Lightdm (skenën e hyrjeve) te tema parazgjedhje e sistemit</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1837"/>
+        <location filename="../defaultlook.ui" line="1909"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;lyp rinisje&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1840"/>
+        <location filename="../defaultlook.ui" line="1912"/>
         <source>Enable Bluetooth Adapters on boot</source>
         <translation>Aktivizo Përshtatës Bluetooth gjatë nisjes</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1847"/>
+        <location filename="../defaultlook.ui" line="1895"/>
         <source>Enable kernel sandbox</source>
         <translation>Aktivizo bankëprovë kerneli</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1854"/>
+        <location filename="../defaultlook.ui" line="1926"/>
         <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Pas instalimi, heqjeje dhe përditësimesh paketash, prodho menunë “Krejt Aplikacionet” të Fluxbox-it</translation>
     </message>
     <message>
-        <source>Automatic generation of fluxbox applications menu after package installation, removal, and updates</source>
-        <translation type="vanished">Prodhim i automatizuar i menuve të aplikacioneve të Fluxbox-it, pas instalimesh, heqjeje dhe përditësimesh paketash</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1868"/>
+        <location filename="../defaultlook.ui" line="1888"/>
         <source>Root</source>
         <translation>Rrënjë</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1875"/>
+        <location filename="../defaultlook.ui" line="1850"/>
         <source>Password for administrative tasks:</source>
         <translation>Fjalëkalim për punë administrative:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1882"/>
+        <location filename="../defaultlook.ui" line="1954"/>
         <source>Use tearfree amdgpu option</source>
         <translation>Përdor mundësinë tearfree amdgpu</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1889"/>
+        <location filename="../defaultlook.ui" line="1919"/>
         <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
         <translation>Apt-i instalon si varësi paketa shtesë “të rekomanduara”</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1913"/>
+        <location filename="../defaultlook.ui" line="1961"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>          SHËNIM: /etc/X11/xorg.conf.d/20-amd.conf ekzistuese do të kopjeruhet te dosja shtëpi</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1920"/>
+        <location filename="../defaultlook.ui" line="1968"/>
         <source>Use tearfree radeon driver option</source>
         <translation>Përdor mundësi “tearfree” përudhësi Radeon</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1927"/>
+        <location filename="../defaultlook.ui" line="1881"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>Aktivizo montim disqesh të brendshëm nga përdorues që s’janë rrënjë</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1934"/>
+        <location filename="../defaultlook.ui" line="1940"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>Përdor përudhës Intel, në vend të përudhësit parazgjedhjes “modesetting” (lyp rinisje)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1954"/>
+        <location filename="../defaultlook.ui" line="1902"/>
         <source>&amp;User</source>
         <translation>&amp;Përdorues</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1961"/>
+        <location filename="../defaultlook.ui" line="1947"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>          SHËNIM: /etc/X11/xorg.conf.d/20-intel.conf ekzistuese do të kopjeruhet te dosja shtëpi</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1968"/>
+        <location filename="../defaultlook.ui" line="1933"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
         <translation>Përdor Zbukurime Më Anë të Klientit (CSD) te aplikacione GTK3 që mbulojnë të tilla (lyp rinisje sesioni)</translation>
     </message>
@@ -809,82 +805,82 @@
         <translation>Parametër --display i vlefshëm vetëm për Xfce</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="650"/>
+        <location filename="../defaultlook.cpp" line="647"/>
         <source>About MX Tweak</source>
         <translation>Mbi MX Tweak</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="652"/>
+        <location filename="../defaultlook.cpp" line="649"/>
         <source>Version: </source>
         <translation>Version: </translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="653"/>
+        <location filename="../defaultlook.cpp" line="650"/>
         <source>App for quick default ui theme changes and tweaks</source>
         <translation>Aplikacion për ndryshime dhe përimtime të shpejta të temës parazgjedhje për UI-n</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="655"/>
+        <location filename="../defaultlook.cpp" line="652"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Të drejta kopjimi (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="656"/>
+        <location filename="../defaultlook.cpp" line="653"/>
         <source>%1 License</source>
         <translation>Licencë %1</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="670"/>
+        <location filename="../defaultlook.cpp" line="667"/>
         <source>%1 Help</source>
         <translation>Ndihmë për %1</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="680"/>
+        <location filename="../defaultlook.cpp" line="677"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
         <translation>Përfundoi! Firefox-i mund të dojë një rinisje, që të hyjnë në fuqi ndryshimet</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="727"/>
+        <location filename="../defaultlook.cpp" line="724"/>
         <source>Plese remove special characters</source>
         <translation>Ju lutemi, hiqni shenjat speciale</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="727"/>
+        <location filename="../defaultlook.cpp" line="724"/>
         <source>from file name</source>
         <translation>nga emër kartele</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="734"/>
+        <location filename="../defaultlook.cpp" line="731"/>
         <source>File name already exists.  Choose another name</source>
         <translation>Ka tashmë një emër të tillë kartele. Zgjidhni një tjetër emër</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="762"/>
+        <location filename="../defaultlook.cpp" line="759"/>
         <source>File is not a valid tar.xz archive file</source>
         <translation>Kartela s’është kartelë arkiv tar.xz e vlefshme</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="765"/>
+        <location filename="../defaultlook.cpp" line="762"/>
         <source>Archive does not contain a panel config</source>
         <translation>Arkivi s’përmban formësim paneli</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="940"/>
+        <location filename="../defaultlook.cpp" line="937"/>
         <source>Panel settings</source>
         <translation>Rregullime paneli</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="941"/>
+        <location filename="../defaultlook.cpp" line="938"/>
         <source>Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
         <translation>Rregullimet tuaja të tanishme të panelit janë kopjeruajtur në një dosje të fshehur, të quajtur .restore, te dosja juaj shtëpi (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1718"/>
+        <location filename="../defaultlook.cpp" line="1715"/>
         <source>settings</source>
         <translation>rregullime</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2058"/>
+        <location filename="../defaultlook.cpp" line="2055"/>
         <source>Choose a theme set</source>
         <translation>Zgjidhni një grup teme</translation>
     </message>

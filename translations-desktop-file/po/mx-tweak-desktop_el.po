@@ -4,9 +4,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Dolphin Oracle <dolphinoracle@gmail.com>, 2022
 # anticapitalista <anticapitalista@riseup.net>, 2022
-# Dimitrios Anogiatis <gnutechie.didsbury@gmail.com>, 2022
+# Ioannis LM, 2023
 # 
 #, fuzzy
 msgid ""
@@ -15,8 +14,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-12-03 12:46-0500\n"
 "PO-Revision-Date: 2022-12-03 16:44+0000\n"
-"Last-Translator: Dimitrios Anogiatis <gnutechie.didsbury@gmail.com>, 2022\n"
-"Language-Team: Greek (https://www.transifex.com/anticapitalista/teams/10162/el/)\n"
+"Last-Translator: Ioannis LM, 2023\n"
+"Language-Team: Greek (https://app.transifex.com/anticapitalista/teams/10162/el/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -26,12 +25,12 @@ msgstr ""
 #. The desktop entry name will be displayed within the menu.
 #: desktop-in/mx-tweak.desktop.in:5
 msgid "MX Tweak"
-msgstr "MX Tweak"
+msgstr "MX Ρυθμίσεις"
 
 #. # The desktop entry comment will be shown within the menu.
 #: desktop-in/mx-tweak.desktop.in:7
 msgid "Assorted useful tweaks"
-msgstr "Διάφορα χρήσιμα τσιμπήματα"
+msgstr "Χρήσιμες βελτιώσεις"
 
 #: desktop-in/mx-tweak.desktop.in:13 desktop-in/mx-tweak-systray.desktop.in:13
 msgid "Desktop"
@@ -40,41 +39,41 @@ msgstr "Επιφάνεια εργασίας"
 #. The desktop entry name will be displayed within the menu.
 #: desktop-in/mx-tweak-systray.desktop.in:5
 msgid "Brightness Systray"
-msgstr "λάμψη Systray"
+msgstr "Εικονίδιο στο σύστημα"
 
 #. # The desktop entry comment will be shown within the menu.
 #: desktop-in/mx-tweak-systray.desktop.in:7
 msgid "brightness systray application"
-msgstr "εφαρμογή συστοιχίας φωτεινότητας"
+msgstr "Εικονίδιο ρυθμίσεων του συστήματος"
 
 #. The desktop entry name will be displayed within the menu.
 #: desktop-in/mx-tweak-tray-app-autostart.desktop.in:7
 msgid "mx-tweak brightness systray"
-msgstr "mx-tweak εικονίδιο φωτεινότητας"
+msgstr "Εικονίδιο εφαρμογής στο σύστημα για τις Ρυθμίσεις του MX"
 
 #. # The desktop entry comment will be shown within the menu.
 #: desktop-in/mx-tweak-tray-app-autostart.desktop.in:9
 msgid "starts mx-tweak brightness systray app"
-msgstr "εκκινει την εφαρμογη εικονιδίου φωτεινότητας του mx-tweak"
+msgstr "Εκκίνηση της εφαρμογής εικονίδιο του MX Ρυθμίσεις"
 
 #. The desktop entry name will be displayed within the menu.
 #: desktop-in/zcompton.desktop.in:7
 msgid "compton"
-msgstr "στιχειοθετης compton"
+msgstr "Συνθέτης compton"
 
 #. # The desktop entry comment will be shown within the menu.
 #: desktop-in/zcompton.desktop.in:9
 msgid "compton startup"
-msgstr "εκκινηση compton"
+msgstr "Εκκίνηση compton"
 
 #. The desktop entry name will be displayed within the menu.
 #: desktop-in/zrestore-software-brightness.desktop.in:7
 msgid "restore-software-brightness"
-msgstr "ανάκτηση-λογισμικού-φωτεινότητας"
+msgstr "Επαναφορά φωτεινότητας από λογισμικό"
 
 #. # The desktop entry comment will be shown within the menu.
 #: desktop-in/zrestore-software-brightness.desktop.in:9
 msgid "restore xrandr brightness values stored mx-tweak display tab"
 msgstr ""
-"ανάκτηση των τιμών φωτεινότητας του xrandr αποθυκευμένες στην καρτέλα "
-"εμφάνισης του mx-tweak"
+"επαναφορά των τιμών φωτεινότητας xrandr από τη καρτέλα Οθόνη του MX "
+"Ρυθμίσεις"

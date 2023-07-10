@@ -734,7 +734,7 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1854"/>
-        <source>Automatic generation of fluxbox applications menu after package installation, removal, and updates</source>
+        <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
         <translation type="unfinished"/>
     </message>
     <message>
