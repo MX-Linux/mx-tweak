@@ -197,11 +197,6 @@
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Vpliva na vse panoje&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="566"/>
-        <source>Set Tasklist plugin to:</source>
-        <translation>Nastavi vtiičnik seznama opravila na:</translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="327"/>
         <location filename="../defaultlook.ui" line="1698"/>
         <source>Bottom</source>
@@ -222,11 +217,6 @@
         <location filename="../defaultlook.ui" line="347"/>
         <source>Display panel vertically</source>
         <translation>Prikaži pano navpično</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="556"/>
-        <source>Restore default panel</source>
-        <translation>Obnovi privzete panoje</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="362"/>
@@ -300,6 +290,16 @@
         <location filename="../defaultlook.ui" line="1863"/>
         <source>Apply</source>
         <translation>Potrdi</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="556"/>
+        <source>Restore default panel</source>
+        <translation>Obnovi privzete panoje</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="566"/>
+        <source>Set Tasklist plugin to:</source>
+        <translation>Nastavi vtiičnik seznama opravila na:</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="580"/>
@@ -509,25 +509,19 @@
         <translation>Izklopi krajšanje dolgih imen datotek na namizju</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1232"/>
-        <source>Show GTK File Dialog action buttons at bottom of dialogs</source>
-        <translation>Na dnu dialogov prikaži GTK File Dialog akcijske gumbe</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1176"/>
-        <source>Enable hibernate on Log Out menu </source>
-        <translation>V odjavnem meniju omogoči hibernacijo</translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="1149"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
         <translation>opomba: za hibernacijo mora biti velikost razdelka swap &gt;= RAM</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1225"/>
-        <location filename="../defaultlook.ui" line="1788"/>
-        <source>Show windows from all workspaces in panel</source>
-        <translation>V panoju prikaži okna z vseh delovnih površin</translation>
+        <location filename="../defaultlook.ui" line="1169"/>
+        <source>Enable single-click on desktop</source>
+        <translation>Vklopi enojni klik na namizju</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1176"/>
+        <source>Enable hibernate on Log Out menu </source>
+        <translation>V odjavnem meniju omogoči hibernacijo</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1183"/>
@@ -536,15 +530,16 @@
         <translation>V Thunarju ponastavi po meri določena dejanja z desnim klikom na sistemsko privzete</translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="1190"/>
+        <location filename="../defaultlook.ui" line="1386"/>
+        <source>Enable single-click in Thunar File Manager</source>
+        <translation>Vklopi enojni klik v Thunar upravljalniku datotek</translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="1197"/>
         <location filename="../defaultlook.ui" line="1567"/>
         <source>Thunar windows always open in split view</source>
         <translation>Thunar okno se vedno odpre v razdeljenem prikazu</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1169"/>
-        <source>Enable single-click on desktop</source>
-        <translation>Vklopi enojni klik na namizju</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1204"/>
@@ -553,10 +548,9 @@
         <translation>Thunar se odpre z vodoravnim razdeljenim prikazom</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1190"/>
-        <location filename="../defaultlook.ui" line="1386"/>
-        <source>Enable single-click in Thunar File Manager</source>
-        <translation>Vklopi enojni klik v Thunar upravljalniku datotek</translation>
+        <location filename="../defaultlook.ui" line="1211"/>
+        <source>Show percentages in notifcations when available</source>
+        <translation>V obvestilih uporabi odstotke, kadar so na voljo</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1218"/>
@@ -564,24 +558,25 @@
         <translation>Vklopi povečavo namizja</translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="1225"/>
+        <location filename="../defaultlook.ui" line="1788"/>
+        <source>Show windows from all workspaces in panel</source>
+        <translation>V panoju prikaži okna z vseh delovnih površin</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1232"/>
+        <source>Show GTK File Dialog action buttons at bottom of dialogs</source>
+        <translation>Na dnu dialogov prikaži GTK File Dialog akcijske gumbe</translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="1239"/>
         <source>( also turns off Client Side Decorations for Xfce applications)</source>
         <translation>(za aplikacijo izklopi tudi okrasitve odjemalne strani)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1211"/>
-        <source>Show percentages in notifcations when available</source>
-        <translation>V obvestilih uporabi odstotke, kadar so na voljo</translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="1252"/>
         <source>Fluxbox</source>
         <translation>Fluxbox</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1642"/>
-        <source>Reset DefaultDock</source>
-        <translation>Ponastavi PrivzetoSidrišče</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1263"/>
@@ -617,16 +612,6 @@
         <translation>Samodejno skrij</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1656"/>
-        <source>Reset ALL mx-fluxbox settings</source>
-        <translation>Ponastavi VSE nastavitve mx-fluxbox</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1649"/>
-        <source>Reset Fluxbox Menu</source>
-        <translation>Ponastavi Fluxbox meni</translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="1393"/>
         <location filename="../defaultlook.ui" line="1635"/>
         <location filename="../defaultlook.ui" line="1687"/>
@@ -647,16 +632,6 @@
         <location filename="../defaultlook.ui" line="1511"/>
         <source>Toggle icon captions</source>
         <translation>Preklopi prikaz oznak ikon</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1663"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Dodaj no privzete elemente menija, če kateri obstaja, obstoječemu fluxbox meniju.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1666"/>
-        <source>Upgrade existing menu entries</source>
-        <translation>Nadgradi obstoječe vnose menija</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1552"/>
@@ -690,14 +665,34 @@
         <translation>Prikaži orodno vrstico</translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="1642"/>
+        <source>Reset DefaultDock</source>
+        <translation>Ponastavi PrivzetoSidrišče</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1649"/>
+        <source>Reset Fluxbox Menu</source>
+        <translation>Ponastavi Fluxbox meni</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1656"/>
+        <source>Reset ALL mx-fluxbox settings</source>
+        <translation>Ponastavi VSE nastavitve mx-fluxbox</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1663"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Dodaj no privzete elemente menija, če kateri obstaja, obstoječemu fluxbox meniju.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1666"/>
+        <source>Upgrade existing menu entries</source>
+        <translation>Nadgradi obstoječe vnose menija</translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="1676"/>
         <source>Plasma</source>
         <translation>Plasma</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1809"/>
-        <source>Reset KDE/Plasma defaults</source>
-        <translation>Ponastavi KDE/Plasma na privzeto</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1755"/>
@@ -710,6 +705,11 @@
         <translation>Vklopi en klik</translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="1809"/>
+        <source>Reset KDE/Plasma defaults</source>
+        <translation>Ponastavi KDE/Plasma na privzeto</translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="1819"/>
         <source>Other</source>
         <translation>Drugo</translation>
@@ -718,6 +718,31 @@
         <location filename="../defaultlook.ui" line="1843"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>Ponastavi Lightdm (zaslon za prijavo) na privzeto temo sistema</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1850"/>
+        <source>Password for administrative tasks:</source>
+        <translation>Geslo za adminstracijo:</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1881"/>
+        <source>Enable mounting of internal drives by non-root users</source>
+        <translation>Omogoči priklop notranjih pogonov ne-korenskim uporabnikom</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1888"/>
+        <source>Root</source>
+        <translation>Koren</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1895"/>
+        <source>Enable kernel sandbox</source>
+        <translation>Vklopi peskovnik za jedro</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1902"/>
+        <source>&amp;User</source>
+        <translation>&amp;Uporabnik</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1909"/>
@@ -730,9 +755,9 @@
         <translation>Ob zagonu vklopi Bluetooth vmesnike</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1895"/>
-        <source>Enable kernel sandbox</source>
-        <translation>Vklopi peskovnik za jedro</translation>
+        <location filename="../defaultlook.ui" line="1919"/>
+        <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
+        <translation>Apt namesti dodatne &quot;priporočene&quot; pakete kot odvisnosti</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1926"/>
@@ -740,24 +765,24 @@
         <translation>Generiranje menija za vse fluxbox aplikacije, po nameščanju, odstranjevanju ali posodabljanju.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1888"/>
-        <source>Root</source>
-        <translation>Koren</translation>
+        <location filename="../defaultlook.ui" line="1933"/>
+        <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
+        <translation>Uporabi okraske Client Side Decorations (CSD) v aplikacijah GTK3, ki jih podpirajo (zahteva ponoven zagon seje) </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1850"/>
-        <source>Password for administrative tasks:</source>
-        <translation>Geslo za adminstracijo:</translation>
+        <location filename="../defaultlook.ui" line="1940"/>
+        <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
+        <translation>Namesto privzetega &quot;modesetting&quot; gonilnika uporabite Intel gonilnik (zahteva ponovni zagon)</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1947"/>
+        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
+        <translation>POMNI: obstoječi /etc/X11/xorg.conf.d/20-intel.conf bo varnostno kopiran v domačo home mapo</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1954"/>
         <source>Use tearfree amdgpu option</source>
         <translation>Uporabi amdgpu opcijo za odpravljanje napak v prikazovanju </translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1919"/>
-        <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
-        <translation>Apt namesti dodatne &quot;priporočene&quot; pakete kot odvisnosti</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1961"/>
@@ -768,31 +793,6 @@
         <location filename="../defaultlook.ui" line="1968"/>
         <source>Use tearfree radeon driver option</source>
         <translation>Uporabi radeon opcijo za odpravljanje napak v prikazovanju </translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1881"/>
-        <source>Enable mounting of internal drives by non-root users</source>
-        <translation>Omogoči priklop notranjih pogonov ne-korenskim uporabnikom</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1940"/>
-        <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
-        <translation>Namesto privzetega &quot;modesetting&quot; gonilnika uporabite Intel gonilnik (zahteva ponovni zagon)</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1902"/>
-        <source>&amp;User</source>
-        <translation>&amp;Uporabnik</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1947"/>
-        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
-        <translation>POMNI: obstoječi /etc/X11/xorg.conf.d/20-intel.conf bo varnostno kopiran v domačo home mapo</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1933"/>
-        <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
-        <translation>Uporabi okraske Client Side Decorations (CSD) v aplikacijah GTK3, ki jih podpirajo (zahteva ponoven zagon seje) </translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1975"/>
