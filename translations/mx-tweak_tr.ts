@@ -197,11 +197,6 @@
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Tüm panelleri etkiler&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="566"/>
-        <source>Set Tasklist plugin to:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="327"/>
         <location filename="../defaultlook.ui" line="1698"/>
         <source>Bottom</source>
@@ -222,11 +217,6 @@
         <location filename="../defaultlook.ui" line="347"/>
         <source>Display panel vertically</source>
         <translation>Paneli dikey olarak göster</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="556"/>
-        <source>Restore default panel</source>
-        <translation>Öntanımlı panele geri dön</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="362"/>
@@ -300,6 +290,16 @@
         <location filename="../defaultlook.ui" line="1863"/>
         <source>Apply</source>
         <translation>Uygula</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="556"/>
+        <source>Restore default panel</source>
+        <translation>Öntanımlı panele geri dön</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="566"/>
+        <source>Set Tasklist plugin to:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="580"/>
@@ -509,25 +509,19 @@
         <translation>Masaüstünde uzun dosya adlarının kısaltılmasını devre dışı bırak</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1232"/>
-        <source>Show GTK File Dialog action buttons at bottom of dialogs</source>
-        <translation>İletişim kutularının altında GTK Dosya İletişim Kutusu eylem düğmelerini göster</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1176"/>
-        <source>Enable hibernate on Log Out menu </source>
-        <translation>Oturumu Kapat menüsünde hazırda bekletme kipini etkinleştir</translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="1149"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
         <translation>                   not: uyku için, takas &gt;= RAM olması gereklidir.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1225"/>
-        <location filename="../defaultlook.ui" line="1788"/>
-        <source>Show windows from all workspaces in panel</source>
-        <translation>Tüm çalışma alanlarındaki pencereleri panelde göster.</translation>
+        <location filename="../defaultlook.ui" line="1169"/>
+        <source>Enable single-click on desktop</source>
+        <translation>Masaüstünde tek tık etkin</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1176"/>
+        <source>Enable hibernate on Log Out menu </source>
+        <translation>Oturumu Kapat menüsünde hazırda bekletme kipini etkinleştir</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1183"/>
@@ -536,15 +530,16 @@
         <translation>Thunar özel sağ tıklama eylemlerini sistem varsayılanlarına sıfırlama</translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="1190"/>
+        <location filename="../defaultlook.ui" line="1386"/>
+        <source>Enable single-click in Thunar File Manager</source>
+        <translation>Thunar Dosya Yöneticisinde tek tık etkin</translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="1197"/>
         <location filename="../defaultlook.ui" line="1567"/>
         <source>Thunar windows always open in split view</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1169"/>
-        <source>Enable single-click on desktop</source>
-        <translation>Masaüstünde tek tık etkin</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1204"/>
@@ -553,10 +548,9 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1190"/>
-        <location filename="../defaultlook.ui" line="1386"/>
-        <source>Enable single-click in Thunar File Manager</source>
-        <translation>Thunar Dosya Yöneticisinde tek tık etkin</translation>
+        <location filename="../defaultlook.ui" line="1211"/>
+        <source>Show percentages in notifcations when available</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1218"/>
@@ -564,24 +558,25 @@
         <translation>Masaüstü Yakınlaştırmayı Etkinleştir </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1239"/>
-        <source>( also turns off Client Side Decorations for Xfce applications)</source>
-        <translation type="unfinished"></translation>
+        <location filename="../defaultlook.ui" line="1225"/>
+        <location filename="../defaultlook.ui" line="1788"/>
+        <source>Show windows from all workspaces in panel</source>
+        <translation>Tüm çalışma alanlarındaki pencereleri panelde göster.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1211"/>
-        <source>Show percentages in notifcations when available</source>
+        <location filename="../defaultlook.ui" line="1232"/>
+        <source>Show GTK File Dialog action buttons at bottom of dialogs</source>
+        <translation>İletişim kutularının altında GTK Dosya İletişim Kutusu eylem düğmelerini göster</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1239"/>
+        <source>( also turns off Client Side Decorations for Xfce applications)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1252"/>
         <source>Fluxbox</source>
         <translation>Fluxbox</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1642"/>
-        <source>Reset DefaultDock</source>
-        <translation>Öntanımlı Sabitleyiciyi Sıfırla</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1263"/>
@@ -617,16 +612,6 @@
         <translation>Otomatik gizleme</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1656"/>
-        <source>Reset ALL mx-fluxbox settings</source>
-        <translation>TÜM mx-fluxbox ayarlarını sıfırla</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1649"/>
-        <source>Reset Fluxbox Menu</source>
-        <translation>Fluxbox Menüyü Sıfırla</translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="1393"/>
         <location filename="../defaultlook.ui" line="1635"/>
         <location filename="../defaultlook.ui" line="1687"/>
@@ -647,16 +632,6 @@
         <location filename="../defaultlook.ui" line="1511"/>
         <source>Toggle icon captions</source>
         <translation>Simge altyazılarını değiştir</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1663"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Varsa, mevcut fluxbox menüsüne yeni varsayılan menü öğeleri ekleyin.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1666"/>
-        <source>Upgrade existing menu entries</source>
-        <translation>Mevcut menü girişlerini güncelle</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1552"/>
@@ -690,14 +665,34 @@
         <translation>Araç Çubuğunu Göster</translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="1642"/>
+        <source>Reset DefaultDock</source>
+        <translation>Öntanımlı Sabitleyiciyi Sıfırla</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1649"/>
+        <source>Reset Fluxbox Menu</source>
+        <translation>Fluxbox Menüyü Sıfırla</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1656"/>
+        <source>Reset ALL mx-fluxbox settings</source>
+        <translation>TÜM mx-fluxbox ayarlarını sıfırla</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1663"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Varsa, mevcut fluxbox menüsüne yeni varsayılan menü öğeleri ekleyin.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1666"/>
+        <source>Upgrade existing menu entries</source>
+        <translation>Mevcut menü girişlerini güncelle</translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="1676"/>
         <source>Plasma</source>
         <translation>Plasma</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1809"/>
-        <source>Reset KDE/Plasma defaults</source>
-        <translation>KDE/Plasma öntanımlılarını sıfırla</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1755"/>
@@ -710,6 +705,11 @@
         <translation>Tek tıklamayı etkinleştir</translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="1809"/>
+        <source>Reset KDE/Plasma defaults</source>
+        <translation>KDE/Plasma öntanımlılarını sıfırla</translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="1819"/>
         <source>Other</source>
         <translation>Diğer</translation>
@@ -718,6 +718,31 @@
         <location filename="../defaultlook.ui" line="1843"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>Lightdm&apos;yi (giriş ekranı) sistem öntanımlı temasına sıfırla</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1850"/>
+        <source>Password for administrative tasks:</source>
+        <translation>Yönetici görevleri için parola:</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1881"/>
+        <source>Enable mounting of internal drives by non-root users</source>
+        <translation>Dahili sürücülerin root olmayan kullanıcılar tarafından bağlanmasını etkinleştir</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1888"/>
+        <source>Root</source>
+        <translation>Kök</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1895"/>
+        <source>Enable kernel sandbox</source>
+        <translation>Çekirdek sanal alanını etkinleştir</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1902"/>
+        <source>&amp;User</source>
+        <translation>Kullanıcı</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1909"/>
@@ -730,9 +755,9 @@
         <translation>Önyükleme sırasında Bluetooth Adaptörlerini etkinleştirin</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1895"/>
-        <source>Enable kernel sandbox</source>
-        <translation>Çekirdek sanal alanını etkinleştir</translation>
+        <location filename="../defaultlook.ui" line="1919"/>
+        <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
+        <translation>Apt, bağımlılık olarak &quot;önerilen&quot; ek paketleri kurar</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1926"/>
@@ -740,24 +765,24 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1888"/>
-        <source>Root</source>
-        <translation>Kök</translation>
+        <location filename="../defaultlook.ui" line="1933"/>
+        <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
+        <translation>Onları destekleyen GTK3 uygulamalarında İstemci Tarafı Dekorasyonlarını (CSD) kullanın (oturumun yeniden başlatılmasını gerektirir)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1850"/>
-        <source>Password for administrative tasks:</source>
-        <translation>Yönetici görevleri için parola:</translation>
+        <location filename="../defaultlook.ui" line="1940"/>
+        <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
+        <translation>Öntanımlı &quot;modesetting&quot; sürücü yerine intel sürücüsü kullanın (yeniden başlatma gerekir)</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1947"/>
+        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
+        <translation>NOTE: mevcut /etc/X11/xorg.conf.d/20-intel.conf ev klasörüne yedeklenecek</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1954"/>
         <source>Use tearfree amdgpu option</source>
         <translation>Amd  grafik işlemcinin tearfree seçeneğini kullan</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1919"/>
-        <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
-        <translation>Apt, bağımlılık olarak &quot;önerilen&quot; ek paketleri kurar</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1961"/>
@@ -768,31 +793,6 @@
         <location filename="../defaultlook.ui" line="1968"/>
         <source>Use tearfree radeon driver option</source>
         <translation>tearfree radeon sürücü seçeneğini kullan</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1881"/>
-        <source>Enable mounting of internal drives by non-root users</source>
-        <translation>Dahili sürücülerin root olmayan kullanıcılar tarafından bağlanmasını etkinleştir</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1940"/>
-        <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
-        <translation>Öntanımlı &quot;modesetting&quot; sürücü yerine intel sürücüsü kullanın (yeniden başlatma gerekir)</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1902"/>
-        <source>&amp;User</source>
-        <translation>Kullanıcı</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1947"/>
-        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
-        <translation>NOTE: mevcut /etc/X11/xorg.conf.d/20-intel.conf ev klasörüne yedeklenecek</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1933"/>
-        <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
-        <translation>Onları destekleyen GTK3 uygulamalarında İstemci Tarafı Dekorasyonlarını (CSD) kullanın (oturumun yeniden başlatılmasını gerektirir)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1975"/>

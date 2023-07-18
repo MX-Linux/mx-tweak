@@ -197,11 +197,6 @@
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;सभी पैनल प्रभावित होंगे&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="566"/>
-        <source>Set Tasklist plugin to:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="327"/>
         <location filename="../defaultlook.ui" line="1698"/>
         <source>Bottom</source>
@@ -222,11 +217,6 @@
         <location filename="../defaultlook.ui" line="347"/>
         <source>Display panel vertically</source>
         <translation>पैनल को लंबवत प्रदर्शित करें</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="556"/>
-        <source>Restore default panel</source>
-        <translation>डिफ़ॉल्ट पैनल पुनः स्थापित करें</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="362"/>
@@ -300,6 +290,16 @@
         <location filename="../defaultlook.ui" line="1863"/>
         <source>Apply</source>
         <translation>लागू करें</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="556"/>
+        <source>Restore default panel</source>
+        <translation>डिफ़ॉल्ट पैनल पुनः स्थापित करें</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="566"/>
+        <source>Set Tasklist plugin to:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="580"/>
@@ -509,25 +509,19 @@
         <translation>डेस्कटॉप पर दीर्घ फाइल नाम संक्षिप्त करना निष्क्रिय करें</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1232"/>
-        <source>Show GTK File Dialog action buttons at bottom of dialogs</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1176"/>
-        <source>Enable hibernate on Log Out menu </source>
-        <translation>लॉगआउट मेन्यू में स्थगित करना सक्रिय</translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="1149"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
         <translation>                   ध्यान दें : स्थगित करने हेतु स्वैप आकार &gt;= RAM</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1225"/>
-        <location filename="../defaultlook.ui" line="1788"/>
-        <source>Show windows from all workspaces in panel</source>
-        <translation>पैनल में सभी कार्यस्थल की विंडो प्रदर्शित करें</translation>
+        <location filename="../defaultlook.ui" line="1169"/>
+        <source>Enable single-click on desktop</source>
+        <translation>डेस्कटॉप पर एकल-क्लिक सक्रिय करें</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1176"/>
+        <source>Enable hibernate on Log Out menu </source>
+        <translation>लॉगआउट मेन्यू में स्थगित करना सक्रिय</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1183"/>
@@ -536,15 +530,16 @@
         <translation>Thunar के अनुकूलित दाएं-क्लिक कार्यों को सिस्टम डिफ़ॉल्ट पर पुनः सेट करें</translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="1190"/>
+        <location filename="../defaultlook.ui" line="1386"/>
+        <source>Enable single-click in Thunar File Manager</source>
+        <translation>Thunar फाइल प्रबंधक पर एकल-क्लिक सक्रिय करें</translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="1197"/>
         <location filename="../defaultlook.ui" line="1567"/>
         <source>Thunar windows always open in split view</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1169"/>
-        <source>Enable single-click on desktop</source>
-        <translation>डेस्कटॉप पर एकल-क्लिक सक्रिय करें</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1204"/>
@@ -553,14 +548,24 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1190"/>
-        <location filename="../defaultlook.ui" line="1386"/>
-        <source>Enable single-click in Thunar File Manager</source>
-        <translation>Thunar फाइल प्रबंधक पर एकल-क्लिक सक्रिय करें</translation>
+        <location filename="../defaultlook.ui" line="1211"/>
+        <source>Show percentages in notifcations when available</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1218"/>
         <source>Enable Desktop Zoom </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1225"/>
+        <location filename="../defaultlook.ui" line="1788"/>
+        <source>Show windows from all workspaces in panel</source>
+        <translation>पैनल में सभी कार्यस्थल की विंडो प्रदर्शित करें</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1232"/>
+        <source>Show GTK File Dialog action buttons at bottom of dialogs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -569,19 +574,9 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1211"/>
-        <source>Show percentages in notifcations when available</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="1252"/>
         <source>Fluxbox</source>
         <translation>फ्लक्सबॉक्स</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1642"/>
-        <source>Reset DefaultDock</source>
-        <translation>डिफ़ॉल्ट डॉक पुनः सेट करें</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1263"/>
@@ -617,16 +612,6 @@
         <translation>स्वतः अदृश्य</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1656"/>
-        <source>Reset ALL mx-fluxbox settings</source>
-        <translation>सभी एमएक्स-फ्लक्सबॉक्स सेटिंग्स पुनः सेट करें</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1649"/>
-        <source>Reset Fluxbox Menu</source>
-        <translation>फ्लक्सबॉक्स मेन्यू पुनः स्थापित करें</translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="1393"/>
         <location filename="../defaultlook.ui" line="1635"/>
         <location filename="../defaultlook.ui" line="1687"/>
@@ -647,16 +632,6 @@
         <location filename="../defaultlook.ui" line="1511"/>
         <source>Toggle icon captions</source>
         <translation>आइकन अनुशीर्षक चालू/बंद</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1663"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1666"/>
-        <source>Upgrade existing menu entries</source>
-        <translation>मौजूदा मेन्यू प्रविष्टियाँ अपग्रेड करें</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1552"/>
@@ -690,14 +665,34 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="1642"/>
+        <source>Reset DefaultDock</source>
+        <translation>डिफ़ॉल्ट डॉक पुनः सेट करें</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1649"/>
+        <source>Reset Fluxbox Menu</source>
+        <translation>फ्लक्सबॉक्स मेन्यू पुनः स्थापित करें</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1656"/>
+        <source>Reset ALL mx-fluxbox settings</source>
+        <translation>सभी एमएक्स-फ्लक्सबॉक्स सेटिंग्स पुनः सेट करें</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1663"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1666"/>
+        <source>Upgrade existing menu entries</source>
+        <translation>मौजूदा मेन्यू प्रविष्टियाँ अपग्रेड करें</translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="1676"/>
         <source>Plasma</source>
         <translation>प्लाज़्मा</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1809"/>
-        <source>Reset KDE/Plasma defaults</source>
-        <translation>केडीई/प्लाज़्मा डिफ़ॉल्ट पुनः सेट करें</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1755"/>
@@ -710,6 +705,11 @@
         <translation>एकल-क्लिक सक्रिय करें</translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="1809"/>
+        <source>Reset KDE/Plasma defaults</source>
+        <translation>केडीई/प्लाज़्मा डिफ़ॉल्ट पुनः सेट करें</translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="1819"/>
         <source>Other</source>
         <translation>अन्य</translation>
@@ -718,6 +718,31 @@
         <location filename="../defaultlook.ui" line="1843"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>लाइट-डीएम (लॉगिन स्क्रीन) को सिस्टम डिफ़ॉल्ट थीम पर पुनः सेट करें</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1850"/>
+        <source>Password for administrative tasks:</source>
+        <translation>प्रशासक कार्यों हेतु कूटशब्द :</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1881"/>
+        <source>Enable mounting of internal drives by non-root users</source>
+        <translation>गैर-रूट उपयोक्ता द्वारा आंतरिक ड्राइव माउंट करना सक्रिय करें</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1888"/>
+        <source>Root</source>
+        <translation>रूट</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1895"/>
+        <source>Enable kernel sandbox</source>
+        <translation>कर्नेल सैंडबॉक्स सक्रिय करें</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1902"/>
+        <source>&amp;User</source>
+        <translation>उपयोक्ता (&amp;U)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1909"/>
@@ -730,9 +755,9 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1895"/>
-        <source>Enable kernel sandbox</source>
-        <translation>कर्नेल सैंडबॉक्स सक्रिय करें</translation>
+        <location filename="../defaultlook.ui" line="1919"/>
+        <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1926"/>
@@ -740,24 +765,24 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1888"/>
-        <source>Root</source>
-        <translation>रूट</translation>
+        <location filename="../defaultlook.ui" line="1933"/>
+        <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1850"/>
-        <source>Password for administrative tasks:</source>
-        <translation>प्रशासक कार्यों हेतु कूटशब्द :</translation>
+        <location filename="../defaultlook.ui" line="1940"/>
+        <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
+        <translation>डिफ़ॉल्ट &quot;modesetting&quot; ड्राइवर के स्थान पर इंटेल ड्राइवर उपयोग करें (पुनः आरंभ आवश्यक)</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1947"/>
+        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
+        <translation>          ध्यान दें : मौजूदा /etc/X11/xorg.conf.d/20-intel.conf होम फोल्डर में बैकअप होगी</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1954"/>
         <source>Use tearfree amdgpu option</source>
         <translation>स्क्रीन समस्या समाधन हेतु amdgpu विकल्प उपयोग करें</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1919"/>
-        <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1961"/>
@@ -768,31 +793,6 @@
         <location filename="../defaultlook.ui" line="1968"/>
         <source>Use tearfree radeon driver option</source>
         <translation>स्क्रीन समस्या समाधन हेतु radeon विकल्प उपयोग करें</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1881"/>
-        <source>Enable mounting of internal drives by non-root users</source>
-        <translation>गैर-रूट उपयोक्ता द्वारा आंतरिक ड्राइव माउंट करना सक्रिय करें</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1940"/>
-        <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
-        <translation>डिफ़ॉल्ट &quot;modesetting&quot; ड्राइवर के स्थान पर इंटेल ड्राइवर उपयोग करें (पुनः आरंभ आवश्यक)</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1902"/>
-        <source>&amp;User</source>
-        <translation>उपयोक्ता (&amp;U)</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1947"/>
-        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
-        <translation>          ध्यान दें : मौजूदा /etc/X11/xorg.conf.d/20-intel.conf होम फोल्डर में बैकअप होगी</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1933"/>
-        <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1975"/>

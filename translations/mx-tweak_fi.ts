@@ -197,11 +197,6 @@
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Vaikuttaa kaikkiin paneeleihin&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="566"/>
-        <source>Set Tasklist plugin to:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="327"/>
         <location filename="../defaultlook.ui" line="1698"/>
         <source>Bottom</source>
@@ -222,11 +217,6 @@
         <location filename="../defaultlook.ui" line="347"/>
         <source>Display panel vertically</source>
         <translation>Näytä paneeli pystytasossa</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="556"/>
-        <source>Restore default panel</source>
-        <translation>Palauta oletuspaneeli</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="362"/>
@@ -300,6 +290,16 @@
         <location filename="../defaultlook.ui" line="1863"/>
         <source>Apply</source>
         <translation>Hyväksy</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="556"/>
+        <source>Restore default panel</source>
+        <translation>Palauta oletuspaneeli</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="566"/>
+        <source>Set Tasklist plugin to:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="580"/>
@@ -509,25 +509,19 @@
         <translation>Ota pois käytöstä työpöydän pitkien tiedostonnimien lyhentäminen</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1232"/>
-        <source>Show GTK File Dialog action buttons at bottom of dialogs</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1176"/>
-        <source>Enable hibernate on Log Out menu </source>
-        <translation>Aseta horrostila valittavaksi uloskirjautumisvalikkoon</translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="1149"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
         <translation>                   huomautus: horrostilaan siirtyminen vaatii swap-heittovaihtotiedoston koon olla &gt;= keskusmuisti</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1225"/>
-        <location filename="../defaultlook.ui" line="1788"/>
-        <source>Show windows from all workspaces in panel</source>
-        <translation>Näytä ikkunat kaikista työtiloista paneelissa </translation>
+        <location filename="../defaultlook.ui" line="1169"/>
+        <source>Enable single-click on desktop</source>
+        <translation>Avaa työpöydän kohteet yhdellä napsautuksella</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1176"/>
+        <source>Enable hibernate on Log Out menu </source>
+        <translation>Aseta horrostila valittavaksi uloskirjautumisvalikkoon</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1183"/>
@@ -536,15 +530,16 @@
         <translation>Nollaa Thunar-tiedostonhallinnassa hiiren oikeanpuoleisen napsautuksen toiminnot järjestelmävakioiksi</translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="1190"/>
+        <location filename="../defaultlook.ui" line="1386"/>
+        <source>Enable single-click in Thunar File Manager</source>
+        <translation>Avaa Thunar-tiedostonhallinnan kohteet yhdellä napsautuksella</translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="1197"/>
         <location filename="../defaultlook.ui" line="1567"/>
         <source>Thunar windows always open in split view</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1169"/>
-        <source>Enable single-click on desktop</source>
-        <translation>Avaa työpöydän kohteet yhdellä napsautuksella</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1204"/>
@@ -553,10 +548,9 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1190"/>
-        <location filename="../defaultlook.ui" line="1386"/>
-        <source>Enable single-click in Thunar File Manager</source>
-        <translation>Avaa Thunar-tiedostonhallinnan kohteet yhdellä napsautuksella</translation>
+        <location filename="../defaultlook.ui" line="1211"/>
+        <source>Show percentages in notifcations when available</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1218"/>
@@ -564,24 +558,25 @@
         <translation>Ota käyttöön työpöydän suurennus</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1239"/>
-        <source>( also turns off Client Side Decorations for Xfce applications)</source>
+        <location filename="../defaultlook.ui" line="1225"/>
+        <location filename="../defaultlook.ui" line="1788"/>
+        <source>Show windows from all workspaces in panel</source>
+        <translation>Näytä ikkunat kaikista työtiloista paneelissa </translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1232"/>
+        <source>Show GTK File Dialog action buttons at bottom of dialogs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1211"/>
-        <source>Show percentages in notifcations when available</source>
+        <location filename="../defaultlook.ui" line="1239"/>
+        <source>( also turns off Client Side Decorations for Xfce applications)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1252"/>
         <source>Fluxbox</source>
         <translation>Fluxbox</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1642"/>
-        <source>Reset DefaultDock</source>
-        <translation>Nollaa DefaultDock</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1263"/>
@@ -617,16 +612,6 @@
         <translation>Piilota pois näkyvistä itsestään</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1656"/>
-        <source>Reset ALL mx-fluxbox settings</source>
-        <translation>Nollaa KAIKKI mx-fluxbox asetukset</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1649"/>
-        <source>Reset Fluxbox Menu</source>
-        <translation>Nollaa Fluxbox-valikko</translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="1393"/>
         <location filename="../defaultlook.ui" line="1635"/>
         <location filename="../defaultlook.ui" line="1687"/>
@@ -647,16 +632,6 @@
         <location filename="../defaultlook.ui" line="1511"/>
         <source>Toggle icon captions</source>
         <translation>Aseta kuvakkeiden kuvatekstit</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1663"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1666"/>
-        <source>Upgrade existing menu entries</source>
-        <translation>Päivitä nykyiset valikon merkinnät</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1552"/>
@@ -690,14 +665,34 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="1642"/>
+        <source>Reset DefaultDock</source>
+        <translation>Nollaa DefaultDock</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1649"/>
+        <source>Reset Fluxbox Menu</source>
+        <translation>Nollaa Fluxbox-valikko</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1656"/>
+        <source>Reset ALL mx-fluxbox settings</source>
+        <translation>Nollaa KAIKKI mx-fluxbox asetukset</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1663"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1666"/>
+        <source>Upgrade existing menu entries</source>
+        <translation>Päivitä nykyiset valikon merkinnät</translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="1676"/>
         <source>Plasma</source>
         <translation>Plasma</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1809"/>
-        <source>Reset KDE/Plasma defaults</source>
-        <translation>Palauta KDE/Plasma vakioasetukset</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1755"/>
@@ -710,6 +705,11 @@
         <translation>Kytke päälle kohteiden avaaminen yhdellä napsautuksella</translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="1809"/>
+        <source>Reset KDE/Plasma defaults</source>
+        <translation>Palauta KDE/Plasma vakioasetukset</translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="1819"/>
         <source>Other</source>
         <translation>Muu</translation>
@@ -718,6 +718,31 @@
         <location filename="../defaultlook.ui" line="1843"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>Nollaa Lightdm (kirjautumisikkuna) saadaksesi käyttöön järjestelmän vakioteeman</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1850"/>
+        <source>Password for administrative tasks:</source>
+        <translation>Salasana järjestelmänvalvojan tehtäviin:</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1881"/>
+        <source>Enable mounting of internal drives by non-root users</source>
+        <translation>Valtuuta sisäisten asemien liittäminen ei-juurikäyttäjille</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1888"/>
+        <source>Root</source>
+        <translation>Root-juurikäyttö</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1895"/>
+        <source>Enable kernel sandbox</source>
+        <translation>Kytke päälle ytimen sandbox-tila</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1902"/>
+        <source>&amp;User</source>
+        <translation>&amp;Käyttäjä</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1909"/>
@@ -730,9 +755,9 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1895"/>
-        <source>Enable kernel sandbox</source>
-        <translation>Kytke päälle ytimen sandbox-tila</translation>
+        <location filename="../defaultlook.ui" line="1919"/>
+        <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1926"/>
@@ -740,24 +765,24 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1888"/>
-        <source>Root</source>
-        <translation>Root-juurikäyttö</translation>
+        <location filename="../defaultlook.ui" line="1933"/>
+        <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1850"/>
-        <source>Password for administrative tasks:</source>
-        <translation>Salasana järjestelmänvalvojan tehtäviin:</translation>
+        <location filename="../defaultlook.ui" line="1940"/>
+        <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
+        <translation>Käytä Intel:in ajuria vakiollisen &quot;modesetting&quot; ajurin sijaan (vaatii uudelleenkäynnistyksen)</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1947"/>
+        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
+        <translation>          HUOMAUTUS: olemassaoleva /etc/X11/xorg.conf.d/20-intel.conf varmuuskopioituu kotikansioon</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1954"/>
         <source>Use tearfree amdgpu option</source>
         <translation>Käytä repeytymätöntä amdgpu-vaihtoehtoa</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1919"/>
-        <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1961"/>
@@ -768,31 +793,6 @@
         <location filename="../defaultlook.ui" line="1968"/>
         <source>Use tearfree radeon driver option</source>
         <translation>Käytä repeytymätöntä radeon-ajuri vaihtoehtoa</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1881"/>
-        <source>Enable mounting of internal drives by non-root users</source>
-        <translation>Valtuuta sisäisten asemien liittäminen ei-juurikäyttäjille</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1940"/>
-        <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
-        <translation>Käytä Intel:in ajuria vakiollisen &quot;modesetting&quot; ajurin sijaan (vaatii uudelleenkäynnistyksen)</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1902"/>
-        <source>&amp;User</source>
-        <translation>&amp;Käyttäjä</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1947"/>
-        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
-        <translation>          HUOMAUTUS: olemassaoleva /etc/X11/xorg.conf.d/20-intel.conf varmuuskopioituu kotikansioon</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1933"/>
-        <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1975"/>
