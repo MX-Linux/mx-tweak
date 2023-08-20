@@ -27,7 +27,7 @@
     <message>
         <location filename="../main.cpp" line="47"/>
         <source>GUI for applying assorted useful tweaks</source>
-        <translation>Interface gráfico para diversas configurações</translation>
+        <translation>Interface gráfico para diversos ajustes</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="50"/>

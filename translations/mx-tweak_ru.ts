@@ -550,7 +550,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1211"/>
         <source>Show percentages in notifcations when available</source>
-        <translation type="unfinished"></translation>
+        <translation>Показывать проценты в уведомлениях, если возможно</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1218"/>

@@ -76,7 +76,7 @@
     <message>
         <location filename="../brightness_small.ui" line="80"/>
         <source>Hardware Backlight</source>
-        <translation>Hardware-Hintergrundbeleuchtung</translation>
+        <translation>Hardware-Hintergrundhelligkeit</translation>
     </message>
     <message>
         <location filename="../brightness_small.ui" line="94"/>
@@ -450,7 +450,7 @@
     <message>
         <location filename="../defaultlook.ui" line="923"/>
         <source>Hardware Backlight</source>
-        <translation>Hintergrundbeleuchtung</translation>
+        <translation>Hardware-Hintergrundhelligkeit</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="930"/>
