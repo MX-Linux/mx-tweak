@@ -6,7 +6,7 @@
     <message>
         <location filename="../about.cpp" line="41"/>
         <source>License</source>
-        <translation>Ruhsat</translation>
+        <translation>Lisans</translation>
     </message>
     <message>
         <location filename="../about.cpp" line="42"/>
@@ -27,27 +27,27 @@
     <message>
         <location filename="../main.cpp" line="47"/>
         <source>GUI for applying assorted useful tweaks</source>
-        <translation type="unfinished"></translation>
+        <translation>Çeşitli kullanışlı ayarlamaları uygulamak için arayüz</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="50"/>
         <source>launches brightness-systray</source>
-        <translation type="unfinished"></translation>
+        <translation>brightness-systray’i başlatır</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="51"/>
         <source>opens with display tab open.  Only valid with Xfce desktop running</source>
-        <translation type="unfinished"></translation>
+        <translation>ekran sekmesi açık olarak açılır. Yalnızca Xfce masaüstü çalışırken geçerlidir</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="52"/>
         <source>Opens theme tab directly.  Valid on Xfce &amp; Fluxbox desktops</source>
-        <translation type="unfinished"></translation>
+        <translation>Doğrudan tema sekmesini açar. Xfce &amp; Fluxbox masaüstlerinde geçerlidir</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="53"/>
         <source>Opens Other tab directly.  Valid on all desktops</source>
-        <translation type="unfinished"></translation>
+        <translation>Diğer sekmesini doğrudan açar. Tüm masaüstlerinde geçerli</translation>
     </message>
 </context>
 <context>
@@ -211,7 +211,7 @@
     <message>
         <location filename="../defaultlook.ui" line="340"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Tasklist&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Görev listesi&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="347"/>
@@ -227,7 +227,7 @@
     <message>
         <location filename="../defaultlook.ui" line="369"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Panel Plugin Scales&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Panel Eklenti Ölçekleri&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="389"/>
@@ -243,7 +243,7 @@
     <message>
         <location filename="../defaultlook.ui" line="419"/>
         <source>Power Manager</source>
-        <translation type="unfinished"></translation>
+        <translation>Güç Yöneticisi</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="426"/>
@@ -253,7 +253,7 @@
     <message>
         <location filename="../defaultlook.ui" line="449"/>
         <source>Set Scales</source>
-        <translation type="unfinished"></translation>
+        <translation>Ölçekleri Ayarla</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="479"/>
@@ -275,7 +275,7 @@
     <message>
         <location filename="../defaultlook.ui" line="513"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Docklike is the modern dock plugin for the panel.  Window Buttons is the classic tasklist without dock features.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Docklike, panel için modern dock eklentisidir. Pencere Düğmeleri, yuva özellikleri olmayan klasik görev listesidir.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="536"/>
@@ -299,7 +299,7 @@
     <message>
         <location filename="../defaultlook.ui" line="566"/>
         <source>Set Tasklist plugin to:</source>
-        <translation type="unfinished"></translation>
+        <translation>Görev Listesi eklentisini şu şekilde ayarlayın:</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="580"/>
@@ -334,7 +334,7 @@
     <message>
         <location filename="../defaultlook.ui" line="687"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Cursors&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;İmleçler&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="694"/>
@@ -375,7 +375,7 @@
     <message>
         <location filename="../defaultlook.ui" line="766"/>
         <source>Edit compton.conf</source>
-        <translation>compton.conf&apos;u düzenle</translation>
+        <translation>compton.conf’u düzenle</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="777"/>
@@ -390,7 +390,7 @@
     <message>
         <location filename="../defaultlook.ui" line="791"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Changing the VBlank mode may help alleviate some screen tearing issues.  See Help for more information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;VBlank kipini değiştirmek, bazı ekran yırtılma sorunlarını hafifletmeye yardımcı olabilir. Daha fazla bilgi için Yardım&apos;a bakın.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;VBlank kipini değiştirmek, bazı ekran yırtılma sorunlarını hafifletmeye yardımcı olabilir. Daha fazla bilgi için Yardım’a bakın.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="794"/>
@@ -539,18 +539,18 @@
         <location filename="../defaultlook.ui" line="1197"/>
         <location filename="../defaultlook.ui" line="1567"/>
         <source>Thunar windows always open in split view</source>
-        <translation type="unfinished"></translation>
+        <translation>Thunar pencereleri her zaman bölünmüş görünümde açılır</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1204"/>
         <location filename="../defaultlook.ui" line="1487"/>
         <source>Thunar split view opens horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation>Thunar bölünmüş görünüm yatay açılır</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1211"/>
         <source>Show percentages in notifcations when available</source>
-        <translation type="unfinished"></translation>
+        <translation>Mevcut ise bildirimlerde yüzdeleri göster</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1218"/>
@@ -571,7 +571,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1239"/>
         <source>( also turns off Client Side Decorations for Xfce applications)</source>
-        <translation type="unfinished"></translation>
+        <translation>(ayrıca Xfce uygulamaları için İstemci Tarafı Süslemelerini kapatır)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1252"/>
@@ -621,7 +621,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1400"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Thunar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Thunar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1494"/>
@@ -717,7 +717,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1843"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
-        <translation>Lightdm&apos;yi (giriş ekranı) sistem öntanımlı temasına sıfırla</translation>
+        <translation>Lightdm’yi (giriş ekranı) sistem öntanımlı temasına sıfırla</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1850"/>
@@ -762,7 +762,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1926"/>
         <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Paket yükleme, kaldırma ve güncellemelerden sonra fluxbox Tüm Uygulamalar menüsünu oluşturur</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1933"/>
@@ -827,7 +827,7 @@
     <message>
         <location filename="../defaultlook.cpp" line="653"/>
         <source>%1 License</source>
-        <translation>%1 Ruhsat</translation>
+        <translation>%1 Lisans</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="667"/>
@@ -837,7 +837,7 @@
     <message>
         <location filename="../defaultlook.cpp" line="677"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
-        <translation>Tamamlandı! Değişikliklerin etkili olması için Firefox&apos;un yeniden başlatılması gerekebilir</translation>
+        <translation>Tamamlandı! Değişikliklerin etkili olması için Firefox’un yeniden başlatılması gerekebilir</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="724"/>
