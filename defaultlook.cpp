@@ -51,6 +51,7 @@ defaultlook::defaultlook(QWidget *parent, const QStringList &args) :
     setWindowFlags(Qt::Window); // for the close, min and max buttons
     if ( args.contains(QStringLiteral("--display"))) {
         if (checkXFCE()) {
+            isXfce = true;
             displayflag = true;
         } else {
             QMessageBox::information(nullptr, tr("MX Tweak"),
@@ -93,13 +94,14 @@ void defaultlook::setup()
     }
 
     if (checkXFCE()) {
+        isXfce = true;
         whichpanel();
         message_flag = false;
         //setup theme tab
         ui->pushButtonPreview->hide();
         ui->buttonThemeUndo->hide();
-        setuptheme();
         ui->buttonThemeUndo->setEnabled(false);
+        setuptheme();
         //setup theme combo box
         setupComboTheme();
         //setup panel tab
@@ -126,6 +128,7 @@ void defaultlook::setup()
 
     //setup fluxbox
     else if (checkFluxbox()) {
+        isFluxbox = true;
         setuptheme();
         setupFluxbox();
         ui->comboTheme->hide();
@@ -1302,6 +1305,7 @@ void defaultlook::setupFluxbox()
     QString screenblanktimeout = runCmd("xset q |grep timeout | awk '{print $2}'").output.trimmed();
     qDebug() << "screenblanktimeout is " << screenblanktimeout;
     ui->spinBoxScreenBlankingTimeout->setValue(screenblanktimeout.toInt()/60);
+    ui->spinBoxScreenBlankingTimeout->setToolTip("set to 0 minutes to disable screen blanking");
 
     //toolbar autohide
     QString toolbarautohide = runCmd(QStringLiteral("grep screen0.toolbar.autoHide $HOME/.fluxbox/init")).output.section(QStringLiteral(":"),1,1).trimmed();
@@ -1519,9 +1523,9 @@ void defaultlook::setuptheme()
     populatethemelists(QStringLiteral("icons"));
     populatethemelists(QStringLiteral("cursors"));
 
-    if (checkXFCE()){
+    if (isXfce){
          populatethemelists(QStringLiteral("xfwm4"));
-    } else if (checkFluxbox()) {
+    } else if (isFluxbox) {
          populatethemelists(QStringLiteral("fluxbox"));
     }
 //dead code
@@ -1606,7 +1610,7 @@ void defaultlook::setupConfigoptions()
     }
 
     //set xfce values
-    if (checkXFCE()) {
+    if (isXfce) {
         //check single click status
         QString test;
         test = runCmd(QStringLiteral("xfconf-query  -c xfce4-desktop -p /desktop-icons/single-click")).output;
@@ -2870,7 +2874,7 @@ QString defaultlook::getVersion(const QString &name)
 
 void defaultlook::on_pushButtonSettingsToThemeSet_clicked()
 {
-    if (checkFluxbox()) {
+    if (isFluxbox) {
         if (QFile("/usr/bin/mxfb-look").exists()){
             this->hide();
             system("/usr/bin/mxfb-look");
@@ -3455,9 +3459,9 @@ void defaultlook::populatethemelists(const QString &value)
         ui->listWidgetTheme->clear();
         ui->listWidgetTheme->addItems(themelist);
         //set current
-        if (checkXFCE()){
+        if (isXfce){
             current = runCmd(QStringLiteral("xfconf-query -c xsettings -p /Net/ThemeName")).output;
-        } else if (checkFluxbox()){
+        } else if (isFluxbox){
             current = runCmd(QStringLiteral("grep gtk-theme-name ~/.config/gtk-3.0/settings.ini | cut -d\"=\" -f2")).output;
         }
         //index of theme in list
@@ -3482,9 +3486,9 @@ void defaultlook::populatethemelists(const QString &value)
     if ( value == QLatin1String("cursors")){
         ui->listWidgetCursorThemes->clear();
         ui->listWidgetCursorThemes->addItems(themelist);
-        if (checkXFCE()){
+        if (isXfce){
             current = runCmd(QStringLiteral("xfconf-query -c xsettings -p /Gtk/CursorThemeName")).output;
-        } else if (checkFluxbox()){
+        } else if (isFluxbox){
             if (QFile(home_path + "/.icons/default/index.theme").exists()) {
                 current = runCmd("grep Inherits $HOME/.icons/default/index.theme |cut -d= -f2").output;
             } else {
@@ -3511,9 +3515,9 @@ void defaultlook::populatethemelists(const QString &value)
         ui->listWidgeticons->clear();
         ui->listWidgeticons->addItems(themelist);
         //current icon set
-        if (checkXFCE()){
+        if (isXfce){
             current = runCmd(QStringLiteral("xfconf-query -c xsettings -p /Net/IconThemeName")).output;
-        } else if (checkFluxbox()){
+        } else if (isFluxbox){
             current = runCmd(QStringLiteral("grep gtk-icon-theme-name $HOME/.config/gtk-3.0/settings.ini |grep -v ^# | cut -d\"=\" -f2")).output;
         }
         ui->listWidgeticons->setCurrentRow(themelist.indexOf(current));
@@ -3664,9 +3668,9 @@ void defaultlook::settheme(const QString &type, const QString &theme, const QStr
 void defaultlook::on_listWidgetTheme_currentTextChanged(const QString &currentText)
 {
     if ( themeflag ) {
-        if (checkXFCE()) {
+        if (isXfce) {
             settheme(QStringLiteral("gtk-3.0"), currentText, "XFCE");
-        } else if (checkFluxbox()){
+        } else if (isFluxbox){
             settheme(QStringLiteral("gtk-3.0"), currentText, "fluxbox");
         }
     }
@@ -3675,9 +3679,9 @@ void defaultlook::on_listWidgetTheme_currentTextChanged(const QString &currentTe
 void defaultlook::on_listWidgetWMtheme_currentTextChanged(const QString &currentText) const
 {
     if ( themeflag ) {
-        if (checkXFCE()) {
+        if (isXfce) {
             settheme(QStringLiteral("xfwm4"), currentText, "XFCE");
-        } else if (checkFluxbox()){
+        } else if (isFluxbox){
             settheme(QStringLiteral("fluxbox"), currentText, "fluxbox");
         }
     }
@@ -3687,9 +3691,9 @@ void defaultlook::on_listWidgetWMtheme_currentTextChanged(const QString &current
 void defaultlook::on_listWidgeticons_currentTextChanged(const QString &currentText) const
 {
     if ( themeflag ) {
-        if (checkXFCE()) {
+        if (isXfce) {
             settheme(QStringLiteral("icons"), currentText, "XFCE");
-        } else if (checkFluxbox()){
+        } else if (isFluxbox){
             settheme(QStringLiteral("icons"), currentText, "fluxbox");
         }
     }
@@ -3698,9 +3702,9 @@ void defaultlook::on_listWidgeticons_currentTextChanged(const QString &currentTe
 void defaultlook::on_listWidgetCursorThemes_currentTextChanged(const QString &currentText)
 {
     if ( themeflag ) {
-        if (checkXFCE()) {
+        if (isXfce) {
             settheme(QStringLiteral("cursor"), currentText, "XFCE");
-        } else if (checkFluxbox()){
+        } else if (isFluxbox){
             settheme(QStringLiteral("cursor"), currentText, "fluxbox");
         }
     }
