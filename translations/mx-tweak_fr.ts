@@ -179,16 +179,19 @@
     <message>
         <location filename="../defaultlook.ui" line="283"/>
         <source>Display panel horizontally</source>
+        <extracomment>panel will be shown in a horizontal configuration</extracomment>
         <translation>Afficher le tableau de bord horizontalement</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="293"/>
         <source>Volume</source>
+        <extracomment>volume plugin scale factor</extracomment>
         <translation>Volume</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="300"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <extracomment>affects the docklike plugin</extracomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
@@ -216,12 +219,14 @@
     <message>
         <location filename="../defaultlook.ui" line="347"/>
         <source>Display panel vertically</source>
+        <extracomment>panel will be shown in a vertical configuration</extracomment>
         <translation>Afficher le tableau de bord verticalement</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="362"/>
         <location filename="../defaultlook.ui" line="1750"/>
         <source>Affects 1st panel</source>
+        <extracomment>acts on the first poanel found in Xfce panel xml fle</extracomment>
         <translation>Effets sur le 1er tableau de bord</translation>
     </message>
     <message>
@@ -232,6 +237,7 @@
     <message>
         <location filename="../defaultlook.ui" line="389"/>
         <source>Backup current panel configuration</source>
+        <extracomment>backup existing panel configuration</extracomment>
         <translation>Enregistrer la configuration actuelle du tableau de bord</translation>
     </message>
     <message>
@@ -243,16 +249,19 @@
     <message>
         <location filename="../defaultlook.ui" line="419"/>
         <source>Power Manager</source>
+        <extracomment>power manager plugin scale factor</extracomment>
         <translation>Gestionnaire d’alimentation</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="426"/>
         <source>Restore backup panel configuration</source>
+        <extracomment>restore a panel backup</extracomment>
         <translation>Restaurer la configuration sauvegardée du tableau de bord</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="449"/>
         <source>Set Scales</source>
+        <extracomment>set a scale factor</extracomment>
         <translation>Régler les mises à l’échelle</translation>
     </message>
     <message>
@@ -270,6 +279,7 @@
     <message>
         <location filename="../defaultlook.ui" line="492"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Buttons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <extracomment>affects the window button plugin</extracomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Boutons des fenêtres&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
@@ -294,11 +304,13 @@
     <message>
         <location filename="../defaultlook.ui" line="556"/>
         <source>Restore default panel</source>
+        <extracomment>affects any panel that is curently configured</extracomment>
         <translation>Rétablir le tableau de bord par défaut</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="566"/>
         <source>Set Tasklist plugin to:</source>
+        <extracomment>change the tasklist plugin</extracomment>
         <translation>Régler le plugin Tasklist sur :</translation>
     </message>
     <message>
@@ -329,26 +341,31 @@
     <message>
         <location filename="../defaultlook.ui" line="666"/>
         <source>Save Current Settings as a Theme Set</source>
+        <extracomment>save theme settings as a group</extracomment>
         <translation>Enregistrer réglages actuels comme un jeu de thème</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="687"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Cursors&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <extracomment>cursor theme</extracomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Curseurs&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="694"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Manager&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <extracomment>theme a window manager border will get</extracomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Gestionnaire de fenêtre&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="704"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <extracomment>theme an application will get</extracomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="711"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <extracomment>icon theme</extracomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Icônes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
@@ -452,6 +469,7 @@
     <message>
         <location filename="../defaultlook.ui" line="923"/>
         <source>Hardware Backlight</source>
+        <extracomment>set the hardware backlight on monitors that have them</extracomment>
         <translation>Rétroéclairage matériel</translation>
     </message>
     <message>
@@ -462,6 +480,7 @@
     <message>
         <location filename="../defaultlook.ui" line="957"/>
         <source>Choose Display for xrandr tweaks</source>
+        <extracomment>choose the display that the xrandr tweaks will be acted upon</extracomment>
         <translation>Choix de l’affichage pour les ajustements de xrandr</translation>
     </message>
     <message>
@@ -482,6 +501,7 @@
     <message>
         <location filename="../defaultlook.ui" line="984"/>
         <source>Software (xrandr) Brightness</source>
+        <extracomment>adjust brightness (not backlight) via software</extracomment>
         <translation>Luminosité logiciel (xrandr)</translation>
     </message>
     <message>
@@ -493,11 +513,13 @@
     <message>
         <location filename="../defaultlook.ui" line="998"/>
         <source>GTK scaling</source>
+        <extracomment>gtk scale factor</extracomment>
         <translation>Mise à l’échelle GTK</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1018"/>
         <source>xrandr Scaling</source>
+        <extracomment>xrandr scale factor</extracomment>
         <translation>Mise à l’échelle xrandr</translation>
     </message>
     <message>
