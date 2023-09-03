@@ -3162,7 +3162,7 @@ void defaultlook::on_ApplyFluxboxResets_clicked()
 
 
         //add new values to fluxbox startup menu if don't exist
-        QString test = runCmd("grep ^screenblanking-mxtweak $HOME/.fluxbox/startup").output;
+        QString test = runCmd("grep '$HOME/.config/MX-Linux/screenblanking-mxtweak' $HOME/.fluxbox/startup").output;
         if (test.isEmpty()){
             //comment default line if it exists
             runCmd(QStringLiteral("sed -i 's/^[[:blank:]]*xset[[:blank:]].*dpms.*/#&/' $HOME/.fluxbox/startup"));
