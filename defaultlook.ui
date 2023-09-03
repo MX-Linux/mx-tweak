@@ -265,7 +265,7 @@
       <enum>QTabWidget::North</enum>
      </property>
      <property name="currentIndex">
-      <number>7</number>
+      <number>5</number>
      </property>
      <widget class="QWidget" name="Panel">
       <attribute name="title">
@@ -1257,13 +1257,6 @@
          <property name="sizeConstraint">
           <enum>QLayout::SetNoConstraint</enum>
          </property>
-         <item row="11" column="0">
-          <widget class="QLabel" name="label_19">
-           <property name="text">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-           </property>
-          </widget>
-         </item>
          <item row="1" column="4">
           <widget class="QComboBox" name="comboBoxfluxIcons">
            <item>
@@ -1278,8 +1271,82 @@
            </item>
           </widget>
          </item>
-         <item row="9" column="4">
-          <widget class="QSpinBox" name="spinBoxFluxToolbarWidth">
+         <item row="15" column="0" colspan="6">
+          <widget class="QPushButton" name="ApplyFluxboxResets">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>32</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Apply</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="3">
+          <widget class="QLabel" name="label_32">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Thunar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="8" column="0">
+          <widget class="QLabel" name="label_15">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="5">
+          <spacer name="horizontalSpacer_6">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>138</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="4" column="3" colspan="3">
+          <widget class="QCheckBox" name="checkBoxThunarCAReset_2">
+           <property name="text">
+            <string>Reset Thunar custom right-click actions to system defaults</string>
+           </property>
+          </widget>
+         </item>
+         <item row="14" column="0">
+          <spacer name="verticalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="2" column="3">
+          <widget class="QLabel" name="label_25">
+           <property name="text">
+            <string>Toggle icon captions</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0" colspan="3">
+          <widget class="QCheckBox" name="checkboxfluxresetmenu">
+           <property name="text">
+            <string>Reset Fluxbox Menu</string>
+           </property>
+          </widget>
+         </item>
+         <item row="10" column="4">
+          <widget class="QSpinBox" name="spinBoxFluxToolbarHeight">
            <property name="minimumSize">
             <size>
              <width>30</width>
@@ -1288,21 +1355,52 @@
            </property>
           </widget>
          </item>
-         <item row="12" column="3" colspan="2">
-          <widget class="QPushButton" name="buttonManageTint2">
+         <item row="9" column="3">
+          <widget class="QLabel" name="label_17">
            <property name="text">
-            <string>Manage Tint2 Panel</string>
-           </property>
-           <property name="icon">
-            <iconset theme="systemtray">
-             <normaloff>.</normaloff>.</iconset>
+            <string>Width</string>
            </property>
           </widget>
          </item>
-         <item row="10" column="3">
-          <widget class="QLabel" name="label_18">
+         <item row="5" column="3" colspan="3">
+          <widget class="QCheckBox" name="checkBoxThunarSingleClick_2">
            <property name="text">
-            <string>Height</string>
+            <string>Enable single-click in Thunar File Manager</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <widget class="QLabel" name="label_26">
+           <property name="text">
+            <string>Toggle desktop icons</string>
+           </property>
+          </widget>
+         </item>
+         <item row="13" column="0">
+          <widget class="QCheckBox" name="checkboxfluxSlitautohide">
+           <property name="text">
+            <string>Autohide</string>
+           </property>
+          </widget>
+         </item>
+         <item row="11" column="0">
+          <widget class="QLabel" name="label_19">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="1">
+          <widget class="QSpinBox" name="spinBoxScreenBlankingTimeout">
+           <property name="maximum">
+            <number>240</number>
+           </property>
+          </widget>
+         </item>
+         <item row="10" column="0">
+          <widget class="QCheckBox" name="checkboxfluxtoolbarautohide">
+           <property name="text">
+            <string>Autohide</string>
            </property>
           </widget>
          </item>
@@ -1373,44 +1471,10 @@
            </item>
           </widget>
          </item>
-         <item row="13" column="0">
-          <widget class="QCheckBox" name="checkboxfluxSlitautohide">
+         <item row="0" column="3">
+          <widget class="QLabel" name="label_20">
            <property name="text">
-            <string>Autohide</string>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="3" colspan="3">
-          <widget class="QCheckBox" name="checkBoxThunarSingleClick_2">
-           <property name="text">
-            <string>Enable single-click in Thunar File Manager</string>
-           </property>
-          </widget>
-         </item>
-         <item row="9" column="0">
-          <widget class="QLabel" name="label_16">
-           <property name="text">
-            <string>Placement</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="3">
-          <widget class="QLabel" name="label_32">
-           <property name="text">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Thunar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="15" column="0" colspan="6">
-          <widget class="QPushButton" name="ApplyFluxboxResets">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>32</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>Apply</string>
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Desktop Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
           </widget>
          </item>
@@ -1481,6 +1545,13 @@
            </item>
           </widget>
          </item>
+         <item row="1" column="0" colspan="3">
+          <widget class="QCheckBox" name="checkboxfluxresetdock">
+           <property name="text">
+            <string>Reset DefaultDock</string>
+           </property>
+          </widget>
+         </item>
          <item row="7" column="3" colspan="3">
           <widget class="QCheckBox" name="checkBoxsplitviewhorizontal_2">
            <property name="text">
@@ -1488,47 +1559,42 @@
            </property>
           </widget>
          </item>
-         <item row="0" column="3">
-          <widget class="QLabel" name="label_20">
+         <item row="12" column="3" colspan="2">
+          <widget class="QPushButton" name="buttonManageTint2">
            <property name="text">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Desktop Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            <string>Manage Tint2 Panel</string>
+           </property>
+           <property name="icon">
+            <iconset theme="systemtray">
+             <normaloff>.</normaloff>.</iconset>
            </property>
           </widget>
          </item>
-         <item row="10" column="4">
-          <widget class="QSpinBox" name="spinBoxFluxToolbarHeight">
-           <property name="minimumSize">
-            <size>
-             <width>30</width>
-             <height>0</height>
-            </size>
+         <item row="10" column="3">
+          <widget class="QLabel" name="label_18">
+           <property name="text">
+            <string>Height</string>
            </property>
           </widget>
          </item>
-         <item row="2" column="3">
-          <widget class="QLabel" name="label_25">
+         <item row="12" column="0">
+          <widget class="QLabel" name="label_slit_location">
            <property name="text">
-            <string>Toggle icon captions</string>
+            <string>Placement</string>
            </property>
           </widget>
          </item>
-         <item row="9" column="2">
-          <spacer name="horizontalSpacer_5">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item row="4" column="3" colspan="3">
-          <widget class="QCheckBox" name="checkBoxThunarCAReset_2">
+         <item row="6" column="0">
+          <widget class="QLabel" name="label_34">
            <property name="text">
-            <string>Reset Thunar custom right-click actions to system defaults</string>
+            <string>Timeout minutes</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="label_27">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Screen blanking&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
           </widget>
          </item>
@@ -1554,10 +1620,10 @@
            </item>
           </widget>
          </item>
-         <item row="1" column="3">
-          <widget class="QLabel" name="label_26">
+         <item row="9" column="0">
+          <widget class="QLabel" name="label_16">
            <property name="text">
-            <string>Toggle desktop icons</string>
+            <string>Placement</string>
            </property>
           </widget>
          </item>
@@ -1575,39 +1641,28 @@
            </property>
           </widget>
          </item>
-         <item row="14" column="0">
-          <spacer name="verticalSpacer_3">
+         <item row="4" column="0" colspan="3">
+          <widget class="QCheckBox" name="checkBoxMenuMigrate">
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="text">
+            <string>Upgrade existing menu entries</string>
+           </property>
+          </widget>
+         </item>
+         <item row="9" column="2">
+          <spacer name="horizontalSpacer_5">
            <property name="orientation">
-            <enum>Qt::Vertical</enum>
+            <enum>Qt::Horizontal</enum>
            </property>
            <property name="sizeHint" stdset="0">
             <size>
-             <width>20</width>
-             <height>40</height>
+             <width>40</width>
+             <height>20</height>
             </size>
            </property>
           </spacer>
-         </item>
-         <item row="8" column="0">
-          <widget class="QLabel" name="label_15">
-           <property name="text">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="9" column="3">
-          <widget class="QLabel" name="label_17">
-           <property name="text">
-            <string>Width</string>
-           </property>
-          </widget>
-         </item>
-         <item row="10" column="0">
-          <widget class="QCheckBox" name="checkboxfluxtoolbarautohide">
-           <property name="text">
-            <string>Autohide</string>
-           </property>
-          </widget>
          </item>
          <item row="10" column="1">
           <widget class="QCheckBox" name="checkBoxFluxShowToolbar">
@@ -1616,37 +1671,13 @@
            </property>
           </widget>
          </item>
-         <item row="2" column="5">
-          <spacer name="horizontalSpacer_6">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
+         <item row="9" column="4">
+          <widget class="QSpinBox" name="spinBoxFluxToolbarWidth">
+           <property name="minimumSize">
             <size>
-             <width>138</width>
-             <height>20</height>
+             <width>30</width>
+             <height>0</height>
             </size>
-           </property>
-          </spacer>
-         </item>
-         <item row="12" column="0">
-          <widget class="QLabel" name="label_slit_location">
-           <property name="text">
-            <string>Placement</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0" colspan="3">
-          <widget class="QCheckBox" name="checkboxfluxresetdock">
-           <property name="text">
-            <string>Reset DefaultDock</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="0" colspan="3">
-          <widget class="QCheckBox" name="checkboxfluxresetmenu">
-           <property name="text">
-            <string>Reset Fluxbox Menu</string>
            </property>
           </widget>
          </item>
@@ -1654,16 +1685,6 @@
           <widget class="QCheckBox" name="checkboxfluxreseteverything">
            <property name="text">
             <string>Reset ALL mx-fluxbox settings</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="0" colspan="3">
-          <widget class="QCheckBox" name="checkBoxMenuMigrate">
-           <property name="toolTip">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-           </property>
-           <property name="text">
-            <string>Upgrade existing menu entries</string>
            </property>
           </widget>
          </item>
