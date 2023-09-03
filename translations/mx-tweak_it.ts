@@ -895,12 +895,12 @@
         <translation>È stato eseguito il backup delle tue impostazioni correnti del pannello in una cartella nascosta denominata .restore nella tua cartella home (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1724"/>
+        <location filename="../defaultlook.cpp" line="1723"/>
         <source>settings</source>
         <translation>impostazioni</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2064"/>
+        <location filename="../defaultlook.cpp" line="2063"/>
         <source>Choose a theme set</source>
         <translation>Scegli un set di temi</translation>
     </message>

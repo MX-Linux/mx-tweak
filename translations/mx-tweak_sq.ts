@@ -895,12 +895,12 @@
         <translation>Rregullimet tuaja të tanishme të panelit janë kopjeruajtur në një dosje të fshehur, të quajtur .restore, te dosja juaj shtëpi (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1724"/>
+        <location filename="../defaultlook.cpp" line="1723"/>
         <source>settings</source>
         <translation>rregullime</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2064"/>
+        <location filename="../defaultlook.cpp" line="2063"/>
         <source>Choose a theme set</source>
         <translation>Zgjidhni një grup teme</translation>
     </message>

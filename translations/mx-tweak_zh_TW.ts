@@ -896,12 +896,12 @@
         <translation>您當前的面板設置已備份到主文件夾（~/ .restore/）中名為.restore的隱藏文件夾中。</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1724"/>
+        <location filename="../defaultlook.cpp" line="1723"/>
         <source>settings</source>
         <translation>設定</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2064"/>
+        <location filename="../defaultlook.cpp" line="2063"/>
         <source>Choose a theme set</source>
         <translation>選擇一套佈景組合</translation>
     </message>

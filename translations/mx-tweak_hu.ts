@@ -895,12 +895,12 @@
         <translation>Az aktuális panelbeállításokról biztonsági másolat készült egy rejtett .restore nevű mappába a saját mappájában (~/.restore/).</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1724"/>
+        <location filename="../defaultlook.cpp" line="1723"/>
         <source>settings</source>
         <translation>beállítások</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2064"/>
+        <location filename="../defaultlook.cpp" line="2063"/>
         <source>Choose a theme set</source>
         <translation>Válasszon egy témakészletet</translation>
     </message>

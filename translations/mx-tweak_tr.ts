@@ -895,12 +895,12 @@
         <translation>Geçerli panel ayarlarınız, ev klasörünüzde .restore adlı gizli bir klasöre yedeklendi (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1724"/>
+        <location filename="../defaultlook.cpp" line="1723"/>
         <source>settings</source>
         <translation>ayarlar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2064"/>
+        <location filename="../defaultlook.cpp" line="2063"/>
         <source>Choose a theme set</source>
         <translation>Bir Tema Grubu Seç</translation>
     </message>

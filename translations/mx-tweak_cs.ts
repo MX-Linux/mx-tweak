@@ -895,12 +895,12 @@
         <translation>Vaše aktuální nastavení panelu bylo zazálohováno do skryté složky s názvem .restore ve vaší domovské složce (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1724"/>
+        <location filename="../defaultlook.cpp" line="1723"/>
         <source>settings</source>
         <translation>nastavení</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2064"/>
+        <location filename="../defaultlook.cpp" line="2063"/>
         <source>Choose a theme set</source>
         <translation>Vybrat sadu motivů</translation>
     </message>

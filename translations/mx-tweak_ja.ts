@@ -895,12 +895,12 @@
         <translation>現在のパネル設定は、ホームフォルダ (~/) 以下にある .restore という隠しフォルダにバックアップされました</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1724"/>
+        <location filename="../defaultlook.cpp" line="1723"/>
         <source>settings</source>
         <translation>設定</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2064"/>
+        <location filename="../defaultlook.cpp" line="2063"/>
         <source>Choose a theme set</source>
         <translation>テーマセットを選択</translation>
     </message>
