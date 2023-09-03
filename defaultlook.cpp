@@ -1298,6 +1298,11 @@ void defaultlook::setupFluxbox()
     fluxiconflag = false;
     fluxcaptionflag =false;
 
+    //screenblanking value;
+    QString screenblanktimeout = runCmd("xset q |grep timeout | awk '{print $2}'").output.trimmed();
+    qDebug() << "screenblanktimeout is " << screenblanktimeout;
+    ui->spinBoxScreenBlankingTimeout->setValue(screenblanktimeout.toInt()/60);
+
     //toolbar autohide
     QString toolbarautohide = runCmd(QStringLiteral("grep screen0.toolbar.autoHide $HOME/.fluxbox/init")).output.section(QStringLiteral(":"),1,1).trimmed();
     if (verbose) qDebug() << "Toolbar autohide" << toolbarautohide;
@@ -3149,6 +3154,32 @@ void defaultlook::on_ApplyFluxboxResets_clicked()
         runCmd(QStringLiteral("$HOME/.fluxbox/scripts/DefaultDock.mxdk"));
     }
 
+    //screenblanking
+    if (screenblankflag){
+
+
+        //add new values to fluxbox startup menu if don't exist
+        QString test = runCmd("grep ^screenblanking-mxtweak $HOME/.fluxbox/startup").output;
+        if (test.isEmpty()){
+            //comment default line if it exists
+            runCmd(QStringLiteral("sed -i 's/^[[:blank:]]*xset[[:blank:]].*dpms.*/#&/' $HOME/.fluxbox/startup"));
+            //add comment and new config file
+            runCmd(QStringLiteral("sed -i '/^exec.*/i#screenblanking added by mx-tweak' $HOME/.fluxbox/startup"));
+            runCmd(QStringLiteral("sed -i '/^exec.*/i$HOME\\/.config\\/MX-Linux\\/screenblanking-mxtweak &' $HOME/.fluxbox/startup"));
+            runCmd(QStringLiteral("sed -i '/^exec.*/i\\\\' $HOME/.fluxbox/startup"));
+        }
+        //set new value
+        int value = ui->spinBoxScreenBlankingTimeout->value() * 60;
+        QString cmd = "xset dpms " + QString::number(value) + " " + QString::number(value) + " " + QString::number(value);
+        runCmd(cmd);
+        runCmd("echo " + cmd + " >$HOME/.config/MX-Linux/screenblanking-mxtweak");
+        cmd = "xset s " + QString::number(value);
+        runCmd(cmd);
+        runCmd("echo " + cmd + " >>$HOME/.config/MX-Linux/screenblanking-mxtweak");
+        //make sure script is executable
+        runCmd("chmod a+x $HOME/.config/MX-Linux/screenblanking-mxtweak");
+    }
+
     //thunar actions
     //only if thunar installed
     if ( QFile("/usr/bin/thunar").exists()){
@@ -3913,4 +3944,11 @@ void defaultlook::on_checkBoxDisableFluxboxMenuGeneration_clicked()
 }
 
 
+
+
+void defaultlook::on_spinBoxScreenBlankingTimeout_valueChanged(int arg1)
+{
+    screenblankflag = true;
+    ui->ApplyFluxboxResets->setEnabled(true);
+}
 

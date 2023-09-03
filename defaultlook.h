@@ -99,6 +99,7 @@ public:
     bool themeflag = false;
     bool validateflag = false;
     bool tasklistflag = false;
+    bool screenblankflag = false;
     void thunarsplitview(bool state);
     void thunarsplitviewhorizontal(bool state);
     void thunarsetupsplitview();
@@ -106,6 +107,7 @@ public:
     void thunarsingleclicksetup();
     void thunarsetsingleclick(bool state);
     void tasklistchange();
+
 
 
     QString g1;
@@ -286,6 +288,8 @@ private slots:
 
 
     void on_listWidgetCursorThemes_currentTextChanged(const QString &currentText);
+
+    void on_spinBoxScreenBlankingTimeout_valueChanged(int arg1);
 
 private:
     Ui::defaultlook *ui;
