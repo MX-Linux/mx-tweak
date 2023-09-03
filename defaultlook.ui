@@ -1393,7 +1393,7 @@
          <item row="6" column="1">
           <widget class="QSpinBox" name="spinBoxScreenBlankingTimeout">
            <property name="specialValueText">
-            <string>off</string>
+            <string extracomment="setting to 0 turns off screensaver screen blank">off</string>
            </property>
            <property name="maximum">
             <number>240</number>
@@ -1590,7 +1590,7 @@
          <item row="6" column="0">
           <widget class="QLabel" name="label_34">
            <property name="text">
-            <string>Timeout minutes</string>
+            <string extracomment="set the time before screensaver screen blank occurs">Screensaver timeout </string>
            </property>
           </widget>
          </item>
@@ -1688,6 +1688,13 @@
           <widget class="QCheckBox" name="checkboxfluxreseteverything">
            <property name="text">
             <string>Reset ALL mx-fluxbox settings</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="2">
+          <widget class="QLabel" name="label_35">
+           <property name="text">
+            <string extracomment="minutes as in 1/60 of an hour">minutes</string>
            </property>
           </widget>
          </item>
