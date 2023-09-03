@@ -198,13 +198,13 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="327"/>
-        <location filename="../defaultlook.ui" line="1729"/>
+        <location filename="../defaultlook.ui" line="1722"/>
         <source>Bottom</source>
         <translation>Baixo</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="332"/>
-        <location filename="../defaultlook.ui" line="1739"/>
+        <location filename="../defaultlook.ui" line="1732"/>
         <source>Top</source>
         <translation>Cima</translation>
     </message>
@@ -220,7 +220,7 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="362"/>
-        <location filename="../defaultlook.ui" line="1757"/>
+        <location filename="../defaultlook.ui" line="1750"/>
         <source>Affects 1st panel</source>
         <translation>Afeta o primeiro painel</translation>
     </message>
@@ -257,13 +257,13 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="479"/>
-        <location filename="../defaultlook.ui" line="1734"/>
+        <location filename="../defaultlook.ui" line="1727"/>
         <source>Left</source>
         <translation>Esquerda</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="484"/>
-        <location filename="../defaultlook.ui" line="1744"/>
+        <location filename="../defaultlook.ui" line="1737"/>
         <source>Right</source>
         <translation>Direita</translation>
     </message>
@@ -286,8 +286,8 @@
         <location filename="../defaultlook.ui" line="1071"/>
         <location filename="../defaultlook.ui" line="1138"/>
         <location filename="../defaultlook.ui" line="1283"/>
-        <location filename="../defaultlook.ui" line="1770"/>
-        <location filename="../defaultlook.ui" line="1894"/>
+        <location filename="../defaultlook.ui" line="1763"/>
+        <location filename="../defaultlook.ui" line="1887"/>
         <source>Apply</source>
         <translation>Aplicar</translation>
     </message>
@@ -561,7 +561,7 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1225"/>
-        <location filename="../defaultlook.ui" line="1819"/>
+        <location filename="../defaultlook.ui" line="1812"/>
         <source>Show windows from all workspaces in panel</source>
         <translation>Exibir as janelas de todas as áreas de trabalho no painel</translation>
     </message>
@@ -616,7 +616,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1586"/>
         <location filename="../defaultlook.ui" line="1629"/>
-        <location filename="../defaultlook.ui" line="1718"/>
+        <location filename="../defaultlook.ui" line="1711"/>
         <source>Placement</source>
         <translation>Posicionamento</translation>
     </message>
@@ -647,7 +647,7 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1643"/>
-        <location filename="../defaultlook.ui" line="1833"/>
+        <location filename="../defaultlook.ui" line="1826"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Restaurar os Padrões&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -660,12 +660,6 @@
         <location filename="../defaultlook.ui" line="1361"/>
         <source>Width</source>
         <translation>Largura</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1593"/>
-        <source>Timeout</source>
-        <extracomment>set the time before screensaver screen blank occurs</extracomment>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1600"/>
@@ -689,6 +683,12 @@
         <translation>Redefinir o Menu do Fluxbox</translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="1593"/>
+        <source>Timeout minutes</source>
+        <extracomment>set the time before screensaver screen blank occurs</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="1690"/>
         <source>Reset ALL mx-fluxbox settings</source>
         <translation>Redefinir TODAS as configurações do Fluxbox do MX</translation>
@@ -704,118 +704,112 @@
         <translation>Atualizar as entradas dos menus existentes</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1697"/>
-        <source>minutes</source>
-        <extracomment>minutes as in 1/60 of an hour</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1707"/>
+        <location filename="../defaultlook.ui" line="1700"/>
         <source>Plasma</source>
         <translation>Plasma</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1786"/>
+        <location filename="../defaultlook.ui" line="1779"/>
         <source>Workspace</source>
         <translation>Área de Trabalho</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1826"/>
+        <location filename="../defaultlook.ui" line="1819"/>
         <source>Enable single-click</source>
         <translation>Ativar o clique único</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1840"/>
+        <location filename="../defaultlook.ui" line="1833"/>
         <source>Reset KDE/Plasma defaults</source>
         <translation>Redefinir os padrões do KDE/Plasma</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1850"/>
+        <location filename="../defaultlook.ui" line="1843"/>
         <source>Other</source>
         <translation>Outros</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1874"/>
+        <location filename="../defaultlook.ui" line="1867"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>Redefinir o LightDM (tela de início de sessão ou ‘login’) para o tema padrão do sistema operacional</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1881"/>
+        <location filename="../defaultlook.ui" line="1874"/>
         <source>Password for administrative tasks:</source>
         <translation>Senha para tarefas administrativas:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1912"/>
+        <location filename="../defaultlook.ui" line="1905"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>Ativar a montagem de discos internos por usuários além do administrador (root)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1919"/>
+        <location filename="../defaultlook.ui" line="1912"/>
         <source>Root</source>
         <translation>Root</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1926"/>
+        <location filename="../defaultlook.ui" line="1919"/>
         <source>Enable kernel sandbox</source>
         <translation>Ativar o ambiente isolado para o núcleo da caixa de areia (kernel sandbox)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1933"/>
+        <location filename="../defaultlook.ui" line="1926"/>
         <source>&amp;User</source>
         <translation>&amp;Usuário</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1940"/>
+        <location filename="../defaultlook.ui" line="1933"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Requer a reinicialização&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1943"/>
+        <location filename="../defaultlook.ui" line="1936"/>
         <source>Enable Bluetooth Adapters on boot</source>
         <translation>Ativar os adaptadores de Bluetooth na inicialização</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1950"/>
+        <location filename="../defaultlook.ui" line="1943"/>
         <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
         <translation>O comando ‘apt’ instala os pacotes ‘recomendados’ como dependências adicionais</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1957"/>
+        <location filename="../defaultlook.ui" line="1950"/>
         <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
         <translation>Gerar o menu ‘Todos os Aplicativos’ do gerenciador de janelas Fluxbox após a instalação, remoção e atualização do pacote</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1964"/>
+        <location filename="../defaultlook.ui" line="1957"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
         <translation>Utilizar as decorações do lado do cliente (Client Side Decorations - CSD) em aplicativos GTK3 que as suportam (requer a reinicialização da sessão)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1971"/>
+        <location filename="../defaultlook.ui" line="1964"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>Utilizar o controlador (driver) Intel em vez do controlador ‘modesetting’ padrão (requer a reinicialização do sistema operacional)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1978"/>
+        <location filename="../defaultlook.ui" line="1971"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>          Observação: será feito uma cópia de segurança do arquivo de configurações existente no caminho /etc/X11/xorg.conf.d/20-intel.conf na sua pasta pessoal</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1985"/>
+        <location filename="../defaultlook.ui" line="1978"/>
         <source>Use tearfree amdgpu option</source>
         <translation>Utilizar a opção anti-distorção do controlador amdgpu</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1992"/>
+        <location filename="../defaultlook.ui" line="1985"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>          Observação: será feito uma cópia de segurança do arquivo de configurações existente no caminho /etc/X11/xorg.conf.d/20-amd.conf na sua pasta pessoal</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1999"/>
+        <location filename="../defaultlook.ui" line="1992"/>
         <source>Use tearfree radeon driver option</source>
         <translation>Utilizar a opção anti-distorção do controlador Radeon</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2006"/>
+        <location filename="../defaultlook.ui" line="1999"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>          Observação: será feito uma cópia de segurança do arquivo de configurações existente no caminho /etc/X11/xorg.conf.d/20-radeon.conf na sua pasta pessoal</translation>
     </message>
