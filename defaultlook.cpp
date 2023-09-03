@@ -3173,9 +3173,10 @@ void defaultlook::on_ApplyFluxboxResets_clicked()
         }
         //set new value
         int value = ui->spinBoxScreenBlankingTimeout->value() * 60;
+        runCmd(QStringLiteral("echo \\#\\!/bin/bash >$HOME/.config/MX-Linux/screenblanking-mxtweak"));
         QString cmd = "xset dpms " + QString::number(value) + " " + QString::number(value) + " " + QString::number(value);
         runCmd(cmd);
-        runCmd("echo " + cmd + " >$HOME/.config/MX-Linux/screenblanking-mxtweak");
+        runCmd("echo " + cmd + " >>$HOME/.config/MX-Linux/screenblanking-mxtweak");
         cmd = "xset s " + QString::number(value);
         runCmd(cmd);
         runCmd("echo " + cmd + " >>$HOME/.config/MX-Linux/screenblanking-mxtweak");
