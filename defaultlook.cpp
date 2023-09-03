@@ -1303,9 +1303,8 @@ void defaultlook::setupFluxbox()
 
     //screenblanking value;
     QString screenblanktimeout = runCmd("xset q |grep timeout | awk '{print $2}'").output.trimmed();
-    qDebug() << "screenblanktimeout is " << screenblanktimeout;
     ui->spinBoxScreenBlankingTimeout->setValue(screenblanktimeout.toInt()/60);
-    ui->spinBoxScreenBlankingTimeout->setToolTip("set to 0 minutes to disable screen blanking");
+    ui->spinBoxScreenBlankingTimeout->setToolTip("set to 0 minutes to disable screensaver");
 
     //toolbar autohide
     QString toolbarautohide = runCmd(QStringLiteral("grep screen0.toolbar.autoHide $HOME/.fluxbox/init")).output.section(QStringLiteral(":"),1,1).trimmed();

@@ -895,12 +895,12 @@
         <translation>Trenutne nastavitve orodne vrstice so se shranile v skrito mapo z imenom .restore  znotraj uporabniske domace mape (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1724"/>
+        <location filename="../defaultlook.cpp" line="1723"/>
         <source>settings</source>
         <translation>nastavitve</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2064"/>
+        <location filename="../defaultlook.cpp" line="2063"/>
         <source>Choose a theme set</source>
         <translation>Izberite tematski set</translation>
     </message>

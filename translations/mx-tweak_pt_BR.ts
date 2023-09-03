@@ -895,12 +895,12 @@
         <translation>As suas configurações atuais do painel foram copiadas para uma pasta oculta chamada ‘.restore’ em sua pasta pessoal (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1724"/>
+        <location filename="../defaultlook.cpp" line="1723"/>
         <source>settings</source>
         <translation>Configurações</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2064"/>
+        <location filename="../defaultlook.cpp" line="2063"/>
         <source>Choose a theme set</source>
         <translation>Escolher um conjunto de temas</translation>
     </message>

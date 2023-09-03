@@ -895,12 +895,12 @@
         <translation>Dina nuvarande panelinställningar har en backup i en dold mapp som heter .restore i din hemkatalog (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1724"/>
+        <location filename="../defaultlook.cpp" line="1723"/>
         <source>settings</source>
         <translation>inställningar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2064"/>
+        <location filename="../defaultlook.cpp" line="2063"/>
         <source>Choose a theme set</source>
         <translation>Välj en temauppsättning</translation>
     </message>

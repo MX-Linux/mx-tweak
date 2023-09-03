@@ -895,12 +895,12 @@
         <translation>Die aktuellen Panel-Einstellungen wurden im versteckten Ordner .restore im Home-Ordner gesichert (~/.restore/).</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1724"/>
+        <location filename="../defaultlook.cpp" line="1723"/>
         <source>settings</source>
         <translation>Einstellungen</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2064"/>
+        <location filename="../defaultlook.cpp" line="2063"/>
         <source>Choose a theme set</source>
         <translation>Wählen sie ein Thema</translation>
     </message>

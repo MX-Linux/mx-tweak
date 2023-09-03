@@ -895,12 +895,12 @@
         <translation>Οι τρέχουσες ρυθμίσεις του ταμπλό σας αποθηκεύτηκαν σαν αντίγραφο ασφαλείας, σε έναν κρυφό φάκελο με όνομα .restore στον αρχικό κατάλογο του χρήστη (~/.restore /)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1724"/>
+        <location filename="../defaultlook.cpp" line="1723"/>
         <source>settings</source>
         <translation>ρυθμίσεις</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2064"/>
+        <location filename="../defaultlook.cpp" line="2063"/>
         <source>Choose a theme set</source>
         <translation>Επιλογή θέματος</translation>
     </message>

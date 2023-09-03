@@ -895,12 +895,12 @@
         <translation>La configuración actual de su panel se ha guardado en una carpeta oculta llamada .restore en su carpeta de inicio (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1724"/>
+        <location filename="../defaultlook.cpp" line="1723"/>
         <source>settings</source>
         <translation>ajustes</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2064"/>
+        <location filename="../defaultlook.cpp" line="2063"/>
         <source>Choose a theme set</source>
         <translation>Elegir un conjunto de temas</translation>
     </message>

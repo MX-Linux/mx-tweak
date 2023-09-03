@@ -895,12 +895,12 @@
         <translation>Les paramètres actuels de votre tableau de bord ont été enregistrés dans un dossier caché nommé .restore dans votre dossier home (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1724"/>
+        <location filename="../defaultlook.cpp" line="1723"/>
         <source>settings</source>
         <translation>paramètres</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2064"/>
+        <location filename="../defaultlook.cpp" line="2063"/>
         <source>Choose a theme set</source>
         <translation>Choisir un jeu de thèmes</translation>
     </message>

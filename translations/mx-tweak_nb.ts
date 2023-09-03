@@ -895,12 +895,12 @@
         <translation>Gjeldende panel-innstillinger ble reservekopiert til en skjult mappe som heter .restore i hjemmemappa (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1724"/>
+        <location filename="../defaultlook.cpp" line="1723"/>
         <source>settings</source>
         <translation>innstillinger</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2064"/>
+        <location filename="../defaultlook.cpp" line="2063"/>
         <source>Choose a theme set</source>
         <translation>Velg et temasett</translation>
     </message>

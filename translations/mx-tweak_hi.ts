@@ -895,12 +895,12 @@
         <translation>आपकी वर्तमान पैनल सेटिंग्स का आपके होम फोल्डर के .restore नामक अदृश्य फोल्डर में बैकअप कर दिया गया (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1724"/>
+        <location filename="../defaultlook.cpp" line="1723"/>
         <source>settings</source>
         <translation>सेटिंग्स</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2064"/>
+        <location filename="../defaultlook.cpp" line="2063"/>
         <source>Choose a theme set</source>
         <translation>थीम संग्रह चुनें</translation>
     </message>

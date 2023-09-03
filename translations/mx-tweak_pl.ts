@@ -895,12 +895,12 @@
         <translation>Kopia zapasowa bieżących ustawień panelu została zapisana w ukrytym folderze o nazwie .restore w twoim folderze domowym (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1724"/>
+        <location filename="../defaultlook.cpp" line="1723"/>
         <source>settings</source>
         <translation>ustawienia</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2064"/>
+        <location filename="../defaultlook.cpp" line="2063"/>
         <source>Choose a theme set</source>
         <translation>Wybierz zestaw motywów</translation>
     </message>
