@@ -201,13 +201,13 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="327"/>
-        <location filename="../defaultlook.ui" line="1722"/>
+        <location filename="../defaultlook.ui" line="1725"/>
         <source>Bottom</source>
         <translation>Dolů</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="332"/>
-        <location filename="../defaultlook.ui" line="1732"/>
+        <location filename="../defaultlook.ui" line="1735"/>
         <source>Top</source>
         <translation>Nahoře</translation>
     </message>
@@ -224,7 +224,7 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="362"/>
-        <location filename="../defaultlook.ui" line="1750"/>
+        <location filename="../defaultlook.ui" line="1753"/>
         <source>Affects 1st panel</source>
         <extracomment>acts on the first poanel found in Xfce panel xml fle</extracomment>
         <translation>Ovlivňuje 1. panel</translation>
@@ -266,13 +266,13 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="479"/>
-        <location filename="../defaultlook.ui" line="1727"/>
+        <location filename="../defaultlook.ui" line="1730"/>
         <source>Left</source>
         <translation>Vlevo</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="484"/>
-        <location filename="../defaultlook.ui" line="1737"/>
+        <location filename="../defaultlook.ui" line="1740"/>
         <source>Right</source>
         <translation>Vpravo</translation>
     </message>
@@ -296,8 +296,8 @@
         <location filename="../defaultlook.ui" line="1071"/>
         <location filename="../defaultlook.ui" line="1138"/>
         <location filename="../defaultlook.ui" line="1283"/>
-        <location filename="../defaultlook.ui" line="1763"/>
-        <location filename="../defaultlook.ui" line="1887"/>
+        <location filename="../defaultlook.ui" line="1766"/>
+        <location filename="../defaultlook.ui" line="1890"/>
         <source>Apply</source>
         <translation>Použít</translation>
     </message>
@@ -561,7 +561,7 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1197"/>
-        <location filename="../defaultlook.ui" line="1636"/>
+        <location filename="../defaultlook.ui" line="1629"/>
         <source>Thunar windows always open in split view</source>
         <translation>Okna Thunar-u otevírat vždy ve split režimu </translation>
     </message>
@@ -583,7 +583,7 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1225"/>
-        <location filename="../defaultlook.ui" line="1812"/>
+        <location filename="../defaultlook.ui" line="1815"/>
         <source>Show windows from all workspaces in panel</source>
         <translation>V panelu zobrazit okna ze všech pracovních ploch</translation>
     </message>
@@ -609,13 +609,13 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1264"/>
-        <location filename="../defaultlook.ui" line="1611"/>
+        <location filename="../defaultlook.ui" line="1604"/>
         <source>On</source>
         <translation>On</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1269"/>
-        <location filename="../defaultlook.ui" line="1616"/>
+        <location filename="../defaultlook.ui" line="1609"/>
         <source>Off</source>
         <translation>Off</translation>
     </message>
@@ -637,8 +637,8 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1586"/>
-        <location filename="../defaultlook.ui" line="1629"/>
-        <location filename="../defaultlook.ui" line="1711"/>
+        <location filename="../defaultlook.ui" line="1622"/>
+        <location filename="../defaultlook.ui" line="1714"/>
         <source>Placement</source>
         <translation>Umístění</translation>
     </message>
@@ -658,7 +658,7 @@
         <translation>Zapout/vypnout popisky Ikon</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1621"/>
+        <location filename="../defaultlook.ui" line="1614"/>
         <source>On Hover</source>
         <translation>Vznášející se</translation>
     </message>
@@ -668,8 +668,8 @@
         <translation>Zapnout/vypnout Ikony na Ploše</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1643"/>
-        <location filename="../defaultlook.ui" line="1826"/>
+        <location filename="../defaultlook.ui" line="1636"/>
+        <location filename="../defaultlook.ui" line="1829"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Obnovit výchozí nastavení&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -684,13 +684,13 @@
         <translation>Šířka</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1600"/>
+        <location filename="../defaultlook.ui" line="1593"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Screensaver&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>screensaver screen blank settings</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1673"/>
+        <location filename="../defaultlook.ui" line="1666"/>
         <source>Show Toolbar</source>
         <translation>Zobrazit nástrojou lištu</translation>
     </message>
@@ -705,133 +705,133 @@
         <translation>Obnovit Menu Fluxbox</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1690"/>
+        <location filename="../defaultlook.ui" line="1683"/>
         <source>Reset ALL mx-fluxbox settings</source>
         <translation>Obnovit VŠECHNA nastavení pro mx-fluxbox</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1650"/>
+        <location filename="../defaultlook.ui" line="1643"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Do aktuálního menu fluxbox přidat nové předvolené položky, ak nějaké jsou.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1593"/>
-        <source>Idle time (minutes)</source>
-        <extracomment>set the time before screensaver screen blank occurs</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1653"/>
+        <location filename="../defaultlook.ui" line="1646"/>
         <source>Upgrade existing menu entries</source>
         <translation>Zaktualizovat již existující položky v menu</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1700"/>
+        <location filename="../defaultlook.ui" line="1690"/>
+        <source>Period of inactivity before screensaver starts (minutes)</source>
+        <extracomment>set the time of inactivity  before screensaver screen blank occurs</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1703"/>
         <source>Plasma</source>
         <translation>Plasma</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1779"/>
+        <location filename="../defaultlook.ui" line="1782"/>
         <source>Workspace</source>
         <translation>Pracovní plocha</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1819"/>
+        <location filename="../defaultlook.ui" line="1822"/>
         <source>Enable single-click</source>
         <translation>Povolit jedno-klik</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1833"/>
+        <location filename="../defaultlook.ui" line="1836"/>
         <source>Reset KDE/Plasma defaults</source>
         <translation>Obnovit KDE/Plasma nastavení</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1843"/>
+        <location filename="../defaultlook.ui" line="1846"/>
         <source>Other</source>
         <translation>Ostatní</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1867"/>
+        <location filename="../defaultlook.ui" line="1870"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>Obnovit Lightdm (přihlašovací obrazovku) do výchozího motivu</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1874"/>
+        <location filename="../defaultlook.ui" line="1877"/>
         <source>Password for administrative tasks:</source>
         <translation>Heslo pro administrátorské úkony:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1905"/>
+        <location filename="../defaultlook.ui" line="1908"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>Povolit uživatelům bez práv roota připojování interních disků</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1912"/>
+        <location filename="../defaultlook.ui" line="1915"/>
         <source>Root</source>
         <translation>Root</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1919"/>
+        <location filename="../defaultlook.ui" line="1922"/>
         <source>Enable kernel sandbox</source>
         <translation>Povolit kernel sandbox</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1926"/>
+        <location filename="../defaultlook.ui" line="1929"/>
         <source>&amp;User</source>
         <translation>&amp;Uživatel</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1933"/>
+        <location filename="../defaultlook.ui" line="1936"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;vyžaduje restart&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1936"/>
+        <location filename="../defaultlook.ui" line="1939"/>
         <source>Enable Bluetooth Adapters on boot</source>
         <translation>Zapnout Bluetooth adaptéry při startu</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1943"/>
+        <location filename="../defaultlook.ui" line="1946"/>
         <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
         <translation>Příkaz Apt nainstaluje dodatečné &quot;doporučené&quot; balíky a zavislosti</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1950"/>
+        <location filename="../defaultlook.ui" line="1953"/>
         <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1957"/>
+        <location filename="../defaultlook.ui" line="1960"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
         <translation>Použít Client Side Decorations (CSD) v GTK3 aplikacích pokud toto podporují (vyžaduje restart)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1964"/>
+        <location filename="../defaultlook.ui" line="1967"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>Použít ovladač intel namísto předvoleného ovladače &quot;modesetting&quot;  (vyžaduje restart)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1971"/>
+        <location filename="../defaultlook.ui" line="1974"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>          POZNÁMKA: existující /etc/X11/xorg.conf.d/20-intel.conf bude zálohován do domovské složky</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1978"/>
+        <location filename="../defaultlook.ui" line="1981"/>
         <source>Use tearfree amdgpu option</source>
         <translation>Použít nastavení amdgpu tearfree</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1985"/>
+        <location filename="../defaultlook.ui" line="1988"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>          POZNÁMKA: existující /etc/X11/xorg.conf.d/20-amd.conf bude zazálohován do domovské složky</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1992"/>
+        <location filename="../defaultlook.ui" line="1995"/>
         <source>Use tearfree radeon driver option</source>
         <translation>Použít tearfree nastavení ovladače radeon</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1999"/>
+        <location filename="../defaultlook.ui" line="2002"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>          POZNÁMKA: existující /etc/X11/xorg.conf.d/20-radeon.conf bude zazálohován do domovské složky</translation>
     </message>

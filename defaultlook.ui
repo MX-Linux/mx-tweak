@@ -1587,13 +1587,6 @@
            </property>
           </widget>
          </item>
-         <item row="6" column="0">
-          <widget class="QLabel" name="label_34">
-           <property name="text">
-            <string extracomment="set the time before screensaver screen blank occurs">Idle time (minutes)</string>
-           </property>
-          </widget>
-         </item>
          <item row="5" column="0">
           <widget class="QLabel" name="label_27">
            <property name="text">
@@ -1688,6 +1681,16 @@
           <widget class="QCheckBox" name="checkboxfluxreseteverything">
            <property name="text">
             <string>Reset ALL mx-fluxbox settings</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0">
+          <widget class="QLabel" name="label_34">
+           <property name="text">
+            <string extracomment="set the time of inactivity  before screensaver screen blank occurs">Period of inactivity before screensaver starts (minutes)</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
            </property>
           </widget>
          </item>
