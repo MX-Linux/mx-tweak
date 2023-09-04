@@ -41,22 +41,22 @@ msgstr "Arbeitsoberfläche"
 #. The desktop entry name will be displayed within the menu.
 #: desktop-in/mx-tweak-systray.desktop.in:5
 msgid "Brightness Systray"
-msgstr "Helligkeit Systray"
+msgstr "Helligkeitsregler Systemleiste"
 
 #. # The desktop entry comment will be shown within the menu.
 #: desktop-in/mx-tweak-systray.desktop.in:7
 msgid "brightness systray application"
-msgstr "Helligkeit Systray-Anwendung"
+msgstr "Helligkeitsregler in der Systemleiste anzeigen"
 
 #. The desktop entry name will be displayed within the menu.
 #: desktop-in/mx-tweak-tray-app-autostart.desktop.in:7
 msgid "mx-tweak brightness systray"
-msgstr "mx-tweak Helligkeit systray"
+msgstr "Helligkeitsregler in der Systemleiste"
 
 #. # The desktop entry comment will be shown within the menu.
 #: desktop-in/mx-tweak-tray-app-autostart.desktop.in:9
 msgid "starts mx-tweak brightness systray app"
-msgstr "Startet die App für mx-tweak Helligkeit "
+msgstr "Helligkeitsregler in der Systemleiste starten"
 
 #. The desktop entry name will be displayed within the menu.
 #: desktop-in/zcompton.desktop.in:7
