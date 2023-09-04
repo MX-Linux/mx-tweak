@@ -29,19 +29,12 @@
 
 <h2>Theme</h2>
 
-<img src="tweak-theme-1.jpg" alt="Xfce Theme options" /> <img src="fluxbox_theme.jpg" alt="Fluxbox theme options" />
+<img src="tweak-theme-1.jpg" alt="Xfce Theme options" />
 
-<p>The user may select Gtk theme, window manager theme, and icon theme on this tab.  The user can also use pre-configured theme sets from the drop down combo box.</p>
+<p>Xfce & Fluxbox users user may select Gtk theme, window manager theme, icon theme and cursor theme on this tab.  The user can also use pre-configured theme sets from the drop down combo box.</p>
 <p> The user can also save their current gtk, window manager, and icon theme settings to a new theme set.  The theme-set will be saved in <span style="font-style: normal">~/.local/share/mx-tweak-data.</span></p>
-<p> Fluxbox users will see the window manager theme selection window which will change the fluxbox window decorations on selection.  A link is provided to the mxfb-look tool that can store theme combination sets.</p>
+<p> Fluxbox users get a link to the provided mxfb-look tool that can store theme combination sets.</p>
 
-
-<h3>Tips and Tricks</h3>
-
-	<ul>
-		<li>The Firefox dark theme tweak option will work with themes other than the system defaults.   </li>
-		<li> The HexChat tweak will work with themes other than the system defaults.</li>
-	</ul>
 
 <h2>Compositor</h2>
 
@@ -53,7 +46,7 @@
 
 <p>Xfwm is the default window manager for Xfce, and it includes its own compositor. That compositor is turned off by default in MX Linux because it can cause various problems on older machines. When you turn on its compositor by selecting it from the pull-down menu, the button &#8220;Xfwm Settings&#8221; becomes active and, when clicked, provides access to some basic settings. For details, consult the <a href="https://wiki.xfce.org/howto/xfwm4_theme" target="_blank" rel="noreferrer noopener" aria-label="Xfce Wik (opens in a new tab)">Xfce Wik</a>i.</p>
 
-<p>Under Xfce 4.14, the user can set the “Vblank” mode to auto, glx, xpresent, or off.</p>
+<p>Under Xfce 4.14 and up, the user can set the “Vblank” mode to auto, glx, xpresent, or off.</p>
 
 <p><strong>glx</strong> - Anecdotally,
 this seems to work well with intel cards and some nvidia/ati cards</p>
@@ -100,9 +93,6 @@ cards.</p>
 
 <p>Occasionally the thunar custom right-click actions maybe be updated.  While these updated configurations will be present on the system, they will not go into effect automatically for upgraders.   The &#8220;Reset&#8221; actions will change any thunar custom actions to the latest MX defaults.</p>
 
-<p> Enabling hibernate on logout menu will also require the user&#8217;s root password.</p>
-
-
 <h2>Fluxbox</h2>
 
 <img src="fluxbox-1.jpg" alt="fluxbox" />
@@ -112,7 +102,7 @@ cards.</p>
 	<ul>
     <li>Reset defaults. Checking any of these items will replace the existing file(s) with the original released version. This includes the dock script, the root menu shown with a right click on the desktop) or the config files (init, startup, keys, etc.).</li>
     <li>Desktop Icons. These items are elements of iDesk (the program that draws icons on the mx-fluxbox desktop) that are otherwise not easily accessible. For more options, use mx-idesktool.</li>
-    <li>Toolbar settings. These common changes are not easily found by new users.</li>
+    <li>Toolbar settings. Common settings for the Fluxbox Toolbar which are not easily found by new users. This is not the tint2 panel, which is controlled by the tint2-manager settings tool.</li>
     <li>Dock (slit) settings. The docks are created by scripts that join launchers together and locate them at one of the desktop locations called slits. Here the user can easily change dock location or visibility. For more options, use mx-dockmaker or consult in a terminal the detailed man file to see the many possibilities available for wmalauncher, the program that powers the docks.</li>
 	<li>A link is provided to launch the tint2-manager panel settings app.</li>
 	</ul>
@@ -125,7 +115,7 @@ cards.</p>
 
 <p>This tab is only visible when the user is running KDE/Plasma.</p>
 
-<p>Most items are self-explanatory</p>
+<p>Most items are self-explanatory.  Due to plasma's complexity, users are encouraged to use the KDE plasma System Settings tools to do plasma configuration.</p>
 
 <h2>Display</h2>
 
@@ -152,17 +142,18 @@ cards.</p>
 
 <img src="5-1.jpg" alt="other options" />
 
-
+<p>Configuration options on this tab require admin privledges before they go into effect.  The user will be prompted for the current admin password on apply.</p>
 
 	<ul>
 		<li>Occasionally the lightdm configuration maybe be updated.  While these updated configurations will be present on the system, they will not go into effect automatically for upgraders.   The &#8220;Reset&#8221; actions will change any lightdm configuration to the latest MX defaults.</li>
-		<li> Enable of kernel sandbox is only available on kernels that have a switch for user namespaces built in.  Some kernels default to off, some default to on.  Enabling this feature is useful for a lot of applications that require sandboxes.</li>
-		<li> Enable mounting of internal drives will require the user&#8217;s root password.</li>
-		<li> If the gtk3-nocsd package is installed, the option to disable or enable Client Side Decorations for gtk3 apps will be available.  This option is on a per user and per desktop environment basis.  Key files are stored in ~/.config/MX-Linux/nocsd.  If a keyfile is present, then CSD will be disabled on the next login of the user.</li>
+		<li>Enable of kernel sandbox is only available on kernels that have a switch for user namespaces built in.  Some kernels default to off, some default to on.  Enabling this feature is useful for a lot of applications that require sandboxes.</li>
+		<li>Enable mounting of internal drives by standard users (no admin password required).</li>
+		<li>Allow or disallow auto starting of bluetooth devices when bluetooth managers load.  Requiers a reboot to go into effect.</li>
+		<li>If a root account is configured, the option to choose what password to use for gui admin prompts will be enabled.  Goes into effect immediately.</li>
 	</ul>
 	
 	
-	<p>The last item varies depending on what video adapter is installed on the system.  If a intel graphics board is detected, the user will be presented with the option show above, which will force the system to use the &#8220;intel&#8221; driver rather than the debian default &#8220;modesetting&#8221; driver.  The &#8220;intel&#8221; configuration also includes a &#8220;tear free&#8221; option that many find helps with screen tearing.   </p>
+	<p>The graphics driver entries vary depending on what video adapter is installed on the system.  If a intel graphics board is detected, the user will be presented with the option show above, which will force the system to use the &#8220;intel&#8221; driver rather than the debian default &#8220;modesetting&#8221; driver.  The &#8220;intel&#8221; configuration also includes a &#8220;tear free&#8221; option that many find helps with screen tearing.   </p>
 
 <p>If the user has an amd graphics part, then the user will be offered a choice to enable the &#8220;tear free&#8221; option for the radeon or amdgpu drivers, which ever is in current use.  The actual driver choice will not be changed, just the &#8220;tear free&#8221; option.<br></p>
 
