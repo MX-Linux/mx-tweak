@@ -1,3 +1,15 @@
+mx-tweak (23.09.01mx23) mx; urgency=medium
+
+  * add screen blanking timeout to fluxbox tab
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 03 Sep 2023 13:04:56 -0400
+
+mx-tweak (23.08.01mx23) mx; urgency=medium
+
+  * update help files
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 19 Aug 2023 22:35:17 -0400
+
 mx-tweak (23.07.02mx23) mx; urgency=medium
 
   * update translations

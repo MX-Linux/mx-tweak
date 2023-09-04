@@ -27,27 +27,27 @@
     <message>
         <location filename="../main.cpp" line="47"/>
         <source>GUI for applying assorted useful tweaks</source>
-        <translation type="unfinished"></translation>
+        <translation>Grafikus felhasználói felület különféle hasznos módosítások elvégzéséhez</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="50"/>
         <source>launches brightness-systray</source>
-        <translation type="unfinished"></translation>
+        <translation>Elindítja a fényerősség tálcaalkalmazást</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="51"/>
         <source>opens with display tab open.  Only valid with Xfce desktop running</source>
-        <translation type="unfinished"></translation>
+        <translation>a megjelenítés lappal megnyitva nyílik meg. Csak Xfce asztali környezet futása esetén érvényes</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="52"/>
         <source>Opens theme tab directly.  Valid on Xfce &amp; Fluxbox desktops</source>
-        <translation type="unfinished"></translation>
+        <translation>A témák lappal nyílik meg. Csak Xfce és Fluxbox asztali környezetek esetén érvényes</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="53"/>
         <source>Opens Other tab directly.  Valid on all desktops</source>
-        <translation type="unfinished"></translation>
+        <translation>Az egyéb lappal nyílik meg. Minden asztali környezetnél érvényes</translation>
     </message>
 </context>
 <context>
@@ -103,15 +103,15 @@
     <name>defaultlook</name>
     <message>
         <location filename="../defaultlook.ui" line="20"/>
-        <location filename="../defaultlook.cpp" line="56"/>
-        <location filename="../defaultlook.cpp" line="85"/>
-        <location filename="../defaultlook.cpp" line="648"/>
-        <location filename="../defaultlook.cpp" line="667"/>
-        <location filename="../defaultlook.cpp" line="676"/>
-        <location filename="../defaultlook.cpp" line="723"/>
-        <location filename="../defaultlook.cpp" line="731"/>
-        <location filename="../defaultlook.cpp" line="758"/>
+        <location filename="../defaultlook.cpp" line="57"/>
+        <location filename="../defaultlook.cpp" line="86"/>
+        <location filename="../defaultlook.cpp" line="651"/>
+        <location filename="../defaultlook.cpp" line="670"/>
+        <location filename="../defaultlook.cpp" line="679"/>
+        <location filename="../defaultlook.cpp" line="726"/>
+        <location filename="../defaultlook.cpp" line="734"/>
         <location filename="../defaultlook.cpp" line="761"/>
+        <location filename="../defaultlook.cpp" line="764"/>
         <source>MX Tweak</source>
         <translation>MX finomhangoló</translation>
     </message>
@@ -179,16 +179,19 @@
     <message>
         <location filename="../defaultlook.ui" line="283"/>
         <source>Display panel horizontally</source>
+        <extracomment>panel will be shown in a horizontal configuration</extracomment>
         <translation>Panel megjelenítése vízszintesen</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="293"/>
         <source>Volume</source>
+        <extracomment>volume plugin scale factor</extracomment>
         <translation>Kötet</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="300"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <extracomment>affects the docklike plugin</extracomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
@@ -198,40 +201,43 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="327"/>
-        <location filename="../defaultlook.ui" line="1698"/>
+        <location filename="../defaultlook.ui" line="1722"/>
         <source>Bottom</source>
         <translation>Lent</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="332"/>
-        <location filename="../defaultlook.ui" line="1708"/>
+        <location filename="../defaultlook.ui" line="1732"/>
         <source>Top</source>
         <translation>Fent</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="340"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Tasklist&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Feladatlista&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="347"/>
         <source>Display panel vertically</source>
+        <extracomment>panel will be shown in a vertical configuration</extracomment>
         <translation>Panel megjelenítése függőlegesen</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="362"/>
-        <location filename="../defaultlook.ui" line="1726"/>
+        <location filename="../defaultlook.ui" line="1750"/>
         <source>Affects 1st panel</source>
+        <extracomment>acts on the first poanel found in Xfce panel xml fle</extracomment>
         <translation>Az első panelre van hatással</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="369"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Panel Plugin Scales&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Panelbővítmények méretezése&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="389"/>
         <source>Backup current panel configuration</source>
+        <extracomment>backup existing panel configuration</extracomment>
         <translation>A jelenlegi panelbeállítások mentése</translation>
     </message>
     <message>
@@ -243,39 +249,43 @@
     <message>
         <location filename="../defaultlook.ui" line="419"/>
         <source>Power Manager</source>
-        <translation type="unfinished"></translation>
+        <extracomment>power manager plugin scale factor</extracomment>
+        <translation>Energiakezelés</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="426"/>
         <source>Restore backup panel configuration</source>
+        <extracomment>restore a panel backup</extracomment>
         <translation>A panelbeállítások visszaállítása mentésből</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="449"/>
         <source>Set Scales</source>
-        <translation type="unfinished"></translation>
+        <extracomment>set a scale factor</extracomment>
+        <translation>Méretezés beállítása</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="479"/>
-        <location filename="../defaultlook.ui" line="1703"/>
+        <location filename="../defaultlook.ui" line="1727"/>
         <source>Left</source>
         <translation>Balra</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="484"/>
-        <location filename="../defaultlook.ui" line="1713"/>
+        <location filename="../defaultlook.ui" line="1737"/>
         <source>Right</source>
         <translation>Jobbra</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="492"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Buttons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <extracomment>affects the window button plugin</extracomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ablakgombok&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="513"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Docklike is the modern dock plugin for the panel.  Window Buttons is the classic tasklist without dock features.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A Docklike a modern dokk bővítmény a panelhez. Az Ablakgombok a feladatlista feladatlista, dokk funkciók nélkül.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="536"/>
@@ -285,21 +295,23 @@
         <location filename="../defaultlook.ui" line="1064"/>
         <location filename="../defaultlook.ui" line="1071"/>
         <location filename="../defaultlook.ui" line="1138"/>
-        <location filename="../defaultlook.ui" line="1413"/>
-        <location filename="../defaultlook.ui" line="1739"/>
-        <location filename="../defaultlook.ui" line="1863"/>
+        <location filename="../defaultlook.ui" line="1283"/>
+        <location filename="../defaultlook.ui" line="1763"/>
+        <location filename="../defaultlook.ui" line="1887"/>
         <source>Apply</source>
         <translation>Alkalmazás</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="556"/>
         <source>Restore default panel</source>
+        <extracomment>affects any panel that is curently configured</extracomment>
         <translation>Alapértelmezett panel visszaállítása</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="566"/>
         <source>Set Tasklist plugin to:</source>
-        <translation type="unfinished"></translation>
+        <extracomment>change the tasklist plugin</extracomment>
+        <translation>Feladatlista bővítmény beállítása:</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="580"/>
@@ -329,26 +341,31 @@
     <message>
         <location filename="../defaultlook.ui" line="666"/>
         <source>Save Current Settings as a Theme Set</source>
+        <extracomment>save theme settings as a group</extracomment>
         <translation>A jelenlegi beállítások mentése mint témakészlet</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="687"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Cursors&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <extracomment>cursor theme</extracomment>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Kurzorok&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="694"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Manager&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <extracomment>theme a window manager border will get</extracomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ablakkezelő&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="704"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <extracomment>theme an application will get</extracomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Alkalmazás&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="711"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <extracomment>icon theme</extracomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ikonok&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
@@ -439,7 +456,9 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="862"/>
+        <location filename="../defaultlook.ui" line="1396"/>
         <source>off</source>
+        <extracomment>setting to 0 turns off screensaver screen blank</extracomment>
         <translation>ki</translation>
     </message>
     <message>
@@ -450,6 +469,7 @@
     <message>
         <location filename="../defaultlook.ui" line="923"/>
         <source>Hardware Backlight</source>
+        <extracomment>set the hardware backlight on monitors that have them</extracomment>
         <translation>Hardveres háttérvilágítás</translation>
     </message>
     <message>
@@ -460,6 +480,7 @@
     <message>
         <location filename="../defaultlook.ui" line="957"/>
         <source>Choose Display for xrandr tweaks</source>
+        <extracomment>choose the display that the xrandr tweaks will be acted upon</extracomment>
         <translation>Válasszon kijelzőt az xrandr finomhangoláshoz</translation>
     </message>
     <message>
@@ -480,6 +501,7 @@
     <message>
         <location filename="../defaultlook.ui" line="984"/>
         <source>Software (xrandr) Brightness</source>
+        <extracomment>adjust brightness (not backlight) via software</extracomment>
         <translation>Szoftveres fényerősség (xrandr)</translation>
     </message>
     <message>
@@ -491,11 +513,13 @@
     <message>
         <location filename="../defaultlook.ui" line="998"/>
         <source>GTK scaling</source>
+        <extracomment>gtk scale factor</extracomment>
         <translation>GTK nagyítás</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1018"/>
         <source>xrandr Scaling</source>
+        <extracomment>xrandr scale factor</extracomment>
         <translation>xrandr nagyítás</translation>
     </message>
     <message>
@@ -525,32 +549,32 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1183"/>
-        <location filename="../defaultlook.ui" line="1531"/>
+        <location filename="../defaultlook.ui" line="1317"/>
         <source>Reset Thunar custom right-click actions to system defaults</source>
         <translation>Az egyéni Thunar jobb-gomb kattintás műveletek visszaállítása alapértelmezettre</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1190"/>
-        <location filename="../defaultlook.ui" line="1386"/>
+        <location filename="../defaultlook.ui" line="1368"/>
         <source>Enable single-click in Thunar File Manager</source>
         <translation>Egyszeres kattintás engedélyezése a Thunar fájlkezelőben</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1197"/>
-        <location filename="../defaultlook.ui" line="1567"/>
+        <location filename="../defaultlook.ui" line="1636"/>
         <source>Thunar windows always open in split view</source>
         <translation>A Thunar ablakok mindig osztott nézetben nyílnak meg</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1204"/>
-        <location filename="../defaultlook.ui" line="1487"/>
+        <location filename="../defaultlook.ui" line="1561"/>
         <source>Thunar split view opens horizontal</source>
         <translation>A Thunar osztott nézet vízszintesen nyílik meg</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1211"/>
         <source>Show percentages in notifcations when available</source>
-        <translation type="unfinished"></translation>
+        <translation>Százalék megjelenítése az értesítésben, ha rendelkezésre áll</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1218"/>
@@ -559,7 +583,7 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1225"/>
-        <location filename="../defaultlook.ui" line="1788"/>
+        <location filename="../defaultlook.ui" line="1812"/>
         <source>Show windows from all workspaces in panel</source>
         <translation>Az összes munkaasztal ablakainak megjelenítése a panelen</translation>
     </message>
@@ -579,308 +603,320 @@
         <translation>Fluxbox</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1263"/>
+        <location filename="../defaultlook.ui" line="1389"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dokk beállítások&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1271"/>
-        <location filename="../defaultlook.ui" line="1542"/>
+        <location filename="../defaultlook.ui" line="1264"/>
+        <location filename="../defaultlook.ui" line="1611"/>
         <source>On</source>
         <translation>Be</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1276"/>
-        <location filename="../defaultlook.ui" line="1547"/>
+        <location filename="../defaultlook.ui" line="1269"/>
+        <location filename="../defaultlook.ui" line="1616"/>
         <source>Off</source>
         <translation>Ki</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1294"/>
+        <location filename="../defaultlook.ui" line="1568"/>
         <source>Manage Tint2 Panel</source>
         <translation>Tint2 panel kezelése</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1305"/>
+        <location filename="../defaultlook.ui" line="1579"/>
         <source>Height</source>
         <translation>Magasság</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1379"/>
-        <location filename="../defaultlook.ui" line="1608"/>
+        <location filename="../defaultlook.ui" line="1382"/>
+        <location filename="../defaultlook.ui" line="1406"/>
         <source>Autohide</source>
         <translation>Automatikus elrejtés</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1393"/>
-        <location filename="../defaultlook.ui" line="1635"/>
-        <location filename="../defaultlook.ui" line="1687"/>
+        <location filename="../defaultlook.ui" line="1586"/>
+        <location filename="../defaultlook.ui" line="1629"/>
+        <location filename="../defaultlook.ui" line="1711"/>
         <source>Placement</source>
         <translation>Elhelyezés</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1400"/>
+        <location filename="../defaultlook.ui" line="1290"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Thunar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Thunar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1494"/>
+        <location filename="../defaultlook.ui" line="1480"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Desktop Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Asztali ikonok&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1511"/>
+        <location filename="../defaultlook.ui" line="1337"/>
         <source>Toggle icon captions</source>
         <translation>Ikon feliratok ki-/bekapcsolása</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1552"/>
+        <location filename="../defaultlook.ui" line="1621"/>
         <source>On Hover</source>
         <translation>Egér alatt</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1560"/>
+        <location filename="../defaultlook.ui" line="1375"/>
         <source>Toggle desktop icons</source>
         <translation>Asztali ikonok ki-/bekapcsolása</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1574"/>
-        <location filename="../defaultlook.ui" line="1802"/>
+        <location filename="../defaultlook.ui" line="1643"/>
+        <location filename="../defaultlook.ui" line="1826"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Alapértékek visszaállítása&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1594"/>
+        <location filename="../defaultlook.ui" line="1297"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Eszköztár beállítások&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1601"/>
+        <location filename="../defaultlook.ui" line="1361"/>
         <source>Width</source>
         <translation>Szélesség</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1615"/>
+        <location filename="../defaultlook.ui" line="1600"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Screensaver&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <extracomment>screensaver screen blank settings</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1673"/>
         <source>Show Toolbar</source>
         <translation>Eszköztár megjelenítése</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1642"/>
+        <location filename="../defaultlook.ui" line="1554"/>
         <source>Reset DefaultDock</source>
         <translation>Alapértelmezett dokk visszaállítása</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1649"/>
+        <location filename="../defaultlook.ui" line="1344"/>
         <source>Reset Fluxbox Menu</source>
         <translation>Fluxbox menü visszaállítása</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1656"/>
+        <location filename="../defaultlook.ui" line="1690"/>
         <source>Reset ALL mx-fluxbox settings</source>
         <translation>MINDEN mx-fluxbox beállítás visszaállítása</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1663"/>
+        <location filename="../defaultlook.ui" line="1650"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Új alapértelmezett elemek hozzáadása a  meglévő fluxbox menühöz, ha vannak.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1666"/>
+        <location filename="../defaultlook.ui" line="1593"/>
+        <source>Idle time (minutes)</source>
+        <extracomment>set the time before screensaver screen blank occurs</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1653"/>
         <source>Upgrade existing menu entries</source>
         <translation>Jelenlegi menüelemek frissítése</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1676"/>
+        <location filename="../defaultlook.ui" line="1700"/>
         <source>Plasma</source>
         <translation>Plazma</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1755"/>
+        <location filename="../defaultlook.ui" line="1779"/>
         <source>Workspace</source>
         <translation>Munkaterület</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1795"/>
+        <location filename="../defaultlook.ui" line="1819"/>
         <source>Enable single-click</source>
         <translation>Egyszeres kattintás engedélyezése</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1809"/>
+        <location filename="../defaultlook.ui" line="1833"/>
         <source>Reset KDE/Plasma defaults</source>
         <translation>KDE/Plazma alapértékek visszaállítása</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1819"/>
+        <location filename="../defaultlook.ui" line="1843"/>
         <source>Other</source>
         <translation>Egyéb</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1843"/>
+        <location filename="../defaultlook.ui" line="1867"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>A Lightdm (bejelentkező képernyő) visszaállítása az alap témára</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1850"/>
+        <location filename="../defaultlook.ui" line="1874"/>
         <source>Password for administrative tasks:</source>
         <translation>Jelszó adminisztratív feladatokhoz:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1881"/>
+        <location filename="../defaultlook.ui" line="1905"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>A belső eszközök csatolásának engedélyezése nem-root felhasználók számára</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1888"/>
+        <location filename="../defaultlook.ui" line="1912"/>
         <source>Root</source>
         <translation>Root</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1895"/>
+        <location filename="../defaultlook.ui" line="1919"/>
         <source>Enable kernel sandbox</source>
         <translation>A kernel sandbox engedélyezése</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1902"/>
+        <location filename="../defaultlook.ui" line="1926"/>
         <source>&amp;User</source>
         <translation>&amp;Felhasználó</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1909"/>
+        <location filename="../defaultlook.ui" line="1933"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;újraindítás szükséges&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1912"/>
+        <location filename="../defaultlook.ui" line="1936"/>
         <source>Enable Bluetooth Adapters on boot</source>
         <translation>Bluetooth eszközök engedélyezése indításkor</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1919"/>
+        <location filename="../defaultlook.ui" line="1943"/>
         <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
         <translation>Az Apt telepíti a további &quot;javasolt&quot; csomagokat, mint függőség</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1926"/>
+        <location filename="../defaultlook.ui" line="1950"/>
         <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
-        <translation type="unfinished"></translation>
+        <translation>A Fluxbox alkalmazások menüjének frissítése csomagok telepítése, eltávolítása vagy frissítése után</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1933"/>
+        <location filename="../defaultlook.ui" line="1957"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
         <translation>Kliensoldali Dekorációk (CSD) használata a GTK3 alkalmazásokban, amelyek támogatják (munkafolyamat újraindítása szükséges)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1940"/>
+        <location filename="../defaultlook.ui" line="1964"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>Az intel illesztőprogram használata az alap &quot;modesetting&quot; illesztőprogram helyett (újraindítás szükséges)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1947"/>
+        <location filename="../defaultlook.ui" line="1971"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>          Megjegyzés: a meglévő /etc/X11/xorg.conf.d/20-intel.conf a saját-könyvtárban kerül mentésre</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1954"/>
+        <location filename="../defaultlook.ui" line="1978"/>
         <source>Use tearfree amdgpu option</source>
         <translation>A tearfree amdgpu opció használata</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1961"/>
+        <location filename="../defaultlook.ui" line="1985"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>          Megjegyzés: a meglévő /etc/X11/xorg.conf.d/20-amd.conf a saját-könyvtárban kerül mentésre</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1968"/>
+        <location filename="../defaultlook.ui" line="1992"/>
         <source>Use tearfree radeon driver option</source>
         <translation>A tearfree radeon illesztőprogram opció használata</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1975"/>
+        <location filename="../defaultlook.ui" line="1999"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>          Megjegyzés: a meglévő /etc/X11/xorg.conf.d/20-radeon.conf a saját-könyvtárban kerül mentésre</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="57"/>
+        <location filename="../defaultlook.cpp" line="58"/>
         <source>--display switch only valid for Xfce</source>
         <translation>--display kapcsoló csak Xfce-hez érvényes</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="647"/>
+        <location filename="../defaultlook.cpp" line="650"/>
         <source>About MX Tweak</source>
         <translation>Az MX finomhangolóról</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="649"/>
+        <location filename="../defaultlook.cpp" line="652"/>
         <source>Version: </source>
         <translation>Verzió:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="650"/>
+        <location filename="../defaultlook.cpp" line="653"/>
         <source>App for quick default ui theme changes and tweaks</source>
         <translation>Alkalmazás a felhasználó felület gyors beállításához és finomhangolásához</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="652"/>
+        <location filename="../defaultlook.cpp" line="655"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="653"/>
+        <location filename="../defaultlook.cpp" line="656"/>
         <source>%1 License</source>
         <translation>%1 licenc</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="667"/>
+        <location filename="../defaultlook.cpp" line="670"/>
         <source>%1 Help</source>
         <translation>%1 Súgó</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="677"/>
+        <location filename="../defaultlook.cpp" line="680"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
         <translation>Kész! A változtatások alkalmazásához a Firefox újraindítása lehet szükséges</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="724"/>
+        <location filename="../defaultlook.cpp" line="727"/>
         <source>Plese remove special characters</source>
         <translation>Távolítsa el a speciális karaktereket</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="724"/>
+        <location filename="../defaultlook.cpp" line="727"/>
         <source>from file name</source>
         <translation>a fájlnévből</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="731"/>
+        <location filename="../defaultlook.cpp" line="734"/>
         <source>File name already exists.  Choose another name</source>
         <translation>A fájlnév már létezik. Válasszon másik nevet</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="759"/>
+        <location filename="../defaultlook.cpp" line="762"/>
         <source>File is not a valid tar.xz archive file</source>
         <translation>A fájl nem egy érvényes tar.xz archívum</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="762"/>
+        <location filename="../defaultlook.cpp" line="765"/>
         <source>Archive does not contain a panel config</source>
         <translation>Az archívum nem panelbeállításokat tartalmaz</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="937"/>
+        <location filename="../defaultlook.cpp" line="940"/>
         <source>Panel settings</source>
         <translation>Panelbeállítások</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="938"/>
+        <location filename="../defaultlook.cpp" line="941"/>
         <source>Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
         <translation>Az aktuális panelbeállításokról biztonsági másolat készült egy rejtett .restore nevű mappába a saját mappájában (~/.restore/).</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1715"/>
+        <location filename="../defaultlook.cpp" line="1723"/>
         <source>settings</source>
         <translation>beállítások</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2055"/>
+        <location filename="../defaultlook.cpp" line="2063"/>
         <source>Choose a theme set</source>
         <translation>Válasszon egy témakészletet</translation>
     </message>
