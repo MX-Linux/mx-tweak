@@ -705,12 +705,6 @@
         <translation>Nollaa Fluxbox-valikko</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1593"/>
-        <source>Timeout minutes</source>
-        <extracomment>set the time before screensaver screen blank occurs</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="1690"/>
         <source>Reset ALL mx-fluxbox settings</source>
         <translation>Nollaa KAIKKI mx-fluxbox asetukset</translation>
@@ -718,6 +712,12 @@
     <message>
         <location filename="../defaultlook.ui" line="1650"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1593"/>
+        <source>Idle time (minutes)</source>
+        <extracomment>set the time before screensaver screen blank occurs</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>

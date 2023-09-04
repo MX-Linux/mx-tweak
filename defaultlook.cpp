@@ -3159,16 +3159,15 @@ void defaultlook::on_ApplyFluxboxResets_clicked()
 
     //screenblanking
     if (screenblankflag){
-
-
+        //comment default line if it exists
+        runCmd(QStringLiteral("sed -i 's/^[[:blank:]]*xset[[:blank:]].*dpms.*/#&/' $HOME/.fluxbox/startup"));
         //add new values to fluxbox startup menu if don't exist
         QString test = runCmd("grep '$HOME/.config/MX-Linux/screenblanking-mxtweak' $HOME/.fluxbox/startup").output;
-        if (test.isEmpty()){
-            //comment default line if it exists
-            runCmd(QStringLiteral("sed -i 's/^[[:blank:]]*xset[[:blank:]].*dpms.*/#&/' $HOME/.fluxbox/startup"));
+        if (test.isEmpty()){ 
             //add comment and new config file
             runCmd(QStringLiteral("sed -i '/^exec.*/i#screenblanking added by mx-tweak' $HOME/.fluxbox/startup"));
             runCmd(QStringLiteral("sed -i '/^exec.*/i$HOME\\/.config\\/MX-Linux\\/screenblanking-mxtweak &' $HOME/.fluxbox/startup"));
+            //blank space before exec
             runCmd(QStringLiteral("sed -i '/^exec.*/i\\\\' $HOME/.fluxbox/startup"));
         }
         //set new value
