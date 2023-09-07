@@ -442,7 +442,7 @@
     <message>
         <location filename="../defaultlook.ui" line="847"/>
         <source>auto</source>
-        <translation>auto</translation>
+        <translation>automático</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="852"/>
@@ -608,6 +608,12 @@
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Configurações da Doca (Dock)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="1690"/>
+        <source>Idle time (minutes)</source>
+        <extracomment>set the time of inactivity  before screensaver screen blank occurs</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="1264"/>
         <location filename="../defaultlook.ui" line="1604"/>
         <source>On</source>
@@ -687,7 +693,7 @@
         <location filename="../defaultlook.ui" line="1593"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Screensaver&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>screensaver screen blank settings</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Protetor de Tela&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1666"/>
@@ -720,10 +726,9 @@
         <translation>Atualizar as entradas dos menus existentes</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1690"/>
         <source>Period of inactivity before screensaver starts (minutes)</source>
         <extracomment>set the time of inactivity  before screensaver screen blank occurs</extracomment>
-        <translation type="unfinished"></translation>
+        <translation type="vanished">Intervalo de tempo em minutos de inatividade antes do início do protetor de tela</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1703"/>
