@@ -107,9 +107,9 @@ public:
     void thunarsingleclicksetup();
     void thunarsetsingleclick(bool state);
     void tasklistchange();
-    bool isXfce;
-    bool isFluxbox;
-    bool isKDE;
+    bool isXfce = false;
+    bool isFluxbox = false;
+    bool isKDE = false;
 
 
 

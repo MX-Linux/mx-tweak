@@ -1,3 +1,9 @@
+mx-tweak (23.10.01mx23) mx; urgency=medium
+
+  * explicity inital desktop check variables as false
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Tue, 17 Oct 2023 18:22:29 -0400
+
 mx-tweak (23.09.01mx23) mx; urgency=medium
 
   * add screen blanking timeout to fluxbox tab
