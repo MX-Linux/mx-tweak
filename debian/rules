@@ -8,14 +8,14 @@ override_dh_auto_clean:
 	rm -f src/translations/*.qm
 
 override_dh_auto_build:
-	lrelease mx-tweak.pro
+	lrelease translations/*.ts 
 	head -n1 debian/changelog | sed -e "s/.*(\([^(]*\)).*/#define VERSION \"\1\"/" > version.h
 	dh_auto_build -- $(MAKE_OPTS)
 
 override_dh_auto_install:
 	dh_auto_install -- $(MAKE_OPTS)
 
-override_dh_builddeb:
+verride_dh_builddeb:
 	dh_builddeb -- -Z xz
 
 override_dh_shlibdeps:
