@@ -8,7 +8,7 @@ override_dh_auto_clean:
 	rm -f src/translations/*.qm
 
 override_dh_auto_build:
-	lrelease translations/*.ts
+	lrelease *.cpp *.h *.ui -ts translations/*.ts	
 	head -n1 debian/changelog | sed -e "s/.*(\([^(]*\)).*/#define VERSION \"\1\"/" > version.h
 	dh_auto_build -- $(MAKE_OPTS)
 
