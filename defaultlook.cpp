@@ -3368,7 +3368,7 @@ void defaultlook::on_ButtonApplyPlasma_clicked()
     if (plasmasingleclickflag) {
         QString value = ui->checkBoxPlasmaSingleClick->isChecked() ? QStringLiteral("true") : QStringLiteral("false");
         runCmd("kwriteconfig5 --group KDE --key SingleClick " + value);
-        runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-kde-edit.sh \"kwriteconfig5 --file /root/.config/kdeglobals --group KDE --key SingleClick " + value + "\"");
+        runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-kde-edit.sh " + value);
     }
 
     if (plasmaworkspacesflag) {
