@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="es">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="es">
 <context>
     <name>QObject</name>
     <message>
@@ -611,7 +609,7 @@
         <location filename="../defaultlook.ui" line="1690"/>
         <source>Idle time (minutes)</source>
         <extracomment>set the time of inactivity  before screensaver screen blank occurs</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Tiempo de inactividad (minutos)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1264"/>
@@ -724,11 +722,6 @@
         <location filename="../defaultlook.ui" line="1646"/>
         <source>Upgrade existing menu entries</source>
         <translation>Actualizar entradas de menú existentes</translation>
-    </message>
-    <message>
-        <source>Period of inactivity before screensaver starts (minutes)</source>
-        <extracomment>set the time of inactivity  before screensaver screen blank occurs</extracomment>
-        <translation type="vanished">Periodo de inactividad antes de iniciar el salvapantallas (minutos)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1703"/>
@@ -939,7 +932,7 @@
     <message>
         <location filename="../theming_to_tweak.ui" line="14"/>
         <source>New Theme Set</source>
-        <translation>Nuevo conjunto de temas&#xa0;</translation>
+        <translation>Nuevo conjunto de temas </translation>
     </message>
     <message>
         <location filename="../theming_to_tweak.ui" line="20"/>
