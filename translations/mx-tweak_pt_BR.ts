@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="pt_BR">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="pt_BR">
 <context>
     <name>QObject</name>
     <message>
@@ -611,7 +609,7 @@
         <location filename="../defaultlook.ui" line="1690"/>
         <source>Idle time (minutes)</source>
         <extracomment>set the time of inactivity  before screensaver screen blank occurs</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Tempo ocioso em minutos para iniciar o protetor de tela</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1264"/>
@@ -724,11 +722,6 @@
         <location filename="../defaultlook.ui" line="1646"/>
         <source>Upgrade existing menu entries</source>
         <translation>Atualizar as entradas dos menus existentes</translation>
-    </message>
-    <message>
-        <source>Period of inactivity before screensaver starts (minutes)</source>
-        <extracomment>set the time of inactivity  before screensaver screen blank occurs</extracomment>
-        <translation type="vanished">Intervalo de tempo em minutos de inatividade antes do início do protetor de tela</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1703"/>
