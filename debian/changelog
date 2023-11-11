@@ -1,3 +1,9 @@
+mx-tweak (23.11.01mx23) mx; urgency=medium
+
+  * cleanup setting of singleclick status on root KDE instances (dolphin)
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 11 Nov 2023 18:11:50 -0500
+
 mx-tweak (23.10.01mx23) mx; urgency=medium
 
   * explicity inital desktop check variables as false
