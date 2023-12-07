@@ -1,4 +1,6 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="de">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="de">
 <context>
     <name>QObject</name>
     <message>
@@ -103,13 +105,13 @@
         <location filename="../defaultlook.ui" line="20"/>
         <location filename="../defaultlook.cpp" line="57"/>
         <location filename="../defaultlook.cpp" line="86"/>
-        <location filename="../defaultlook.cpp" line="651"/>
-        <location filename="../defaultlook.cpp" line="670"/>
-        <location filename="../defaultlook.cpp" line="679"/>
-        <location filename="../defaultlook.cpp" line="726"/>
-        <location filename="../defaultlook.cpp" line="734"/>
-        <location filename="../defaultlook.cpp" line="761"/>
-        <location filename="../defaultlook.cpp" line="764"/>
+        <location filename="../defaultlook.cpp" line="657"/>
+        <location filename="../defaultlook.cpp" line="676"/>
+        <location filename="../defaultlook.cpp" line="685"/>
+        <location filename="../defaultlook.cpp" line="732"/>
+        <location filename="../defaultlook.cpp" line="740"/>
+        <location filename="../defaultlook.cpp" line="767"/>
+        <location filename="../defaultlook.cpp" line="770"/>
         <source>MX Tweak</source>
         <translation>MX Tweak</translation>
     </message>
@@ -295,8 +297,10 @@
         <location filename="../defaultlook.ui" line="1138"/>
         <location filename="../defaultlook.ui" line="1283"/>
         <location filename="../defaultlook.ui" line="1766"/>
-        <location filename="../defaultlook.ui" line="1890"/>
+        <location filename="../defaultlook.ui" line="1884"/>
+        <location filename="../defaultlook.ui" line="1951"/>
         <source>Apply</source>
+        <extracomment>apply changes</extracomment>
         <translation>Anwenden</translation>
     </message>
     <message>
@@ -745,91 +749,120 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1846"/>
+        <source>Super Key</source>
+        <extracomment>referring to the meta or Left Super Key</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1854"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Choose application&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <extracomment>description of button action to launch file dialog to choose an application</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1867"/>
+        <source>Xfce-superkey defaults</source>
+        <extracomment>indicates that xfce-superkey will select a command by its default logic</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1874"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Also known as the &amp;quot;windows&amp;quot; key&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1877"/>
+        <source>Command to run with Super (Meta) key</source>
+        <extracomment>label for the field to enter the command to use with super key</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1907"/>
         <source>Other</source>
         <translation>Sonstiges</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1870"/>
+        <location filename="../defaultlook.ui" line="1931"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>Lightdm (Anmeldebildschirm) auf die Systemvorgaben zurücksetzen</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1877"/>
+        <location filename="../defaultlook.ui" line="1938"/>
         <source>Password for administrative tasks:</source>
         <translation>Passwort für administrative Aufgaben:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1908"/>
+        <location filename="../defaultlook.ui" line="1969"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>Einhängen von internen Laufwerken durch Benutzer ohne Administratorrechte aktivieren</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1915"/>
+        <location filename="../defaultlook.ui" line="1976"/>
         <source>Root</source>
         <translation>root</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1922"/>
+        <location filename="../defaultlook.ui" line="1983"/>
         <source>Enable kernel sandbox</source>
         <translation>Kernel-Sandbox aktivieren</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1929"/>
+        <location filename="../defaultlook.ui" line="1990"/>
         <source>&amp;User</source>
         <translation>&amp;Benutzer</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1936"/>
+        <location filename="../defaultlook.ui" line="1997"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Neustart erforderlich&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1939"/>
+        <location filename="../defaultlook.ui" line="2000"/>
         <source>Enable Bluetooth Adapters on boot</source>
         <translation>Bluetooth-Adapter beim Systemstart aktivieren</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1946"/>
+        <location filename="../defaultlook.ui" line="2007"/>
         <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
         <translation>apt installiert zusätzliche &quot;empfohlene&quot; Pakete als Abhängigkeiten</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1953"/>
+        <location filename="../defaultlook.ui" line="2014"/>
         <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
         <translation>Nach Installation, Entfernen und Aktualisierung von Paketen ein Fluxbox-All Aps-Menü generieren</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1960"/>
+        <location filename="../defaultlook.ui" line="2021"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
         <translation>Programmeigene Gestaltung der Oberfläche von »GTK3«-Programmen (»CSD«) verwenden, wenn diese es unterstützen. (erfordert Sitzungsneustart)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1967"/>
+        <location filename="../defaultlook.ui" line="2028"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>Intel-Treiber anstelle des standardmäßigen &quot;modsetting&quot; Treibers verwenden (Neustart erforderlich)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1974"/>
+        <location filename="../defaultlook.ui" line="2035"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>ANMERKUNG: Die existierende Datei /etc/X11/xorg.conf.d/20-intel.conf wird zur Sicherung in den &lt;HOME&gt;-Ordner verschoben </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1981"/>
+        <location filename="../defaultlook.ui" line="2042"/>
         <source>Use tearfree amdgpu option</source>
         <translation>Option &quot;Tearfree&quot; des AMDGPU-Treibers benutzen</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1988"/>
+        <location filename="../defaultlook.ui" line="2049"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>ANMERKUNG: Die existierende Datei /etc/X11/xorg.conf.d/20-amd.conf wird zur Sicherung in den &lt;HOME&gt;-Ordner verschoben </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1995"/>
+        <location filename="../defaultlook.ui" line="2056"/>
         <source>Use tearfree radeon driver option</source>
         <translation>Option &quot;Tearfree&quot; des Radeon-Treibers benutzen</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2002"/>
+        <location filename="../defaultlook.ui" line="2063"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>ANMERKUNG: Die existierende Datei /etc/X11/xorg.conf.d/20-radeon.conf wird zur Sicherung in den &lt;HOME&gt;-Ordner verschoben </translation>
     </message>
@@ -839,84 +872,90 @@
         <translation>--Anzeige-Umschaltung nur gültig für Xfce</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="650"/>
+        <location filename="../defaultlook.cpp" line="656"/>
         <source>About MX Tweak</source>
         <translation>Über MX Tweak</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="652"/>
+        <location filename="../defaultlook.cpp" line="658"/>
         <source>Version: </source>
         <translation>Version:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="653"/>
+        <location filename="../defaultlook.cpp" line="659"/>
         <source>App for quick default ui theme changes and tweaks</source>
         <translation>Anwendung für schnelle Änderungen und Anpassungen an den Voreinstellungen des UI-Themas</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="655"/>
+        <location filename="../defaultlook.cpp" line="661"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="656"/>
+        <location filename="../defaultlook.cpp" line="662"/>
         <source>%1 License</source>
         <translation>%1 Lizenz</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="670"/>
+        <location filename="../defaultlook.cpp" line="676"/>
         <source>%1 Help</source>
         <translation>%1 Hilfe</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="680"/>
+        <location filename="../defaultlook.cpp" line="686"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
         <translation>Fertig! Die Änderungen werden nach einem Neustart von Firefox wirksam.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="727"/>
+        <location filename="../defaultlook.cpp" line="733"/>
         <source>Plese remove special characters</source>
         <translation>Sonderzeichen bitte entfernen</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="727"/>
+        <location filename="../defaultlook.cpp" line="733"/>
         <source>from file name</source>
         <translation>Aus Dateinamen</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="734"/>
+        <location filename="../defaultlook.cpp" line="740"/>
         <source>File name already exists.  Choose another name</source>
         <translation>Der Dateiname existiert bereits. Wählen sie einen anderen Namen</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="762"/>
+        <location filename="../defaultlook.cpp" line="768"/>
         <source>File is not a valid tar.xz archive file</source>
         <translation>Die Datei ist keine gültige tar.xz Archivdatei</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="765"/>
+        <location filename="../defaultlook.cpp" line="771"/>
         <source>Archive does not contain a panel config</source>
         <translation>Das Archiv enthält keine Panel-Konfiguration</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="940"/>
+        <location filename="../defaultlook.cpp" line="946"/>
         <source>Panel settings</source>
         <translation>Leisten-Einstellungen</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="941"/>
+        <location filename="../defaultlook.cpp" line="947"/>
         <source>Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
         <translation>Die aktuellen Panel-Einstellungen wurden im versteckten Ordner .restore im Home-Ordner gesichert (~/.restore/).</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1723"/>
+        <location filename="../defaultlook.cpp" line="1729"/>
         <source>settings</source>
         <translation>Einstellungen</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2063"/>
+        <location filename="../defaultlook.cpp" line="2069"/>
         <source>Choose a theme set</source>
         <translation>Wählen sie ein Thema</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.cpp" line="3967"/>
+        <source>Select application to run</source>
+        <comment>will show in file dialog when selection an application to run</comment>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
