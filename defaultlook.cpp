@@ -93,6 +93,12 @@ void defaultlook::setup()
         ui->checkBoxLightdmReset->hide();
     }
 
+    if (runCmd("pgrep xfce-superkey").output.isEmpty() || ! QFile("/usr/bin/xfce-superkey-launcher").exists()){
+        ui->tabWidget->removeTab(Tab::Superkey);
+    } else {
+        setupSuperKey();
+    }
+
     if (checkXFCE()) {
         isXfce = true;
         whichpanel();
@@ -3953,5 +3959,65 @@ void defaultlook::on_spinBoxScreenBlankingTimeout_valueChanged(int arg1)
 {
     screenblankflag = true;
     ui->ApplyFluxboxResets->setEnabled(true);
+}
+
+
+void defaultlook::on_toolButtonSuperFileBrowser_clicked()
+{
+    QString customcommand = QFileDialog::getOpenFileName(this, tr("Select application to run","will show in file dialog when selection an application to run"), "/usr/bin");
+    QString cmd;
+
+    //process file
+    QFileInfo customcommandcheck(customcommand);
+    if (customcommandcheck.fileName().endsWith(".desktop")){
+        cmd = runCmd("grep Exec= " + customcommand).output.section("=",1,1).section("%",0,0).trimmed();
+        cmd = runCmd("which " + cmd).output;
+    } else {
+        cmd = runCmd("which " + customcommand).output;
+    }
+    if (verbose) {
+        qDebug() << "custom command is " << cmd;
+    }
+     ui->lineEditSuperCommand->setText(cmd);
+     ui->pushButtonSuperKeyApply->setEnabled(true);
+
+}
+
+
+void defaultlook::on_pushButtonSuperKeyApply_clicked()
+{
+    QString home_path = QDir::homePath();
+    if (!QFile(home_path + "/.config/xfce-superkey/xfce-superkey.conf").exists()){
+        runCmd("mkdir -p " + home_path + "/.config/xfce-superkey/xfce-superkey.conf");
+        runCmd("cp /usr/share/xfce-superkey/xfce-superkey.conf " + home_path + "/.config/xfce-superkey/xfce-superkey.conf");
+    }
+    QString cmd = ui->lineEditSuperCommand->text();
+    //add command if no uncommented lines
+    if (runCmd("grep -m1 -v -e '^#' -e '^$' $HOME/.config/xfce-superkey/xfce-superkey.conf").output.isEmpty()){
+        runCmd("echo " + cmd + ">> $HOME/.config/xfce-superkey/xfce-superkey.conf");
+    } else { //replace first uncommented line with new command
+        runCmd("sed -i '/^[^#]/s;.*;" + cmd + ";' $HOME/.config/xfce-superkey/xfce-superkey.conf");
+    }
+    //restart xfce-superkey
+    runCmd("pkill xfce-superkey");
+    runCmd("xfce-superkey-launcher");
+    setupSuperKey();
+}
+
+void defaultlook::setupSuperKey()
+{
+    QString test = runCmd("grep -m1 -v -e '^#' -e '^$' $HOME/.config/xfce-superkey/xfce-superkey.conf").output;
+    ui->pushButtonSuperKeyApply->setEnabled(false);
+    if (!test.isEmpty()){
+        ui->lineEditSuperCommand->setText(test);
+    }
+
+}
+
+
+
+void defaultlook::on_lineEditSuperCommand_textChanged(const QString &arg1)
+{
+    ui->pushButtonSuperKeyApply->setEnabled(true);
 }
 
