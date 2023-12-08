@@ -47,7 +47,7 @@ enum {Top = 3, Bottom, Left, Right};
 }
 
 namespace Tab {
-enum {Panel, Theme, Compositor, Display, Config, Fluxbox, Plasma, Others};
+enum {Panel, Theme, Compositor, Display, Config, Fluxbox, Plasma, Superkey, Others};
 }
 
 namespace ValueSize { // kde value starts from 1 vs. combobox index 1=0,2=1,3=2,4=3,5=4,6=5
@@ -128,6 +128,7 @@ public:
     void setupEtc();
     void setupFluxbox();
     void setupPlasma();
+    void setupSuperKey();
     QString readPlasmaPanelConfig(const QString &Key) const;
     QString readTaskmanagerConfig(const QString &Key) const;
     void writePlasmaPanelConfig(const QString &key, const QString &value) const;
@@ -293,6 +294,12 @@ private slots:
     void on_listWidgetCursorThemes_currentTextChanged(const QString &currentText);
 
     void on_spinBoxScreenBlankingTimeout_valueChanged(int arg1);
+
+    void on_toolButtonSuperFileBrowser_clicked();
+
+    void on_pushButtonSuperKeyApply_clicked();
+
+    void on_lineEditSuperCommand_textChanged(const QString &arg1);
 
 private:
     Ui::defaultlook *ui;
