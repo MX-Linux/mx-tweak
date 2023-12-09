@@ -14,11 +14,12 @@ if [ ! -s  .tx/config ]; then
 [main]
 host = https://www.transifex.com
 
-[antix-development.$APPNAME]
-file_filter = ./${APPNAME}_<lang>.ts
-source_file = ${APPNAME}_en.ts
+[o:anticapitalista:p:antix-development:r:$APPNAME]
+file_filter = ./mx-tweak_<lang>.ts
+source_file = mx-tweak_en.ts
 source_lang = en
-type = ts
+type        = ts
+minimum_perc = 25
 EOF
 fi    
 
@@ -27,7 +28,7 @@ fi
 
 # get all translations
 if command -v tx >/dev/null; then
-   echodo tx pull -r antix-development.$APPNAME  --all
+   echodo tx pull -r antix-development.$APPNAME -a
 fi
 
 #lupdate ../*.pro
