@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="fr">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="fr">
 <context>
     <name>QObject</name>
     <message>
@@ -311,7 +309,7 @@
         <location filename="../defaultlook.ui" line="566"/>
         <source>Set Tasklist plugin to:</source>
         <extracomment>change the tasklist plugin</extracomment>
-        <translation>Régler le plugin Tasklist sur&#xa0;:</translation>
+        <translation>Régler le plugin Tasklist sur :</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="580"/>
@@ -535,7 +533,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1149"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
-        <translation>                   note&#xa0;: pour basculer en hibernation, le fichier swap doit être &gt;= RAM</translation>
+        <translation>                   note : pour basculer en hibernation, le fichier swap doit être &gt;= RAM</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1169"/>
@@ -611,7 +609,7 @@
         <location filename="../defaultlook.ui" line="1690"/>
         <source>Idle time (minutes)</source>
         <extracomment>set the time of inactivity  before screensaver screen blank occurs</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Délai (minutes) pour activer la mise en veille de l’écran.</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1264"/>
@@ -726,11 +724,6 @@
         <translation>Mettre à jour les entrées existantes du menu</translation>
     </message>
     <message>
-        <source>Period of inactivity before screensaver starts (minutes)</source>
-        <extracomment>set the time of inactivity  before screensaver screen blank occurs</extracomment>
-        <translation type="vanished">Délai (minutes) pour activer l’écran de veille.</translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="1703"/>
         <source>Plasma</source>
         <translation>Plasma</translation>
@@ -763,7 +756,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1877"/>
         <source>Password for administrative tasks:</source>
-        <translation>Mot de passe pour les tâches administratives&#xa0;:</translation>
+        <translation>Mot de passe pour les tâches administratives :</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1908"/>
@@ -818,7 +811,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1974"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
-        <translation>          NOTE&#xa0;: l’actuelle configuration /etc/X11/xorg.conf.d/20-intel.conf sera sauvegardée dans le dossier home</translation>
+        <translation>          NOTE : l’actuelle configuration /etc/X11/xorg.conf.d/20-intel.conf sera sauvegardée dans le dossier home</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1981"/>
@@ -828,7 +821,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1988"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
-        <translation>          NOTE&#xa0;: l’actuelle configuration /etc/X11/xorg.conf.d/20-amd.conf sera sauvegardée dans le répertoire home</translation>
+        <translation>          NOTE : l’actuelle configuration /etc/X11/xorg.conf.d/20-amd.conf sera sauvegardée dans le répertoire home</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1995"/>
@@ -838,7 +831,7 @@
     <message>
         <location filename="../defaultlook.ui" line="2002"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
-        <translation>          NOTE&#xa0;: l’actuelle configuration /etc/X11/xorg.conf.d/20-radeon.conf sera sauvegardée dans le répertoire home</translation>
+        <translation>          NOTE : l’actuelle configuration /etc/X11/xorg.conf.d/20-radeon.conf sera sauvegardée dans le répertoire home</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="58"/>
@@ -853,7 +846,7 @@
     <message>
         <location filename="../defaultlook.cpp" line="652"/>
         <source>Version: </source>
-        <translation>Version&#xa0;: </translation>
+        <translation>Version : </translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="653"/>
@@ -878,7 +871,7 @@
     <message>
         <location filename="../defaultlook.cpp" line="680"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
-        <translation>Terminé&#xa0;! Firefox peut nécessiter un redémarrage pour activer les changements.</translation>
+        <translation>Terminé ! Firefox peut nécessiter un redémarrage pour activer les changements.</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="727"/>
@@ -978,7 +971,7 @@
     <message>
         <location filename="../window_buttons.ui" line="56"/>
         <source>Sorting Order:</source>
-        <translation>Ordre de tri&#xa0;:</translation>
+        <translation>Ordre de tri :</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="64"/>
@@ -1013,7 +1006,7 @@
     <message>
         <location filename="../window_buttons.ui" line="99"/>
         <source>Window grouping:</source>
-        <translation>Groupement de fenêtres&#xa0;:</translation>
+        <translation>Groupement de fenêtres :</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="107"/>
@@ -1028,7 +1021,7 @@
     <message>
         <location filename="../window_buttons.ui" line="120"/>
         <source>Middle click action:</source>
-        <translation>Action du clic du milieu&#xa0;:</translation>
+        <translation>Action du clic du milieu :</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="128"/>

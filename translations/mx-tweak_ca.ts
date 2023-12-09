@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="ca">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="ca">
 <context>
     <name>QObject</name>
     <message>
@@ -139,7 +137,7 @@
     <message>
         <location filename="../defaultlook.ui" line="105"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the look of your desktop&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Personalitzeu l&apos;aspecte de l&apos;escriptori&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Personalitza l&apos;aspecte de l&apos;escriptori&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="119"/>
@@ -186,7 +184,7 @@
         <location filename="../defaultlook.ui" line="293"/>
         <source>Volume</source>
         <extracomment>volume plugin scale factor</extracomment>
-        <translation>Volum </translation>
+        <translation>Volum</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="300"/>
@@ -227,7 +225,7 @@
         <location filename="../defaultlook.ui" line="1753"/>
         <source>Affects 1st panel</source>
         <extracomment>acts on the first poanel found in Xfce panel xml fle</extracomment>
-        <translation>Afecta al 1r plafó </translation>
+        <translation>Afecta al 1r plafó</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="369"/>
@@ -285,7 +283,7 @@
     <message>
         <location filename="../defaultlook.ui" line="513"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Docklike is the modern dock plugin for the panel.  Window Buttons is the classic tasklist without dock features.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Docklike és el connector de l&apos;acoblador  modern per al quadre.  Window Buttons és la clàssica llista de tasques sense prestacions d&apos;acoblador.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Docklike és el connector de l&apos;acoblador  modern per al plafó.  Window Buttons és la clàssica llista de tasques sense prestacions d&apos;acoblador.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="536"/>
@@ -402,12 +400,12 @@
     <message>
         <location filename="../defaultlook.ui" line="780"/>
         <source>Xfwm Settings</source>
-        <translation>Paràmetres de Xfwm </translation>
+        <translation>Paràmetres de Xfwm</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="791"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Changing the VBlank mode may help alleviate some screen tearing issues.  See Help for more information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;canviant el mode VBlank pot alleujar alguns problemes d&apos;estrips de pantalla. Vegeu l&apos;ajuda per més informació.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Canviar el mode VBlank pot alleujar alguns problemes d&apos;estrips de pantalla. Vegeu l&apos;ajuda per a més informació.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="794"/>
@@ -611,7 +609,7 @@
         <location filename="../defaultlook.ui" line="1690"/>
         <source>Idle time (minutes)</source>
         <extracomment>set the time of inactivity  before screensaver screen blank occurs</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>temps inactiu (minuts)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1264"/>
@@ -726,11 +724,6 @@
         <translation>Actualitza les entrades actuals del menú</translation>
     </message>
     <message>
-        <source>Period of inactivity before screensaver starts (minutes)</source>
-        <extracomment>set the time of inactivity  before screensaver screen blank occurs</extracomment>
-        <translation type="vanished">Període d&apos;inactivitat abans d&apos;engegar l&apos;estalvi de pantalla (minuts)</translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="1703"/>
         <source>Plasma</source>
         <translation>Plasma</translation>
@@ -743,7 +736,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1822"/>
         <source>Enable single-click</source>
-        <translation>Activa un-sol-clic</translation>
+        <translation>Activa clic-únic</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1836"/>
@@ -813,7 +806,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1967"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
-        <translation>Useu el controlador intel en comptes del controlador &quot;modesetting&quot; (cal reiniciar)</translation>
+        <translation>Usa el controlador intel en comptes del controlador &quot;modesetting&quot; (cal reiniciar)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1974"/>
@@ -833,7 +826,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1995"/>
         <source>Use tearfree radeon driver option</source>
-        <translation>Usa el l&apos;opció del controlador radeon sense estrips</translation>
+        <translation>Usa l&apos;opció del controlador Rdeon sense estrips</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2002"/>
@@ -903,7 +896,7 @@
     <message>
         <location filename="../defaultlook.cpp" line="765"/>
         <source>Archive does not contain a panel config</source>
-        <translation>L&apos;arxiu no conté la configuració d&apos;un panell</translation>
+        <translation>L&apos;arxiu no conté la configuració d&apos;un plafó</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="940"/>
@@ -998,7 +991,7 @@
     <message>
         <location filename="../window_buttons.ui" line="79"/>
         <source>Group title and window title</source>
-        <translation>Agrupa el títol i el títol de la finestra</translation>
+        <translation>Agrupa el títol i el de la finestra</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="84"/>
@@ -1116,7 +1109,7 @@
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="86"/>
         <source>Show shadows under dock windows</source>
-        <translation>Mostra ombres sota l&apos;acoblador de finestres</translation>
+        <translation>Mostra ombres sota les finestres de l&apos;acoblador</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="93"/>

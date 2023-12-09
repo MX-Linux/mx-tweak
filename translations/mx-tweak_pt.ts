@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="pt">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="pt">
 <context>
     <name>QObject</name>
     <message>
@@ -27,7 +25,7 @@
     <message>
         <location filename="../main.cpp" line="47"/>
         <source>GUI for applying assorted useful tweaks</source>
-        <translation>Interface gráfico para diversos ajustes</translation>
+        <translation>Interface gráfica para diversos ajustes</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="50"/>
@@ -611,7 +609,7 @@
         <location filename="../defaultlook.ui" line="1690"/>
         <source>Idle time (minutes)</source>
         <extracomment>set the time of inactivity  before screensaver screen blank occurs</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Tempo de inatividade (minutos)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1264"/>
@@ -724,11 +722,6 @@
         <location filename="../defaultlook.ui" line="1646"/>
         <source>Upgrade existing menu entries</source>
         <translation>Actualizar entradas de menu existentes</translation>
-    </message>
-    <message>
-        <source>Period of inactivity before screensaver starts (minutes)</source>
-        <extracomment>set the time of inactivity  before screensaver screen blank occurs</extracomment>
-        <translation type="vanished">Tempo de inactividade até ser activada a protecção de ecrâ (minutos)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1703"/>

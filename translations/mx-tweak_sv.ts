@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="sv">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="sv">
 <context>
     <name>QObject</name>
     <message>
@@ -611,7 +609,7 @@
         <location filename="../defaultlook.ui" line="1690"/>
         <source>Idle time (minutes)</source>
         <extracomment>set the time of inactivity  before screensaver screen blank occurs</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Vilotid (minuter)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1264"/>
@@ -724,11 +722,6 @@
         <location filename="../defaultlook.ui" line="1646"/>
         <source>Upgrade existing menu entries</source>
         <translation>Uppgradera befintliga meny-poster</translation>
-    </message>
-    <message>
-        <source>Period of inactivity before screensaver starts (minutes)</source>
-        <extracomment>set the time of inactivity  before screensaver screen blank occurs</extracomment>
-        <translation type="vanished">Period av inaktivitet innan skärmsläckaren startar (minuter)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1703"/>
