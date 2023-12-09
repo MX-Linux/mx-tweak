@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="el">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="el">
 <context>
     <name>QObject</name>
     <message>
@@ -47,7 +45,7 @@
     <message>
         <location filename="../main.cpp" line="53"/>
         <source>Opens Other tab directly.  Valid on all desktops</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -105,13 +103,13 @@
         <location filename="../defaultlook.ui" line="20"/>
         <location filename="../defaultlook.cpp" line="57"/>
         <location filename="../defaultlook.cpp" line="86"/>
-        <location filename="../defaultlook.cpp" line="657"/>
-        <location filename="../defaultlook.cpp" line="676"/>
-        <location filename="../defaultlook.cpp" line="685"/>
-        <location filename="../defaultlook.cpp" line="732"/>
-        <location filename="../defaultlook.cpp" line="740"/>
-        <location filename="../defaultlook.cpp" line="767"/>
-        <location filename="../defaultlook.cpp" line="770"/>
+        <location filename="../defaultlook.cpp" line="651"/>
+        <location filename="../defaultlook.cpp" line="670"/>
+        <location filename="../defaultlook.cpp" line="679"/>
+        <location filename="../defaultlook.cpp" line="726"/>
+        <location filename="../defaultlook.cpp" line="734"/>
+        <location filename="../defaultlook.cpp" line="761"/>
+        <location filename="../defaultlook.cpp" line="764"/>
         <source>MX Tweak</source>
         <translation>MX Ρυθμίσεις</translation>
     </message>
@@ -214,7 +212,7 @@
     <message>
         <location filename="../defaultlook.ui" line="340"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Tasklist&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="347"/>
@@ -232,7 +230,7 @@
     <message>
         <location filename="../defaultlook.ui" line="369"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Panel Plugin Scales&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="389"/>
@@ -250,7 +248,7 @@
         <location filename="../defaultlook.ui" line="419"/>
         <source>Power Manager</source>
         <extracomment>power manager plugin scale factor</extracomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="426"/>
@@ -285,7 +283,7 @@
     <message>
         <location filename="../defaultlook.ui" line="513"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Docklike is the modern dock plugin for the panel.  Window Buttons is the classic tasklist without dock features.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="536"/>
@@ -297,10 +295,8 @@
         <location filename="../defaultlook.ui" line="1138"/>
         <location filename="../defaultlook.ui" line="1283"/>
         <location filename="../defaultlook.ui" line="1766"/>
-        <location filename="../defaultlook.ui" line="1884"/>
-        <location filename="../defaultlook.ui" line="1951"/>
+        <location filename="../defaultlook.ui" line="1890"/>
         <source>Apply</source>
-        <extracomment>apply changes</extracomment>
         <translation>Εφαρμογή</translation>
     </message>
     <message>
@@ -313,7 +309,7 @@
         <location filename="../defaultlook.ui" line="566"/>
         <source>Set Tasklist plugin to:</source>
         <extracomment>change the tasklist plugin</extracomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="580"/>
@@ -350,7 +346,7 @@
         <location filename="../defaultlook.ui" line="687"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Cursors&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>cursor theme</extracomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="694"/>
@@ -613,7 +609,7 @@
         <location filename="../defaultlook.ui" line="1690"/>
         <source>Idle time (minutes)</source>
         <extracomment>set the time of inactivity  before screensaver screen blank occurs</extracomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1264"/>
@@ -695,7 +691,7 @@
         <location filename="../defaultlook.ui" line="1593"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Screensaver&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>screensaver screen blank settings</extracomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1666"/>
@@ -749,120 +745,91 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1846"/>
-        <source>Super Key</source>
-        <extracomment>referring to the meta or Left Super Key</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1854"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Choose application&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <extracomment>description of button action to launch file dialog to choose an application</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1867"/>
-        <source>Xfce-superkey defaults</source>
-        <extracomment>indicates that xfce-superkey will select a command by its default logic</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1874"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Also known as the &amp;quot;windows&amp;quot; key&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1877"/>
-        <source>Command to run with Super (Meta) key</source>
-        <extracomment>label for the field to enter the command to use with super key</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1907"/>
         <source>Other</source>
         <translation>Άλλα</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1931"/>
+        <location filename="../defaultlook.ui" line="1870"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>Επαναφορά του προεπιλεγμένου θέματος στο Lightdm (οθόνη σύνδεσης)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1938"/>
+        <location filename="../defaultlook.ui" line="1877"/>
         <source>Password for administrative tasks:</source>
         <translation>Κωδικός πρόσβασης για εργασίες διαχειριστή:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1969"/>
+        <location filename="../defaultlook.ui" line="1908"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>Ενεργοποίηση προσάρτησης εσωτερικών δίσκων από μη διαχειριστές</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1976"/>
+        <location filename="../defaultlook.ui" line="1915"/>
         <source>Root</source>
         <translation>Root</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1983"/>
+        <location filename="../defaultlook.ui" line="1922"/>
         <source>Enable kernel sandbox</source>
         <translation>Ενεργοποίηση sandbox του πυρήνα</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1990"/>
+        <location filename="../defaultlook.ui" line="1929"/>
         <source>&amp;User</source>
         <translation>&amp;Χρήστης</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1997"/>
+        <location filename="../defaultlook.ui" line="1936"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;απαιτείται επανεκκίνηση&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2000"/>
+        <location filename="../defaultlook.ui" line="1939"/>
         <source>Enable Bluetooth Adapters on boot</source>
         <translation>Ενεργοποίηση του Bluetooth στην εκκίνηση</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2007"/>
+        <location filename="../defaultlook.ui" line="1946"/>
         <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
         <translation>Το apt εγκαθιστά και τα &quot;προτεινόμενα&quot; πακέτα ως εξαρτήσεις</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2014"/>
+        <location filename="../defaultlook.ui" line="1953"/>
         <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2021"/>
+        <location filename="../defaultlook.ui" line="1960"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
         <translation>Χρήση Client Side Decorations (CSD) σε εφαρμογές GTK3 που τις υποστηρίζουν (απαιτείται επανεκκίνηση της συνεδρίας)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2028"/>
+        <location filename="../defaultlook.ui" line="1967"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>Χρήση του προγράμματος οδήγησης intel αντί του προεπιλεγμένου &quot;modesetting&quot; (απαιτείται επανεκκίνηση)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2035"/>
+        <location filename="../defaultlook.ui" line="1974"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>          ΣΗΜΕΙΩΣΗ: Θα δημιουργηθεί αντίγραφο ασφαλείας του αρχείου /etc/X11/xorg.conf.d/20-intel.conf στον αρχικό φάκελο του χρήστη</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2042"/>
+        <location filename="../defaultlook.ui" line="1981"/>
         <source>Use tearfree amdgpu option</source>
         <translation>Χρήση της επιλογής tearfree στο πρόγραμμα οδήγησης amdgpu</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2049"/>
+        <location filename="../defaultlook.ui" line="1988"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>          ΣΗΜΕΙΩΣΗ: Θα δημιουργηθεί αντίγραφο ασφαλείας του αρχείου /etc/X11/xorg.conf.d/20-amd.conf  στον αρχικό φάκελο του χρήστη</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2056"/>
+        <location filename="../defaultlook.ui" line="1995"/>
         <source>Use tearfree radeon driver option</source>
         <translation>Χρήση της επιλογής tearfree στο πρόγραμμα οδήγησης radeon</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2063"/>
+        <location filename="../defaultlook.ui" line="2002"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>          ΣΗΜΕΙΩΣΗ: Θα δημιουργηθεί αντίγραφο ασφαλείας του αρχείου /etc/X11/xorg.conf.d/20-radeon.conf στον αρχικό φάκελο του χρήστη</translation>
     </message>
@@ -872,90 +839,84 @@
         <translation>--διακόπτης οθόνης μόνο για το Xfce</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="656"/>
+        <location filename="../defaultlook.cpp" line="650"/>
         <source>About MX Tweak</source>
         <translation>Περί του MX Ρυθμίσεις</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="658"/>
+        <location filename="../defaultlook.cpp" line="652"/>
         <source>Version: </source>
         <translation>Έκδοση: </translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="659"/>
+        <location filename="../defaultlook.cpp" line="653"/>
         <source>App for quick default ui theme changes and tweaks</source>
         <translation>Εφαρμογή για γρήγορες αλλαγές και διορθώσεις του προεπιλεγμένου θέματος</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="661"/>
+        <location filename="../defaultlook.cpp" line="655"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Πνευματικά δικαιώματα (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="662"/>
+        <location filename="../defaultlook.cpp" line="656"/>
         <source>%1 License</source>
         <translation>Άδεια %1</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="676"/>
+        <location filename="../defaultlook.cpp" line="670"/>
         <source>%1 Help</source>
         <translation>Βοήθεια %1</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="686"/>
+        <location filename="../defaultlook.cpp" line="680"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
         <translation>Ολοκληρώθηκε! Το Firefox μπορεί να χρειαστεί επανεκκίνηση για να ισχύσουν οι αλλαγές</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="733"/>
+        <location filename="../defaultlook.cpp" line="727"/>
         <source>Plese remove special characters</source>
         <translation>Παρακαλώ αφαιρέστε τους ειδικούς χαρακτήρες</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="733"/>
+        <location filename="../defaultlook.cpp" line="727"/>
         <source>from file name</source>
         <translation>από το όνομα του αρχείου</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="740"/>
+        <location filename="../defaultlook.cpp" line="734"/>
         <source>File name already exists.  Choose another name</source>
         <translation>Υπάρχει το όνομα του αρχείου.  Επιλέξτε άλλο όνομα</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="768"/>
+        <location filename="../defaultlook.cpp" line="762"/>
         <source>File is not a valid tar.xz archive file</source>
         <translation>Το αρχείο δεν είναι έγκυρο αρχείο αρχειοθέτησης tar.xz</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="771"/>
+        <location filename="../defaultlook.cpp" line="765"/>
         <source>Archive does not contain a panel config</source>
         <translation>Το αρχείο δεν περιέχει ρυθμίσεις του ταμπλό</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="946"/>
+        <location filename="../defaultlook.cpp" line="940"/>
         <source>Panel settings</source>
         <translation>Ρυθμίσεις ταμπλό</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="947"/>
+        <location filename="../defaultlook.cpp" line="941"/>
         <source>Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
         <translation>Οι τρέχουσες ρυθμίσεις του ταμπλό σας αποθηκεύτηκαν σαν αντίγραφο ασφαλείας, σε έναν κρυφό φάκελο με όνομα .restore στον αρχικό κατάλογο του χρήστη (~/.restore /)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1729"/>
+        <location filename="../defaultlook.cpp" line="1723"/>
         <source>settings</source>
         <translation>ρυθμίσεις</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2069"/>
+        <location filename="../defaultlook.cpp" line="2063"/>
         <source>Choose a theme set</source>
         <translation>Επιλογή θέματος</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.cpp" line="3967"/>
-        <source>Select application to run</source>
-        <comment>will show in file dialog when selection an application to run</comment>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
