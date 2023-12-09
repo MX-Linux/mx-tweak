@@ -8,7 +8,7 @@ override_dh_auto_clean:
 	rm -f src/translations/*.qm
 
 override_dh_auto_build:
-	lrelease translations/*.ts
+	lrelease -removeidentical -nounfinished translations/*_am.ts translations/*_ar.ts translations/*_bg.ts translations/*_bn.ts translations/*_ca.ts translations/*_cs.ts translations/*_da.ts translations/*_de.ts translations/*_el.ts translations/*_en.ts translations/*_es.ts translations/*_es_ES.ts translations/*_et.ts translations/*_eu.ts translations/*_fa.ts translations/*_fi.ts translations/*_fil_PH.ts translations/*_fr.ts translations/*_fr_BE.ts translations/*_he_IL.ts translations/*_hi.ts translations/*_hr.ts translations/*_hu.ts translations/*_id.ts translations/*_is.ts translations/*_it.ts translations/*_ja.ts translations/*_kk.ts translations/*_ko.ts translations/*_lt.ts translations/*_mk.ts translations/*_mr.ts translations/*_nb.ts translations/*_nl.ts translations/*_pl.ts translations/*_pt.ts translations/*_pt_BR.ts translations/*_ro.ts translations/*_ru.ts translations/*_sk.ts translations/*_sl.ts translations/*_sq.ts translations/*_sr.ts translations/*_sv.ts translations/*_tr.ts translations/*_uk.ts translations/*_vi.ts translations/*_zh_CN.ts translations/*_zh_TW.ts
 	head -n1 debian/changelog | sed -e "s/.*(\([^(]*\)).*/#define VERSION \"\1\"/" > version.h
 	dh_auto_build -- $(MAKE_OPTS)
 
