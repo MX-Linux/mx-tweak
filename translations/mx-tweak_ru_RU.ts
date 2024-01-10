@@ -1,53 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="sl">
+<TS version="2.1" language="ru_RU">
 <context>
     <name>QObject</name>
     <message>
         <location filename="../about.cpp" line="41"/>
         <source>License</source>
-        <translation>Licenca</translation>
+        <translation>Лицензия</translation>
     </message>
     <message>
         <location filename="../about.cpp" line="42"/>
         <location filename="../about.cpp" line="52"/>
         <source>Changelog</source>
-        <translation>Dnevnik sprememb</translation>
+        <translation>Список изменений</translation>
     </message>
     <message>
         <location filename="../about.cpp" line="43"/>
         <source>Cancel</source>
-        <translation>Prekliči</translation>
+        <translation>Отмена</translation>
     </message>
     <message>
         <location filename="../about.cpp" line="64"/>
         <source>&amp;Close</source>
-        <translation>&amp;Zapri</translation>
+        <translation>&amp;Закрыть</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="47"/>
         <source>GUI for applying assorted useful tweaks</source>
-        <translation>Grafični vmesnik za uporabo izbranih uporabnih spreprilagoditev</translation>
+        <translation>Графический интерфейс для применения различных полезных настроек</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="50"/>
         <source>launches brightness-systray</source>
-        <translation>zažene svetlobo v sistemski pasici</translation>
+        <translation>запускает brightness-systray</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="51"/>
         <source>opens with display tab open.  Only valid with Xfce desktop running</source>
-        <translation>se odpre z odprtim zavihkom zaslona. Deluje le, če je zagnan Xfce namizje</translation>
+        <translation>открывается с открытой вкладкой дисплея. Действительно только с рабочим столом Xfce</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="52"/>
         <source>Opens theme tab directly.  Valid on Xfce &amp; Fluxbox desktops</source>
-        <translation>Neposredno odpri zavihek teme. Deluje le na Xfce in Fluxbox namizjih</translation>
+        <translation>Открывает вкладку темы напрямую. Действительно на рабочих столах Xfce и Fluxbox.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="53"/>
         <source>Opens Other tab directly.  Valid on all desktops</source>
-        <translation>Zavihek neposredno odpre. Deluje na vseh namizjih</translation>
+        <translation>Открывает другую вкладку напрямую. Действительно на всех рабочих столах.</translation>
     </message>
 </context>
 <context>
@@ -55,28 +55,28 @@
     <message>
         <location filename="../brightness_small.ui" line="14"/>
         <source>MainWindow</source>
-        <translation>Glavno okno</translation>
+        <translation>Главное Окно</translation>
     </message>
     <message>
         <location filename="../brightness_small.ui" line="39"/>
         <source>Save</source>
-        <translation>Shrani</translation>
+        <translation>Сохранить</translation>
     </message>
     <message>
         <location filename="../brightness_small.ui" line="59"/>
         <source>Software (xrandr) Brightness</source>
-        <translation>Programska (xrandr) osvetlitev</translation>
+        <translation>Программная (xrandr) яркость</translation>
     </message>
     <message>
         <location filename="../brightness_small.ui" line="66"/>
         <location filename="../brightness_small.ui" line="87"/>
         <source>TextLabel</source>
-        <translation>TekstovnaOznaka</translation>
+        <translation>Текстовая метка</translation>
     </message>
     <message>
         <location filename="../brightness_small.ui" line="80"/>
         <source>Hardware Backlight</source>
-        <translation>Strojna zadnja osvetlitev</translation>
+        <translation>Аппаратная подсветка</translation>
     </message>
     <message>
         <location filename="../brightness_small.ui" line="94"/>
@@ -86,17 +86,17 @@
     <message>
         <location filename="../brightness_small.cpp" line="33"/>
         <source>MX-Tweak</source>
-        <translation>MX-Prilagoditve</translation>
+        <translation>MX-Tweak</translation>
     </message>
     <message>
         <location filename="../brightness_small.cpp" line="58"/>
         <source>Display</source>
-        <translation>Zaslon</translation>
+        <translation>Экран</translation>
     </message>
     <message>
         <location filename="../brightness_small.cpp" line="63"/>
         <source>&amp;Quit</source>
-        <translation>&amp;Končaj</translation>
+        <translation>&amp;Выход</translation>
     </message>
 </context>
 <context>
@@ -113,63 +113,63 @@
         <location filename="../defaultlook.cpp" line="767"/>
         <location filename="../defaultlook.cpp" line="770"/>
         <source>MX Tweak</source>
-        <translation>MX Prilagoditve</translation>
+        <translation>MX Tweak</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="41"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the panel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Prilagodi pano&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Настройка панели&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="51"/>
         <location filename="../defaultlook.ui" line="272"/>
         <source>Panel</source>
-        <translation>Pano</translation>
+        <translation>Панель</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="71"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configure window behavior and shortcuts&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Konfiguriraj obnašanje oken in bližnjice&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Настройка поведения окон и сочетаний клавиш&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="85"/>
         <source>Window Manager</source>
-        <translation>Upravljalnik oken</translation>
+        <translation>Оконный менеджер</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="105"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the look of your desktop&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Prilagodi videz namizja&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Персонализация рабочего стола&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="119"/>
         <source>Appearance</source>
-        <translation>Videz</translation>
+        <translation>Внешний вид</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="133"/>
         <source>Xfce Settings</source>
-        <translation>Xfce nastavitve</translation>
+        <translation>Настройки Xfce</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="212"/>
         <source>About</source>
-        <translation>O programu</translation>
+        <translation>О</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="223"/>
         <source>Help</source>
-        <translation>Pomoč</translation>
+        <translation>Помощь</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="240"/>
         <source>Quit application</source>
-        <translation>Zapri aplikacijo</translation>
+        <translation>Выйти из приложения</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="243"/>
         <source>Close</source>
-        <translation>Zapri</translation>
+        <translation>Закрыть</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="250"/>
@@ -180,112 +180,112 @@
         <location filename="../defaultlook.ui" line="283"/>
         <source>Display panel horizontally</source>
         <extracomment>panel will be shown in a horizontal configuration</extracomment>
-        <translation>Prikaži pano vodoravno</translation>
+        <translation>Горизонтальное расположение</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="293"/>
         <source>Volume</source>
         <extracomment>volume plugin scale factor</extracomment>
-        <translation>Nosilec</translation>
+        <translation>Том</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="300"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>affects the docklike plugin</extracomment>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Podoba sidrišča&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="307"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Affects all panels&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Vpliva na vse panoje&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Влияет на все панели&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="327"/>
         <location filename="../defaultlook.ui" line="1725"/>
         <source>Bottom</source>
-        <translation>Dno</translation>
+        <translation>Внизу</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="332"/>
         <location filename="../defaultlook.ui" line="1735"/>
         <source>Top</source>
-        <translation>Vrh</translation>
+        <translation>Сверху</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="340"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Tasklist&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Seznam opravil&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Список задач&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="347"/>
         <source>Display panel vertically</source>
         <extracomment>panel will be shown in a vertical configuration</extracomment>
-        <translation>Prikaži pano navpično</translation>
+        <translation>Вертикальное расположение</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="362"/>
         <location filename="../defaultlook.ui" line="1753"/>
         <source>Affects 1st panel</source>
         <extracomment>acts on the first poanel found in Xfce panel xml fle</extracomment>
-        <translation>Vpliva na prvi pano</translation>
+        <translation>Влияет на первую панель</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="369"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Panel Plugin Scales&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Velikosti vtičnika panoja&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Масштаб панели плагинов&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="389"/>
         <source>Backup current panel configuration</source>
         <extracomment>backup existing panel configuration</extracomment>
-        <translation>Varnostno kopiraj trenutno konfiguracijo panojev</translation>
+        <translation>Сохранить текущую конфигурацию панели</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="399"/>
         <location filename="../defaultlook.ui" line="459"/>
         <source>Options</source>
-        <translation>Opcije</translation>
+        <translation>Варианты</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="419"/>
         <source>Power Manager</source>
         <extracomment>power manager plugin scale factor</extracomment>
-        <translation>Upravljalnik rabe energije</translation>
+        <translation>Диспетчер питания</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="426"/>
         <source>Restore backup panel configuration</source>
         <extracomment>restore a panel backup</extracomment>
-        <translation>Obnovi konfiguracijo panojev</translation>
+        <translation>Восстановить конфигурацию панели</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="449"/>
         <source>Set Scales</source>
         <extracomment>set a scale factor</extracomment>
-        <translation>Določi velikosti</translation>
+        <translation>Задать масштабы</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="479"/>
         <location filename="../defaultlook.ui" line="1730"/>
         <source>Left</source>
-        <translation>Levo</translation>
+        <translation>Слева</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="484"/>
         <location filename="../defaultlook.ui" line="1740"/>
         <source>Right</source>
-        <translation>Desno</translation>
+        <translation>Справа</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="492"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Buttons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>affects the window button plugin</extracomment>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Gumbi okna&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Кнопки окон&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="513"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Docklike is the modern dock plugin for the panel.  Window Buttons is the classic tasklist without dock features.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Docklike je moderen vtičnik za sidrišče na panoju.  Window Buttons je klasični seznam opravil brez lastnosti sidrišča.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Docklike — современный плагин для панели. Оконные кнопки — это классический список задач без функций закрепления.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="536"/>
@@ -301,115 +301,115 @@
         <location filename="../defaultlook.ui" line="1951"/>
         <source>Apply</source>
         <extracomment>apply changes</extracomment>
-        <translation>Potrdi</translation>
+        <translation>Применить</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="556"/>
         <source>Restore default panel</source>
         <extracomment>affects any panel that is curently configured</extracomment>
-        <translation>Obnovi privzete panoje</translation>
+        <translation>Восстановить панель по умолчанию</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="566"/>
         <source>Set Tasklist plugin to:</source>
         <extracomment>change the tasklist plugin</extracomment>
-        <translation>Nastavi vtiičnik seznama opravila na:</translation>
+        <translation>Задать плагин Tasklist:</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="580"/>
         <source>Theme</source>
-        <translation>Tema</translation>
+        <translation>Тема</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="596"/>
         <source>Theme Options</source>
-        <translation>Opcije za temo</translation>
+        <translation>Опции темы</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="606"/>
         <source>Remove User Theme Set</source>
-        <translation>Odstranite uporabnikov tematski set</translation>
+        <translation>Удалить пользовательскую настройку темы</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="617"/>
         <source>Preview</source>
-        <translation>Predogled</translation>
+        <translation>Предварительный просмотр</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="656"/>
         <source>Undo</source>
-        <translation>Prekliči</translation>
+        <translation>Отмена</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="666"/>
         <source>Save Current Settings as a Theme Set</source>
         <extracomment>save theme settings as a group</extracomment>
-        <translation>Shrani trenutne nastavitve kot tematski set</translation>
+        <translation>Сохранить текущие настройки как набор тем</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="687"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Cursors&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>cursor theme</extracomment>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Kazalci&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Курсоры&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="694"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Manager&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>theme a window manager border will get</extracomment>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Upravljanik oken&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Менеджер окон&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="704"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>theme an application will get</extracomment>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Aplikacije&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Приложения&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="711"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>icon theme</extracomment>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ikone&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Значки&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="728"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Themes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Teme&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Темы&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="738"/>
         <location filename="../defaultlook.ui" line="756"/>
         <source>Compositor</source>
-        <translation>Sestavljalnik</translation>
+        <translation>Композитор</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="749"/>
         <source>Transparency and shadow options</source>
-        <translation>Opcije za prosojnost in sence</translation>
+        <translation>Параметры прозрачности и теней</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="763"/>
         <source>Edit compton.conf directly in text editor</source>
-        <translation>Uredi compton.conf neposredno v urejvalniku teksta</translation>
+        <translation>Редактировать compton.conf в текстовом редакторе</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="766"/>
         <source>Edit compton.conf</source>
-        <translation>Uredi compton.conf</translation>
+        <translation>Редактировать compton.conf</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="777"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce Compositor Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nastavitve za Xfce sestavljalnik&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Настройки композитора Xfce&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="780"/>
         <source>Xfwm Settings</source>
-        <translation>Xfwm nastavitve</translation>
+        <translation>Настройки Xfmw</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="791"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Changing the VBlank mode may help alleviate some screen tearing issues.  See Help for more information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Spreminjanje VBlank načina lahko pomaga pri odpravljanju težav s prikazovanjem na zaslonu (prelivanje). Glej pomoč za več podatkov.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Изменение режима VBlank может смягчить некоторые проблемы тиринга. Для подробностей смотрите Справку.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="794"/>
@@ -419,32 +419,32 @@
     <message>
         <location filename="../defaultlook.ui" line="801"/>
         <source>Launch compton-conf configuration tool</source>
-        <translation>Zaženi compton-conf konfiguracijsko orodje</translation>
+        <translation>Запуск инструмента конфигурации Compton</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="804"/>
         <source>Compton settings</source>
-        <translation>Compton nastavitve</translation>
+        <translation>Настройки Compton</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="828"/>
         <source>None</source>
-        <translation>brez</translation>
+        <translation>Нет</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="833"/>
         <source>Xfwm (Xfce) Compositor</source>
-        <translation>Xfwm (Xfce) sestavljalnik</translation>
+        <translation>Композитор Xfwm (Xfce)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="838"/>
         <source>Compton </source>
-        <translation>Compton </translation>
+        <translation>Compton</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="847"/>
         <source>auto</source>
-        <translation>samodejno</translation>
+        <translation>авторежим</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="852"/>
@@ -461,143 +461,143 @@
         <location filename="../defaultlook.ui" line="1396"/>
         <source>off</source>
         <extracomment>setting to 0 turns off screensaver screen blank</extracomment>
-        <translation>izklopljeno</translation>
+        <translation>откл.</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="912"/>
         <source>Display</source>
-        <translation>Zaslon</translation>
+        <translation>Экран</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="923"/>
         <source>Hardware Backlight</source>
         <extracomment>set the hardware backlight on monitors that have them</extracomment>
-        <translation>Strojna ozadnja osvetlitev</translation>
+        <translation>Аппаратная подсветка</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="930"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Display Tweaks&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Zaslonske prilagoditve&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Параметры экрана&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="957"/>
         <source>Choose Display for xrandr tweaks</source>
         <extracomment>choose the display that the xrandr tweaks will be acted upon</extracomment>
-        <translation>Izberite prikaz za xrandr prilagoditve</translation>
+        <translation>Выберите экран для настроек xrandr</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="967"/>
         <source>Resolution</source>
-        <translation>Ločljivost</translation>
+        <translation>Разрешение</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="974"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Saving is per display&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Shranjevanje za vsak zaslon&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Сохранить для этого экрана&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="977"/>
         <source>Save</source>
-        <translation>Shrani</translation>
+        <translation>Сохранить</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="984"/>
         <source>Software (xrandr) Brightness</source>
         <extracomment>adjust brightness (not backlight) via software</extracomment>
-        <translation>Programska (xrandr) osvetlitev</translation>
+        <translation>Программная (xrandr) яркость</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="991"/>
         <location filename="../defaultlook.ui" line="1088"/>
         <source>TextLabel</source>
-        <translation>TekstovnaOznaka</translation>
+        <translation>Текстовая метка</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="998"/>
         <source>GTK scaling</source>
         <extracomment>gtk scale factor</extracomment>
-        <translation>GTK prilagajanje velikosti</translation>
+        <translation>Масштабирование GTK</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1018"/>
         <source>xrandr Scaling</source>
         <extracomment>xrandr scale factor</extracomment>
-        <translation>xrandr prilagajanje velikosti</translation>
+        <translation>Масштабирование xrandr</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1114"/>
         <source>Config Options</source>
-        <translation>Config opcije</translation>
+        <translation>Параметры конфигурации</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1125"/>
         <source>Disable shortening of long filenames on the desktop</source>
-        <translation>Onemogoči krajšanje dolgih imen datotek na namizju</translation>
+        <translation>Отключить укорачивание длинных имен на рабочем столе</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1149"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
-        <translation>opomba: za hibernacijo mora biti velikost razdelka swap &gt;= RAM</translation>
+        <translation>примечание: для hibernate необходим swap &gt;= RAM</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1169"/>
         <source>Enable single-click on desktop</source>
-        <translation>Vklopi enojni klik na namizju</translation>
+        <translation>Задействовать одиночный клик на рабочем столе</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1176"/>
         <source>Enable hibernate on Log Out menu </source>
-        <translation>V odjavnem meniju omogoči hibernacijo</translation>
+        <translation>Добавить hibernate в меню Выхода из системы</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1183"/>
         <location filename="../defaultlook.ui" line="1317"/>
         <source>Reset Thunar custom right-click actions to system defaults</source>
-        <translation>V Thunarju ponastavi po meri določena dejanja z desnim klikom na sistemsko privzete</translation>
+        <translation>Сбросить на предустановленные действия по правому клику в Thunar</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1190"/>
         <location filename="../defaultlook.ui" line="1368"/>
         <source>Enable single-click in Thunar File Manager</source>
-        <translation>Vklopi enojni klik v Thunar upravljalniku datotek</translation>
+        <translation>Задействовать одиночный клик в файловом менеджере Thunar</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1197"/>
         <location filename="../defaultlook.ui" line="1629"/>
         <source>Thunar windows always open in split view</source>
-        <translation>Thunar okno se vedno odpre v razdeljenem prikazu</translation>
+        <translation>Окна Thunar всегда открываются в режиме раздельного просмотра</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1204"/>
         <location filename="../defaultlook.ui" line="1561"/>
         <source>Thunar split view opens horizontal</source>
-        <translation>Thunar se odpre z vodoravnim razdeljenim prikazom</translation>
+        <translation>Разделенный просмотр Thunar открывается горизонтально</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1211"/>
         <source>Show percentages in notifcations when available</source>
-        <translation>V obvestilih uporabi odstotke, kadar so na voljo</translation>
+        <translation>Показывать проценты в уведомлениях, если возможно</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1218"/>
         <source>Enable Desktop Zoom </source>
-        <translation>Vklopi povečavo namizja</translation>
+        <translation>Включить масштабирование рабочего стола</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1225"/>
         <location filename="../defaultlook.ui" line="1815"/>
         <source>Show windows from all workspaces in panel</source>
-        <translation>V panoju prikaži okna z vseh delovnih površin</translation>
+        <translation>Показывать на панели окна со всех рабочих столов</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1232"/>
         <source>Show GTK File Dialog action buttons at bottom of dialogs</source>
-        <translation>Na dnu dialogov prikaži GTK File Dialog akcijske gumbe</translation>
+        <translation>Показать кнопки действий файлового диалога GTK в нижней части окон</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1239"/>
         <source>( also turns off Client Side Decorations for Xfce applications)</source>
-        <translation>(za aplikacijo izklopi tudi okrasitve odjemalne strani)</translation>
+        <translation>(также отключает клиентское оформление для приложений Xfce)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1252"/>
@@ -608,13 +608,13 @@
         <location filename="../defaultlook.ui" line="1264"/>
         <location filename="../defaultlook.ui" line="1604"/>
         <source>On</source>
-        <translation>Vklop</translation>
+        <translation>Вкл</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1269"/>
         <location filename="../defaultlook.ui" line="1609"/>
         <source>Off</source>
-        <translation>Izklop</translation>
+        <translation>Откл.</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1290"/>
@@ -624,108 +624,108 @@
     <message>
         <location filename="../defaultlook.ui" line="1297"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Nastavitve orodne vrstice&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Панель инструментов&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1337"/>
         <source>Toggle icon captions</source>
-        <translation>Preklopi prikaz oznak ikon</translation>
+        <translation>Включить подписи к иконкам</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1344"/>
         <source>Reset Fluxbox Menu</source>
-        <translation>Ponastavi Fluxbox meni</translation>
+        <translation>Сброс меню Fluxbox</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1361"/>
         <source>Width</source>
-        <translation>Širina</translation>
+        <translation>Ширина</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1375"/>
         <source>Toggle desktop icons</source>
-        <translation>Preklopi prikaz namiznih ikon</translation>
+        <translation>Переключить иконки рабочего стола</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1382"/>
         <location filename="../defaultlook.ui" line="1406"/>
         <source>Autohide</source>
-        <translation>Samodejno skrij</translation>
+        <translation>Скрывать автоматически</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1389"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;/body&gt;&lt;/p&gt;&lt;/span&gt;Nastavitve sidrišča&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Настройки дока&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1480"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Desktop Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Namizne Ikone&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Значки на Рабочем столе&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1554"/>
         <source>Reset DefaultDock</source>
-        <translation>Ponastavi PrivzetoSidrišče</translation>
+        <translation>Сброс дока</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1568"/>
         <source>Manage Tint2 Panel</source>
-        <translation>Upravljaj Tint2 pano</translation>
+        <translation>Управление панелью Tint2</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1579"/>
         <source>Height</source>
-        <translation>Višina</translation>
+        <translation>Высота</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1586"/>
         <location filename="../defaultlook.ui" line="1622"/>
         <location filename="../defaultlook.ui" line="1714"/>
         <source>Placement</source>
-        <translation>Postavitev</translation>
+        <translation>Размещение</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1593"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Screensaver&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>screensaver screen blank settings</extracomment>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Ohranjevalnik zaslona&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Заставка&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1614"/>
         <source>On Hover</source>
-        <translation>Ob prehodu</translation>
+        <translation>При наведении</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1636"/>
         <location filename="../defaultlook.ui" line="1829"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ponastavitev&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Сбросить настройки по умолчанию&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1643"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Dodaj no privzete elemente menija, če kateri obstaja, obstoječemu fluxbox meniju.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Добавить элементы по умолчанию к существующему меню fluxbox.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1646"/>
         <source>Upgrade existing menu entries</source>
-        <translation>Nadgradi obstoječe vnose menija</translation>
+        <translation>Обновить существующие пункты меню</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1666"/>
         <source>Show Toolbar</source>
-        <translation>Prikaži orodno vrstico</translation>
+        <translation>Показать панель инструментов</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1683"/>
         <source>Reset ALL mx-fluxbox settings</source>
-        <translation>Ponastavi VSE nastavitve mx-fluxbox</translation>
+        <translation>Сбросить ВСЕ настройки mx-fluxbox</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1690"/>
         <source>Idle time (minutes)</source>
         <extracomment>set the time of inactivity  before screensaver screen blank occurs</extracomment>
-        <translation>Čas nedejavnosti (v minutah)</translation>
+        <translation>Время простоя (минуты)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1703"/>
@@ -735,156 +735,156 @@
     <message>
         <location filename="../defaultlook.ui" line="1782"/>
         <source>Workspace</source>
-        <translation>Delovna površina</translation>
+        <translation>Рабочее место</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1822"/>
         <source>Enable single-click</source>
-        <translation>Vklopi en klik</translation>
+        <translation>Использовать одиночный клик</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1836"/>
         <source>Reset KDE/Plasma defaults</source>
-        <translation>Ponastavi KDE/Plasma na privzeto</translation>
+        <translation>Сброс настроек KDE/Plasma</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1846"/>
         <source>Super Key</source>
         <extracomment>referring to the meta or Left Super Key</extracomment>
-        <translation>Super tipka</translation>
+        <translation>Клавиша Super</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1854"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Choose application&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>description of button action to launch file dialog to choose an application</extracomment>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Izbira programa&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выберите приложение&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1867"/>
         <source>Xfce-superkey defaults</source>
         <extracomment>indicates that xfce-superkey will select a command by its default logic</extracomment>
-        <translation>Xfce-superkey privzeto</translation>
+        <translation>Клавиша Super по умолчанию в Xfce</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1874"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Also known as the &amp;quot;windows&amp;quot; key&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Znana tudi kot &amp;quot;windows&amp;quot; tipka&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Также известный как &amp;quot;windows&amp;quot; key&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1877"/>
         <source>Command to run with Super (Meta) key</source>
         <extracomment>label for the field to enter the command to use with super key</extracomment>
-        <translation>Ukaz, ki naj se zažene preko Super (Meta) tipke</translation>
+        <translation>Команда для выполнения с помощью клавиши Super (Meta)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1907"/>
         <source>Other</source>
-        <translation>Drugo</translation>
+        <translation>Прочее</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1931"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
-        <translation>Ponastavi Lightdm (zaslon za prijavo) na privzeto temo sistema</translation>
+        <translation>Сбросить Lightdm (экран логина) к системной теме по умолчанию</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1938"/>
         <source>Password for administrative tasks:</source>
-        <translation>Geslo za adminstracijo:</translation>
+        <translation>Пароль для задач администрирования:</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1969"/>
         <source>Enable mounting of internal drives by non-root users</source>
-        <translation>Omogoči priklop notranjih pogonov ne-korenskim uporabnikom</translation>
+        <translation>Включить монтирование внешних носителей для не-root пользователей</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1976"/>
         <source>Root</source>
-        <translation>Koren</translation>
+        <translation>Суперпользователь</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1983"/>
         <source>Enable kernel sandbox</source>
-        <translation>Vklopi peskovnik za jedro</translation>
+        <translation>Задействовать песочницу ядра</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1990"/>
         <source>&amp;User</source>
-        <translation>&amp;Uporabnik</translation>
+        <translation>&amp;Пользователь</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1997"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;zahteva ponovni zagon&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;требует перезагрузки&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2000"/>
         <source>Enable Bluetooth Adapters on boot</source>
-        <translation>Ob zagonu vklopi Bluetooth vmesnike</translation>
+        <translation>Включить адаптеры Bluetooth при загрузке</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2007"/>
         <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
-        <translation>Apt namesti dodatne &quot;priporočene&quot; pakete kot odvisnosti</translation>
+        <translation>Apt устанавливает дополнительные «рекомендуемые» пакеты в качестве зависимостей</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2014"/>
         <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
-        <translation>Generiranje menija za vse fluxbox aplikacije, po nameščanju, odstranjevanju ali posodabljanju.</translation>
+        <translation>Сгенерируйте меню Все Приложения после установки, удаления и обновления пакетов.</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2021"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
-        <translation>Uporabi okraske Client Side Decorations (CSD) v aplikacijah GTK3, ki jih podpirajo (zahteva ponoven zagon seje) </translation>
+        <translation>Использовать клиентское оформление окон (CSD) для приложений GTK3 (требуется перезапуск сеанса)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2028"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
-        <translation>Namesto privzetega &quot;modesetting&quot; gonilnika uporabite Intel gonilnik (zahteva ponovni zagon)</translation>
+        <translation>Использовать драйвер Intel вместо драйвера &quot;modesetting&quot; (требуется перезапуск)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2035"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
-        <translation>POMNI: obstoječi /etc/X11/xorg.conf.d/20-intel.conf bo varnostno kopiran v domačo home mapo</translation>
+        <translation>ПРИМЕЧАНИЕ: существующий /etc/X11/xorg.conf.d/20-intel.conf будет сохранен в домашней директории</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2042"/>
         <source>Use tearfree amdgpu option</source>
-        <translation>Uporabi amdgpu opcijo za odpravljanje napak v prikazovanju </translation>
+        <translation>Использовать опцию amdgpu видео без тиринга</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2049"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
-        <translation>POMNI: obstoječi /etc/X11/xorg.conf.d/20-amd.conf bo varnostno shranjen v domačo home mapo</translation>
+        <translation>ПРИМЕЧАНИЕ: существующий /etc/X11/xorg.conf.d/20-amd.conf будет скопирован в домашний каталог</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2056"/>
         <source>Use tearfree radeon driver option</source>
-        <translation>Uporabi radeon opcijo za odpravljanje napak v prikazovanju </translation>
+        <translation>Использовать опцию драйвера radeon видео без тиринга</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2063"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
-        <translation>POMNI: obstoječi /etc/X11/xorg.conf.d/20-radeon.conf bo varnostno kopiran v domačo home mapo</translation>
+        <translation>ПРИМЕЧАНИЕ: существующий /etc/X11/xorg.conf.d/20-radeon.conf будет скопирован в домашний каталог</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="58"/>
         <source>--display switch only valid for Xfce</source>
-        <translation>--display stikalo ve veljavno le za Xfce</translation>
+        <translation>--переключатель экрана действует только в Xfce</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="656"/>
         <source>About MX Tweak</source>
-        <translation>O MX fiziranju</translation>
+        <translation>О программе MX Tweak</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="658"/>
         <source>Version: </source>
-        <translation>Različica:</translation>
+        <translation>Версия: </translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="659"/>
         <source>App for quick default ui theme changes and tweaks</source>
-        <translation>Aplikacija za hitro spreminjanje in prilagajanje privzete teme uporabniškega vmesnika</translation>
+        <translation>Приложение для быстрой доводки штатного оформления</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="661"/>
@@ -894,68 +894,68 @@
     <message>
         <location filename="../defaultlook.cpp" line="662"/>
         <source>%1 License</source>
-        <translation>%1 licenca</translation>
+        <translation>%1 Лицензия</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="676"/>
         <source>%1 Help</source>
-        <translation>%1 pomoč</translation>
+        <translation>%1 Справка</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="686"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
-        <translation>Končano! Firefox bo morda potreboval ponovni zagon, da bodo spremembe delovale.</translation>
+        <translation>Завершено! Для Firefox может потребоваться перезагрузка для вступления изменений в силу</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="733"/>
         <source>Plese remove special characters</source>
-        <translation>Odstranite posebne znake</translation>
+        <translation>Удалите специальные символы</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="733"/>
         <source>from file name</source>
-        <translation>iz imena datoteke</translation>
+        <translation>из имени файла</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="740"/>
         <source>File name already exists.  Choose another name</source>
-        <translation>Ime datoteke že obstaja. Izberite drugo ime</translation>
+        <translation>Файл уже существует. Выберите другое имя</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="768"/>
         <source>File is not a valid tar.xz archive file</source>
-        <translation>Datoteka ni ustrezna tar.xz arhivska datoteka</translation>
+        <translation>Файл не является архивным файлом tar.xz</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="771"/>
         <source>Archive does not contain a panel config</source>
-        <translation>Arhiv ne vsebuje konfiguracije panojev</translation>
+        <translation>Архив не содержит настройки панели</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="946"/>
         <source>Panel settings</source>
-        <translation>Nastavitve panoja</translation>
+        <translation>Настройки панели</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="947"/>
         <source>Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
-        <translation>Trenutne nastavitve orodne vrstice so se shranile v skrito mapo z imenom .restore  v uporabnikovi domači mapi (~/.restore/)</translation>
+        <translation>Ваши настройки панели были сохранены в скрытой папке .restore домашнего каталога (~/.restore/)</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="1729"/>
         <source>settings</source>
-        <translation>nastavitve</translation>
+        <translation>настройки</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="2069"/>
         <source>Choose a theme set</source>
-        <translation>Izberite tematski set</translation>
+        <translation>Выберите набор темы</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="3967"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
-        <translation>Izbira programa za zagon</translation>
+        <translation>Выберите приложение для запуска</translation>
     </message>
 </context>
 <context>
@@ -963,7 +963,7 @@
     <message>
         <location filename="../remove_user_theme_set.ui" line="14"/>
         <source>Remove User Theme Set</source>
-        <translation>Odstranite uporabnikov tematski set</translation>
+        <translation>Удалить набор тем пользователя</translation>
     </message>
 </context>
 <context>
@@ -971,12 +971,12 @@
     <message>
         <location filename="../theming_to_tweak.ui" line="14"/>
         <source>New Theme Set</source>
-        <translation>Nov tematski set</translation>
+        <translation>Новый набор тем пользователя</translation>
     </message>
     <message>
         <location filename="../theming_to_tweak.ui" line="20"/>
         <source>Enter name for new theme set</source>
-        <translation>Vnesite ime za nov tematski set</translation>
+        <translation>Введите имя для нового набора тем</translation>
     </message>
 </context>
 <context>
@@ -985,137 +985,137 @@
         <location filename="../window_buttons.ui" line="14"/>
         <location filename="../window_buttons.cpp" line="24"/>
         <source>Window Buttons</source>
-        <translation>Gumbi oken</translation>
+        <translation>Кнопки окон</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="28"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Appearance&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Videz&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Внешний вид&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="35"/>
         <source>Show button labels</source>
-        <translation>Prikaži oznake za gumbe</translation>
+        <translation>Показывать подписи кнопок</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="42"/>
         <source>Show flat buttons</source>
-        <translation>Prikaži ravne gumbe</translation>
+        <translation>Показывать плоские кнопки</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="49"/>
         <source>Show handle</source>
-        <translation>Prikaži ročico</translation>
+        <translation>Показывать ручку</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="56"/>
         <source>Sorting Order:</source>
-        <translation>Vrstni red sortiranja:</translation>
+        <translation>Порядок сортировки:</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="64"/>
         <source>Timestamp</source>
-        <translation>Časovna oznaka</translation>
+        <translation>Метка времени</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="69"/>
         <source>Group title and timestamp</source>
-        <translation>Naziv skupine in časovna oznaka</translation>
+        <translation>Сгруппировать название и метку времени</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="74"/>
         <source>Window Title</source>
-        <translation>Naziv okna</translation>
+        <translation>Заголовок окна</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="79"/>
         <source>Group title and window title</source>
-        <translation>Naziv skupine in okna</translation>
+        <translation>Сгруппировать название приложения и заголовок окна</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="84"/>
         <source>None, allow drag-and-drop</source>
-        <translation>Brez, dovoli vlecenje in spuščanje</translation>
+        <translation>Нет, разрешить перетаскивание</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="92"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Behavior&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Obnašanje&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Поведение&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="99"/>
         <source>Window grouping:</source>
-        <translation>Zbiranje oken v skupino:</translation>
+        <translation>Группировать окна:</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="107"/>
         <source>Never</source>
-        <translation>Nikoli</translation>
+        <translation>Никогда</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="112"/>
         <source>Always</source>
-        <translation>Vedno</translation>
+        <translation>Всегда</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="120"/>
         <source>Middle click action:</source>
-        <translation>Dejanje ob kliku na srednjo tipko:</translation>
+        <translation>Действие по клику средней кнопкой мыши:</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="128"/>
         <source>Nothing</source>
-        <translation>Ničesar</translation>
+        <translation>Ничего</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="133"/>
         <source>Close window</source>
-        <translation>Zapri okno</translation>
+        <translation>Закрыть окно</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="138"/>
         <source>Minimize window</source>
-        <translation>Zmanjšaj okno</translation>
+        <translation>Свернуть окно</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="146"/>
         <source>Restore minimized windows to current workspace</source>
-        <translation>Obnovi zmanjšano okno na trenutno delovno površino</translation>
+        <translation>Разворачивать свёрнутые окна на текущий рабочий стол</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="153"/>
         <source>Draw window frame when hovering over a button</source>
-        <translation>Nariši okvir okna, ko lebdiš nad gumbom </translation>
+        <translation>Отображать рамку окна под курсором мыши</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="160"/>
         <source>Switch windows using the mouse wheel</source>
-        <translation>Preklapljanje med okni z uporabo kolesca miške</translation>
+        <translation>Переключать окна с помощью колёсика мыши</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="167"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Filtering&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Filtriranje&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Фильтрация&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="174"/>
         <source>Show windows from all workspaces or viewports</source>
-        <translation>Prikaži okna z vseh delovnih površin in pogledov</translation>
+        <translation>Показывать окна со всех рабочих мест или видов</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="181"/>
         <source>Show only minimized windows</source>
-        <translation>Prikaži le zmanjšana okna</translation>
+        <translation>Показывать только свёрнутые окна</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="188"/>
         <source>Show windows from all monitors</source>
-        <translation>Prikaži okna z vseh monitorjev</translation>
+        <translation>Показывать окна со всех мониторов</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="238"/>
         <source>Close</source>
-        <translation>Zapri</translation>
+        <translation>Закрыть</translation>
     </message>
 </context>
 <context>
@@ -1123,82 +1123,82 @@
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="14"/>
         <source>Dialog</source>
-        <translation>Dialog</translation>
+        <translation>Диалоговое окно</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="42"/>
         <source>Popup Windows</source>
-        <translation>Pojavna okna</translation>
+        <translation>Всплывающие окна</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="49"/>
         <source>Windows during move</source>
-        <translation>Okna med premikanjem</translation>
+        <translation>Окна при перетаскивании</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="56"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Opacity Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Nastavitve prosojnosti&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Настройки прозрачности&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="79"/>
         <source>Window decorations</source>
-        <translation>Okraski za okna</translation>
+        <translation>Оформление окон</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="86"/>
         <source>Show shadows under dock windows</source>
-        <translation>Prikaži sence pod zasidranimi okni</translation>
+        <translation>Отображать тени у dock окон</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="93"/>
         <source>Show shadows under popup windows</source>
-        <translation>Prikaži sence pod pojavnimi okni</translation>
+        <translation>Отображать тени у всплывающих окон</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="100"/>
         <source>Windows during resize</source>
-        <translation>Okna med spreminjanjem velikosti</translation>
+        <translation>Окна при изменении размеров</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="123"/>
         <source>Show shadows under regular windows</source>
-        <translation>Prikaži sence pod običajnimi okni</translation>
+        <translation>Отображать тени у обычных окон</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="130"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Feature Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Nastavitve funkcionalnosti&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Настройки возможностей&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="137"/>
         <source>Show windows preview in place of icons when cycling</source>
-        <translation>Prikaži predogled okna namesto ikon, kadar krožiš</translation>
+        <translation>Показывать предпросмотр окна вместо значков при прокрутке</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="144"/>
         <source>Display fullscreen overlay windows directly</source>
-        <translation>Neposredno prekrij cel zaslon z oknom </translation>
+        <translation>Напрямую отображать полноэкранные оверлей окна</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="183"/>
         <source>Inactive windows</source>
-        <translation>Neaktivna okna</translation>
+        <translation>Неактивные окна</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="190"/>
         <source>Synchronize drawing to vertical blank</source>
-        <translation>Sinhorniziraj izrisovanje z vertikalnim signalom</translation>
+        <translation>Синхронизировать отрисовку по вертикальной очистке</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="212"/>
         <source>Close</source>
-        <translation>Zapri</translation>
+        <translation>Закрыть</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.cpp" line="23"/>
         <source>Xfwm Compositor Settings</source>
-        <translation>Nastavitve za Xfwm kompozitor</translation>
+        <translation>Настройки композитора Xfwm</translation>
     </message>
 </context>
 </TS>

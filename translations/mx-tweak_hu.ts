@@ -751,30 +751,30 @@
         <location filename="../defaultlook.ui" line="1846"/>
         <source>Super Key</source>
         <extracomment>referring to the meta or Left Super Key</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Super billentyű</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1854"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Choose application&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>description of button action to launch file dialog to choose an application</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Alkalmazás választása&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1867"/>
         <source>Xfce-superkey defaults</source>
         <extracomment>indicates that xfce-superkey will select a command by its default logic</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Xfce Super billentyű alapértékek</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1874"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Also known as the &amp;quot;windows&amp;quot; key&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Más néven: Windows billentyű&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1877"/>
         <source>Command to run with Super (Meta) key</source>
         <extracomment>label for the field to enter the command to use with super key</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>A Super (Meta) billentyűvel elindítandó parancs</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1907"/>
@@ -955,7 +955,7 @@
         <location filename="../defaultlook.cpp" line="3967"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
-        <translation type="unfinished"></translation>
+        <translation>Válassza ki a futtatandó alkalmazást</translation>
     </message>
 </context>
 <context>
