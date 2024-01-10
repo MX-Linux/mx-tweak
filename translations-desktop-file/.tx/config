@@ -6,4 +6,5 @@ file_filter = po/mx-tweak-desktop_<lang>.po
 source_file = mx-tweak-desktop.pot
 source_lang = en
 type        = po
+minimum_perc = 25
 
