@@ -139,7 +139,7 @@
     <message>
         <location filename="../defaultlook.ui" line="105"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the look of your desktop&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aussehen ihrer Arbeitsoberfläche anpassen&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aussehen der Arbeitsoberfläche anpassen&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="119"/>
@@ -919,7 +919,7 @@
     <message>
         <location filename="../defaultlook.cpp" line="740"/>
         <source>File name already exists.  Choose another name</source>
-        <translation>Der Dateiname existiert bereits. Wählen sie einen anderen Namen</translation>
+        <translation>Der Dateiname existiert bereits. Wählen Sie einen anderen Namen</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="768"/>
@@ -949,7 +949,7 @@
     <message>
         <location filename="../defaultlook.cpp" line="2069"/>
         <source>Choose a theme set</source>
-        <translation>Wählen sie ein Thema</translation>
+        <translation>Wählen Sie ein Thema</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="3967"/>
