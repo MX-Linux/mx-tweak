@@ -86,7 +86,7 @@
     <message>
         <location filename="../brightness_small.cpp" line="33"/>
         <source>MX-Tweak</source>
-        <translation>MX-Prilagoditve</translation>
+        <translation>MX-prilagoditve</translation>
     </message>
     <message>
         <location filename="../brightness_small.cpp" line="58"/>
@@ -113,7 +113,7 @@
         <location filename="../defaultlook.cpp" line="767"/>
         <location filename="../defaultlook.cpp" line="770"/>
         <source>MX Tweak</source>
-        <translation>MX Prilagoditve</translation>
+        <translation>MX prilagoditve</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="41"/>
@@ -874,7 +874,7 @@
     <message>
         <location filename="../defaultlook.cpp" line="656"/>
         <source>About MX Tweak</source>
-        <translation>O MX fiziranju</translation>
+        <translation>O programu MX prilagoditve</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="658"/>
@@ -889,7 +889,7 @@
     <message>
         <location filename="../defaultlook.cpp" line="661"/>
         <source>Copyright (c) MX Linux</source>
-        <translation>Copyright (c) MX Linux</translation>
+        <translation>Avtorska zaščita (c) MX Linux</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="662"/>

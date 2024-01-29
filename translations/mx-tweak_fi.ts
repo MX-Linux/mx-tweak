@@ -186,13 +186,13 @@
         <location filename="../defaultlook.ui" line="293"/>
         <source>Volume</source>
         <extracomment>volume plugin scale factor</extracomment>
-        <translation>Äänenvoimakkuus</translation>
+        <translation>Voimakkuus</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="300"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>affects the docklike plugin</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Telakka&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="307"/>
@@ -565,18 +565,18 @@
         <location filename="../defaultlook.ui" line="1197"/>
         <location filename="../defaultlook.ui" line="1629"/>
         <source>Thunar windows always open in split view</source>
-        <translation type="unfinished"></translation>
+        <translation>Thunar-ikkunat avautuvat aina jaetussa näkymässä</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1204"/>
         <location filename="../defaultlook.ui" line="1561"/>
         <source>Thunar split view opens horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation>Thunarin jaettu näkymä avautuu vaakaan</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1211"/>
         <source>Show percentages in notifcations when available</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä prosentit ilmoituksissa, kun ne ovat saatavilla</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1218"/>
@@ -592,12 +592,12 @@
     <message>
         <location filename="../defaultlook.ui" line="1232"/>
         <source>Show GTK File Dialog action buttons at bottom of dialogs</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä GTK File Dialog painikkeet valintaikkunoiden alareunassa</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1239"/>
         <source>( also turns off Client Side Decorations for Xfce applications)</source>
-        <translation type="unfinished"></translation>
+        <translation>(poistaa käytöstä Xfce-sovellusten koristeet)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1252"/>
@@ -619,7 +619,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1290"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Thunar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Thunar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1297"/>
@@ -670,7 +670,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1568"/>
         <source>Manage Tint2 Panel</source>
-        <translation type="unfinished"></translation>
+        <translation>Hallitse Tint2 paneelia</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1579"/>
@@ -688,7 +688,7 @@
         <location filename="../defaultlook.ui" line="1593"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Screensaver&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>screensaver screen blank settings</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Näytönsäästäjä&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1614"/>
@@ -704,7 +704,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1643"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lisää uudet kohdat, olemassa olevaan fluxbox valikkoon.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1646"/>
@@ -714,7 +714,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1666"/>
         <source>Show Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Näytä työkalurivi</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1683"/>
@@ -725,7 +725,7 @@
         <location filename="../defaultlook.ui" line="1690"/>
         <source>Idle time (minutes)</source>
         <extracomment>set the time of inactivity  before screensaver screen blank occurs</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Odotusaika (minuuttia)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1703"/>
@@ -751,30 +751,30 @@
         <location filename="../defaultlook.ui" line="1846"/>
         <source>Super Key</source>
         <extracomment>referring to the meta or Left Super Key</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Lippu näppäin</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1854"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Choose application&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>description of button action to launch file dialog to choose an application</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Valitse sovellus&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1867"/>
         <source>Xfce-superkey defaults</source>
         <extracomment>indicates that xfce-superkey will select a command by its default logic</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Xfce-superkey oletusarvot</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1874"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Also known as the &amp;quot;windows&amp;quot; key&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tunnetaan myös nimellä &amp;quot;windows&amp;quot; näppäin&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1877"/>
         <source>Command to run with Super (Meta) key</source>
         <extracomment>label for the field to enter the command to use with super key</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Komento joka ajetaan Super (Meta) näppäimellä</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1907"/>
@@ -814,27 +814,27 @@
     <message>
         <location filename="../defaultlook.ui" line="1997"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;vaatii käynnistyksen&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2000"/>
         <source>Enable Bluetooth Adapters on boot</source>
-        <translation type="unfinished"></translation>
+        <translation>Bluetooth käyttöön käynnistyksen yhteydessä</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2007"/>
         <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Apt asentaa ylimääräisiä &quot;suositeltuja&quot; paketteja riippuvuuksina</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2014"/>
         <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Luo fluxbox &quot;Kaikki sovellukset&quot; valikko asennuksen, poiston ja päivitysten jälkeen</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2021"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
-        <translation type="unfinished"></translation>
+        <translation>Käytä koristeita (CSD) niitä tukevissa GTK3-sovelluksissa (edellyttää istunnon käynnistämistä uudelleen)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2028"/>
@@ -909,27 +909,27 @@
     <message>
         <location filename="../defaultlook.cpp" line="733"/>
         <source>Plese remove special characters</source>
-        <translation type="unfinished"></translation>
+        <translation>Poista erikoismerkit</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="733"/>
         <source>from file name</source>
-        <translation type="unfinished"></translation>
+        <translation>tiedostonimestä</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="740"/>
         <source>File name already exists.  Choose another name</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiedostonimi on jo olemassa. Valitse toinen nimi</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="768"/>
         <source>File is not a valid tar.xz archive file</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiedosto ei ole pakattu tar.xz tiedosto</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="771"/>
         <source>Archive does not contain a panel config</source>
-        <translation type="unfinished"></translation>
+        <translation>Pakkaus ei sisällä paneelin asetuksia</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="946"/>
@@ -955,7 +955,7 @@
         <location filename="../defaultlook.cpp" line="3967"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
-        <translation type="unfinished"></translation>
+        <translation>Valitse suoritettava sovellus</translation>
     </message>
 </context>
 <context>
@@ -963,7 +963,7 @@
     <message>
         <location filename="../remove_user_theme_set.ui" line="14"/>
         <source>Remove User Theme Set</source>
-        <translation>Poista käyttäjäteemavalikoima</translation>
+        <translation>Poista teemavalikoima</translation>
     </message>
 </context>
 <context>
