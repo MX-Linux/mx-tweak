@@ -2066,15 +2066,21 @@
          </item>
          <item row="7" column="0" colspan="3">
           <widget class="QCheckBox" name="checkBoxLiqKernelUpdates">
+           <property name="toolTip">
+            <string extracomment="toggle for apt hold action on update meta packages">put a hold or remove a hold on updates of Liquorix kernels</string>
+           </property>
            <property name="text">
-            <string>Enable Automatic Liquorix Kernel Updates (MX ahs repository)</string>
+            <string extracomment="uses apt-mark to hold or unhold updates to kernel metapackages">Enable Automatic Liquorix Kernel Updates (MX ahs repository)</string>
            </property>
           </widget>
          </item>
          <item row="8" column="0" colspan="3">
           <widget class="QCheckBox" name="checkBoxDebianKernelUpdates">
+           <property name="toolTip">
+            <string extracomment="toggle for apt hold action on update meta packages">put a hold or remove a hold on updates of Debian  kernels</string>
+           </property>
            <property name="text">
-            <string>Enable Automatic Debian Kernel Updates</string>
+            <string extracomment="uses apt-mark to hold or unhold updates to kernel metapackages">Enable Automatic Debian Kernel Updates</string>
            </property>
           </widget>
          </item>
