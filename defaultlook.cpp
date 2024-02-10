@@ -1382,7 +1382,6 @@ void defaultlook::setupEtc()
     ui->labelamdgpu->hide();
     ui->checkboxRadeontearfree->hide();
     ui->labelradeon->hide();
-
     ui->ButtonApplyEtc->setEnabled(false);
     if (ui->ButtonApplyEtc->icon().isNull()) {
         ui->ButtonApplyEtc->setIcon(QIcon(":/icons/dialog-ok.svg"));
@@ -1464,6 +1463,29 @@ void defaultlook::setupEtc()
         ui->checkBoxInstallRecommends->setChecked(false);
     }
 
+    //setup kernel auto updates
+
+    if (runCmd("LC_ALL=C dpkg --status linux-image-amd64 linux-image-686 linux-image-686-pae 2>/dev/null |grep 'ok installed'").output.isEmpty()){
+        ui->checkBoxDebianKernelUpdates->setChecked(false);
+        ui->checkBoxDebianKernelUpdates->hide();
+    } else {
+        ui->checkBoxDebianKernelUpdates->setChecked(true);
+    }
+    if (runCmd("LC_ALL=C dpkg --status linux-image-liquorix-amd64 2>/dev/null |grep 'ok installed'").output.isEmpty()){
+        ui->checkBoxLiqKernelUpdates->setChecked(false);
+        ui->checkBoxLiqKernelUpdates->hide();
+    } else {
+        ui->checkBoxLiqKernelUpdates->setChecked(true);
+    }
+    QString autoupdate = runCmd("apt-mark showhold").output;
+    if ( autoupdate.contains("linux-image-686") || autoupdate.contains("linux-image-amd64") ){
+        ui->checkBoxDebianKernelUpdates->setChecked(false);
+    }
+    if ( autoupdate.contains("linux-image-liquorix-amd64") ){
+        ui->checkBoxLiqKernelUpdates->setChecked(false);
+    }
+    debianKernelUpdateFlag = false;
+    liqKernelUpdateFlag = false;
 
     //setup NOCSD GTK3 option
     if (!QFileInfo::exists(QStringLiteral("/usr/bin/gtk3-nocsd"))) {
@@ -2255,6 +2277,8 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     QString lightdm_option;
     QString bluetooth_option;
     QString recommends_option;
+    QString debian_kernel_updates_option;
+    QString liq_kernel_updates_option;
     QString DESKTOP = runCmd(QStringLiteral("echo $XDG_SESSION_DESKTOP")).output;
     QString home_path = QDir::homePath();
     ui->ButtonApplyEtc->setEnabled(false);
@@ -2427,8 +2451,27 @@ void defaultlook::on_ButtonApplyEtc_clicked()
         }
     }
 
-    if ( ! udisks_option.isEmpty() || ! sudo_override_option.isEmpty() || ! user_name_space_override_option.isEmpty() || ! intel_option.isEmpty() || ! lightdm_option.isEmpty() || ! amd_option.isEmpty() || ! radeon_option.isEmpty() || !bluetooth_option.isEmpty() || !recommends_option.isEmpty()) {
-        runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + udisks_option + " " + sudo_override_option + " " + user_name_space_override_option + " " + intel_option + " " + amd_option + " " + radeon_option + " " + bluetooth_option + " " + recommends_option + " " + lightdm_option);
+    //debian kernel updates
+    if (debianKernelUpdateFlag){
+        if ( ui->checkBoxDebianKernelUpdates->isChecked()){
+            debian_kernel_updates_option = "unhold_debian_kernel_updates";
+            qDebug() << "debian update option" << debian_kernel_updates_option;
+        } else {
+            debian_kernel_updates_option = "hold_debian_kernel_updates";
+        }
+    }
+    //liquorix kernel updates
+    if (liqKernelUpdateFlag){
+        if ( ui->checkBoxDebianKernelUpdates->isChecked()){
+            liq_kernel_updates_option = "unhold_liquorix_kernel_updates";
+        } else {
+            liq_kernel_updates_option = "hold_liquorix_kernel_updates";
+        }
+    }
+
+    if ( ! udisks_option.isEmpty() || ! sudo_override_option.isEmpty() || ! user_name_space_override_option.isEmpty() || ! intel_option.isEmpty() || ! lightdm_option.isEmpty() || ! amd_option.isEmpty() || ! radeon_option.isEmpty() || !bluetooth_option.isEmpty() || !recommends_option.isEmpty() || !debian_kernel_updates_option.isEmpty() || !liq_kernel_updates_option.isEmpty()){
+        runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + udisks_option + " " + sudo_override_option + " " + user_name_space_override_option + " " + intel_option + " " + amd_option + " " + radeon_option + " " + bluetooth_option + " " + recommends_option + " " + lightdm_option + " " + debian_kernel_updates_option + " " + liq_kernel_updates_option);
+
     }
     //reset gui
     setupEtc();
@@ -4019,5 +4062,29 @@ void defaultlook::setupSuperKey()
 void defaultlook::on_lineEditSuperCommand_textChanged(const QString &arg1)
 {
     ui->pushButtonSuperKeyApply->setEnabled(true);
+}
+
+
+void defaultlook::on_checkBoxLiqKernelUpdates_clicked()
+{
+    // set action flag, actions only happen if flag is true when apply is clicked.
+    if (liqKernelUpdateFlag){
+        liqKernelUpdateFlag = false;
+    } else {
+        liqKernelUpdateFlag = true;
+    }
+    ui->ButtonApplyEtc->setEnabled(true);
+}
+
+
+void defaultlook::on_checkBoxDebianKernelUpdates_clicked()
+{
+    // set action flag, actions only happen if flag is true when apply is clicked.
+    if (debianKernelUpdateFlag){
+        liqKernelUpdateFlag = false;
+    } else {
+        debianKernelUpdateFlag = true;
+    }
+    ui->ButtonApplyEtc->setEnabled(true);
 }
 
