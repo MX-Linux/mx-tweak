@@ -110,6 +110,8 @@ public:
     bool isXfce = false;
     bool isFluxbox = false;
     bool isKDE = false;
+    bool liqKernelUpdateFlag = false;
+    bool debianKernelUpdateFlag = false;
 
 
 
@@ -300,6 +302,10 @@ private slots:
     void on_pushButtonSuperKeyApply_clicked();
 
     void on_lineEditSuperCommand_textChanged(const QString &arg1);
+
+    void on_checkBoxLiqKernelUpdates_clicked();
+
+    void on_checkBoxDebianKernelUpdates_clicked();
 
 private:
     Ui::defaultlook *ui;
