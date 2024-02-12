@@ -298,7 +298,7 @@
         <location filename="../defaultlook.ui" line="1283"/>
         <location filename="../defaultlook.ui" line="1766"/>
         <location filename="../defaultlook.ui" line="1884"/>
-        <location filename="../defaultlook.ui" line="1951"/>
+        <location filename="../defaultlook.ui" line="1945"/>
         <source>Apply</source>
         <extracomment>apply changes</extracomment>
         <translation>Använd</translation>
@@ -782,87 +782,111 @@
         <translation>Annat</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1931"/>
+        <location filename="../defaultlook.ui" line="1963"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>Återställ Lightdm (inloggningsskärm) till systemets standardtema</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1938"/>
+        <location filename="../defaultlook.ui" line="2070"/>
+        <source>put a hold or remove a hold on updates of Liquorix kernels</source>
+        <extracomment>toggle for apt hold action on update meta packages</extracomment>
+        <translation>sätt ett stopp på eller ta bort ett stopp på uppdateringar av Liquorix-kärnor</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2073"/>
+        <source>Enable Automatic Liquorix Kernel Updates (MX ahs repository)</source>
+        <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
+        <translation>Aktivera Automatiska Liquorix Kärnuppdateringar (MX ahs förråd)</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2080"/>
+        <source>put a hold or remove a hold on updates of Debian  kernels</source>
+        <extracomment>toggle for apt hold action on update meta packages</extracomment>
+        <translation>sätt ett stopp på eller ta bort ett stopp på uppdateringar av Debian-kärnor</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2083"/>
+        <source>Enable Automatic Debian Kernel Updates</source>
+        <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
+        <translation>Aktivera Automatiska Debian Kärnuppdateringar</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1932"/>
         <source>Password for administrative tasks:</source>
         <translation>Lösenord för administrativa göromål:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1969"/>
+        <location filename="../defaultlook.ui" line="2021"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>Aktivera montering av interna hårddiskar för non-root användare</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1976"/>
+        <location filename="../defaultlook.ui" line="1980"/>
         <source>Root</source>
         <translation>Root</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1983"/>
+        <location filename="../defaultlook.ui" line="2049"/>
         <source>Enable kernel sandbox</source>
         <translation>Aktivera kärn-sandbox</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1990"/>
+        <location filename="../defaultlook.ui" line="2035"/>
         <source>&amp;User</source>
         <translation>&amp;User</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1997"/>
+        <location filename="../defaultlook.ui" line="1970"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;kräver omstart&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2000"/>
+        <location filename="../defaultlook.ui" line="1973"/>
         <source>Enable Bluetooth Adapters on boot</source>
         <translation>Aktivera Bluetooth-adapters vid start</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2007"/>
+        <location filename="../defaultlook.ui" line="2014"/>
         <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
         <translation>Apt installerar ytterligare &quot;rekommenderade&quot; paket som beroenden</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2014"/>
+        <location filename="../defaultlook.ui" line="1956"/>
         <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
         <translation>Generera fluxbox Alla Appar-meny efter paketinstallation, borttagande, och uppdateringar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2021"/>
+        <location filename="../defaultlook.ui" line="2042"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
         <translation>Använd Client Side Decorations (CSD) på GTK3 program som stöder dem (kräver omstart av sessionen)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2028"/>
+        <location filename="../defaultlook.ui" line="2063"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>Använd intel drivrutin istället för standard &quot;modesetting&quot; drivrutin (omstart behövs)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2035"/>
+        <location filename="../defaultlook.ui" line="2028"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>ANMÄRKNING: existerande /etc/X11/xorg.conf.d/20-intel.conf kommer att backas upp i hemkatalogen</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2042"/>
+        <location filename="../defaultlook.ui" line="1987"/>
         <source>Use tearfree amdgpu option</source>
         <translation>Använd tearfree amdgpu alternativ</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2049"/>
+        <location filename="../defaultlook.ui" line="1994"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>ANMÄRKNING: existerande /etc/X11/xorg.conf.d/20-amd.conf kommer att backas upp i hemkatalogen</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2056"/>
+        <location filename="../defaultlook.ui" line="1918"/>
         <source>Use tearfree radeon driver option</source>
         <translation>Använd tearfree radeon drivrutin-alternativ</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2063"/>
+        <location filename="../defaultlook.ui" line="1925"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>ANMÄRKNING: existerande /etc/X11/xorg.conf.d/20-radeon.conf kommer att backas upp i hemkatalogen</translation>
     </message>
@@ -942,17 +966,17 @@
         <translation>Dina nuvarande panelinställningar har en backup i en dold mapp som heter .restore i din hemkatalog (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1729"/>
+        <location filename="../defaultlook.cpp" line="1751"/>
         <source>settings</source>
         <translation>inställningar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2069"/>
+        <location filename="../defaultlook.cpp" line="2091"/>
         <source>Choose a theme set</source>
         <translation>Välj en temauppsättning</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="3967"/>
+        <location filename="../defaultlook.cpp" line="4010"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
         <translation>Välj applikation att köra</translation>
