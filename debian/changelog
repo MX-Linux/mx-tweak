@@ -1,3 +1,11 @@
+mx-tweak (24.02.01mx23) mx; urgency=medium
+
+  * add enable/disable of auto updates for debian and liquorix kernels when metapackages are installed.
+  * update translations
+  * update help file
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 11 Feb 2024 20:04:54 -0500
+
 mx-tweak (24.01.01mx23) mx; urgency=medium
 
   * update translations
