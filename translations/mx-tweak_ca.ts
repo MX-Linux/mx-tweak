@@ -298,7 +298,7 @@
         <location filename="../defaultlook.ui" line="1283"/>
         <location filename="../defaultlook.ui" line="1766"/>
         <location filename="../defaultlook.ui" line="1884"/>
-        <location filename="../defaultlook.ui" line="1951"/>
+        <location filename="../defaultlook.ui" line="1945"/>
         <source>Apply</source>
         <extracomment>apply changes</extracomment>
         <translation>Aplica</translation>
@@ -782,87 +782,111 @@
         <translation>Altres</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1931"/>
+        <location filename="../defaultlook.ui" line="1963"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>Reinicia Lightdm (pantalla d&apos;entrada) al tema per omissió</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1938"/>
+        <location filename="../defaultlook.ui" line="2070"/>
+        <source>put a hold or remove a hold on updates of Liquorix kernels</source>
+        <extracomment>toggle for apt hold action on update meta packages</extracomment>
+        <translation>posa o treu una retenció a les actualitzacions dels nuclis Liquorix</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2073"/>
+        <source>Enable Automatic Liquorix Kernel Updates (MX ahs repository)</source>
+        <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
+        <translation>Activa les actualitzacions automàtiques del nucli Liquorix (dipòsit MX ahs)</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2080"/>
+        <source>put a hold or remove a hold on updates of Debian  kernels</source>
+        <extracomment>toggle for apt hold action on update meta packages</extracomment>
+        <translation>posa o treu una retenció a les actualitzacions dels nuclis Debian</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2083"/>
+        <source>Enable Automatic Debian Kernel Updates</source>
+        <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
+        <translation>Activa les actualitzacions automàtiques del nucli Debian </translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1932"/>
         <source>Password for administrative tasks:</source>
         <translation>Contrasenya d&apos;administrador: </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1969"/>
+        <location filename="../defaultlook.ui" line="2021"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>Activa el muntatge de discos interns per qualsevol usuari</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1976"/>
+        <location filename="../defaultlook.ui" line="1980"/>
         <source>Root</source>
         <translation>Arrel</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1983"/>
+        <location filename="../defaultlook.ui" line="2049"/>
         <source>Enable kernel sandbox</source>
         <translation>Activa l&apos;entorn de proves (sandbox)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1990"/>
+        <location filename="../defaultlook.ui" line="2035"/>
         <source>&amp;User</source>
         <translation>&amp;Usuari</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1997"/>
+        <location filename="../defaultlook.ui" line="1970"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;cal reiniciar&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2000"/>
+        <location filename="../defaultlook.ui" line="1973"/>
         <source>Enable Bluetooth Adapters on boot</source>
         <translation>Activa els adaptadors Bluetooth en arrencar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2007"/>
+        <location filename="../defaultlook.ui" line="2014"/>
         <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
         <translation>Apt instal·la els paquets addicionals &quot;recomanats&quot; com a dependències</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2014"/>
+        <location filename="../defaultlook.ui" line="1956"/>
         <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
         <translation>Genera el menú de Totes les Aplicacions de fluxbox després de la instal·lació, eliminació o actualització de paquets.  </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2021"/>
+        <location filename="../defaultlook.ui" line="2042"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
         <translation>Usa les Client Side Decorations (CSD) a les aplicacions GTK3 que hi siguin compatibles (cal reinici de sessió)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2028"/>
+        <location filename="../defaultlook.ui" line="2063"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>Usa el controlador intel en comptes del controlador &quot;modesetting&quot; (cal reiniciar)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2035"/>
+        <location filename="../defaultlook.ui" line="2028"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>          NOTA: es farà còpia de seguretat del fitxer /etc/X11/xorg.conf.d/20-intel.conf al directori d&apos;usuari</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2042"/>
+        <location filename="../defaultlook.ui" line="1987"/>
         <source>Use tearfree amdgpu option</source>
         <translation>Usa l&apos;opció AMDGPU sense estrips</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2049"/>
+        <location filename="../defaultlook.ui" line="1994"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>          NOTA: s&apos;ha fet còpia de seguretat del fitxer actual /etc/X11/xorg.conf.d/20-amd.conf al directori d&apos;usuari</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2056"/>
+        <location filename="../defaultlook.ui" line="1918"/>
         <source>Use tearfree radeon driver option</source>
         <translation>Usa l&apos;opció del controlador Rdeon sense estrips</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2063"/>
+        <location filename="../defaultlook.ui" line="1925"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>          NOTA: s&apos;ha fet còpia de seguretat del fitxer actual /etc/X11/xorg.conf.d/20-radeon.conf al directori d&apos;usuari</translation>
     </message>
@@ -942,17 +966,17 @@
         <translation>S&apos;ha fet còpia de seguretat dels vostres paràmetres del plafó en un fitxer amagat anomenat .restore al vostre directori d&apos;usuari (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1729"/>
+        <location filename="../defaultlook.cpp" line="1751"/>
         <source>settings</source>
         <translation>paràmetres</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2069"/>
+        <location filename="../defaultlook.cpp" line="2091"/>
         <source>Choose a theme set</source>
         <translation>Trieu un conjunt de temes</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="3967"/>
+        <location filename="../defaultlook.cpp" line="4010"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
         <translation>Trieu l&apos;aplicació a executar</translation>

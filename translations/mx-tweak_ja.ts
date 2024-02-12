@@ -298,7 +298,7 @@
         <location filename="../defaultlook.ui" line="1283"/>
         <location filename="../defaultlook.ui" line="1766"/>
         <location filename="../defaultlook.ui" line="1884"/>
-        <location filename="../defaultlook.ui" line="1951"/>
+        <location filename="../defaultlook.ui" line="1945"/>
         <source>Apply</source>
         <extracomment>apply changes</extracomment>
         <translation>適用</translation>
@@ -328,7 +328,7 @@
     <message>
         <location filename="../defaultlook.ui" line="606"/>
         <source>Remove User Theme Set</source>
-        <translation>ユーザーのテーマセット削除</translation>
+        <translation>ユーザのテーマセットを削除</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="617"/>
@@ -782,87 +782,111 @@
         <translation>その他</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1931"/>
+        <location filename="../defaultlook.ui" line="1963"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>Lightdm（ログイン画面）をシステムの既定テーマにリセット</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1938"/>
+        <location filename="../defaultlook.ui" line="2070"/>
+        <source>put a hold or remove a hold on updates of Liquorix kernels</source>
+        <extracomment>toggle for apt hold action on update meta packages</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2073"/>
+        <source>Enable Automatic Liquorix Kernel Updates (MX ahs repository)</source>
+        <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2080"/>
+        <source>put a hold or remove a hold on updates of Debian  kernels</source>
+        <extracomment>toggle for apt hold action on update meta packages</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2083"/>
+        <source>Enable Automatic Debian Kernel Updates</source>
+        <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1932"/>
         <source>Password for administrative tasks:</source>
         <translation>管理業務用のパスワード：</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1969"/>
+        <location filename="../defaultlook.ui" line="2021"/>
         <source>Enable mounting of internal drives by non-root users</source>
-        <translation>非 root ユーザーによる内蔵ドライブのマウントを可能にする</translation>
+        <translation>非 root ユーザによる内蔵ドライブのマウントを可能にする</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1976"/>
+        <location filename="../defaultlook.ui" line="1980"/>
         <source>Root</source>
         <translation>Root</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1983"/>
+        <location filename="../defaultlook.ui" line="2049"/>
         <source>Enable kernel sandbox</source>
         <translation>カーネルサンドボックスの有効化</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1990"/>
+        <location filename="../defaultlook.ui" line="2035"/>
         <source>&amp;User</source>
-        <translation>ユーザー(&amp;U)</translation>
+        <translation>ユーザ(&amp;U)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1997"/>
+        <location filename="../defaultlook.ui" line="1970"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;再起動が必要です&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2000"/>
+        <location filename="../defaultlook.ui" line="1973"/>
         <source>Enable Bluetooth Adapters on boot</source>
         <translation>起動時に Bluetooth アダプタを有効にします</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2007"/>
+        <location filename="../defaultlook.ui" line="2014"/>
         <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
         <translation>APT は推奨パッケージを依存関係にあるものとして追加します</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2014"/>
+        <location filename="../defaultlook.ui" line="1956"/>
         <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
         <translation>パッケージのインストール／削除／更新後に fluxbox の「すべてのアプリ」メニューを生成する</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2021"/>
+        <location filename="../defaultlook.ui" line="2042"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
         <translation>GTK3 をサポートするアプリケーションでクライアント側装飾 (CSD) をを使用します (セッションの再起動が必要です)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2028"/>
+        <location filename="../defaultlook.ui" line="2063"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>既定の &quot;modesetting&quot; ドライバの替わりに intel ドライバを使用 (再起動が必要)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2035"/>
+        <location filename="../defaultlook.ui" line="2028"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>注意: 既存の /etc/X11/xorg.conf.d/20-intel.conf はホームフォルダにバックアップされます</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2042"/>
+        <location filename="../defaultlook.ui" line="1987"/>
         <source>Use tearfree amdgpu option</source>
         <translation>TearFree amdgpu オプションを使用</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2049"/>
+        <location filename="../defaultlook.ui" line="1994"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>注意: 既存の /etc/X11/xorg.conf.d/20-amd.conf はホームフォルダにバックアップされます。</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2056"/>
+        <location filename="../defaultlook.ui" line="1918"/>
         <source>Use tearfree radeon driver option</source>
         <translation>TearFree radeon ドライバのオプションを使用</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2063"/>
+        <location filename="../defaultlook.ui" line="1925"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>注意: 既存の /etc/X11/xorg.conf.d/20-radeon.conf はホームフォルダにバックアップされます</translation>
     </message>
@@ -942,17 +966,17 @@
         <translation>現在のパネル設定は、ホームフォルダ (~/) 以下にある .restore という隠しフォルダにバックアップされました</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1729"/>
+        <location filename="../defaultlook.cpp" line="1751"/>
         <source>settings</source>
         <translation>設定</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2069"/>
+        <location filename="../defaultlook.cpp" line="2091"/>
         <source>Choose a theme set</source>
         <translation>テーマセットを選択</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="3967"/>
+        <location filename="../defaultlook.cpp" line="4010"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
         <translation>実行するアプリケーションを選択</translation>
@@ -963,7 +987,7 @@
     <message>
         <location filename="../remove_user_theme_set.ui" line="14"/>
         <source>Remove User Theme Set</source>
-        <translation>ユーザーのテーマセットを削除</translation>
+        <translation>ユーザのテーマセットを削除</translation>
     </message>
 </context>
 <context>
