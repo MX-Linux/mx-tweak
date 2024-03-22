@@ -537,7 +537,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1149"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
-        <translation>                   note&#xa0;: pour basculer en hibernation, le fichier swap doit être &gt;= RAM</translation>
+        <translation>                   note&#xa0;: pour basculer en hibernation, le fichier swap doit être ≥ RAM</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1169"/>
@@ -790,25 +790,25 @@
         <location filename="../defaultlook.ui" line="2070"/>
         <source>put a hold or remove a hold on updates of Liquorix kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>marquer un hold (blocage) ou supprimer un hold des mises à jour des noyaux Liquorix</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2073"/>
         <source>Enable Automatic Liquorix Kernel Updates (MX ahs repository)</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Activer les mises à jour automatiques du noyau Liquorix (dépôt MX ahs)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2080"/>
         <source>put a hold or remove a hold on updates of Debian  kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>marquer un hold (blocage) ou supprimer un hold des mises à jour des noyaux Debian</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2083"/>
         <source>Enable Automatic Debian Kernel Updates</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Activer les mises à jour automatiques du noyau Debian</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1932"/>

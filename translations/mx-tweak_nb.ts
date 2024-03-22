@@ -790,25 +790,25 @@
         <location filename="../defaultlook.ui" line="2070"/>
         <source>put a hold or remove a hold on updates of Liquorix kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>hold fast eller tillat oppdatering av Liquorix-kjerner</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2073"/>
         <source>Enable Automatic Liquorix Kernel Updates (MX ahs repository)</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Slå på automatisk oppdatering av Liquorix-kjerner (MX ahs)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2080"/>
         <source>put a hold or remove a hold on updates of Debian  kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>hold fast eller tillat oppdatering av Debian-kjerner</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2083"/>
         <source>Enable Automatic Debian Kernel Updates</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Slå på automatisk oppdatering av Debian-kjerner</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1932"/>
