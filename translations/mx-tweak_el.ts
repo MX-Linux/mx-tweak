@@ -565,13 +565,13 @@
         <location filename="../defaultlook.ui" line="1197"/>
         <location filename="../defaultlook.ui" line="1629"/>
         <source>Thunar windows always open in split view</source>
-        <translation>Τα παράθυρα του Thunar ανοίγουν πάντα σε διαχωρισμένη εμφάνιση</translation>
+        <translation>Τα παράθυρα του Thunar ανοίγουν πάντα σε διαχωρισμένη προβολή</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1204"/>
         <location filename="../defaultlook.ui" line="1561"/>
         <source>Thunar split view opens horizontal</source>
-        <translation>Οριζόντιο άνοιγμα διαχωρισμένης εμφάνισης στο Thunar</translation>
+        <translation>Οριζόντιο άνοιγμα διαχωρισμένης προβολής στο Thunar</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1211"/>
@@ -790,25 +790,25 @@
         <location filename="../defaultlook.ui" line="2070"/>
         <source>put a hold or remove a hold on updates of Liquorix kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>αναμονή ή αφαίρεση αναμονής στις ενημερώσεις των πυρήνων Liquorix</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2073"/>
         <source>Enable Automatic Liquorix Kernel Updates (MX ahs repository)</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Ενεργοποίηση αυτόματων ενημερώσεων του πυρήνα Liquorix (αποθετήριο MX ahs)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2080"/>
         <source>put a hold or remove a hold on updates of Debian  kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>αναμονή ή αφαίρεση αναμονής στις ενημερώσεις των πυρήνων Debian</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2083"/>
         <source>Enable Automatic Debian Kernel Updates</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Ενεργοποίηση αυτόματων ενημερώσεων του πυρήνα Debian</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1932"/>
