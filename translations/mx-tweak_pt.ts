@@ -47,7 +47,7 @@
     <message>
         <location filename="../main.cpp" line="53"/>
         <source>Opens Other tab directly.  Valid on all desktops</source>
-        <translation>Abrir o separador ‘Outros’ diretamente. Válido em todos os ambientes de trabalho</translation>
+        <translation>Abre diretamente o separador ‘Outros’. Válido em todos os ambientes de trabalho</translation>
     </message>
 </context>
 <context>
@@ -597,7 +597,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1239"/>
         <source>( also turns off Client Side Decorations for Xfce applications)</source>
-        <translation>(também desativa as decorações laterais do cliente para as aplicações do Xfce)</translation>
+        <translation>(também desactiva os acessórios no lado do cliente para as aplicações do Xfce)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1252"/>
@@ -725,7 +725,7 @@
         <location filename="../defaultlook.ui" line="1690"/>
         <source>Idle time (minutes)</source>
         <extracomment>set the time of inactivity  before screensaver screen blank occurs</extracomment>
-        <translation>Tempo de inatividade (minutos)</translation>
+        <translation>Tempo de inactividade (minutos)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1703"/>
@@ -757,7 +757,7 @@
         <location filename="../defaultlook.ui" line="1854"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Choose application&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>description of button action to launch file dialog to choose an application</extracomment>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Escolha a aplicação&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Escolher a aplicação&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1867"/>
@@ -790,25 +790,25 @@
         <location filename="../defaultlook.ui" line="2070"/>
         <source>put a hold or remove a hold on updates of Liquorix kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Suspender ou remover as atualizações de núcleos/kernels  Liquorix</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2073"/>
         <source>Enable Automatic Liquorix Kernel Updates (MX ahs repository)</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Ativar as atualizações automáticas de núcleo/kernel Liquorix (a partir dos repositórios do MX)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2080"/>
         <source>put a hold or remove a hold on updates of Debian  kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Suspender ou remover as atualizações de núcleo/kernel do Debian</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2083"/>
         <source>Enable Automatic Debian Kernel Updates</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Ativar as atualizações automáticas do núcleo/kernel do Debian</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1932"/>
@@ -979,7 +979,7 @@
         <location filename="../defaultlook.cpp" line="4010"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
-        <translation>Escolha a aplicação a executar</translation>
+        <translation>Escolher a aplicação a executar</translation>
     </message>
 </context>
 <context>
@@ -1039,12 +1039,12 @@
     <message>
         <location filename="../window_buttons.ui" line="64"/>
         <source>Timestamp</source>
-        <translation>Estampa de data/hora</translation>
+        <translation>Registo de data/hora</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="69"/>
         <source>Group title and timestamp</source>
-        <translation>Título do grupo e estampa de data/hora</translation>
+        <translation>Título do grupo e registo de data/hora</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="74"/>

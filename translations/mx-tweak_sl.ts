@@ -301,7 +301,7 @@
         <location filename="../defaultlook.ui" line="1945"/>
         <source>Apply</source>
         <extracomment>apply changes</extracomment>
-        <translation>Potrdi</translation>
+        <translation>Uveljavi</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="556"/>

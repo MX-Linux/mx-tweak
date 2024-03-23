@@ -27,27 +27,27 @@
     <message>
         <location filename="../main.cpp" line="47"/>
         <source>GUI for applying assorted useful tweaks</source>
-        <translation type="unfinished"></translation>
+        <translation>GUI para aplicar diversas melloras útiles</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="50"/>
         <source>launches brightness-systray</source>
-        <translation type="unfinished"></translation>
+        <translation>lanza brightness-systray</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="51"/>
         <source>opens with display tab open.  Only valid with Xfce desktop running</source>
-        <translation type="unfinished"></translation>
+        <translation>abre co separador de visualización aberto. Só válido cun escritorio Xfce en execución</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="52"/>
         <source>Opens theme tab directly.  Valid on Xfce &amp; Fluxbox desktops</source>
-        <translation type="unfinished"></translation>
+        <translation>Abre a lapela do tema directamente. Válido nos escritorios Xfce e Fluxbox</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="53"/>
         <source>Opens Other tab directly.  Valid on all desktops</source>
-        <translation type="unfinished"></translation>
+        <translation>Abre directamente outra guía. Válido en todos os escritorios</translation>
     </message>
 </context>
 <context>
@@ -192,7 +192,7 @@
         <location filename="../defaultlook.ui" line="300"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>affects the docklike plugin</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="307"/>
@@ -214,7 +214,7 @@
     <message>
         <location filename="../defaultlook.ui" line="340"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Tasklist&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Tasklist&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="347"/>
@@ -232,7 +232,7 @@
     <message>
         <location filename="../defaultlook.ui" line="369"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Panel Plugin Scales&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Escalas de complementos do panel&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="389"/>
@@ -250,7 +250,7 @@
         <location filename="../defaultlook.ui" line="419"/>
         <source>Power Manager</source>
         <extracomment>power manager plugin scale factor</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Xestor de energia</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="426"/>
@@ -262,7 +262,7 @@
         <location filename="../defaultlook.ui" line="449"/>
         <source>Set Scales</source>
         <extracomment>set a scale factor</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Establecer escalas</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="479"/>
@@ -285,7 +285,7 @@
     <message>
         <location filename="../defaultlook.ui" line="513"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Docklike is the modern dock plugin for the panel.  Window Buttons is the classic tasklist without dock features.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Docklike é o complemento moderno do panel. Window Buttons é a lista de tarefas clásica sen características de dock.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="536"/>
@@ -313,7 +313,7 @@
         <location filename="../defaultlook.ui" line="566"/>
         <source>Set Tasklist plugin to:</source>
         <extracomment>change the tasklist plugin</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Configura o plugin Tasklist para:</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="580"/>
@@ -350,7 +350,7 @@
         <location filename="../defaultlook.ui" line="687"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Cursors&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>cursor theme</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Cursors&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="694"/>
@@ -565,18 +565,18 @@
         <location filename="../defaultlook.ui" line="1197"/>
         <location filename="../defaultlook.ui" line="1629"/>
         <source>Thunar windows always open in split view</source>
-        <translation type="unfinished"></translation>
+        <translation>As xanelas do Thunar sempre abren en vista dividida</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1204"/>
         <location filename="../defaultlook.ui" line="1561"/>
         <source>Thunar split view opens horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation>A vista dividida do Thunar abre en horizontal</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1211"/>
         <source>Show percentages in notifcations when available</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar porcentaxes nas notificacións cando estean dispoñibles</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1218"/>
@@ -592,12 +592,12 @@
     <message>
         <location filename="../defaultlook.ui" line="1232"/>
         <source>Show GTK File Dialog action buttons at bottom of dialogs</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar botóns de acción do diálogo de ficheiros GTK na parte inferior dos diálogos</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1239"/>
         <source>( also turns off Client Side Decorations for Xfce applications)</source>
-        <translation type="unfinished"></translation>
+        <translation>( tamén desactiva as Decoracións do Lado do Cliente para as aplicacións de Xfce)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1252"/>
@@ -619,7 +619,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1290"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Thunar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Thunar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1297"/>
@@ -670,7 +670,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1568"/>
         <source>Manage Tint2 Panel</source>
-        <translation type="unfinished"></translation>
+        <translation>Xestionar o panel Tint2</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1579"/>
@@ -688,7 +688,7 @@
         <location filename="../defaultlook.ui" line="1593"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Screensaver&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>screensaver screen blank settings</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Protector de pantalla&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1614"/>
@@ -714,7 +714,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1666"/>
         <source>Show Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar a barra de ferramentas</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1683"/>
@@ -725,7 +725,7 @@
         <location filename="../defaultlook.ui" line="1690"/>
         <source>Idle time (minutes)</source>
         <extracomment>set the time of inactivity  before screensaver screen blank occurs</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Tempo de inactividade (minutos)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1703"/>
@@ -751,30 +751,30 @@
         <location filename="../defaultlook.ui" line="1846"/>
         <source>Super Key</source>
         <extracomment>referring to the meta or Left Super Key</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Tecla Super</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1854"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Choose application&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>description of button action to launch file dialog to choose an application</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Escolle a aplicación&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1867"/>
         <source>Xfce-superkey defaults</source>
         <extracomment>indicates that xfce-superkey will select a command by its default logic</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Predeterminados do Xfce-superkey </translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1874"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Also known as the &amp;quot;windows&amp;quot; key&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tamén coñecida como a tecla &amp;quot;windows&amp;quot;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1877"/>
         <source>Command to run with Super (Meta) key</source>
         <extracomment>label for the field to enter the command to use with super key</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Comando para executar coa tecla Super (Meta)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1907"/>
@@ -790,25 +790,25 @@
         <location filename="../defaultlook.ui" line="2070"/>
         <source>put a hold or remove a hold on updates of Liquorix kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>poñer unha retención ou eliminar unha retención nas actualizacións dos Kernels de Liquorix</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2073"/>
         <source>Enable Automatic Liquorix Kernel Updates (MX ahs repository)</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Habilitar Actualizacións Automáticas do Kernel Liquorix (repositorio MX ahs)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2080"/>
         <source>put a hold or remove a hold on updates of Debian  kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>poñer unha retención ou eliminar unha retención nas actualizacións dos kernels de Debian</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2083"/>
         <source>Enable Automatic Debian Kernel Updates</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Habilitar actualizacións automáticas do kernel Debian</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1932"/>
@@ -838,22 +838,22 @@
     <message>
         <location filename="../defaultlook.ui" line="1970"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requirirá reiniciar&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1973"/>
         <source>Enable Bluetooth Adapters on boot</source>
-        <translation type="unfinished"></translation>
+        <translation>Habilitar adaptadores Bluetooth ao arrancar</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2014"/>
         <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Apt instala paquetes &quot;recomendados&quot; adicionales como dependencias</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1956"/>
         <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Xerar menú Todas as Aplicacións de fluxbox despois da instalación, eliminación e actualización de paquetes.</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2042"/>
@@ -933,27 +933,27 @@
     <message>
         <location filename="../defaultlook.cpp" line="733"/>
         <source>Plese remove special characters</source>
-        <translation type="unfinished"></translation>
+        <translation>Por favor, elimina os caracteres especiais</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="733"/>
         <source>from file name</source>
-        <translation type="unfinished"></translation>
+        <translation>do nome do ficheiro</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="740"/>
         <source>File name already exists.  Choose another name</source>
-        <translation type="unfinished"></translation>
+        <translation>O nome do ficheiro xa existe. Escolle outro nome</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="768"/>
         <source>File is not a valid tar.xz archive file</source>
-        <translation type="unfinished"></translation>
+        <translation>O ficheiro non é un ficheiro de arquivo tar.xz válido</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="771"/>
         <source>Archive does not contain a panel config</source>
-        <translation type="unfinished"></translation>
+        <translation>O arquivo non contén unha configuración de panel</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="946"/>
@@ -979,7 +979,7 @@
         <location filename="../defaultlook.cpp" line="4010"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
-        <translation type="unfinished"></translation>
+        <translation>Selecciona a aplicación para executar</translation>
     </message>
 </context>
 <context>
