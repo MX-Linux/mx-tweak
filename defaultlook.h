@@ -99,6 +99,7 @@ public:
     bool themeflag = false;
     bool validateflag = false;
     bool tasklistflag = false;
+    bool cursor_size_flag = false;
     bool screenblankflag = false;
     void thunarsplitview(bool state);
     void thunarsplitviewhorizontal(bool state);
@@ -150,6 +151,7 @@ public:
     void CheckComptonRunning();
     void setupCompositor();
     void CheckAptNotifierRunning() const;
+    void set_cursor_size();
 
     void backupPanel();
     void migratepanel(const QString &date) const;
@@ -163,6 +165,7 @@ public:
     void savethemeundo();
     void themeundo();
     QString get_tasklistid();
+    void get_cursor_size();
 
     void setBrightness();
 
@@ -306,6 +309,8 @@ private slots:
     void on_checkBoxLiqKernelUpdates_clicked();
 
     void on_checkBoxDebianKernelUpdates_clicked();
+
+    void on_spinBoxPointerSize_valueChanged(int arg1);
 
 private:
     Ui::defaultlook *ui;

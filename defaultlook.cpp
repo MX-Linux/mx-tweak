@@ -1549,6 +1549,9 @@ void defaultlook::setuptheme()
     populatethemelists(QStringLiteral("gtk-3.0"));
     populatethemelists(QStringLiteral("icons"));
     populatethemelists(QStringLiteral("cursors"));
+    get_cursor_size();
+    cursor_size_flag = true;
+
 
     if (isXfce){
          populatethemelists(QStringLiteral("xfwm4"));
@@ -1576,6 +1579,70 @@ void defaultlook::setuptheme()
 //            ui->checkHexchat->setChecked(true);
 //        }
 //    }
+}
+
+void defaultlook::get_cursor_size() {
+    QString home_path = QDir::homePath();
+    QString size = "0";
+    QString sizecheck;
+
+    //check .Xresources
+    if (isFluxbox){
+        QString file = home_path + "/.Xresources";
+        if ( QFile(file).exists()){
+            sizecheck = runCmd("grep Xcursor.size " + file).output.section(":",1,1).simplified();
+            if ( sizecheck.isEmpty()){
+                size = "0";
+            } else {
+                size = sizecheck;
+            }
+        }
+        ui->spinBoxPointerSize->setValue(size.toInt());
+    }
+
+    //check Xfce
+    if (isXfce){
+        sizecheck = runCmd("xfconf-query --channel xsettings --property /Gtk/CursorThemeSize").output.simplified();
+        if ( sizecheck.isEmpty()){
+            size = "0";
+        } else {
+            size = sizecheck;
+        }
+        ui->spinBoxPointerSize->setValue(size.toInt());
+    }
+
+
+}
+
+void defaultlook::set_cursor_size() {
+
+    if (cursor_size_flag) {
+        QString home_path = QDir::homePath();
+        QString size = QString::number(ui->spinBoxPointerSize->value());
+        QString cmd;
+
+        //check .Xresources
+        if (isFluxbox){
+            QString file = home_path + "/.Xresources";
+            if (runCmd("grep Xcursor.size " + file).exitCode == 0) {
+                cmd = "sed -i 's/Xcursor.size:.*/Xcursor.size: " + size + "/' " + file;
+            } else {
+                cmd = "echo Xcursor.size: " + size + " >" + file;
+            }
+        }
+
+        //check Xfce
+        if (isXfce){
+            cmd = ("xfconf-query --channel xsettings --property /Gtk/CursorThemeSize -t int -s " + size + " --create");
+        }
+
+        system(cmd.toUtf8());
+        //restart fluxbox after set
+        if (isFluxbox){
+            system("xrdb -merge $HOME/.Xresources && fluxbox-remote restart");
+        }
+    }
+
 }
 
 void defaultlook::setupCompositor()
@@ -4086,5 +4153,11 @@ void defaultlook::on_checkBoxDebianKernelUpdates_clicked()
         debianKernelUpdateFlag = true;
     }
     ui->ButtonApplyEtc->setEnabled(true);
+}
+
+
+void defaultlook::on_spinBoxPointerSize_valueChanged(int arg1)
+{
+    set_cursor_size();
 }
 
