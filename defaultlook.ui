@@ -265,7 +265,7 @@
       <enum>QTabWidget::North</enum>
      </property>
      <property name="currentIndex">
-      <number>8</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="Panel">
       <attribute name="title">
@@ -582,9 +582,6 @@
       <layout class="QGridLayout" name="gridLayout_6">
        <item row="0" column="0">
         <layout class="QGridLayout" name="gridLayout_5">
-         <property name="sizeConstraint">
-          <enum>QLayout::SetNoConstraint</enum>
-         </property>
          <item row="0" column="0">
           <widget class="QLabel" name="label">
            <property name="font">
@@ -597,24 +594,13 @@
            </property>
           </widget>
          </item>
-         <item row="8" column="0">
-          <widget class="QListWidget" name="listWidgetTheme"/>
-         </item>
-         <item row="2" column="1">
-          <widget class="QPushButton" name="pushButtonRemoveUserThemeSet">
-           <property name="text">
-            <string>Remove User Theme Set</string>
-           </property>
-           <property name="icon">
-            <iconset theme="list-remove">
-             <normaloff>.</normaloff>.</iconset>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="2">
-          <widget class="QPushButton" name="pushButtonPreview">
-           <property name="text">
-            <string>Preview</string>
+         <item row="1" column="0">
+          <widget class="QComboBox" name="comboTheme">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
            </property>
           </widget>
          </item>
@@ -644,7 +630,25 @@
            </property>
           </widget>
          </item>
-         <item row="2" column="2">
+         <item row="1" column="3">
+          <widget class="QPushButton" name="pushButtonPreview">
+           <property name="text">
+            <string>Preview</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1" colspan="2">
+          <widget class="QPushButton" name="pushButtonRemoveUserThemeSet">
+           <property name="text">
+            <string>Remove User Theme Set</string>
+           </property>
+           <property name="icon">
+            <iconset theme="list-remove">
+             <normaloff>.</normaloff>.</iconset>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="3">
           <widget class="QPushButton" name="buttonThemeUndo">
            <property name="minimumSize">
             <size>
@@ -657,10 +661,61 @@
            </property>
           </widget>
          </item>
-         <item row="10" column="1">
+         <item row="3" column="0" colspan="4">
+          <widget class="Line" name="line_3">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="label_31">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Themes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="label_28">
+           <property name="text">
+            <string extracomment="theme an application will get">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1">
+          <widget class="QLabel" name="label_29">
+           <property name="text">
+            <string extracomment="theme a window manager border will get">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Manager&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0">
+          <widget class="QListWidget" name="listWidgetTheme"/>
+         </item>
+         <item row="6" column="1" colspan="2">
+          <widget class="QListWidget" name="listWidgetWMtheme"/>
+         </item>
+         <item row="7" column="0">
+          <widget class="QLabel" name="label_30">
+           <property name="text">
+            <string extracomment="icon theme">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="1">
+          <widget class="QLabel" name="label_33">
+           <property name="text">
+            <string extracomment="cursor theme">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Cursors&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="8" column="0">
+          <widget class="QListWidget" name="listWidgeticons"/>
+         </item>
+         <item row="8" column="1" colspan="2">
           <widget class="QListWidget" name="listWidgetCursorThemes"/>
          </item>
-         <item row="11" column="0" colspan="2">
+         <item row="9" column="0">
           <widget class="QPushButton" name="pushButtonSettingsToThemeSet">
            <property name="text">
             <string extracomment="save theme settings as a group">Save Current Settings as a Theme Set</string>
@@ -671,61 +726,26 @@
            </property>
           </widget>
          </item>
-         <item row="5" column="0" colspan="5">
-          <widget class="Line" name="line_3">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-          </widget>
-         </item>
-         <item row="8" column="1">
-          <widget class="QListWidget" name="listWidgetWMtheme"/>
-         </item>
          <item row="9" column="1">
-          <widget class="QLabel" name="label_33">
+          <widget class="QLabel" name="label_35">
            <property name="text">
-            <string extracomment="cursor theme">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Cursors&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            <string>Pointer Size</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
            </property>
           </widget>
          </item>
-         <item row="7" column="1">
-          <widget class="QLabel" name="label_29">
-           <property name="text">
-            <string extracomment="theme a window manager border will get">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Manager&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         <item row="9" column="2">
+          <widget class="QSpinBox" name="spinBoxPointerSize">
+           <property name="specialValueText">
+            <string extracomment="default pointer size determined by X server">default</string>
            </property>
-          </widget>
-         </item>
-         <item row="10" column="0">
-          <widget class="QListWidget" name="listWidgeticons"/>
-         </item>
-         <item row="7" column="0">
-          <widget class="QLabel" name="label_28">
-           <property name="text">
-            <string extracomment="theme an application will get">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <property name="maximum">
+            <number>256</number>
            </property>
-          </widget>
-         </item>
-         <item row="9" column="0">
-          <widget class="QLabel" name="label_30">
-           <property name="text">
-            <string extracomment="icon theme">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0">
-          <widget class="QComboBox" name="comboTheme">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-          </widget>
-         </item>
-         <item row="6" column="0">
-          <widget class="QLabel" name="label_31">
-           <property name="text">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Themes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <property name="singleStep">
+            <number>16</number>
            </property>
           </widget>
          </item>
