@@ -321,6 +321,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="651"/>
+        <source>Size</source>
+        <extracomment>size of the mouse pointer or cursor</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="679"/>
         <source>Theme Options</source>
         <translation type="unfinished"></translation>
@@ -435,11 +441,6 @@
         <location filename="../defaultlook.ui" line="617"/>
         <source>default</source>
         <extracomment>default pointer size determined by X server</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="651"/>
-        <source>Pointer Size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
