@@ -648,7 +648,7 @@
          <item row="9" column="3">
           <widget class="QLabel" name="label_35">
            <property name="text">
-            <string extracomment="size of the mouse pointer or cursor">Pointer Size</string>
+            <string extracomment="size of the mouse pointer or cursor">Size</string>
            </property>
            <property name="alignment">
             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
