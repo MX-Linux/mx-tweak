@@ -1,3 +1,9 @@
+mx-tweak (24.04.01mx23) mx; urgency=medium
+
+  * add size paramter to mouse cursor chooser 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Thu, 04 Apr 2024 18:23:48 -0400
+
 mx-tweak (24.03.01mx23) mx; urgency=medium
 
   * update translations
