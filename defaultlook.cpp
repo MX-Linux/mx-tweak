@@ -3683,7 +3683,7 @@ void defaultlook::settheme(const QString &type, const QString &theme, const QStr
             if (runCmd("grep gtk-theme-name $HOME/.gtkrc-2.0").exitCode == 0) {
                 cmd = "sed -i 's/gtk-theme-name=.*/gtk-theme-name=\"" + theme + "\"/' $HOME/.gtkrc-2.0";
             } else {
-                cmd = "echo gtk-theme-name=\"" + theme + "\" >> $HOME/.gtkrc-2.0";tolower
+                cmd = "echo gtk-theme-name=\"" + theme + "\" >> $HOME/.gtkrc-2.0";
             }
             system(cmd.toUtf8());
 
