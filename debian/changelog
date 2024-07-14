@@ -1,8 +1,8 @@
 mx-tweak (24.07.01mx23) mx; urgency=medium
 
-  * force lowercase on dark theme name check
+  * revise dark check to be case insensitive
 
- -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 14 Jul 2024 16:59:38 -0400
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 14 Jul 2024 18:54:58 -0400
 
 mx-tweak (24.04.01mx23) mx; urgency=medium
 
