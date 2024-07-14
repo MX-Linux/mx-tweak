@@ -1,3 +1,9 @@
+mx-tweak (24.07.01mx23) mx; urgency=medium
+
+  * force lowercase on dark theme name check
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 14 Jul 2024 16:59:38 -0400
+
 mx-tweak (24.04.01mx23) mx; urgency=medium
 
   * add size paramter to mouse cursor chooser 
