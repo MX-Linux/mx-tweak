@@ -1,3 +1,9 @@
+mx-tweak (24.07.01mx23) mx; urgency=medium
+
+  * make dark theme check more reliable
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 14 Jul 2024 16:52:27 -0400
+
 mx-tweak (24.03.01mx23) mx; urgency=medium
 
   * update translations

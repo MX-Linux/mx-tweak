@@ -2251,13 +2251,13 @@ void defaultlook::on_buttonThemeApply_clicked()
     if (verbose) qDebug() << "CursorThemeName = " << cursorthemename;
     //  use xfconf system to change values
 
-    message_flag = true;
+    message_flag = true;dark
 
     //set gtk theme
     runCmd("xfconf-query -c xsettings -p /Net/ThemeName -s " + xsettings_gtk_theme);
     runCmd(QStringLiteral("sleep .5"));
     runCmd("gsettings set org.gnome.desktop.interface gtk-theme \"" + xsettings_gtk_theme + "\"");
-    if (xsettings_gtk_theme.contains("dark")){
+    if (xsettings_gtk_theme.toLower().contains("dark")){
         runCmd("gsettings set org.gnome.desktop.interface color-scheme prefer-dark");
     } else {
         runCmd("gsettings set org.gnome.desktop.interface color-scheme default");
@@ -3651,7 +3651,7 @@ void defaultlook::settheme(const QString &type, const QString &theme, const QStr
         if ( type == QLatin1String("gtk-3.0") ) {
             cmd = "xfconf-query -c xsettings -p /Net/ThemeName -s \"" + theme + "\"";
             cmd1 ="gsettings set org.gnome.desktop.interface gtk-theme \"" + theme + "\"";
-            if (theme.contains("dark") || theme.contains("Blackbird")){ //blackbird special case
+            if (theme.tolower().contains("dark") || theme.contains("Blackbird")){ //blackbird special case
                 cmd2="gsettings set org.gnome.desktop.interface color-scheme prefer-dark";
             } else {
                 cmd2="gsettings set org.gnome.desktop.interface color-scheme default";
@@ -3688,7 +3688,7 @@ void defaultlook::settheme(const QString &type, const QString &theme, const QStr
             system(cmd.toUtf8());
 
             cmd1 ="gsettings set org.gnome.desktop.interface gtk-theme \"" + theme + "\"";
-            if (theme.contains("dark") || theme.contains("Blackbird")){ //blackbird special case
+            if (theme.toLower().contains("dark") || theme.contains("Blackbird")){ //blackbird special case
                 cmd2="gsettings set org.gnome.desktop.interface color-scheme prefer-dark";
                 if (runCmd("grep gtk-application-prefer-dark-theme $HOME/.config/gtk-3.0/settings.ini").exitCode == 0) {
                     runCmd("sed -i 's/gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=true/' $HOME/.config/gtk-3.0/settings.ini");
