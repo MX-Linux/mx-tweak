@@ -113,6 +113,7 @@ public:
     bool isKDE = false;
     bool liqKernelUpdateFlag = false;
     bool debianKernelUpdateFlag = false;
+    bool plasmadisoverautostartflag = false;
 
 
 
@@ -311,6 +312,8 @@ private slots:
     void on_checkBoxDebianKernelUpdates_clicked();
 
     void on_spinBoxPointerSize_valueChanged(int arg1);
+
+    void on_checkBoxPlasmaDiscoverUpdater_clicked();
 
 private:
     Ui::defaultlook *ui;
