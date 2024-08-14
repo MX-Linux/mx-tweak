@@ -1186,6 +1186,7 @@ void defaultlook::setuppanel()
 
 void defaultlook::setupPlasma()
 {
+    QString home_path = QDir::homePath();
     //get panel ID
     plasmaPanelId = runCmd(QStringLiteral("grep --max-count 1 -B 8 panel $HOME/.config/plasma-org.kde.plasma.desktop-appletsrc |grep Containment")).output;
     QString panellocation = readPlasmaPanelConfig(QStringLiteral("location"));
@@ -1204,6 +1205,18 @@ void defaultlook::setupPlasma()
         ui->comboPlasmaPanelLocation->setCurrentIndex(PanelIndex::Right);
         break;
     default: ui->comboPlasmaPanelLocation->setCurrentIndex(PanelIndex::Bottom);
+    }
+
+    //setup plasma-discover autostart
+    if (QFile("/usr/lib/x86_64-linux-gnu/libexec/DiscoverNotifier").exists()){
+        QString plasmadiscoverautostart = home_path + "/.config/autostart/org.kde.discover.notifier.desktop";
+        if (runCmd("grep Hidden=true " + plasmadiscoverautostart).exitCode == 0 ){
+            ui->checkBoxPlasmaDiscoverUpdater->setChecked(false);
+        } else {
+            ui->checkBoxPlasmaDiscoverUpdater->setChecked(true);
+        }
+    } else {
+        ui->checkBoxPlasmaDiscoverUpdater->hide();
     }
 
     //setup singleclick
@@ -1228,6 +1241,7 @@ void defaultlook::setupPlasma()
     plasmasingleclickflag = false;
     plasmaresetflag = false;
     plasmasystrayiconsizeflag = false;
+    plasmadisoverautostartflag = false;
 }
 
 QString defaultlook::readTaskmanagerConfig(const QString &key) const
@@ -3453,6 +3467,7 @@ void defaultlook::on_checkboxplasmaresetdock_clicked()
 
 void defaultlook::on_ButtonApplyPlasma_clicked()
 {
+    QString home_path = QDir::homePath();
     if (plasmaresetflag) {
         plasmaplacementflag = false;
         plasmasingleclickflag = false;
@@ -3492,6 +3507,26 @@ void defaultlook::on_ButtonApplyPlasma_clicked()
         writeTaskmanagerConfig(QStringLiteral("showOnlyCurrentDesktop"), value);
     }
 
+    //plasma-discover autostart
+    if (plasmadisoverautostartflag){
+        QString plasmadiscoverautostart = home_path + "/.config/autostart/org.kde.discover.notifier.desktop";
+        qDebug() << "discover autostart path is " << plasmadiscoverautostart;
+        if (ui->checkBoxPlasmaDiscoverUpdater->isChecked()){
+            //delete any Hidden=true lines to make sure its processed by xdg autostart
+            runCmd("sed -i /Hidden=true/d " + plasmadiscoverautostart);
+        } else {
+            //copy if it doesn't exist already
+            if (!QFile(plasmadiscoverautostart).exists()){
+                if (QFile("/etc/xdg/autostart/org.kde.discover.notifier.desktop").exists()){
+                    runCmd("cp /etc/xdg/autostart/org.kde.discover.notifier.desktop " + plasmadiscoverautostart);
+                }
+            }
+            //remove any previous Hidden= attribute, then add Hidden=true to make it not autostart
+            runCmd("sed -i /Hidden=*/d " + plasmadiscoverautostart);
+            runCmd("echo Hidden=true >> " + plasmadiscoverautostart); //this also creates file if the /etc/xdg version is missing
+        }
+    }
+
     //time to reset kwin and plasmashell
     if (plasmaworkspacesflag || plasmasingleclickflag || plasmaplacementflag || plasmaresetflag || plasmasystrayiconsizeflag) {
         //restart kwin first
@@ -3500,6 +3535,7 @@ void defaultlook::on_ButtonApplyPlasma_clicked()
         QString cmd =QStringLiteral("sleep 1; plasmashell --replace &");
         system(cmd.toUtf8());
     }
+
     setupPlasma();
 
 }
@@ -4159,5 +4195,12 @@ void defaultlook::on_checkBoxDebianKernelUpdates_clicked()
 void defaultlook::on_spinBoxPointerSize_valueChanged(int arg1)
 {
     set_cursor_size();
+}
+
+
+void defaultlook::on_checkBoxPlasmaDiscoverUpdater_clicked()
+{
+    plasmadisoverautostartflag = true;
+    ui->ButtonApplyPlasma->setEnabled(true);
 }
 
