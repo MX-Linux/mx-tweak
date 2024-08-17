@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# marcelo cripe <marcelocripe@gmail.com>, 2022
+# marcelo cripe <marcelocripe@gmail.com>, 2024
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-12-03 12:46-0500\n"
 "PO-Revision-Date: 2022-12-03 16:44+0000\n"
-"Last-Translator: marcelo cripe <marcelocripe@gmail.com>, 2022\n"
+"Last-Translator: marcelo cripe <marcelocripe@gmail.com>, 2024\n"
 "Language-Team: Portuguese (Brazil) (https://app.transifex.com/anticapitalista/teams/10162/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,7 +30,8 @@ msgstr "Ajustes Rápidos do MX"
 #: desktop-in/mx-tweak.desktop.in:7
 msgid "Assorted useful tweaks"
 msgstr ""
-"Permite fazer alterações de vários elementos do MX Linux com o MX Tweak"
+"O ‘MX-Tweak’ ou ‘Ajustes Rápidos do MX’ permite fazer alterações de várias "
+"configurações úteis no MX Linux"
 
 #: desktop-in/mx-tweak.desktop.in:13 desktop-in/mx-tweak-systray.desktop.in:13
 msgid "Desktop"
@@ -44,20 +45,24 @@ msgstr "Controle do Brilho na Bandeja do Sistema"
 #. # The desktop entry comment will be shown within the menu.
 #: desktop-in/mx-tweak-systray.desktop.in:7
 msgid "brightness systray application"
-msgstr "Aplicativo da bandeja do sistema para o controle do brilho da tela"
+msgstr ""
+"O ‘Brightness Systray’ ou ‘Controle do Brilho na Bandeja do Sistema’ é um "
+"programa que permite configurar o controle do brilho da tela por meio da "
+"bandeja do sistema"
 
 #. The desktop entry name will be displayed within the menu.
 #: desktop-in/mx-tweak-tray-app-autostart.desktop.in:7
 msgid "mx-tweak brightness systray"
 msgstr ""
-"Controle do Brilho da Tela na Bandeja do Sistema do Ajustes Rápidos do MX"
+"Controle do Brilho da Tela na Bandeja do Sistema dos Ajustes Rápidos do MX"
 
 #. # The desktop entry comment will be shown within the menu.
 #: desktop-in/mx-tweak-tray-app-autostart.desktop.in:9
 msgid "starts mx-tweak brightness systray app"
 msgstr ""
-"Inicializador do aplicativo da bandeja do sistema de controle do brilho com "
-"o MX Tweak"
+"O ‘MX Tweak Brightness Systray’ ou ‘Controle do Brilho da Tela na Bandeja do"
+" Sistema dos Ajustes Rápidos do MX’ é um inicializador do programa na "
+"bandeja do sistema que permite realizar o controle do brilho da tela"
 
 #. The desktop entry name will be displayed within the menu.
 #: desktop-in/zcompton.desktop.in:7
@@ -68,7 +73,8 @@ msgstr "Compositor de Janelas e Efeitos Visuais Compton"
 #: desktop-in/zcompton.desktop.in:9
 msgid "compton startup"
 msgstr ""
-"Permite personalizar o visual e a aparência das janelas da área de trabalho"
+"O ‘Compton’ ou ‘Compositor de Janelas e Efeitos Visuais Compton’ permite "
+"personalizar o visual e a aparência das janelas da área de trabalho"
 
 #. The desktop entry name will be displayed within the menu.
 #: desktop-in/zrestore-software-brightness.desktop.in:7
@@ -79,5 +85,7 @@ msgstr "Restaurador do Controle do Brilho da Tela"
 #: desktop-in/zrestore-software-brightness.desktop.in:9
 msgid "restore xrandr brightness values stored mx-tweak display tab"
 msgstr ""
-"Restaura os valores padrão do controle do brilho da tela do xrandr que foram"
-" armazenados na aba ou guia Tela do MX Tweak"
+"O ‘Restore Software Brightness’ ou ‘Restaurador do Controle do Brilho da "
+"Tela’ permite restaurar os valores padrão do controle do brilho da tela por "
+"meio do programa ‘xrandr’ que foram armazenados na aba ou guia ‘Tela’ do ‘MX"
+" Tweak’ ou ‘Ajustes Rápidos do MX’"
