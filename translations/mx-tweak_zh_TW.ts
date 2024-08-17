@@ -201,13 +201,13 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="327"/>
-        <location filename="../defaultlook.ui" line="1745"/>
+        <location filename="../defaultlook.ui" line="1811"/>
         <source>Bottom</source>
         <translation>下側</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="332"/>
-        <location filename="../defaultlook.ui" line="1755"/>
+        <location filename="../defaultlook.ui" line="1821"/>
         <source>Top</source>
         <translation>上側</translation>
     </message>
@@ -224,7 +224,7 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="362"/>
-        <location filename="../defaultlook.ui" line="1773"/>
+        <location filename="../defaultlook.ui" line="1800"/>
         <source>Affects 1st panel</source>
         <extracomment>acts on the first poanel found in Xfce panel xml fle</extracomment>
         <translation>影響到第一條邊條</translation>
@@ -266,13 +266,13 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="479"/>
-        <location filename="../defaultlook.ui" line="1750"/>
+        <location filename="../defaultlook.ui" line="1816"/>
         <source>Left</source>
         <translation>左側</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="484"/>
-        <location filename="../defaultlook.ui" line="1760"/>
+        <location filename="../defaultlook.ui" line="1826"/>
         <source>Right</source>
         <translation>右側</translation>
     </message>
@@ -296,9 +296,9 @@
         <location filename="../defaultlook.ui" line="1091"/>
         <location filename="../defaultlook.ui" line="1158"/>
         <location filename="../defaultlook.ui" line="1303"/>
-        <location filename="../defaultlook.ui" line="1786"/>
-        <location filename="../defaultlook.ui" line="1904"/>
-        <location filename="../defaultlook.ui" line="1965"/>
+        <location filename="../defaultlook.ui" line="1852"/>
+        <location filename="../defaultlook.ui" line="1911"/>
+        <location filename="../defaultlook.ui" line="1972"/>
         <source>Apply</source>
         <extracomment>apply changes</extracomment>
         <translation>使用</translation>
@@ -597,7 +597,7 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1245"/>
-        <location filename="../defaultlook.ui" line="1835"/>
+        <location filename="../defaultlook.ui" line="1767"/>
         <source>Show windows from all workspaces in panel</source>
         <translation>在邊條中顯示來自所有工作區的視窗</translation>
     </message>
@@ -692,7 +692,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1606"/>
         <location filename="../defaultlook.ui" line="1642"/>
-        <location filename="../defaultlook.ui" line="1734"/>
+        <location filename="../defaultlook.ui" line="1774"/>
         <source>Placement</source>
         <translation type="unfinished"></translation>
     </message>
@@ -709,7 +709,7 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1656"/>
-        <location filename="../defaultlook.ui" line="1849"/>
+        <location filename="../defaultlook.ui" line="1734"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -745,161 +745,167 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1802"/>
+        <location filename="../defaultlook.ui" line="1839"/>
         <source>Workspace</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1842"/>
+        <location filename="../defaultlook.ui" line="1781"/>
         <source>Enable single-click</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1856"/>
+        <location filename="../defaultlook.ui" line="1788"/>
         <source>Reset KDE/Plasma defaults</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1866"/>
+        <location filename="../defaultlook.ui" line="1863"/>
+        <source>Autostart plasma-discover system tray update notification utility</source>
+        <extracomment>enable or disable autostartup of plasma-discover updater utility on login</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1873"/>
         <source>Super Key</source>
         <extracomment>referring to the meta or Left Super Key</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1874"/>
+        <location filename="../defaultlook.ui" line="1881"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Choose application&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>description of button action to launch file dialog to choose an application</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1887"/>
+        <location filename="../defaultlook.ui" line="1894"/>
         <source>Xfce-superkey defaults</source>
         <extracomment>indicates that xfce-superkey will select a command by its default logic</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1894"/>
+        <location filename="../defaultlook.ui" line="1901"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Also known as the &amp;quot;windows&amp;quot; key&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1897"/>
+        <location filename="../defaultlook.ui" line="1904"/>
         <source>Command to run with Super (Meta) key</source>
         <extracomment>label for the field to enter the command to use with super key</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1927"/>
+        <location filename="../defaultlook.ui" line="1934"/>
         <source>Other</source>
         <translation>其它</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1983"/>
+        <location filename="../defaultlook.ui" line="1990"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>將 Lightdm（登入畫面）回復成系統預設的佈景</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2090"/>
+        <location filename="../defaultlook.ui" line="2097"/>
         <source>put a hold or remove a hold on updates of Liquorix kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2093"/>
+        <location filename="../defaultlook.ui" line="2100"/>
         <source>Enable Automatic Liquorix Kernel Updates (MX ahs repository)</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2100"/>
+        <location filename="../defaultlook.ui" line="2107"/>
         <source>put a hold or remove a hold on updates of Debian  kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2103"/>
+        <location filename="../defaultlook.ui" line="2110"/>
         <source>Enable Automatic Debian Kernel Updates</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1952"/>
+        <location filename="../defaultlook.ui" line="1959"/>
         <source>Password for administrative tasks:</source>
         <translation>管理任務的密碼：</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2041"/>
+        <location filename="../defaultlook.ui" line="2048"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>容許並非 root 的使用者掛載內接式硬碟</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2000"/>
+        <location filename="../defaultlook.ui" line="2007"/>
         <source>Root</source>
         <translation>最高用戶</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2069"/>
+        <location filename="../defaultlook.ui" line="2076"/>
         <source>Enable kernel sandbox</source>
         <translation>啟用內核沙箱</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2055"/>
+        <location filename="../defaultlook.ui" line="2062"/>
         <source>&amp;User</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1990"/>
+        <location filename="../defaultlook.ui" line="1997"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1993"/>
+        <location filename="../defaultlook.ui" line="2000"/>
         <source>Enable Bluetooth Adapters on boot</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2034"/>
+        <location filename="../defaultlook.ui" line="2041"/>
         <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1976"/>
+        <location filename="../defaultlook.ui" line="1983"/>
         <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2062"/>
+        <location filename="../defaultlook.ui" line="2069"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2083"/>
+        <location filename="../defaultlook.ui" line="2090"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>使用英特爾驅動代替默認的「模式設置」驅動（需要重啟）。</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2048"/>
+        <location filename="../defaultlook.ui" line="2055"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>註：現所採用的 /etc/X11/xorg.conf.d/20-intel.conf 會備份到家目錄當中</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2007"/>
+        <location filename="../defaultlook.ui" line="2014"/>
         <source>Use tearfree amdgpu option</source>
         <translation>使用無淚amdgpu選項</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2014"/>
+        <location filename="../defaultlook.ui" line="2021"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>         注意：現有的/etc/X11/xorg.conf.d/20-amd.conf將備份到主文件夾
 </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1938"/>
+        <location filename="../defaultlook.ui" line="1945"/>
         <source>Use tearfree radeon driver option</source>
         <translation>使用無淚radeon驅動程序選項</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1945"/>
+        <location filename="../defaultlook.ui" line="1952"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>          注意：現有的/etc/X11/xorg.conf.d/20-radeon.conf將備份到主文件夾</translation>
     </message>
@@ -979,17 +985,17 @@
         <translation>您當前的面板設置已備份到主文件夾（~/ .restore/）中名為.restore的隱藏文件夾中。</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1818"/>
+        <location filename="../defaultlook.cpp" line="1832"/>
         <source>settings</source>
         <translation>設定</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2158"/>
+        <location filename="../defaultlook.cpp" line="2172"/>
         <source>Choose a theme set</source>
         <translation>選擇一套佈景組合</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="4077"/>
+        <location filename="../defaultlook.cpp" line="4113"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
         <translation type="unfinished"></translation>
