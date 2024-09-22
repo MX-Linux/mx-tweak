@@ -2581,11 +2581,11 @@ void defaultlook::changecomputername(QString hostname){
 bool defaultlook::validatecomputername(QString hostname){
     // see if name is reasonable
     if (hostname.isEmpty()) {
-        QMessageBox::critical(this, this->windowTitle(), tr("Please enter a computer name."));
+        QMessageBox::critical(this, this->windowTitle(), tr("Please enter a computer name.", "question to enter a name for the computer hostname"));
         return false;
     } else if (hostname.contains(QRegularExpression("[^0-9a-zA-Z-.]|^[.-]|[.-]$|\\.\\."))) {
         QMessageBox::critical(this, this->windowTitle(),
-            tr("Sorry, your computer name contains invalid characters.\nYou'll have to select a different\nname before proceeding."));
+            tr("Sorry, your computer name contains invalid characters.\nYou'll have to select a different\nname before proceeding.", "unacceptable characters are found in hostname, pick a new name"));
         return false;
     }
     return true;

@@ -2098,7 +2098,7 @@
          <item row="15" column="0">
           <widget class="QCheckBox" name="checkBoxComputerName">
            <property name="text">
-            <string>Change computer name (requires reboot)</string>
+            <string extracomment="option to change the system hostname, requires a reboot to be 100% effective">Change computer name (requires reboot)</string>
            </property>
           </widget>
          </item>

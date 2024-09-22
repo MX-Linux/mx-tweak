@@ -1001,6 +1001,7 @@
     <message>
         <location filename="../defaultlook.cpp" line="2584"/>
         <source>Please enter a computer name.</source>
+        <comment>question to enter a name for the computer hostname</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1008,6 +1009,7 @@
         <source>Sorry, your computer name contains invalid characters.
 You&apos;ll have to select a different
 name before proceeding.</source>
+        <comment>unacceptable characters are found in hostname, pick a new name</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
