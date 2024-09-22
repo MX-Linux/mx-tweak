@@ -751,7 +751,7 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2101"/>
-        <source>Change computer name</source>
+        <source>Change computer name (requires reboot)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
