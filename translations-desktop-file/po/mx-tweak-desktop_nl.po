@@ -6,6 +6,7 @@
 # Translators:
 # Dolphin Oracle <dolphinoracle@gmail.com>, 2022
 # anticapitalista <anticapitalista@riseup.net>, 2022
+# Eadwine Rose, 2024
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-12-03 12:46-0500\n"
 "PO-Revision-Date: 2022-12-03 16:44+0000\n"
-"Last-Translator: anticapitalista <anticapitalista@riseup.net>, 2022\n"
+"Last-Translator: Eadwine Rose, 2024\n"
 "Language-Team: Dutch (https://app.transifex.com/anticapitalista/teams/10162/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -49,29 +50,29 @@ msgstr "helderheid systray applicatie"
 #. The desktop entry name will be displayed within the menu.
 #: desktop-in/mx-tweak-tray-app-autostart.desktop.in:7
 msgid "mx-tweak brightness systray"
-msgstr ""
+msgstr "mx-tweak helderheid systray"
 
 #. # The desktop entry comment will be shown within the menu.
 #: desktop-in/mx-tweak-tray-app-autostart.desktop.in:9
 msgid "starts mx-tweak brightness systray app"
-msgstr ""
+msgstr "start mx-tweak helderheid systray app"
 
 #. The desktop entry name will be displayed within the menu.
 #: desktop-in/zcompton.desktop.in:7
 msgid "compton"
-msgstr ""
+msgstr "compton"
 
 #. # The desktop entry comment will be shown within the menu.
 #: desktop-in/zcompton.desktop.in:9
 msgid "compton startup"
-msgstr ""
+msgstr "compton startup"
 
 #. The desktop entry name will be displayed within the menu.
 #: desktop-in/zrestore-software-brightness.desktop.in:7
 msgid "restore-software-brightness"
-msgstr ""
+msgstr "herstel-software-helderheid"
 
 #. # The desktop entry comment will be shown within the menu.
 #: desktop-in/zrestore-software-brightness.desktop.in:9
 msgid "restore xrandr brightness values stored mx-tweak display tab"
-msgstr ""
+msgstr "xrandr helderheidswaarden herstellen mx-tweak tabblad display"

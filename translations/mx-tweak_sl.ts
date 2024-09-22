@@ -201,13 +201,13 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="327"/>
-        <location filename="../defaultlook.ui" line="1745"/>
+        <location filename="../defaultlook.ui" line="1811"/>
         <source>Bottom</source>
         <translation>Dno</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="332"/>
-        <location filename="../defaultlook.ui" line="1755"/>
+        <location filename="../defaultlook.ui" line="1821"/>
         <source>Top</source>
         <translation>Vrh</translation>
     </message>
@@ -224,7 +224,7 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="362"/>
-        <location filename="../defaultlook.ui" line="1773"/>
+        <location filename="../defaultlook.ui" line="1800"/>
         <source>Affects 1st panel</source>
         <extracomment>acts on the first poanel found in Xfce panel xml fle</extracomment>
         <translation>Vpliva na prvi pano</translation>
@@ -266,13 +266,13 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="479"/>
-        <location filename="../defaultlook.ui" line="1750"/>
+        <location filename="../defaultlook.ui" line="1816"/>
         <source>Left</source>
         <translation>Levo</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="484"/>
-        <location filename="../defaultlook.ui" line="1760"/>
+        <location filename="../defaultlook.ui" line="1826"/>
         <source>Right</source>
         <translation>Desno</translation>
     </message>
@@ -296,9 +296,9 @@
         <location filename="../defaultlook.ui" line="1091"/>
         <location filename="../defaultlook.ui" line="1158"/>
         <location filename="../defaultlook.ui" line="1303"/>
-        <location filename="../defaultlook.ui" line="1786"/>
-        <location filename="../defaultlook.ui" line="1904"/>
-        <location filename="../defaultlook.ui" line="1965"/>
+        <location filename="../defaultlook.ui" line="1852"/>
+        <location filename="../defaultlook.ui" line="1911"/>
+        <location filename="../defaultlook.ui" line="1972"/>
         <source>Apply</source>
         <extracomment>apply changes</extracomment>
         <translation>Uveljavi</translation>
@@ -597,7 +597,7 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1245"/>
-        <location filename="../defaultlook.ui" line="1835"/>
+        <location filename="../defaultlook.ui" line="1767"/>
         <source>Show windows from all workspaces in panel</source>
         <translation>V panoju prikaži okna z vseh delovnih površin</translation>
     </message>
@@ -692,7 +692,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1606"/>
         <location filename="../defaultlook.ui" line="1642"/>
-        <location filename="../defaultlook.ui" line="1734"/>
+        <location filename="../defaultlook.ui" line="1774"/>
         <source>Placement</source>
         <translation>Postavitev</translation>
     </message>
@@ -709,7 +709,7 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1656"/>
-        <location filename="../defaultlook.ui" line="1849"/>
+        <location filename="../defaultlook.ui" line="1734"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ponastavitev&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -745,160 +745,166 @@
         <translation>Plasma</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1802"/>
+        <location filename="../defaultlook.ui" line="1839"/>
         <source>Workspace</source>
         <translation>Delovna površina</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1842"/>
+        <location filename="../defaultlook.ui" line="1781"/>
         <source>Enable single-click</source>
         <translation>Vklopi en klik</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1856"/>
+        <location filename="../defaultlook.ui" line="1788"/>
         <source>Reset KDE/Plasma defaults</source>
         <translation>Ponastavi KDE/Plasma na privzeto</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1866"/>
+        <location filename="../defaultlook.ui" line="1863"/>
+        <source>Autostart plasma-discover system tray update notification utility</source>
+        <extracomment>enable or disable autostartup of plasma-discover updater utility on login</extracomment>
+        <translation>Samodejni zagon obvestilnika za posodobitve plasma-discover v sistemski pasici</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1873"/>
         <source>Super Key</source>
         <extracomment>referring to the meta or Left Super Key</extracomment>
         <translation>Super tipka</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1874"/>
+        <location filename="../defaultlook.ui" line="1881"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Choose application&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>description of button action to launch file dialog to choose an application</extracomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Izbira programa&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1887"/>
+        <location filename="../defaultlook.ui" line="1894"/>
         <source>Xfce-superkey defaults</source>
         <extracomment>indicates that xfce-superkey will select a command by its default logic</extracomment>
         <translation>Xfce-superkey privzeto</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1894"/>
+        <location filename="../defaultlook.ui" line="1901"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Also known as the &amp;quot;windows&amp;quot; key&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Znana tudi kot &amp;quot;windows&amp;quot; tipka&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1897"/>
+        <location filename="../defaultlook.ui" line="1904"/>
         <source>Command to run with Super (Meta) key</source>
         <extracomment>label for the field to enter the command to use with super key</extracomment>
         <translation>Ukaz, ki naj se zažene preko Super (Meta) tipke</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1927"/>
+        <location filename="../defaultlook.ui" line="1934"/>
         <source>Other</source>
         <translation>Drugo</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1983"/>
+        <location filename="../defaultlook.ui" line="1990"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>Ponastavi Lightdm (zaslon za prijavo) na privzeto temo sistema</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2090"/>
+        <location filename="../defaultlook.ui" line="2097"/>
         <source>put a hold or remove a hold on updates of Liquorix kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
         <translation>Opusti ali ponovno vzpostavi posadabljanje Liquorix jeder</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2093"/>
+        <location filename="../defaultlook.ui" line="2100"/>
         <source>Enable Automatic Liquorix Kernel Updates (MX ahs repository)</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
         <translation>Vklopi samodejno posodabljanje jeder (MX ahs skladišče)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2100"/>
+        <location filename="../defaultlook.ui" line="2107"/>
         <source>put a hold or remove a hold on updates of Debian  kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
         <translation>Opusti ali ponovno vzpostavi posodabljanje Debian jeder</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2103"/>
+        <location filename="../defaultlook.ui" line="2110"/>
         <source>Enable Automatic Debian Kernel Updates</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
         <translation>Vklopi samodejno posodabljanje Debian jeder</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1952"/>
+        <location filename="../defaultlook.ui" line="1959"/>
         <source>Password for administrative tasks:</source>
         <translation>Geslo za adminstracijo:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2041"/>
+        <location filename="../defaultlook.ui" line="2048"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>Omogoči priklop notranjih pogonov ne-korenskim uporabnikom</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2000"/>
+        <location filename="../defaultlook.ui" line="2007"/>
         <source>Root</source>
         <translation>Koren</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2069"/>
+        <location filename="../defaultlook.ui" line="2076"/>
         <source>Enable kernel sandbox</source>
         <translation>Vklopi peskovnik za jedro</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2055"/>
+        <location filename="../defaultlook.ui" line="2062"/>
         <source>&amp;User</source>
         <translation>&amp;Uporabnik</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1990"/>
+        <location filename="../defaultlook.ui" line="1997"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;zahteva ponovni zagon&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1993"/>
+        <location filename="../defaultlook.ui" line="2000"/>
         <source>Enable Bluetooth Adapters on boot</source>
         <translation>Ob zagonu vklopi Bluetooth vmesnike</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2034"/>
+        <location filename="../defaultlook.ui" line="2041"/>
         <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
         <translation>Apt namesti dodatne &quot;priporočene&quot; pakete kot odvisnosti</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1976"/>
+        <location filename="../defaultlook.ui" line="1983"/>
         <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
         <translation>Generiranje menija za vse fluxbox aplikacije, po nameščanju, odstranjevanju ali posodabljanju.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2062"/>
+        <location filename="../defaultlook.ui" line="2069"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
         <translation>Uporabi okraske Client Side Decorations (CSD) v aplikacijah GTK3, ki jih podpirajo (zahteva ponoven zagon seje) </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2083"/>
+        <location filename="../defaultlook.ui" line="2090"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>Namesto privzetega &quot;modesetting&quot; gonilnika uporabite Intel gonilnik (zahteva ponovni zagon)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2048"/>
+        <location filename="../defaultlook.ui" line="2055"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>POMNI: obstoječi /etc/X11/xorg.conf.d/20-intel.conf bo varnostno kopiran v domačo home mapo</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2007"/>
+        <location filename="../defaultlook.ui" line="2014"/>
         <source>Use tearfree amdgpu option</source>
         <translation>Uporabi amdgpu opcijo za odpravljanje napak v prikazovanju </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2014"/>
+        <location filename="../defaultlook.ui" line="2021"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>POMNI: obstoječi /etc/X11/xorg.conf.d/20-amd.conf bo varnostno shranjen v domačo home mapo</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1938"/>
+        <location filename="../defaultlook.ui" line="1945"/>
         <source>Use tearfree radeon driver option</source>
         <translation>Uporabi radeon opcijo za odpravljanje napak v prikazovanju </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1945"/>
+        <location filename="../defaultlook.ui" line="1952"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>POMNI: obstoječi /etc/X11/xorg.conf.d/20-radeon.conf bo varnostno kopiran v domačo home mapo</translation>
     </message>
@@ -978,17 +984,17 @@
         <translation>Trenutne nastavitve orodne vrstice so se shranile v skrito mapo z imenom .restore  v uporabnikovi domači mapi (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1818"/>
+        <location filename="../defaultlook.cpp" line="1832"/>
         <source>settings</source>
         <translation>nastavitve</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2158"/>
+        <location filename="../defaultlook.cpp" line="2172"/>
         <source>Choose a theme set</source>
         <translation>Izberite tematski set</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="4077"/>
+        <location filename="../defaultlook.cpp" line="4113"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
         <translation>Izbira programa za zagon</translation>
