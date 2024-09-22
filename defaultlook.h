@@ -72,6 +72,7 @@ public:
     QHash<QString, QString>  theme_info;
     QString pluginidsystray;
     QString plugintasklist;
+    QString originalhostname;
     QStringList undotheme;
     bool verbose = false;
     bool panelflag{};
@@ -183,6 +184,8 @@ public:
     void setmissingxfconfvariables(const QString &activeprofile, const QString &resolution);
     void fluxboxchangeinitvariable(const QString &initline, const QString &value) const;
     void fluxboxchangedock() const;
+    void changecomputername(QString hostname);
+    bool validatecomputername(QString hostname);
 
 private slots:
     static void on_buttonCancel_clicked();
@@ -314,6 +317,8 @@ private slots:
     void on_spinBoxPointerSize_valueChanged(int arg1);
 
     void on_checkBoxPlasmaDiscoverUpdater_clicked();
+
+    void on_checkBoxComputerName_clicked();
 
 private:
     Ui::defaultlook *ui;

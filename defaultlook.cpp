@@ -1501,6 +1501,12 @@ void defaultlook::setupEtc()
     debianKernelUpdateFlag = false;
     liqKernelUpdateFlag = false;
 
+    //hostname
+    ui->checkBoxComputerName->setChecked(false);
+    ui->lineEditHostname->setEnabled(false);
+    originalhostname = runCmd("hostname").output;
+    ui->lineEditHostname->setText(originalhostname);
+
     //setup NOCSD GTK3 option
     if (!QFileInfo::exists(QStringLiteral("/usr/bin/gtk3-nocsd"))) {
         if (verbose) qDebug() << "gtk3-nocsd not found";
@@ -2550,12 +2556,39 @@ void defaultlook::on_ButtonApplyEtc_clicked()
         }
     }
 
+    //hostname setting
+    //if name doesn't validate, don't make any changes to any options, and don't reset gui.
+    if (ui->checkBoxComputerName->isChecked()){
+        if (validatecomputername(ui->lineEditHostname->text())){
+            changecomputername(ui->lineEditHostname->text());
+        } else {
+            return;
+        }
+    }
+    //checkbox options
     if ( ! udisks_option.isEmpty() || ! sudo_override_option.isEmpty() || ! user_name_space_override_option.isEmpty() || ! intel_option.isEmpty() || ! lightdm_option.isEmpty() || ! amd_option.isEmpty() || ! radeon_option.isEmpty() || !bluetooth_option.isEmpty() || !recommends_option.isEmpty() || !debian_kernel_updates_option.isEmpty() || !liq_kernel_updates_option.isEmpty()){
         runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + udisks_option + " " + sudo_override_option + " " + user_name_space_override_option + " " + intel_option + " " + amd_option + " " + radeon_option + " " + bluetooth_option + " " + recommends_option + " " + lightdm_option + " " + debian_kernel_updates_option + " " + liq_kernel_updates_option);
 
     }
     //reset gui
     setupEtc();
+}
+
+void defaultlook::changecomputername(QString hostname){
+    runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh hostname " + hostname);
+}
+
+bool defaultlook::validatecomputername(QString hostname){
+    // see if name is reasonable
+    if (hostname.isEmpty()) {
+        QMessageBox::critical(this, this->windowTitle(), tr("Please enter a computer name.", "question to enter a name for the computer hostname"));
+        return false;
+    } else if (hostname.contains(QRegularExpression("[^0-9a-zA-Z-.]|^[.-]|[.-]$|\\.\\."))) {
+        QMessageBox::critical(this, this->windowTitle(),
+            tr("Sorry, your computer name contains invalid characters.\nYou'll have to select a different\nname before proceeding.", "unacceptable characters are found in hostname, pick a new name"));
+        return false;
+    }
+    return true;
 }
 
 void defaultlook::on_checkBoxSingleClick_clicked()
@@ -4203,4 +4236,16 @@ void defaultlook::on_checkBoxPlasmaDiscoverUpdater_clicked()
     plasmadisoverautostartflag = true;
     ui->ButtonApplyPlasma->setEnabled(true);
 }
+
+
+void defaultlook::on_checkBoxComputerName_clicked()
+{
+    ui->ButtonApplyEtc->setEnabled(true);
+    if (ui->checkBoxComputerName->isChecked()){
+        ui->lineEditHostname->setEnabled(true);
+    } else {
+        ui->lineEditHostname->setEnabled(false);
+    }
+}
+
 

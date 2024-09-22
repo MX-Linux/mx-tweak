@@ -238,6 +238,29 @@ if [ -n "$(LC_ALL=C dpkg --status linux-image-liquorix-amd64 2>/dev/null| grep "
 fi
 }
 
+change_hostname()
+{
+local original="$(hostname)" new="$1"
+
+echo "$original"
+echo "$new"
+
+if [ -e "/etc/hostname" ]; then
+	sed -i "s/$original/$new/" /etc/hostname
+fi
+if [ -e "/etc/hosts" ]; then
+	sed -i "s/$original/$new/" /etc/hosts
+fi
+if [ -e "/etc/mailname" ]; then
+	sed -i "s/$original/$new/" /etc/mailname
+fi
+if [ -e "/etc/dhcp/dhclient.conf" ]; then
+	sed -i "s/$original/$new/" /etc/dhcp/dhclient.conf
+fi
+
+hostname "$new"
+}
+
 main()
 {
 $CMD1
@@ -249,7 +272,6 @@ $CMD6
 $CMD7
 $CMD8
 $CMD9
-
 }
 
 CMD1=$1
@@ -262,6 +284,10 @@ CMD7=$7
 CMD8=$8
 CMD9=$9
 
-main
+if [ "$CMD1" = "hostname" ]; then
+  	change_hostname "$CMD2"
+else
+	main
+fi
 
 exit 0
