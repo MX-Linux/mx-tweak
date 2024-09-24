@@ -752,6 +752,7 @@
     <message>
         <location filename="../defaultlook.ui" line="2101"/>
         <source>Change computer name (requires reboot)</source>
+        <extracomment>option to change the system hostname, requires a reboot to be 100% effective</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>

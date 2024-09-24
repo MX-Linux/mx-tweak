@@ -1,53 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="nl_BE">
+<TS version="2.1" language="gl">
 <context>
     <name>QObject</name>
     <message>
         <location filename="../about.cpp" line="41"/>
         <source>License</source>
-        <translation>Licentie</translation>
+        <translation>Licenza</translation>
     </message>
     <message>
         <location filename="../about.cpp" line="42"/>
         <location filename="../about.cpp" line="52"/>
         <source>Changelog</source>
-        <translation>Changelog</translation>
+        <translation>Rexistro dos cambios</translation>
     </message>
     <message>
         <location filename="../about.cpp" line="43"/>
         <source>Cancel</source>
-        <translation>Cancel</translation>
+        <translation>Cancelar</translation>
     </message>
     <message>
         <location filename="../about.cpp" line="64"/>
         <source>&amp;Close</source>
-        <translation>&amp;Sluiten</translation>
+        <translation>&amp;Cerrar</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="47"/>
         <source>GUI for applying assorted useful tweaks</source>
-        <translation type="unfinished"></translation>
+        <translation>GUI para aplicar diversas melloras útiles</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="50"/>
         <source>launches brightness-systray</source>
-        <translation type="unfinished"></translation>
+        <translation>lanza brightness-systray</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="51"/>
         <source>opens with display tab open.  Only valid with Xfce desktop running</source>
-        <translation type="unfinished"></translation>
+        <translation>abre co separador de visualización aberto. Só válido cun escritorio Xfce en execución</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="52"/>
         <source>Opens theme tab directly.  Valid on Xfce &amp; Fluxbox desktops</source>
-        <translation type="unfinished"></translation>
+        <translation>Abre a lapela do tema directamente. Válido nos escritorios Xfce e Fluxbox</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="53"/>
         <source>Opens Other tab directly.  Valid on all desktops</source>
-        <translation type="unfinished"></translation>
+        <translation>Abre directamente outra guía. Válido en todos os escritorios</translation>
     </message>
 </context>
 <context>
@@ -55,28 +55,28 @@
     <message>
         <location filename="../brightness_small.ui" line="14"/>
         <source>MainWindow</source>
-        <translation>HoofdScherm</translation>
+        <translation>Lapela principal</translation>
     </message>
     <message>
         <location filename="../brightness_small.ui" line="39"/>
         <source>Save</source>
-        <translation>Opslaan</translation>
+        <translation>Gardar</translation>
     </message>
     <message>
         <location filename="../brightness_small.ui" line="59"/>
         <source>Software (xrandr) Brightness</source>
-        <translation>Software (xrandr) Helderheid</translation>
+        <translation>Brillo controlado polo software (xrandr)</translation>
     </message>
     <message>
         <location filename="../brightness_small.ui" line="66"/>
         <location filename="../brightness_small.ui" line="87"/>
         <source>TextLabel</source>
-        <translation>TextLabel</translation>
+        <translation>Rótulo de texto</translation>
     </message>
     <message>
         <location filename="../brightness_small.ui" line="80"/>
         <source>Hardware Backlight</source>
-        <translation>Hardware Backlight</translation>
+        <translation>Retroiluminación da pantalla</translation>
     </message>
     <message>
         <location filename="../brightness_small.ui" line="94"/>
@@ -86,17 +86,17 @@
     <message>
         <location filename="../brightness_small.cpp" line="33"/>
         <source>MX-Tweak</source>
-        <translation>MX-Tweak</translation>
+        <translation>MX-axustes rápidos</translation>
     </message>
     <message>
         <location filename="../brightness_small.cpp" line="58"/>
         <source>Display</source>
-        <translation>Beeldscherm</translation>
+        <translation>Amosar</translation>
     </message>
     <message>
         <location filename="../brightness_small.cpp" line="63"/>
         <source>&amp;Quit</source>
-        <translation>&amp;Afsluiten</translation>
+        <translation>&amp;Saír</translation>
     </message>
 </context>
 <context>
@@ -113,63 +113,63 @@
         <location filename="../defaultlook.cpp" line="767"/>
         <location filename="../defaultlook.cpp" line="770"/>
         <source>MX Tweak</source>
-        <translation>MX Tweak</translation>
+        <translation>MX axustes rápidos</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="41"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the panel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Het paneel aanpassen&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Personalizar o panel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="51"/>
         <location filename="../defaultlook.ui" line="272"/>
         <source>Panel</source>
-        <translation>Paneel</translation>
+        <translation>Panel</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="71"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configure window behavior and shortcuts&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configureer schermgedrag en snelkoppelingen&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configurar o comportamento das lapelas e dos atallos&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="85"/>
         <source>Window Manager</source>
-        <translation>Schermbeheer</translation>
+        <translation>Xestor de lapelas</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="105"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the look of your desktop&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pas het uiterlijk van uw desktop aan&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Personalizar o aspecto do escritorio&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="119"/>
         <source>Appearance</source>
-        <translation>Uiterlijk</translation>
+        <translation>Apariencia</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="133"/>
         <source>Xfce Settings</source>
-        <translation>Xfce Instellingen</translation>
+        <translation>Configuración do Xfce</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="212"/>
         <source>About</source>
-        <translation>Over</translation>
+        <translation>Sobre</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="223"/>
         <source>Help</source>
-        <translation>Help</translation>
+        <translation>Axuda</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="240"/>
         <source>Quit application</source>
-        <translation>Verlaat de applicatie</translation>
+        <translation>Saír do aplicativo</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="243"/>
         <source>Close</source>
-        <translation>Sluiten</translation>
+        <translation>Cerrar</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="250"/>
@@ -180,112 +180,112 @@
         <location filename="../defaultlook.ui" line="283"/>
         <source>Display panel horizontally</source>
         <extracomment>panel will be shown in a horizontal configuration</extracomment>
-        <translation>Laat paneel horizontaal zien</translation>
+        <translation>Exhibir o panel en horizontal</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="293"/>
         <source>Volume</source>
         <extracomment>volume plugin scale factor</extracomment>
-        <translation>Deel</translation>
+        <translation>Volume</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="300"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>affects the docklike plugin</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="307"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Affects all panels&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Beïnvloedt alle panelen&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Afecta a todos os paneis&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="327"/>
         <location filename="../defaultlook.ui" line="1811"/>
         <source>Bottom</source>
-        <translation>Onderaan</translation>
+        <translation>Abaixo</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="332"/>
         <location filename="../defaultlook.ui" line="1821"/>
         <source>Top</source>
-        <translation>Bovenaan</translation>
+        <translation>Arriba</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="340"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Tasklist&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Tasklist&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="347"/>
         <source>Display panel vertically</source>
         <extracomment>panel will be shown in a vertical configuration</extracomment>
-        <translation>Laat paneel verticaal zien</translation>
+        <translation>Exhibir o panel na vertical</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="362"/>
         <location filename="../defaultlook.ui" line="1800"/>
         <source>Affects 1st panel</source>
         <extracomment>acts on the first poanel found in Xfce panel xml fle</extracomment>
-        <translation>Beïnvloedt 1e paneel</translation>
+        <translation>Afecta ao panel 1</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="369"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Panel Plugin Scales&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Escalas de complementos do panel&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="389"/>
         <source>Backup current panel configuration</source>
         <extracomment>backup existing panel configuration</extracomment>
-        <translation>Backup huidige paneel configuratie</translation>
+        <translation>Gardar a configuración actual do panel</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="399"/>
         <location filename="../defaultlook.ui" line="459"/>
         <source>Options</source>
-        <translation>Opties</translation>
+        <translation>Opcións</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="419"/>
         <source>Power Manager</source>
         <extracomment>power manager plugin scale factor</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Xestor de energia</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="426"/>
         <source>Restore backup panel configuration</source>
         <extracomment>restore a panel backup</extracomment>
-        <translation>Herstel gebackupte paneel configuratie</translation>
+        <translation>Restaurar a configuración do panel gardado</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="449"/>
         <source>Set Scales</source>
         <extracomment>set a scale factor</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Establecer escalas</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="479"/>
         <location filename="../defaultlook.ui" line="1816"/>
         <source>Left</source>
-        <translation>Links</translation>
+        <translation>Á esquerda</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="484"/>
         <location filename="../defaultlook.ui" line="1826"/>
         <source>Right</source>
-        <translation>Rechts</translation>
+        <translation>Á dereita</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="492"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Buttons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>affects the window button plugin</extracomment>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Vensterknoppen&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Botóns da lapela&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="513"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Docklike is the modern dock plugin for the panel.  Window Buttons is the classic tasklist without dock features.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Docklike é o complemento moderno do panel. Window Buttons é a lista de tarefas clásica sen características de dock.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="536"/>
@@ -301,85 +301,85 @@
         <location filename="../defaultlook.ui" line="2083"/>
         <source>Apply</source>
         <extracomment>apply changes</extracomment>
-        <translation>Toepassen</translation>
+        <translation>Aplicar</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="556"/>
         <source>Restore default panel</source>
         <extracomment>affects any panel that is curently configured</extracomment>
-        <translation>Herstel standaard paneel</translation>
+        <translation>Restaurar o panel predeterminado</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="566"/>
         <source>Set Tasklist plugin to:</source>
         <extracomment>change the tasklist plugin</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Configura o plugin Tasklist para:</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="580"/>
         <source>Theme</source>
-        <translation>Thema</translation>
+        <translation>Tema</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="651"/>
         <source>Size</source>
         <extracomment>size of the mouse pointer or cursor</extracomment>
-        <translation>Grootte</translation>
+        <translation>Tamaño</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="679"/>
         <source>Theme Options</source>
-        <translation>Thema Opties</translation>
+        <translation>Opcións de tema</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="595"/>
         <source>Remove User Theme Set</source>
-        <translation>Verwijder Gebruiker Thema Set</translation>
+        <translation>Eliminar tema do usuario</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="588"/>
         <source>Preview</source>
-        <translation>Voorbeeld</translation>
+        <translation>Visualizar</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="695"/>
         <source>Undo</source>
-        <translation>Ongedaan maken</translation>
+        <translation>Desfacer</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="606"/>
         <source>Save Current Settings as a Theme Set</source>
         <extracomment>save theme settings as a group</extracomment>
-        <translation>Sla Huidige Instellingen op als Thema Set</translation>
+        <translation>Gardar as configuracións actuais como tema</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="644"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Cursors&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>cursor theme</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Cursors&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="664"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Manager&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>theme a window manager border will get</extracomment>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Vensterbeheer&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Xestor de xanelas&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="702"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>theme an application will get</extracomment>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Applicatie&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Aplicativo&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="637"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>icon theme</extracomment>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Iconen&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Iconas&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="630"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Themes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Thema&apos;s&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Temas&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="758"/>
@@ -390,32 +390,32 @@
     <message>
         <location filename="../defaultlook.ui" line="776"/>
         <source>Transparency and shadow options</source>
-        <translation>Transparantie- en schaduwopties</translation>
+        <translation>Opcións de transparencia e sombreado</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="875"/>
         <source>Edit compton.conf directly in text editor</source>
-        <translation>Bewerkt compton.conf rechtstreeks in tekstverwerker</translation>
+        <translation>Editar o ficheiro compton.conf directamente no editor de texto</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="878"/>
         <source>Edit compton.conf</source>
-        <translation>Bewerk compton.conf</translation>
+        <translation>Editar compton.conf</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="889"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce Compositor Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce Compositor Instellingen&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configuración do compositor do Xfce&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="892"/>
         <source>Xfwm Settings</source>
-        <translation>Xfwm Instellingen</translation>
+        <translation>Configuración do Xfwm</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="851"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Changing the VBlank mode may help alleviate some screen tearing issues.  See Help for more information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Veranderen van de VBlank modus kan wat screen tearing problemen verminderen. Zie Help voor meer informatie.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cambiar o modo VBlank pode axudar a aliviar algúns problemas de distorsión na pantalla. Consultar a axuda para máis información.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="854"/>
@@ -425,33 +425,33 @@
     <message>
         <location filename="../defaultlook.ui" line="861"/>
         <source>Launch compton-conf configuration tool</source>
-        <translation>Start compton-conf configuratiegereedschap</translation>
+        <translation>Executar a ferramenta de configuración compton-conf</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="864"/>
         <source>Compton settings</source>
-        <translation>Compton instellingen</translation>
+        <translation>Configuración do Compton</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="796"/>
         <source>None</source>
-        <translation>Geen</translation>
+        <translation>ningunha</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="617"/>
         <source>default</source>
         <extracomment>default pointer size determined by X server</extracomment>
-        <translation>standaard</translation>
+        <translation>predeterminada</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="801"/>
         <source>Xfwm (Xfce) Compositor</source>
-        <translation>Xfmw (Xfce) Compositor</translation>
+        <translation>Compositoir do Xfwm (Xfce)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="806"/>
         <source>Compton </source>
-        <translation>Compton</translation>
+        <translation>Compton </translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="815"/>
@@ -473,271 +473,271 @@
         <location filename="../defaultlook.ui" line="1416"/>
         <source>off</source>
         <extracomment>setting to 0 turns off screensaver screen blank</extracomment>
-        <translation>uit</translation>
+        <translation>apagado</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="932"/>
         <source>Display</source>
-        <translation>Beeldscherm</translation>
+        <translation>Amosar</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="943"/>
         <source>Hardware Backlight</source>
         <extracomment>set the hardware backlight on monitors that have them</extracomment>
-        <translation>Hardware Backlight</translation>
+        <translation>Retroiluminación da pantalla</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="950"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Display Tweaks&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Beeldscherm Instellingen&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Axustes da pantalla&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="977"/>
         <source>Choose Display for xrandr tweaks</source>
         <extracomment>choose the display that the xrandr tweaks will be acted upon</extracomment>
-        <translation>Kies Beeldscherm voor xrandr instellingen</translation>
+        <translation>Escoller pantalla para axustes do xrandr</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="987"/>
         <source>Resolution</source>
-        <translation>Resolutie</translation>
+        <translation>Resolución</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="994"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Saving is per display&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opslaan is per beeldscherm&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Gardar é por pantalla&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="997"/>
         <source>Save</source>
-        <translation>Opslaan</translation>
+        <translation>Gardar</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1004"/>
         <source>Software (xrandr) Brightness</source>
         <extracomment>adjust brightness (not backlight) via software</extracomment>
-        <translation>Software (xrandr) Helderheid</translation>
+        <translation>Brillo controlado polo software (xrandr)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1011"/>
         <location filename="../defaultlook.ui" line="1108"/>
         <source>TextLabel</source>
-        <translation>TextLabel</translation>
+        <translation>Rótulo de texto</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1018"/>
         <source>GTK scaling</source>
         <extracomment>gtk scale factor</extracomment>
-        <translation>GTK schaling</translation>
+        <translation>Escala GTK</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1038"/>
         <source>xrandr Scaling</source>
         <extracomment>xrandr scale factor</extracomment>
-        <translation>xrandr Schaling</translation>
+        <translation>Escala xrandr</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1134"/>
         <source>Config Options</source>
-        <translation>Configuratie Opties</translation>
+        <translation>Opcións da configuración</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1145"/>
         <source>Disable shortening of long filenames on the desktop</source>
-        <translation>Schakel verkorten van lange bestandsnamen op de desktop uit</translation>
+        <translation>Desactivar o acurtamento dos nomes dos ficheiros</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1169"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
-        <translation>                   let op: voor slaapstand moet swap &gt;= RAM</translation>
+        <translation>                   nota: para o sistema poder hibernar, a partición swap ten que ser &gt;= RAM instalada</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1189"/>
         <source>Enable single-click on desktop</source>
-        <translation>Schakel enkel-klik op desktop in</translation>
+        <translation>Acivar premer único</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1196"/>
         <source>Enable hibernate on Log Out menu </source>
-        <translation>Schakel slaapstand in in Afmeldmenu</translation>
+        <translation>Activar &apos;Hibernar&apos; no menú Saír</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1203"/>
         <location filename="../defaultlook.ui" line="1337"/>
         <source>Reset Thunar custom right-click actions to system defaults</source>
-        <translation>Herstel Thunar aangepaste rechts-klik acties naar systeem standaard</translation>
+        <translation>Restablecer as accións predeterminadas do botón directo do rato en Thunar</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1210"/>
         <location filename="../defaultlook.ui" line="1388"/>
         <source>Enable single-click in Thunar File Manager</source>
-        <translation>Schakel enkel-klik in Thunar Bestandbeheer in</translation>
+        <translation>Activar cun premer no xestor de ficheiros Thumar</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1217"/>
         <location filename="../defaultlook.ui" line="1649"/>
         <source>Thunar windows always open in split view</source>
-        <translation type="unfinished"></translation>
+        <translation>As xanelas do Thunar sempre abren en vista dividida</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1224"/>
         <location filename="../defaultlook.ui" line="1581"/>
         <source>Thunar split view opens horizontal</source>
-        <translation type="unfinished"></translation>
+        <translation>A vista dividida do Thunar abre en horizontal</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1231"/>
         <source>Show percentages in notifcations when available</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar porcentaxes nas notificacións cando estean dispoñibles</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1238"/>
         <source>Enable Desktop Zoom </source>
-        <translation>Bureaublad Zoomen Inschakelen</translation>
+        <translation>Activa a ampliación do escritorio</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1245"/>
         <location filename="../defaultlook.ui" line="1767"/>
         <source>Show windows from all workspaces in panel</source>
-        <translation>Laat schermen van alle werkgebieden in paneel zien</translation>
+        <translation>Amosar as lapelas de todas asáreas de traballo no panel</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1252"/>
         <source>Show GTK File Dialog action buttons at bottom of dialogs</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar botóns de acción do diálogo de ficheiros GTK na parte inferior dos diálogos</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1259"/>
         <source>( also turns off Client Side Decorations for Xfce applications)</source>
-        <translation type="unfinished"></translation>
+        <translation>( tamén desactiva as Decoracións do Lado do Cliente para as aplicacións de Xfce)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1272"/>
         <source>Fluxbox</source>
-        <translation>Fluxbox </translation>
+        <translation>Fluxbox</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1284"/>
         <location filename="../defaultlook.ui" line="1624"/>
         <source>On</source>
-        <translation>Aan</translation>
+        <translation>Amosar</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1289"/>
         <location filename="../defaultlook.ui" line="1629"/>
         <source>Off</source>
-        <translation>Uit</translation>
+        <translation>Agochar</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1310"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Thunar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Thunar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1317"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Werkbalk Instellingen&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Configuracións da barra de ferramentas&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1357"/>
         <source>Toggle icon captions</source>
-        <translation>Schakelen bijschriften iconen</translation>
+        <translation>Alterna os subtítulos das iconas</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1364"/>
         <source>Reset Fluxbox Menu</source>
-        <translation>Fluxbox Menu Terugzetten</translation>
+        <translation>Restablecer o menú do Fluxbox</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1381"/>
         <source>Width</source>
-        <translation>Breedte</translation>
+        <translation>Largura</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1395"/>
         <source>Toggle desktop icons</source>
-        <translation>Wissel bureaublad iconen</translation>
+        <translation>Activa ou desactiva as iconas do escritorio</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1402"/>
         <location filename="../defaultlook.ui" line="1426"/>
         <source>Autohide</source>
-        <translation>Autoverbergen</translation>
+        <translation>Agochar automático</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1409"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock Instellingen&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Configuración do Dock&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1500"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Desktop Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Bureaublad Iconen&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Iconas do escritorio&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1574"/>
         <source>Reset DefaultDock</source>
-        <translation>Terugzetten StandaardDock</translation>
+        <translation>Restablecer a dock predeterminada</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1588"/>
         <source>Manage Tint2 Panel</source>
-        <translation type="unfinished"></translation>
+        <translation>Xestionar o panel Tint2</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1599"/>
         <source>Height</source>
-        <translation>Hoogte</translation>
+        <translation>Altura</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1606"/>
         <location filename="../defaultlook.ui" line="1642"/>
         <location filename="../defaultlook.ui" line="1774"/>
         <source>Placement</source>
-        <translation>Plaatsing</translation>
+        <translation>Posicionamento</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1613"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Screensaver&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>screensaver screen blank settings</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Protector de pantalla&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1634"/>
         <source>On Hover</source>
-        <translation>Tijdens Overzweven</translation>
+        <translation>Ao apuntar</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1656"/>
         <location filename="../defaultlook.ui" line="1734"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Standaarden Terugzetten&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Restablecer as predeterminas&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1663"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Voeg nieuwe standaard menu-onderdelen, voor zover die er zijn, toe aan het bestaande fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Engade novos elementos do menú predeterminados, se os hai, ao menú de fluxbox existente.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1666"/>
         <source>Upgrade existing menu entries</source>
-        <translation>Bestaande menu onderdelen opwaarderen</translation>
+        <translation>Actualizar entradas de menú existentes</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1686"/>
         <source>Show Toolbar</source>
-        <translation>Toon werkbalk</translation>
+        <translation>Mostrar a barra de ferramentas</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1703"/>
         <source>Reset ALL mx-fluxbox settings</source>
-        <translation>ALLE mx-fluxbox instellingen terugzetten</translation>
+        <translation>Restablecer todas as configuracións do mx-fluxbox</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1710"/>
         <source>Idle time (minutes)</source>
         <extracomment>set the time of inactivity  before screensaver screen blank occurs</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Tempo de inactividade (minutos)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1723"/>
@@ -747,102 +747,102 @@
     <message>
         <location filename="../defaultlook.ui" line="1839"/>
         <source>Workspace</source>
-        <translation>Werkruimte</translation>
+        <translation>Área de traballo</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2101"/>
         <source>Change computer name (requires reboot)</source>
         <extracomment>option to change the system hostname, requires a reboot to be 100% effective</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Cambiar o nome do ordenador (require reiniciar)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1781"/>
         <source>Enable single-click</source>
-        <translation>Schakel enkel-klik in</translation>
+        <translation>Acivar premer único</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1788"/>
         <source>Reset KDE/Plasma defaults</source>
-        <translation>Herstel KDE/Plasma standaardwaarden</translation>
+        <translation>Restablcer as predeterminadas do KDE/Plasma</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1863"/>
         <source>Autostart plasma-discover system tray update notification utility</source>
         <extracomment>enable or disable autostartup of plasma-discover updater utility on login</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Inicio automático de notificación de actualización da bandexa do sistema plasma-discover</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1873"/>
         <source>Super Key</source>
         <extracomment>referring to the meta or Left Super Key</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Tecla Super</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1881"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Choose application&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>description of button action to launch file dialog to choose an application</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Escolle a aplicación&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1894"/>
         <source>Xfce-superkey defaults</source>
         <extracomment>indicates that xfce-superkey will select a command by its default logic</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Predeterminados do Xfce-superkey </translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1901"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Also known as the &amp;quot;windows&amp;quot; key&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tamén coñecida como a tecla &amp;quot;windows&amp;quot;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1904"/>
         <source>Command to run with Super (Meta) key</source>
         <extracomment>label for the field to enter the command to use with super key</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Comando para executar coa tecla Super (Meta)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1934"/>
         <source>Other</source>
-        <translation>Overige</translation>
+        <translation>Outro</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2056"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
-        <translation>Herstel Lightdm (login scherm) naar systeem standaard thema</translation>
+        <translation>Restablecer o tema predeterminado da pantalla da entrada (LightDM)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2015"/>
         <source>put a hold or remove a hold on updates of Liquorix kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>poñer unha retención ou eliminar unha retención nas actualizacións dos Kernels de Liquorix</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2018"/>
         <source>Enable Automatic Liquorix Kernel Updates (MX ahs repository)</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Habilitar Actualizacións Automáticas do Kernel Liquorix (repositorio MX ahs)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2032"/>
         <source>put a hold or remove a hold on updates of Debian  kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>poñer unha retención ou eliminar unha retención nas actualizacións dos kernels de Debian</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2035"/>
         <source>Enable Automatic Debian Kernel Updates</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Habilitar actualizacións automáticas do kernel Debian</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1956"/>
         <source>Password for administrative tasks:</source>
-        <translation>Wachtwoord voor administratieve taken:</translation>
+        <translation>Contrasinal para tarefas administrativas:</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2070"/>
         <source>Enable mounting of internal drives by non-root users</source>
-        <translation>Maak koppelen van interne schijven door niet-root gebruikers mogelijk</translation>
+        <translation>Activar o conexión de discos internos por usuarios alén do root</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1963"/>
@@ -852,87 +852,87 @@
     <message>
         <location filename="../defaultlook.ui" line="2001"/>
         <source>Enable kernel sandbox</source>
-        <translation>Schakel kernel sandbox in</translation>
+        <translation>Activar ambiente illado para o núcleo</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1942"/>
         <source>&amp;User</source>
-        <translation>&amp;Gebruiker</translation>
+        <translation>&amp;Usuario</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1984"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;vereist opnieuw opstarten&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requirirá reiniciar&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1987"/>
         <source>Enable Bluetooth Adapters on boot</source>
-        <translation>Bluetooth-adapters inschakelen bij opstarten</translation>
+        <translation>Habilitar adaptadores Bluetooth ao arrancar</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1994"/>
         <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Apt instala paquetes &quot;recomendados&quot; adicionales como dependencias</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2042"/>
         <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Xerar menú Todas as Aplicacións de fluxbox despois da instalación, eliminación e actualización de paquetes.</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1970"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
-        <translation>Gebruik Client Side Decoraties (CSD) op GTK3 applicaties die dat ondersteunen (vereist sessie herstart)</translation>
+        <translation>Usa as decoracións do lado do cliente (CSD) en aplicativos GTK3 que as admitan (require reinicio da sesión)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2025"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
-        <translation>Gebruik intel driver in plaats van standaard &quot;modesetting&quot; driver (vereist herstart)</translation>
+        <translation>Usar o controlador Intel en vez do controlador &quot;modesetting&quot; predeterminado (require reiniciar)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1977"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
-        <translation type="unfinished"></translation>
+        <translation>          NOTA: o ficheiro /etc/X11/xorg.conf.d/20-intel.conf existente será gardado no cartafol persoal</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1949"/>
         <source>Use tearfree amdgpu option</source>
-        <translation>Gebruik tearvrij amdgpu optie</translation>
+        <translation>Usar a opción anti-distorsión do controlador amdgpu</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2063"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
-        <translation type="unfinished"></translation>
+        <translation>          NOTA: o ficheiro /etc/X11/xorg.conf.d/20-amd.conf existente será gardado no cartafol persoal</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2049"/>
         <source>Use tearfree radeon driver option</source>
-        <translation>Gebruik tearvrij radeon driver optie</translation>
+        <translation>Usar a opción anti-distorsión do controlador radeon</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2008"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
-        <translation type="unfinished"></translation>
+        <translation>          NOTA: o ficheiro /etc/X11/xorg.conf.d/20-radeon.conf existente será gardado no cartafol persoal</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="58"/>
         <source>--display switch only valid for Xfce</source>
-        <translation>--display schakel enkel geldig voor Xfce</translation>
+        <translation>-cambio na pantalla válido só para o Xfce</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="656"/>
         <source>About MX Tweak</source>
-        <translation>Over MX Tweak</translation>
+        <translation>Sobre MX Axustes Rápidos</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="658"/>
         <source>Version: </source>
-        <translation>Versie:</translation>
+        <translation>Versión: </translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="659"/>
         <source>App for quick default ui theme changes and tweaks</source>
-        <translation>App voor snelle standaard ui thema veranderingen en fijninstellingen</translation>
+        <translation>Aplicativo para rapidamente facer cambios ao tema predeterminado da interface de usuario e outros axustes</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="661"/>
@@ -942,68 +942,68 @@
     <message>
         <location filename="../defaultlook.cpp" line="662"/>
         <source>%1 License</source>
-        <translation>%1 Licentie</translation>
+        <translation>Licenza de %1</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="676"/>
         <source>%1 Help</source>
-        <translation>%1 Help</translation>
+        <translation>Axuda para %1</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="686"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
-        <translation>Klaar! Firefox kan een herstart vereisen om de veranderingen door te voeren</translation>
+        <translation>Feito! Firefox pode ter que ser reiniciado para os cambios teren efecto</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="733"/>
         <source>Plese remove special characters</source>
-        <translation>Gelieve speciale tekens te verwijderen</translation>
+        <translation>Por favor, elimina os caracteres especiais</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="733"/>
         <source>from file name</source>
-        <translation>van bestandsnaam</translation>
+        <translation>do nome do ficheiro</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="740"/>
         <source>File name already exists.  Choose another name</source>
-        <translation type="unfinished"></translation>
+        <translation>O nome do ficheiro xa existe. Escolle outro nome</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="768"/>
         <source>File is not a valid tar.xz archive file</source>
-        <translation type="unfinished"></translation>
+        <translation>O ficheiro non é un ficheiro de arquivo tar.xz válido</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="771"/>
         <source>Archive does not contain a panel config</source>
-        <translation type="unfinished"></translation>
+        <translation>O arquivo non contén unha configuración de panel</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="946"/>
         <source>Panel settings</source>
-        <translation>Paneel instellingen</translation>
+        <translation>Coniguración do panel</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="947"/>
         <source>Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
-        <translation>Uw huidige paneelinstellingen zijn gebackupt in een verborgen folder genaamd .restore in uw home folder (~/.restore/)</translation>
+        <translation>As actuais ocnfiguracións do panel foron gardados nun cartafol oculto chamado .restore no cartafol persoal (~/.restore/)</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="1838"/>
         <source>settings</source>
-        <translation>instellingen</translation>
+        <translation>configuración</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="2178"/>
         <source>Choose a theme set</source>
-        <translation>Kies een thema set</translation>
+        <translation>Elixe un tema</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="2584"/>
         <source>Please enter a computer name.</source>
         <comment>question to enter a name for the computer hostname</comment>
-        <translation type="unfinished"></translation>
+        <translation>Inserir un nome do computador.</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="2588"/>
@@ -1011,13 +1011,13 @@
 You&apos;ll have to select a different
 name before proceeding.</source>
         <comment>unacceptable characters are found in hostname, pick a new name</comment>
-        <translation type="unfinished"></translation>
+        <translation>O nome do computador contén caracteres inválidos. Ten que ser escollido un nome diferente antes de proseguir.</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="4146"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
-        <translation type="unfinished"></translation>
+        <translation>Selecciona a aplicación para executar</translation>
     </message>
 </context>
 <context>
@@ -1025,7 +1025,7 @@ name before proceeding.</source>
     <message>
         <location filename="../remove_user_theme_set.ui" line="14"/>
         <source>Remove User Theme Set</source>
-        <translation>Verwijder Gebruiker Thema Set</translation>
+        <translation>Eliminar tema do usuario</translation>
     </message>
 </context>
 <context>
@@ -1033,12 +1033,12 @@ name before proceeding.</source>
     <message>
         <location filename="../theming_to_tweak.ui" line="14"/>
         <source>New Theme Set</source>
-        <translation>Nieuwe Thema Set</translation>
+        <translation>Novo tema establecido</translation>
     </message>
     <message>
         <location filename="../theming_to_tweak.ui" line="20"/>
         <source>Enter name for new theme set</source>
-        <translation>Voer naam in voor nieuwe thema set</translation>
+        <translation>Inserir o nome do tema novo establecido</translation>
     </message>
 </context>
 <context>
@@ -1047,137 +1047,137 @@ name before proceeding.</source>
         <location filename="../window_buttons.ui" line="14"/>
         <location filename="../window_buttons.cpp" line="24"/>
         <source>Window Buttons</source>
-        <translation>Vensterknoppen</translation>
+        <translation>Botóns de lapela</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="28"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Appearance&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Uiterlijk&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Apariencia&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="35"/>
         <source>Show button labels</source>
-        <translation>Toon knopetiketten</translation>
+        <translation>Amosar rótulos dos botóns</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="42"/>
         <source>Show flat buttons</source>
-        <translation>Toon platte knoppen</translation>
+        <translation>Amosar botóns sen relevo</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="49"/>
         <source>Show handle</source>
-        <translation>Toon handgreep</translation>
+        <translation>Amosar o manexo</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="56"/>
         <source>Sorting Order:</source>
-        <translation>Sorteervolgorde:</translation>
+        <translation>Ordenación:</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="64"/>
         <source>Timestamp</source>
-        <translation>Tijdstempel</translation>
+        <translation>Estampa de data/hora</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="69"/>
         <source>Group title and timestamp</source>
-        <translation>Groeptitel en tijdstempel</translation>
+        <translation>Título do grupo e estampa de data/hora</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="74"/>
         <source>Window Title</source>
-        <translation>Venstertitel</translation>
+        <translation>Título da lapela</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="79"/>
         <source>Group title and window title</source>
-        <translation>Groeptitel en venstertitel</translation>
+        <translation>Título do grupo e título da lapela</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="84"/>
         <source>None, allow drag-and-drop</source>
-        <translation>Geen, sta sleep-en-plak toe</translation>
+        <translation>Ningún; permitir arrastrar-e-deixar caer</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="92"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Behavior&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Gedrag&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Comportamento&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="99"/>
         <source>Window grouping:</source>
-        <translation>Venstergroepering:</translation>
+        <translation>Agrupamento de lapelas:</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="107"/>
         <source>Never</source>
-        <translation>Nooit</translation>
+        <translation>Nunca</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="112"/>
         <source>Always</source>
-        <translation>Altijd</translation>
+        <translation>Sempre</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="120"/>
         <source>Middle click action:</source>
-        <translation>Actie bij middelklik:</translation>
+        <translation>Acción do botón central:</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="128"/>
         <source>Nothing</source>
-        <translation>Niets</translation>
+        <translation>Sen acción</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="133"/>
         <source>Close window</source>
-        <translation>Sluit venster</translation>
+        <translation>Pechar lapela</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="138"/>
         <source>Minimize window</source>
-        <translation>Minimaliseer venster</translation>
+        <translation>Minimizar lapela</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="146"/>
         <source>Restore minimized windows to current workspace</source>
-        <translation>Herstel geminimaliseerde vensters naar het huidige werkblad</translation>
+        <translation>Restaurar as lapelas minimizadas no escritorio actual</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="153"/>
         <source>Draw window frame when hovering over a button</source>
-        <translation>Teken vensterrand als de muisaanwijzer over een knop zweeft</translation>
+        <translation>Deseñar caixiña da lapela ao pasar sobre un botón</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="160"/>
         <source>Switch windows using the mouse wheel</source>
-        <translation>Wissel vensters met het muiswieltje</translation>
+        <translation>Cambiar de lapela coa roda do rato</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="167"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Filtering&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Filteren&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Filtrar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="174"/>
         <source>Show windows from all workspaces or viewports</source>
-        <translation>Toon vensters van alle werkbladen</translation>
+        <translation>AMosar lapelas de todas as áreas de traballo ou lapelas embebidas</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="181"/>
         <source>Show only minimized windows</source>
-        <translation>Toon alleen geminimaliseerde vensters</translation>
+        <translation>Amosar só lapelas minimizadas</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="188"/>
         <source>Show windows from all monitors</source>
-        <translation>Toon vensters van alle monitors</translation>
+        <translation>Amosar lapelas de todos os monitores</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="238"/>
         <source>Close</source>
-        <translation>Sluiten</translation>
+        <translation>Cerrar</translation>
     </message>
 </context>
 <context>
@@ -1185,82 +1185,82 @@ name before proceeding.</source>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="14"/>
         <source>Dialog</source>
-        <translation>Dialoog</translation>
+        <translation>Caixa de diálogo</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="42"/>
         <source>Popup Windows</source>
-        <translation>Pop-up Scherm</translation>
+        <translation>Lapelas emerxentes</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="49"/>
         <source>Windows during move</source>
-        <translation>Schermen gedurende verplaatsing</translation>
+        <translation>Ao mover </translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="56"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Opacity Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Doorschijnendheid Instellingen&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Configuración de opacidade&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="79"/>
         <source>Window decorations</source>
-        <translation>Schermdecoraties</translation>
+        <translation>Moldura da lapela</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="86"/>
         <source>Show shadows under dock windows</source>
-        <translation>Laat schaduwen onder dock schermen zien</translation>
+        <translation>Amosar sombreado nas lapelas en doca</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="93"/>
         <source>Show shadows under popup windows</source>
-        <translation>Laat schaduwen onder pop-up schermen zien</translation>
+        <translation>Amosar sombreado nas lapelas emerxentes</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="100"/>
         <source>Windows during resize</source>
-        <translation>Schermen gedurende maatverandering</translation>
+        <translation>Ao redimensionar</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="123"/>
         <source>Show shadows under regular windows</source>
-        <translation>Laat schaduwen onder reguliere schermen zien</translation>
+        <translation>Amosar sombreado nas lapelas normais</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="130"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Feature Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Kenmerk Instellingen&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Configuración das funcionalidades&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="137"/>
         <source>Show windows preview in place of icons when cycling</source>
-        <translation>Laat schermen zien in plaats van iconen wanneer gerold wordt</translation>
+        <translation>Ao percorrer as lapelas amosar a previsualización en vez das iconas</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="144"/>
         <source>Display fullscreen overlay windows directly</source>
-        <translation>Laat volledig scherm overlayschermen rechtstreeks zien</translation>
+        <translation>Exhibir directamente as lapelas de sobreposición da pantalla interna</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="183"/>
         <source>Inactive windows</source>
-        <translation>Inactieve schermen</translation>
+        <translation>Lapelas inactivas</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="190"/>
         <source>Synchronize drawing to vertical blank</source>
-        <translation>Synchroniseer tekenen naar vertikale blanco</translation>
+        <translation>Sincronizar o deseño co trazo en branco vertical</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="212"/>
         <source>Close</source>
-        <translation>Sluiten</translation>
+        <translation>Cerrar</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.cpp" line="23"/>
         <source>Xfwm Compositor Settings</source>
-        <translation>Xfwm Compositor Instellingen</translation>
+        <translation>Configuración do compositor do Xfwm</translation>
     </message>
 </context>
 </TS>

@@ -298,7 +298,7 @@
         <location filename="../defaultlook.ui" line="1303"/>
         <location filename="../defaultlook.ui" line="1852"/>
         <location filename="../defaultlook.ui" line="1911"/>
-        <location filename="../defaultlook.ui" line="1972"/>
+        <location filename="../defaultlook.ui" line="2083"/>
         <source>Apply</source>
         <extracomment>apply changes</extracomment>
         <translation>Hyväksy</translation>
@@ -750,6 +750,12 @@
         <translation>Työtila</translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="2101"/>
+        <source>Change computer name (requires reboot)</source>
+        <extracomment>option to change the system hostname, requires a reboot to be 100% effective</extracomment>
+        <translation>Vaihda tietokoneen nimi (vaatii käynnistyksen)</translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="1781"/>
         <source>Enable single-click</source>
         <translation>Kytke päälle kohteiden avaaminen yhdellä napsautuksella</translation>
@@ -763,7 +769,7 @@
         <location filename="../defaultlook.ui" line="1863"/>
         <source>Autostart plasma-discover system tray update notification utility</source>
         <extracomment>enable or disable autostartup of plasma-discover updater utility on login</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Käynnistä autom. plasma-discover ilmoitusalueen päivitysten ilmoitukset</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1873"/>
@@ -800,111 +806,111 @@
         <translation>Muu</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1990"/>
+        <location filename="../defaultlook.ui" line="2056"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>Nollaa Lightdm (kirjautumisikkuna) saadaksesi käyttöön järjestelmän vakioteeman</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2097"/>
+        <location filename="../defaultlook.ui" line="2015"/>
         <source>put a hold or remove a hold on updates of Liquorix kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
         <translation>aseta tai poista lykkäys Liquorix kerneli päivityksille</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2100"/>
+        <location filename="../defaultlook.ui" line="2018"/>
         <source>Enable Automatic Liquorix Kernel Updates (MX ahs repository)</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
         <translation>Ota käyttöön automaattiset Liquorix kerneli päivitykset (MX ahs arkisto)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2107"/>
+        <location filename="../defaultlook.ui" line="2032"/>
         <source>put a hold or remove a hold on updates of Debian  kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
         <translation>aseta tai poista lykkäys Debian kerneli päivityksille</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2110"/>
+        <location filename="../defaultlook.ui" line="2035"/>
         <source>Enable Automatic Debian Kernel Updates</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
         <translation>Ota käyttöön automaattiset Debian kerneli päivitykset</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1959"/>
+        <location filename="../defaultlook.ui" line="1956"/>
         <source>Password for administrative tasks:</source>
         <translation>Salasana järjestelmänvalvojan tehtäviin:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2048"/>
+        <location filename="../defaultlook.ui" line="2070"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>Valtuuta sisäisten asemien liittäminen ei-juurikäyttäjille</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2007"/>
+        <location filename="../defaultlook.ui" line="1963"/>
         <source>Root</source>
         <translation>Root-juurikäyttö</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2076"/>
+        <location filename="../defaultlook.ui" line="2001"/>
         <source>Enable kernel sandbox</source>
         <translation>Kytke päälle ytimen sandbox-tila</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2062"/>
+        <location filename="../defaultlook.ui" line="1942"/>
         <source>&amp;User</source>
         <translation>&amp;Käyttäjä</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1997"/>
+        <location filename="../defaultlook.ui" line="1984"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;vaatii käynnistyksen&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2000"/>
+        <location filename="../defaultlook.ui" line="1987"/>
         <source>Enable Bluetooth Adapters on boot</source>
         <translation>Bluetooth käyttöön käynnistyksen yhteydessä</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2041"/>
+        <location filename="../defaultlook.ui" line="1994"/>
         <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
         <translation>Apt asentaa ylimääräisiä &quot;suositeltuja&quot; paketteja riippuvuuksina</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1983"/>
+        <location filename="../defaultlook.ui" line="2042"/>
         <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
         <translation>Luo fluxbox &quot;Kaikki sovellukset&quot; valikko asennuksen, poiston ja päivitysten jälkeen</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2069"/>
+        <location filename="../defaultlook.ui" line="1970"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
         <translation>Käytä koristeita (CSD) niitä tukevissa GTK3-sovelluksissa (edellyttää istunnon käynnistämistä uudelleen)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2090"/>
+        <location filename="../defaultlook.ui" line="2025"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>Käytä Intel:in ajuria vakiollisen &quot;modesetting&quot; ajurin sijaan (vaatii uudelleenkäynnistyksen)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2055"/>
+        <location filename="../defaultlook.ui" line="1977"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>          HUOMAUTUS: olemassaoleva /etc/X11/xorg.conf.d/20-intel.conf varmuuskopioituu kotikansioon</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2014"/>
+        <location filename="../defaultlook.ui" line="1949"/>
         <source>Use tearfree amdgpu option</source>
         <translation>Käytä repeytymätöntä amdgpu-vaihtoehtoa</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2021"/>
+        <location filename="../defaultlook.ui" line="2063"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>          HUOMAUTUS: olemassaoleva /etc/X11/xorg.conf.d/20-amd.conf varmuuskopioituu kotikansioon</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1945"/>
+        <location filename="../defaultlook.ui" line="2049"/>
         <source>Use tearfree radeon driver option</source>
         <translation>Käytä repeytymätöntä radeon-ajuri vaihtoehtoa</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1952"/>
+        <location filename="../defaultlook.ui" line="2008"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>          HUOMAUTUS: olemassaoleva /etc/X11/xorg.conf.d/20-radeon.conf varmuuskopioidaan kotikansioon</translation>
     </message>
@@ -984,17 +990,33 @@
         <translation>Tämänhetkiset paneeliasetuksesi on varmuuskopioitu piilotettuun kansioon nimeltä .restore joka sijaitsee kotikansiossasi (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1832"/>
+        <location filename="../defaultlook.cpp" line="1838"/>
         <source>settings</source>
         <translation>asetukset</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2172"/>
+        <location filename="../defaultlook.cpp" line="2178"/>
         <source>Choose a theme set</source>
         <translation>Valitse teemavalikoima</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="4113"/>
+        <location filename="../defaultlook.cpp" line="2584"/>
+        <source>Please enter a computer name.</source>
+        <comment>question to enter a name for the computer hostname</comment>
+        <translation>Syötä nimi tietokoneelle. </translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.cpp" line="2588"/>
+        <source>Sorry, your computer name contains invalid characters.
+You&apos;ll have to select a different
+name before proceeding.</source>
+        <comment>unacceptable characters are found in hostname, pick a new name</comment>
+        <translation>Pahoittelut, tietokoneesi nimi sisältää epäkelpoja merkkejä.
+Sinun tulee valita eri
+nimi ennen jatkamista.</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.cpp" line="4146"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
         <translation>Valitse suoritettava sovellus</translation>
