@@ -1,3 +1,9 @@
+mx-tweak (24.09.01mx23) mx; urgency=medium
+
+  * add set hostname function 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Mon, 23 Sep 2024 20:50:19 -0400
+
 mx-tweak (24.08.01mx23) mx; urgency=medium
 
   * add enable-disable switch for plasma-discover (kde tab)
