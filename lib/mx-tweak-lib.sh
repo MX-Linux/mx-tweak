@@ -267,6 +267,10 @@ local option="$1" original new
 original=$(grep -E '^(#\s*)?Experimental' /etc/bluetooth/main.conf)
 new="Experimental = $option"
 
+if [ "$option" = "false" ]; then
+	new="#Experimental = $option"
+fi
+
 sed -i "s/$original/$new/" /etc/bluetooth/main.conf
 
 }
