@@ -261,6 +261,16 @@ fi
 hostname "$new"
 }
 
+bluetooth_battery(){
+local option="$1" original new
+
+original=$(grep -E '^(#\s*)?Experimental' /etc/bluetooth/main.conf)
+new="Experimental = $option"
+
+sed -i "s/$original/$new/" /etc/bluetooth/main.conf
+
+}
+
 main()
 {
 $CMD1
@@ -284,10 +294,13 @@ CMD7=$7
 CMD8=$8
 CMD9=$9
 
-if [ "$CMD1" = "hostname" ]; then
-  	change_hostname "$CMD2"
-else
-	main
-fi
+case "$CMD1" in
+	hostname) change_hostname "$CMD2"
+	;;
+	bluetooth_battery) bluetooth_battery "$CMD2"
+	;;
+	*) main
+	;;
+esac
 
 exit 0

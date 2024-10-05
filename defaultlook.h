@@ -81,6 +81,7 @@ public:
     bool radeon_flag{};
     bool amdgpuflag{};
     bool bluetoothautoenableflag{};
+    bool bluetoothbatteryflag{};
     bool enable_recommendsflag{};
     bool vblankflag{};
     bool displayflag = false;
@@ -319,6 +320,8 @@ private slots:
     void on_checkBoxPlasmaDiscoverUpdater_clicked();
 
     void on_checkBoxComputerName_clicked();
+
+    void on_checkBoxBluetoothBattery_clicked();
 
 private:
     Ui::defaultlook *ui;
