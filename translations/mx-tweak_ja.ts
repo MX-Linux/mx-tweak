@@ -298,7 +298,7 @@
         <location filename="../defaultlook.ui" line="1303"/>
         <location filename="../defaultlook.ui" line="1852"/>
         <location filename="../defaultlook.ui" line="1911"/>
-        <location filename="../defaultlook.ui" line="1972"/>
+        <location filename="../defaultlook.ui" line="2083"/>
         <source>Apply</source>
         <extracomment>apply changes</extracomment>
         <translation>適用</translation>
@@ -750,14 +750,20 @@
         <translation>ワークスペース</translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="2101"/>
+        <source>Change computer name (requires reboot)</source>
+        <extracomment>option to change the system hostname, requires a reboot to be 100% effective</extracomment>
+        <translation>コンピュータ名の変更（要再起動）</translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="1781"/>
         <source>Enable single-click</source>
-        <translation>シングルクリックを有効にします</translation>
+        <translation>シングルクリックを有効にする</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1788"/>
         <source>Reset KDE/Plasma defaults</source>
-        <translation>KDE/プラズマ の設定を元に戻します</translation>
+        <translation>KDE/プラズマ の設定を元に戻す</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1863"/>
@@ -800,118 +806,118 @@
         <translation>その他</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1990"/>
+        <location filename="../defaultlook.ui" line="2056"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>Lightdm（ログイン画面）をシステムの既定テーマにリセット</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2097"/>
+        <location filename="../defaultlook.ui" line="2015"/>
         <source>put a hold or remove a hold on updates of Liquorix kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
         <translation>Liquorix カーネルのアップデートを保留する、または保留を解除する</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2100"/>
+        <location filename="../defaultlook.ui" line="2018"/>
         <source>Enable Automatic Liquorix Kernel Updates (MX ahs repository)</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
         <translation>Liquorix カーネルの自動アップデートを有効にする (MX AHS リポジトリ)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2107"/>
+        <location filename="../defaultlook.ui" line="2032"/>
         <source>put a hold or remove a hold on updates of Debian  kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
         <translation>Debian カーネルのアップデートを保留する、または保留を解除する</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2110"/>
+        <location filename="../defaultlook.ui" line="2035"/>
         <source>Enable Automatic Debian Kernel Updates</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
         <translation>Debian カーネルの自動アップデートを有効にする</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1959"/>
+        <location filename="../defaultlook.ui" line="1956"/>
         <source>Password for administrative tasks:</source>
         <translation>管理業務用のパスワード：</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2048"/>
+        <location filename="../defaultlook.ui" line="2070"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>非 root ユーザによる内蔵ドライブのマウントを可能にする</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2007"/>
+        <location filename="../defaultlook.ui" line="1963"/>
         <source>Root</source>
         <translation>Root</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2076"/>
+        <location filename="../defaultlook.ui" line="2001"/>
         <source>Enable kernel sandbox</source>
-        <translation>カーネルサンドボックスの有効化</translation>
+        <translation>カーネルサンドボックスを有効にする</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2062"/>
+        <location filename="../defaultlook.ui" line="1942"/>
         <source>&amp;User</source>
         <translation>ユーザ(&amp;U)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1997"/>
+        <location filename="../defaultlook.ui" line="1984"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;再起動が必要です&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2000"/>
+        <location filename="../defaultlook.ui" line="1987"/>
         <source>Enable Bluetooth Adapters on boot</source>
-        <translation>起動時に Bluetooth アダプタを有効にします</translation>
+        <translation>起動時に Bluetooth アダプタを有効にする</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2041"/>
+        <location filename="../defaultlook.ui" line="1994"/>
         <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
         <translation>APT は推奨パッケージを依存関係にあるものとして追加します</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1983"/>
+        <location filename="../defaultlook.ui" line="2042"/>
         <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
         <translation>パッケージのインストール／削除／更新後に fluxbox の「すべてのアプリ」メニューを生成する</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2069"/>
+        <location filename="../defaultlook.ui" line="1970"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
         <translation>GTK3 をサポートするアプリケーションでクライアント側装飾 (CSD) をを使用します (セッションの再起動が必要です)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2090"/>
+        <location filename="../defaultlook.ui" line="2025"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>既定の &quot;modesetting&quot; ドライバの替わりに intel ドライバを使用 (再起動が必要)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2055"/>
+        <location filename="../defaultlook.ui" line="1977"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>注意: 既存の /etc/X11/xorg.conf.d/20-intel.conf はホームフォルダにバックアップされます</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2014"/>
+        <location filename="../defaultlook.ui" line="1949"/>
         <source>Use tearfree amdgpu option</source>
         <translation>TearFree amdgpu オプションを使用</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2021"/>
+        <location filename="../defaultlook.ui" line="2063"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>注意: 既存の /etc/X11/xorg.conf.d/20-amd.conf はホームフォルダにバックアップされます。</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1945"/>
+        <location filename="../defaultlook.ui" line="2049"/>
         <source>Use tearfree radeon driver option</source>
         <translation>TearFree radeon ドライバのオプションを使用</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1952"/>
+        <location filename="../defaultlook.ui" line="2008"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>注意: 既存の /etc/X11/xorg.conf.d/20-radeon.conf はホームフォルダにバックアップされます</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="58"/>
         <source>--display switch only valid for Xfce</source>
-        <translation>--Xfce専用のスイッチを表示</translation>
+        <translation>Xfce 専用の --display スイッチを表示</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="656"/>
@@ -984,17 +990,32 @@
         <translation>現在のパネル設定は、ホームフォルダ (~/) 以下にある .restore という隠しフォルダにバックアップされました</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1832"/>
+        <location filename="../defaultlook.cpp" line="1838"/>
         <source>settings</source>
         <translation>設定</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2172"/>
+        <location filename="../defaultlook.cpp" line="2178"/>
         <source>Choose a theme set</source>
         <translation>テーマセットを選択</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="4113"/>
+        <location filename="../defaultlook.cpp" line="2584"/>
+        <source>Please enter a computer name.</source>
+        <comment>question to enter a name for the computer hostname</comment>
+        <translation>コンピュータ名を入力してください。</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.cpp" line="2588"/>
+        <source>Sorry, your computer name contains invalid characters.
+You&apos;ll have to select a different
+name before proceeding.</source>
+        <comment>unacceptable characters are found in hostname, pick a new name</comment>
+        <translation>申しわけありませんがコンピュータ名に無効な文字列が含まれています。
+先へ進むには別の名前を選んでください。</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.cpp" line="4146"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
         <translation>実行するアプリケーションを選択</translation>

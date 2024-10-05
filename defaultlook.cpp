@@ -1464,6 +1464,22 @@ void defaultlook::setupEtc()
         ui->checkBoxbluetoothAutoEnable->hide();
     }
 
+    //setup bluetooth battery info
+    if ( QFile("/etc/bluetooth/main.conf").exists()){
+        bluetoothbatteryflag = false;
+        test = runCmd(QStringLiteral("grep -E '^(#\\s*)?Experimental' /etc/bluetooth/main.conf")).output;
+        if (verbose) qDebug() << "bluetooth battery " << test;
+        if (test.contains("#")){
+            ui->checkBoxBluetoothBattery->setChecked(false);
+        } else if ( test.contains("true") ){
+            ui->checkBoxBluetoothBattery->setChecked(true);
+        } else if ( test.contains("false")) {
+            ui->checkBoxBluetoothBattery->setChecked(false);
+        }
+    } else {
+        ui->checkBoxBluetoothBattery->hide();
+    }
+
     //setup apt install_recommends
     //enable checkbox only if Install-Recommends is set to 1. default is 0 or no if no existanct apt.conf
     if ( QFile("/etc/apt/apt.conf").exists()){
@@ -2502,6 +2518,15 @@ void defaultlook::on_ButtonApplyEtc_clicked()
                 runCmd(QStringLiteral("kwriteconfig5 --file kded5rc --group Module-bluedevil --key autoload false"));
             }
 
+        }
+    }
+
+    //bluetooth battery info
+    if (bluetoothbatteryflag){
+        if (ui->checkBoxBluetoothBattery->isChecked()){
+            runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh bluetooth_battery true");
+        } else {
+            runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh bluetooth_battery false");
         }
     }
 
@@ -4248,4 +4273,10 @@ void defaultlook::on_checkBoxComputerName_clicked()
     }
 }
 
+void defaultlook::on_checkBoxBluetoothBattery_clicked()
+{
+    ui->ButtonApplyEtc->setEnabled(true);
+    bluetoothbatteryflag = !bluetoothbatteryflag;
+    if (verbose) qDebug() << "bluetooth battery flag is " << bluetoothbatteryflag;
+}
 

@@ -298,7 +298,7 @@
         <location filename="../defaultlook.ui" line="1303"/>
         <location filename="../defaultlook.ui" line="1852"/>
         <location filename="../defaultlook.ui" line="1911"/>
-        <location filename="../defaultlook.ui" line="1972"/>
+        <location filename="../defaultlook.ui" line="2083"/>
         <source>Apply</source>
         <extracomment>apply changes</extracomment>
         <translation>Aplicar</translation>
@@ -554,7 +554,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1189"/>
         <source>Enable single-click on desktop</source>
-        <translation>Activar cun premer no escritori</translation>
+        <translation>Acivar premer único</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1196"/>
@@ -641,7 +641,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1357"/>
         <source>Toggle icon captions</source>
-        <translation>Axustar as imaxes das iconas</translation>
+        <translation>Alterna os subtítulos das iconas</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1364"/>
@@ -656,7 +656,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1395"/>
         <source>Toggle desktop icons</source>
-        <translation>Axustar as iconas do escritorio</translation>
+        <translation>Activa ou desactiva as iconas do escritorio</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1402"/>
@@ -750,6 +750,12 @@
         <translation>Escritorio</translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="2101"/>
+        <source>Change computer name (requires reboot)</source>
+        <extracomment>option to change the system hostname, requires a reboot to be 100% effective</extracomment>
+        <translation>Cambiar o nome do ordenador (require reiniciar)</translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="1781"/>
         <source>Enable single-click</source>
         <translation>Acivar premer único</translation>
@@ -763,7 +769,7 @@
         <location filename="../defaultlook.ui" line="1863"/>
         <source>Autostart plasma-discover system tray update notification utility</source>
         <extracomment>enable or disable autostartup of plasma-discover updater utility on login</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Inicio automático de notificación de actualización da bandexa do sistema plasma-discover</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1873"/>
@@ -800,118 +806,118 @@
         <translation>Outro</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1990"/>
+        <location filename="../defaultlook.ui" line="2056"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>Restablecer o tema predeterminado da pantalla da entrada (LightDM)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2097"/>
+        <location filename="../defaultlook.ui" line="2015"/>
         <source>put a hold or remove a hold on updates of Liquorix kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
         <translation>poñer unha retención ou eliminar unha retención nas actualizacións dos Kernels de Liquorix</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2100"/>
+        <location filename="../defaultlook.ui" line="2018"/>
         <source>Enable Automatic Liquorix Kernel Updates (MX ahs repository)</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
         <translation>Habilitar Actualizacións Automáticas do Kernel Liquorix (repositorio MX ahs)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2107"/>
+        <location filename="../defaultlook.ui" line="2032"/>
         <source>put a hold or remove a hold on updates of Debian  kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
         <translation>poñer unha retención ou eliminar unha retención nas actualizacións dos kernels de Debian</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2110"/>
+        <location filename="../defaultlook.ui" line="2035"/>
         <source>Enable Automatic Debian Kernel Updates</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
         <translation>Habilitar actualizacións automáticas do kernel Debian</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1959"/>
+        <location filename="../defaultlook.ui" line="1956"/>
         <source>Password for administrative tasks:</source>
         <translation>Contrasinal para tarefas administrativas:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2048"/>
+        <location filename="../defaultlook.ui" line="2070"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>Activar o conexión de discos internos por usuarios alén do root</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2007"/>
+        <location filename="../defaultlook.ui" line="1963"/>
         <source>Root</source>
         <translation>Root</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2076"/>
+        <location filename="../defaultlook.ui" line="2001"/>
         <source>Enable kernel sandbox</source>
         <translation>Activar ambiente illado para o núcleo</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2062"/>
+        <location filename="../defaultlook.ui" line="1942"/>
         <source>&amp;User</source>
         <translation>&amp;Usuari</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1997"/>
+        <location filename="../defaultlook.ui" line="1984"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requirirá reiniciar&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2000"/>
+        <location filename="../defaultlook.ui" line="1987"/>
         <source>Enable Bluetooth Adapters on boot</source>
         <translation>Habilitar adaptadores Bluetooth ao arrancar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2041"/>
+        <location filename="../defaultlook.ui" line="1994"/>
         <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
         <translation>Apt instala paquetes &quot;recomendados&quot; adicionales como dependencias</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1983"/>
+        <location filename="../defaultlook.ui" line="2042"/>
         <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
         <translation>Xerar menú Todas as Aplicacións de fluxbox despois da instalación, eliminación e actualización de paquetes.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2069"/>
+        <location filename="../defaultlook.ui" line="1970"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
         <translation>Usa as decoracións do lado do cliente (CSD) en aplicativos GTK3 que as admitan (require reinicio da sesión)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2090"/>
+        <location filename="../defaultlook.ui" line="2025"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>Usar o controlador Intel en vez do controlador &quot;modesetting&quot; predeterminado (require reiniciar)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2055"/>
+        <location filename="../defaultlook.ui" line="1977"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>          NOTA: o ficheiro /etc/X11/xorg.conf.d/20-intel.conf existente será gardado no cartafol persoal</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2014"/>
+        <location filename="../defaultlook.ui" line="1949"/>
         <source>Use tearfree amdgpu option</source>
         <translation>Usar a opción anti-distorsión do controlador amdgpu</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2021"/>
+        <location filename="../defaultlook.ui" line="2063"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>          NOTA: o ficheiro /etc/X11/xorg.conf.d/20-amd.conf existente será gardado no cartafol persoal</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1945"/>
+        <location filename="../defaultlook.ui" line="2049"/>
         <source>Use tearfree radeon driver option</source>
         <translation>Usar a opción anti-distorsión do controlador radeon</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1952"/>
+        <location filename="../defaultlook.ui" line="2008"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>          NOTA: o ficheiro /etc/X11/xorg.conf.d/20-radeon.conf existente será gardado no cartafol persoal</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="58"/>
         <source>--display switch only valid for Xfce</source>
-        <translation>cambio na pantalla válido só para o Xfce</translation>
+        <translation>-cambio na pantalla válido só para o Xfce</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="656"/>
@@ -984,17 +990,31 @@
         <translation>As actuais ocnfiguracións do panel foron gardados nun cartafol oculto chamado .restore no cartafol persoal (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1832"/>
+        <location filename="../defaultlook.cpp" line="1838"/>
         <source>settings</source>
         <translation>configuración</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2172"/>
+        <location filename="../defaultlook.cpp" line="2178"/>
         <source>Choose a theme set</source>
-        <translation>Elixe un tema para establecer</translation>
+        <translation>Elixe un tema</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="4113"/>
+        <location filename="../defaultlook.cpp" line="2584"/>
+        <source>Please enter a computer name.</source>
+        <comment>question to enter a name for the computer hostname</comment>
+        <translation>Inserir un nome do computador.</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.cpp" line="2588"/>
+        <source>Sorry, your computer name contains invalid characters.
+You&apos;ll have to select a different
+name before proceeding.</source>
+        <comment>unacceptable characters are found in hostname, pick a new name</comment>
+        <translation>O nome do computador contén caracteres inválidos. Ten que ser escollido un nome diferente antes de proseguir.</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.cpp" line="4146"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
         <translation>Selecciona a aplicación para executar</translation>
@@ -1018,7 +1038,7 @@
     <message>
         <location filename="../theming_to_tweak.ui" line="20"/>
         <source>Enter name for new theme set</source>
-        <translation>Inserir o nome do tema novo establecid</translation>
+        <translation>Inserir o nome do tema novo establecido</translation>
     </message>
 </context>
 <context>
@@ -1027,7 +1047,7 @@
         <location filename="../window_buttons.ui" line="14"/>
         <location filename="../window_buttons.cpp" line="24"/>
         <source>Window Buttons</source>
-        <translation>Botóns de Windows</translation>
+        <translation>Botóns de lapela</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="28"/>
@@ -1180,7 +1200,7 @@
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="56"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Opacity Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Configuración opaca&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Configuración de opacidade&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="79"/>
@@ -1230,7 +1250,7 @@
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="190"/>
         <source>Synchronize drawing to vertical blank</source>
-        <translation>Sincronizar o deseño co trazo en branco vertica</translation>
+        <translation>Sincronizar o deseño co trazo en branco vertical</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="212"/>
