@@ -46,6 +46,11 @@
     </message>
     <message>
         <location filename="../main.cpp" line="53"/>
+        <source>Display additional debug output in console</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="54"/>
         <source>Opens Other tab directly.  Valid on all desktops</source>
         <translation>Åpner Andre-fanen direkte. Gyldig for alle skrivebordsmiljø</translation>
     </message>
@@ -298,7 +303,7 @@
         <location filename="../defaultlook.ui" line="1303"/>
         <location filename="../defaultlook.ui" line="1852"/>
         <location filename="../defaultlook.ui" line="1911"/>
-        <location filename="../defaultlook.ui" line="2083"/>
+        <location filename="../defaultlook.ui" line="1993"/>
         <source>Apply</source>
         <extracomment>apply changes</extracomment>
         <translation>Bruk</translation>
@@ -750,9 +755,15 @@
         <translation>Arbeidsområde</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2101"/>
+        <location filename="../defaultlook.ui" line="2077"/>
         <source>Change computer name (requires reboot)</source>
         <extracomment>option to change the system hostname, requires a reboot to be 100% effective</extracomment>
+        <translation>Endre datamaskinens navn (krever omstart)</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2111"/>
+        <source>Enable bluetooth battery info for connected devices (requires system restart)</source>
+        <extracomment>expose battery info for connected bluetooth devices to the operating system via dbus</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -806,111 +817,111 @@
         <translation>Andre</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2056"/>
+        <location filename="../defaultlook.ui" line="2063"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>Gjenopprett Lightdm (innloggingsskjerm) til systemets forvalgte tema</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2015"/>
+        <location filename="../defaultlook.ui" line="2018"/>
         <source>put a hold or remove a hold on updates of Liquorix kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
         <translation>hold fast eller tillat oppdatering av Liquorix-kjerner</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2018"/>
+        <location filename="../defaultlook.ui" line="2021"/>
         <source>Enable Automatic Liquorix Kernel Updates (MX ahs repository)</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
         <translation>Slå på automatisk oppdatering av Liquorix-kjerner (MX ahs)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2032"/>
+        <location filename="../defaultlook.ui" line="2084"/>
         <source>put a hold or remove a hold on updates of Debian  kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
         <translation>hold fast eller tillat oppdatering av Debian-kjerner</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2035"/>
+        <location filename="../defaultlook.ui" line="2087"/>
         <source>Enable Automatic Debian Kernel Updates</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
         <translation>Slå på automatisk oppdatering av Debian-kjerner</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1956"/>
+        <location filename="../defaultlook.ui" line="2049"/>
         <source>Password for administrative tasks:</source>
         <translation>Passord for administrative oppgaver:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2070"/>
+        <location filename="../defaultlook.ui" line="2042"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>La vanlige brukere montere interne disker</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1963"/>
+        <location filename="../defaultlook.ui" line="2056"/>
         <source>Root</source>
         <translation>Root</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2001"/>
+        <location filename="../defaultlook.ui" line="2011"/>
         <source>Enable kernel sandbox</source>
         <translation>Slå på kjerne-sandkasse</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1942"/>
+        <location filename="../defaultlook.ui" line="2035"/>
         <source>&amp;User</source>
         <translation>&amp;Bruker</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1984"/>
+        <location filename="../defaultlook.ui" line="2094"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;krever omstart&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1987"/>
+        <location filename="../defaultlook.ui" line="2097"/>
         <source>Enable Bluetooth Adapters on boot</source>
         <translation>Slå på blåtann-adaptere ved oppstart</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1994"/>
+        <location filename="../defaultlook.ui" line="2004"/>
         <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
         <translation>Apt installerer ytterligere anbefalte pakker som avhengigheter</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2042"/>
+        <location filename="../defaultlook.ui" line="2028"/>
         <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
         <translation>Lag «Alle programmer»-meny for fluxbox etter pakkeinstallasjoner, fjerninger og oppdateringer</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1970"/>
+        <location filename="../defaultlook.ui" line="1945"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
         <translation>Bruk klientsidedekorasjoner (CSD) for GTK3-programmer som støtter dem (krever omstart av økt)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2025"/>
+        <location filename="../defaultlook.ui" line="1973"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>Bruk intel-driver istedenfor den vanlige «modesetting»-driveren (krever omstart)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1977"/>
+        <location filename="../defaultlook.ui" line="1959"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>          MERK: eksisterende /etc/X11/xorg.conf.d/20-intel.conf vil reservekopieres til hjemmemappa</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1949"/>
+        <location filename="../defaultlook.ui" line="1980"/>
         <source>Use tearfree amdgpu option</source>
         <translation>Slå på alternativet «TearFree» i AMDGPU </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2063"/>
+        <location filename="../defaultlook.ui" line="2104"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>          MERK: eksisterende /etc/X11/xorg.conf.d/20-amd.conf vil reservekopieres til hjemmemappa</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2049"/>
+        <location filename="../defaultlook.ui" line="2070"/>
         <source>Use tearfree radeon driver option</source>
         <translation>Slå på alternativet «TearFree» i Radeon-driveren</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2008"/>
+        <location filename="../defaultlook.ui" line="1966"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>          MERK: eksisterende /etc/X11/xorg.conf.d/20-radeon.conf vil reservekopieres til hjemmemappa</translation>
     </message>
@@ -990,23 +1001,23 @@
         <translation>Gjeldende panel-innstillinger ble reservekopiert til en skjult mappe som heter .restore i hjemmemappa (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1838"/>
+        <location filename="../defaultlook.cpp" line="1854"/>
         <source>settings</source>
         <translation>innstillinger</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2178"/>
+        <location filename="../defaultlook.cpp" line="2194"/>
         <source>Choose a theme set</source>
         <translation>Velg et temasett</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2584"/>
+        <location filename="../defaultlook.cpp" line="2609"/>
         <source>Please enter a computer name.</source>
         <comment>question to enter a name for the computer hostname</comment>
         <translation>Skriv inn datamaskinens navn.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2588"/>
+        <location filename="../defaultlook.cpp" line="2613"/>
         <source>Sorry, your computer name contains invalid characters.
 You&apos;ll have to select a different
 name before proceeding.</source>
@@ -1015,7 +1026,7 @@ name before proceeding.</source>
 Velg et annet navn.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="4146"/>
+        <location filename="../defaultlook.cpp" line="4171"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
         <translation>Velg program som skal kjøres</translation>

@@ -46,6 +46,11 @@
     </message>
     <message>
         <location filename="../main.cpp" line="53"/>
+        <source>Display additional debug output in console</source>
+        <translation>Mostrar salida de depuración adicional en la consola</translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="54"/>
         <source>Opens Other tab directly.  Valid on all desktops</source>
         <translation>Abre directamente la pestaña Otros. Válido en todos los escritorios</translation>
     </message>
@@ -298,7 +303,7 @@
         <location filename="../defaultlook.ui" line="1303"/>
         <location filename="../defaultlook.ui" line="1852"/>
         <location filename="../defaultlook.ui" line="1911"/>
-        <location filename="../defaultlook.ui" line="2083"/>
+        <location filename="../defaultlook.ui" line="1993"/>
         <source>Apply</source>
         <extracomment>apply changes</extracomment>
         <translation>Aplicar</translation>
@@ -750,10 +755,16 @@
         <translation>Espacio de trabajo</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2101"/>
+        <location filename="../defaultlook.ui" line="2077"/>
         <source>Change computer name (requires reboot)</source>
         <extracomment>option to change the system hostname, requires a reboot to be 100% effective</extracomment>
         <translation>Cambiar el nombre del ordenador (requiere reiniciar)</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2111"/>
+        <source>Enable bluetooth battery info for connected devices (requires system restart)</source>
+        <extracomment>expose battery info for connected bluetooth devices to the operating system via dbus</extracomment>
+        <translation>Activar la información de la batería bluetooth para los dispositivos conectados (requiere reiniciar el sistema)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1781"/>
@@ -806,111 +817,111 @@
         <translation>Otros</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2056"/>
+        <location filename="../defaultlook.ui" line="2063"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>Restablecer Lightdm (pantalla de inicio) al tema predeterminado</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2015"/>
+        <location filename="../defaultlook.ui" line="2018"/>
         <source>put a hold or remove a hold on updates of Liquorix kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
         <translation>poner una retención o quitar una retención en las actualizaciones de los kernels de Liquorix</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2018"/>
+        <location filename="../defaultlook.ui" line="2021"/>
         <source>Enable Automatic Liquorix Kernel Updates (MX ahs repository)</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
         <translation>Habilitar Actualizaciones Automáticas del Kernel Liquorix (repositorio MX ahs)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2032"/>
+        <location filename="../defaultlook.ui" line="2084"/>
         <source>put a hold or remove a hold on updates of Debian  kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
         <translation>poner una retención o quitar una retención en las actualizaciones de los kernels de Debian</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2035"/>
+        <location filename="../defaultlook.ui" line="2087"/>
         <source>Enable Automatic Debian Kernel Updates</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
         <translation>Habilitar actualizaciones automáticas del kernel de Debian</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1956"/>
+        <location filename="../defaultlook.ui" line="2049"/>
         <source>Password for administrative tasks:</source>
         <translation>Contraseña para tareas administrativas:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2070"/>
+        <location filename="../defaultlook.ui" line="2042"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>Permitir el montaje de unidades internas por usuarios no root</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1963"/>
+        <location filename="../defaultlook.ui" line="2056"/>
         <source>Root</source>
         <translation>Raiz</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2001"/>
+        <location filename="../defaultlook.ui" line="2011"/>
         <source>Enable kernel sandbox</source>
         <translation>Habilitar caja de arena del kernel</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1942"/>
+        <location filename="../defaultlook.ui" line="2035"/>
         <source>&amp;User</source>
         <translation>&amp;Usuario</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1984"/>
+        <location filename="../defaultlook.ui" line="2094"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;necesita reiniciarse&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1987"/>
+        <location filename="../defaultlook.ui" line="2097"/>
         <source>Enable Bluetooth Adapters on boot</source>
         <translation>Habilitar los adaptadores Bluetooth en el inicio</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1994"/>
+        <location filename="../defaultlook.ui" line="2004"/>
         <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
         <translation>Apt instalará adicionalmente paquetes &quot;recomendados&quot; como dependencias</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2042"/>
+        <location filename="../defaultlook.ui" line="2028"/>
         <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
         <translation>Generar el menú Fluxbox de todas las aplicaciones tras la instalación, eliminación y actualización de paquetes</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1970"/>
+        <location filename="../defaultlook.ui" line="1945"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
         <translation>Utilizar decoraciones del lado del cliente (CSD) en aplicaciones GTK3 que las admitan (requiere reiniciar la sesión)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2025"/>
+        <location filename="../defaultlook.ui" line="1973"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>Usar el controlador Intel en lugar del controlador predeterminado &quot;modesetting&quot; (requiere reiniciar)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1977"/>
+        <location filename="../defaultlook.ui" line="1959"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>.........NOTA: NOTA: el archivo actual /etc/X11/xorg.conf.d/20-intel.conf se respaldará en la carpeta /home</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1949"/>
+        <location filename="../defaultlook.ui" line="1980"/>
         <source>Use tearfree amdgpu option</source>
         <translation>Use la opción tearfree amdgpu</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2063"/>
+        <location filename="../defaultlook.ui" line="2104"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>.........NOTA: el archivo actual /etc/X11/xorg.conf.d/20-amd.conf se respaldará en la carpeta home</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2049"/>
+        <location filename="../defaultlook.ui" line="2070"/>
         <source>Use tearfree radeon driver option</source>
         <translation>Use la opción tearfree del controlador radeon</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2008"/>
+        <location filename="../defaultlook.ui" line="1966"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>.........NOTA: el archivo actual /etc/X11/xorg.conf.d/20-radeon.conf será respaldado en la carpeta home</translation>
     </message>
@@ -990,23 +1001,23 @@
         <translation>Se ha realizado una copia de seguridad de la configuración actual del panel en una carpeta oculta llamada .restore en su carpeta de inicio (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1838"/>
+        <location filename="../defaultlook.cpp" line="1854"/>
         <source>settings</source>
         <translation>Configuracion</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2178"/>
+        <location filename="../defaultlook.cpp" line="2194"/>
         <source>Choose a theme set</source>
         <translation>Elegir un conjunto de temas</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2584"/>
+        <location filename="../defaultlook.cpp" line="2609"/>
         <source>Please enter a computer name.</source>
         <comment>question to enter a name for the computer hostname</comment>
         <translation>Por favor ingrese un nombre de computadora.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2588"/>
+        <location filename="../defaultlook.cpp" line="2613"/>
         <source>Sorry, your computer name contains invalid characters.
 You&apos;ll have to select a different
 name before proceeding.</source>
@@ -1016,7 +1027,7 @@ Tendrá que seleccionar un
 nombre diferente antes de continuar.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="4146"/>
+        <location filename="../defaultlook.cpp" line="4171"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
         <translation>Seleccione la aplicación a ejecutar</translation>

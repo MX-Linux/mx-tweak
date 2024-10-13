@@ -46,6 +46,11 @@
     </message>
     <message>
         <location filename="../main.cpp" line="53"/>
+        <source>Display additional debug output in console</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="54"/>
         <source>Opens Other tab directly.  Valid on all desktops</source>
         <translation>Az egyéb lappal nyílik meg. Minden asztali környezetnél érvényes</translation>
     </message>
@@ -298,7 +303,7 @@
         <location filename="../defaultlook.ui" line="1303"/>
         <location filename="../defaultlook.ui" line="1852"/>
         <location filename="../defaultlook.ui" line="1911"/>
-        <location filename="../defaultlook.ui" line="2083"/>
+        <location filename="../defaultlook.ui" line="1993"/>
         <source>Apply</source>
         <extracomment>apply changes</extracomment>
         <translation>Alkalmazás</translation>
@@ -750,9 +755,15 @@
         <translation>Munkaterület</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2101"/>
+        <location filename="../defaultlook.ui" line="2077"/>
         <source>Change computer name (requires reboot)</source>
         <extracomment>option to change the system hostname, requires a reboot to be 100% effective</extracomment>
+        <translation>Számítógépnév megváltoztatása (újraindítást igényel)</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2111"/>
+        <source>Enable bluetooth battery info for connected devices (requires system restart)</source>
+        <extracomment>expose battery info for connected bluetooth devices to the operating system via dbus</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -769,7 +780,7 @@
         <location filename="../defaultlook.ui" line="1863"/>
         <source>Autostart plasma-discover system tray update notification utility</source>
         <extracomment>enable or disable autostartup of plasma-discover updater utility on login</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>A plasma-discover rendszertálca értesítési ikon automatikus indítása</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1873"/>
@@ -806,111 +817,111 @@
         <translation>Egyéb</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2056"/>
+        <location filename="../defaultlook.ui" line="2063"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>A Lightdm (bejelentkező képernyő) visszaállítása az alap témára</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2015"/>
+        <location filename="../defaultlook.ui" line="2018"/>
         <source>put a hold or remove a hold on updates of Liquorix kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
         <translation>Liquorix kernel frissítések felfüggesztése vagy folytatása</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2018"/>
+        <location filename="../defaultlook.ui" line="2021"/>
         <source>Enable Automatic Liquorix Kernel Updates (MX ahs repository)</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
         <translation>Automatikus Liquorix Kernel frissítések engedélyezése (MX ahs csomagforrás)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2032"/>
+        <location filename="../defaultlook.ui" line="2084"/>
         <source>put a hold or remove a hold on updates of Debian  kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
         <translation>Debian kernel frissítések felfüggesztése vagy folytatása</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2035"/>
+        <location filename="../defaultlook.ui" line="2087"/>
         <source>Enable Automatic Debian Kernel Updates</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
         <translation>Automatikus Debian Kernel frissítések engedélyezése</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1956"/>
+        <location filename="../defaultlook.ui" line="2049"/>
         <source>Password for administrative tasks:</source>
         <translation>Jelszó adminisztratív feladatokhoz:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2070"/>
+        <location filename="../defaultlook.ui" line="2042"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>A belső eszközök csatolásának engedélyezése nem-root felhasználók számára</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1963"/>
+        <location filename="../defaultlook.ui" line="2056"/>
         <source>Root</source>
         <translation>Root</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2001"/>
+        <location filename="../defaultlook.ui" line="2011"/>
         <source>Enable kernel sandbox</source>
         <translation>A kernel sandbox engedélyezése</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1942"/>
+        <location filename="../defaultlook.ui" line="2035"/>
         <source>&amp;User</source>
         <translation>&amp;Felhasználó</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1984"/>
+        <location filename="../defaultlook.ui" line="2094"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;újraindítás szükséges&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1987"/>
+        <location filename="../defaultlook.ui" line="2097"/>
         <source>Enable Bluetooth Adapters on boot</source>
         <translation>Bluetooth eszközök engedélyezése indításkor</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1994"/>
+        <location filename="../defaultlook.ui" line="2004"/>
         <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
         <translation>Az Apt telepíti a további &quot;javasolt&quot; csomagokat, mint függőség</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2042"/>
+        <location filename="../defaultlook.ui" line="2028"/>
         <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
         <translation>A Fluxbox alkalmazások menüjének frissítése csomagok telepítése, eltávolítása vagy frissítése után</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1970"/>
+        <location filename="../defaultlook.ui" line="1945"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
         <translation>Kliensoldali Dekorációk (CSD) használata a GTK3 alkalmazásokban, amelyek támogatják (munkafolyamat újraindítása szükséges)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2025"/>
+        <location filename="../defaultlook.ui" line="1973"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>Az intel illesztőprogram használata az alap &quot;modesetting&quot; illesztőprogram helyett (újraindítás szükséges)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1977"/>
+        <location filename="../defaultlook.ui" line="1959"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>          Megjegyzés: a meglévő /etc/X11/xorg.conf.d/20-intel.conf a saját-könyvtárban kerül mentésre</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1949"/>
+        <location filename="../defaultlook.ui" line="1980"/>
         <source>Use tearfree amdgpu option</source>
         <translation>A tearfree amdgpu opció használata</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2063"/>
+        <location filename="../defaultlook.ui" line="2104"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>          Megjegyzés: a meglévő /etc/X11/xorg.conf.d/20-amd.conf a saját-könyvtárban kerül mentésre</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2049"/>
+        <location filename="../defaultlook.ui" line="2070"/>
         <source>Use tearfree radeon driver option</source>
         <translation>A tearfree radeon illesztőprogram opció használata</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2008"/>
+        <location filename="../defaultlook.ui" line="1966"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>          Megjegyzés: a meglévő /etc/X11/xorg.conf.d/20-radeon.conf a saját-könyvtárban kerül mentésre</translation>
     </message>
@@ -990,23 +1001,23 @@
         <translation>Az aktuális panelbeállításokról biztonsági másolat készült egy rejtett .restore nevű mappába a saját mappájában (~/.restore/).</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1838"/>
+        <location filename="../defaultlook.cpp" line="1854"/>
         <source>settings</source>
         <translation>beállítások</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2178"/>
+        <location filename="../defaultlook.cpp" line="2194"/>
         <source>Choose a theme set</source>
         <translation>Válasszon egy témakészletet</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2584"/>
+        <location filename="../defaultlook.cpp" line="2609"/>
         <source>Please enter a computer name.</source>
         <comment>question to enter a name for the computer hostname</comment>
         <translation>Adjon meg egy számítógép nevet.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2588"/>
+        <location filename="../defaultlook.cpp" line="2613"/>
         <source>Sorry, your computer name contains invalid characters.
 You&apos;ll have to select a different
 name before proceeding.</source>
@@ -1016,7 +1027,7 @@ Választania kell egy másik
 nevet mielőtt folytatná.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="4146"/>
+        <location filename="../defaultlook.cpp" line="4171"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
         <translation>Válassza ki a futtatandó alkalmazást</translation>
