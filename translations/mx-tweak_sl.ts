@@ -762,9 +762,9 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2111"/>
-        <source>Enable bluetooth battery info for connected devices (requires system restart)</source>
-        <extracomment>expose battery info for connected bluetooth devices to the operating system via dbus</extracomment>
-        <translation>Vklopi bluetooth podatke o bateriji za povezane naprave (zahteva ponovni zagon)</translation>
+        <source>Enable Bluetooth battery info for connected devices (requires system restart)</source>
+        <extracomment>expose battery info for connected Bluetooth devices to the operating system via dbus</extracomment>
+        <translation>Vklopi Bluetooth podatke o bateriji za povezane naprave (zahteva ponovni zagon)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1781"/>
@@ -877,7 +877,7 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2097"/>
-        <source>Enable Bluetooth Adapters on boot</source>
+        <source>Enable Bluetooth adapters on boot</source>
         <translation>Ob zagonu vklopi Bluetooth vmesnike</translation>
     </message>
     <message>

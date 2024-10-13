@@ -762,9 +762,9 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2111"/>
-        <source>Enable bluetooth battery info for connected devices (requires system restart)</source>
-        <extracomment>expose battery info for connected bluetooth devices to the operating system via dbus</extracomment>
-        <translation>Ativar as informações do nível da bateria do ‘bluetooth’ para os dispositivos que estão conectados (esta opção necessita a reinicialização do computador)</translation>
+        <source>Enable Bluetooth battery info for connected devices (requires system restart)</source>
+        <extracomment>expose battery info for connected Bluetooth devices to the operating system via dbus</extracomment>
+        <translation>Ativar as informações do nível da bateria do ‘Bluetooth’ para os dispositivos que estão conectados (esta opção necessita a reinicialização do computador)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1781"/>
@@ -877,8 +877,8 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2097"/>
-        <source>Enable Bluetooth Adapters on boot</source>
-        <translation>Ativar os adaptadores de ‘bluetooth’ na inicialização</translation>
+        <source>Enable Bluetooth adapters on boot</source>
+        <translation>Ativar os adaptadores de ‘Bluetooth’ na inicialização</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2004"/>

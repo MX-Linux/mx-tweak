@@ -762,8 +762,8 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2111"/>
-        <source>Enable bluetooth battery info for connected devices (requires system restart)</source>
-        <extracomment>expose battery info for connected bluetooth devices to the operating system via dbus</extracomment>
+        <source>Enable Bluetooth battery info for connected devices (requires system restart)</source>
+        <extracomment>expose battery info for connected Bluetooth devices to the operating system via dbus</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -877,8 +877,8 @@
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2097"/>
-        <source>Enable Bluetooth Adapters on boot</source>
-        <translation>Abilita gli adattatori bluetooth all&apos;avvio</translation>
+        <source>Enable Bluetooth adapters on boot</source>
+        <translation>Abilita gli adattatori Bluetooth all&apos;avvio</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2004"/>
