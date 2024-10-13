@@ -46,6 +46,11 @@
     </message>
     <message>
         <location filename="../main.cpp" line="53"/>
+        <source>Display additional debug output in console</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="54"/>
         <source>Opens Other tab directly.  Valid on all desktops</source>
         <translation type="unfinished"></translation>
     </message>
@@ -298,7 +303,7 @@
         <location filename="../defaultlook.ui" line="1303"/>
         <location filename="../defaultlook.ui" line="1852"/>
         <location filename="../defaultlook.ui" line="1911"/>
-        <location filename="../defaultlook.ui" line="2083"/>
+        <location filename="../defaultlook.ui" line="1993"/>
         <source>Apply</source>
         <extracomment>apply changes</extracomment>
         <translation>Použít</translation>
@@ -750,9 +755,15 @@
         <translation>Pracovní plocha</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2101"/>
+        <location filename="../defaultlook.ui" line="2077"/>
         <source>Change computer name (requires reboot)</source>
         <extracomment>option to change the system hostname, requires a reboot to be 100% effective</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2111"/>
+        <source>Enable bluetooth battery info for connected devices (requires system restart)</source>
+        <extracomment>expose battery info for connected bluetooth devices to the operating system via dbus</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -806,111 +817,111 @@
         <translation>Ostatní</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2056"/>
+        <location filename="../defaultlook.ui" line="2063"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>Obnovit Lightdm (přihlašovací obrazovku) do výchozího motivu</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2015"/>
+        <location filename="../defaultlook.ui" line="2018"/>
         <source>put a hold or remove a hold on updates of Liquorix kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2018"/>
+        <location filename="../defaultlook.ui" line="2021"/>
         <source>Enable Automatic Liquorix Kernel Updates (MX ahs repository)</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2032"/>
+        <location filename="../defaultlook.ui" line="2084"/>
         <source>put a hold or remove a hold on updates of Debian  kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2035"/>
+        <location filename="../defaultlook.ui" line="2087"/>
         <source>Enable Automatic Debian Kernel Updates</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1956"/>
+        <location filename="../defaultlook.ui" line="2049"/>
         <source>Password for administrative tasks:</source>
         <translation>Heslo pro administrátorské úkony:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2070"/>
+        <location filename="../defaultlook.ui" line="2042"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>Povolit uživatelům bez práv roota připojování interních disků</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1963"/>
+        <location filename="../defaultlook.ui" line="2056"/>
         <source>Root</source>
         <translation>Root</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2001"/>
+        <location filename="../defaultlook.ui" line="2011"/>
         <source>Enable kernel sandbox</source>
         <translation>Povolit kernel sandbox</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1942"/>
+        <location filename="../defaultlook.ui" line="2035"/>
         <source>&amp;User</source>
         <translation>&amp;Uživatel</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1984"/>
+        <location filename="../defaultlook.ui" line="2094"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;vyžaduje restart&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1987"/>
+        <location filename="../defaultlook.ui" line="2097"/>
         <source>Enable Bluetooth Adapters on boot</source>
         <translation>Zapnout Bluetooth adaptéry při startu</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1994"/>
+        <location filename="../defaultlook.ui" line="2004"/>
         <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
         <translation>Příkaz Apt nainstaluje dodatečné &quot;doporučené&quot; balíky a zavislosti</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2042"/>
+        <location filename="../defaultlook.ui" line="2028"/>
         <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1970"/>
+        <location filename="../defaultlook.ui" line="1945"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
         <translation>Použít Client Side Decorations (CSD) v GTK3 aplikacích pokud toto podporují (vyžaduje restart)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2025"/>
+        <location filename="../defaultlook.ui" line="1973"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>Použít ovladač intel namísto předvoleného ovladače &quot;modesetting&quot;  (vyžaduje restart)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1977"/>
+        <location filename="../defaultlook.ui" line="1959"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>          POZNÁMKA: existující /etc/X11/xorg.conf.d/20-intel.conf bude zálohován do domovské složky</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1949"/>
+        <location filename="../defaultlook.ui" line="1980"/>
         <source>Use tearfree amdgpu option</source>
         <translation>Použít nastavení amdgpu tearfree</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2063"/>
+        <location filename="../defaultlook.ui" line="2104"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>          POZNÁMKA: existující /etc/X11/xorg.conf.d/20-amd.conf bude zazálohován do domovské složky</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2049"/>
+        <location filename="../defaultlook.ui" line="2070"/>
         <source>Use tearfree radeon driver option</source>
         <translation>Použít tearfree nastavení ovladače radeon</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2008"/>
+        <location filename="../defaultlook.ui" line="1966"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>          POZNÁMKA: existující /etc/X11/xorg.conf.d/20-radeon.conf bude zazálohován do domovské složky</translation>
     </message>
@@ -990,23 +1001,23 @@
         <translation>Vaše aktuální nastavení panelu bylo zazálohováno do skryté složky s názvem .restore ve vaší domovské složce (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1838"/>
+        <location filename="../defaultlook.cpp" line="1854"/>
         <source>settings</source>
         <translation>nastavení</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2178"/>
+        <location filename="../defaultlook.cpp" line="2194"/>
         <source>Choose a theme set</source>
         <translation>Vybrat sadu motivů</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2584"/>
+        <location filename="../defaultlook.cpp" line="2609"/>
         <source>Please enter a computer name.</source>
         <comment>question to enter a name for the computer hostname</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2588"/>
+        <location filename="../defaultlook.cpp" line="2613"/>
         <source>Sorry, your computer name contains invalid characters.
 You&apos;ll have to select a different
 name before proceeding.</source>
@@ -1014,7 +1025,7 @@ name before proceeding.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="4146"/>
+        <location filename="../defaultlook.cpp" line="4171"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
         <translation type="unfinished"></translation>
