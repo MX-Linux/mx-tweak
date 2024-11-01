@@ -179,6 +179,7 @@ void defaultlook::setup()
         ui->toolButtonXFCEAppearance->hide();
         ui->toolButtonXFCEWMsettings->hide();
         ui->toolButtonXFCEpanelSettings->hide();
+        ui->switchDisplayManager->hide();
         ui->tabWidget->setCurrentIndex(Tab::Plasma);
         if (othertabflag){
             ui->tabWidget->setCurrentIndex(Tab::Others);
@@ -4278,5 +4279,11 @@ void defaultlook::on_checkBoxBluetoothBattery_clicked()
     ui->ButtonApplyEtc->setEnabled(true);
     bluetoothbatteryflag = !bluetoothbatteryflag;
     if (verbose) qDebug() << "bluetooth battery flag is " << bluetoothbatteryflag;
+}
+
+
+void defaultlook::on_switchDisplayManager_clicked()
+{
+    runCmd("pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY dpkg-reconfigure lightdm");
 }
 

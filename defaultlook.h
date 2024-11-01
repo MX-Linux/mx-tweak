@@ -323,6 +323,8 @@ private slots:
 
     void on_checkBoxBluetoothBattery_clicked();
 
+    void on_switchDisplayManager_clicked();
+
 private:
     Ui::defaultlook *ui;
 };
