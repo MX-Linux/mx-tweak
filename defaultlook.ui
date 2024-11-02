@@ -1936,9 +1936,6 @@
       <layout class="QGridLayout" name="gridLayout_8">
        <item row="0" column="0">
         <layout class="QGridLayout" name="gridLayout_7">
-         <item row="16" column="2" colspan="2">
-          <widget class="QLineEdit" name="lineEditHostname"/>
-         </item>
          <item row="7" column="0" colspan="4">
           <widget class="QCheckBox" name="checkBoxCSD">
            <property name="text">
@@ -1946,7 +1943,63 @@
            </property>
           </widget>
          </item>
-         <item row="17" column="0" colspan="4">
+         <item row="14" column="0" colspan="4">
+          <widget class="QCheckBox" name="checkboxRadeontearfree">
+           <property name="text">
+            <string>Use tearfree radeon driver option</string>
+           </property>
+          </widget>
+         </item>
+         <item row="19" column="0" colspan="2">
+          <widget class="QLabel" name="label_11">
+           <property name="text">
+            <string>Password for administrative tasks:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QCheckBox" name="checkBoxBluetoothBattery">
+           <property name="text">
+            <string extracomment="expose battery info for connected bluetooth devices to the operating system via dbus">Enable Bluetooth battery info for connected devices (requires system restart)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0" colspan="4">
+          <widget class="QCheckBox" name="checkBoxMountInternalDrivesNonRoot">
+           <property name="text">
+            <string>Enable mounting of internal drives by non-root users</string>
+           </property>
+          </widget>
+         </item>
+         <item row="15" column="0" colspan="3">
+          <widget class="QLabel" name="labelradeon">
+           <property name="text">
+            <string>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0" colspan="4">
+          <widget class="QCheckBox" name="checkBoxInstallRecommends">
+           <property name="text">
+            <string>Apt installs additional &quot;recommends&quot; packages as dependencies</string>
+           </property>
+          </widget>
+         </item>
+         <item row="10" column="0" colspan="4">
+          <widget class="QCheckBox" name="checkboxIntelDriver">
+           <property name="text">
+            <string>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0" colspan="4">
+          <widget class="QCheckBox" name="checkBoxSandbox">
+           <property name="text">
+            <string>Enable kernel sandbox</string>
+           </property>
+          </widget>
+         </item>
+         <item row="18" column="0" colspan="4">
           <widget class="Line" name="line_2">
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
@@ -1960,28 +2013,24 @@
            </property>
           </widget>
          </item>
-         <item row="15" column="0" colspan="3">
-          <widget class="QLabel" name="labelradeon">
+         <item row="16" column="0">
+          <widget class="QCheckBox" name="checkBoxComputerName">
            <property name="text">
-            <string>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</string>
+            <string extracomment="option to change the system hostname, requires a reboot to be 100% effective">Change computer name (requires reboot)</string>
            </property>
           </widget>
          </item>
-         <item row="10" column="0" colspan="4">
-          <widget class="QCheckBox" name="checkboxIntelDriver">
+         <item row="3" column="0" colspan="4">
+          <widget class="QCheckBox" name="checkBoxbluetoothAutoEnable">
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
            <property name="text">
-            <string>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</string>
+            <string>Enable Bluetooth adapters on boot</string>
            </property>
           </widget>
          </item>
-         <item row="12" column="0" colspan="4">
-          <widget class="QCheckBox" name="checkboxAMDtearfree">
-           <property name="text">
-            <string>Use tearfree amdgpu option</string>
-           </property>
-          </widget>
-         </item>
-         <item row="19" column="0" colspan="4">
+         <item row="20" column="0" colspan="4">
           <widget class="QPushButton" name="ButtonApplyEtc">
            <property name="minimumSize">
             <size>
@@ -1998,17 +2047,10 @@
            </property>
           </widget>
          </item>
-         <item row="5" column="0" colspan="4">
-          <widget class="QCheckBox" name="checkBoxInstallRecommends">
+         <item row="6" column="0" colspan="4">
+          <widget class="QCheckBox" name="checkBoxDisableFluxboxMenuGeneration">
            <property name="text">
-            <string>Apt installs additional &quot;recommends&quot; packages as dependencies</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="0" colspan="4">
-          <widget class="QCheckBox" name="checkBoxSandbox">
-           <property name="text">
-            <string>Enable kernel sandbox</string>
+            <string>Generate fluxbox All Apps menu after package installation, removal, and updates</string>
            </property>
           </widget>
          </item>
@@ -2022,59 +2064,17 @@
            </property>
           </widget>
          </item>
-         <item row="6" column="0" colspan="4">
-          <widget class="QCheckBox" name="checkBoxDisableFluxboxMenuGeneration">
-           <property name="text">
-            <string>Generate fluxbox All Apps menu after package installation, removal, and updates</string>
-           </property>
-          </widget>
-         </item>
-         <item row="18" column="2">
+         <item row="19" column="2">
           <widget class="QRadioButton" name="radioSudoUser">
            <property name="text">
             <string>&amp;User</string>
            </property>
           </widget>
          </item>
-         <item row="1" column="0" colspan="4">
-          <widget class="QCheckBox" name="checkBoxMountInternalDrivesNonRoot">
+         <item row="13" column="0" colspan="3">
+          <widget class="QLabel" name="labelamdgpu">
            <property name="text">
-            <string>Enable mounting of internal drives by non-root users</string>
-           </property>
-          </widget>
-         </item>
-         <item row="18" column="0" colspan="2">
-          <widget class="QLabel" name="label_11">
-           <property name="text">
-            <string>Password for administrative tasks:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="18" column="3">
-          <widget class="QRadioButton" name="radioSudoRoot">
-           <property name="text">
-            <string>Root</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="0" colspan="4">
-          <widget class="QCheckBox" name="checkBoxLightdmReset">
-           <property name="text">
-            <string>Reset Lightdm (login screen) to system default theme</string>
-           </property>
-          </widget>
-         </item>
-         <item row="14" column="0" colspan="4">
-          <widget class="QCheckBox" name="checkboxRadeontearfree">
-           <property name="text">
-            <string>Use tearfree radeon driver option</string>
-           </property>
-          </widget>
-         </item>
-         <item row="16" column="0">
-          <widget class="QCheckBox" name="checkBoxComputerName">
-           <property name="text">
-            <string extracomment="option to change the system hostname, requires a reboot to be 100% effective">Change computer name (requires reboot)</string>
+            <string>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</string>
            </property>
           </widget>
          </item>
@@ -2088,27 +2088,37 @@
            </property>
           </widget>
          </item>
-         <item row="3" column="0" colspan="4">
-          <widget class="QCheckBox" name="checkBoxbluetoothAutoEnable">
-           <property name="toolTip">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-           </property>
+         <item row="0" column="0" colspan="4">
+          <widget class="QCheckBox" name="checkBoxLightdmReset">
            <property name="text">
-            <string>Enable Bluetooth adapters on boot</string>
+            <string>Reset Lightdm (login screen) to system default theme</string>
            </property>
           </widget>
          </item>
-         <item row="13" column="0" colspan="3">
-          <widget class="QLabel" name="labelamdgpu">
+         <item row="12" column="0" colspan="4">
+          <widget class="QCheckBox" name="checkboxAMDtearfree">
            <property name="text">
-            <string>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</string>
+            <string>Use tearfree amdgpu option</string>
            </property>
           </widget>
          </item>
-         <item row="4" column="0">
-          <widget class="QCheckBox" name="checkBoxBluetoothBattery">
+         <item row="19" column="3">
+          <widget class="QRadioButton" name="radioSudoRoot">
            <property name="text">
-            <string extracomment="expose battery info for connected bluetooth devices to the operating system via dbus">Enable Bluetooth battery info for connected devices (requires system restart)</string>
+            <string>Root</string>
+           </property>
+          </widget>
+         </item>
+         <item row="17" column="1" colspan="3">
+          <widget class="QComboBox" name="comboBoxDisplayManager"/>
+         </item>
+         <item row="16" column="1" colspan="3">
+          <widget class="QLineEdit" name="lineEditHostname"/>
+         </item>
+         <item row="17" column="0">
+          <widget class="QCheckBox" name="checkBoxDisplayManager">
+           <property name="text">
+            <string>Change Display Manager (login screen)</string>
            </property>
           </widget>
          </item>

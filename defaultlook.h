@@ -74,6 +74,7 @@ public:
     QString plugintasklist;
     QString originalhostname;
     QStringList undotheme;
+    QString currentdisplaymanager;
     bool verbose = false;
     bool panelflag{};
     bool hibernate_flag{};
@@ -187,6 +188,7 @@ public:
     void fluxboxchangedock() const;
     void changecomputername(QString hostname);
     bool validatecomputername(QString hostname);
+    void changedisplaymanager(QString dm);
 
 private slots:
     static void on_buttonCancel_clicked();
@@ -322,6 +324,8 @@ private slots:
     void on_checkBoxComputerName_clicked();
 
     void on_checkBoxBluetoothBattery_clicked();
+
+    void on_checkBoxDisplayManager_clicked();
 
 private:
     Ui::defaultlook *ui;
