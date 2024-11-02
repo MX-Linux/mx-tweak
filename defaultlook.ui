@@ -2094,7 +2094,7 @@
             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
            <property name="text">
-            <string>Enable Bluetooth Adapters on boot</string>
+            <string>Enable Bluetooth adapters on boot</string>
            </property>
           </widget>
          </item>
@@ -2108,7 +2108,7 @@
          <item row="4" column="0">
           <widget class="QCheckBox" name="checkBoxBluetoothBattery">
            <property name="text">
-            <string extracomment="expose battery info for connected bluetooth devices to the operating system via dbus">Enable bluetooth battery info for connected devices (requires system restart)</string>
+            <string extracomment="expose battery info for connected bluetooth devices to the operating system via dbus">Enable Bluetooth battery info for connected devices (requires system restart)</string>
            </property>
           </widget>
          </item>
