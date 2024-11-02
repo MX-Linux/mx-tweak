@@ -2622,7 +2622,9 @@ void defaultlook::on_ButtonApplyEtc_clicked()
         //don't do anything if selection is still default
         if (ui->comboBoxDisplayManager->currentText() != currentdisplaymanager){
             changedisplaymanager(ui->comboBoxDisplayManager->currentText());
-        }}
+        }
+        ui->checkBoxDisplayManager->setChecked(false);
+    }
 
     //checkbox options
     if ( ! udisks_option.isEmpty() || ! sudo_override_option.isEmpty() || ! user_name_space_override_option.isEmpty() || ! intel_option.isEmpty() || ! lightdm_option.isEmpty() || ! amd_option.isEmpty() || ! radeon_option.isEmpty() || !bluetooth_option.isEmpty() || !recommends_option.isEmpty() || !debian_kernel_updates_option.isEmpty() || !liq_kernel_updates_option.isEmpty()){
