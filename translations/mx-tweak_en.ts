@@ -763,6 +763,7 @@
     <message>
         <location filename="../defaultlook.ui" line="2121"/>
         <source>Change Default Display Manager (login screen) (requires reboot)</source>
+        <extracomment>option to change display manager login screen.  present if more than one display manager is installed</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>

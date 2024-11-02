@@ -2118,7 +2118,7 @@
          <item row="17" column="0">
           <widget class="QCheckBox" name="checkBoxDisplayManager">
            <property name="text">
-            <string>Change Default Display Manager (login screen) (requires reboot)</string>
+            <string extracomment="option to change display manager login screen.  present if more than one display manager is installed">Change Default Display Manager (login screen) (requires reboot)</string>
            </property>
           </widget>
          </item>
