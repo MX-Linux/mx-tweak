@@ -32,6 +32,7 @@
 #include <QLineEdit>
 #include <QMessageBox>
 #include <QStringList>
+#include <QTextStream>
 
 #include "about.h"
 #include "cmd.h"
@@ -1389,13 +1390,16 @@ void defaultlook::setupEtc()
     if (test.isEmpty()) {
         ui->checkBoxLightdmReset->hide();
     }
+    if (graphicssetupflag){
+        ui->checkboxIntelDriver->hide();
+        ui->labelIntel->hide();
+        ui->checkboxAMDtearfree->hide();
+        ui->labelamdgpu->hide();
+        ui->checkboxRadeontearfree->hide();
+        ui->labelradeon->hide();
+        graphicssetupflag=false;
+    }
 
-    ui->checkboxIntelDriver->hide();
-    ui->labelIntel->hide();
-    ui->checkboxAMDtearfree->hide();
-    ui->labelamdgpu->hide();
-    ui->checkboxRadeontearfree->hide();
-    ui->labelradeon->hide();
     ui->ButtonApplyEtc->setEnabled(false);
     if (ui->ButtonApplyEtc->icon().isNull()) {
         ui->ButtonApplyEtc->setIcon(QIcon(":/icons/dialog-ok.svg"));
@@ -1570,6 +1574,32 @@ void defaultlook::setupEtc()
     QFileInfo radeonfile(QStringLiteral("/etc/X11/xorg.conf.d/20-radeon.conf"));
     ui->checkboxRadeontearfree->setChecked(radeonfile.exists());
 
+    //setup display manager combo box
+    QString displaymanagers=runCmd("dpkg --list sddm gdm3 lightdm slim slimski xdm wdm lxdm nodm 2>/dev/null |grep ii | awk '{print $2}'").output;
+    QStringList displaymanagerlist = displaymanagers.split(QStringLiteral("\n"));
+    if ( displaymanagerlist.count() > 1) {
+        //only add items once
+        if (ui->comboBoxDisplayManager->count() == 0) {
+            ui->comboBoxDisplayManager->addItems(displaymanagerlist);
+            //set default selection to current display manager
+            //read from /etc/X11/default-display-manager if it exits, else use running dm
+            QFile defaultdisplay("/etc/X11/default-display-manager");
+            if (defaultdisplay.exists()){
+                if (defaultdisplay.open(QIODevice::ReadOnly | QIODevice::Text)){
+                    QTextStream in(&defaultdisplay);
+                    currentdisplaymanager=in.readAll().section("/",3,3).remove("\n");
+                    defaultdisplay.close();
+                }
+            } else {
+                currentdisplaymanager = runCmd("ps -aux |grep  -E '/usr/.*bin/sddm|/usr/.*bin*/gdm3|.*bin*/lightdm|.*bin*/slim|.*bin*/slimski|.*bin*/xdm.*bin*/wdm.*bin*/lxdm.*bin*/nodm' |grep -v grep | awk '{print $11}'").output.section("/", 3,3);
+            }
+            qDebug() << "current display manager is " << currentdisplaymanager;
+            ui->comboBoxDisplayManager->setCurrentText(currentdisplaymanager);
+        }
+    } else {
+        ui->checkBoxDisplayManager->hide();
+        ui->comboBoxDisplayManager->hide();
+    }
 }
 
 void defaultlook::setuptheme()
@@ -2590,6 +2620,15 @@ void defaultlook::on_ButtonApplyEtc_clicked()
             return;
         }
     }
+    // display manager change
+    if (ui->checkBoxDisplayManager->isChecked()){
+        //don't do anything if selection is still default
+        if (ui->comboBoxDisplayManager->currentText() != currentdisplaymanager){
+            changedisplaymanager(ui->comboBoxDisplayManager->currentText());
+        }
+        ui->checkBoxDisplayManager->setChecked(false);
+    }
+
     //checkbox options
     if ( ! udisks_option.isEmpty() || ! sudo_override_option.isEmpty() || ! user_name_space_override_option.isEmpty() || ! intel_option.isEmpty() || ! lightdm_option.isEmpty() || ! amd_option.isEmpty() || ! radeon_option.isEmpty() || !bluetooth_option.isEmpty() || !recommends_option.isEmpty() || !debian_kernel_updates_option.isEmpty() || !liq_kernel_updates_option.isEmpty()){
         runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + udisks_option + " " + sudo_override_option + " " + user_name_space_override_option + " " + intel_option + " " + amd_option + " " + radeon_option + " " + bluetooth_option + " " + recommends_option + " " + lightdm_option + " " + debian_kernel_updates_option + " " + liq_kernel_updates_option);
@@ -2601,6 +2640,10 @@ void defaultlook::on_ButtonApplyEtc_clicked()
 
 void defaultlook::changecomputername(QString hostname){
     runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh hostname " + hostname);
+}
+
+void defaultlook::changedisplaymanager(QString dm){
+    runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh displaymanager " + dm);
 }
 
 bool defaultlook::validatecomputername(QString hostname){
@@ -4278,5 +4321,11 @@ void defaultlook::on_checkBoxBluetoothBattery_clicked()
     ui->ButtonApplyEtc->setEnabled(true);
     bluetoothbatteryflag = !bluetoothbatteryflag;
     if (verbose) qDebug() << "bluetooth battery flag is " << bluetoothbatteryflag;
+}
+
+
+void defaultlook::on_checkBoxDisplayManager_clicked()
+{
+    ui->ButtonApplyEtc->setEnabled(true);
 }
 
