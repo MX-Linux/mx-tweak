@@ -1,3 +1,9 @@
+mx-tweak (24.11.01mx23) mx; urgency=medium
+
+  * add display manager chooser if more than one display manager installed
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 02 Nov 2024 17:19:51 -0400
+
 mx-tweak (24.10.01mx23) mx; urgency=medium
 
   * add Bluetooth battery dbus feature enable/disable
