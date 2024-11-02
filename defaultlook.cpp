@@ -1390,13 +1390,16 @@ void defaultlook::setupEtc()
     if (test.isEmpty()) {
         ui->checkBoxLightdmReset->hide();
     }
+    if (graphicssetupflag){
+        ui->checkboxIntelDriver->hide();
+        ui->labelIntel->hide();
+        ui->checkboxAMDtearfree->hide();
+        ui->labelamdgpu->hide();
+        ui->checkboxRadeontearfree->hide();
+        ui->labelradeon->hide();
+        graphicssetupflag=false;
+    }
 
-    ui->checkboxIntelDriver->hide();
-    ui->labelIntel->hide();
-    ui->checkboxAMDtearfree->hide();
-    ui->labelamdgpu->hide();
-    ui->checkboxRadeontearfree->hide();
-    ui->labelradeon->hide();
     ui->ButtonApplyEtc->setEnabled(false);
     if (ui->ButtonApplyEtc->icon().isNull()) {
         ui->ButtonApplyEtc->setIcon(QIcon(":/icons/dialog-ok.svg"));

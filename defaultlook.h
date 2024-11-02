@@ -117,6 +117,7 @@ public:
     bool liqKernelUpdateFlag = false;
     bool debianKernelUpdateFlag = false;
     bool plasmadisoverautostartflag = false;
+    bool graphicssetupflag=true;
 
 
 
