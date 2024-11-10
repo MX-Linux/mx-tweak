@@ -1602,7 +1602,7 @@ void defaultlook::setupEtc()
             } else {
                 currentdisplaymanager = runCmd("ps -aux |grep  -E '/usr/.*bin/sddm|/usr/.*bin*/gdm3|.*bin*/lightdm|.*bin*/slim|.*bin*/slimski|.*bin*/xdm.*bin*/wdm.*bin*/lxdm.*bin*/nodm' |grep -v grep | awk '{print $11}'").output.section("/", 3,3);
             }
-            qDebug() << "current display manager is " << currentdisplaymanager;
+            if (verbose) qDebug() << "current display manager is " << currentdisplaymanager;
             ui->comboBoxDisplayManager->setCurrentText(currentdisplaymanager);
         }
     } else {
@@ -1636,13 +1636,16 @@ void defaultlook::setuptheme()
     }
 
     if (isKDE) {
-        ui->label_28->setText(tr("Plasma Widget Themes","theme style of the kde plasma widgets"));
-        ui->label_29->setText(tr("Color Schemes", "plasma widget color schemes"));
-        ui->label->setText(tr("Plasma Look & Feel Global Themes", "plasma global themes"));
+        ui->label_28->setText("<b>" + tr("Plasma Widget Themes","theme style of the kde plasma widgets") + "</b>");
+        ui->label_29->setText("<b>" + tr("Color Schemes", "plasma widget color schemes") + "</b>");
+        ui->label->setText("<b>" + tr("Plasma Look & Feel Global Themes", "plasma global themes") + "</b>");
         populatethemelists(QStringLiteral("plasma"));
         populatethemelists(QStringLiteral("colorscheme"));
         populatethemelists(QStringLiteral("kdecursors"));
         populatethemelists(QStringLiteral("icons"));
+        ui->pushButtonSettingsToThemeSet->hide();
+        ui->spinBoxPointerSize->hide();
+        ui->label_35->hide();
     }
 
 
@@ -2304,7 +2307,7 @@ void defaultlook::setupComboTheme()
         themes.append("\n");
         theme_list = themes.split(QStringLiteral("\n"));
         current = runCmd("grep LookAndFeelPackage $HOME/.config/kdeglobals").output.section("=",1,1);
-        qDebug() << "current is " << current;
+        if (verbose) qDebug() << "current is " << current;
     }
 
     ui->comboTheme->addItems(theme_list);
@@ -3769,7 +3772,7 @@ void defaultlook::populatethemelists(const QString &value)
         ui->listWidgetTheme->addItems(themelist);
         current = runCmd("LANG=C plasma-apply-desktoptheme --list-themes | grep \"current\"").output.section("*",1,1).section("(",0,0);
         //index of theme in list
-        qDebug() << "current is " << current;
+        if (verbose) qDebug() << "current is " << current;
         ui->listWidgetTheme->setCurrentRow(themelist.indexOf(current));
     }
     if ( value == QLatin1String("colorscheme")){
@@ -3777,7 +3780,7 @@ void defaultlook::populatethemelists(const QString &value)
         ui->listWidgetWMtheme->addItems(themelist);
         current = runCmd("LANG=C plasma-apply-colorscheme --list-schemes | grep \"current\"").output.section("*",1,1).section("(",0,0);
         //index of theme in list
-        qDebug() << "current is " << current;
+        if (verbose) qDebug() << "current is " << current;
         ui->listWidgetWMtheme->setCurrentRow(themelist.indexOf(current));
     }
     if ( value == QLatin1String("kdecursors")){
@@ -3785,7 +3788,7 @@ void defaultlook::populatethemelists(const QString &value)
         ui->listWidgetCursorThemes->addItems(themelist);
         current = runCmd("LANG=C plasma-apply-cursortheme --list-themes | grep \"Current\"").output.section("[",1,1).section("]",0,0);
         //index of theme in list
-        qDebug() << "current is " << current;
+        if (verbose) qDebug() << "current is " << current;
         ui->listWidgetCursorThemes->setCurrentRow(themelist.indexOf(current));
     }
 
