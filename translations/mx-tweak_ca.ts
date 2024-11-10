@@ -108,15 +108,15 @@
     <name>defaultlook</name>
     <message>
         <location filename="../defaultlook.ui" line="20"/>
-        <location filename="../defaultlook.cpp" line="57"/>
-        <location filename="../defaultlook.cpp" line="86"/>
-        <location filename="../defaultlook.cpp" line="657"/>
-        <location filename="../defaultlook.cpp" line="676"/>
-        <location filename="../defaultlook.cpp" line="685"/>
-        <location filename="../defaultlook.cpp" line="732"/>
-        <location filename="../defaultlook.cpp" line="740"/>
-        <location filename="../defaultlook.cpp" line="767"/>
-        <location filename="../defaultlook.cpp" line="770"/>
+        <location filename="../defaultlook.cpp" line="58"/>
+        <location filename="../defaultlook.cpp" line="87"/>
+        <location filename="../defaultlook.cpp" line="658"/>
+        <location filename="../defaultlook.cpp" line="677"/>
+        <location filename="../defaultlook.cpp" line="686"/>
+        <location filename="../defaultlook.cpp" line="733"/>
+        <location filename="../defaultlook.cpp" line="741"/>
+        <location filename="../defaultlook.cpp" line="768"/>
+        <location filename="../defaultlook.cpp" line="771"/>
         <source>MX Tweak</source>
         <translation>MX Tweak</translation>
     </message>
@@ -185,7 +185,7 @@
         <location filename="../defaultlook.ui" line="283"/>
         <source>Display panel horizontally</source>
         <extracomment>panel will be shown in a horizontal configuration</extracomment>
-        <translation>Mostra el plafó hoitzontal</translation>
+        <translation>Mostra el plafó horitzontal</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="293"/>
@@ -303,7 +303,7 @@
         <location filename="../defaultlook.ui" line="1303"/>
         <location filename="../defaultlook.ui" line="1852"/>
         <location filename="../defaultlook.ui" line="1911"/>
-        <location filename="../defaultlook.ui" line="1993"/>
+        <location filename="../defaultlook.ui" line="2042"/>
         <source>Apply</source>
         <extracomment>apply changes</extracomment>
         <translation>Aplica</translation>
@@ -755,16 +755,22 @@
         <translation>Espai de treball</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2077"/>
+        <location filename="../defaultlook.ui" line="2019"/>
         <source>Change computer name (requires reboot)</source>
         <extracomment>option to change the system hostname, requires a reboot to be 100% effective</extracomment>
         <translation>Canvia el nom de l&apos;ordinador (cal reiniciar)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2111"/>
+        <location filename="../defaultlook.ui" line="2121"/>
+        <source>Change Default Display Manager (login screen) (requires reboot)</source>
+        <extracomment>option to change display manager login screen.  present if more than one display manager is installed</extracomment>
+        <translation>Canvia el Gestor de Visualització (pantalla de registre) (cal reiniciar)</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1963"/>
         <source>Enable Bluetooth battery info for connected devices (requires system restart)</source>
-        <extracomment>expose battery info for connected Bluetooth devices to the operating system via dbus</extracomment>
-        <translation>Activa la informació de bateria dels dispositius Bluetooth connectats (cal reiniciar el sistema)</translation>
+        <extracomment>expose battery info for connected bluetooth devices to the operating system via dbus</extracomment>
+        <translation>Activa informació de bateria dels dispositius Bluetooth connectats (cal reiniciar el sistema)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1781"/>
@@ -774,7 +780,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1788"/>
         <source>Reset KDE/Plasma defaults</source>
-        <translation>Reinicia KDE/Plasma per omissió</translation>
+        <translation>Reinicia a KDE/Plasma per omissió</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1863"/>
@@ -817,18 +823,18 @@
         <translation>Altres</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2063"/>
+        <location filename="../defaultlook.ui" line="2094"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>Reinicia Lightdm (pantalla d&apos;entrada) al tema per omissió</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2018"/>
+        <location filename="../defaultlook.ui" line="2060"/>
         <source>put a hold or remove a hold on updates of Liquorix kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
         <translation>posa o treu una retenció a les actualitzacions dels nuclis Liquorix</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2021"/>
+        <location filename="../defaultlook.ui" line="2063"/>
         <source>Enable Automatic Liquorix Kernel Updates (MX ahs repository)</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
         <translation>Activa les actualitzacions automàtiques del nucli Liquorix (dipòsit MX ahs)</translation>
@@ -846,178 +852,178 @@
         <translation>Activa les actualitzacions automàtiques del nucli Debian </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2049"/>
+        <location filename="../defaultlook.ui" line="1956"/>
         <source>Password for administrative tasks:</source>
         <translation>Contrasenya d&apos;administrador: </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2042"/>
+        <location filename="../defaultlook.ui" line="1970"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>Activa el muntatge de discos interns per qualsevol usuari</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2056"/>
+        <location filename="../defaultlook.ui" line="2108"/>
         <source>Root</source>
         <translation>Arrel</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2011"/>
+        <location filename="../defaultlook.ui" line="1998"/>
         <source>Enable kernel sandbox</source>
         <translation>Activa l&apos;entorn de proves (sandbox)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2035"/>
+        <location filename="../defaultlook.ui" line="2070"/>
         <source>&amp;User</source>
         <translation>&amp;Usuari</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2094"/>
+        <location filename="../defaultlook.ui" line="2026"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;cal reiniciar&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2097"/>
+        <location filename="../defaultlook.ui" line="2029"/>
         <source>Enable Bluetooth adapters on boot</source>
         <translation>Activa els adaptadors Bluetooth en arrencar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2004"/>
+        <location filename="../defaultlook.ui" line="1984"/>
         <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
         <translation>Apt instal·la els paquets addicionals &quot;recomanats&quot; com a dependències</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2028"/>
+        <location filename="../defaultlook.ui" line="2053"/>
         <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
         <translation>Genera el menú de Totes les Aplicacions de fluxbox després de la instal·lació, eliminació o actualització de paquets.  </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1945"/>
+        <location filename="../defaultlook.ui" line="1942"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
         <translation>Usa les Client Side Decorations (CSD) a les aplicacions GTK3 que hi siguin compatibles (cal reinici de sessió)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1973"/>
+        <location filename="../defaultlook.ui" line="1991"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>Usa el controlador intel en comptes del controlador &quot;modesetting&quot; (cal reiniciar)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1959"/>
+        <location filename="../defaultlook.ui" line="2012"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>          NOTA: es farà còpia de seguretat del fitxer /etc/X11/xorg.conf.d/20-intel.conf al directori d&apos;usuari</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1980"/>
+        <location filename="../defaultlook.ui" line="2101"/>
         <source>Use tearfree amdgpu option</source>
         <translation>Usa l&apos;opció AMDGPU sense estrips</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2104"/>
+        <location filename="../defaultlook.ui" line="2077"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>          NOTA: s&apos;ha fet còpia de seguretat del fitxer actual /etc/X11/xorg.conf.d/20-amd.conf al directori d&apos;usuari</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2070"/>
+        <location filename="../defaultlook.ui" line="1949"/>
         <source>Use tearfree radeon driver option</source>
-        <translation>Usa l&apos;opció del controlador Rdeon sense estrips</translation>
+        <translation>Usa l&apos;opció del controlador Radeon sense estrips</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1966"/>
+        <location filename="../defaultlook.ui" line="1977"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>          NOTA: s&apos;ha fet còpia de seguretat del fitxer actual /etc/X11/xorg.conf.d/20-radeon.conf al directori d&apos;usuari</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="58"/>
+        <location filename="../defaultlook.cpp" line="59"/>
         <source>--display switch only valid for Xfce</source>
         <translation>--commutador de pantalla vàlid només per Xfce</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="656"/>
+        <location filename="../defaultlook.cpp" line="657"/>
         <source>About MX Tweak</source>
         <translation>Quant a MX Tweak</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="658"/>
+        <location filename="../defaultlook.cpp" line="659"/>
         <source>Version: </source>
         <translation>Versió: </translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="659"/>
+        <location filename="../defaultlook.cpp" line="660"/>
         <source>App for quick default ui theme changes and tweaks</source>
         <translation>Aplicació per al parametratge ràpid del tema IU per omissió</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="661"/>
+        <location filename="../defaultlook.cpp" line="662"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="662"/>
+        <location filename="../defaultlook.cpp" line="663"/>
         <source>%1 License</source>
         <translation>Llicència de %1</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="676"/>
+        <location filename="../defaultlook.cpp" line="677"/>
         <source>%1 Help</source>
         <translation>Ajuda de %1</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="686"/>
+        <location filename="../defaultlook.cpp" line="687"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
         <translation>Acabat! Firefox potser necessita tornar a arrencar per veure els canvis</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="733"/>
+        <location filename="../defaultlook.cpp" line="734"/>
         <source>Plese remove special characters</source>
         <translation>Si us plau, eviteu els caràcters especials</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="733"/>
+        <location filename="../defaultlook.cpp" line="734"/>
         <source>from file name</source>
         <translation>del nom del fitxer</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="740"/>
+        <location filename="../defaultlook.cpp" line="741"/>
         <source>File name already exists.  Choose another name</source>
-        <translation>El nom del fitxer ja hi és. Trieu-ne un altre.</translation>
+        <translation>El nom de fitxer ja hi és. Trieu-ne un altre.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="768"/>
+        <location filename="../defaultlook.cpp" line="769"/>
         <source>File is not a valid tar.xz archive file</source>
         <translation>El fitxer no és un arxiu tar.xz vàlid</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="771"/>
+        <location filename="../defaultlook.cpp" line="772"/>
         <source>Archive does not contain a panel config</source>
-        <translation>L&apos;arxiu no conté la configuració d&apos;un plafó</translation>
+        <translation>L&apos;arxiu no conté cap configuració de plafó</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="946"/>
+        <location filename="../defaultlook.cpp" line="947"/>
         <source>Panel settings</source>
         <translation>Paràmetres del plafó</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="947"/>
+        <location filename="../defaultlook.cpp" line="948"/>
         <source>Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
         <translation>S&apos;ha fet còpia de seguretat dels vostres paràmetres del plafó en un fitxer amagat anomenat .restore al vostre directori d&apos;usuari (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1854"/>
+        <location filename="../defaultlook.cpp" line="1884"/>
         <source>settings</source>
         <translation>paràmetres</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2194"/>
+        <location filename="../defaultlook.cpp" line="2224"/>
         <source>Choose a theme set</source>
         <translation>Trieu un conjunt de temes</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2609"/>
+        <location filename="../defaultlook.cpp" line="2652"/>
         <source>Please enter a computer name.</source>
         <comment>question to enter a name for the computer hostname</comment>
         <translation>Si us plau, entreu un nom per a l&apos;ordinador.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2613"/>
+        <location filename="../defaultlook.cpp" line="2656"/>
         <source>Sorry, your computer name contains invalid characters.
 You&apos;ll have to select a different
 name before proceeding.</source>
@@ -1027,7 +1033,7 @@ Cal que trieu un nom diferent
 abans de continuar.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="4171"/>
+        <location filename="../defaultlook.cpp" line="4214"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
         <translation>Trieu l&apos;aplicació a executar</translation>
@@ -1065,7 +1071,7 @@ abans de continuar.</translation>
     <message>
         <location filename="../window_buttons.ui" line="28"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Appearance&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Aparença&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Aspecte&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="35"/>
@@ -1203,12 +1209,12 @@ abans de continuar.</translation>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="42"/>
         <source>Popup Windows</source>
-        <translation>Finestra Emergent</translation>
+        <translation>Finestres Emergents</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="49"/>
         <source>Windows during move</source>
-        <translation>Finestra en moviment</translation>
+        <translation>Finestres en moviment</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="56"/>
@@ -1263,7 +1269,7 @@ abans de continuar.</translation>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="190"/>
         <source>Synchronize drawing to vertical blank</source>
-        <translation>Sincronitza el dibuix amb l&apos;esborrat vertical</translation>
+        <translation>Sincronitza el dibuix amb l&apos;esborrament vertical</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="212"/>

@@ -170,13 +170,17 @@ void defaultlook::setup()
 
 
     }
-
+//Panel, Theme, Compositor, Display, Config, Fluxbox, Plasma, Superkey, Others
     //setup plasma
     else if (checkPlasma()) {
+        isKDE = true;
         ui->label_4->hide();
         ui->label_5->hide();
         ui->label_6->hide();
         ui->label_7->hide();
+        ui->buttonThemeUndo->hide();
+        ui->pushButtonPreview->hide();
+        ui->pushButtonRemoveUserThemeSet->hide();
         ui->toolButtonXFCEAppearance->hide();
         ui->toolButtonXFCEWMsettings->hide();
         ui->toolButtonXFCEpanelSettings->hide();
@@ -184,9 +188,14 @@ void defaultlook::setup()
         if (othertabflag){
             ui->tabWidget->setCurrentIndex(Tab::Others);
         }
-        for (int i = 5; i >= 0; --i)
-            ui->tabWidget->removeTab(i);
+        ui->tabWidget->removeTab(Tab::Fluxbox);
+        ui->tabWidget->removeTab(Tab::Config);
+        ui->tabWidget->removeTab(Tab::Display);
+        ui->tabWidget->removeTab(Tab::Compositor);
+        ui->tabWidget->removeTab(Tab::Panel);
         setupPlasma();
+        setuptheme();
+        setupComboTheme();
     }
 
     //for other non-supported desktops, show only
@@ -1593,7 +1602,7 @@ void defaultlook::setupEtc()
             } else {
                 currentdisplaymanager = runCmd("ps -aux |grep  -E '/usr/.*bin/sddm|/usr/.*bin*/gdm3|.*bin*/lightdm|.*bin*/slim|.*bin*/slimski|.*bin*/xdm.*bin*/wdm.*bin*/lxdm.*bin*/nodm' |grep -v grep | awk '{print $11}'").output.section("/", 3,3);
             }
-            qDebug() << "current display manager is " << currentdisplaymanager;
+            if (verbose) qDebug() << "current display manager is " << currentdisplaymanager;
             ui->comboBoxDisplayManager->setCurrentText(currentdisplaymanager);
         }
     } else {
@@ -1612,18 +1621,34 @@ void defaultlook::setuptheme()
     ui->pushButtonPreview->setEnabled(false);
     //reset all checkboxes to unchecked
 
+    if (isXfce || isFluxbox){
     populatethemelists(QStringLiteral("gtk-3.0"));
     populatethemelists(QStringLiteral("icons"));
     populatethemelists(QStringLiteral("cursors"));
     get_cursor_size();
     cursor_size_flag = true;
-
+    }
 
     if (isXfce){
          populatethemelists(QStringLiteral("xfwm4"));
     } else if (isFluxbox) {
          populatethemelists(QStringLiteral("fluxbox"));
     }
+
+    if (isKDE) {
+        ui->label_28->setText("<b>" + tr("Plasma Widget Themes","theme style of the kde plasma widgets") + "</b>");
+        ui->label_29->setText("<b>" + tr("Color Schemes", "plasma widget color schemes") + "</b>");
+        ui->label->setText("<b>" + tr("Plasma Look & Feel Global Themes", "plasma global themes") + "</b>");
+        populatethemelists(QStringLiteral("plasma"));
+        populatethemelists(QStringLiteral("colorscheme"));
+        populatethemelists(QStringLiteral("kdecursors"));
+        populatethemelists(QStringLiteral("icons"));
+        ui->pushButtonSettingsToThemeSet->hide();
+        ui->spinBoxPointerSize->hide();
+        ui->label_35->hide();
+    }
+
+
 //dead code
     //only enable options that make sense
 
@@ -2164,241 +2189,264 @@ void defaultlook::saveBrightness()
 
 void defaultlook::setupComboTheme()
 {
-    //build theme list
-    QString home_path = QDir::homePath();
-    if (verbose) qDebug() << "home path is " << home_path;
-    bool xsettings_gtk_theme_present = false;
-    bool icontheme_present = false;
-    bool xfwm4_theme_present = false;
-    ui->comboTheme->clear();
     QStringList theme_list;
-    QStringList filter(QStringLiteral("*.tweak"));
-    QDirIterator it(QStringLiteral("/usr/share/mx-tweak-data"), filter, QDir::Files, QDirIterator::Subdirectories);
-    while (it.hasNext()) {
-        xsettings_gtk_theme_present = false;
-        icontheme_present = false;
-        xfwm4_theme_present = false;
-        QFileInfo file_info(it.next());
-        QString filename = file_info.absoluteFilePath();
-        QString name = runCmd("cat '" + filename + "'|grep ^Name=").output.section(QStringLiteral("="),1,1);
-        QString xsettings_gtk_theme = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xsettings_gtk_theme=").output.section(QStringLiteral("="),1,1);
-        if (verbose) qDebug() << "xsettings_gtk_theme = " << xsettings_gtk_theme;
-        QString xsettings_icon_theme = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xsettings_icon_theme=").output.section(QStringLiteral("="),1,1);
-        if (verbose) qDebug() << "xsettings_icon_theme = " << xsettings_icon_theme;
-        QString xfwm4_window_decorations = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xfwm4_window_decorations=").output.section(QStringLiteral("="),1,1);
-        if (verbose) qDebug() << "xfwm4_window_decorations = " << xfwm4_window_decorations;
+    ui->comboTheme->clear();
+    if (isXfce) {
+        //build theme list
+        QString home_path = QDir::homePath();
+        if (verbose) qDebug() << "home path is " << home_path;
+        bool xsettings_gtk_theme_present = false;
+        bool icontheme_present = false;
+        bool xfwm4_theme_present = false;
+        QStringList filter(QStringLiteral("*.tweak"));
+        QDirIterator it(QStringLiteral("/usr/share/mx-tweak-data"), filter, QDir::Files, QDirIterator::Subdirectories);
+        while (it.hasNext()) {
+            xsettings_gtk_theme_present = false;
+            icontheme_present = false;
+            xfwm4_theme_present = false;
+            QFileInfo file_info(it.next());
+            QString filename = file_info.absoluteFilePath();
+            QString name = runCmd("cat '" + filename + "'|grep ^Name=").output.section(QStringLiteral("="),1,1);
+            QString xsettings_gtk_theme = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xsettings_gtk_theme=").output.section(QStringLiteral("="),1,1);
+            if (verbose) qDebug() << "xsettings_gtk_theme = " << xsettings_gtk_theme;
+            QString xsettings_icon_theme = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xsettings_icon_theme=").output.section(QStringLiteral("="),1,1);
+            if (verbose) qDebug() << "xsettings_icon_theme = " << xsettings_icon_theme;
+            QString xfwm4_window_decorations = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xfwm4_window_decorations=").output.section(QStringLiteral("="),1,1);
+            if (verbose) qDebug() << "xfwm4_window_decorations = " << xfwm4_window_decorations;
 
-        //check theme existence, only list if all 3 elements present
-        QFileInfo xsettings_theme("/usr/share/themes/" + xsettings_gtk_theme);
-        QFileInfo xfwm4_theme("/usr/share/themes/" + xfwm4_window_decorations);
-        QFileInfo icon_theme("/usr/share/icons/" + xsettings_icon_theme);
-        QFileInfo xsettings_theme_home(home_path + "/.themes/" + xsettings_gtk_theme);
-        QFileInfo xfwm4_theme_home("" + home_path + "/.themes/" + xfwm4_window_decorations);
-        QFileInfo icon_theme_home("" + home_path + "/.icons/" + xsettings_icon_theme);
-        QFileInfo xsettings_theme_home_alt(home_path + "/.local/share/themes/" + xsettings_gtk_theme);
-        QFileInfo xfwm4_theme_home_alt("" + home_path + "/.local/share/themes/" + xfwm4_window_decorations);
-        if (verbose) qDebug() << "xsettings_theme_home path" << xsettings_theme_home.absoluteFilePath();
+            //check theme existence, only list if all 3 elements present
+            QFileInfo xsettings_theme("/usr/share/themes/" + xsettings_gtk_theme);
+            QFileInfo xfwm4_theme("/usr/share/themes/" + xfwm4_window_decorations);
+            QFileInfo icon_theme("/usr/share/icons/" + xsettings_icon_theme);
+            QFileInfo xsettings_theme_home(home_path + "/.themes/" + xsettings_gtk_theme);
+            QFileInfo xfwm4_theme_home("" + home_path + "/.themes/" + xfwm4_window_decorations);
+            QFileInfo icon_theme_home("" + home_path + "/.icons/" + xsettings_icon_theme);
+            QFileInfo xsettings_theme_home_alt(home_path + "/.local/share/themes/" + xsettings_gtk_theme);
+            QFileInfo xfwm4_theme_home_alt("" + home_path + "/.local/share/themes/" + xfwm4_window_decorations);
+            if (verbose) qDebug() << "xsettings_theme_home path" << xsettings_theme_home.absoluteFilePath();
 
-        if ( xsettings_theme.exists() || xsettings_theme_home.exists() || xsettings_theme_home_alt.exists()) {
-            xsettings_gtk_theme_present = true;
-            if (verbose) qDebug() << "xsettings_gtk_theme_present" << xsettings_gtk_theme_present;
+            if ( xsettings_theme.exists() || xsettings_theme_home.exists() || xsettings_theme_home_alt.exists()) {
+                xsettings_gtk_theme_present = true;
+                if (verbose) qDebug() << "xsettings_gtk_theme_present" << xsettings_gtk_theme_present;
+            }
+
+            if ( xfwm4_theme.exists() || xfwm4_theme_home.exists() || xfwm4_theme_home_alt.exists()) {
+                xfwm4_theme_present = true;
+            }
+
+            if ( icon_theme.exists() || icon_theme_home.exists() || xfwm4_theme_home_alt.exists()) {
+                icontheme_present = true;
+            }
+
+            if ( xsettings_gtk_theme_present && xfwm4_theme_present && icontheme_present ) {
+                if (verbose) qDebug() << "filename is " << filename;
+                if (verbose) qDebug()<< "theme combo name" << name;
+                theme_list << name;
+                theme_info.insert(name,filename);
+                if (verbose) qDebug() << "theme info hash value is" << name << " " << theme_info[name];
+            }
         }
+        theme_list.sort();
+        theme_list.insert(0, tr("Choose a theme set"));
 
-        if ( xfwm4_theme.exists() || xfwm4_theme_home.exists() || xfwm4_theme_home_alt.exists()) {
-            xfwm4_theme_present = true;
-        }
+        //add user entries in ~/.local/share/mx-tweak-data
 
-        if ( icon_theme.exists() || icon_theme_home.exists() || xfwm4_theme_home_alt.exists()) {
-            icontheme_present = true;
-        }
+        QDirIterator it2(home_path + "/.local/share/mx-tweak-data", filter, QDir::Files, QDirIterator::Subdirectories);
+        while (it2.hasNext()) {
+            xsettings_gtk_theme_present = false;
+            icontheme_present = false;
+            xfwm4_theme_present = false;
+            QString home_path = QDir::homePath();
+            QFileInfo file_info(it2.next());
+            QString filename = file_info.absoluteFilePath();
+            QString name = runCmd("cat '" + filename + "'|grep ^Name=").output.section(QStringLiteral("="),1,1);
 
-        if ( xsettings_gtk_theme_present && xfwm4_theme_present && icontheme_present ) {
-            if (verbose) qDebug() << "filename is " << filename;
-            if (verbose) qDebug()<< "theme combo name" << name;
-            theme_list << name;
-            theme_info.insert(name,filename);
-            if (verbose) qDebug() << "theme info hash value is" << name << " " << theme_info[name];
+            QString xsettings_gtk_theme = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xsettings_gtk_theme=").output.section(QStringLiteral("="),1,1);
+            if (verbose) qDebug() << "xsettings_gtk_theme = " << xsettings_gtk_theme;
+            QString xsettings_icon_theme = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xsettings_icon_theme=").output.section(QStringLiteral("="),1,1);
+            if (verbose) qDebug() << "xsettings_icon_theme = " << xsettings_icon_theme;
+            QString xfwm4_window_decorations = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xfwm4_window_decorations=").output.section(QStringLiteral("="),1,1);
+            if (verbose) qDebug() << "xfwm4_window_decorations = " << xfwm4_window_decorations;
+
+            //check theme existence, only list if all 3 elements present
+            QFileInfo xsettings_theme("/usr/share/themes/" + xsettings_gtk_theme);
+            QFileInfo xfwm4_theme("/usr/share/themes/" + xfwm4_window_decorations);
+            QFileInfo icon_theme("/usr/share/icons/" + xsettings_icon_theme);
+            QFileInfo xsettings_theme_home(home_path + "/.themes/" + xsettings_gtk_theme);
+            QFileInfo xfwm4_theme_home("" + home_path + "/.themes/" + xfwm4_window_decorations);
+            QFileInfo icon_theme_home("" + home_path + "/.icons/" + xsettings_icon_theme);
+            QFileInfo xsettings_theme_home_alt(home_path + "/.local/share/themes/" + xsettings_gtk_theme);
+            QFileInfo xfwm4_theme_home_alt("" + home_path + "/.local/share/themes/" + xfwm4_window_decorations);
+            QFileInfo icon_theme_home_alt("" + home_path + "/.local/share/icons/" + xsettings_icon_theme);
+            if (verbose) qDebug() << "xsettings_theme_home path" << xsettings_theme_home.absoluteFilePath();
+
+            if (xsettings_theme.exists() || xsettings_theme_home.exists() || xsettings_theme_home_alt.exists()) {
+                xsettings_gtk_theme_present = true;
+            }
+
+            if (xfwm4_theme.exists() || xfwm4_theme_home.exists() || xfwm4_theme_home_alt.exists()) {
+                xfwm4_theme_present = true;
+            }
+
+            if (icon_theme.exists() || icon_theme_home.exists() || icon_theme_home_alt.exists()) {
+                icontheme_present = true;
+            }
+
+            if (xsettings_gtk_theme_present && xfwm4_theme_present && icontheme_present) {
+                if (verbose) qDebug() << "filename is " << filename;
+                if (verbose) qDebug()<< "theme combo name" << name;
+                theme_list << name;
+                theme_info.insert(name,filename);
+                if (verbose) qDebug() << "theme info hash value is" << name << " " << theme_info[name];
+            }
         }
     }
-    theme_list.sort();
-    theme_list.insert(0, tr("Choose a theme set"));
-
-    //add user entries in ~/.local/share/mx-tweak-data
-
-    QDirIterator it2(home_path + "/.local/share/mx-tweak-data", filter, QDir::Files, QDirIterator::Subdirectories);
-    while (it2.hasNext()) {
-        xsettings_gtk_theme_present = false;
-        icontheme_present = false;
-        xfwm4_theme_present = false;
-        QString home_path = QDir::homePath();
-        QFileInfo file_info(it2.next());
-        QString filename = file_info.absoluteFilePath();
-        QString name = runCmd("cat '" + filename + "'|grep ^Name=").output.section(QStringLiteral("="),1,1);
-
-        QString xsettings_gtk_theme = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xsettings_gtk_theme=").output.section(QStringLiteral("="),1,1);
-        if (verbose) qDebug() << "xsettings_gtk_theme = " << xsettings_gtk_theme;
-        QString xsettings_icon_theme = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xsettings_icon_theme=").output.section(QStringLiteral("="),1,1);
-        if (verbose) qDebug() << "xsettings_icon_theme = " << xsettings_icon_theme;
-        QString xfwm4_window_decorations = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xfwm4_window_decorations=").output.section(QStringLiteral("="),1,1);
-        if (verbose) qDebug() << "xfwm4_window_decorations = " << xfwm4_window_decorations;
-
-        //check theme existence, only list if all 3 elements present
-        QFileInfo xsettings_theme("/usr/share/themes/" + xsettings_gtk_theme);
-        QFileInfo xfwm4_theme("/usr/share/themes/" + xfwm4_window_decorations);
-        QFileInfo icon_theme("/usr/share/icons/" + xsettings_icon_theme);
-        QFileInfo xsettings_theme_home(home_path + "/.themes/" + xsettings_gtk_theme);
-        QFileInfo xfwm4_theme_home("" + home_path + "/.themes/" + xfwm4_window_decorations);
-        QFileInfo icon_theme_home("" + home_path + "/.icons/" + xsettings_icon_theme);
-        QFileInfo xsettings_theme_home_alt(home_path + "/.local/share/themes/" + xsettings_gtk_theme);
-        QFileInfo xfwm4_theme_home_alt("" + home_path + "/.local/share/themes/" + xfwm4_window_decorations);
-        QFileInfo icon_theme_home_alt("" + home_path + "/.local/share/icons/" + xsettings_icon_theme);
-        if (verbose) qDebug() << "xsettings_theme_home path" << xsettings_theme_home.absoluteFilePath();
-
-        if (xsettings_theme.exists() || xsettings_theme_home.exists() || xsettings_theme_home_alt.exists()) {
-            xsettings_gtk_theme_present = true;
-        }
-
-        if (xfwm4_theme.exists() || xfwm4_theme_home.exists() || xfwm4_theme_home_alt.exists()) {
-            xfwm4_theme_present = true;
-        }
-
-        if (icon_theme.exists() || icon_theme_home.exists() || icon_theme_home_alt.exists()) {
-            icontheme_present = true;
-        }
-
-        if (xsettings_gtk_theme_present && xfwm4_theme_present && icontheme_present) {
-            if (verbose) qDebug() << "filename is " << filename;
-            if (verbose) qDebug()<< "theme combo name" << name;
-            theme_list << name;
-            theme_info.insert(name,filename);
-            if (verbose) qDebug() << "theme info hash value is" << name << " " << theme_info[name];
-        }
+    QString current;
+    if (isKDE){
+        QString themes = runCmd("plasma-apply-lookandfeel --list").output;
+        themes.append("\n");
+        theme_list = themes.split(QStringLiteral("\n"));
+        current = runCmd("grep LookAndFeelPackage $HOME/.config/kdeglobals").output.section("=",1,1);
+        if (verbose) qDebug() << "current is " << current;
     }
 
     ui->comboTheme->addItems(theme_list);
-    ui->comboTheme->setCurrentIndex(0);
+    if (current.isEmpty()){
+            ui->comboTheme->setCurrentIndex(0);
+          } else {
+            ui->comboTheme->setCurrentText(current);
+    }
 }
 
 void defaultlook::on_comboTheme_activated(const QString & /*arg1*/)
 {
-    if (ui->comboTheme->currentIndex() != 0) {
+    if (isXfce) {
+        if (ui->comboTheme->currentIndex() != 0) {
+            ui->buttonThemeApply->setEnabled(true);
+            ui->pushButtonPreview->setEnabled(true);
+        }
+    } else if (isKDE) {
         ui->buttonThemeApply->setEnabled(true);
-        ui->pushButtonPreview->setEnabled(true);
     }
 }
 
 void defaultlook::on_buttonThemeApply_clicked()
 {
     themeflag = false;
-    savethemeundo();
-    ui->buttonThemeApply->setEnabled(false);
-    ui->buttonThemeUndo->setEnabled(true);
-    QString themename = theme_info.value(ui->comboTheme->currentText());
-    QFileInfo fileinfo(themename);
-    //initialize variables
-    QString backgroundColor = runCmd("cat '" + fileinfo.absoluteFilePath() + "' |grep background-rgba=").output.section(QStringLiteral("=") , 1,1);
-    if (verbose) qDebug() << "backgroundColor = " << backgroundColor;
-    QString color1 = backgroundColor.section(QStringLiteral(","),0,0);
-    QString color2 = backgroundColor.section(QStringLiteral(","), 1, 1);
-    QString color3 = backgroundColor.section(QStringLiteral(","),2,2);
-    QString color4 = backgroundColor.section(QStringLiteral(","),3,3);
-    if (verbose) qDebug() << "sep colors" << color1 << color2 << color3 << color4;
-    QString background_image = runCmd("cat '" + fileinfo.absoluteFilePath() + "' |grep background-image=").output.section(QStringLiteral("="),1,1);
-    if (verbose) qDebug() << "backgroundImage = " << background_image;
-    QString background_style = runCmd("cat '" + fileinfo.absoluteFilePath() + "' |grep background-style=").output.section(QStringLiteral("="),1,1);
-    if (verbose) qDebug() << "backgroundstyle = " << background_style;
-    QString xsettings_gtk_theme = runCmd("cat '" + fileinfo.absoluteFilePath() + "' |grep xsettings_gtk_theme=").output.section(QStringLiteral("="),1,1);
-    if (verbose) qDebug() << "xsettings_gtk_theme = " << xsettings_gtk_theme;
-    QString xsettings_icon_theme = runCmd("cat '" + fileinfo.absoluteFilePath() + "' |grep xsettings_icon_theme=").output.section(QStringLiteral("="),1,1);
-    if (verbose) qDebug() << "xsettings_icon_theme = " << xsettings_icon_theme;
-    QString xfwm4_window_decorations = runCmd("cat '" + fileinfo.absoluteFilePath() + "' |grep xfwm4_window_decorations=").output.section(QStringLiteral("="),1,1);
-    if (verbose) qDebug() << "xfwm4_window_decorations = " << xfwm4_window_decorations;
-    QString cursorthemename = runCmd("cat '" + fileinfo.absoluteFilePath() + "' |grep CursorThemeName=").output.section(QStringLiteral("="),1,1);
-    if (verbose) qDebug() << "CursorThemeName = " << cursorthemename;
-    //  use xfconf system to change values
+    if (isXfce){
+        savethemeundo();
+        ui->buttonThemeApply->setEnabled(false);
+        ui->buttonThemeUndo->setEnabled(true);
+        QString themename = theme_info.value(ui->comboTheme->currentText());
+        QFileInfo fileinfo(themename);
+        //initialize variables
+        QString backgroundColor = runCmd("cat '" + fileinfo.absoluteFilePath() + "' |grep background-rgba=").output.section(QStringLiteral("=") , 1,1);
+        if (verbose) qDebug() << "backgroundColor = " << backgroundColor;
+        QString color1 = backgroundColor.section(QStringLiteral(","),0,0);
+        QString color2 = backgroundColor.section(QStringLiteral(","), 1, 1);
+        QString color3 = backgroundColor.section(QStringLiteral(","),2,2);
+        QString color4 = backgroundColor.section(QStringLiteral(","),3,3);
+        if (verbose) qDebug() << "sep colors" << color1 << color2 << color3 << color4;
+        QString background_image = runCmd("cat '" + fileinfo.absoluteFilePath() + "' |grep background-image=").output.section(QStringLiteral("="),1,1);
+        if (verbose) qDebug() << "backgroundImage = " << background_image;
+        QString background_style = runCmd("cat '" + fileinfo.absoluteFilePath() + "' |grep background-style=").output.section(QStringLiteral("="),1,1);
+        if (verbose) qDebug() << "backgroundstyle = " << background_style;
+        QString xsettings_gtk_theme = runCmd("cat '" + fileinfo.absoluteFilePath() + "' |grep xsettings_gtk_theme=").output.section(QStringLiteral("="),1,1);
+        if (verbose) qDebug() << "xsettings_gtk_theme = " << xsettings_gtk_theme;
+        QString xsettings_icon_theme = runCmd("cat '" + fileinfo.absoluteFilePath() + "' |grep xsettings_icon_theme=").output.section(QStringLiteral("="),1,1);
+        if (verbose) qDebug() << "xsettings_icon_theme = " << xsettings_icon_theme;
+        QString xfwm4_window_decorations = runCmd("cat '" + fileinfo.absoluteFilePath() + "' |grep xfwm4_window_decorations=").output.section(QStringLiteral("="),1,1);
+        if (verbose) qDebug() << "xfwm4_window_decorations = " << xfwm4_window_decorations;
+        QString cursorthemename = runCmd("cat '" + fileinfo.absoluteFilePath() + "' |grep CursorThemeName=").output.section(QStringLiteral("="),1,1);
+        if (verbose) qDebug() << "CursorThemeName = " << cursorthemename;
+        //  use xfconf system to change values
 
-    message_flag = true;
+        message_flag = true;
 
-    //set gtk theme
-    runCmd("xfconf-query -c xsettings -p /Net/ThemeName -s " + xsettings_gtk_theme);
-    runCmd(QStringLiteral("sleep .5"));
-    runCmd("gsettings set org.gnome.desktop.interface gtk-theme \"" + xsettings_gtk_theme + "\"");
-    if (xsettings_gtk_theme.toLower().contains("dark")){
-        runCmd("gsettings set org.gnome.desktop.interface color-scheme prefer-dark");
-    } else {
-        runCmd("gsettings set org.gnome.desktop.interface color-scheme default");
-    }
-
-    //set window decorations theme
-    runCmd("xfconf-query -c xfwm4 -p /general/theme -s " + xfwm4_window_decorations);
-    runCmd(QStringLiteral("sleep .5"));
-
-    //set icon theme
-    runCmd("xfconf-query -c xsettings -p /Net/IconThemeName -s " + xsettings_icon_theme);
-    runCmd(QStringLiteral("sleep .5"));
-
-    //set cursor theme if exists
-    if ( ! cursorthemename.isEmpty()){
-        runCmd("xfconf-query -c xsettings -p /Gtk/CursorThemeName -s " + cursorthemename);
-    }
-
-    //deal with panel customizations for each panel
-
-    QStringListIterator changeIterator(panelIDs);
-    while (changeIterator.hasNext()) {
-        QString value = changeIterator.next();
-
-        //set panel background mode
-
-        if (background_style == QLatin1String("1") || background_style == QLatin1String("2") || background_style == QLatin1String("0")) {
-            runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-style -t int -s " + background_style + " --create");
+        //set gtk theme
+        runCmd("xfconf-query -c xsettings -p /Net/ThemeName -s " + xsettings_gtk_theme);
+        runCmd(QStringLiteral("sleep .5"));
+        runCmd("gsettings set org.gnome.desktop.interface gtk-theme \"" + xsettings_gtk_theme + "\"");
+        if (xsettings_gtk_theme.toLower().contains("dark")){
+            runCmd("gsettings set org.gnome.desktop.interface color-scheme prefer-dark");
         } else {
-            runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-style -t int -s 0 --create");
+            runCmd("gsettings set org.gnome.desktop.interface color-scheme default");
         }
 
-        //set panel background image
+        //set window decorations theme
+        runCmd("xfconf-query -c xfwm4 -p /general/theme -s " + xfwm4_window_decorations);
+        runCmd(QStringLiteral("sleep .5"));
 
-        QFileInfo image(background_image);
+        //set icon theme
+        runCmd("xfconf-query -c xsettings -p /Net/IconThemeName -s " + xsettings_icon_theme);
+        runCmd(QStringLiteral("sleep .5"));
 
-        if (image.exists()) {
-            runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-image -t string -s " + background_image + " --create");
-        } else {
-            runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-image --reset");
+        //set cursor theme if exists
+        if ( ! cursorthemename.isEmpty()){
+            runCmd("xfconf-query -c xsettings -p /Gtk/CursorThemeName -s " + cursorthemename);
         }
 
-        //set panel color
+        //deal with panel customizations for each panel
 
-        if (backgroundColor != QLatin1String("")) {
-            runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-rgba -t double -t double -t double -t double -s " + color1 + " -s " + color2 + " -s " + color3 + " -s " + color4 + " --create");
+        QStringListIterator changeIterator(panelIDs);
+        while (changeIterator.hasNext()) {
+            QString value = changeIterator.next();
+
+            //set panel background mode
+
+            if (background_style == QLatin1String("1") || background_style == QLatin1String("2") || background_style == QLatin1String("0")) {
+                runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-style -t int -s " + background_style + " --create");
+            } else {
+                runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-style -t int -s 0 --create");
+            }
+
+            //set panel background image
+
+            QFileInfo image(background_image);
+
+            if (image.exists()) {
+                runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-image -t string -s " + background_image + " --create");
+            } else {
+                runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-image --reset");
+            }
+
+            //set panel color
+
+            if (backgroundColor != QLatin1String("")) {
+                runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-rgba -t double -t double -t double -t double -s " + color1 + " -s " + color2 + " -s " + color3 + " -s " + color4 + " --create");
+            }
         }
-    }
 
-    //set whisker themeing
-    QString home_path = QDir::homePath();
-    QFileInfo whisker_check(home_path + "/.config/gtk-3.0/gtk.css");
-    if (whisker_check.exists()) {
-        if (verbose) qDebug() << "existing gtk.css found";
-        QString cmd = "cat " + home_path + "/.config/gtk-3.0/gtk.css |grep -q whisker-tweak.css";
-        if (system(cmd.toUtf8()) == 0 ) {
-            if (verbose) qDebug() << "include statement found";
+        //set whisker themeing
+        QString home_path = QDir::homePath();
+        QFileInfo whisker_check(home_path + "/.config/gtk-3.0/gtk.css");
+        if (whisker_check.exists()) {
+            if (verbose) qDebug() << "existing gtk.css found";
+            QString cmd = "cat " + home_path + "/.config/gtk-3.0/gtk.css |grep -q whisker-tweak.css";
+            if (system(cmd.toUtf8()) == 0 ) {
+                if (verbose) qDebug() << "include statement found";
+            } else {
+                if (verbose) qDebug() << "adding include statement";
+                QString cmd = "echo '@import url(\"whisker-tweak.css\");' >> " + home_path + "/.config/gtk-3.0/gtk.css";
+                system(cmd.toUtf8());
+            }
         } else {
-            if (verbose) qDebug() << "adding include statement";
+            if (verbose) qDebug() << "creating simple gtk.css file";
             QString cmd = "echo '@import url(\"whisker-tweak.css\");' >> " + home_path + "/.config/gtk-3.0/gtk.css";
             system(cmd.toUtf8());
         }
-    } else {
-        if (verbose) qDebug() << "creating simple gtk.css file";
-        QString cmd = "echo '@import url(\"whisker-tweak.css\");' >> " + home_path + "/.config/gtk-3.0/gtk.css";
-        system(cmd.toUtf8());
+
+        //add whisker info
+        runCmd("awk '/<begin_gtk_whisker_theme_code>/{flag=1;next}/<end_gtk_whisker_theme_code>/{flag=0}flag' \"" +fileinfo.absoluteFilePath() +"\" > " + home_path + "/.config/gtk-3.0/whisker-tweak.css");
+
+        //restart xfce4-panel
+
+        system("xfce4-panel --restart");
     }
 
-    //add whisker info
-    runCmd("awk '/<begin_gtk_whisker_theme_code>/{flag=1;next}/<end_gtk_whisker_theme_code>/{flag=0}flag' \"" +fileinfo.absoluteFilePath() +"\" > " + home_path + "/.config/gtk-3.0/whisker-tweak.css");
-
-    //restart xfce4-panel
-
-    system("xfce4-panel --restart");
-
+    if (isKDE){
+        runCmd("plasma-apply-lookandfeel --apply " + ui->comboTheme->currentText());
+    }
     setuptheme();
 }
 
@@ -3667,6 +3715,18 @@ void defaultlook::populatethemelists(const QString &value)
     QString home_path = QDir::homePath();
     QString themes;
     QStringList themelist;
+    if (value == QLatin1String("plasma")){
+        themes = runCmd("plasma-apply-desktoptheme --list-themes |grep \"*\" |cut -d\"*\" -f2 | cut -d\"(\" -f1").output;
+        themes.append("\n");
+    }
+    if (value == QLatin1String("colorscheme")){
+        themes = runCmd("plasma-apply-colorscheme --list-schemes |grep \"*\" |cut -d\"*\" -f2 | cut -d\"(\" -f1").output;
+        themes.append("\n");
+    }
+    if (value == QLatin1String("kdecursors")){
+        themes = runCmd("plasma-apply-cursortheme --list-themes | grep \"*\" |cut -d\"[\" -f2 | cut -d\"]\" -f1").output;
+        themes.append("\n");
+    }
     if ( value == QLatin1String("gtk-3.0") || value == QLatin1String("xfwm4")) {
         themes = runCmd("find /usr/share/themes/*/" + value + " -maxdepth 0 2>/dev/null|cut -d\"/\" -f5").output;
         themes.append("\n");
@@ -3707,6 +3767,31 @@ void defaultlook::populatethemelists(const QString &value)
     themelist.removeAll(QLatin1String(""));
     themelist.sort(Qt::CaseInsensitive);
     QString current;
+    if ( value == QLatin1String("plasma")){
+        ui->listWidgetTheme->clear();
+        ui->listWidgetTheme->addItems(themelist);
+        current = runCmd("LANG=C plasma-apply-desktoptheme --list-themes | grep \"current\"").output.section("*",1,1).section("(",0,0);
+        //index of theme in list
+        if (verbose) qDebug() << "current is " << current;
+        ui->listWidgetTheme->setCurrentRow(themelist.indexOf(current));
+    }
+    if ( value == QLatin1String("colorscheme")){
+        ui->listWidgetWMtheme->clear();
+        ui->listWidgetWMtheme->addItems(themelist);
+        current = runCmd("LANG=C plasma-apply-colorscheme --list-schemes | grep \"current\"").output.section("*",1,1).section("(",0,0);
+        //index of theme in list
+        if (verbose) qDebug() << "current is " << current;
+        ui->listWidgetWMtheme->setCurrentRow(themelist.indexOf(current));
+    }
+    if ( value == QLatin1String("kdecursors")){
+        ui->listWidgetCursorThemes->clear();
+        ui->listWidgetCursorThemes->addItems(themelist);
+        current = runCmd("LANG=C plasma-apply-cursortheme --list-themes | grep \"Current\"").output.section("[",1,1).section("]",0,0);
+        //index of theme in list
+        if (verbose) qDebug() << "current is " << current;
+        ui->listWidgetCursorThemes->setCurrentRow(themelist.indexOf(current));
+    }
+
     if ( value == QLatin1String("gtk-3.0") ) {
         ui->listWidgetTheme->clear();
         ui->listWidgetTheme->addItems(themelist);
@@ -3772,6 +3857,9 @@ void defaultlook::populatethemelists(const QString &value)
         } else if (isFluxbox){
             current = runCmd(QStringLiteral("grep gtk-icon-theme-name $HOME/.config/gtk-3.0/settings.ini |grep -v ^# | cut -d\"=\" -f2")).output;
         }
+        if (isKDE) {
+            current = QIcon::themeName();
+        }
         ui->listWidgeticons->setCurrentRow(themelist.indexOf(current));
     }
 
@@ -3804,6 +3892,23 @@ void defaultlook::settheme(const QString &type, const QString &theme, const QStr
 
         if (type == QLatin1String("cursor")) {
             cmd = "xfconf-query -c xsettings -p /Gtk/CursorThemeName -s \"" + theme + "\"";
+        }
+        system(cmd.toUtf8());
+
+    } else if ( desktop == "KDE" ){
+        if ( type == QLatin1String("plasma") ) {
+            cmd = "plasma-apply-desktoptheme " + theme;
+        }
+        if ( type == QLatin1String("colorscheme") ) {
+            cmd = "plasma-apply-colorscheme " + theme;
+        }
+
+        if ( type == QLatin1String("icons") ) {
+            cmd = "/usr/lib/x86_64-linux-gnu/libexec/plasma-changeicons " + theme;
+        }
+
+        if (type == QLatin1String("kdecursor")) {
+            cmd = "plasma-apply-cursortheme " + theme;
         }
         system(cmd.toUtf8());
 
@@ -3924,6 +4029,8 @@ void defaultlook::on_listWidgetTheme_currentTextChanged(const QString &currentTe
             settheme(QStringLiteral("gtk-3.0"), currentText, "XFCE");
         } else if (isFluxbox){
             settheme(QStringLiteral("gtk-3.0"), currentText, "fluxbox");
+        } else if (isKDE) {
+            settheme(QStringLiteral("plasma"), currentText, "KDE");
         }
     }
 }
@@ -3935,10 +4042,11 @@ void defaultlook::on_listWidgetWMtheme_currentTextChanged(const QString &current
             settheme(QStringLiteral("xfwm4"), currentText, "XFCE");
         } else if (isFluxbox){
             settheme(QStringLiteral("fluxbox"), currentText, "fluxbox");
+        } else if (isKDE) {
+            settheme(QStringLiteral("colorscheme"), currentText, "KDE");
         }
     }
 }
-
 
 void defaultlook::on_listWidgeticons_currentTextChanged(const QString &currentText) const
 {
@@ -3947,6 +4055,8 @@ void defaultlook::on_listWidgeticons_currentTextChanged(const QString &currentTe
             settheme(QStringLiteral("icons"), currentText, "XFCE");
         } else if (isFluxbox){
             settheme(QStringLiteral("icons"), currentText, "fluxbox");
+        } else if (isKDE) {
+            settheme(QStringLiteral("icons"), currentText, "KDE");
         }
     }
 }
@@ -3958,6 +4068,8 @@ void defaultlook::on_listWidgetCursorThemes_currentTextChanged(const QString &cu
             settheme(QStringLiteral("cursor"), currentText, "XFCE");
         } else if (isFluxbox){
             settheme(QStringLiteral("cursor"), currentText, "fluxbox");
+        } else if (isKDE) {
+            settheme(QStringLiteral("kdecursor"), currentText, "KDE");
         }
     }
 }

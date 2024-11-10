@@ -108,15 +108,15 @@
     <name>defaultlook</name>
     <message>
         <location filename="../defaultlook.ui" line="20"/>
-        <location filename="../defaultlook.cpp" line="57"/>
-        <location filename="../defaultlook.cpp" line="86"/>
-        <location filename="../defaultlook.cpp" line="657"/>
-        <location filename="../defaultlook.cpp" line="676"/>
-        <location filename="../defaultlook.cpp" line="685"/>
-        <location filename="../defaultlook.cpp" line="732"/>
-        <location filename="../defaultlook.cpp" line="740"/>
-        <location filename="../defaultlook.cpp" line="767"/>
-        <location filename="../defaultlook.cpp" line="770"/>
+        <location filename="../defaultlook.cpp" line="58"/>
+        <location filename="../defaultlook.cpp" line="87"/>
+        <location filename="../defaultlook.cpp" line="658"/>
+        <location filename="../defaultlook.cpp" line="677"/>
+        <location filename="../defaultlook.cpp" line="686"/>
+        <location filename="../defaultlook.cpp" line="733"/>
+        <location filename="../defaultlook.cpp" line="741"/>
+        <location filename="../defaultlook.cpp" line="768"/>
+        <location filename="../defaultlook.cpp" line="771"/>
         <source>MX Tweak</source>
         <translation>MX patobulinimai</translation>
     </message>
@@ -303,7 +303,7 @@
         <location filename="../defaultlook.ui" line="1303"/>
         <location filename="../defaultlook.ui" line="1852"/>
         <location filename="../defaultlook.ui" line="1911"/>
-        <location filename="../defaultlook.ui" line="1993"/>
+        <location filename="../defaultlook.ui" line="2042"/>
         <source>Apply</source>
         <extracomment>apply changes</extracomment>
         <translation>Taikyti</translation>
@@ -361,7 +361,7 @@
         <location filename="../defaultlook.ui" line="644"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Cursors&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>cursor theme</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Žymekliai&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="664"/>
@@ -373,7 +373,7 @@
         <location filename="../defaultlook.ui" line="702"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>theme an application will get</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Programa&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="637"/>
@@ -384,7 +384,7 @@
     <message>
         <location filename="../defaultlook.ui" line="630"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Themes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Apipavidalinimai&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="758"/>
@@ -636,12 +636,12 @@
     <message>
         <location filename="../defaultlook.ui" line="1310"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Thunar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Thunar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1317"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Įrankių juostos nustatymai&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1357"/>
@@ -651,7 +651,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1364"/>
         <source>Reset Fluxbox Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Atstatyti Fluxbox meniu</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1381"/>
@@ -661,13 +661,13 @@
     <message>
         <location filename="../defaultlook.ui" line="1395"/>
         <source>Toggle desktop icons</source>
-        <translation type="unfinished"></translation>
+        <translation>Perjungti darbalaukio piktogramas</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1402"/>
         <location filename="../defaultlook.ui" line="1426"/>
         <source>Autohide</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatiškai slėpti</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1409"/>
@@ -677,7 +677,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1500"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Desktop Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Darbalaukio piktogramos&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1574"/>
@@ -705,7 +705,7 @@
         <location filename="../defaultlook.ui" line="1613"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Screensaver&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>screensaver screen blank settings</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Ekrano užsklanda&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1634"/>
@@ -731,7 +731,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1686"/>
         <source>Show Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Rodyti įrankių juostą</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1703"/>
@@ -755,15 +755,21 @@
         <translation>Darbo sritis</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2077"/>
+        <location filename="../defaultlook.ui" line="2019"/>
         <source>Change computer name (requires reboot)</source>
         <extracomment>option to change the system hostname, requires a reboot to be 100% effective</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2111"/>
+        <location filename="../defaultlook.ui" line="2121"/>
+        <source>Change Default Display Manager (login screen) (requires reboot)</source>
+        <extracomment>option to change display manager login screen.  present if more than one display manager is installed</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1963"/>
         <source>Enable Bluetooth battery info for connected devices (requires system restart)</source>
-        <extracomment>expose battery info for connected Bluetooth devices to the operating system via dbus</extracomment>
+        <extracomment>expose battery info for connected bluetooth devices to the operating system via dbus</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -774,7 +780,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1788"/>
         <source>Reset KDE/Plasma defaults</source>
-        <translation type="unfinished"></translation>
+        <translation>Atstatyti KDE/Plasma numatytąsias reikšmes</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1863"/>
@@ -817,18 +823,18 @@
         <translation>Kita</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2063"/>
+        <location filename="../defaultlook.ui" line="2094"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2018"/>
+        <location filename="../defaultlook.ui" line="2060"/>
         <source>put a hold or remove a hold on updates of Liquorix kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2021"/>
+        <location filename="../defaultlook.ui" line="2063"/>
         <source>Enable Automatic Liquorix Kernel Updates (MX ahs repository)</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
         <translation type="unfinished"></translation>
@@ -846,178 +852,178 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2049"/>
+        <location filename="../defaultlook.ui" line="1956"/>
         <source>Password for administrative tasks:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2042"/>
+        <location filename="../defaultlook.ui" line="1970"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2056"/>
+        <location filename="../defaultlook.ui" line="2108"/>
         <source>Root</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2011"/>
+        <location filename="../defaultlook.ui" line="1998"/>
         <source>Enable kernel sandbox</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2035"/>
+        <location filename="../defaultlook.ui" line="2070"/>
         <source>&amp;User</source>
         <translation>Na&amp;udotojas</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2094"/>
+        <location filename="../defaultlook.ui" line="2026"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;reikalauja paleidimo iš naujo&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2097"/>
+        <location filename="../defaultlook.ui" line="2029"/>
         <source>Enable Bluetooth adapters on boot</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2004"/>
+        <location filename="../defaultlook.ui" line="1984"/>
         <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2028"/>
+        <location filename="../defaultlook.ui" line="2053"/>
         <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1945"/>
+        <location filename="../defaultlook.ui" line="1942"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1973"/>
+        <location filename="../defaultlook.ui" line="1991"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1959"/>
+        <location filename="../defaultlook.ui" line="2012"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1980"/>
+        <location filename="../defaultlook.ui" line="2101"/>
         <source>Use tearfree amdgpu option</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2104"/>
+        <location filename="../defaultlook.ui" line="2077"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2070"/>
+        <location filename="../defaultlook.ui" line="1949"/>
         <source>Use tearfree radeon driver option</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1966"/>
+        <location filename="../defaultlook.ui" line="1977"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="58"/>
+        <location filename="../defaultlook.cpp" line="59"/>
         <source>--display switch only valid for Xfce</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="656"/>
+        <location filename="../defaultlook.cpp" line="657"/>
         <source>About MX Tweak</source>
         <translation>Apie MX patobulinimai</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="658"/>
+        <location filename="../defaultlook.cpp" line="659"/>
         <source>Version: </source>
         <translation>Versija: </translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="659"/>
+        <location filename="../defaultlook.cpp" line="660"/>
         <source>App for quick default ui theme changes and tweaks</source>
         <translation>Programa, skirta greitiems numatytosios naudotojo sąsajos temos pakeitimams ir patobulinimams</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="661"/>
+        <location filename="../defaultlook.cpp" line="662"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Autorių teisės (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="662"/>
+        <location filename="../defaultlook.cpp" line="663"/>
         <source>%1 License</source>
         <translation>%1 licencija</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="676"/>
+        <location filename="../defaultlook.cpp" line="677"/>
         <source>%1 Help</source>
         <translation>%1 žinynas</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="686"/>
+        <location filename="../defaultlook.cpp" line="687"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
         <translation>Užbaigta! Firefox gali tekti paleisti iš naujo, kad įsigaliotų pakeitimai</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="733"/>
+        <location filename="../defaultlook.cpp" line="734"/>
         <source>Plese remove special characters</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="733"/>
+        <location filename="../defaultlook.cpp" line="734"/>
         <source>from file name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="740"/>
+        <location filename="../defaultlook.cpp" line="741"/>
         <source>File name already exists.  Choose another name</source>
-        <translation type="unfinished"></translation>
+        <translation>Failo pavadinimas jau yra.  Pasirinkite kitą pavadinimą</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="768"/>
+        <location filename="../defaultlook.cpp" line="769"/>
         <source>File is not a valid tar.xz archive file</source>
-        <translation type="unfinished"></translation>
+        <translation>Failas nėra tinkamas tar.xz archyvo failas</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="771"/>
+        <location filename="../defaultlook.cpp" line="772"/>
         <source>Archive does not contain a panel config</source>
-        <translation type="unfinished"></translation>
+        <translation>Archyve nėra skydelio konfigūracijos</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="946"/>
+        <location filename="../defaultlook.cpp" line="947"/>
         <source>Panel settings</source>
         <translation>Skydelio nustatymai</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="947"/>
+        <location filename="../defaultlook.cpp" line="948"/>
         <source>Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1854"/>
+        <location filename="../defaultlook.cpp" line="1884"/>
         <source>settings</source>
-        <translation type="unfinished"></translation>
+        <translation>nustatymai</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2194"/>
+        <location filename="../defaultlook.cpp" line="2224"/>
         <source>Choose a theme set</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2609"/>
+        <location filename="../defaultlook.cpp" line="2652"/>
         <source>Please enter a computer name.</source>
         <comment>question to enter a name for the computer hostname</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2613"/>
+        <location filename="../defaultlook.cpp" line="2656"/>
         <source>Sorry, your computer name contains invalid characters.
 You&apos;ll have to select a different
 name before proceeding.</source>
@@ -1025,7 +1031,7 @@ name before proceeding.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="4171"/>
+        <location filename="../defaultlook.cpp" line="4214"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
         <translation type="unfinished"></translation>

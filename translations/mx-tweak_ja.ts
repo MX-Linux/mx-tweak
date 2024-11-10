@@ -108,15 +108,15 @@
     <name>defaultlook</name>
     <message>
         <location filename="../defaultlook.ui" line="20"/>
-        <location filename="../defaultlook.cpp" line="57"/>
-        <location filename="../defaultlook.cpp" line="86"/>
-        <location filename="../defaultlook.cpp" line="657"/>
-        <location filename="../defaultlook.cpp" line="676"/>
-        <location filename="../defaultlook.cpp" line="685"/>
-        <location filename="../defaultlook.cpp" line="732"/>
-        <location filename="../defaultlook.cpp" line="740"/>
-        <location filename="../defaultlook.cpp" line="767"/>
-        <location filename="../defaultlook.cpp" line="770"/>
+        <location filename="../defaultlook.cpp" line="58"/>
+        <location filename="../defaultlook.cpp" line="87"/>
+        <location filename="../defaultlook.cpp" line="658"/>
+        <location filename="../defaultlook.cpp" line="677"/>
+        <location filename="../defaultlook.cpp" line="686"/>
+        <location filename="../defaultlook.cpp" line="733"/>
+        <location filename="../defaultlook.cpp" line="741"/>
+        <location filename="../defaultlook.cpp" line="768"/>
+        <location filename="../defaultlook.cpp" line="771"/>
         <source>MX Tweak</source>
         <translation>MX Tweak</translation>
     </message>
@@ -303,7 +303,7 @@
         <location filename="../defaultlook.ui" line="1303"/>
         <location filename="../defaultlook.ui" line="1852"/>
         <location filename="../defaultlook.ui" line="1911"/>
-        <location filename="../defaultlook.ui" line="1993"/>
+        <location filename="../defaultlook.ui" line="2042"/>
         <source>Apply</source>
         <extracomment>apply changes</extracomment>
         <translation>適用</translation>
@@ -755,15 +755,21 @@
         <translation>ワークスペース</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2077"/>
+        <location filename="../defaultlook.ui" line="2019"/>
         <source>Change computer name (requires reboot)</source>
         <extracomment>option to change the system hostname, requires a reboot to be 100% effective</extracomment>
         <translation>コンピュータ名の変更（要再起動）</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2111"/>
+        <location filename="../defaultlook.ui" line="2121"/>
+        <source>Change Default Display Manager (login screen) (requires reboot)</source>
+        <extracomment>option to change display manager login screen.  present if more than one display manager is installed</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1963"/>
         <source>Enable Bluetooth battery info for connected devices (requires system restart)</source>
-        <extracomment>expose battery info for connected Bluetooth devices to the operating system via dbus</extracomment>
+        <extracomment>expose battery info for connected bluetooth devices to the operating system via dbus</extracomment>
         <translation>接続したデバイスで Bluetooth のバッテリ情報を有効にする（要システム再起動）</translation>
     </message>
     <message>
@@ -817,18 +823,18 @@
         <translation>その他</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2063"/>
+        <location filename="../defaultlook.ui" line="2094"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>Lightdm（ログイン画面）をシステムの既定テーマにリセット</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2018"/>
+        <location filename="../defaultlook.ui" line="2060"/>
         <source>put a hold or remove a hold on updates of Liquorix kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
         <translation>Liquorix カーネルのアップデートを保留する、または保留を解除する</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2021"/>
+        <location filename="../defaultlook.ui" line="2063"/>
         <source>Enable Automatic Liquorix Kernel Updates (MX ahs repository)</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
         <translation>Liquorix カーネルの自動アップデートを有効にする (MX AHS リポジトリ)</translation>
@@ -846,178 +852,178 @@
         <translation>Debian カーネルの自動アップデートを有効にする</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2049"/>
+        <location filename="../defaultlook.ui" line="1956"/>
         <source>Password for administrative tasks:</source>
         <translation>管理業務用のパスワード：</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2042"/>
+        <location filename="../defaultlook.ui" line="1970"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>非 root ユーザによる内蔵ドライブのマウントを可能にする</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2056"/>
+        <location filename="../defaultlook.ui" line="2108"/>
         <source>Root</source>
         <translation>Root</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2011"/>
+        <location filename="../defaultlook.ui" line="1998"/>
         <source>Enable kernel sandbox</source>
         <translation>カーネルサンドボックスを有効にする</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2035"/>
+        <location filename="../defaultlook.ui" line="2070"/>
         <source>&amp;User</source>
         <translation>ユーザ(&amp;U)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2094"/>
+        <location filename="../defaultlook.ui" line="2026"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;再起動が必要です&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2097"/>
+        <location filename="../defaultlook.ui" line="2029"/>
         <source>Enable Bluetooth adapters on boot</source>
         <translation>起動時に Bluetooth アダプタを有効にする</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2004"/>
+        <location filename="../defaultlook.ui" line="1984"/>
         <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
         <translation>APT は推奨パッケージを依存関係にあるものとして追加します</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2028"/>
+        <location filename="../defaultlook.ui" line="2053"/>
         <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
         <translation>パッケージのインストール／削除／更新後に fluxbox の「すべてのアプリ」メニューを生成する</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1945"/>
+        <location filename="../defaultlook.ui" line="1942"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
         <translation>GTK3 をサポートするアプリケーションでクライアント側装飾 (CSD) をを使用します (セッションの再起動が必要です)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1973"/>
+        <location filename="../defaultlook.ui" line="1991"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>既定の &quot;modesetting&quot; ドライバの替わりに intel ドライバを使用 (再起動が必要)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1959"/>
+        <location filename="../defaultlook.ui" line="2012"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>注意: 既存の /etc/X11/xorg.conf.d/20-intel.conf はホームフォルダにバックアップされます</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1980"/>
+        <location filename="../defaultlook.ui" line="2101"/>
         <source>Use tearfree amdgpu option</source>
         <translation>TearFree amdgpu オプションを使用</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2104"/>
+        <location filename="../defaultlook.ui" line="2077"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>注意: 既存の /etc/X11/xorg.conf.d/20-amd.conf はホームフォルダにバックアップされます。</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2070"/>
+        <location filename="../defaultlook.ui" line="1949"/>
         <source>Use tearfree radeon driver option</source>
         <translation>TearFree radeon ドライバのオプションを使用</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1966"/>
+        <location filename="../defaultlook.ui" line="1977"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>注意: 既存の /etc/X11/xorg.conf.d/20-radeon.conf はホームフォルダにバックアップされます</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="58"/>
+        <location filename="../defaultlook.cpp" line="59"/>
         <source>--display switch only valid for Xfce</source>
         <translation>Xfce 専用の --display スイッチを表示</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="656"/>
+        <location filename="../defaultlook.cpp" line="657"/>
         <source>About MX Tweak</source>
         <translation>MX Tweak について</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="658"/>
+        <location filename="../defaultlook.cpp" line="659"/>
         <source>Version: </source>
         <translation>バージョン: </translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="659"/>
+        <location filename="../defaultlook.cpp" line="660"/>
         <source>App for quick default ui theme changes and tweaks</source>
         <translation>既定の UI テーマの変更や調整を素早く行えるアプリ</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="661"/>
+        <location filename="../defaultlook.cpp" line="662"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="662"/>
+        <location filename="../defaultlook.cpp" line="663"/>
         <source>%1 License</source>
         <translation>%1 ライセンス</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="676"/>
+        <location filename="../defaultlook.cpp" line="677"/>
         <source>%1 Help</source>
         <translation>%1 ヘルプ</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="686"/>
+        <location filename="../defaultlook.cpp" line="687"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
         <translation>完了しました！ Firefox では変更を有効にするため再起動が必要な場合があります</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="733"/>
+        <location filename="../defaultlook.cpp" line="734"/>
         <source>Plese remove special characters</source>
         <translation>特殊文字を削除してください</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="733"/>
+        <location filename="../defaultlook.cpp" line="734"/>
         <source>from file name</source>
         <translation>ファイル名より</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="740"/>
+        <location filename="../defaultlook.cpp" line="741"/>
         <source>File name already exists.  Choose another name</source>
         <translation>そのファイル名は既に存在します。別の名前を選んでください。</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="768"/>
+        <location filename="../defaultlook.cpp" line="769"/>
         <source>File is not a valid tar.xz archive file</source>
         <translation>そのファイルは無効な tar.xz 形式です</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="771"/>
+        <location filename="../defaultlook.cpp" line="772"/>
         <source>Archive does not contain a panel config</source>
         <translation>書庫にはパネルの設定を含んでいません</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="946"/>
+        <location filename="../defaultlook.cpp" line="947"/>
         <source>Panel settings</source>
         <translation>パネルの設定</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="947"/>
+        <location filename="../defaultlook.cpp" line="948"/>
         <source>Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
         <translation>現在のパネル設定は、ホームフォルダ (~/) 以下にある .restore という隠しフォルダにバックアップされました</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1854"/>
+        <location filename="../defaultlook.cpp" line="1884"/>
         <source>settings</source>
         <translation>設定</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2194"/>
+        <location filename="../defaultlook.cpp" line="2224"/>
         <source>Choose a theme set</source>
         <translation>テーマセットを選択</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2609"/>
+        <location filename="../defaultlook.cpp" line="2652"/>
         <source>Please enter a computer name.</source>
         <comment>question to enter a name for the computer hostname</comment>
         <translation>コンピュータ名を入力してください。</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2613"/>
+        <location filename="../defaultlook.cpp" line="2656"/>
         <source>Sorry, your computer name contains invalid characters.
 You&apos;ll have to select a different
 name before proceeding.</source>
@@ -1026,7 +1032,7 @@ name before proceeding.</source>
 先へ進むには別の名前を選んでください。</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="4171"/>
+        <location filename="../defaultlook.cpp" line="4214"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
         <translation>実行するアプリケーションを選択</translation>
