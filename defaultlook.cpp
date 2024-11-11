@@ -3715,16 +3715,18 @@ void defaultlook::populatethemelists(const QString &value)
     QString home_path = QDir::homePath();
     QString themes;
     QStringList themelist;
+    QString current;
+
     if (value == QLatin1String("plasma")){
-        themes = runCmd("plasma-apply-desktoptheme --list-themes |grep \"*\" |cut -d\"*\" -f2 | cut -d\"(\" -f1").output;
+        themes = runCmd("plasma-apply-desktoptheme --list-themes |grep \"*\" |cut -d\"*\" -f2").output;
         themes.append("\n");
     }
     if (value == QLatin1String("colorscheme")){
-        themes = runCmd("plasma-apply-colorscheme --list-schemes |grep \"*\" |cut -d\"*\" -f2 | cut -d\"(\" -f1").output;
+        themes = runCmd("plasma-apply-colorscheme --list-schemes |grep \"*\" |cut -d\"*\" -f2 ").output;
         themes.append("\n");
     }
     if (value == QLatin1String("kdecursors")){
-        themes = runCmd("plasma-apply-cursortheme --list-themes | grep \"*\" |cut -d\"[\" -f2 | cut -d\"]\" -f1").output;
+        themes = runCmd("plasma-apply-cursortheme --list-themes | grep \"*\"").output;
         themes.append("\n");
     }
     if ( value == QLatin1String("gtk-3.0") || value == QLatin1String("xfwm4")) {
@@ -3766,30 +3768,38 @@ void defaultlook::populatethemelists(const QString &value)
     themelist.removeDuplicates();
     themelist.removeAll(QLatin1String(""));
     themelist.sort(Qt::CaseInsensitive);
-    QString current;
+
     if ( value == QLatin1String("plasma")){
         ui->listWidgetTheme->clear();
-        ui->listWidgetTheme->addItems(themelist);
-        current = runCmd("LANG=C plasma-apply-desktoptheme --list-themes | grep \"current\"").output.section("*",1,1).section("(",0,0);
+        QRegExp regex(".*current.*", Qt::CaseInsensitive);
+        int index = themelist.indexOf(regex);
+        themelist[index] = themelist[index].section("(",0,0);
         //index of theme in list
-        if (verbose) qDebug() << "current is " << current;
-        ui->listWidgetTheme->setCurrentRow(themelist.indexOf(current));
+        if (verbose) qDebug() << "index is " << index << themelist[index];
+        ui->listWidgetTheme->addItems(themelist);
+        ui->listWidgetTheme->setCurrentRow(index);
     }
     if ( value == QLatin1String("colorscheme")){
         ui->listWidgetWMtheme->clear();
-        ui->listWidgetWMtheme->addItems(themelist);
-        current = runCmd("LANG=C plasma-apply-colorscheme --list-schemes | grep \"current\"").output.section("*",1,1).section("(",0,0);
+        QRegExp regex(".*current.*", Qt::CaseInsensitive);
+        int index = themelist.indexOf(regex);
+        themelist[index] = themelist[index].section("(",0,0);
         //index of theme in list
-        if (verbose) qDebug() << "current is " << current;
-        ui->listWidgetWMtheme->setCurrentRow(themelist.indexOf(current));
+        if (verbose) qDebug() << "index is " << index << themelist[index];
+        ui->listWidgetWMtheme->addItems(themelist);
+        ui->listWidgetWMtheme->setCurrentRow(index);
     }
     if ( value == QLatin1String("kdecursors")){
         ui->listWidgetCursorThemes->clear();
-        ui->listWidgetCursorThemes->addItems(themelist);
-        current = runCmd("LANG=C plasma-apply-cursortheme --list-themes | grep \"Current\"").output.section("[",1,1).section("]",0,0);
+        QRegExp regex(".*current.*", Qt::CaseInsensitive);
+        int index = themelist.indexOf(regex);
+        for (int i = 0; i < themelist.size(); ++i ){
+            themelist[i] = themelist[i].section("[",1,1).section("]",0,0);
+        }
         //index of theme in list
-        if (verbose) qDebug() << "current is " << current;
-        ui->listWidgetCursorThemes->setCurrentRow(themelist.indexOf(current));
+        if (verbose) qDebug() << "index is " << index << themelist[index];
+        ui->listWidgetCursorThemes->addItems(themelist);
+        ui->listWidgetCursorThemes->setCurrentRow(index);
     }
 
     if ( value == QLatin1String("gtk-3.0") ) {
