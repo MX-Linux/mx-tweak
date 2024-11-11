@@ -33,6 +33,7 @@
 #include <QMessageBox>
 #include <QStringList>
 #include <QTextStream>
+#include <QTimer>
 
 #include "about.h"
 #include "cmd.h"
@@ -71,6 +72,7 @@ defaultlook::defaultlook(QWidget *parent, const QStringList &args) :
         verbose = true;
     }
 
+
     setup();
 
 
@@ -86,21 +88,17 @@ void defaultlook::setup()
 {
     this->setWindowTitle(tr("MX Tweak"));
     this->adjustSize();
-    ui->toolButtonXFCEpanelSettings->setIcon(QIcon::fromTheme("org.xfce.panel"));
-    ui->toolButtonXFCEAppearance->setIcon(QIcon::fromTheme("org.xfce.settings.appearance"));
-    ui->toolButtonXFCEWMsettings->setIcon(QIcon::fromTheme("org.xfce.xfwm4"));
+
     QString home_path = QDir::homePath();
     if (!checklightdm()) {
         ui->checkBoxLightdmReset->hide();
     }
 
-    if (runCmd("pgrep xfce-superkey").output.isEmpty() || ! QFile("/usr/bin/xfce-superkey-launcher").exists()){
-        ui->tabWidget->removeTab(Tab::Superkey);
-    } else {
-        setupSuperKey();
-    }
-
     if (checkXFCE()) {
+        ui->toolButtonXFCEpanelSettings->setIcon(QIcon::fromTheme("org.xfce.panel"));
+        ui->toolButtonXFCEAppearance->setIcon(QIcon::fromTheme("org.xfce.settings.appearance"));
+        ui->toolButtonXFCEWMsettings->setIcon(QIcon::fromTheme("org.xfce.xfwm4"));
+
         isXfce = true;
         whichpanel();
         message_flag = false;
@@ -108,15 +106,8 @@ void defaultlook::setup()
         ui->pushButtonPreview->hide();
         ui->buttonThemeUndo->hide();
         ui->buttonThemeUndo->setEnabled(false);
-        setuptheme();
-        //setup theme combo box
-        setupComboTheme();
         //setup panel tab
         setuppanel();
-        //setup compositor tab
-        setupCompositor();
-        //setup display tab
-        //setupDisplay();
         //set first tab as default
         ui->tabWidget->setCurrentIndex(Tab::Panel);
         if (themetabflag){
@@ -130,13 +121,29 @@ void defaultlook::setup()
         ui->tabWidget->removeTab(Tab::Plasma);
         ui->tabWidget->removeTab(Tab::Fluxbox);
         //setup Config Options
-        setupConfigoptions();
+        //setup everything after gui launches, except panel, kde, or fluxbox
+        QTimer::singleShot(0, this, [this] {
+            setuptheme();
+            //setup compositor tab
+            setupCompositor();
+            //setup theme combo box
+            setupComboTheme();
+            setupConfigoptions();
+            //setup other tab;
+            setupEtc();
+            if (runCmd("pgrep xfce-superkey").output.isEmpty() || ! QFile("/usr/bin/xfce-superkey-launcher").exists()){
+                ui->tabWidget->removeTab(Tab::Superkey);
+            } else {
+                setupSuperKey();
+            }
+
+        });
+
     }
 
     //setup fluxbox
     else if (checkFluxbox()) {
         isFluxbox = true;
-        setuptheme();
         setupFluxbox();
         ui->comboTheme->hide();
         ui->label->hide();
@@ -162,11 +169,18 @@ void defaultlook::setup()
         if (othertabflag){
             ui->tabWidget->setCurrentIndex(Tab::Others);
         }
+        ui->tabWidget->removeTab(Tab::Superkey);
         ui->tabWidget->removeTab(Tab::Plasma);
         ui->tabWidget->removeTab(Tab::Config);
         ui->tabWidget->removeTab(Tab::Display);
         ui->tabWidget->removeTab(Tab::Compositor);
         ui->tabWidget->removeTab(Tab::Panel);
+        QTimer::singleShot(0, this, [this] {
+           setuptheme();
+           //setup other tab;
+           setupEtc();
+
+        });
 
 
     }
@@ -188,14 +202,19 @@ void defaultlook::setup()
         if (othertabflag){
             ui->tabWidget->setCurrentIndex(Tab::Others);
         }
+        ui->tabWidget->removeTab(Tab::Superkey);
         ui->tabWidget->removeTab(Tab::Fluxbox);
         ui->tabWidget->removeTab(Tab::Config);
         ui->tabWidget->removeTab(Tab::Display);
         ui->tabWidget->removeTab(Tab::Compositor);
         ui->tabWidget->removeTab(Tab::Panel);
         setupPlasma();
-        setuptheme();
-        setupComboTheme();
+        QTimer::singleShot(0, this, [this] {
+            setuptheme();
+            setupComboTheme();
+            //setup other tab;
+            setupEtc();
+        });
     }
 
     //for other non-supported desktops, show only
@@ -210,10 +229,9 @@ void defaultlook::setup()
         ui->tabWidget->setCurrentIndex(Tab::Others);
         for (int i = 6; i >= 0; --i)
             ui->tabWidget->removeTab(i);
+        //setup other tab;
+        setupEtc();
     }
-
-    //setup other tab;
-    setupEtc();
 
     //copy template file to ~/.local/share/mx-tweak-data if it doesn't exist
     QDir userdir(home_path + "/.local/share/mx-tweak-data");
