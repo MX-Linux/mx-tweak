@@ -199,6 +199,9 @@ void defaultlook::setup()
         ui->toolButtonXFCEWMsettings->hide();
         ui->toolButtonXFCEpanelSettings->hide();
         ui->tabWidget->setCurrentIndex(Tab::Plasma);
+        if (themetabflag){
+            ui->tabWidget->setCurrentIndex(Tab::Theme);
+        }
         if (othertabflag){
             ui->tabWidget->setCurrentIndex(Tab::Others);
         }
