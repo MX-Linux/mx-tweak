@@ -151,6 +151,7 @@ public:
     void message() const;
     bool checkXFCE() const;
     bool checkFluxbox() const;
+    void checkSession();
     static bool checklightdm();
     bool checkPlasma() const;
     void CheckComptonRunning();

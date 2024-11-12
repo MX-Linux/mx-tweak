@@ -51,9 +51,10 @@ defaultlook::defaultlook(QWidget *parent, const QStringList &args) :
 {
     ui->setupUi(this);
     setWindowFlags(Qt::Window); // for the close, min and max buttons
+    // check session type
+    checkSession();
     if ( args.contains(QStringLiteral("--display"))) {
-        if (checkXFCE()) {
-            isXfce = true;
+        if (isXfce) {
             displayflag = true;
         } else {
             QMessageBox::information(nullptr, tr("MX Tweak"),
@@ -83,6 +84,18 @@ defaultlook::~defaultlook()
     delete ui;
 }
 
+void defaultlook::checkSession() {
+    QString test = runCmd(QStringLiteral("ps -aux |grep  -E \'plasmashell|xfce4-session|fluxbox\' |grep -v grep")).output;
+    if (test.contains("xfce4-session")){
+        isXfce = true;
+    } else if (test.contains("plasmashell")) {
+        isKDE = true;
+    } else if (test.contains("fluxbox")){
+        isFluxbox = true;
+    }
+    if (verbose) qDebug() << "current session test is " << test;
+
+}
 // setup versious items first time program runs
 void defaultlook::setup()
 {
@@ -94,12 +107,10 @@ void defaultlook::setup()
         ui->checkBoxLightdmReset->hide();
     }
 
-    if (checkXFCE()) {
+    if (isXfce) {
         ui->toolButtonXFCEpanelSettings->setIcon(QIcon::fromTheme("org.xfce.panel"));
         ui->toolButtonXFCEAppearance->setIcon(QIcon::fromTheme("org.xfce.settings.appearance"));
         ui->toolButtonXFCEWMsettings->setIcon(QIcon::fromTheme("org.xfce.xfwm4"));
-
-        isXfce = true;
         whichpanel();
         message_flag = false;
         //setup theme tab
@@ -142,8 +153,7 @@ void defaultlook::setup()
     }
 
     //setup fluxbox
-    else if (checkFluxbox()) {
-        isFluxbox = true;
+    else if (isFluxbox) {
         setupFluxbox();
         ui->comboTheme->hide();
         ui->label->hide();
@@ -186,8 +196,7 @@ void defaultlook::setup()
     }
 //Panel, Theme, Compositor, Display, Config, Fluxbox, Plasma, Superkey, Others
     //setup plasma
-    else if (checkPlasma()) {
-        isKDE = true;
+    else if (isKDE) {
         ui->label_4->hide();
         ui->label_5->hide();
         ui->label_6->hide();
