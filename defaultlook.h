@@ -114,6 +114,8 @@ public:
     bool isXfce = false;
     bool isFluxbox = false;
     bool isKDE = false;
+    bool isLightdm = false;
+    bool isSuperkey = false;
     bool liqKernelUpdateFlag = false;
     bool debianKernelUpdateFlag = false;
     bool plasmadisoverautostartflag = false;

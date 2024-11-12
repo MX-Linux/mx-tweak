@@ -85,7 +85,7 @@ defaultlook::~defaultlook()
 }
 
 void defaultlook::checkSession() {
-    QString test = runCmd(QStringLiteral("ps -aux |grep  -E \'plasmashell|xfce4-session|fluxbox\' |grep -v grep")).output;
+    QString test = runCmd(QStringLiteral("ps -aux |grep  -E \'plasmashell|xfce4-session|fluxbox|lightdm|xfce-superkey\' |grep -v grep")).output;
     if (test.contains("xfce4-session")){
         isXfce = true;
     } else if (test.contains("plasmashell")) {
@@ -93,7 +93,13 @@ void defaultlook::checkSession() {
     } else if (test.contains("fluxbox")){
         isFluxbox = true;
     }
-    if (verbose) qDebug() << "current session test is " << test;
+    if (test.contains("ligthdm")){
+        isLightdm = true;
+    }
+    if (test.contains("xfce-superkey")){
+        isSuperkey = true;
+    }
+    qDebug() << "isXfce is " << isXfce << "isKDE is " << isKDE << "isFluxbox is " << isFluxbox << "isLightdm is " << isLightdm << "isSuperkey is" << isSuperkey;
 
 }
 // setup versious items first time program runs
@@ -142,7 +148,7 @@ void defaultlook::setup()
             setupConfigoptions();
             //setup other tab;
             setupEtc();
-            if (runCmd("pgrep xfce-superkey").output.isEmpty() || ! QFile("/usr/bin/xfce-superkey-launcher").exists()){
+            if (!isSuperkey || ! QFile("/usr/bin/xfce-superkey-launcher").exists()){
                 ui->tabWidget->removeTab(Tab::Superkey);
             } else {
                 setupSuperKey();
@@ -1425,8 +1431,8 @@ void defaultlook::setupEtc()
     if (verbose) qDebug() << "setupetc nocsd desktop is:" << DESKTOP;
 
     ui->checkBoxLightdmReset->setChecked(false);
-    QString test = runCmd(QStringLiteral("pgrep lightdm")).output;
-    if (test.isEmpty()) {
+    QString test;
+    if (!isLightdm) {
         ui->checkBoxLightdmReset->hide();
     }
     if (graphicssetupflag){
