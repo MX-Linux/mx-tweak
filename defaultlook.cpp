@@ -99,7 +99,7 @@ void defaultlook::checkSession() {
     if (test.contains("xfce-superkey")){
         isSuperkey = true;
     }
-    qDebug() << "isXfce is " << isXfce << "isKDE is " << isKDE << "isFluxbox is " << isFluxbox << "isLightdm is " << isLightdm << "isSuperkey is" << isSuperkey;
+    if (verbose) qDebug() << "isXfce is " << isXfce << "isKDE is " << isKDE << "isFluxbox is " << isFluxbox << "isLightdm is " << isLightdm << "isSuperkey is" << isSuperkey;
 
 }
 // setup versious items first time program runs
