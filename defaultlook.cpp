@@ -33,6 +33,7 @@
 #include <QMessageBox>
 #include <QStringList>
 #include <QTextStream>
+#include <QTimer>
 
 #include "about.h"
 #include "cmd.h"
@@ -50,9 +51,10 @@ defaultlook::defaultlook(QWidget *parent, const QStringList &args) :
 {
     ui->setupUi(this);
     setWindowFlags(Qt::Window); // for the close, min and max buttons
+    // check session type
+    checkSession();
     if ( args.contains(QStringLiteral("--display"))) {
-        if (checkXFCE()) {
-            isXfce = true;
+        if (isXfce) {
             displayflag = true;
         } else {
             QMessageBox::information(nullptr, tr("MX Tweak"),
@@ -71,6 +73,7 @@ defaultlook::defaultlook(QWidget *parent, const QStringList &args) :
         verbose = true;
     }
 
+
     setup();
 
 
@@ -81,42 +84,47 @@ defaultlook::~defaultlook()
     delete ui;
 }
 
+void defaultlook::checkSession() {
+    QString test = runCmd(QStringLiteral("ps -aux |grep  -E \'plasmashell|xfce4-session|fluxbox|lightdm|xfce-superkey\' |grep -v grep")).output;
+    if (test.contains("xfce4-session")){
+        isXfce = true;
+    } else if (test.contains("plasmashell")) {
+        isKDE = true;
+    } else if (test.contains("fluxbox")){
+        isFluxbox = true;
+    }
+    if (test.contains("ligthdm")){
+        isLightdm = true;
+    }
+    if (test.contains("xfce-superkey")){
+        isSuperkey = true;
+    }
+    qDebug() << "isXfce is " << isXfce << "isKDE is " << isKDE << "isFluxbox is " << isFluxbox << "isLightdm is " << isLightdm << "isSuperkey is" << isSuperkey;
+
+}
 // setup versious items first time program runs
 void defaultlook::setup()
 {
     this->setWindowTitle(tr("MX Tweak"));
     this->adjustSize();
-    ui->toolButtonXFCEpanelSettings->setIcon(QIcon::fromTheme("org.xfce.panel"));
-    ui->toolButtonXFCEAppearance->setIcon(QIcon::fromTheme("org.xfce.settings.appearance"));
-    ui->toolButtonXFCEWMsettings->setIcon(QIcon::fromTheme("org.xfce.xfwm4"));
+
     QString home_path = QDir::homePath();
     if (!checklightdm()) {
         ui->checkBoxLightdmReset->hide();
     }
 
-    if (runCmd("pgrep xfce-superkey").output.isEmpty() || ! QFile("/usr/bin/xfce-superkey-launcher").exists()){
-        ui->tabWidget->removeTab(Tab::Superkey);
-    } else {
-        setupSuperKey();
-    }
-
-    if (checkXFCE()) {
-        isXfce = true;
+    if (isXfce) {
+        ui->toolButtonXFCEpanelSettings->setIcon(QIcon::fromTheme("org.xfce.panel"));
+        ui->toolButtonXFCEAppearance->setIcon(QIcon::fromTheme("org.xfce.settings.appearance"));
+        ui->toolButtonXFCEWMsettings->setIcon(QIcon::fromTheme("org.xfce.xfwm4"));
         whichpanel();
         message_flag = false;
         //setup theme tab
         ui->pushButtonPreview->hide();
         ui->buttonThemeUndo->hide();
         ui->buttonThemeUndo->setEnabled(false);
-        setuptheme();
-        //setup theme combo box
-        setupComboTheme();
         //setup panel tab
         setuppanel();
-        //setup compositor tab
-        setupCompositor();
-        //setup display tab
-        //setupDisplay();
         //set first tab as default
         ui->tabWidget->setCurrentIndex(Tab::Panel);
         if (themetabflag){
@@ -130,13 +138,28 @@ void defaultlook::setup()
         ui->tabWidget->removeTab(Tab::Plasma);
         ui->tabWidget->removeTab(Tab::Fluxbox);
         //setup Config Options
-        setupConfigoptions();
+        //setup everything after gui launches, except panel, kde, or fluxbox
+        QTimer::singleShot(0, this, [this] {
+            setuptheme();
+            //setup compositor tab
+            setupCompositor();
+            //setup theme combo box
+            setupComboTheme();
+            setupConfigoptions();
+            //setup other tab;
+            setupEtc();
+            if (!isSuperkey || ! QFile("/usr/bin/xfce-superkey-launcher").exists()){
+                ui->tabWidget->removeTab(Tab::Superkey);
+            } else {
+                setupSuperKey();
+            }
+
+        });
+
     }
 
     //setup fluxbox
-    else if (checkFluxbox()) {
-        isFluxbox = true;
-        setuptheme();
+    else if (isFluxbox) {
         setupFluxbox();
         ui->comboTheme->hide();
         ui->label->hide();
@@ -162,18 +185,24 @@ void defaultlook::setup()
         if (othertabflag){
             ui->tabWidget->setCurrentIndex(Tab::Others);
         }
+        ui->tabWidget->removeTab(Tab::Superkey);
         ui->tabWidget->removeTab(Tab::Plasma);
         ui->tabWidget->removeTab(Tab::Config);
         ui->tabWidget->removeTab(Tab::Display);
         ui->tabWidget->removeTab(Tab::Compositor);
         ui->tabWidget->removeTab(Tab::Panel);
+        QTimer::singleShot(0, this, [this] {
+           setuptheme();
+           //setup other tab;
+           setupEtc();
+
+        });
 
 
     }
 //Panel, Theme, Compositor, Display, Config, Fluxbox, Plasma, Superkey, Others
     //setup plasma
-    else if (checkPlasma()) {
-        isKDE = true;
+    else if (isKDE) {
         ui->label_4->hide();
         ui->label_5->hide();
         ui->label_6->hide();
@@ -185,17 +214,25 @@ void defaultlook::setup()
         ui->toolButtonXFCEWMsettings->hide();
         ui->toolButtonXFCEpanelSettings->hide();
         ui->tabWidget->setCurrentIndex(Tab::Plasma);
+        if (themetabflag){
+            ui->tabWidget->setCurrentIndex(Tab::Theme);
+        }
         if (othertabflag){
             ui->tabWidget->setCurrentIndex(Tab::Others);
         }
+        ui->tabWidget->removeTab(Tab::Superkey);
         ui->tabWidget->removeTab(Tab::Fluxbox);
         ui->tabWidget->removeTab(Tab::Config);
         ui->tabWidget->removeTab(Tab::Display);
         ui->tabWidget->removeTab(Tab::Compositor);
         ui->tabWidget->removeTab(Tab::Panel);
         setupPlasma();
-        setuptheme();
-        setupComboTheme();
+        QTimer::singleShot(0, this, [this] {
+            setuptheme();
+            setupComboTheme();
+            //setup other tab;
+            setupEtc();
+        });
     }
 
     //for other non-supported desktops, show only
@@ -210,10 +247,9 @@ void defaultlook::setup()
         ui->tabWidget->setCurrentIndex(Tab::Others);
         for (int i = 6; i >= 0; --i)
             ui->tabWidget->removeTab(i);
+        //setup other tab;
+        setupEtc();
     }
-
-    //setup other tab;
-    setupEtc();
 
     //copy template file to ~/.local/share/mx-tweak-data if it doesn't exist
     QDir userdir(home_path + "/.local/share/mx-tweak-data");
@@ -1395,8 +1431,8 @@ void defaultlook::setupEtc()
     if (verbose) qDebug() << "setupetc nocsd desktop is:" << DESKTOP;
 
     ui->checkBoxLightdmReset->setChecked(false);
-    QString test = runCmd(QStringLiteral("pgrep lightdm")).output;
-    if (test.isEmpty()) {
+    QString test;
+    if (!isLightdm) {
         ui->checkBoxLightdmReset->hide();
     }
     if (graphicssetupflag){

@@ -114,6 +114,8 @@ public:
     bool isXfce = false;
     bool isFluxbox = false;
     bool isKDE = false;
+    bool isLightdm = false;
+    bool isSuperkey = false;
     bool liqKernelUpdateFlag = false;
     bool debianKernelUpdateFlag = false;
     bool plasmadisoverautostartflag = false;
@@ -151,6 +153,7 @@ public:
     void message() const;
     bool checkXFCE() const;
     bool checkFluxbox() const;
+    void checkSession();
     static bool checklightdm();
     bool checkPlasma() const;
     void CheckComptonRunning();
