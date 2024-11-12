@@ -113,6 +113,9 @@ void defaultlook::setup()
         ui->checkBoxLightdmReset->hide();
     }
 
+    if (themetabflag) ui->tabWidget->setCurrentIndex(Tab::Theme);
+    if (othertabflag) ui->tabWidget->setCurrentIndex(Tab::Others);
+
     if (isXfce) {
         ui->toolButtonXFCEpanelSettings->setIcon(QIcon::fromTheme("org.xfce.panel"));
         ui->toolButtonXFCEAppearance->setIcon(QIcon::fromTheme("org.xfce.settings.appearance"));
@@ -126,15 +129,7 @@ void defaultlook::setup()
         //setup panel tab
         setuppanel();
         //set first tab as default
-        ui->tabWidget->setCurrentIndex(Tab::Panel);
-        if (themetabflag){
-            qDebug() << "themetabflag is " << themetabflag;
-            ui->tabWidget->setCurrentIndex(Tab::Theme);
-        }
-        if (othertabflag){
-            ui->tabWidget->setCurrentIndex(Tab::Others);
-        }
-
+        if (!themetabflag && !othertabflag)ui->tabWidget->setCurrentIndex(Tab::Panel);
         ui->tabWidget->removeTab(Tab::Plasma);
         ui->tabWidget->removeTab(Tab::Fluxbox);
         //setup Config Options
@@ -178,13 +173,7 @@ void defaultlook::setup()
         ui->toolButtonXFCEAppearance->hide();
         ui->toolButtonXFCEWMsettings->hide();
         ui->toolButtonXFCEpanelSettings->hide();
-        ui->tabWidget->setCurrentIndex(Tab::Fluxbox);
-        if (themetabflag){
-            ui->tabWidget->setCurrentIndex(Tab::Theme);
-        }
-        if (othertabflag){
-            ui->tabWidget->setCurrentIndex(Tab::Others);
-        }
+        if (!themetabflag && !othertabflag) ui->tabWidget->setCurrentIndex(Tab::Fluxbox);
         ui->tabWidget->removeTab(Tab::Superkey);
         ui->tabWidget->removeTab(Tab::Plasma);
         ui->tabWidget->removeTab(Tab::Config);
@@ -213,13 +202,7 @@ void defaultlook::setup()
         ui->toolButtonXFCEAppearance->hide();
         ui->toolButtonXFCEWMsettings->hide();
         ui->toolButtonXFCEpanelSettings->hide();
-        ui->tabWidget->setCurrentIndex(Tab::Plasma);
-        if (themetabflag){
-            ui->tabWidget->setCurrentIndex(Tab::Theme);
-        }
-        if (othertabflag){
-            ui->tabWidget->setCurrentIndex(Tab::Others);
-        }
+        if (!themetabflag && !othertabflag) ui->tabWidget->setCurrentIndex(Tab::Plasma);
         ui->tabWidget->removeTab(Tab::Superkey);
         ui->tabWidget->removeTab(Tab::Fluxbox);
         ui->tabWidget->removeTab(Tab::Config);
@@ -3871,6 +3854,7 @@ void defaultlook::populatethemelists(const QString &value)
         ui->listWidgetCursorThemes->addItems(themelist);
         if (isXfce){
             current = runCmd(QStringLiteral("xfconf-query -c xsettings -p /Gtk/CursorThemeName")).output;
+            if (current.isEmpty()) current = "default";
         } else if (isFluxbox){
             if (QFile(home_path + "/.icons/default/index.theme").exists()) {
                 current = runCmd("grep Inherits $HOME/.icons/default/index.theme |cut -d= -f2").output;
