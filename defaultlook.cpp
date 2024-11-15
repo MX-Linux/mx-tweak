@@ -93,7 +93,7 @@ void defaultlook::checkSession() {
     } else if (test.contains("fluxbox")){
         isFluxbox = true;
     }
-    if (test.contains("ligthdm")){
+    if (test.contains("lightdm")){
         isLightdm = true;
     }
     if (test.contains("xfce-superkey")){
