@@ -138,7 +138,6 @@ void defaultlook::setup()
         //setup theme combo box
         setupComboTheme();
         //setup Config Options
-
         setupConfigoptions();
         //setup other tab;
         setupEtc();
@@ -202,16 +201,14 @@ void defaultlook::setup()
         ui->tabWidget->removeTab(Tab::Compositor);
         ui->tabWidget->removeTab(Tab::Panel);
         setupPlasma();
-        QTimer::singleShot(0, this, [this] {
-            setuptheme();
-            setupComboTheme();
-            //setup other tab;
-            setupEtc();
-        });
-    }
+        setuptheme();
+        setupComboTheme();
+        //setup other tab;
+        setupEtc();
+
 
     //for other non-supported desktops, show only
-    else {
+    } else {
         ui->label_4->hide();
         ui->label_5->hide();
         ui->label_6->hide();
@@ -240,9 +237,6 @@ void defaultlook::setup()
         }
     }
     version = getVersion(QStringLiteral("mx-tweak"));
-    if (displayflag) {
-        ui->tabWidget->setCurrentIndex(Tab::Display);
-    }
     this->adjustSize();
 }
 
