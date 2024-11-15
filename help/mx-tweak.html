@@ -13,11 +13,13 @@
 
 <p>Allows the user to make quick user interface changes to system defaults.</p>
 
-<img src="1-2a.jpg" alt="MX Tweak" />
+<img src="1-2a.png" alt="MX Tweak" />
 
 <p>The user may select to display the default panel horizontally (top or bottom) or vertically (left&#8211;default&#8211;or right).  Customizations, including panel plugins,will be preserved, although plugin location might be altered. </p>
 
 <p>A backup of the current panel is stored in ~/.restore/.  A backup is created on first launch of the app, and a new backup may be made at anytime.  Multiple backups are supported.</p>
+
+Tasklist refers to the area of the panel that contains icons with running applications.  By default MX uses the docklike plugin, but the option to use the classic "window buttons" tasklist is available.
 
 <p>The user may use the &#8220;Restore default panel&#8221; to get back to the original, as-shipped panel.</p>
 
@@ -31,9 +33,12 @@
 
 <img src="tweak-theme-1.jpg" alt="Xfce Theme options" />
 
-<p>Xfce & Fluxbox users user may select Gtk theme, window manager theme, icon theme and cursor theme on this tab.  The user can also use pre-configured theme sets from the drop down combo box.</p>
-<p> The user can also save their current gtk, window manager, and icon theme settings to a new theme set.  The theme-set will be saved in <span style="font-style: normal">~/.local/share/mx-tweak-data.</span></p>
-<p> Fluxbox users get a link to the provided mxfb-look tool that can store theme combination sets.</p>
+<p>The theme tab offers a quick way to set various theming choices.  The options presented depend on desktop in use, but they should be relatively self-explanatory.</p>
+<p>Xfce & Fluxbox users user may select Gtk theme, window manager theme, icon theme and cursor theme on this tab.  Xfce users can also use pre-configured theme sets from the drop down combo box.</p>
+<p> Xfce users can also save their current gtk, window manager, and icon theme settings to a new theme set.  The theme-set will be saved in <span style="font-style: normal">~/.local/share/mx-tweak-data.</span></p>
+<p>Fluxbox users get a link to the provided mxfb-look tool that can store theme combination sets.</p>
+<p>KDE/plasma users can set global theme, plasma widget theme, and color scheme.</p>
+<p>All supported MX desktops can select icon themes and mouse cursor themes.
 
 
 <h2>Compositor</h2>
@@ -122,7 +127,7 @@ cards.</p>
 <img src="display-1.jpg" alt="Display" /> <img src="tray-app-1.jpg" alt="System Tray" />
 
 
-<p>On MX19 and later, a Display tab is available.  Here you can control the backlight, xrandr brightness, resolution, gtk scaling and the hidden xrandr scaling available under Xfce</p>
+<p>On MX19 and later, a Display tab is available for Xfce users.  Here you can control the backlight, xrandr brightness, resolution, gtk scaling and the hidden xrandr scaling available under Xfce</p>
 
 
 	<ul>
@@ -140,17 +145,21 @@ cards.</p>
     
 <h2>Other</h2>
 
-<img src="5-1.jpg" alt="other options" />
+<img src="5-1.png" alt="other options" />
 
 <p>Configuration options on this tab require admin privledges before they go into effect.  The user will be prompted for the current admin password on apply.</p>
 
 	<ul>
 		<li>Occasionally the lightdm configuration maybe be updated.  While these updated configurations will be present on the system, they will not go into effect automatically for upgraders.   The &#8220;Reset&#8221; actions will change any lightdm configuration to the latest MX defaults.</li>
 		<li>Enable of kernel sandbox is only available on kernels that have a switch for user namespaces built in.  Some kernels default to off, some default to on.  Enabling this feature is useful for a lot of applications that require sandboxes.</li>
-		<li>Enable mounting of internal drives by standard users (no admin password required).</li>
 		<li>Allow or disallow auto starting of bluetooth devices when bluetooth managers load.  Requiers a reboot to go into effect.</li>
-		<li>If a root account is configured, the option to choose what password to use for gui admin prompts will be enabled.  Goes into effect immediately.</li>
+		<li>Show/not show bluetooth battery information. This requires a system restart and may not work with all bluetooth adapters.
+		<li>The Apt installs additional "recommends" option will toggle apt and apt-based package managers to install "recommended" packages as if they are hard dependencies.  This is the debian default, but MX ships with this option off by default.
+		<li>Enable mounting of internal drives by standard users (no admin password required).</li>
 		<li>Enable options for liquorix and debian kernel updates will be shown if the metapackages that bring updates are installed.  These will allow for easy enabling or disabling of auto updates, utilizing apt-mark hold/unhold operations, without the need to remove the metapackages.</li>
+		<li>If a root account is configured, the option to choose what password to use for gui admin prompts will be enabled.  Goes into effect immediately.</li>
+		<li>Change computer name will change the "hostname" of the pc</li>
+		<li>If multiple display managers are installed, a combobox to toggle which will be used will be available.
 	</ul>
 	
 	
@@ -158,6 +167,11 @@ cards.</p>
 
 <p>If the user has an amd graphics part, then the user will be offered a choice to enable the &#8220;tear free&#8221; option for the radeon or amdgpu drivers, which ever is in current use.  The actual driver choice will not be changed, just the &#8220;tear free&#8221; option.<br></p>
 
+<h2>Superkey</h2>
+
+<img src="superkey.png" alt="superkey" />
+
+<p>Xfce users running the default xfce-superkey utility will be able to customize what their super key does here.</p>
 
 <h3>Details</h3>
 
