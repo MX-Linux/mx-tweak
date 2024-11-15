@@ -108,781 +108,781 @@
     <name>defaultlook</name>
     <message>
         <location filename="../defaultlook.ui" line="20"/>
-        <location filename="../defaultlook.cpp" line="58"/>
-        <location filename="../defaultlook.cpp" line="87"/>
-        <location filename="../defaultlook.cpp" line="658"/>
-        <location filename="../defaultlook.cpp" line="677"/>
-        <location filename="../defaultlook.cpp" line="686"/>
-        <location filename="../defaultlook.cpp" line="733"/>
-        <location filename="../defaultlook.cpp" line="741"/>
-        <location filename="../defaultlook.cpp" line="768"/>
-        <location filename="../defaultlook.cpp" line="771"/>
+        <location filename="../defaultlook.cpp" line="60"/>
+        <location filename="../defaultlook.cpp" line="108"/>
+        <location filename="../defaultlook.cpp" line="672"/>
+        <location filename="../defaultlook.cpp" line="691"/>
+        <location filename="../defaultlook.cpp" line="700"/>
+        <location filename="../defaultlook.cpp" line="747"/>
+        <location filename="../defaultlook.cpp" line="755"/>
+        <location filename="../defaultlook.cpp" line="782"/>
+        <location filename="../defaultlook.cpp" line="785"/>
         <source>MX Tweak</source>
         <translation>MX İnce ayar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="41"/>
+        <location filename="../defaultlook.ui" line="165"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the panel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Paneli özelleştirme&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="51"/>
-        <location filename="../defaultlook.ui" line="272"/>
+        <location filename="../defaultlook.ui" line="175"/>
+        <location filename="../defaultlook.ui" line="259"/>
         <source>Panel</source>
         <translation>Panel</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="71"/>
+        <location filename="../defaultlook.ui" line="195"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configure window behavior and shortcuts&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pencere davranışı ve kısayolları yapılandırma&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="85"/>
+        <location filename="../defaultlook.ui" line="209"/>
         <source>Window Manager</source>
         <translation>Pencere Yöneticisi</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="105"/>
+        <location filename="../defaultlook.ui" line="229"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the look of your desktop&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Masaüstünüzün görünümünü özelleştirin&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="119"/>
+        <location filename="../defaultlook.ui" line="243"/>
         <source>Appearance</source>
         <translation>Görünüş</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="133"/>
+        <location filename="../defaultlook.ui" line="41"/>
         <source>Xfce Settings</source>
         <translation>Xfce Ayarları</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="212"/>
+        <location filename="../defaultlook.ui" line="107"/>
         <source>About</source>
         <translation>Hakkında</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="223"/>
+        <location filename="../defaultlook.ui" line="118"/>
         <source>Help</source>
         <translation>Yardım</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="240"/>
+        <location filename="../defaultlook.ui" line="135"/>
         <source>Quit application</source>
         <translation>Uygulamadan çık</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="243"/>
+        <location filename="../defaultlook.ui" line="138"/>
         <source>Close</source>
         <translation>Kapat</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="250"/>
+        <location filename="../defaultlook.ui" line="145"/>
         <source>Alt+N</source>
         <translation>Alt+N</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="283"/>
+        <location filename="../defaultlook.ui" line="270"/>
         <source>Display panel horizontally</source>
         <extracomment>panel will be shown in a horizontal configuration</extracomment>
         <translation>Paneli yatay olarak göster</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="293"/>
+        <location filename="../defaultlook.ui" line="280"/>
         <source>Volume</source>
         <extracomment>volume plugin scale factor</extracomment>
         <translation>Hacim</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="300"/>
+        <location filename="../defaultlook.ui" line="287"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>affects the docklike plugin</extracomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="307"/>
+        <location filename="../defaultlook.ui" line="294"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Affects all panels&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Tüm panelleri etkiler&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="327"/>
-        <location filename="../defaultlook.ui" line="1811"/>
+        <location filename="../defaultlook.ui" line="314"/>
+        <location filename="../defaultlook.ui" line="1798"/>
         <source>Bottom</source>
         <translation>En alt</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="332"/>
-        <location filename="../defaultlook.ui" line="1821"/>
+        <location filename="../defaultlook.ui" line="319"/>
+        <location filename="../defaultlook.ui" line="1808"/>
         <source>Top</source>
         <translation>En üst</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="340"/>
+        <location filename="../defaultlook.ui" line="327"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Tasklist&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Görev listesi&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="347"/>
+        <location filename="../defaultlook.ui" line="334"/>
         <source>Display panel vertically</source>
         <extracomment>panel will be shown in a vertical configuration</extracomment>
         <translation>Paneli dikey olarak göster</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="362"/>
-        <location filename="../defaultlook.ui" line="1800"/>
+        <location filename="../defaultlook.ui" line="349"/>
+        <location filename="../defaultlook.ui" line="1787"/>
         <source>Affects 1st panel</source>
         <extracomment>acts on the first poanel found in Xfce panel xml fle</extracomment>
         <translation>1. paneli etkiler</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="369"/>
+        <location filename="../defaultlook.ui" line="356"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Panel Plugin Scales&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Panel Eklenti Ölçekleri&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="389"/>
+        <location filename="../defaultlook.ui" line="376"/>
         <source>Backup current panel configuration</source>
         <extracomment>backup existing panel configuration</extracomment>
         <translation>Şimdiki panel yapılandırmasını yedekle</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="399"/>
-        <location filename="../defaultlook.ui" line="459"/>
+        <location filename="../defaultlook.ui" line="386"/>
+        <location filename="../defaultlook.ui" line="446"/>
         <source>Options</source>
         <translation>Seçenekler</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="419"/>
+        <location filename="../defaultlook.ui" line="406"/>
         <source>Power Manager</source>
         <extracomment>power manager plugin scale factor</extracomment>
         <translation>Güç Yöneticisi</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="426"/>
+        <location filename="../defaultlook.ui" line="413"/>
         <source>Restore backup panel configuration</source>
         <extracomment>restore a panel backup</extracomment>
         <translation>Yedek panel yapılandırmasını geri yükle</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="449"/>
+        <location filename="../defaultlook.ui" line="436"/>
         <source>Set Scales</source>
         <extracomment>set a scale factor</extracomment>
         <translation>Ölçekleri Ayarla</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="479"/>
-        <location filename="../defaultlook.ui" line="1816"/>
+        <location filename="../defaultlook.ui" line="466"/>
+        <location filename="../defaultlook.ui" line="1803"/>
         <source>Left</source>
         <translation>Sol</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="484"/>
-        <location filename="../defaultlook.ui" line="1826"/>
+        <location filename="../defaultlook.ui" line="471"/>
+        <location filename="../defaultlook.ui" line="1813"/>
         <source>Right</source>
         <translation>Sağ</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="492"/>
+        <location filename="../defaultlook.ui" line="479"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Buttons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>affects the window button plugin</extracomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Pencere Düğmeleri&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="513"/>
+        <location filename="../defaultlook.ui" line="500"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Docklike is the modern dock plugin for the panel.  Window Buttons is the classic tasklist without dock features.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Docklike, panel için modern dock eklentisidir. Pencere Düğmeleri, yuva özellikleri olmayan klasik görev listesidir.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="536"/>
-        <location filename="../defaultlook.ui" line="735"/>
-        <location filename="../defaultlook.ui" line="909"/>
-        <location filename="../defaultlook.ui" line="1077"/>
-        <location filename="../defaultlook.ui" line="1084"/>
-        <location filename="../defaultlook.ui" line="1091"/>
-        <location filename="../defaultlook.ui" line="1158"/>
-        <location filename="../defaultlook.ui" line="1303"/>
-        <location filename="../defaultlook.ui" line="1852"/>
-        <location filename="../defaultlook.ui" line="1911"/>
-        <location filename="../defaultlook.ui" line="2042"/>
+        <location filename="../defaultlook.ui" line="523"/>
+        <location filename="../defaultlook.ui" line="722"/>
+        <location filename="../defaultlook.ui" line="896"/>
+        <location filename="../defaultlook.ui" line="1064"/>
+        <location filename="../defaultlook.ui" line="1071"/>
+        <location filename="../defaultlook.ui" line="1078"/>
+        <location filename="../defaultlook.ui" line="1145"/>
+        <location filename="../defaultlook.ui" line="1290"/>
+        <location filename="../defaultlook.ui" line="1839"/>
+        <location filename="../defaultlook.ui" line="1898"/>
+        <location filename="../defaultlook.ui" line="2073"/>
         <source>Apply</source>
         <extracomment>apply changes</extracomment>
         <translation>Uygula</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="556"/>
+        <location filename="../defaultlook.ui" line="543"/>
         <source>Restore default panel</source>
         <extracomment>affects any panel that is curently configured</extracomment>
         <translation>Öntanımlı panele geri dön</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="566"/>
+        <location filename="../defaultlook.ui" line="553"/>
         <source>Set Tasklist plugin to:</source>
         <extracomment>change the tasklist plugin</extracomment>
         <translation>Görev Listesi eklentisini şu şekilde ayarlayın:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="580"/>
+        <location filename="../defaultlook.ui" line="567"/>
         <source>Theme</source>
         <translation>Tema</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="651"/>
+        <location filename="../defaultlook.ui" line="638"/>
         <source>Size</source>
         <extracomment>size of the mouse pointer or cursor</extracomment>
         <translation>Boyut</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="679"/>
+        <location filename="../defaultlook.ui" line="666"/>
         <source>Theme Options</source>
         <translation>Tema Seçenekleri</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="595"/>
+        <location filename="../defaultlook.ui" line="582"/>
         <source>Remove User Theme Set</source>
         <translation>Kullanıcı Temasını Kaldır</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="588"/>
+        <location filename="../defaultlook.ui" line="575"/>
         <source>Preview</source>
         <translation>Önizleme</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="695"/>
+        <location filename="../defaultlook.ui" line="682"/>
         <source>Undo</source>
         <translation>Gerial</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="606"/>
+        <location filename="../defaultlook.ui" line="593"/>
         <source>Save Current Settings as a Theme Set</source>
         <extracomment>save theme settings as a group</extracomment>
         <translation>Mevcut Ayarları Tema Olarak Kaydet</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="644"/>
+        <location filename="../defaultlook.ui" line="631"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Cursors&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>cursor theme</extracomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;İmleçler&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="664"/>
+        <location filename="../defaultlook.ui" line="651"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Manager&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>theme a window manager border will get</extracomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Pencere Yöneticisi&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="702"/>
+        <location filename="../defaultlook.ui" line="689"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>theme an application will get</extracomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Uygulama&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="637"/>
+        <location filename="../defaultlook.ui" line="624"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>icon theme</extracomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Simgeler&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="630"/>
+        <location filename="../defaultlook.ui" line="617"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Themes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Temalar&lt;/span&gt;&lt;p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="758"/>
-        <location filename="../defaultlook.ui" line="769"/>
+        <location filename="../defaultlook.ui" line="745"/>
+        <location filename="../defaultlook.ui" line="756"/>
         <source>Compositor</source>
         <translation>Compositor</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="776"/>
+        <location filename="../defaultlook.ui" line="763"/>
         <source>Transparency and shadow options</source>
         <translation>Saydamlık ve gölge seçenekleri</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="875"/>
+        <location filename="../defaultlook.ui" line="862"/>
         <source>Edit compton.conf directly in text editor</source>
         <translation>compton.conf dosyasını doğrudan metin düzenleyicide düzenleyin</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="878"/>
+        <location filename="../defaultlook.ui" line="865"/>
         <source>Edit compton.conf</source>
         <translation>compton.conf’u düzenle</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="889"/>
+        <location filename="../defaultlook.ui" line="876"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce Compositor Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce Compositor Ayarları&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="892"/>
+        <location filename="../defaultlook.ui" line="879"/>
         <source>Xfwm Settings</source>
         <translation>Xfwm Ayarları</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="851"/>
+        <location filename="../defaultlook.ui" line="838"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Changing the VBlank mode may help alleviate some screen tearing issues.  See Help for more information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;VBlank kipini değiştirmek, bazı ekran yırtılma sorunlarını hafifletmeye yardımcı olabilir. Daha fazla bilgi için Yardım’a bakın.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="854"/>
+        <location filename="../defaultlook.ui" line="841"/>
         <source>VBlank</source>
         <translation>VBlank</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="861"/>
+        <location filename="../defaultlook.ui" line="848"/>
         <source>Launch compton-conf configuration tool</source>
         <translation>compton-conf yapılandırma aracını başlat</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="864"/>
+        <location filename="../defaultlook.ui" line="851"/>
         <source>Compton settings</source>
         <translation>Compton ayarları</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="796"/>
+        <location filename="../defaultlook.ui" line="783"/>
         <source>None</source>
         <translation>Hiçbiri</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="617"/>
+        <location filename="../defaultlook.ui" line="604"/>
         <source>default</source>
         <extracomment>default pointer size determined by X server</extracomment>
         <translation>öntanımlı</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="801"/>
+        <location filename="../defaultlook.ui" line="788"/>
         <source>Xfwm (Xfce) Compositor</source>
         <translation>Xfwm (Xfce) Compositor</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="806"/>
+        <location filename="../defaultlook.ui" line="793"/>
         <source>Compton </source>
         <translation>Compton </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="815"/>
+        <location filename="../defaultlook.ui" line="802"/>
         <source>auto</source>
         <translation>oto</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="820"/>
+        <location filename="../defaultlook.ui" line="807"/>
         <source>glx</source>
         <translation>glx</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="825"/>
+        <location filename="../defaultlook.ui" line="812"/>
         <source>xpresent</source>
         <translation>xpresent</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="830"/>
-        <location filename="../defaultlook.ui" line="1416"/>
+        <location filename="../defaultlook.ui" line="817"/>
+        <location filename="../defaultlook.ui" line="1403"/>
         <source>off</source>
         <extracomment>setting to 0 turns off screensaver screen blank</extracomment>
         <translation>kapalı</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="932"/>
+        <location filename="../defaultlook.ui" line="919"/>
         <source>Display</source>
         <translation>Görüntü</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="943"/>
+        <location filename="../defaultlook.ui" line="930"/>
         <source>Hardware Backlight</source>
         <extracomment>set the hardware backlight on monitors that have them</extracomment>
         <translation>Donanım Arka Işığı</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="950"/>
+        <location filename="../defaultlook.ui" line="937"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Display Tweaks&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;İnce Ayarı Göster&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="977"/>
+        <location filename="../defaultlook.ui" line="964"/>
         <source>Choose Display for xrandr tweaks</source>
         <extracomment>choose the display that the xrandr tweaks will be acted upon</extracomment>
         <translation>Xrandr ince ayarları için Görüntüleme Seçimi</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="987"/>
+        <location filename="../defaultlook.ui" line="974"/>
         <source>Resolution</source>
         <translation>Çözünürlük</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="994"/>
+        <location filename="../defaultlook.ui" line="981"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Saving is per display&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ekran başına kazanç&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="997"/>
+        <location filename="../defaultlook.ui" line="984"/>
         <source>Save</source>
         <translation>Kaydet</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1004"/>
+        <location filename="../defaultlook.ui" line="991"/>
         <source>Software (xrandr) Brightness</source>
         <extracomment>adjust brightness (not backlight) via software</extracomment>
         <translation>Yazılım (xrandr) Parlaklığı</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1011"/>
-        <location filename="../defaultlook.ui" line="1108"/>
+        <location filename="../defaultlook.ui" line="998"/>
+        <location filename="../defaultlook.ui" line="1095"/>
         <source>TextLabel</source>
         <translation>Metin Etiketi</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1018"/>
+        <location filename="../defaultlook.ui" line="1005"/>
         <source>GTK scaling</source>
         <extracomment>gtk scale factor</extracomment>
         <translation>GTK ölçeği</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1038"/>
+        <location filename="../defaultlook.ui" line="1025"/>
         <source>xrandr Scaling</source>
         <extracomment>xrandr scale factor</extracomment>
         <translation>xrandr Ölçekleme</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1134"/>
+        <location filename="../defaultlook.ui" line="1121"/>
         <source>Config Options</source>
         <translation>Yapılandırma Seçenekleri</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1145"/>
+        <location filename="../defaultlook.ui" line="1132"/>
         <source>Disable shortening of long filenames on the desktop</source>
         <translation>Masaüstünde uzun dosya adlarının kısaltılmasını devre dışı bırak</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1169"/>
+        <location filename="../defaultlook.ui" line="1156"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
         <translation>                   not: uyku için, takas &gt;= RAM olması gereklidir.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1189"/>
+        <location filename="../defaultlook.ui" line="1176"/>
         <source>Enable single-click on desktop</source>
         <translation>Masaüstünde tek tık etkin</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1196"/>
+        <location filename="../defaultlook.ui" line="1183"/>
         <source>Enable hibernate on Log Out menu </source>
         <translation>Oturumu Kapat menüsünde hazırda bekletme kipini etkinleştir</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1203"/>
-        <location filename="../defaultlook.ui" line="1337"/>
+        <location filename="../defaultlook.ui" line="1190"/>
+        <location filename="../defaultlook.ui" line="1324"/>
         <source>Reset Thunar custom right-click actions to system defaults</source>
         <translation>Thunar özel sağ tıklama eylemlerini sistem varsayılanlarına sıfırlama</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1210"/>
-        <location filename="../defaultlook.ui" line="1388"/>
+        <location filename="../defaultlook.ui" line="1197"/>
+        <location filename="../defaultlook.ui" line="1375"/>
         <source>Enable single-click in Thunar File Manager</source>
         <translation>Thunar Dosya Yöneticisinde tek tık etkin</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1217"/>
-        <location filename="../defaultlook.ui" line="1649"/>
+        <location filename="../defaultlook.ui" line="1204"/>
+        <location filename="../defaultlook.ui" line="1636"/>
         <source>Thunar windows always open in split view</source>
         <translation>Thunar pencereleri her zaman bölünmüş görünümde açılır</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1224"/>
-        <location filename="../defaultlook.ui" line="1581"/>
+        <location filename="../defaultlook.ui" line="1211"/>
+        <location filename="../defaultlook.ui" line="1568"/>
         <source>Thunar split view opens horizontal</source>
         <translation>Thunar bölünmüş görünüm yatay açılır</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1231"/>
+        <location filename="../defaultlook.ui" line="1218"/>
         <source>Show percentages in notifcations when available</source>
         <translation>Mevcut ise bildirimlerde yüzdeleri göster</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1238"/>
+        <location filename="../defaultlook.ui" line="1225"/>
         <source>Enable Desktop Zoom </source>
         <translation>Masaüstü Yakınlaştırmayı Etkinleştir </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1245"/>
-        <location filename="../defaultlook.ui" line="1767"/>
+        <location filename="../defaultlook.ui" line="1232"/>
+        <location filename="../defaultlook.ui" line="1754"/>
         <source>Show windows from all workspaces in panel</source>
         <translation>Tüm çalışma alanlarındaki pencereleri panelde göster.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1252"/>
+        <location filename="../defaultlook.ui" line="1239"/>
         <source>Show GTK File Dialog action buttons at bottom of dialogs</source>
         <translation>İletişim kutularının altında GTK Dosya İletişim Kutusu eylem düğmelerini göster</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1259"/>
+        <location filename="../defaultlook.ui" line="1246"/>
         <source>( also turns off Client Side Decorations for Xfce applications)</source>
         <translation>(ayrıca Xfce uygulamaları için İstemci Tarafı Süslemelerini kapatır)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1272"/>
+        <location filename="../defaultlook.ui" line="1259"/>
         <source>Fluxbox</source>
         <translation>Fluxbox</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1284"/>
-        <location filename="../defaultlook.ui" line="1624"/>
+        <location filename="../defaultlook.ui" line="1271"/>
+        <location filename="../defaultlook.ui" line="1611"/>
         <source>On</source>
         <translation>Aç</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1289"/>
-        <location filename="../defaultlook.ui" line="1629"/>
+        <location filename="../defaultlook.ui" line="1276"/>
+        <location filename="../defaultlook.ui" line="1616"/>
         <source>Off</source>
         <translation>Kapat</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1310"/>
+        <location filename="../defaultlook.ui" line="1297"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Thunar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Thunar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1317"/>
+        <location filename="../defaultlook.ui" line="1304"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Araç Çubuğu Ayarları&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1357"/>
+        <location filename="../defaultlook.ui" line="1344"/>
         <source>Toggle icon captions</source>
         <translation>Simge altyazılarını değiştir</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1364"/>
+        <location filename="../defaultlook.ui" line="1351"/>
         <source>Reset Fluxbox Menu</source>
         <translation>Fluxbox Menüyü Sıfırla</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1381"/>
+        <location filename="../defaultlook.ui" line="1368"/>
         <source>Width</source>
         <translation>Genişlik</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1395"/>
+        <location filename="../defaultlook.ui" line="1382"/>
         <source>Toggle desktop icons</source>
         <translation>Masaüstü simgelerini değiştir</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1402"/>
-        <location filename="../defaultlook.ui" line="1426"/>
+        <location filename="../defaultlook.ui" line="1389"/>
+        <location filename="../defaultlook.ui" line="1413"/>
         <source>Autohide</source>
         <translation>Otomatik gizleme</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1409"/>
+        <location filename="../defaultlook.ui" line="1396"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Panel Ayarları&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1500"/>
+        <location filename="../defaultlook.ui" line="1487"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Desktop Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Masaüstü Simgeleri&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1574"/>
+        <location filename="../defaultlook.ui" line="1561"/>
         <source>Reset DefaultDock</source>
         <translation>Öntanımlı Sabitleyiciyi Sıfırla</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1588"/>
+        <location filename="../defaultlook.ui" line="1575"/>
         <source>Manage Tint2 Panel</source>
         <translation>Tint2 Panelini Yönet</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1599"/>
+        <location filename="../defaultlook.ui" line="1586"/>
         <source>Height</source>
         <translation>Yükseklik</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1606"/>
-        <location filename="../defaultlook.ui" line="1642"/>
-        <location filename="../defaultlook.ui" line="1774"/>
+        <location filename="../defaultlook.ui" line="1593"/>
+        <location filename="../defaultlook.ui" line="1629"/>
+        <location filename="../defaultlook.ui" line="1761"/>
         <source>Placement</source>
         <translation>Yerleştirme</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1613"/>
+        <location filename="../defaultlook.ui" line="1600"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Screensaver&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>screensaver screen blank settings</extracomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Ekran Koruyucu&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1634"/>
+        <location filename="../defaultlook.ui" line="1621"/>
         <source>On Hover</source>
         <translation>Vurgulu</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1656"/>
-        <location filename="../defaultlook.ui" line="1734"/>
+        <location filename="../defaultlook.ui" line="1643"/>
+        <location filename="../defaultlook.ui" line="1721"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Öntanımlıları Sıfırla&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1663"/>
+        <location filename="../defaultlook.ui" line="1650"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Varsa, mevcut fluxbox menüsüne yeni varsayılan menü öğeleri ekleyin.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1666"/>
+        <location filename="../defaultlook.ui" line="1653"/>
         <source>Upgrade existing menu entries</source>
         <translation>Mevcut menü girişlerini güncelle</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1686"/>
+        <location filename="../defaultlook.ui" line="1673"/>
         <source>Show Toolbar</source>
         <translation>Araç Çubuğunu Göster</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1703"/>
+        <location filename="../defaultlook.ui" line="1690"/>
         <source>Reset ALL mx-fluxbox settings</source>
         <translation>TÜM mx-fluxbox ayarlarını sıfırla</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1710"/>
+        <location filename="../defaultlook.ui" line="1697"/>
         <source>Idle time (minutes)</source>
         <extracomment>set the time of inactivity  before screensaver screen blank occurs</extracomment>
         <translation>Boşta zaman (dakika)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1723"/>
+        <location filename="../defaultlook.ui" line="1710"/>
         <source>Plasma</source>
         <translation>Plasma</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1839"/>
+        <location filename="../defaultlook.ui" line="1826"/>
         <source>Workspace</source>
         <translation>Çalışma Alanı</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2019"/>
+        <location filename="../defaultlook.ui" line="2060"/>
         <source>Change computer name (requires reboot)</source>
         <extracomment>option to change the system hostname, requires a reboot to be 100% effective</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2121"/>
+        <location filename="../defaultlook.ui" line="2043"/>
         <source>Change Default Display Manager (login screen) (requires reboot)</source>
         <extracomment>option to change display manager login screen.  present if more than one display manager is installed</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1963"/>
+        <location filename="../defaultlook.ui" line="2084"/>
         <source>Enable Bluetooth battery info for connected devices (requires system restart)</source>
         <extracomment>expose battery info for connected bluetooth devices to the operating system via dbus</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1781"/>
+        <location filename="../defaultlook.ui" line="1768"/>
         <source>Enable single-click</source>
         <translation>Tek tıklamayı etkinleştir</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1788"/>
+        <location filename="../defaultlook.ui" line="1775"/>
         <source>Reset KDE/Plasma defaults</source>
         <translation>KDE/Plasma öntanımlılarını sıfırla</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1863"/>
+        <location filename="../defaultlook.ui" line="1850"/>
         <source>Autostart plasma-discover system tray update notification utility</source>
         <extracomment>enable or disable autostartup of plasma-discover updater utility on login</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1873"/>
+        <location filename="../defaultlook.ui" line="1860"/>
         <source>Super Key</source>
         <extracomment>referring to the meta or Left Super Key</extracomment>
         <translation>Super Tuşu</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1881"/>
+        <location filename="../defaultlook.ui" line="1868"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Choose application&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>description of button action to launch file dialog to choose an application</extracomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Uygulama seç&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1894"/>
+        <location filename="../defaultlook.ui" line="1881"/>
         <source>Xfce-superkey defaults</source>
         <extracomment>indicates that xfce-superkey will select a command by its default logic</extracomment>
         <translation>Xfce-superkey varsayılanları</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1901"/>
+        <location filename="../defaultlook.ui" line="1888"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Also known as the &amp;quot;windows&amp;quot; key&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Aynı zamanda &quot;Windows&quot; tuşu olarak da bilinir; tuş&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1904"/>
+        <location filename="../defaultlook.ui" line="1891"/>
         <source>Command to run with Super (Meta) key</source>
         <extracomment>label for the field to enter the command to use with super key</extracomment>
         <translation>Süper (Meta) tuşuyla çalıştırılacak komut</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1934"/>
+        <location filename="../defaultlook.ui" line="1921"/>
         <source>Other</source>
         <translation>Diğer</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2094"/>
+        <location filename="../defaultlook.ui" line="1946"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>Lightdm’yi (giriş ekranı) sistem öntanımlı temasına sıfırla</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2060"/>
+        <location filename="../defaultlook.ui" line="1998"/>
         <source>put a hold or remove a hold on updates of Liquorix kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2063"/>
+        <location filename="../defaultlook.ui" line="2001"/>
         <source>Enable Automatic Liquorix Kernel Updates (MX ahs repository)</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2084"/>
+        <location filename="../defaultlook.ui" line="2050"/>
         <source>put a hold or remove a hold on updates of Debian  kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2087"/>
+        <location filename="../defaultlook.ui" line="2053"/>
         <source>Enable Automatic Debian Kernel Updates</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1956"/>
+        <location filename="../defaultlook.ui" line="1970"/>
         <source>Password for administrative tasks:</source>
         <translation>Yönetici görevleri için parola:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1970"/>
+        <location filename="../defaultlook.ui" line="2098"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>Dahili sürücülerin root olmayan kullanıcılar tarafından bağlanmasını etkinleştir</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2108"/>
+        <location filename="../defaultlook.ui" line="1977"/>
         <source>Root</source>
         <translation>Kök</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1998"/>
+        <location filename="../defaultlook.ui" line="2036"/>
         <source>Enable kernel sandbox</source>
         <translation>Çekirdek sanal alanını etkinleştir</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2070"/>
+        <location filename="../defaultlook.ui" line="1939"/>
         <source>&amp;User</source>
         <translation>Kullanıcı</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2026"/>
+        <location filename="../defaultlook.ui" line="1929"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;yeniden başlatılmalı&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2029"/>
+        <location filename="../defaultlook.ui" line="1932"/>
         <source>Enable Bluetooth adapters on boot</source>
         <translation type="unfinished"></translation>
     </message>
@@ -892,138 +892,156 @@
         <translation>Apt, bağımlılık olarak &quot;önerilen&quot; ek paketleri kurar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2053"/>
+        <location filename="../defaultlook.ui" line="2022"/>
         <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
         <translation>Paket yükleme, kaldırma ve güncellemelerden sonra fluxbox Tüm Uygulamalar menüsünu oluşturur</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1942"/>
+        <location filename="../defaultlook.ui" line="1991"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
         <translation>Onları destekleyen GTK3 uygulamalarında İstemci Tarafı Dekorasyonlarını (CSD) kullanın (oturumun yeniden başlatılmasını gerektirir)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1991"/>
+        <location filename="../defaultlook.ui" line="1956"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>Öntanımlı &quot;modesetting&quot; sürücü yerine intel sürücüsü kullanın (yeniden başlatma gerekir)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2012"/>
+        <location filename="../defaultlook.ui" line="2091"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>NOTE: mevcut /etc/X11/xorg.conf.d/20-intel.conf ev klasörüne yedeklenecek</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2101"/>
+        <location filename="../defaultlook.ui" line="2029"/>
         <source>Use tearfree amdgpu option</source>
         <translation>Amd  grafik işlemcinin tearfree seçeneğini kullan</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2077"/>
+        <location filename="../defaultlook.ui" line="1963"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>NOTE: mevcut /etc/X11/xorg.conf.d/20-amd.conf ev klasörüne yedeklenecek</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1949"/>
+        <location filename="../defaultlook.ui" line="2015"/>
         <source>Use tearfree radeon driver option</source>
         <translation>tearfree radeon sürücü seçeneğini kullan</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1977"/>
+        <location filename="../defaultlook.ui" line="2105"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>NOTE: mevcut  /etc/X11/xorg.conf.d/20-radeon.conf ev klasörüne yedeklenecek</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="59"/>
+        <location filename="../defaultlook.cpp" line="61"/>
         <source>--display switch only valid for Xfce</source>
         <translation>--ekran anahtarı yalnızca Xfce için geçerlidir</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="657"/>
+        <location filename="../defaultlook.cpp" line="671"/>
         <source>About MX Tweak</source>
         <translation>MX Tweak Hakkında</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="659"/>
+        <location filename="../defaultlook.cpp" line="673"/>
         <source>Version: </source>
         <translation>Sürüm</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="660"/>
+        <location filename="../defaultlook.cpp" line="674"/>
         <source>App for quick default ui theme changes and tweaks</source>
         <translation>Hızlı öntanımlı kullanıcı arayüzü tema değişiklikleri ve ince ayarlar için uygulama</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="662"/>
+        <location filename="../defaultlook.cpp" line="676"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="663"/>
+        <location filename="../defaultlook.cpp" line="677"/>
         <source>%1 License</source>
         <translation>%1 Lisans</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="677"/>
+        <location filename="../defaultlook.cpp" line="691"/>
         <source>%1 Help</source>
         <translation>%1 Yardım</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="687"/>
+        <location filename="../defaultlook.cpp" line="701"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
         <translation>Tamamlandı! Değişikliklerin etkili olması için Firefox’un yeniden başlatılması gerekebilir</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="734"/>
+        <location filename="../defaultlook.cpp" line="748"/>
         <source>Plese remove special characters</source>
         <translation>Lütfen özel karakterleri silin</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="734"/>
+        <location filename="../defaultlook.cpp" line="748"/>
         <source>from file name</source>
         <translation>dosya adından</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="741"/>
+        <location filename="../defaultlook.cpp" line="755"/>
         <source>File name already exists.  Choose another name</source>
         <translation>Dosya adı zaten var. Başka bir ad seç</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="769"/>
+        <location filename="../defaultlook.cpp" line="783"/>
         <source>File is not a valid tar.xz archive file</source>
         <translation>Dosya geçerli bir tar.xz arşiv dosyası değil</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="772"/>
+        <location filename="../defaultlook.cpp" line="786"/>
         <source>Archive does not contain a panel config</source>
         <translation>Arşiv, panel yapılandırması içermiyor</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="947"/>
+        <location filename="../defaultlook.cpp" line="961"/>
         <source>Panel settings</source>
         <translation>Panel ayarları</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="948"/>
+        <location filename="../defaultlook.cpp" line="962"/>
         <source>Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
         <translation>Geçerli panel ayarlarınız, ev klasörünüzde .restore adlı gizli bir klasöre yedeklendi (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1884"/>
+        <location filename="../defaultlook.cpp" line="1644"/>
+        <source>Plasma Widget Themes</source>
+        <comment>theme style of the kde plasma widgets</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.cpp" line="1645"/>
+        <source>Color Schemes</source>
+        <comment>plasma widget color schemes</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.cpp" line="1646"/>
+        <source>Plasma Look &amp; Feel Global Themes</source>
+        <comment>plasma global themes</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.cpp" line="1914"/>
         <source>settings</source>
         <translation>ayarlar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2224"/>
+        <location filename="../defaultlook.cpp" line="2255"/>
         <source>Choose a theme set</source>
         <translation>Bir Tema Grubu Seç</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2652"/>
+        <location filename="../defaultlook.cpp" line="2705"/>
         <source>Please enter a computer name.</source>
         <comment>question to enter a name for the computer hostname</comment>
         <translation>Lütfen bir bilgisayar adı girin.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2656"/>
+        <location filename="../defaultlook.cpp" line="2709"/>
         <source>Sorry, your computer name contains invalid characters.
 You&apos;ll have to select a different
 name before proceeding.</source>
@@ -1033,7 +1051,7 @@ Farklı bir seçim yapmanız gerek
 İşleme devam etmeden önce ad gerekli.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="4214"/>
+        <location filename="../defaultlook.cpp" line="4342"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
         <translation>Çalıştırılacak uygulamayı seç</translation>

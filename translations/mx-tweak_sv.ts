@@ -108,781 +108,781 @@
     <name>defaultlook</name>
     <message>
         <location filename="../defaultlook.ui" line="20"/>
-        <location filename="../defaultlook.cpp" line="58"/>
-        <location filename="../defaultlook.cpp" line="87"/>
-        <location filename="../defaultlook.cpp" line="658"/>
-        <location filename="../defaultlook.cpp" line="677"/>
-        <location filename="../defaultlook.cpp" line="686"/>
-        <location filename="../defaultlook.cpp" line="733"/>
-        <location filename="../defaultlook.cpp" line="741"/>
-        <location filename="../defaultlook.cpp" line="768"/>
-        <location filename="../defaultlook.cpp" line="771"/>
+        <location filename="../defaultlook.cpp" line="60"/>
+        <location filename="../defaultlook.cpp" line="108"/>
+        <location filename="../defaultlook.cpp" line="672"/>
+        <location filename="../defaultlook.cpp" line="691"/>
+        <location filename="../defaultlook.cpp" line="700"/>
+        <location filename="../defaultlook.cpp" line="747"/>
+        <location filename="../defaultlook.cpp" line="755"/>
+        <location filename="../defaultlook.cpp" line="782"/>
+        <location filename="../defaultlook.cpp" line="785"/>
         <source>MX Tweak</source>
         <translation>MX Tweak</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="41"/>
+        <location filename="../defaultlook.ui" line="165"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the panel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Anpassa panelen&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="51"/>
-        <location filename="../defaultlook.ui" line="272"/>
+        <location filename="../defaultlook.ui" line="175"/>
+        <location filename="../defaultlook.ui" line="259"/>
         <source>Panel</source>
         <translation>Panel</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="71"/>
+        <location filename="../defaultlook.ui" line="195"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configure window behavior and shortcuts&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Konfigurera fönsterbeteende och genvägar&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="85"/>
+        <location filename="../defaultlook.ui" line="209"/>
         <source>Window Manager</source>
         <translation>Fönsterhanterare</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="105"/>
+        <location filename="../defaultlook.ui" line="229"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the look of your desktop&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Anpassa ditt skrivbords utseende&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="119"/>
+        <location filename="../defaultlook.ui" line="243"/>
         <source>Appearance</source>
         <translation>Utseende</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="133"/>
+        <location filename="../defaultlook.ui" line="41"/>
         <source>Xfce Settings</source>
         <translation>Xfce Inställningar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="212"/>
+        <location filename="../defaultlook.ui" line="107"/>
         <source>About</source>
         <translation>Om</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="223"/>
+        <location filename="../defaultlook.ui" line="118"/>
         <source>Help</source>
         <translation>Hjälp</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="240"/>
+        <location filename="../defaultlook.ui" line="135"/>
         <source>Quit application</source>
         <translation>Avsluta programmet</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="243"/>
+        <location filename="../defaultlook.ui" line="138"/>
         <source>Close</source>
         <translation>Stäng</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="250"/>
+        <location filename="../defaultlook.ui" line="145"/>
         <source>Alt+N</source>
         <translation>Alt+N</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="283"/>
+        <location filename="../defaultlook.ui" line="270"/>
         <source>Display panel horizontally</source>
         <extracomment>panel will be shown in a horizontal configuration</extracomment>
         <translation>Visa panel horisontellt</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="293"/>
+        <location filename="../defaultlook.ui" line="280"/>
         <source>Volume</source>
         <extracomment>volume plugin scale factor</extracomment>
         <translation>Volym</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="300"/>
+        <location filename="../defaultlook.ui" line="287"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>affects the docklike plugin</extracomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="307"/>
+        <location filename="../defaultlook.ui" line="294"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Affects all panels&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Berör alla paneler&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="327"/>
-        <location filename="../defaultlook.ui" line="1811"/>
+        <location filename="../defaultlook.ui" line="314"/>
+        <location filename="../defaultlook.ui" line="1798"/>
         <source>Bottom</source>
         <translation>Nedtill</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="332"/>
-        <location filename="../defaultlook.ui" line="1821"/>
+        <location filename="../defaultlook.ui" line="319"/>
+        <location filename="../defaultlook.ui" line="1808"/>
         <source>Top</source>
         <translation>Upp</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="340"/>
+        <location filename="../defaultlook.ui" line="327"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Tasklist&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Aktivitetslista&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="347"/>
+        <location filename="../defaultlook.ui" line="334"/>
         <source>Display panel vertically</source>
         <extracomment>panel will be shown in a vertical configuration</extracomment>
         <translation>Visa panel vertikalt</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="362"/>
-        <location filename="../defaultlook.ui" line="1800"/>
+        <location filename="../defaultlook.ui" line="349"/>
+        <location filename="../defaultlook.ui" line="1787"/>
         <source>Affects 1st panel</source>
         <extracomment>acts on the first poanel found in Xfce panel xml fle</extracomment>
         <translation>Påverkar 1:a panelen</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="369"/>
+        <location filename="../defaultlook.ui" line="356"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Panel Plugin Scales&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Panel Plugin Skalor&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="389"/>
+        <location filename="../defaultlook.ui" line="376"/>
         <source>Backup current panel configuration</source>
         <extracomment>backup existing panel configuration</extracomment>
         <translation>Backa upp nuvarande panelkonfiguration</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="399"/>
-        <location filename="../defaultlook.ui" line="459"/>
+        <location filename="../defaultlook.ui" line="386"/>
+        <location filename="../defaultlook.ui" line="446"/>
         <source>Options</source>
         <translation>Alternativ</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="419"/>
+        <location filename="../defaultlook.ui" line="406"/>
         <source>Power Manager</source>
         <extracomment>power manager plugin scale factor</extracomment>
         <translation>Krafthanterare</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="426"/>
+        <location filename="../defaultlook.ui" line="413"/>
         <source>Restore backup panel configuration</source>
         <extracomment>restore a panel backup</extracomment>
         <translation>Återställ panelkonfigurationens backup</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="449"/>
+        <location filename="../defaultlook.ui" line="436"/>
         <source>Set Scales</source>
         <extracomment>set a scale factor</extracomment>
         <translation>Ställ in Skalor</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="479"/>
-        <location filename="../defaultlook.ui" line="1816"/>
+        <location filename="../defaultlook.ui" line="466"/>
+        <location filename="../defaultlook.ui" line="1803"/>
         <source>Left</source>
         <translation>Vänster</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="484"/>
-        <location filename="../defaultlook.ui" line="1826"/>
+        <location filename="../defaultlook.ui" line="471"/>
+        <location filename="../defaultlook.ui" line="1813"/>
         <source>Right</source>
         <translation>Höger</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="492"/>
+        <location filename="../defaultlook.ui" line="479"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Buttons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>affects the window button plugin</extracomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Fönsterknappar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="513"/>
+        <location filename="../defaultlook.ui" line="500"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Docklike is the modern dock plugin for the panel.  Window Buttons is the classic tasklist without dock features.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Docklike är en modern-dock-plugin för panelen.  Fönsterknappar är den klassiska aktivitetslistan utan dockegenskaper.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="536"/>
-        <location filename="../defaultlook.ui" line="735"/>
-        <location filename="../defaultlook.ui" line="909"/>
-        <location filename="../defaultlook.ui" line="1077"/>
-        <location filename="../defaultlook.ui" line="1084"/>
-        <location filename="../defaultlook.ui" line="1091"/>
-        <location filename="../defaultlook.ui" line="1158"/>
-        <location filename="../defaultlook.ui" line="1303"/>
-        <location filename="../defaultlook.ui" line="1852"/>
-        <location filename="../defaultlook.ui" line="1911"/>
-        <location filename="../defaultlook.ui" line="2042"/>
+        <location filename="../defaultlook.ui" line="523"/>
+        <location filename="../defaultlook.ui" line="722"/>
+        <location filename="../defaultlook.ui" line="896"/>
+        <location filename="../defaultlook.ui" line="1064"/>
+        <location filename="../defaultlook.ui" line="1071"/>
+        <location filename="../defaultlook.ui" line="1078"/>
+        <location filename="../defaultlook.ui" line="1145"/>
+        <location filename="../defaultlook.ui" line="1290"/>
+        <location filename="../defaultlook.ui" line="1839"/>
+        <location filename="../defaultlook.ui" line="1898"/>
+        <location filename="../defaultlook.ui" line="2073"/>
         <source>Apply</source>
         <extracomment>apply changes</extracomment>
         <translation>Använd</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="556"/>
+        <location filename="../defaultlook.ui" line="543"/>
         <source>Restore default panel</source>
         <extracomment>affects any panel that is curently configured</extracomment>
         <translation>Återställ standard-panel</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="566"/>
+        <location filename="../defaultlook.ui" line="553"/>
         <source>Set Tasklist plugin to:</source>
         <extracomment>change the tasklist plugin</extracomment>
         <translation>Ställ in Aktivitetsliste-plugin att:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="580"/>
+        <location filename="../defaultlook.ui" line="567"/>
         <source>Theme</source>
         <translation>Tema</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="651"/>
+        <location filename="../defaultlook.ui" line="638"/>
         <source>Size</source>
         <extracomment>size of the mouse pointer or cursor</extracomment>
         <translation>Storlek</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="679"/>
+        <location filename="../defaultlook.ui" line="666"/>
         <source>Theme Options</source>
         <translation>Tema Alternativ</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="595"/>
+        <location filename="../defaultlook.ui" line="582"/>
         <source>Remove User Theme Set</source>
         <translation>Ta bort Användares Tema-set</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="588"/>
+        <location filename="../defaultlook.ui" line="575"/>
         <source>Preview</source>
         <translation>Förhandsvisning</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="695"/>
+        <location filename="../defaultlook.ui" line="682"/>
         <source>Undo</source>
         <translation>Ångra</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="606"/>
+        <location filename="../defaultlook.ui" line="593"/>
         <source>Save Current Settings as a Theme Set</source>
         <extracomment>save theme settings as a group</extracomment>
         <translation>Spara nuvarande Inställningar som ett Tema-set</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="644"/>
+        <location filename="../defaultlook.ui" line="631"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Cursors&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>cursor theme</extracomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Muspekare&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="664"/>
+        <location filename="../defaultlook.ui" line="651"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Manager&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>theme a window manager border will get</extracomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Fönsterhanterare&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="702"/>
+        <location filename="../defaultlook.ui" line="689"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>theme an application will get</extracomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Program&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="637"/>
+        <location filename="../defaultlook.ui" line="624"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>icon theme</extracomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ikoner&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="630"/>
+        <location filename="../defaultlook.ui" line="617"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Themes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Teman&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="758"/>
-        <location filename="../defaultlook.ui" line="769"/>
+        <location filename="../defaultlook.ui" line="745"/>
+        <location filename="../defaultlook.ui" line="756"/>
         <source>Compositor</source>
         <translation>Compositor</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="776"/>
+        <location filename="../defaultlook.ui" line="763"/>
         <source>Transparency and shadow options</source>
         <translation>Transparens och skugg-möjligheter</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="875"/>
+        <location filename="../defaultlook.ui" line="862"/>
         <source>Edit compton.conf directly in text editor</source>
         <translation>Redigera compton.conf direkt i text editor</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="878"/>
+        <location filename="../defaultlook.ui" line="865"/>
         <source>Edit compton.conf</source>
         <translation>Redigera compton.conf</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="889"/>
+        <location filename="../defaultlook.ui" line="876"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce Compositor Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce Compositor-inställningar&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="892"/>
+        <location filename="../defaultlook.ui" line="879"/>
         <source>Xfwm Settings</source>
         <translation>Xfwm Inställningar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="851"/>
+        <location filename="../defaultlook.ui" line="838"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Changing the VBlank mode may help alleviate some screen tearing issues.  See Help for more information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Att ändra VBlank mode kan hjälpa till att lätta screen tearing problem.  Se Hjälp för mer information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="854"/>
+        <location filename="../defaultlook.ui" line="841"/>
         <source>VBlank</source>
         <translation>VBlank</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="861"/>
+        <location filename="../defaultlook.ui" line="848"/>
         <source>Launch compton-conf configuration tool</source>
         <translation>Starta compton-conf konfigurationsverktyg</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="864"/>
+        <location filename="../defaultlook.ui" line="851"/>
         <source>Compton settings</source>
         <translation>Compton inställningar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="796"/>
+        <location filename="../defaultlook.ui" line="783"/>
         <source>None</source>
         <translation>Ingen</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="617"/>
+        <location filename="../defaultlook.ui" line="604"/>
         <source>default</source>
         <extracomment>default pointer size determined by X server</extracomment>
         <translation>standard</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="801"/>
+        <location filename="../defaultlook.ui" line="788"/>
         <source>Xfwm (Xfce) Compositor</source>
         <translation>Xfwm (Xfce) Compositor</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="806"/>
+        <location filename="../defaultlook.ui" line="793"/>
         <source>Compton </source>
         <translation>Compton </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="815"/>
+        <location filename="../defaultlook.ui" line="802"/>
         <source>auto</source>
         <translation>auto</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="820"/>
+        <location filename="../defaultlook.ui" line="807"/>
         <source>glx</source>
         <translation>glx</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="825"/>
+        <location filename="../defaultlook.ui" line="812"/>
         <source>xpresent</source>
         <translation>x-nuvarande</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="830"/>
-        <location filename="../defaultlook.ui" line="1416"/>
+        <location filename="../defaultlook.ui" line="817"/>
+        <location filename="../defaultlook.ui" line="1403"/>
         <source>off</source>
         <extracomment>setting to 0 turns off screensaver screen blank</extracomment>
         <translation>av</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="932"/>
+        <location filename="../defaultlook.ui" line="919"/>
         <source>Display</source>
         <translation>Skärm</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="943"/>
+        <location filename="../defaultlook.ui" line="930"/>
         <source>Hardware Backlight</source>
         <extracomment>set the hardware backlight on monitors that have them</extracomment>
         <translation>Hårdvaru-ljusstyrka</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="950"/>
+        <location filename="../defaultlook.ui" line="937"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Display Tweaks&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Skärmjusteringar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="977"/>
+        <location filename="../defaultlook.ui" line="964"/>
         <source>Choose Display for xrandr tweaks</source>
         <extracomment>choose the display that the xrandr tweaks will be acted upon</extracomment>
         <translation>Välj Skärm för xrandr-justeringar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="987"/>
+        <location filename="../defaultlook.ui" line="974"/>
         <source>Resolution</source>
         <translation>Upplösning</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="994"/>
+        <location filename="../defaultlook.ui" line="981"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Saving is per display&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Spara gäller för enskild skärm&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="997"/>
+        <location filename="../defaultlook.ui" line="984"/>
         <source>Save</source>
         <translation>Spara</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1004"/>
+        <location filename="../defaultlook.ui" line="991"/>
         <source>Software (xrandr) Brightness</source>
         <extracomment>adjust brightness (not backlight) via software</extracomment>
         <translation>Mjukvaru (xrandr) Ljusstyrka</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1011"/>
-        <location filename="../defaultlook.ui" line="1108"/>
+        <location filename="../defaultlook.ui" line="998"/>
+        <location filename="../defaultlook.ui" line="1095"/>
         <source>TextLabel</source>
         <translation>Text-Etikett</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1018"/>
+        <location filename="../defaultlook.ui" line="1005"/>
         <source>GTK scaling</source>
         <extracomment>gtk scale factor</extracomment>
         <translation>Skala GTK</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1038"/>
+        <location filename="../defaultlook.ui" line="1025"/>
         <source>xrandr Scaling</source>
         <extracomment>xrandr scale factor</extracomment>
         <translation>Skala xrandr</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1134"/>
+        <location filename="../defaultlook.ui" line="1121"/>
         <source>Config Options</source>
         <translation>Konfigurationsmöjligheter</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1145"/>
+        <location filename="../defaultlook.ui" line="1132"/>
         <source>Disable shortening of long filenames on the desktop</source>
         <translation>Stäng av förkortning av långa filnamn på skrivbordet</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1169"/>
+        <location filename="../defaultlook.ui" line="1156"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
         <translation>anmärkning: för viloläge, swap måste vara &gt;= RAM</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1189"/>
+        <location filename="../defaultlook.ui" line="1176"/>
         <source>Enable single-click on desktop</source>
         <translation>Aktivera singelklick på skrivbordet</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1196"/>
+        <location filename="../defaultlook.ui" line="1183"/>
         <source>Enable hibernate on Log Out menu </source>
         <translation>Aktivera viloläge på Utloggningsmenyn</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1203"/>
-        <location filename="../defaultlook.ui" line="1337"/>
+        <location filename="../defaultlook.ui" line="1190"/>
+        <location filename="../defaultlook.ui" line="1324"/>
         <source>Reset Thunar custom right-click actions to system defaults</source>
         <translation>Återställ Thunars anpassade högerklick-händelser till systemstandard</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1210"/>
-        <location filename="../defaultlook.ui" line="1388"/>
+        <location filename="../defaultlook.ui" line="1197"/>
+        <location filename="../defaultlook.ui" line="1375"/>
         <source>Enable single-click in Thunar File Manager</source>
         <translation>Aktivera singelklick i Thunar Filhanterare</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1217"/>
-        <location filename="../defaultlook.ui" line="1649"/>
+        <location filename="../defaultlook.ui" line="1204"/>
+        <location filename="../defaultlook.ui" line="1636"/>
         <source>Thunar windows always open in split view</source>
         <translation>Thunar-fönster öppnas alltid i delad vy</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1224"/>
-        <location filename="../defaultlook.ui" line="1581"/>
+        <location filename="../defaultlook.ui" line="1211"/>
+        <location filename="../defaultlook.ui" line="1568"/>
         <source>Thunar split view opens horizontal</source>
         <translation>Thunar delad vy öppnas horisontellt</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1231"/>
+        <location filename="../defaultlook.ui" line="1218"/>
         <source>Show percentages in notifcations when available</source>
         <translation>Visa procenttal i underrättelser när det är tillgängligt</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1238"/>
+        <location filename="../defaultlook.ui" line="1225"/>
         <source>Enable Desktop Zoom </source>
         <translation>Aktivera Skrivbords-Zoom </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1245"/>
-        <location filename="../defaultlook.ui" line="1767"/>
+        <location filename="../defaultlook.ui" line="1232"/>
+        <location filename="../defaultlook.ui" line="1754"/>
         <source>Show windows from all workspaces in panel</source>
         <translation>Visa fönster från alla arbetsytor i panelen</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1252"/>
+        <location filename="../defaultlook.ui" line="1239"/>
         <source>Show GTK File Dialog action buttons at bottom of dialogs</source>
         <translation>Visa aktivitetsknappar för GTK Fildialog nedtill i dialogerna</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1259"/>
+        <location filename="../defaultlook.ui" line="1246"/>
         <source>( also turns off Client Side Decorations for Xfce applications)</source>
         <translation>( stänger också av klientsidans dekorationer fö Xfce appar)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1272"/>
+        <location filename="../defaultlook.ui" line="1259"/>
         <source>Fluxbox</source>
         <translation>Fluxbox</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1284"/>
-        <location filename="../defaultlook.ui" line="1624"/>
+        <location filename="../defaultlook.ui" line="1271"/>
+        <location filename="../defaultlook.ui" line="1611"/>
         <source>On</source>
         <translation>På</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1289"/>
-        <location filename="../defaultlook.ui" line="1629"/>
+        <location filename="../defaultlook.ui" line="1276"/>
+        <location filename="../defaultlook.ui" line="1616"/>
         <source>Off</source>
         <translation>Av</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1310"/>
+        <location filename="../defaultlook.ui" line="1297"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Thunar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Thunar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1317"/>
+        <location filename="../defaultlook.ui" line="1304"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Verktygsfält-inställningar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1357"/>
+        <location filename="../defaultlook.ui" line="1344"/>
         <source>Toggle icon captions</source>
         <translation>Växla ikontexter</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1364"/>
+        <location filename="../defaultlook.ui" line="1351"/>
         <source>Reset Fluxbox Menu</source>
         <translation>Återställ Fluxbox Meny</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1381"/>
+        <location filename="../defaultlook.ui" line="1368"/>
         <source>Width</source>
         <translation>Bredd</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1395"/>
+        <location filename="../defaultlook.ui" line="1382"/>
         <source>Toggle desktop icons</source>
         <translation>Växla skrivbordsikoner</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1402"/>
-        <location filename="../defaultlook.ui" line="1426"/>
+        <location filename="../defaultlook.ui" line="1389"/>
+        <location filename="../defaultlook.ui" line="1413"/>
         <source>Autohide</source>
         <translation>Dölj automatiskt</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1409"/>
+        <location filename="../defaultlook.ui" line="1396"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock-inställningar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1500"/>
+        <location filename="../defaultlook.ui" line="1487"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Desktop Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Skrivbordsikoner&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1574"/>
+        <location filename="../defaultlook.ui" line="1561"/>
         <source>Reset DefaultDock</source>
         <translation>Återställ Standarddocka</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1588"/>
+        <location filename="../defaultlook.ui" line="1575"/>
         <source>Manage Tint2 Panel</source>
         <translation>Hantera Tint2 Panel</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1599"/>
+        <location filename="../defaultlook.ui" line="1586"/>
         <source>Height</source>
         <translation>Höjd</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1606"/>
-        <location filename="../defaultlook.ui" line="1642"/>
-        <location filename="../defaultlook.ui" line="1774"/>
+        <location filename="../defaultlook.ui" line="1593"/>
+        <location filename="../defaultlook.ui" line="1629"/>
+        <location filename="../defaultlook.ui" line="1761"/>
         <source>Placement</source>
         <translation>Placering</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1613"/>
+        <location filename="../defaultlook.ui" line="1600"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Screensaver&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>screensaver screen blank settings</extracomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Skärmsläckare&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1634"/>
+        <location filename="../defaultlook.ui" line="1621"/>
         <source>On Hover</source>
         <translation>Vid svepning med musen</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1656"/>
-        <location filename="../defaultlook.ui" line="1734"/>
+        <location filename="../defaultlook.ui" line="1643"/>
+        <location filename="../defaultlook.ui" line="1721"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Återställ Standard&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1663"/>
+        <location filename="../defaultlook.ui" line="1650"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Lägg till nya standard meny-objekt, om några, till existerande fluxbox-meny.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1666"/>
+        <location filename="../defaultlook.ui" line="1653"/>
         <source>Upgrade existing menu entries</source>
         <translation>Uppgradera befintliga meny-poster</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1686"/>
+        <location filename="../defaultlook.ui" line="1673"/>
         <source>Show Toolbar</source>
         <translation>Visa verktygsfältet</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1703"/>
+        <location filename="../defaultlook.ui" line="1690"/>
         <source>Reset ALL mx-fluxbox settings</source>
         <translation>Återställ ALLA mx-fluxbox inställningar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1710"/>
+        <location filename="../defaultlook.ui" line="1697"/>
         <source>Idle time (minutes)</source>
         <extracomment>set the time of inactivity  before screensaver screen blank occurs</extracomment>
         <translation>Vilotid (minuter)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1723"/>
+        <location filename="../defaultlook.ui" line="1710"/>
         <source>Plasma</source>
         <translation>Plasma</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1839"/>
+        <location filename="../defaultlook.ui" line="1826"/>
         <source>Workspace</source>
         <translation>Arbetsyta</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2019"/>
+        <location filename="../defaultlook.ui" line="2060"/>
         <source>Change computer name (requires reboot)</source>
         <extracomment>option to change the system hostname, requires a reboot to be 100% effective</extracomment>
         <translation>Ändra datornamn (kräver omstart)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2121"/>
+        <location filename="../defaultlook.ui" line="2043"/>
         <source>Change Default Display Manager (login screen) (requires reboot)</source>
         <extracomment>option to change display manager login screen.  present if more than one display manager is installed</extracomment>
         <translation>Byt standard Bildskärmshanterare (inloggningsskärm) (kräver omstart)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1963"/>
+        <location filename="../defaultlook.ui" line="2084"/>
         <source>Enable Bluetooth battery info for connected devices (requires system restart)</source>
         <extracomment>expose battery info for connected bluetooth devices to the operating system via dbus</extracomment>
         <translation>Aktivera Bluetooth batteri-information för anslutna enheter (kräver omstart av system)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1781"/>
+        <location filename="../defaultlook.ui" line="1768"/>
         <source>Enable single-click</source>
         <translation>Aktivera enkelklick</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1788"/>
+        <location filename="../defaultlook.ui" line="1775"/>
         <source>Reset KDE/Plasma defaults</source>
         <translation>Återställ KDE/Plasma standardinställning</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1863"/>
+        <location filename="../defaultlook.ui" line="1850"/>
         <source>Autostart plasma-discover system tray update notification utility</source>
         <extracomment>enable or disable autostartup of plasma-discover updater utility on login</extracomment>
         <translation>Autostarta plasma-discover notifieringsverktyg för uppdateringar i systembrickan </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1873"/>
+        <location filename="../defaultlook.ui" line="1860"/>
         <source>Super Key</source>
         <extracomment>referring to the meta or Left Super Key</extracomment>
         <translation>Windowstangent</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1881"/>
+        <location filename="../defaultlook.ui" line="1868"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Choose application&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>description of button action to launch file dialog to choose an application</extracomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Välj applikation&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1894"/>
+        <location filename="../defaultlook.ui" line="1881"/>
         <source>Xfce-superkey defaults</source>
         <extracomment>indicates that xfce-superkey will select a command by its default logic</extracomment>
         <translation>Xfce-windowstangent standard</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1901"/>
+        <location filename="../defaultlook.ui" line="1888"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Also known as the &amp;quot;windows&amp;quot; key&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Även känd som &amp;quot;windows&amp;quot; tangent&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1904"/>
+        <location filename="../defaultlook.ui" line="1891"/>
         <source>Command to run with Super (Meta) key</source>
         <extracomment>label for the field to enter the command to use with super key</extracomment>
         <translation>Kommando att köra med Windows (Meta) tangent</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1934"/>
+        <location filename="../defaultlook.ui" line="1921"/>
         <source>Other</source>
         <translation>Annat</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2094"/>
+        <location filename="../defaultlook.ui" line="1946"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>Återställ Lightdm (inloggningsskärm) till systemets standardtema</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2060"/>
+        <location filename="../defaultlook.ui" line="1998"/>
         <source>put a hold or remove a hold on updates of Liquorix kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
         <translation>sätt ett stopp på eller ta bort ett stopp på uppdateringar av Liquorix-kärnor</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2063"/>
+        <location filename="../defaultlook.ui" line="2001"/>
         <source>Enable Automatic Liquorix Kernel Updates (MX ahs repository)</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
         <translation>Aktivera Automatiska Liquorix Kärnuppdateringar (MX ahs förråd)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2084"/>
+        <location filename="../defaultlook.ui" line="2050"/>
         <source>put a hold or remove a hold on updates of Debian  kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
         <translation>sätt ett stopp på eller ta bort ett stopp på uppdateringar av Debian-kärnor</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2087"/>
+        <location filename="../defaultlook.ui" line="2053"/>
         <source>Enable Automatic Debian Kernel Updates</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
         <translation>Aktivera Automatiska Debian Kärnuppdateringar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1956"/>
+        <location filename="../defaultlook.ui" line="1970"/>
         <source>Password for administrative tasks:</source>
         <translation>Lösenord för administrativa göromål:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1970"/>
+        <location filename="../defaultlook.ui" line="2098"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>Aktivera montering av interna hårddiskar för non-root användare</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2108"/>
+        <location filename="../defaultlook.ui" line="1977"/>
         <source>Root</source>
         <translation>Root</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1998"/>
+        <location filename="../defaultlook.ui" line="2036"/>
         <source>Enable kernel sandbox</source>
         <translation>Aktivera kärn-sandbox</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2070"/>
+        <location filename="../defaultlook.ui" line="1939"/>
         <source>&amp;User</source>
         <translation>&amp;User</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2026"/>
+        <location filename="../defaultlook.ui" line="1929"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;kräver omstart&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2029"/>
+        <location filename="../defaultlook.ui" line="1932"/>
         <source>Enable Bluetooth adapters on boot</source>
         <translation>Aktivera Bluetooth-adaptrar vid boot</translation>
     </message>
@@ -892,138 +892,156 @@
         <translation>Apt installerar ytterligare &quot;rekommenderade&quot; paket som beroenden</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2053"/>
+        <location filename="../defaultlook.ui" line="2022"/>
         <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
         <translation>Generera fluxbox Alla Appar-meny efter paketinstallation, borttagande, och uppdateringar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1942"/>
+        <location filename="../defaultlook.ui" line="1991"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
         <translation>Använd Client Side Decorations (CSD) på GTK3 program som stöder dem (kräver omstart av sessionen)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1991"/>
+        <location filename="../defaultlook.ui" line="1956"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>Använd intel drivrutin istället för standard &quot;modesetting&quot; drivrutin (omstart behövs)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2012"/>
+        <location filename="../defaultlook.ui" line="2091"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>ANMÄRKNING: existerande /etc/X11/xorg.conf.d/20-intel.conf kommer att backas upp i hemkatalogen</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2101"/>
+        <location filename="../defaultlook.ui" line="2029"/>
         <source>Use tearfree amdgpu option</source>
         <translation>Använd tearfree amdgpu alternativ</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2077"/>
+        <location filename="../defaultlook.ui" line="1963"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>ANMÄRKNING: existerande /etc/X11/xorg.conf.d/20-amd.conf kommer att backas upp i hemkatalogen</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1949"/>
+        <location filename="../defaultlook.ui" line="2015"/>
         <source>Use tearfree radeon driver option</source>
         <translation>Använd tearfree radeon drivrutin-alternativ</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1977"/>
+        <location filename="../defaultlook.ui" line="2105"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>ANMÄRKNING: existerande /etc/X11/xorg.conf.d/20-radeon.conf kommer att backas upp i hemkatalogen</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="59"/>
+        <location filename="../defaultlook.cpp" line="61"/>
         <source>--display switch only valid for Xfce</source>
         <translation>--skärmväxlare enbart för Xfce</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="657"/>
+        <location filename="../defaultlook.cpp" line="671"/>
         <source>About MX Tweak</source>
         <translation>Om MX Tweak</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="659"/>
+        <location filename="../defaultlook.cpp" line="673"/>
         <source>Version: </source>
         <translation>Version:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="660"/>
+        <location filename="../defaultlook.cpp" line="674"/>
         <source>App for quick default ui theme changes and tweaks</source>
         <translation>App för snabbändringar av användargränsnittets standardtema</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="662"/>
+        <location filename="../defaultlook.cpp" line="676"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="663"/>
+        <location filename="../defaultlook.cpp" line="677"/>
         <source>%1 License</source>
         <translation>%1 Licens</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="677"/>
+        <location filename="../defaultlook.cpp" line="691"/>
         <source>%1 Help</source>
         <translation>%1 Hjälp</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="687"/>
+        <location filename="../defaultlook.cpp" line="701"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
         <translation>Färdig! Firefox kan behöva en omstart för att ändringarna ska synas</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="734"/>
+        <location filename="../defaultlook.cpp" line="748"/>
         <source>Plese remove special characters</source>
         <translation>Var vänlig ta bort specialtecken</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="734"/>
+        <location filename="../defaultlook.cpp" line="748"/>
         <source>from file name</source>
         <translation>från filnamnet</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="741"/>
+        <location filename="../defaultlook.cpp" line="755"/>
         <source>File name already exists.  Choose another name</source>
         <translation>Filnamnet finns redan. Välj ett annat namn</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="769"/>
+        <location filename="../defaultlook.cpp" line="783"/>
         <source>File is not a valid tar.xz archive file</source>
         <translation>Filen är inte en giltig tar.xz arkivfil</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="772"/>
+        <location filename="../defaultlook.cpp" line="786"/>
         <source>Archive does not contain a panel config</source>
         <translation>Arkivet innehåller inte en panelkonfiguration</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="947"/>
+        <location filename="../defaultlook.cpp" line="961"/>
         <source>Panel settings</source>
         <translation>Panel-inställningar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="948"/>
+        <location filename="../defaultlook.cpp" line="962"/>
         <source>Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
         <translation>Dina nuvarande panelinställningar har en backup i en dold mapp som heter .restore i din hemkatalog (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1884"/>
+        <location filename="../defaultlook.cpp" line="1644"/>
+        <source>Plasma Widget Themes</source>
+        <comment>theme style of the kde plasma widgets</comment>
+        <translation>Plasma Widget teman</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.cpp" line="1645"/>
+        <source>Color Schemes</source>
+        <comment>plasma widget color schemes</comment>
+        <translation>Färgscheman</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.cpp" line="1646"/>
+        <source>Plasma Look &amp; Feel Global Themes</source>
+        <comment>plasma global themes</comment>
+        <translation>Plasma Look &amp; Feel globala teman</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.cpp" line="1914"/>
         <source>settings</source>
         <translation>inställningar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2224"/>
+        <location filename="../defaultlook.cpp" line="2255"/>
         <source>Choose a theme set</source>
         <translation>Välj en temauppsättning</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2652"/>
+        <location filename="../defaultlook.cpp" line="2705"/>
         <source>Please enter a computer name.</source>
         <comment>question to enter a name for the computer hostname</comment>
         <translation>Var vänlig ange ett datornamn.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2656"/>
+        <location filename="../defaultlook.cpp" line="2709"/>
         <source>Sorry, your computer name contains invalid characters.
 You&apos;ll have to select a different
 name before proceeding.</source>
@@ -1033,7 +1051,7 @@ Du måste välja ett annat
 namn innan du fortsätter.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="4214"/>
+        <location filename="../defaultlook.cpp" line="4342"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
         <translation>Välj applikation att köra</translation>
