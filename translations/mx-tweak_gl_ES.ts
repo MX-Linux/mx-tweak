@@ -108,783 +108,783 @@
     <name>defaultlook</name>
     <message>
         <location filename="../defaultlook.ui" line="20"/>
-        <location filename="../defaultlook.cpp" line="58"/>
-        <location filename="../defaultlook.cpp" line="87"/>
-        <location filename="../defaultlook.cpp" line="658"/>
-        <location filename="../defaultlook.cpp" line="677"/>
-        <location filename="../defaultlook.cpp" line="686"/>
-        <location filename="../defaultlook.cpp" line="733"/>
-        <location filename="../defaultlook.cpp" line="741"/>
-        <location filename="../defaultlook.cpp" line="768"/>
-        <location filename="../defaultlook.cpp" line="771"/>
+        <location filename="../defaultlook.cpp" line="60"/>
+        <location filename="../defaultlook.cpp" line="108"/>
+        <location filename="../defaultlook.cpp" line="672"/>
+        <location filename="../defaultlook.cpp" line="691"/>
+        <location filename="../defaultlook.cpp" line="700"/>
+        <location filename="../defaultlook.cpp" line="747"/>
+        <location filename="../defaultlook.cpp" line="755"/>
+        <location filename="../defaultlook.cpp" line="782"/>
+        <location filename="../defaultlook.cpp" line="785"/>
         <source>MX Tweak</source>
         <translation>MX axustes rápidos</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="41"/>
+        <location filename="../defaultlook.ui" line="165"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the panel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Personalizar o panel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="51"/>
-        <location filename="../defaultlook.ui" line="272"/>
+        <location filename="../defaultlook.ui" line="175"/>
+        <location filename="../defaultlook.ui" line="259"/>
         <source>Panel</source>
         <translation>Panel</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="71"/>
+        <location filename="../defaultlook.ui" line="195"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configure window behavior and shortcuts&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configurar o comportamento das lapelas e dos atallos&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="85"/>
+        <location filename="../defaultlook.ui" line="209"/>
         <source>Window Manager</source>
         <translation>Xestor de lapelas</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="105"/>
+        <location filename="../defaultlook.ui" line="229"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the look of your desktop&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Personalizar o aspecto do escritorio&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="119"/>
+        <location filename="../defaultlook.ui" line="243"/>
         <source>Appearance</source>
         <translation>Apariencia</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="133"/>
+        <location filename="../defaultlook.ui" line="41"/>
         <source>Xfce Settings</source>
         <translation>Configuración do Xfce</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="212"/>
+        <location filename="../defaultlook.ui" line="107"/>
         <source>About</source>
         <translation>Sobre</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="223"/>
+        <location filename="../defaultlook.ui" line="118"/>
         <source>Help</source>
         <translation>Axuda</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="240"/>
+        <location filename="../defaultlook.ui" line="135"/>
         <source>Quit application</source>
         <translation>Saír do aplicativo</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="243"/>
+        <location filename="../defaultlook.ui" line="138"/>
         <source>Close</source>
         <translation>Cerrar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="250"/>
+        <location filename="../defaultlook.ui" line="145"/>
         <source>Alt+N</source>
         <translation>Alt+N</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="283"/>
+        <location filename="../defaultlook.ui" line="270"/>
         <source>Display panel horizontally</source>
         <extracomment>panel will be shown in a horizontal configuration</extracomment>
         <translation>Exhibir o panel en horizontal</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="293"/>
+        <location filename="../defaultlook.ui" line="280"/>
         <source>Volume</source>
         <extracomment>volume plugin scale factor</extracomment>
         <translation>Volume</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="300"/>
+        <location filename="../defaultlook.ui" line="287"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>affects the docklike plugin</extracomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="307"/>
+        <location filename="../defaultlook.ui" line="294"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Affects all panels&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Afecta a todos os paneis&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="327"/>
-        <location filename="../defaultlook.ui" line="1811"/>
+        <location filename="../defaultlook.ui" line="314"/>
+        <location filename="../defaultlook.ui" line="1798"/>
         <source>Bottom</source>
         <translation>Abaixo</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="332"/>
-        <location filename="../defaultlook.ui" line="1821"/>
+        <location filename="../defaultlook.ui" line="319"/>
+        <location filename="../defaultlook.ui" line="1808"/>
         <source>Top</source>
         <translation>Arriba</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="340"/>
+        <location filename="../defaultlook.ui" line="327"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Tasklist&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Tasklist&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="347"/>
+        <location filename="../defaultlook.ui" line="334"/>
         <source>Display panel vertically</source>
         <extracomment>panel will be shown in a vertical configuration</extracomment>
         <translation>Exhibir o panel na vertical</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="362"/>
-        <location filename="../defaultlook.ui" line="1800"/>
+        <location filename="../defaultlook.ui" line="349"/>
+        <location filename="../defaultlook.ui" line="1787"/>
         <source>Affects 1st panel</source>
         <extracomment>acts on the first poanel found in Xfce panel xml fle</extracomment>
         <translation>Afecta ao panel 1</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="369"/>
+        <location filename="../defaultlook.ui" line="356"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Panel Plugin Scales&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Escalas de complementos do panel&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="389"/>
+        <location filename="../defaultlook.ui" line="376"/>
         <source>Backup current panel configuration</source>
         <extracomment>backup existing panel configuration</extracomment>
         <translation>Gardar a configuración actual do panel</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="399"/>
-        <location filename="../defaultlook.ui" line="459"/>
+        <location filename="../defaultlook.ui" line="386"/>
+        <location filename="../defaultlook.ui" line="446"/>
         <source>Options</source>
         <translation>Opcións</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="419"/>
+        <location filename="../defaultlook.ui" line="406"/>
         <source>Power Manager</source>
         <extracomment>power manager plugin scale factor</extracomment>
         <translation>Xestor de energia</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="426"/>
+        <location filename="../defaultlook.ui" line="413"/>
         <source>Restore backup panel configuration</source>
         <extracomment>restore a panel backup</extracomment>
         <translation>Restaurar a configuración do panel gardado</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="449"/>
+        <location filename="../defaultlook.ui" line="436"/>
         <source>Set Scales</source>
         <extracomment>set a scale factor</extracomment>
         <translation>Establecer escalas</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="479"/>
-        <location filename="../defaultlook.ui" line="1816"/>
+        <location filename="../defaultlook.ui" line="466"/>
+        <location filename="../defaultlook.ui" line="1803"/>
         <source>Left</source>
         <translation>Á esquerda</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="484"/>
-        <location filename="../defaultlook.ui" line="1826"/>
+        <location filename="../defaultlook.ui" line="471"/>
+        <location filename="../defaultlook.ui" line="1813"/>
         <source>Right</source>
         <translation>Á dereita</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="492"/>
+        <location filename="../defaultlook.ui" line="479"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Buttons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>affects the window button plugin</extracomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Botóns da lapela&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="513"/>
+        <location filename="../defaultlook.ui" line="500"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Docklike is the modern dock plugin for the panel.  Window Buttons is the classic tasklist without dock features.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Docklike é o complemento moderno do panel. Window Buttons é a lista de tarefas clásica sen características de dock.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="536"/>
-        <location filename="../defaultlook.ui" line="735"/>
-        <location filename="../defaultlook.ui" line="909"/>
-        <location filename="../defaultlook.ui" line="1077"/>
-        <location filename="../defaultlook.ui" line="1084"/>
-        <location filename="../defaultlook.ui" line="1091"/>
-        <location filename="../defaultlook.ui" line="1158"/>
-        <location filename="../defaultlook.ui" line="1303"/>
-        <location filename="../defaultlook.ui" line="1852"/>
-        <location filename="../defaultlook.ui" line="1911"/>
-        <location filename="../defaultlook.ui" line="2042"/>
+        <location filename="../defaultlook.ui" line="523"/>
+        <location filename="../defaultlook.ui" line="722"/>
+        <location filename="../defaultlook.ui" line="896"/>
+        <location filename="../defaultlook.ui" line="1064"/>
+        <location filename="../defaultlook.ui" line="1071"/>
+        <location filename="../defaultlook.ui" line="1078"/>
+        <location filename="../defaultlook.ui" line="1145"/>
+        <location filename="../defaultlook.ui" line="1290"/>
+        <location filename="../defaultlook.ui" line="1839"/>
+        <location filename="../defaultlook.ui" line="1898"/>
+        <location filename="../defaultlook.ui" line="2073"/>
         <source>Apply</source>
         <extracomment>apply changes</extracomment>
         <translation>Aplicar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="556"/>
+        <location filename="../defaultlook.ui" line="543"/>
         <source>Restore default panel</source>
         <extracomment>affects any panel that is curently configured</extracomment>
         <translation>Restaurar o panel predeterminado</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="566"/>
+        <location filename="../defaultlook.ui" line="553"/>
         <source>Set Tasklist plugin to:</source>
         <extracomment>change the tasklist plugin</extracomment>
         <translation>Configura o plugin Tasklist para:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="580"/>
+        <location filename="../defaultlook.ui" line="567"/>
         <source>Theme</source>
         <translation>Tema</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="651"/>
+        <location filename="../defaultlook.ui" line="638"/>
         <source>Size</source>
         <extracomment>size of the mouse pointer or cursor</extracomment>
         <translation>Tamaño</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="679"/>
+        <location filename="../defaultlook.ui" line="666"/>
         <source>Theme Options</source>
         <translation>Opcións de tema</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="595"/>
+        <location filename="../defaultlook.ui" line="582"/>
         <source>Remove User Theme Set</source>
         <translation>Eliminar tema do usuario</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="588"/>
+        <location filename="../defaultlook.ui" line="575"/>
         <source>Preview</source>
         <translation>Visualizar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="695"/>
+        <location filename="../defaultlook.ui" line="682"/>
         <source>Undo</source>
         <translation>Desfacer</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="606"/>
+        <location filename="../defaultlook.ui" line="593"/>
         <source>Save Current Settings as a Theme Set</source>
         <extracomment>save theme settings as a group</extracomment>
         <translation>Gardar as configuracións actuais como tema</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="644"/>
+        <location filename="../defaultlook.ui" line="631"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Cursors&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>cursor theme</extracomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Cursors&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="664"/>
+        <location filename="../defaultlook.ui" line="651"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Manager&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>theme a window manager border will get</extracomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Xestor de xanelas&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="702"/>
+        <location filename="../defaultlook.ui" line="689"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>theme an application will get</extracomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Aplicativo&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="637"/>
+        <location filename="../defaultlook.ui" line="624"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>icon theme</extracomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Iconas&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="630"/>
+        <location filename="../defaultlook.ui" line="617"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Themes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Temas&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="758"/>
-        <location filename="../defaultlook.ui" line="769"/>
+        <location filename="../defaultlook.ui" line="745"/>
+        <location filename="../defaultlook.ui" line="756"/>
         <source>Compositor</source>
         <translation>Compositor</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="776"/>
+        <location filename="../defaultlook.ui" line="763"/>
         <source>Transparency and shadow options</source>
         <translation>Opcións de transparencia e sombreado</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="875"/>
+        <location filename="../defaultlook.ui" line="862"/>
         <source>Edit compton.conf directly in text editor</source>
         <translation>Editar o ficheiro compton.conf directamente no editor de texto</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="878"/>
+        <location filename="../defaultlook.ui" line="865"/>
         <source>Edit compton.conf</source>
         <translation>Editar compton.conf</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="889"/>
+        <location filename="../defaultlook.ui" line="876"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce Compositor Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configuración do compositor do Xfce&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="892"/>
+        <location filename="../defaultlook.ui" line="879"/>
         <source>Xfwm Settings</source>
         <translation>Configuración do Xfwm</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="851"/>
+        <location filename="../defaultlook.ui" line="838"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Changing the VBlank mode may help alleviate some screen tearing issues.  See Help for more information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cambiar o modo VBlank pode axudar a aliviar algúns problemas de distorsión na pantalla. Consultar a axuda para máis información.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="854"/>
+        <location filename="../defaultlook.ui" line="841"/>
         <source>VBlank</source>
         <translation>VBlank</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="861"/>
+        <location filename="../defaultlook.ui" line="848"/>
         <source>Launch compton-conf configuration tool</source>
         <translation>Executar a ferramenta de configuración compton-conf</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="864"/>
+        <location filename="../defaultlook.ui" line="851"/>
         <source>Compton settings</source>
         <translation>Configuración do Compton</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="796"/>
+        <location filename="../defaultlook.ui" line="783"/>
         <source>None</source>
         <translation>Ningún</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="617"/>
+        <location filename="../defaultlook.ui" line="604"/>
         <source>default</source>
         <extracomment>default pointer size determined by X server</extracomment>
         <translation>predeterminado</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="801"/>
+        <location filename="../defaultlook.ui" line="788"/>
         <source>Xfwm (Xfce) Compositor</source>
         <translation>Compositoir do Xfwm (Xfce)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="806"/>
+        <location filename="../defaultlook.ui" line="793"/>
         <source>Compton </source>
         <translation>Compton</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="815"/>
+        <location filename="../defaultlook.ui" line="802"/>
         <source>auto</source>
         <translation>auto</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="820"/>
+        <location filename="../defaultlook.ui" line="807"/>
         <source>glx</source>
         <translation>glx</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="825"/>
+        <location filename="../defaultlook.ui" line="812"/>
         <source>xpresent</source>
         <translation>xpresent</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="830"/>
-        <location filename="../defaultlook.ui" line="1416"/>
+        <location filename="../defaultlook.ui" line="817"/>
+        <location filename="../defaultlook.ui" line="1403"/>
         <source>off</source>
         <extracomment>setting to 0 turns off screensaver screen blank</extracomment>
         <translation>apagado</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="932"/>
+        <location filename="../defaultlook.ui" line="919"/>
         <source>Display</source>
         <translation>Display</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="943"/>
+        <location filename="../defaultlook.ui" line="930"/>
         <source>Hardware Backlight</source>
         <extracomment>set the hardware backlight on monitors that have them</extracomment>
         <translation>Retroiluminación da pantalla</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="950"/>
+        <location filename="../defaultlook.ui" line="937"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Display Tweaks&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Axustes da pantalla&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="977"/>
+        <location filename="../defaultlook.ui" line="964"/>
         <source>Choose Display for xrandr tweaks</source>
         <extracomment>choose the display that the xrandr tweaks will be acted upon</extracomment>
         <translation>Escoller pantalla para axustes do xrandr</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="987"/>
+        <location filename="../defaultlook.ui" line="974"/>
         <source>Resolution</source>
         <translation>Resolución</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="994"/>
+        <location filename="../defaultlook.ui" line="981"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Saving is per display&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Gardar é por pantalla&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="997"/>
+        <location filename="../defaultlook.ui" line="984"/>
         <source>Save</source>
         <translation>Gardar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1004"/>
+        <location filename="../defaultlook.ui" line="991"/>
         <source>Software (xrandr) Brightness</source>
         <extracomment>adjust brightness (not backlight) via software</extracomment>
         <translation>Brillo controlado polo software (xrandr)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1011"/>
-        <location filename="../defaultlook.ui" line="1108"/>
+        <location filename="../defaultlook.ui" line="998"/>
+        <location filename="../defaultlook.ui" line="1095"/>
         <source>TextLabel</source>
         <translation>Rótulo de texto</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1018"/>
+        <location filename="../defaultlook.ui" line="1005"/>
         <source>GTK scaling</source>
         <extracomment>gtk scale factor</extracomment>
         <translation>Escala GTK</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1038"/>
+        <location filename="../defaultlook.ui" line="1025"/>
         <source>xrandr Scaling</source>
         <extracomment>xrandr scale factor</extracomment>
         <translation>Escala xrandr</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1134"/>
+        <location filename="../defaultlook.ui" line="1121"/>
         <source>Config Options</source>
         <translation>Opcións da configuración</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1145"/>
+        <location filename="../defaultlook.ui" line="1132"/>
         <source>Disable shortening of long filenames on the desktop</source>
         <translation>Desactivar o acurtamento dos nomes dos ficheiros</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1169"/>
+        <location filename="../defaultlook.ui" line="1156"/>
         <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
         <translation>                   nota: para o sistema poder hibernar, a partición swap ten que ser &gt;= RAM instalada</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1189"/>
+        <location filename="../defaultlook.ui" line="1176"/>
         <source>Enable single-click on desktop</source>
         <translation>Acivar premer único</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1196"/>
+        <location filename="../defaultlook.ui" line="1183"/>
         <source>Enable hibernate on Log Out menu </source>
         <translation>Activar &apos;Hibernar&apos; no menú Saír</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1203"/>
-        <location filename="../defaultlook.ui" line="1337"/>
+        <location filename="../defaultlook.ui" line="1190"/>
+        <location filename="../defaultlook.ui" line="1324"/>
         <source>Reset Thunar custom right-click actions to system defaults</source>
         <translation>Restablecer as accións predeterminadas do botón directo do rato en Thunar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1210"/>
-        <location filename="../defaultlook.ui" line="1388"/>
+        <location filename="../defaultlook.ui" line="1197"/>
+        <location filename="../defaultlook.ui" line="1375"/>
         <source>Enable single-click in Thunar File Manager</source>
         <translation>Activar cun premer no xestor de ficheiros Thumar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1217"/>
-        <location filename="../defaultlook.ui" line="1649"/>
+        <location filename="../defaultlook.ui" line="1204"/>
+        <location filename="../defaultlook.ui" line="1636"/>
         <source>Thunar windows always open in split view</source>
         <translation>As xanelas do Thunar sempre abren en vista dividida</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1224"/>
-        <location filename="../defaultlook.ui" line="1581"/>
+        <location filename="../defaultlook.ui" line="1211"/>
+        <location filename="../defaultlook.ui" line="1568"/>
         <source>Thunar split view opens horizontal</source>
         <translation>A vista dividida do Thunar abre en horizontal</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1231"/>
+        <location filename="../defaultlook.ui" line="1218"/>
         <source>Show percentages in notifcations when available</source>
         <translation>Mostrar porcentaxes nas notificacións cando estean dispoñibles</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1238"/>
+        <location filename="../defaultlook.ui" line="1225"/>
         <source>Enable Desktop Zoom </source>
         <translation>Activa a ampliación do escritorio</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1245"/>
-        <location filename="../defaultlook.ui" line="1767"/>
+        <location filename="../defaultlook.ui" line="1232"/>
+        <location filename="../defaultlook.ui" line="1754"/>
         <source>Show windows from all workspaces in panel</source>
         <translation>Amosar as lapelas de todas asáreas de traballo no panel</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1252"/>
+        <location filename="../defaultlook.ui" line="1239"/>
         <source>Show GTK File Dialog action buttons at bottom of dialogs</source>
         <translation>Mostrar botóns de acción do diálogo de ficheiros GTK na parte inferior dos diálogos</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1259"/>
+        <location filename="../defaultlook.ui" line="1246"/>
         <source>( also turns off Client Side Decorations for Xfce applications)</source>
         <translation>( tamén desactiva as Decoracións do Lado do Cliente para as aplicacións de Xfce)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1272"/>
+        <location filename="../defaultlook.ui" line="1259"/>
         <source>Fluxbox</source>
         <translation>Fluxbox</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1284"/>
-        <location filename="../defaultlook.ui" line="1624"/>
+        <location filename="../defaultlook.ui" line="1271"/>
+        <location filename="../defaultlook.ui" line="1611"/>
         <source>On</source>
         <translation>Amosar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1289"/>
-        <location filename="../defaultlook.ui" line="1629"/>
+        <location filename="../defaultlook.ui" line="1276"/>
+        <location filename="../defaultlook.ui" line="1616"/>
         <source>Off</source>
         <translation>Agochar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1310"/>
+        <location filename="../defaultlook.ui" line="1297"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Thunar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Thunar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1317"/>
+        <location filename="../defaultlook.ui" line="1304"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Configuracións da barra de ferramentas&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1357"/>
+        <location filename="../defaultlook.ui" line="1344"/>
         <source>Toggle icon captions</source>
         <translation>Alterna os subtítulos das iconas</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1364"/>
+        <location filename="../defaultlook.ui" line="1351"/>
         <source>Reset Fluxbox Menu</source>
         <translation>Restablecer o menú do Fluxbox</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1381"/>
+        <location filename="../defaultlook.ui" line="1368"/>
         <source>Width</source>
         <translation>Largura</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1395"/>
+        <location filename="../defaultlook.ui" line="1382"/>
         <source>Toggle desktop icons</source>
         <translation>Activa ou desactiva as iconas do escritorio</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1402"/>
-        <location filename="../defaultlook.ui" line="1426"/>
+        <location filename="../defaultlook.ui" line="1389"/>
+        <location filename="../defaultlook.ui" line="1413"/>
         <source>Autohide</source>
         <translation>Agochar automático</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1409"/>
+        <location filename="../defaultlook.ui" line="1396"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Configuración do Dock&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1500"/>
+        <location filename="../defaultlook.ui" line="1487"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Desktop Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Iconas do escritorio&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1574"/>
+        <location filename="../defaultlook.ui" line="1561"/>
         <source>Reset DefaultDock</source>
         <translation>Restablecer a dock predeterminada</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1588"/>
+        <location filename="../defaultlook.ui" line="1575"/>
         <source>Manage Tint2 Panel</source>
         <translation>Xestionar o panel Tint2</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1599"/>
+        <location filename="../defaultlook.ui" line="1586"/>
         <source>Height</source>
         <translation>Altura</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1606"/>
-        <location filename="../defaultlook.ui" line="1642"/>
-        <location filename="../defaultlook.ui" line="1774"/>
+        <location filename="../defaultlook.ui" line="1593"/>
+        <location filename="../defaultlook.ui" line="1629"/>
+        <location filename="../defaultlook.ui" line="1761"/>
         <source>Placement</source>
         <translation>Posicionamento</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1613"/>
+        <location filename="../defaultlook.ui" line="1600"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Screensaver&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>screensaver screen blank settings</extracomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Protector de pantalla&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1634"/>
+        <location filename="../defaultlook.ui" line="1621"/>
         <source>On Hover</source>
         <translation>Ao apuntar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1656"/>
-        <location filename="../defaultlook.ui" line="1734"/>
+        <location filename="../defaultlook.ui" line="1643"/>
+        <location filename="../defaultlook.ui" line="1721"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Restablecer as predeterminas&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1663"/>
+        <location filename="../defaultlook.ui" line="1650"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Engade novos elementos do menú predeterminados, se os hai, ao menú de fluxbox existente.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1666"/>
+        <location filename="../defaultlook.ui" line="1653"/>
         <source>Upgrade existing menu entries</source>
         <translation>Actualizar entradas de menú existentes</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1686"/>
+        <location filename="../defaultlook.ui" line="1673"/>
         <source>Show Toolbar</source>
         <translation>Mostrar a barra de ferramentas</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1703"/>
+        <location filename="../defaultlook.ui" line="1690"/>
         <source>Reset ALL mx-fluxbox settings</source>
         <translation>Restablecer todas as configuracións do mx-fluxbox</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1710"/>
+        <location filename="../defaultlook.ui" line="1697"/>
         <source>Idle time (minutes)</source>
         <extracomment>set the time of inactivity  before screensaver screen blank occurs</extracomment>
         <translation>Tempo de inactividade (minutos)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1723"/>
+        <location filename="../defaultlook.ui" line="1710"/>
         <source>Plasma</source>
         <translation>Plasma</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1839"/>
+        <location filename="../defaultlook.ui" line="1826"/>
         <source>Workspace</source>
         <translation>Escritorio</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2019"/>
+        <location filename="../defaultlook.ui" line="2060"/>
         <source>Change computer name (requires reboot)</source>
         <extracomment>option to change the system hostname, requires a reboot to be 100% effective</extracomment>
         <translation>Cambiar o nome do ordenador (require reiniciar)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2121"/>
+        <location filename="../defaultlook.ui" line="2043"/>
         <source>Change Default Display Manager (login screen) (requires reboot)</source>
         <extracomment>option to change display manager login screen.  present if more than one display manager is installed</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Cambiar o Xestor de Visualización predeterminado (pantalla de inicio de sesión) (require reinicio)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1963"/>
+        <location filename="../defaultlook.ui" line="2084"/>
         <source>Enable Bluetooth battery info for connected devices (requires system restart)</source>
         <extracomment>expose battery info for connected bluetooth devices to the operating system via dbus</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Activar a información da batería de Bluetooth para os dispositivos conectados (require o reinicio do sistema)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1781"/>
+        <location filename="../defaultlook.ui" line="1768"/>
         <source>Enable single-click</source>
         <translation>Acivar premer único</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1788"/>
+        <location filename="../defaultlook.ui" line="1775"/>
         <source>Reset KDE/Plasma defaults</source>
         <translation>Restablcer as predeterminadas do KDE/Plasma</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1863"/>
+        <location filename="../defaultlook.ui" line="1850"/>
         <source>Autostart plasma-discover system tray update notification utility</source>
         <extracomment>enable or disable autostartup of plasma-discover updater utility on login</extracomment>
         <translation>Inicio automático de notificación de actualización da bandexa do sistema plasma-discover</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1873"/>
+        <location filename="../defaultlook.ui" line="1860"/>
         <source>Super Key</source>
         <extracomment>referring to the meta or Left Super Key</extracomment>
         <translation>Tecla Super</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1881"/>
+        <location filename="../defaultlook.ui" line="1868"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Choose application&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>description of button action to launch file dialog to choose an application</extracomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Escolle a aplicación&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1894"/>
+        <location filename="../defaultlook.ui" line="1881"/>
         <source>Xfce-superkey defaults</source>
         <extracomment>indicates that xfce-superkey will select a command by its default logic</extracomment>
         <translation>Predeterminados do Xfce-superkey </translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1901"/>
+        <location filename="../defaultlook.ui" line="1888"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Also known as the &amp;quot;windows&amp;quot; key&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tamén coñecida como a tecla &amp;quot;windows&amp;quot;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1904"/>
+        <location filename="../defaultlook.ui" line="1891"/>
         <source>Command to run with Super (Meta) key</source>
         <extracomment>label for the field to enter the command to use with super key</extracomment>
         <translation>Comando para executar coa tecla Super (Meta)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1934"/>
+        <location filename="../defaultlook.ui" line="1921"/>
         <source>Other</source>
         <translation>Outro</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2094"/>
+        <location filename="../defaultlook.ui" line="1946"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>Restablecer o tema predeterminado da pantalla da entrada (LightDM)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2060"/>
+        <location filename="../defaultlook.ui" line="1998"/>
         <source>put a hold or remove a hold on updates of Liquorix kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
         <translation>poñer unha retención ou eliminar unha retención nas actualizacións dos Kernels de Liquorix</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2063"/>
+        <location filename="../defaultlook.ui" line="2001"/>
         <source>Enable Automatic Liquorix Kernel Updates (MX ahs repository)</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
         <translation>Habilitar Actualizacións Automáticas do Kernel Liquorix (repositorio MX ahs)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2084"/>
+        <location filename="../defaultlook.ui" line="2050"/>
         <source>put a hold or remove a hold on updates of Debian  kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
         <translation>poñer unha retención ou eliminar unha retención nas actualizacións dos kernels de Debian</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2087"/>
+        <location filename="../defaultlook.ui" line="2053"/>
         <source>Enable Automatic Debian Kernel Updates</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
         <translation>Habilitar actualizacións automáticas do kernel Debian</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1956"/>
+        <location filename="../defaultlook.ui" line="1970"/>
         <source>Password for administrative tasks:</source>
         <translation>Contrasinal para tarefas administrativas:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1970"/>
+        <location filename="../defaultlook.ui" line="2098"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>Activar o conexión de discos internos por usuarios alén do root</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2108"/>
+        <location filename="../defaultlook.ui" line="1977"/>
         <source>Root</source>
         <translation>Root</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1998"/>
+        <location filename="../defaultlook.ui" line="2036"/>
         <source>Enable kernel sandbox</source>
         <translation>Activar ambiente illado para o núcleo</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2070"/>
+        <location filename="../defaultlook.ui" line="1939"/>
         <source>&amp;User</source>
         <translation>&amp;Usuari</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2026"/>
+        <location filename="../defaultlook.ui" line="1929"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requirirá reiniciar&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2029"/>
+        <location filename="../defaultlook.ui" line="1932"/>
         <source>Enable Bluetooth adapters on boot</source>
-        <translation type="unfinished"></translation>
+        <translation>Habilitar adaptadores Bluetooth ao arrancar</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1984"/>
@@ -892,138 +892,156 @@
         <translation>Apt instala paquetes &quot;recomendados&quot; adicionales como dependencias</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2053"/>
+        <location filename="../defaultlook.ui" line="2022"/>
         <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
         <translation>Xerar menú Todas as Aplicacións de fluxbox despois da instalación, eliminación e actualización de paquetes.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1942"/>
+        <location filename="../defaultlook.ui" line="1991"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
         <translation>Usa as decoracións do lado do cliente (CSD) en aplicativos GTK3 que as admitan (require reinicio da sesión)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1991"/>
+        <location filename="../defaultlook.ui" line="1956"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>Usar o controlador Intel en vez do controlador &quot;modesetting&quot; predeterminado (require reiniciar)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2012"/>
+        <location filename="../defaultlook.ui" line="2091"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>          NOTA: o ficheiro /etc/X11/xorg.conf.d/20-intel.conf existente será gardado no cartafol persoal</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2101"/>
+        <location filename="../defaultlook.ui" line="2029"/>
         <source>Use tearfree amdgpu option</source>
         <translation>Usar a opción anti-distorsión do controlador amdgpu</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2077"/>
+        <location filename="../defaultlook.ui" line="1963"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>          NOTA: o ficheiro /etc/X11/xorg.conf.d/20-amd.conf existente será gardado no cartafol persoal</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1949"/>
+        <location filename="../defaultlook.ui" line="2015"/>
         <source>Use tearfree radeon driver option</source>
         <translation>Usar a opción anti-distorsión do controlador radeon</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1977"/>
+        <location filename="../defaultlook.ui" line="2105"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>          NOTA: o ficheiro /etc/X11/xorg.conf.d/20-radeon.conf existente será gardado no cartafol persoal</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="59"/>
+        <location filename="../defaultlook.cpp" line="61"/>
         <source>--display switch only valid for Xfce</source>
         <translation>-cambio na pantalla válido só para o Xfce</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="657"/>
+        <location filename="../defaultlook.cpp" line="671"/>
         <source>About MX Tweak</source>
         <translation>Sobre MX Axustes Rápidos</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="659"/>
+        <location filename="../defaultlook.cpp" line="673"/>
         <source>Version: </source>
         <translation>Versión</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="660"/>
+        <location filename="../defaultlook.cpp" line="674"/>
         <source>App for quick default ui theme changes and tweaks</source>
         <translation>Aplicativo para rapidamente facer cambios ao tema predeterminado da interface de usuario e outros axustes</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="662"/>
+        <location filename="../defaultlook.cpp" line="676"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="663"/>
+        <location filename="../defaultlook.cpp" line="677"/>
         <source>%1 License</source>
         <translation>Licenza de %1</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="677"/>
+        <location filename="../defaultlook.cpp" line="691"/>
         <source>%1 Help</source>
         <translation>Axuda para %1</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="687"/>
+        <location filename="../defaultlook.cpp" line="701"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
         <translation>Feito! Firefox pode ter que ser reiniciado para os cambios teren efecto</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="734"/>
+        <location filename="../defaultlook.cpp" line="748"/>
         <source>Plese remove special characters</source>
         <translation>Por favor, elimina os caracteres especiais</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="734"/>
+        <location filename="../defaultlook.cpp" line="748"/>
         <source>from file name</source>
         <translation>do nome do ficheiro</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="741"/>
+        <location filename="../defaultlook.cpp" line="755"/>
         <source>File name already exists.  Choose another name</source>
         <translation>O nome do ficheiro xa existe. Escolle outro nome</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="769"/>
+        <location filename="../defaultlook.cpp" line="783"/>
         <source>File is not a valid tar.xz archive file</source>
         <translation>O ficheiro non é un ficheiro de arquivo tar.xz válido</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="772"/>
+        <location filename="../defaultlook.cpp" line="786"/>
         <source>Archive does not contain a panel config</source>
         <translation>O arquivo non contén unha configuración de panel</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="947"/>
+        <location filename="../defaultlook.cpp" line="961"/>
         <source>Panel settings</source>
         <translation>Coniguración do panel</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="948"/>
+        <location filename="../defaultlook.cpp" line="962"/>
         <source>Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
         <translation>As actuais ocnfiguracións do panel foron gardados nun cartafol oculto chamado .restore no cartafol persoal (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1884"/>
+        <location filename="../defaultlook.cpp" line="1644"/>
+        <source>Plasma Widget Themes</source>
+        <comment>theme style of the kde plasma widgets</comment>
+        <translation>Temas de widgets de plasma</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.cpp" line="1645"/>
+        <source>Color Schemes</source>
+        <comment>plasma widget color schemes</comment>
+        <translation>Esquemas de cores</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.cpp" line="1646"/>
+        <source>Plasma Look &amp; Feel Global Themes</source>
+        <comment>plasma global themes</comment>
+        <translation>Temas globais de aspecto e sensación de plasma</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.cpp" line="1914"/>
         <source>settings</source>
         <translation>configuración</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2224"/>
+        <location filename="../defaultlook.cpp" line="2255"/>
         <source>Choose a theme set</source>
         <translation>Elixe un tema</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2652"/>
+        <location filename="../defaultlook.cpp" line="2705"/>
         <source>Please enter a computer name.</source>
         <comment>question to enter a name for the computer hostname</comment>
         <translation>Inserir un nome do computador.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2656"/>
+        <location filename="../defaultlook.cpp" line="2709"/>
         <source>Sorry, your computer name contains invalid characters.
 You&apos;ll have to select a different
 name before proceeding.</source>
@@ -1031,7 +1049,7 @@ name before proceeding.</source>
         <translation>O nome do computador contén caracteres inválidos. Ten que ser escollido un nome diferente antes de proseguir.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="4214"/>
+        <location filename="../defaultlook.cpp" line="4342"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
         <translation>Selecciona a aplicación para executar</translation>

@@ -99,7 +99,7 @@ void defaultlook::checkSession() {
     if (test.contains("xfce-superkey")){
         isSuperkey = true;
     }
-    qDebug() << "isXfce is " << isXfce << "isKDE is " << isKDE << "isFluxbox is " << isFluxbox << "isLightdm is " << isLightdm << "isSuperkey is" << isSuperkey;
+    if (verbose) qDebug() << "isXfce is " << isXfce << "isKDE is " << isKDE << "isFluxbox is " << isFluxbox << "isLightdm is " << isLightdm << "isSuperkey is" << isSuperkey;
 
 }
 // setup versious items first time program runs
@@ -113,6 +113,9 @@ void defaultlook::setup()
         ui->checkBoxLightdmReset->hide();
     }
 
+    if (themetabflag) ui->tabWidget->setCurrentIndex(Tab::Theme);
+    if (othertabflag) ui->tabWidget->setCurrentIndex(Tab::Others);
+
     if (isXfce) {
         ui->toolButtonXFCEpanelSettings->setIcon(QIcon::fromTheme("org.xfce.panel"));
         ui->toolButtonXFCEAppearance->setIcon(QIcon::fromTheme("org.xfce.settings.appearance"));
@@ -123,44 +126,30 @@ void defaultlook::setup()
         ui->pushButtonPreview->hide();
         ui->buttonThemeUndo->hide();
         ui->buttonThemeUndo->setEnabled(false);
-        //setup panel tab
-        setuppanel();
         //set first tab as default
-        ui->tabWidget->setCurrentIndex(Tab::Panel);
-        if (themetabflag){
-            qDebug() << "themetabflag is " << themetabflag;
-            ui->tabWidget->setCurrentIndex(Tab::Theme);
-        }
-        if (othertabflag){
-            ui->tabWidget->setCurrentIndex(Tab::Others);
-        }
-
+        if (!themetabflag && !othertabflag)ui->tabWidget->setCurrentIndex(Tab::Panel);
         ui->tabWidget->removeTab(Tab::Plasma);
         ui->tabWidget->removeTab(Tab::Fluxbox);
+        //setup panel tab
+        setuppanel();
+        setuptheme();
+        //setup compositor tab
+        setupCompositor();
+        //setup theme combo box
+        setupComboTheme();
         //setup Config Options
-        //setup everything after gui launches, except panel, kde, or fluxbox
-        QTimer::singleShot(0, this, [this] {
-            setuptheme();
-            //setup compositor tab
-            setupCompositor();
-            //setup theme combo box
-            setupComboTheme();
-            setupConfigoptions();
-            //setup other tab;
-            setupEtc();
-            if (!isSuperkey || ! QFile("/usr/bin/xfce-superkey-launcher").exists()){
-                ui->tabWidget->removeTab(Tab::Superkey);
-            } else {
-                setupSuperKey();
-            }
-
-        });
-
+        setupConfigoptions();
+        //setup other tab;
+        setupEtc();
+        if (!isSuperkey || ! QFile("/usr/bin/xfce-superkey-launcher").exists()){
+            ui->tabWidget->removeTab(Tab::Superkey);
+        } else {
+            setupSuperKey();
+        }
     }
 
     //setup fluxbox
     else if (isFluxbox) {
-        setupFluxbox();
         ui->comboTheme->hide();
         ui->label->hide();
         ui->buttonThemeApply->hide();
@@ -178,26 +167,17 @@ void defaultlook::setup()
         ui->toolButtonXFCEAppearance->hide();
         ui->toolButtonXFCEWMsettings->hide();
         ui->toolButtonXFCEpanelSettings->hide();
-        ui->tabWidget->setCurrentIndex(Tab::Fluxbox);
-        if (themetabflag){
-            ui->tabWidget->setCurrentIndex(Tab::Theme);
-        }
-        if (othertabflag){
-            ui->tabWidget->setCurrentIndex(Tab::Others);
-        }
+        if (!themetabflag && !othertabflag) ui->tabWidget->setCurrentIndex(Tab::Fluxbox);
         ui->tabWidget->removeTab(Tab::Superkey);
         ui->tabWidget->removeTab(Tab::Plasma);
         ui->tabWidget->removeTab(Tab::Config);
         ui->tabWidget->removeTab(Tab::Display);
         ui->tabWidget->removeTab(Tab::Compositor);
         ui->tabWidget->removeTab(Tab::Panel);
-        QTimer::singleShot(0, this, [this] {
-           setuptheme();
-           //setup other tab;
-           setupEtc();
-
-        });
-
+        setupFluxbox();
+        setuptheme();
+        //setup other tab;
+        setupEtc();
 
     }
 //Panel, Theme, Compositor, Display, Config, Fluxbox, Plasma, Superkey, Others
@@ -213,13 +193,7 @@ void defaultlook::setup()
         ui->toolButtonXFCEAppearance->hide();
         ui->toolButtonXFCEWMsettings->hide();
         ui->toolButtonXFCEpanelSettings->hide();
-        ui->tabWidget->setCurrentIndex(Tab::Plasma);
-        if (themetabflag){
-            ui->tabWidget->setCurrentIndex(Tab::Theme);
-        }
-        if (othertabflag){
-            ui->tabWidget->setCurrentIndex(Tab::Others);
-        }
+        if (!themetabflag && !othertabflag) ui->tabWidget->setCurrentIndex(Tab::Plasma);
         ui->tabWidget->removeTab(Tab::Superkey);
         ui->tabWidget->removeTab(Tab::Fluxbox);
         ui->tabWidget->removeTab(Tab::Config);
@@ -227,16 +201,14 @@ void defaultlook::setup()
         ui->tabWidget->removeTab(Tab::Compositor);
         ui->tabWidget->removeTab(Tab::Panel);
         setupPlasma();
-        QTimer::singleShot(0, this, [this] {
-            setuptheme();
-            setupComboTheme();
-            //setup other tab;
-            setupEtc();
-        });
-    }
+        setuptheme();
+        setupComboTheme();
+        //setup other tab;
+        setupEtc();
+
 
     //for other non-supported desktops, show only
-    else {
+    } else {
         ui->label_4->hide();
         ui->label_5->hide();
         ui->label_6->hide();
@@ -265,9 +237,6 @@ void defaultlook::setup()
         }
     }
     version = getVersion(QStringLiteral("mx-tweak"));
-    if (displayflag) {
-        ui->tabWidget->setCurrentIndex(Tab::Display);
-    }
     this->adjustSize();
 }
 
@@ -3871,6 +3840,7 @@ void defaultlook::populatethemelists(const QString &value)
         ui->listWidgetCursorThemes->addItems(themelist);
         if (isXfce){
             current = runCmd(QStringLiteral("xfconf-query -c xsettings -p /Gtk/CursorThemeName")).output;
+            if (current.isEmpty()) current = "default";
         } else if (isFluxbox){
             if (QFile(home_path + "/.icons/default/index.theme").exists()) {
                 current = runCmd("grep Inherits $HOME/.icons/default/index.theme |cut -d= -f2").output;
