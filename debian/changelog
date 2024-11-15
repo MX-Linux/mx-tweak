@@ -1,3 +1,9 @@
+mx-tweak (24.11.02mx23) mx; urgency=medium
+
+  * add KDE theme tab
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Thu, 14 Nov 2024 19:44:12 -0500
+
 mx-tweak (24.11.01mx23) mx; urgency=medium
 
   * add display manager chooser if more than one display manager installed
