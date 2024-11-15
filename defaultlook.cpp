@@ -126,36 +126,31 @@ void defaultlook::setup()
         ui->pushButtonPreview->hide();
         ui->buttonThemeUndo->hide();
         ui->buttonThemeUndo->setEnabled(false);
-        //setup panel tab
-        setuppanel();
         //set first tab as default
         if (!themetabflag && !othertabflag)ui->tabWidget->setCurrentIndex(Tab::Panel);
         ui->tabWidget->removeTab(Tab::Plasma);
         ui->tabWidget->removeTab(Tab::Fluxbox);
+        //setup panel tab
+        setuppanel();
+        setuptheme();
+        //setup compositor tab
+        setupCompositor();
+        //setup theme combo box
+        setupComboTheme();
         //setup Config Options
-        //setup everything after gui launches, except panel, kde, or fluxbox
-        QTimer::singleShot(0, this, [this] {
-            setuptheme();
-            //setup compositor tab
-            setupCompositor();
-            //setup theme combo box
-            setupComboTheme();
-            setupConfigoptions();
-            //setup other tab;
-            setupEtc();
-            if (!isSuperkey || ! QFile("/usr/bin/xfce-superkey-launcher").exists()){
-                ui->tabWidget->removeTab(Tab::Superkey);
-            } else {
-                setupSuperKey();
-            }
 
-        });
-
+        setupConfigoptions();
+        //setup other tab;
+        setupEtc();
+        if (!isSuperkey || ! QFile("/usr/bin/xfce-superkey-launcher").exists()){
+            ui->tabWidget->removeTab(Tab::Superkey);
+        } else {
+            setupSuperKey();
+        }
     }
 
     //setup fluxbox
     else if (isFluxbox) {
-        setupFluxbox();
         ui->comboTheme->hide();
         ui->label->hide();
         ui->buttonThemeApply->hide();
@@ -180,13 +175,10 @@ void defaultlook::setup()
         ui->tabWidget->removeTab(Tab::Display);
         ui->tabWidget->removeTab(Tab::Compositor);
         ui->tabWidget->removeTab(Tab::Panel);
-        QTimer::singleShot(0, this, [this] {
-           setuptheme();
-           //setup other tab;
-           setupEtc();
-
-        });
-
+        setupFluxbox();
+        setuptheme();
+        //setup other tab;
+        setupEtc();
 
     }
 //Panel, Theme, Compositor, Display, Config, Fluxbox, Plasma, Superkey, Others
