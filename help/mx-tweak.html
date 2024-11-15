@@ -127,7 +127,7 @@ cards.</p>
 <img src="display-1.jpg" alt="Display" /> <img src="tray-app-1.jpg" alt="System Tray" />
 
 
-<p>On MX19 and later, a Display tab is available.  Here you can control the backlight, xrandr brightness, resolution, gtk scaling and the hidden xrandr scaling available under Xfce</p>
+<p>On MX19 and later, a Display tab is available for Xfce users.  Here you can control the backlight, xrandr brightness, resolution, gtk scaling and the hidden xrandr scaling available under Xfce</p>
 
 
 	<ul>
@@ -145,17 +145,21 @@ cards.</p>
     
 <h2>Other</h2>
 
-<img src="5-1.jpg" alt="other options" />
+<img src="5-1.png" alt="other options" />
 
 <p>Configuration options on this tab require admin privledges before they go into effect.  The user will be prompted for the current admin password on apply.</p>
 
 	<ul>
 		<li>Occasionally the lightdm configuration maybe be updated.  While these updated configurations will be present on the system, they will not go into effect automatically for upgraders.   The &#8220;Reset&#8221; actions will change any lightdm configuration to the latest MX defaults.</li>
 		<li>Enable of kernel sandbox is only available on kernels that have a switch for user namespaces built in.  Some kernels default to off, some default to on.  Enabling this feature is useful for a lot of applications that require sandboxes.</li>
-		<li>Enable mounting of internal drives by standard users (no admin password required).</li>
 		<li>Allow or disallow auto starting of bluetooth devices when bluetooth managers load.  Requiers a reboot to go into effect.</li>
-		<li>If a root account is configured, the option to choose what password to use for gui admin prompts will be enabled.  Goes into effect immediately.</li>
+		<li>Show/not show bluetooth battery information. This requires a system restart and may not work with all bluetooth adapters.
+		<li>The Apt installs additional "recommends" option will toggle apt and apt-based package managers to install "recommended" packages as if they are hard dependencies.  This is the debian default, but MX ships with this option off by default.
+		<li>Enable mounting of internal drives by standard users (no admin password required).</li>
 		<li>Enable options for liquorix and debian kernel updates will be shown if the metapackages that bring updates are installed.  These will allow for easy enabling or disabling of auto updates, utilizing apt-mark hold/unhold operations, without the need to remove the metapackages.</li>
+		<li>If a root account is configured, the option to choose what password to use for gui admin prompts will be enabled.  Goes into effect immediately.</li>
+		<li>Change computer name will change the "hostname" of the pc</li>
+		<li>If multiple display managers are installed, a combobox to toggle which will be used will be available.
 	</ul>
 	
 	
