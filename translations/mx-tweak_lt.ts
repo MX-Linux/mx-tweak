@@ -533,13 +533,13 @@
         <location filename="../defaultlook.ui" line="1005"/>
         <source>GTK scaling</source>
         <extracomment>gtk scale factor</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>GTK mastelis</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1025"/>
         <source>xrandr Scaling</source>
         <extracomment>xrandr scale factor</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>xrandr mastelis</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1121"/>
