@@ -3723,15 +3723,15 @@ void defaultlook::populatethemelists(const QString &value)
     QString current;
 
     if (value == QLatin1String("plasma")){
-        themes = runCmd("plasma-apply-desktoptheme --list-themes |grep \"*\" |cut -d\"*\" -f2").output;
+        themes = runCmd("LANG=C plasma-apply-desktoptheme --list-themes |grep \"*\" |cut -d\"*\" -f2").output;
         themes.append("\n");
     }
     if (value == QLatin1String("colorscheme")){
-        themes = runCmd("plasma-apply-colorscheme --list-schemes |grep \"*\" |cut -d\"*\" -f2 ").output;
+        themes = runCmd("LANG=C plasma-apply-colorscheme --list-schemes |grep \"*\" |cut -d\"*\" -f2 ").output;
         themes.append("\n");
     }
     if (value == QLatin1String("kdecursors")){
-        themes = runCmd("plasma-apply-cursortheme --list-themes | grep \"*\"").output;
+        themes = runCmd("LANG=C plasma-apply-cursortheme --list-themes | grep \"*\"").output;
         themes.append("\n");
     }
     if ( value == QLatin1String("gtk-3.0") || value == QLatin1String("xfwm4")) {
@@ -3913,18 +3913,18 @@ void defaultlook::settheme(const QString &type, const QString &theme, const QStr
 
     } else if ( desktop == "KDE" ){
         if ( type == QLatin1String("plasma") ) {
-            cmd = "plasma-apply-desktoptheme " + theme;
+            cmd = "LANG=C plasma-apply-desktoptheme " + theme;
         }
         if ( type == QLatin1String("colorscheme") ) {
-            cmd = "plasma-apply-colorscheme " + theme;
+            cmd = "LANG=C plasma-apply-colorscheme " + theme;
         }
 
         if ( type == QLatin1String("icons") ) {
-            cmd = "/usr/lib/x86_64-linux-gnu/libexec/plasma-changeicons " + theme;
+            cmd = "LANG=C /usr/lib/x86_64-linux-gnu/libexec/plasma-changeicons " + theme;
         }
 
         if (type == QLatin1String("kdecursor")) {
-            cmd = "plasma-apply-cursortheme " + theme;
+            cmd = "LANG=C plasma-apply-cursortheme " + theme;
         }
         system(cmd.toUtf8());
 
