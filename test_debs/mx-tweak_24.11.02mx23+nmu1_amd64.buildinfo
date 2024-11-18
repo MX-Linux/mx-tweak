@@ -2,19 +2,19 @@ Format: 1.0
 Source: mx-tweak
 Binary: mx-tweak
 Architecture: amd64 source
-Version: 24.11.02mx23
+Version: 24.11.02mx23+nmu1
 Checksums-Md5:
- 9d60f13a3d3dc89c1c60ba42337c99ce 628 mx-tweak_24.11.02mx23.dsc
- efbc5c2b252b09f3ff3647144aa3a5e7 823844 mx-tweak_24.11.02mx23_amd64.deb
+ 7c6f1c35877c77c5845b5162c9f69b37 651 mx-tweak_24.11.02mx23+nmu1.dsc
+ d860e003b424b54e71a675518dc03abc 823992 mx-tweak_24.11.02mx23+nmu1_amd64.deb
 Checksums-Sha1:
- 8171ad10859322279f6a310c5980203720e26e7a 628 mx-tweak_24.11.02mx23.dsc
- 980a85772ff51947eb0e161bd5bf04c0e4472e93 823844 mx-tweak_24.11.02mx23_amd64.deb
+ 41dd98d452f24a6ee97d0834b7704fd914a8875e 651 mx-tweak_24.11.02mx23+nmu1.dsc
+ d5fc22edfaffcb01f9bee80b3929a10679f548e7 823992 mx-tweak_24.11.02mx23+nmu1_amd64.deb
 Checksums-Sha256:
- 91dacaded02265ba4abf19be58a0ed80cfc84630be9ef0105a4ba1061e2c9e20 628 mx-tweak_24.11.02mx23.dsc
- cc4302be974a6820d77143636fe23c31c7a30a086d830d46ef61f588ac6d4b5a 823844 mx-tweak_24.11.02mx23_amd64.deb
+ 2f7f96b1fedfbfdf9c12aaa2d3c51a1532f9eb248affc37a5ef0d9b19e948eab 651 mx-tweak_24.11.02mx23+nmu1.dsc
+ 3d2ec5ef85459b75386e9a6e2b07e49b2a33097dd81d22a70e806f3509594e8e 823992 mx-tweak_24.11.02mx23+nmu1_amd64.deb
 Build-Origin: Debian
 Build-Architecture: amd64
-Build-Date: Mon, 18 Nov 2024 08:35:48 -0500
+Build-Date: Mon, 18 Nov 2024 08:40:05 -0500
 Build-Tainted-By:
  merged-usr-via-aliased-dirs
  usr-local-has-libraries
@@ -357,4 +357,4 @@ Installed-Build-Depends:
 Environment:
  DEB_BUILD_OPTIONS="parallel=2"
  LANG="en_US.UTF-8"
- SOURCE_DATE_EPOCH="1731631452"
+ SOURCE_DATE_EPOCH="1731937127"
