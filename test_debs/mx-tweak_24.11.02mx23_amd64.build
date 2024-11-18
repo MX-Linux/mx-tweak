@@ -1,0 +1,530 @@
+ dpkg-buildpackage -us -uc -ui
+dpkg-buildpackage: info: source package mx-tweak
+dpkg-buildpackage: info: source version 24.11.02mx23
+dpkg-buildpackage: info: source distribution mx
+dpkg-buildpackage: info: source changed by Dolphin Oracle <dolphinoracle@gmail.com>
+ dpkg-source --before-build .
+dpkg-buildpackage: info: host architecture amd64
+ fakeroot debian/rules clean
+dh clean --no-automatic-dbgsym --parallel
+   debian/rules override_dh_auto_clean
+make[1]: Entering directory '/home/dolphin/working/mx-tweak'
+dh_auto_clean
+rm -f src/translations/*.qm
+make[1]: Leaving directory '/home/dolphin/working/mx-tweak'
+   dh_autoreconf_clean -O--no-automatic-dbgsym -O--parallel
+   dh_clean -O--no-automatic-dbgsym -O--parallel
+ dpkg-source -b .
+dpkg-source: info: using source format '3.0 (native)'
+dpkg-source: info: building mx-tweak in mx-tweak_24.11.02mx23.tar.xz
+dpkg-source: info: building mx-tweak in mx-tweak_24.11.02mx23.dsc
+ debian/rules build
+dh build --no-automatic-dbgsym --parallel
+   dh_update_autotools_config -O--no-automatic-dbgsym -O--parallel
+   dh_autoreconf -O--no-automatic-dbgsym -O--parallel
+   dh_auto_configure -O--no-automatic-dbgsym -O--parallel
+	qmake -makefile "QMAKE_CFLAGS_RELEASE=-g -O2 -ffile-prefix-map=/home/dolphin/working/mx-tweak=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2" "QMAKE_CFLAGS_DEBUG=-g -O2 -ffile-prefix-map=/home/dolphin/working/mx-tweak=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2" "QMAKE_CXXFLAGS_RELEASE=-g -O2 -ffile-prefix-map=/home/dolphin/working/mx-tweak=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2" "QMAKE_CXXFLAGS_DEBUG=-g -O2 -ffile-prefix-map=/home/dolphin/working/mx-tweak=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2" QMAKE_LFLAGS_RELEASE=-Wl,-z,relro QMAKE_LFLAGS_DEBUG=-Wl,-z,relro QMAKE_STRIP=: PREFIX=/usr
+Info: creating stash file /home/dolphin/working/mx-tweak/.qmake.stash
+   debian/rules override_dh_auto_build
+make[1]: Entering directory '/home/dolphin/working/mx-tweak'
+lrelease -removeidentical -nounfinished translations/*.ts
+Updating 'translations/mx-tweak_am.qm'...
+Removing translations equal to source text in 'translations/mx-tweak_am.qm'...
+    Generated 70 translation(s) (70 finished and 0 unfinished)
+    Ignored 165 untranslated source text(s)
+Updating 'translations/mx-tweak_ca.qm'...
+Removing translations equal to source text in 'translations/mx-tweak_ca.qm'...
+    Generated 226 translation(s) (226 finished and 0 unfinished)
+Updating 'translations/mx-tweak_cs.qm'...
+Removing translations equal to source text in 'translations/mx-tweak_cs.qm'...
+    Generated 191 translation(s) (191 finished and 0 unfinished)
+    Ignored 35 untranslated source text(s)
+Updating 'translations/mx-tweak_da.qm'...
+Removing translations equal to source text in 'translations/mx-tweak_da.qm'...
+    Generated 121 translation(s) (121 finished and 0 unfinished)
+    Ignored 104 untranslated source text(s)
+Updating 'translations/mx-tweak_de.qm'...
+Removing translations equal to source text in 'translations/mx-tweak_de.qm'...
+    Generated 214 translation(s) (214 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+Updating 'translations/mx-tweak_el.qm'...
+Removing translations equal to source text in 'translations/mx-tweak_el.qm'...
+    Generated 218 translation(s) (218 finished and 0 unfinished)
+    Ignored 5 untranslated source text(s)
+Updating 'translations/mx-tweak_en.qm'...
+Removing translations equal to source text in 'translations/mx-tweak_en.qm'...
+    Generated 0 translation(s) (0 finished and 0 unfinished)
+    Ignored 237 untranslated source text(s)
+Updating 'translations/mx-tweak_es.qm'...
+Removing translations equal to source text in 'translations/mx-tweak_es.qm'...
+    Generated 218 translation(s) (218 finished and 0 unfinished)
+Updating 'translations/mx-tweak_es_ES.qm'...
+Removing translations equal to source text in 'translations/mx-tweak_es_ES.qm'...
+    Generated 221 translation(s) (221 finished and 0 unfinished)
+Updating 'translations/mx-tweak_fi.qm'...
+Removing translations equal to source text in 'translations/mx-tweak_fi.qm'...
+    Generated 220 translation(s) (220 finished and 0 unfinished)
+    Ignored 6 untranslated source text(s)
+Updating 'translations/mx-tweak_fr.qm'...
+Removing translations equal to source text in 'translations/mx-tweak_fr.qm'...
+    Generated 222 translation(s) (222 finished and 0 unfinished)
+Updating 'translations/mx-tweak_fr_BE.qm'...
+Removing translations equal to source text in 'translations/mx-tweak_fr_BE.qm'...
+    Generated 221 translation(s) (221 finished and 0 unfinished)
+Updating 'translations/mx-tweak_gl.qm'...
+Removing translations equal to source text in 'translations/mx-tweak_gl.qm'...
+    Generated 212 translation(s) (212 finished and 0 unfinished)
+    Ignored 7 untranslated source text(s)
+Updating 'translations/mx-tweak_gl_ES.qm'...
+Removing translations equal to source text in 'translations/mx-tweak_gl_ES.qm'...
+    Generated 219 translation(s) (219 finished and 0 unfinished)
+Updating 'translations/mx-tweak_he_IL.qm'...
+Removing translations equal to source text in 'translations/mx-tweak_he_IL.qm'...
+    Generated 130 translation(s) (130 finished and 0 unfinished)
+    Ignored 103 untranslated source text(s)
+Updating 'translations/mx-tweak_hi.qm'...
+Removing translations equal to source text in 'translations/mx-tweak_hi.qm'...
+    Generated 175 translation(s) (175 finished and 0 unfinished)
+    Ignored 57 untranslated source text(s)
+Updating 'translations/mx-tweak_hr.qm'...
+Removing translations equal to source text in 'translations/mx-tweak_hr.qm'...
+    Generated 80 translation(s) (80 finished and 0 unfinished)
+    Ignored 155 untranslated source text(s)
+Updating 'translations/mx-tweak_hu.qm'...
+Removing translations equal to source text in 'translations/mx-tweak_hu.qm'...
+    Generated 214 translation(s) (214 finished and 0 unfinished)
+    Ignored 7 untranslated source text(s)
+Updating 'translations/mx-tweak_it.qm'...
+Removing translations equal to source text in 'translations/mx-tweak_it.qm'...
+    Generated 211 translation(s) (211 finished and 0 unfinished)
+    Ignored 9 untranslated source text(s)
+Updating 'translations/mx-tweak_ja.qm'...
+Removing translations equal to source text in 'translations/mx-tweak_ja.qm'...
+    Generated 227 translation(s) (227 finished and 0 unfinished)
+Updating 'translations/mx-tweak_lt.qm'...
+Removing translations equal to source text in 'translations/mx-tweak_lt.qm'...
+    Generated 120 translation(s) (120 finished and 0 unfinished)
+    Ignored 109 untranslated source text(s)
+Updating 'translations/mx-tweak_nb.qm'...
+Removing translations equal to source text in 'translations/mx-tweak_nb.qm'...
+    Generated 221 translation(s) (221 finished and 0 unfinished)
+Updating 'translations/mx-tweak_nl.qm'...
+Removing translations equal to source text in 'translations/mx-tweak_nl.qm'...
+    Generated 213 translation(s) (213 finished and 0 unfinished)
+Updating 'translations/mx-tweak_nl_BE.qm'...
+Removing translations equal to source text in 'translations/mx-tweak_nl_BE.qm'...
+    Generated 166 translation(s) (166 finished and 0 unfinished)
+    Ignored 51 untranslated source text(s)
+Updating 'translations/mx-tweak_pl.qm'...
+Removing translations equal to source text in 'translations/mx-tweak_pl.qm'...
+    Generated 204 translation(s) (204 finished and 0 unfinished)
+    Ignored 19 untranslated source text(s)
+Updating 'translations/mx-tweak_pt.qm'...
+Removing translations equal to source text in 'translations/mx-tweak_pt.qm'...
+    Generated 226 translation(s) (226 finished and 0 unfinished)
+Updating 'translations/mx-tweak_pt_BR.qm'...
+Removing translations equal to source text in 'translations/mx-tweak_pt_BR.qm'...
+    Generated 226 translation(s) (226 finished and 0 unfinished)
+Updating 'translations/mx-tweak_ru.qm'...
+Removing translations equal to source text in 'translations/mx-tweak_ru.qm'...
+    Generated 195 translation(s) (195 finished and 0 unfinished)
+    Ignored 27 untranslated source text(s)
+Updating 'translations/mx-tweak_ru_RU.qm'...
+Removing translations equal to source text in 'translations/mx-tweak_ru_RU.qm'...
+    Generated 225 translation(s) (225 finished and 0 unfinished)
+Updating 'translations/mx-tweak_sk.qm'...
+Removing translations equal to source text in 'translations/mx-tweak_sk.qm'...
+    Generated 124 translation(s) (124 finished and 0 unfinished)
+    Ignored 105 untranslated source text(s)
+Updating 'translations/mx-tweak_sl.qm'...
+Removing translations equal to source text in 'translations/mx-tweak_sl.qm'...
+    Generated 224 translation(s) (224 finished and 0 unfinished)
+    Ignored 3 untranslated source text(s)
+Updating 'translations/mx-tweak_sq.qm'...
+Removing translations equal to source text in 'translations/mx-tweak_sq.qm'...
+    Generated 217 translation(s) (217 finished and 0 unfinished)
+    Ignored 2 untranslated source text(s)
+Updating 'translations/mx-tweak_sv.qm'...
+Removing translations equal to source text in 'translations/mx-tweak_sv.qm'...
+    Generated 217 translation(s) (217 finished and 0 unfinished)
+Updating 'translations/mx-tweak_tr.qm'...
+Removing translations equal to source text in 'translations/mx-tweak_tr.qm'...
+    Generated 209 translation(s) (209 finished and 0 unfinished)
+    Ignored 13 untranslated source text(s)
+Updating 'translations/mx-tweak_uk.qm'...
+Removing translations equal to source text in 'translations/mx-tweak_uk.qm'...
+    Generated 65 translation(s) (65 finished and 0 unfinished)
+    Ignored 168 untranslated source text(s)
+Updating 'translations/mx-tweak_zh_CN.qm'...
+Removing translations equal to source text in 'translations/mx-tweak_zh_CN.qm'...
+    Generated 90 translation(s) (90 finished and 0 unfinished)
+    Ignored 137 untranslated source text(s)
+Updating 'translations/mx-tweak_zh_TW.qm'...
+Removing translations equal to source text in 'translations/mx-tweak_zh_TW.qm'...
+    Generated 148 translation(s) (148 finished and 0 unfinished)
+    Ignored 82 untranslated source text(s)
+head -n1 debian/changelog | sed -e "s/.*(\([^(]*\)).*/#define VERSION \"\1\"/" > version.h
+dh_auto_build -- QMAKE=qmake-qt5 LRELEASE=lrelease-qt5 QMAKE_OPTS="DEFINES+=NO_DEBUG_ON_CONSOLE"
+	make -j2 QMAKE=qmake-qt5 LRELEASE=lrelease-qt5 QMAKE_OPTS=DEFINES\+=NO_DEBUG_ON_CONSOLE
+make[2]: Entering directory '/home/dolphin/working/mx-tweak'
+/usr/lib/qt5/bin/uic defaultlook.ui -o ui_defaultlook.h
+/usr/lib/qt5/bin/uic xfwm_compositor_settings.ui -o ui_xfwm_compositor_settings.h
+/usr/lib/qt5/bin/uic window_buttons.ui -o ui_window_buttons.h
+defaultlook.ui: Warning: Z-order assignment: '' is not a valid widget.
+/usr/lib/qt5/bin/uic theming_to_tweak.ui -o ui_theming_to_tweak.h
+/usr/lib/qt5/bin/uic remove_user_theme_set.ui -o ui_remove_user_theme_set.h
+/usr/lib/qt5/bin/uic brightness_small.ui -o ui_brightness_small.h
+g++ -c -pipe -g -O2 -ffile-prefix-map=/home/dolphin/working/mx-tweak=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -std=gnu++1z -Wall -Wextra -D_REENTRANT -fPIC -DQT_DEPRECATED_WARNINGS -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -o main.o main.cpp
+g++ -c -pipe -g -O2 -ffile-prefix-map=/home/dolphin/working/mx-tweak=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -std=gnu++1z -Wall -Wextra -D_REENTRANT -fPIC -DQT_DEPRECATED_WARNINGS -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -o about.o about.cpp
+g++ -c -pipe -g -O2 -ffile-prefix-map=/home/dolphin/working/mx-tweak=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -std=gnu++1z -Wall -Wextra -D_REENTRANT -fPIC -DQT_DEPRECATED_WARNINGS -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -o defaultlook.o defaultlook.cpp
+defaultlook.cpp: In member function ‘void defaultlook::on_spinBoxScreenBlankingTimeout_valueChanged(int)’:
+defaultlook.cpp:4333:68: warning: unused parameter ‘arg1’ [-Wunused-parameter]
+ 4333 | void defaultlook::on_spinBoxScreenBlankingTimeout_valueChanged(int arg1)
+      |                                                                ~~~~^~~~
+g++ -c -pipe -g -O2 -ffile-prefix-map=/home/dolphin/working/mx-tweak=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -std=gnu++1z -Wall -Wextra -D_REENTRANT -fPIC -DQT_DEPRECATED_WARNINGS -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -o xfwm_compositor_settings.o xfwm_compositor_settings.cpp
+defaultlook.cpp: In member function ‘void defaultlook::on_lineEditSuperCommand_textChanged(const QString&)’:
+defaultlook.cpp:4394:70: warning: unused parameter ‘arg1’ [-Wunused-parameter]
+ 4394 | void defaultlook::on_lineEditSuperCommand_textChanged(const QString &arg1)
+      |                                                       ~~~~~~~~~~~~~~~^~~~
+defaultlook.cpp: In member function ‘void defaultlook::on_spinBoxPointerSize_valueChanged(int)’:
+defaultlook.cpp:4424:58: warning: unused parameter ‘arg1’ [-Wunused-parameter]
+ 4424 | void defaultlook::on_spinBoxPointerSize_valueChanged(int arg1)
+      |                                                      ~~~~^~~~
+defaultlook.cpp: In member function ‘void defaultlook::fliptovertical()’:
+defaultlook.cpp:600:11: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  600 |     system("xfce4-panel --restart");
+      |     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~
+defaultlook.cpp: In member function ‘void defaultlook::on_toolButtonXFCEpanelSettings_clicked()’:
+defaultlook.cpp:968:11: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  968 |     system("xfce4-panel --preferences");
+      |     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+defaultlook.cpp:969:11: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  969 |     system("xprop -spy -name \"Panel Preferences\" >/dev/null");
+      |     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+defaultlook.cpp:988:15: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  988 |         system("xfce4-panel --restart");
+      |         ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~
+defaultlook.cpp: In member function ‘void defaultlook::on_toolButtonXFCEAppearance_clicked()’:
+defaultlook.cpp:997:11: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  997 |     system("xfce4-appearance-settings");
+      |     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+defaultlook.cpp: In member function ‘void defaultlook::on_toolButtonXFCEWMsettings_clicked()’:
+defaultlook.cpp:1004:11: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 1004 |     system("xfwm4-settings");
+      |     ~~~~~~^~~~~~~~~~~~~~~~~~
+defaultlook.cpp: In member function ‘void defaultlook::setuppanel()’:
+defaultlook.cpp:1053:19: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 1053 |             system(cmd.toUtf8());
+      |             ~~~~~~^~~~~~~~~~~~~~
+defaultlook.cpp:1058:15: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 1058 |         system(cmd.toUtf8());
+      |         ~~~~~~^~~~~~~~~~~~~~
+defaultlook.cpp:1063:15: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 1063 |         system(cmd.toUtf8());
+      |         ~~~~~~^~~~~~~~~~~~~~
+defaultlook.cpp: In member function ‘void defaultlook::set_cursor_size()’:
+defaultlook.cpp:1735:15: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 1735 |         system(cmd.toUtf8());
+      |         ~~~~~~^~~~~~~~~~~~~~
+defaultlook.cpp:1738:19: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 1738 |             system("xrdb -merge $HOME/.Xresources && fluxbox-remote restart");
+      |             ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+defaultlook.cpp: In member function ‘void defaultlook::CheckAptNotifierRunning() const’:
+defaultlook.cpp:1945:19: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 1945 |             system("/usr/bin/apt-notifier-unhide-Icon");
+      |             ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+defaultlook.cpp: In member function ‘void defaultlook::setbacklight()’:
+defaultlook.cpp:2124:11: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 2124 |     system(cmd.toUtf8());
+      |     ~~~~~~^~~~~~~~~~~~~~
+defaultlook.cpp: In member function ‘void defaultlook::setBrightness()’:
+defaultlook.cpp:2176:11: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 2176 |     system(cmd.toUtf8());
+      |     ~~~~~~^~~~~~~~~~~~~~
+defaultlook.cpp: In member function ‘void defaultlook::on_buttonThemeApply_clicked()’:
+defaultlook.cpp:2436:23: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 2436 |                 system(cmd.toUtf8());
+      |                 ~~~~~~^~~~~~~~~~~~~~
+defaultlook.cpp:2441:19: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 2441 |             system(cmd.toUtf8());
+      |             ~~~~~~^~~~~~~~~~~~~~
+defaultlook.cpp:2449:15: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 2449 |         system("xfce4-panel --restart");
+      |         ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~
+defaultlook.cpp: In member function ‘void defaultlook::on_ButtonApplyEtc_clicked()’:
+defaultlook.cpp:2538:19: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 2538 |             system(cmd.toUtf8());
+      |             ~~~~~~^~~~~~~~~~~~~~
+defaultlook.cpp:2554:19: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 2554 |             system(cmd.toUtf8());
+      |             ~~~~~~^~~~~~~~~~~~~~
+defaultlook.cpp:2570:19: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 2570 |             system(cmd.toUtf8());
+      |             ~~~~~~^~~~~~~~~~~~~~
+defaultlook.cpp: In member function ‘void defaultlook::themeundo()’:
+defaultlook.cpp:2838:11: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 2838 |     system(cmd.toUtf8());
+      |     ~~~~~~^~~~~~~~~~~~~~
+defaultlook.cpp: In member function ‘void defaultlook::on_buttonConfigureCompton_clicked()’:
+defaultlook.cpp:2856:11: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 2856 |     system("compton-conf");
+      |     ~~~~~~^~~~~~~~~~~~~~~~
+defaultlook.cpp: In member function ‘void defaultlook::on_buttonCompositorApply_clicked()’:
+defaultlook.cpp:2869:15: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 2869 |         system("pkill -x compton");
+      |         ~~~~~~^~~~~~~~~~~~~~~~~~~~
+defaultlook.cpp:2870:15: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 2870 |         system("compton-launch.sh");
+      |         ~~~~~~^~~~~~~~~~~~~~~~~~~~~
+defaultlook.cpp:2876:15: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 2876 |         system("pkill -x compton");
+      |         ~~~~~~^~~~~~~~~~~~~~~~~~~~
+defaultlook.cpp:2886:15: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 2886 |         system("pkill -x compton");
+      |         ~~~~~~^~~~~~~~~~~~~~~~~~~~
+defaultlook.cpp: In member function ‘void defaultlook::on_ButtonApplyMiscDefualts_clicked()’:
+defaultlook.cpp:3066:23: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 3066 |                 system(cmd.toUtf8());
+      |                 ~~~~~~^~~~~~~~~~~~~~
+defaultlook.cpp:3071:19: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 3071 |             system(cmd.toUtf8());
+      |             ~~~~~~^~~~~~~~~~~~~~
+defaultlook.cpp:3078:15: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 3078 |         system("xfdesktop --quit && sleep .5 && xfdesktop &");
+      |         ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+defaultlook.cpp:3084:19: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 3084 |             system("xfdesktop --quit && sleep .5 && xfdesktop &");
+      |             ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+defaultlook.cpp:3092:19: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 3092 |             system("xfconf-query -c xfce4-session -p /shutdown/ShowHibernate -t bool -s true --create");
+      |             ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+defaultlook.cpp:3094:19: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 3094 |             system("xfconf-query -c xfce4-session -p /shutdown/ShowHibernate -t bool -s false --create");
+      |             ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+defaultlook.cpp: In member function ‘void defaultlook::on_pushButtonSettingsToThemeSet_clicked()’:
+defaultlook.cpp:3163:19: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 3163 |             system("/usr/bin/mxfb-look");
+      |             ~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+defaultlook.cpp: In member function ‘void defaultlook::on_ButtonApplyPlasma_clicked()’:
+defaultlook.cpp:3690:15: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 3690 |         system(cmd.toUtf8());
+      |         ~~~~~~^~~~~~~~~~~~~~
+defaultlook.cpp: In static member function ‘static void defaultlook::settheme(const QString&, const QString&, const QString&)’:
+defaultlook.cpp:3912:15: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 3912 |         system(cmd.toUtf8());
+      |         ~~~~~~^~~~~~~~~~~~~~
+defaultlook.cpp:3929:15: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 3929 |         system(cmd.toUtf8());
+      |         ~~~~~~^~~~~~~~~~~~~~
+defaultlook.cpp:3939:19: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 3939 |             system(cmd.toUtf8());
+      |             ~~~~~~^~~~~~~~~~~~~~
+defaultlook.cpp:3946:19: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 3946 |             system(cmd.toUtf8());
+      |             ~~~~~~^~~~~~~~~~~~~~
+defaultlook.cpp:3967:23: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 3967 |                 system(cmd.toUtf8());
+      |                 ~~~~~~^~~~~~~~~~~~~~
+defaultlook.cpp:3978:19: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 3978 |             system(cmd.toUtf8());
+      |             ~~~~~~^~~~~~~~~~~~~~
+defaultlook.cpp:3988:19: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 3988 |             system(cmd.toUtf8());
+      |             ~~~~~~^~~~~~~~~~~~~~
+defaultlook.cpp:3994:19: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 3994 |             system(cmd.toUtf8());
+      |             ~~~~~~^~~~~~~~~~~~~~
+defaultlook.cpp:3998:23: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 3998 |                 system(cmd.toUtf8());
+      |                 ~~~~~~^~~~~~~~~~~~~~
+defaultlook.cpp:4010:19: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 4010 |             system(cmd.toUtf8());
+      |             ~~~~~~^~~~~~~~~~~~~~
+defaultlook.cpp:4016:19: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 4016 |             system(cmd.toUtf8());
+      |             ~~~~~~^~~~~~~~~~~~~~
+defaultlook.cpp:4030:19: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 4030 |             system(cmd.toUtf8());
+      |             ~~~~~~^~~~~~~~~~~~~~
+defaultlook.cpp:4034:15: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 4034 |         system(cmd1.toUtf8());
+      |         ~~~~~~^~~~~~~~~~~~~~~
+defaultlook.cpp:4037:15: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 4037 |         system(cmd2.toUtf8());
+      |         ~~~~~~^~~~~~~~~~~~~~~
+defaultlook.cpp: In static member function ‘static void defaultlook::on_pushButtonDocklikeSetttings_clicked()’:
+defaultlook.cpp:4111:11: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 4111 |     system("xfce4-panel --plugin-event=docklike:settings");
+      |     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+defaultlook.cpp: In member function ‘void defaultlook::on_buttonManageTint2_clicked()’:
+defaultlook.cpp:4134:11: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 4134 |     system("/usr/bin/mxfb-tint2-manager");
+      |     ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+defaultlook.cpp: In member function ‘void defaultlook::resetthunar()’:
+defaultlook.cpp:4215:11: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+ 4215 |     system(cmd.toUtf8());
+      |     ~~~~~~^~~~~~~~~~~~~~
+xfwm_compositor_settings.cpp: In member function ‘void xfwm_compositor_settings::on_checkBoxRedirect_clicked()’:
+xfwm_compositor_settings.cpp:76:11: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   76 |     system(cmd.toUtf8());
+      |     ~~~~~~^~~~~~~~~~~~~~
+xfwm_compositor_settings.cpp: In member function ‘void xfwm_compositor_settings::on_checkBoxVsync_clicked()’:
+xfwm_compositor_settings.cpp:87:11: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   87 |     system(cmd.toUtf8());
+      |     ~~~~~~^~~~~~~~~~~~~~
+xfwm_compositor_settings.cpp: In member function ‘void xfwm_compositor_settings::on_checkBoxPreview_clicked()’:
+xfwm_compositor_settings.cpp:98:11: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+   98 |     system(cmd.toUtf8());
+      |     ~~~~~~^~~~~~~~~~~~~~
+xfwm_compositor_settings.cpp: In member function ‘void xfwm_compositor_settings::on_checkBoxPopupShadows_clicked()’:
+xfwm_compositor_settings.cpp:109:11: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  109 |     system(cmd.toUtf8());
+      |     ~~~~~~^~~~~~~~~~~~~~
+xfwm_compositor_settings.cpp: In member function ‘void xfwm_compositor_settings::on_checkBoxDockShadows_clicked()’:
+xfwm_compositor_settings.cpp:120:11: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  120 |     system(cmd.toUtf8());
+      |     ~~~~~~^~~~~~~~~~~~~~
+xfwm_compositor_settings.cpp: In member function ‘void xfwm_compositor_settings::on_horizontalSliderWIndowDecorations_valueChanged(int)’:
+xfwm_compositor_settings.cpp:140:11: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  140 |     system(cmd.toUtf8());
+      |     ~~~~~~^~~~~~~~~~~~~~
+xfwm_compositor_settings.cpp: In member function ‘void xfwm_compositor_settings::on_horizontalSliderInactiveWindows_valueChanged(int)’:
+xfwm_compositor_settings.cpp:149:11: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  149 |     system(cmd.toUtf8());
+      |     ~~~~~~^~~~~~~~~~~~~~
+xfwm_compositor_settings.cpp: In member function ‘void xfwm_compositor_settings::on_horizontalSliderWindowsMove_valueChanged(int)’:
+xfwm_compositor_settings.cpp:158:11: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  158 |     system(cmd.toUtf8());
+      |     ~~~~~~^~~~~~~~~~~~~~
+xfwm_compositor_settings.cpp: In member function ‘void xfwm_compositor_settings::on_horizontalSliderWindowsResize_valueChanged(int)’:
+xfwm_compositor_settings.cpp:167:11: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  167 |     system(cmd.toUtf8());
+      |     ~~~~~~^~~~~~~~~~~~~~
+xfwm_compositor_settings.cpp: In member function ‘void xfwm_compositor_settings::on_horizontalSliderPopup_valueChanged(int)’:
+xfwm_compositor_settings.cpp:176:11: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  176 |     system(cmd.toUtf8());
+      |     ~~~~~~^~~~~~~~~~~~~~
+g++ -c -pipe -g -O2 -ffile-prefix-map=/home/dolphin/working/mx-tweak=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -std=gnu++1z -Wall -Wextra -D_REENTRANT -fPIC -DQT_DEPRECATED_WARNINGS -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -o window_buttons.o window_buttons.cpp
+window_buttons.cpp: In member function ‘void window_buttons::on_checkBoxbuttonlabels_toggled(bool)’:
+window_buttons.cpp:116:11: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  116 |     system(cmd.toUtf8());
+      |     ~~~~~~^~~~~~~~~~~~~~
+window_buttons.cpp: In member function ‘void window_buttons::on_checkBoxshowflatbuttons_toggled(bool)’:
+window_buttons.cpp:123:11: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  123 |     system(cmd.toUtf8());
+      |     ~~~~~~^~~~~~~~~~~~~~
+window_buttons.cpp: In member function ‘void window_buttons::on_checkBoxshowhandle_toggled(bool)’:
+window_buttons.cpp:131:11: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  131 |     system(cmd.toUtf8());
+      |     ~~~~~~^~~~~~~~~~~~~~
+window_buttons.cpp: In member function ‘void window_buttons::on_comboBoxsortingorder_currentIndexChanged(int) const’:
+window_buttons.cpp:138:11: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  138 |     system(cmd.toUtf8());
+      |     ~~~~~~^~~~~~~~~~~~~~
+window_buttons.cpp: In member function ‘void window_buttons::on_comboBoxwindowgrouping_currentIndexChanged(int) const’:
+window_buttons.cpp:146:11: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  146 |     system(cmd.toUtf8());
+      |     ~~~~~~^~~~~~~~~~~~~~
+window_buttons.cpp: In member function ‘void window_buttons::on_comboBoxmiddleclickaction_currentIndexChanged(int) const’:
+window_buttons.cpp:153:11: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  153 |     system(cmd.toUtf8());
+      |     ~~~~~~^~~~~~~~~~~~~~
+window_buttons.cpp: In member function ‘void window_buttons::on_checkBoxrestoreminwindows_toggled(bool)’:
+window_buttons.cpp:160:11: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  160 |     system(cmd.toUtf8());
+      |     ~~~~~~^~~~~~~~~~~~~~
+window_buttons.cpp: In member function ‘void window_buttons::on_checkBoxdrawframes_toggled(bool)’:
+window_buttons.cpp:167:11: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  167 |     system(cmd.toUtf8());
+      |     ~~~~~~^~~~~~~~~~~~~~
+window_buttons.cpp: In member function ‘void window_buttons::on_checkBoxswitchwindowsmousewheel_toggled(bool)’:
+window_buttons.cpp:174:11: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  174 |     system(cmd.toUtf8());
+      |     ~~~~~~^~~~~~~~~~~~~~
+window_buttons.cpp: In member function ‘void window_buttons::on_checkBoxwindowsallworkspaces_toggled(bool)’:
+window_buttons.cpp:181:11: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  181 |     system(cmd.toUtf8());
+      |     ~~~~~~^~~~~~~~~~~~~~
+window_buttons.cpp: In member function ‘void window_buttons::on_checkBoxonlyminwindows_toggled(bool)’:
+window_buttons.cpp:188:11: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  188 |     system(cmd.toUtf8());
+      |     ~~~~~~^~~~~~~~~~~~~~
+window_buttons.cpp: In member function ‘void window_buttons::on_checkBoxwindowsallmonitors_toggled(bool)’:
+window_buttons.cpp:195:11: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  195 |     system(cmd.toUtf8());
+      |     ~~~~~~^~~~~~~~~~~~~~
+g++ -c -pipe -g -O2 -ffile-prefix-map=/home/dolphin/working/mx-tweak=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -std=gnu++1z -Wall -Wextra -D_REENTRANT -fPIC -DQT_DEPRECATED_WARNINGS -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -o theming_to_tweak.o theming_to_tweak.cpp
+g++ -c -pipe -g -O2 -ffile-prefix-map=/home/dolphin/working/mx-tweak=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -std=gnu++1z -Wall -Wextra -D_REENTRANT -fPIC -DQT_DEPRECATED_WARNINGS -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -o remove_user_theme_set.o remove_user_theme_set.cpp
+g++ -c -pipe -g -O2 -ffile-prefix-map=/home/dolphin/working/mx-tweak=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -std=gnu++1z -Wall -Wextra -D_REENTRANT -fPIC -DQT_DEPRECATED_WARNINGS -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -o brightness_small.o brightness_small.cpp
+brightness_small.cpp: In member function ‘void brightness_small::setbacklight()’:
+brightness_small.cpp:151:11: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  151 |     system(cmd.toUtf8());
+      |     ~~~~~~^~~~~~~~~~~~~~
+brightness_small.cpp: In member function ‘void brightness_small::setBrightness()’:
+brightness_small.cpp:201:11: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  201 |     system(cmd.toUtf8());
+      |     ~~~~~~^~~~~~~~~~~~~~
+brightness_small.cpp: In static member function ‘static void brightness_small::launchfulldisplaydialog()’:
+brightness_small.cpp:268:11: warning: ignoring return value of ‘int system(const char*)’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  268 |     system(cmd.toUtf8());
+      |     ~~~~~~^~~~~~~~~~~~~~
+/usr/lib/qt5/bin/rcc -name images images.qrc -o qrc_images.cpp
+g++ -pipe -g -O2 -ffile-prefix-map=/home/dolphin/working/mx-tweak=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -std=gnu++1z -Wall -Wextra -dM -E -o moc_predefs.h /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp
+g++ -c -pipe -g -O2 -ffile-prefix-map=/home/dolphin/working/mx-tweak=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -std=gnu++1z -Wall -Wextra -D_REENTRANT -fPIC -DQT_DEPRECATED_WARNINGS -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -o qrc_images.o qrc_images.cpp
+/usr/lib/qt5/bin/moc -DQT_DEPRECATED_WARNINGS -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --include /home/dolphin/working/mx-tweak/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/dolphin/working/mx-tweak -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/12 -I/usr/include/x86_64-linux-gnu/c++/12 -I/usr/include/c++/12/backward -I/usr/lib/gcc/x86_64-linux-gnu/12/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include defaultlook.h -o moc_defaultlook.cpp
+/usr/lib/qt5/bin/moc -DQT_DEPRECATED_WARNINGS -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --include /home/dolphin/working/mx-tweak/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/dolphin/working/mx-tweak -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/12 -I/usr/include/x86_64-linux-gnu/c++/12 -I/usr/include/c++/12/backward -I/usr/lib/gcc/x86_64-linux-gnu/12/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include xfwm_compositor_settings.h -o moc_xfwm_compositor_settings.cpp
+/usr/lib/qt5/bin/moc -DQT_DEPRECATED_WARNINGS -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --include /home/dolphin/working/mx-tweak/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/dolphin/working/mx-tweak -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/12 -I/usr/include/x86_64-linux-gnu/c++/12 -I/usr/include/c++/12/backward -I/usr/lib/gcc/x86_64-linux-gnu/12/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include window_buttons.h -o moc_window_buttons.cpp
+/usr/lib/qt5/bin/moc -DQT_DEPRECATED_WARNINGS -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --include /home/dolphin/working/mx-tweak/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/dolphin/working/mx-tweak -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/12 -I/usr/include/x86_64-linux-gnu/c++/12 -I/usr/include/c++/12/backward -I/usr/lib/gcc/x86_64-linux-gnu/12/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include theming_to_tweak.h -o moc_theming_to_tweak.cpp
+/usr/lib/qt5/bin/moc -DQT_DEPRECATED_WARNINGS -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --include /home/dolphin/working/mx-tweak/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/dolphin/working/mx-tweak -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/12 -I/usr/include/x86_64-linux-gnu/c++/12 -I/usr/include/c++/12/backward -I/usr/lib/gcc/x86_64-linux-gnu/12/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include remove_user_theme_set.h -o moc_remove_user_theme_set.cpp
+/usr/lib/qt5/bin/moc -DQT_DEPRECATED_WARNINGS -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB --include /home/dolphin/working/mx-tweak/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/dolphin/working/mx-tweak -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/c++/12 -I/usr/include/x86_64-linux-gnu/c++/12 -I/usr/include/c++/12/backward -I/usr/lib/gcc/x86_64-linux-gnu/12/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include brightness_small.h -o moc_brightness_small.cpp
+g++ -c -pipe -g -O2 -ffile-prefix-map=/home/dolphin/working/mx-tweak=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -std=gnu++1z -Wall -Wextra -D_REENTRANT -fPIC -DQT_DEPRECATED_WARNINGS -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -o moc_defaultlook.o moc_defaultlook.cpp
+g++ -c -pipe -g -O2 -ffile-prefix-map=/home/dolphin/working/mx-tweak=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -std=gnu++1z -Wall -Wextra -D_REENTRANT -fPIC -DQT_DEPRECATED_WARNINGS -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -o moc_xfwm_compositor_settings.o moc_xfwm_compositor_settings.cpp
+g++ -c -pipe -g -O2 -ffile-prefix-map=/home/dolphin/working/mx-tweak=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -std=gnu++1z -Wall -Wextra -D_REENTRANT -fPIC -DQT_DEPRECATED_WARNINGS -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -o moc_window_buttons.o moc_window_buttons.cpp
+g++ -c -pipe -g -O2 -ffile-prefix-map=/home/dolphin/working/mx-tweak=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -std=gnu++1z -Wall -Wextra -D_REENTRANT -fPIC -DQT_DEPRECATED_WARNINGS -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -o moc_theming_to_tweak.o moc_theming_to_tweak.cpp
+g++ -c -pipe -g -O2 -ffile-prefix-map=/home/dolphin/working/mx-tweak=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -std=gnu++1z -Wall -Wextra -D_REENTRANT -fPIC -DQT_DEPRECATED_WARNINGS -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -o moc_remove_user_theme_set.o moc_remove_user_theme_set.cpp
+g++ -c -pipe -g -O2 -ffile-prefix-map=/home/dolphin/working/mx-tweak=. -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -std=gnu++1z -Wall -Wextra -D_REENTRANT -fPIC -DQT_DEPRECATED_WARNINGS -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -I. -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I. -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -o moc_brightness_small.o moc_brightness_small.cpp
+g++ -Wl,-z,relro -o mx-tweak main.o about.o defaultlook.o xfwm_compositor_settings.o window_buttons.o theming_to_tweak.o remove_user_theme_set.o brightness_small.o qrc_images.o moc_defaultlook.o moc_xfwm_compositor_settings.o moc_window_buttons.o moc_theming_to_tweak.o moc_remove_user_theme_set.o moc_brightness_small.o   /usr/lib/x86_64-linux-gnu/libQt5Widgets.so /usr/lib/x86_64-linux-gnu/libQt5Gui.so /usr/lib/x86_64-linux-gnu/libQt5Core.so -lGL -lpthread   
+make[2]: Leaving directory '/home/dolphin/working/mx-tweak'
+make[1]: Leaving directory '/home/dolphin/working/mx-tweak'
+   dh_auto_test -O--no-automatic-dbgsym -O--parallel
+   create-stamp debian/debhelper-build-stamp
+ fakeroot debian/rules binary
+dh binary --no-automatic-dbgsym --parallel
+   dh_testroot -O--no-automatic-dbgsym -O--parallel
+   dh_prep -O--no-automatic-dbgsym -O--parallel
+   debian/rules override_dh_auto_install
+make[1]: Entering directory '/home/dolphin/working/mx-tweak'
+dh_auto_install -- QMAKE=qmake-qt5 LRELEASE=lrelease-qt5 QMAKE_OPTS="DEFINES+=NO_DEBUG_ON_CONSOLE"
+make[1]: Leaving directory '/home/dolphin/working/mx-tweak'
+   dh_install -O--no-automatic-dbgsym -O--parallel
+   dh_installdocs -O--no-automatic-dbgsym -O--parallel
+   dh_installchangelogs -O--no-automatic-dbgsym -O--parallel
+   dh_systemd_enable -O--no-automatic-dbgsym -O--parallel
+   dh_installinit -O--no-automatic-dbgsym -O--parallel
+   dh_systemd_start -O--no-automatic-dbgsym -O--parallel
+   dh_icons -O--no-automatic-dbgsym -O--parallel
+   dh_perl -O--no-automatic-dbgsym -O--parallel
+   dh_link -O--no-automatic-dbgsym -O--parallel
+   dh_strip_nondeterminism -O--no-automatic-dbgsym -O--parallel
+   dh_compress -O--no-automatic-dbgsym -O--parallel
+   dh_fixperms -O--no-automatic-dbgsym -O--parallel
+   dh_missing -O--no-automatic-dbgsym -O--parallel
+   dh_strip -O--no-automatic-dbgsym -O--parallel
+   dh_makeshlibs -O--no-automatic-dbgsym -O--parallel
+   debian/rules override_dh_shlibdeps
+make[1]: Entering directory '/home/dolphin/working/mx-tweak'
+dh_shlibdeps --dpkg-shlibdeps-params=--ignore-missing-info
+make[1]: Leaving directory '/home/dolphin/working/mx-tweak'
+   dh_installdeb -O--no-automatic-dbgsym -O--parallel
+   dh_gencontrol -O--no-automatic-dbgsym -O--parallel
+   dh_md5sums -O--no-automatic-dbgsym -O--parallel
+   debian/rules override_dh_builddeb
+make[1]: Entering directory '/home/dolphin/working/mx-tweak'
+dh_builddeb -- -Z xz
+dpkg-deb: building package 'mx-tweak' in '../mx-tweak_24.11.02mx23_amd64.deb'.
+make[1]: Leaving directory '/home/dolphin/working/mx-tweak'
+ dpkg-genbuildinfo -O../mx-tweak_24.11.02mx23_amd64.buildinfo
+ dpkg-genchanges -O../mx-tweak_24.11.02mx23_amd64.changes
+dpkg-genchanges: info: including full source code in upload
+ dpkg-source --after-build .
+dpkg-buildpackage: info: full upload; Debian-native package (full source is included)
