@@ -1,7 +1,7 @@
-mx-tweak (24.11.02mx23+nmu1) UNRELEASED; urgency=medium
+mx-tweak (24.11.03mx23) mx; urgency=medium
 
   * fix localization on theme tab
-  * 
+  * update translations 
 
  -- Dolphin Oracle <dolphin@dolphin>  Mon, 18 Nov 2024 08:38:47 -0500
 
