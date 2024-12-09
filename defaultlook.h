@@ -120,6 +120,8 @@ public:
     bool debianKernelUpdateFlag = false;
     bool plasmadisoverautostartflag = false;
     bool graphicssetupflag=true;
+    bool kvmflag=false;
+    QString kvmconffile;
 
 
 
@@ -193,6 +195,7 @@ public:
     void changecomputername(QString hostname);
     bool validatecomputername(QString hostname);
     void changedisplaymanager(QString dm);
+    void kvm_early_switch(QString action, QString file);
 
 private slots:
     static void on_buttonCancel_clicked();
@@ -330,6 +333,8 @@ private slots:
     void on_checkBoxBluetoothBattery_clicked();
 
     void on_checkBoxDisplayManager_clicked();
+
+    void on_checkBoxKVMVirtLoad_clicked();
 
 private:
     Ui::defaultlook *ui;

@@ -295,6 +295,22 @@ for i in $installed_dm
 DEBIAN_FRONTEND=noninteractive /usr/sbin/dpkg-reconfigure $newdm
 }
 
+kvm_early_switch(){
+	local action="$1" file="$2"
+
+	#clear out existing switches
+	if [ -f "$file" ]; then
+		sed -i "/option added by mx-tweak/d" "$file"
+		sed -i "/enable_virt_at_load/d" "$file"
+	fi
+
+	#if "on" enable option, else option already removed by cleanup
+	if [ "$action" = "on" ]; then
+		echo "#option added by mx-tweak" >> "$file"
+		echo "options kvm enable_virt_at_load=0" >> "$file"
+	fi
+}
+
 main()
 {
 $CMD1
@@ -324,6 +340,8 @@ case "$CMD1" in
 	bluetooth_battery) bluetooth_battery "$CMD2"
 	;;
 	displaymanager) change_display_manager "$CMD2"
+	;;
+	kvm_early_switch) kvm_early_switch "$CMD2" "$CMD3"
 	;;
 	*) main
 	;;
