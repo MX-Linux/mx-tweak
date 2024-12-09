@@ -1498,6 +1498,24 @@ void defaultlook::setupEtc()
         ui->checkBoxBluetoothBattery->hide();
     }
 
+    //setup early KVM module loading
+    test = runCmd("LANG=C grep \"enable_virt_at_load=0\" /etc/modprobe.d/* | grep kvm").output;
+    if (!test.isEmpty()){
+        if (!test.section(":",1,1).startsWith("#" )){
+        ui->checkBoxKVMVirtLoad->setChecked(true);
+        kvmconffile=test.section(":",0,0);
+        if (verbose) qDebug() << "kvm conf file is " << kvmconffile;
+        } else {
+            ui->checkBoxKVMVirtLoad->setChecked(false);
+            kvmconffile = "/etc/modprobe.d/kvm.conf";
+        }
+    } else {
+        ui->checkBoxKVMVirtLoad->setChecked(false);
+        kvmconffile = "/etc/modprobe.d/kvm.conf";
+    }
+    //set flag false so future changes processed, but not an unchanged checkbox
+    kvmflag=false;
+
     //setup apt install_recommends
     //enable checkbox only if Install-Recommends is set to 1. default is 0 or no if no existanct apt.conf
     if ( QFile("/etc/apt/apt.conf").exists()){
@@ -2682,6 +2700,15 @@ void defaultlook::on_ButtonApplyEtc_clicked()
         ui->checkBoxDisplayManager->setChecked(false);
     }
 
+    //kvm_early_switch
+    if (kvmflag){
+        if (ui->checkBoxKVMVirtLoad->isChecked()){
+           kvm_early_switch("on", kvmconffile);
+        } else {
+            kvm_early_switch("off", kvmconffile);
+        }
+    }
+
     //checkbox options
     if ( ! udisks_option.isEmpty() || ! sudo_override_option.isEmpty() || ! user_name_space_override_option.isEmpty() || ! intel_option.isEmpty() || ! lightdm_option.isEmpty() || ! amd_option.isEmpty() || ! radeon_option.isEmpty() || !bluetooth_option.isEmpty() || !recommends_option.isEmpty() || !debian_kernel_updates_option.isEmpty() || !liq_kernel_updates_option.isEmpty()){
         runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + udisks_option + " " + sudo_override_option + " " + user_name_space_override_option + " " + intel_option + " " + amd_option + " " + radeon_option + " " + bluetooth_option + " " + recommends_option + " " + lightdm_option + " " + debian_kernel_updates_option + " " + liq_kernel_updates_option);
@@ -2693,6 +2720,11 @@ void defaultlook::on_ButtonApplyEtc_clicked()
 
 void defaultlook::changecomputername(QString hostname){
     runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh hostname " + hostname);
+}
+
+void defaultlook::kvm_early_switch(QString action, QString file){
+    if (verbose) qDebug() << "kvm flag is " << kvmflag << "action is " << action << " file is " << file;
+    runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh kvm_early_switch " + action + " " + file);
 }
 
 void defaultlook::changedisplaymanager(QString dm){
@@ -4455,5 +4487,12 @@ void defaultlook::on_checkBoxBluetoothBattery_clicked()
 void defaultlook::on_checkBoxDisplayManager_clicked()
 {
     ui->ButtonApplyEtc->setEnabled(true);
+}
+
+
+void defaultlook::on_checkBoxKVMVirtLoad_clicked()
+{
+    ui->ButtonApplyEtc->setEnabled(true);
+    kvmflag = !kvmflag;
 }
 
