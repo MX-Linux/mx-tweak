@@ -121,6 +121,36 @@
         <translation>Ajustes Rápidos do MX</translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="41"/>
+        <source>Xfce Settings</source>
+        <translation>Configurações do Xfce</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="107"/>
+        <source>About</source>
+        <translation>Sobre</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="118"/>
+        <source>Help</source>
+        <translation>Ajuda</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="135"/>
+        <source>Quit application</source>
+        <translation>Sair do aplicativo</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="138"/>
+        <source>Close</source>
+        <translation>Fechar</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="145"/>
+        <source>Alt+N</source>
+        <translation>Alt+N</translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="165"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the panel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Personalizar o painel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
@@ -150,36 +180,6 @@
         <location filename="../defaultlook.ui" line="243"/>
         <source>Appearance</source>
         <translation>Aparência</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="41"/>
-        <source>Xfce Settings</source>
-        <translation>Configurações do Xfce</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="107"/>
-        <source>About</source>
-        <translation>Sobre</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="118"/>
-        <source>Help</source>
-        <translation>Ajuda</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="135"/>
-        <source>Quit application</source>
-        <translation>Sair do aplicativo</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="138"/>
-        <source>Close</source>
-        <translation>Fechar</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="145"/>
-        <source>Alt+N</source>
-        <translation>Alt+N</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="270"/>
@@ -303,7 +303,7 @@
         <location filename="../defaultlook.ui" line="1290"/>
         <location filename="../defaultlook.ui" line="1839"/>
         <location filename="../defaultlook.ui" line="1898"/>
-        <location filename="../defaultlook.ui" line="2073"/>
+        <location filename="../defaultlook.ui" line="2045"/>
         <source>Apply</source>
         <extracomment>apply changes</extracomment>
         <translation>Aplicar</translation>
@@ -326,30 +326,14 @@
         <translation>Tema</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="638"/>
-        <source>Size</source>
-        <extracomment>size of the mouse pointer or cursor</extracomment>
-        <translation>Tamanho</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="666"/>
-        <source>Theme Options</source>
-        <translation>Opções de Tema</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="582"/>
-        <source>Remove User Theme Set</source>
-        <translation>Remover o Conjunto de Temas do Usuário</translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="575"/>
         <source>Preview</source>
         <translation>Visualizar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="682"/>
-        <source>Undo</source>
-        <translation>Desfazer</translation>
+        <location filename="../defaultlook.ui" line="582"/>
+        <source>Remove User Theme Set</source>
+        <translation>Remover o Conjunto de Temas do Usuário</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="593"/>
@@ -358,22 +342,15 @@
         <translation>Salvar as Configurações Atuais como um Conjunto de Temas</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="631"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Cursors&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <extracomment>cursor theme</extracomment>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Cursores&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <location filename="../defaultlook.ui" line="604"/>
+        <source>default</source>
+        <extracomment>default pointer size determined by X server</extracomment>
+        <translation>padrão</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="651"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Manager&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <extracomment>theme a window manager border will get</extracomment>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Gerenciador de Janelas&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="689"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <extracomment>theme an application will get</extracomment>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Aplicativos&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <location filename="../defaultlook.ui" line="617"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Themes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Temas&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="624"/>
@@ -382,9 +359,38 @@
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ícones&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="617"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Themes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Temas&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <location filename="../defaultlook.ui" line="631"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Cursors&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <extracomment>cursor theme</extracomment>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Cursores&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="638"/>
+        <source>Size</source>
+        <extracomment>size of the mouse pointer or cursor</extracomment>
+        <translation>Tamanho</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="651"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Manager&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <extracomment>theme a window manager border will get</extracomment>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Gerenciador de Janelas&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="666"/>
+        <source>Theme Options</source>
+        <translation>Opções de Tema</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="682"/>
+        <source>Undo</source>
+        <translation>Desfazer</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="689"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <extracomment>theme an application will get</extracomment>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Aplicativos&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="745"/>
@@ -398,55 +404,9 @@
         <translation>Opções de transparência e de sombreado</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="862"/>
-        <source>Edit compton.conf directly in text editor</source>
-        <translation>Editar o arquivo de configurações ‘compton.conf’ diretamente em um editor de texto</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="865"/>
-        <source>Edit compton.conf</source>
-        <translation>Editar o arquivo de configurações ‘compton.conf’</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="876"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce Compositor Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configurações do Compositor do Xfce&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="879"/>
-        <source>Xfwm Settings</source>
-        <translation>Configurações do Xfwm</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="838"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Changing the VBlank mode may help alleviate some screen tearing issues.  See Help for more information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Alterar o modo VBlank pode ajudar a aliviar alguns problemas de riscos na tela. Consulte a ‘Ajuda’ para obter mais informações.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="841"/>
-        <source>VBlank</source>
-        <translation>VBlank</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="848"/>
-        <source>Launch compton-conf configuration tool</source>
-        <translation>Abrir o arquivo ‘compton-conf’ com a ferramenta de configurações</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="851"/>
-        <source>Compton settings</source>
-        <translation>Configurações do Compton</translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="783"/>
         <source>None</source>
         <translation>Nenhum</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="604"/>
-        <source>default</source>
-        <extracomment>default pointer size determined by X server</extracomment>
-        <translation>padrão</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="788"/>
@@ -479,6 +439,46 @@
         <source>off</source>
         <extracomment>setting to 0 turns off screensaver screen blank</extracomment>
         <translation>Desligado</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="838"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Changing the VBlank mode may help alleviate some screen tearing issues.  See Help for more information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Alterar o modo VBlank pode ajudar a aliviar alguns problemas de riscos na tela. Consulte a ‘Ajuda’ para obter mais informações.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="841"/>
+        <source>VBlank</source>
+        <translation>VBlank</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="848"/>
+        <source>Launch compton-conf configuration tool</source>
+        <translation>Abrir o arquivo ‘compton-conf’ com a ferramenta de configurações</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="851"/>
+        <source>Compton settings</source>
+        <translation>Configurações do Compton</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="862"/>
+        <source>Edit compton.conf directly in text editor</source>
+        <translation>Editar o arquivo de configurações ‘compton.conf’ diretamente em um editor de texto</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="865"/>
+        <source>Edit compton.conf</source>
+        <translation>Editar o arquivo de configurações ‘compton.conf’</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="876"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce Compositor Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configurações do Compositor do Xfce&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="879"/>
+        <source>Xfwm Settings</source>
+        <translation>Configurações do Xfwm</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="919"/>
@@ -750,29 +750,6 @@
         <translation>Plasma</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1826"/>
-        <source>Workspace</source>
-        <translation>Área de Trabalho</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2060"/>
-        <source>Change computer name (requires reboot)</source>
-        <extracomment>option to change the system hostname, requires a reboot to be 100% effective</extracomment>
-        <translation>Alterar o nome do computador. Esta opção necessita a reinicialização do sistema operacional.</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2043"/>
-        <source>Change Default Display Manager (login screen) (requires reboot)</source>
-        <extracomment>option to change display manager login screen.  present if more than one display manager is installed</extracomment>
-        <translation>Alterar o Gerenciador de Exibição do Início da Sessão padrão da tela de autenticação, se mais de um gerenciador de exibição estiver instalado. Esta opção necessita a reinicialização do sistema operacional.</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2084"/>
-        <source>Enable Bluetooth battery info for connected devices (requires system restart)</source>
-        <extracomment>expose battery info for connected bluetooth devices to the operating system via dbus</extracomment>
-        <translation>Ativar a exibição das informações da bateria do Bluetooth para os dispositivos que estão conectados no computador. Esta opção necessita a reinicialização do sistema operacional.</translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="1768"/>
         <source>Enable single-click</source>
         <translation>Ativar o clique único</translation>
@@ -781,6 +758,11 @@
         <location filename="../defaultlook.ui" line="1775"/>
         <source>Reset KDE/Plasma defaults</source>
         <translation>Redefinir os padrões do KDE/Plasma</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1826"/>
+        <source>Workspace</source>
+        <translation>Área de Trabalho</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1850"/>
@@ -823,60 +805,6 @@
         <translation>Outros</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1946"/>
-        <source>Reset Lightdm (login screen) to system default theme</source>
-        <translation>Redefinir o LightDM (tela do início da sessão ou ‘login’) para o tema padrão do sistema operacional</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1998"/>
-        <source>put a hold or remove a hold on updates of Liquorix kernels</source>
-        <extracomment>toggle for apt hold action on update meta packages</extracomment>
-        <translation>Suspender ou remover as atualizações do núcleo/kernel do Liquorix</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2001"/>
-        <source>Enable Automatic Liquorix Kernel Updates (MX ahs repository)</source>
-        <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
-        <translation>Ativar as atualizações automáticas do núcleo/kernel do Liquorix (a partir dos repositórios do MX)</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2050"/>
-        <source>put a hold or remove a hold on updates of Debian  kernels</source>
-        <extracomment>toggle for apt hold action on update meta packages</extracomment>
-        <translation>Suspender ou remover as atualizações do núcleo/kernel do Debian</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2053"/>
-        <source>Enable Automatic Debian Kernel Updates</source>
-        <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
-        <translation>Ativar as atualizações automáticas do núcleo/kernel do Debian</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1970"/>
-        <source>Password for administrative tasks:</source>
-        <translation>Senha para tarefas administrativas:</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2098"/>
-        <source>Enable mounting of internal drives by non-root users</source>
-        <translation>Ativar a montagem de discos internos por usuários além do administrador (root)</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1977"/>
-        <source>Root</source>
-        <translation>Root</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2036"/>
-        <source>Enable kernel sandbox</source>
-        <translation>Ativar o ambiente isolado para o núcleo da caixa de areia (kernel sandbox)</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1939"/>
-        <source>&amp;User</source>
-        <translation>&amp;Usuário</translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="1929"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Requer a reinicialização&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
@@ -887,49 +815,133 @@
         <translation>Ativar os adaptadores de Bluetooth na inicialização do sistema operacional</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1984"/>
-        <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
-        <translation>O comando ‘apt’ instala os pacotes ‘recomendados’ como dependências adicionais</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2022"/>
-        <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
-        <translation>Gerar o menu ‘Todos os Aplicativos’ do gerenciador de janelas Fluxbox após a instalação, remoção e atualização do pacote</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1991"/>
-        <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
-        <translation>Utilizar as decorações do lado do cliente (Client Side Decorations - CSD) em aplicativos GTK3 que as suportam. Esta opção necessita a reinicialização do sistema operacional.</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1956"/>
+        <location filename="../defaultlook.ui" line="1939"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>Utilizar o controlador (driver) Intel em vez do controlador ‘modesetting’ padrão. Esta opção necessita a reinicialização do sistema operacional.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2091"/>
-        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
-        <translation>          Observação: será feito uma cópia de segurança do arquivo de configurações existente no caminho /etc/X11/xorg.conf.d/20-intel.conf na sua pasta pessoal</translation>
+        <location filename="../defaultlook.ui" line="1946"/>
+        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
+        <translation>          Observação: será feito uma cópia de segurança do arquivo de configurações existente no caminho /etc/X11/xorg.conf.d/20-radeon.conf na sua pasta pessoal</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2029"/>
-        <source>Use tearfree amdgpu option</source>
-        <translation>Utilizar a opção anti-distorção do controlador amdgpu</translation>
+        <location filename="../defaultlook.ui" line="1953"/>
+        <source>Reset Lightdm (login screen) to system default theme</source>
+        <translation>Redefinir o LightDM (tela do início da sessão ou ‘login’) para o tema padrão do sistema operacional</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1963"/>
+        <location filename="../defaultlook.ui" line="1960"/>
+        <source>Root</source>
+        <translation>Root</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1970"/>
+        <source>Change computer name (requires reboot)</source>
+        <extracomment>option to change the system hostname, requires a reboot to be 100% effective</extracomment>
+        <translation>Alterar o nome do computador. Esta opção necessita a reinicialização do sistema operacional.</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1977"/>
+        <source>Enable kernel sandbox</source>
+        <translation>Ativar o ambiente isolado para o núcleo da caixa de areia (kernel sandbox)</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1984"/>
+        <source>Enable mounting of internal drives by non-root users</source>
+        <translation>Ativar a montagem de discos internos por usuários além do administrador (root)</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1991"/>
+        <source>Enable Bluetooth battery info for connected devices (requires system restart)</source>
+        <extracomment>expose battery info for connected bluetooth devices to the operating system via dbus</extracomment>
+        <translation>Ativar a exibição das informações da bateria do Bluetooth para os dispositivos que estão conectados no computador. Esta opção necessita a reinicialização do sistema operacional.</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1998"/>
+        <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
+        <translation>O comando ‘apt’ instala os pacotes ‘recomendados’ como dependências adicionais</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2015"/>
+        <source>Password for administrative tasks:</source>
+        <translation>Senha para tarefas administrativas:</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2022"/>
+        <source>put a hold or remove a hold on updates of Liquorix kernels</source>
+        <extracomment>toggle for apt hold action on update meta packages</extracomment>
+        <translation>Suspender ou remover as atualizações do núcleo/kernel do Liquorix</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2025"/>
+        <source>Enable Automatic Liquorix Kernel Updates (MX ahs repository)</source>
+        <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
+        <translation>Ativar as atualizações automáticas do núcleo/kernel do Liquorix (a partir dos repositórios do MX)</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2032"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>          Observação: será feito uma cópia de segurança do arquivo de configurações existente no caminho /etc/X11/xorg.conf.d/20-amd.conf na sua pasta pessoal</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2015"/>
+        <location filename="../defaultlook.ui" line="2056"/>
         <source>Use tearfree radeon driver option</source>
         <translation>Utilizar a opção anti-distorção do controlador Radeon</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2105"/>
-        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
-        <translation>          Observação: será feito uma cópia de segurança do arquivo de configurações existente no caminho /etc/X11/xorg.conf.d/20-radeon.conf na sua pasta pessoal</translation>
+        <location filename="../defaultlook.ui" line="2063"/>
+        <source>Use tearfree amdgpu option</source>
+        <translation>Utilizar a opção anti-distorção do controlador amdgpu</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2070"/>
+        <source>Change Default Display Manager (login screen) (requires reboot)</source>
+        <extracomment>option to change display manager login screen.  present if more than one display manager is installed</extracomment>
+        <translation>Alterar o Gerenciador de Exibição do Início da Sessão padrão da tela de autenticação, se mais de um gerenciador de exibição estiver instalado. Esta opção necessita a reinicialização do sistema operacional.</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2077"/>
+        <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
+        <translation>Utilizar as decorações do lado do cliente (Client Side Decorations - CSD) em aplicativos GTK3 que as suportam. Esta opção necessita a reinicialização do sistema operacional.</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2084"/>
+        <source>&amp;User</source>
+        <translation>&amp;Usuário</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2091"/>
+        <source>put a hold or remove a hold on updates of Debian  kernels</source>
+        <extracomment>toggle for apt hold action on update meta packages</extracomment>
+        <translation>Suspender ou remover as atualizações do núcleo/kernel do Debian</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2094"/>
+        <source>Enable Automatic Debian Kernel Updates</source>
+        <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
+        <translation>Ativar as atualizações automáticas do núcleo/kernel do Debian</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2114"/>
+        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
+        <translation>          Observação: será feito uma cópia de segurança do arquivo de configurações existente no caminho /etc/X11/xorg.conf.d/20-intel.conf na sua pasta pessoal</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2121"/>
+        <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
+        <translation>Gerar o menu ‘Todos os Aplicativos’ do gerenciador de janelas Fluxbox após a instalação, remoção e atualização do pacote</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2128"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Early loading of KVM module is new to  kernel 6.12 and conflicts with some non-KVM virtual machine applications, including virtualbox &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <extracomment>early loading is new on 6.12 kernel and conflicts with virtualbox</extracomment>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;O carregamento antecipado do módulo KVM é novo no kernel da versão 6.12 e entra em conflito com alguns programas de máquina virtual que não possuem a compatibilidade com o KVM. O VirtualBox da versão atual não possui a compatibilidade com o KVM &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2131"/>
+        <source>Disable early KVM module load (must be disabled for Virtualbox operation on kernel 6.12 and up)</source>
+        <extracomment>disable early loading of KVM module.  necessary for virtualbox to function with kernels 6.12 and up.  actually default behavior on kernels 6.11 and earlier.</extracomment>
+        <translation>Desativar o carregamento antecipado do módulo KVM (deve ser desativado para a utilização no VirtualBox com o kernel da versão 6.12 ou superior)</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="61"/>
@@ -1007,41 +1019,41 @@
         <translation>As suas configurações atuais do painel foram copiadas para uma pasta oculta chamada ‘.restore’ em sua pasta pessoal (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1644"/>
+        <location filename="../defaultlook.cpp" line="1662"/>
         <source>Plasma Widget Themes</source>
         <comment>theme style of the kde plasma widgets</comment>
         <translation>Temas das Janelas do Plasma</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1645"/>
+        <location filename="../defaultlook.cpp" line="1663"/>
         <source>Color Schemes</source>
         <comment>plasma widget color schemes</comment>
         <translation>Esquemas das Cores</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1646"/>
+        <location filename="../defaultlook.cpp" line="1664"/>
         <source>Plasma Look &amp; Feel Global Themes</source>
         <comment>plasma global themes</comment>
         <translation>Temas da Aparência e do Comportamento do Plasma</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1914"/>
+        <location filename="../defaultlook.cpp" line="1932"/>
         <source>settings</source>
         <translation>Configurações</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2255"/>
+        <location filename="../defaultlook.cpp" line="2273"/>
         <source>Choose a theme set</source>
         <translation>Escolha um conjunto de temas</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2705"/>
+        <location filename="../defaultlook.cpp" line="2737"/>
         <source>Please enter a computer name.</source>
         <comment>question to enter a name for the computer hostname</comment>
         <translation>Por favor, insira o nome do computador</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2709"/>
+        <location filename="../defaultlook.cpp" line="2741"/>
         <source>Sorry, your computer name contains invalid characters.
 You&apos;ll have to select a different
 name before proceeding.</source>
@@ -1051,7 +1063,7 @@ caracteres inválidos. Você tem que escolher um
 nome  diferente antes de prosseguir.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="4342"/>
+        <location filename="../defaultlook.cpp" line="4374"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
         <translation>Selecionar o aplicativo a ser executado</translation>

@@ -121,6 +121,36 @@
         <translation>MX Ρυθμίσεις</translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="41"/>
+        <source>Xfce Settings</source>
+        <translation>Ρυθμίσεις Xfce</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="107"/>
+        <source>About</source>
+        <translation>Περί</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="118"/>
+        <source>Help</source>
+        <translation>Βοήθεια</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="135"/>
+        <source>Quit application</source>
+        <translation>Κλείσιμο εφαρμογής</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="138"/>
+        <source>Close</source>
+        <translation>Κλείσιμο</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="145"/>
+        <source>Alt+N</source>
+        <translation>Alt+N</translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="165"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the panel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Προτιμήσεις ταμπλό&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
@@ -150,36 +180,6 @@
         <location filename="../defaultlook.ui" line="243"/>
         <source>Appearance</source>
         <translation>Εμφάνιση</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="41"/>
-        <source>Xfce Settings</source>
-        <translation>Ρυθμίσεις Xfce</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="107"/>
-        <source>About</source>
-        <translation>Περί</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="118"/>
-        <source>Help</source>
-        <translation>Βοήθεια</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="135"/>
-        <source>Quit application</source>
-        <translation>Κλείσιμο εφαρμογής</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="138"/>
-        <source>Close</source>
-        <translation>Κλείσιμο</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="145"/>
-        <source>Alt+N</source>
-        <translation>Alt+N</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="270"/>
@@ -303,7 +303,7 @@
         <location filename="../defaultlook.ui" line="1290"/>
         <location filename="../defaultlook.ui" line="1839"/>
         <location filename="../defaultlook.ui" line="1898"/>
-        <location filename="../defaultlook.ui" line="2073"/>
+        <location filename="../defaultlook.ui" line="2045"/>
         <source>Apply</source>
         <extracomment>apply changes</extracomment>
         <translation>Εφαρμογή</translation>
@@ -326,30 +326,14 @@
         <translation>Θέμα</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="638"/>
-        <source>Size</source>
-        <extracomment>size of the mouse pointer or cursor</extracomment>
-        <translation>Μέγεθος</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="666"/>
-        <source>Theme Options</source>
-        <translation>Επιλογές</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="582"/>
-        <source>Remove User Theme Set</source>
-        <translation>Αφαίρεση θέματος</translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="575"/>
         <source>Preview</source>
         <translation>Προεπισκόπηση</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="682"/>
-        <source>Undo</source>
-        <translation>Αναίρεση</translation>
+        <location filename="../defaultlook.ui" line="582"/>
+        <source>Remove User Theme Set</source>
+        <translation>Αφαίρεση θέματος</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="593"/>
@@ -358,22 +342,15 @@
         <translation>Αποθήκευση των ρυθμίσεων σαν θέμα</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="631"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Cursors&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <extracomment>cursor theme</extracomment>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Δείκτες ποντικιού&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <location filename="../defaultlook.ui" line="604"/>
+        <source>default</source>
+        <extracomment>default pointer size determined by X server</extracomment>
+        <translation>προεπιλογή</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="651"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Manager&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <extracomment>theme a window manager border will get</extracomment>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Διαχειριστής παραθύρων&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="689"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <extracomment>theme an application will get</extracomment>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Εφαρμογή&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <location filename="../defaultlook.ui" line="617"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Themes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Θέματα&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="624"/>
@@ -382,9 +359,38 @@
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Εικονίδια&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="617"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Themes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Θέματα&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <location filename="../defaultlook.ui" line="631"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Cursors&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <extracomment>cursor theme</extracomment>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Δείκτες ποντικιού&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="638"/>
+        <source>Size</source>
+        <extracomment>size of the mouse pointer or cursor</extracomment>
+        <translation>Μέγεθος</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="651"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Manager&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <extracomment>theme a window manager border will get</extracomment>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Διαχειριστής παραθύρων&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="666"/>
+        <source>Theme Options</source>
+        <translation>Επιλογές</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="682"/>
+        <source>Undo</source>
+        <translation>Αναίρεση</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="689"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <extracomment>theme an application will get</extracomment>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Εφαρμογή&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="745"/>
@@ -398,55 +404,9 @@
         <translation>Επιλογές διαφάνειας και σκιάς</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="862"/>
-        <source>Edit compton.conf directly in text editor</source>
-        <translation>Επεξεργασία του compton.conf με τον επεξεργαστή κειμένου</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="865"/>
-        <source>Edit compton.conf</source>
-        <translation>Επεξεργασία του compton.conf</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="876"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce Compositor Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ρυθμίσεις συνθέτη Xfce&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="879"/>
-        <source>Xfwm Settings</source>
-        <translation>Ρυθμίσεις Xfwm</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="838"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Changing the VBlank mode may help alleviate some screen tearing issues.  See Help for more information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Η αλλαγή στη λειτουργία VBlank μπορεί να βοηθήσει στην επίλυση ορισμένων ζητημάτων απεικόνισης. Δείτε τη βοήθεια για περισσότερες πληροφορίες.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="841"/>
-        <source>VBlank</source>
-        <translation>VBlank</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="848"/>
-        <source>Launch compton-conf configuration tool</source>
-        <translation>Άνοιγμα του εργαλείου Compton-conf</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="851"/>
-        <source>Compton settings</source>
-        <translation>Ρυθμίσεις Compton</translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="783"/>
         <source>None</source>
         <translation>Κανένας</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="604"/>
-        <source>default</source>
-        <extracomment>default pointer size determined by X server</extracomment>
-        <translation>προεπιλογή</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="788"/>
@@ -479,6 +439,46 @@
         <source>off</source>
         <extracomment>setting to 0 turns off screensaver screen blank</extracomment>
         <translation>off</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="838"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Changing the VBlank mode may help alleviate some screen tearing issues.  See Help for more information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Η αλλαγή στη λειτουργία VBlank μπορεί να βοηθήσει στην επίλυση ορισμένων ζητημάτων απεικόνισης. Δείτε τη βοήθεια για περισσότερες πληροφορίες.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="841"/>
+        <source>VBlank</source>
+        <translation>VBlank</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="848"/>
+        <source>Launch compton-conf configuration tool</source>
+        <translation>Άνοιγμα του εργαλείου Compton-conf</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="851"/>
+        <source>Compton settings</source>
+        <translation>Ρυθμίσεις Compton</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="862"/>
+        <source>Edit compton.conf directly in text editor</source>
+        <translation>Επεξεργασία του compton.conf με τον επεξεργαστή κειμένου</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="865"/>
+        <source>Edit compton.conf</source>
+        <translation>Επεξεργασία του compton.conf</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="876"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce Compositor Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ρυθμίσεις συνθέτη Xfce&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="879"/>
+        <source>Xfwm Settings</source>
+        <translation>Ρυθμίσεις Xfwm</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="919"/>
@@ -750,29 +750,6 @@
         <translation>Plasma</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1826"/>
-        <source>Workspace</source>
-        <translation>Χώρος εργασίας</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2060"/>
-        <source>Change computer name (requires reboot)</source>
-        <extracomment>option to change the system hostname, requires a reboot to be 100% effective</extracomment>
-        <translation>Αλλαγή ονόματος του υπολογιστή (απαιτείται επανεκκίνηση)</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2043"/>
-        <source>Change Default Display Manager (login screen) (requires reboot)</source>
-        <extracomment>option to change display manager login screen.  present if more than one display manager is installed</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2084"/>
-        <source>Enable Bluetooth battery info for connected devices (requires system restart)</source>
-        <extracomment>expose battery info for connected bluetooth devices to the operating system via dbus</extracomment>
-        <translation>Ενεργοποίηση πληροφοριών μπαταρίας για τις συνδεδεμένες συσκευές Bluetooth (απαιτείται επανεκκίνηση του συστήματος)</translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="1768"/>
         <source>Enable single-click</source>
         <translation>Ενεργοποίηση του απλό κλικ</translation>
@@ -783,10 +760,15 @@
         <translation>Επαναφορά προεπιλογών KDE/Plasma</translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="1826"/>
+        <source>Workspace</source>
+        <translation>Χώρος εργασίας</translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="1850"/>
         <source>Autostart plasma-discover system tray update notification utility</source>
         <extracomment>enable or disable autostartup of plasma-discover updater utility on login</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Αυτόματη εκκίνηση του βοηθητικού προγράμματος του δοχείου συστήματος plasma-discover για ειδοποιήσεις και ενημερώσεις</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1860"/>
@@ -823,60 +805,6 @@
         <translation>Άλλα</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1946"/>
-        <source>Reset Lightdm (login screen) to system default theme</source>
-        <translation>Επαναφορά του προεπιλεγμένου θέματος στο Lightdm (οθόνη σύνδεσης)</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1998"/>
-        <source>put a hold or remove a hold on updates of Liquorix kernels</source>
-        <extracomment>toggle for apt hold action on update meta packages</extracomment>
-        <translation>αναμονή ή αφαίρεση αναμονής στις ενημερώσεις των πυρήνων Liquorix</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2001"/>
-        <source>Enable Automatic Liquorix Kernel Updates (MX ahs repository)</source>
-        <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
-        <translation>Ενεργοποίηση αυτόματων ενημερώσεων του πυρήνα Liquorix (αποθετήριο MX ahs)</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2050"/>
-        <source>put a hold or remove a hold on updates of Debian  kernels</source>
-        <extracomment>toggle for apt hold action on update meta packages</extracomment>
-        <translation>αναμονή ή αφαίρεση αναμονής στις ενημερώσεις των πυρήνων Debian</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2053"/>
-        <source>Enable Automatic Debian Kernel Updates</source>
-        <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
-        <translation>Ενεργοποίηση αυτόματων ενημερώσεων του πυρήνα Debian</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1970"/>
-        <source>Password for administrative tasks:</source>
-        <translation>Κωδικός πρόσβασης για εργασίες διαχειριστή:</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2098"/>
-        <source>Enable mounting of internal drives by non-root users</source>
-        <translation>Ενεργοποίηση προσάρτησης εσωτερικών δίσκων από μη διαχειριστές</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1977"/>
-        <source>Root</source>
-        <translation>Root</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2036"/>
-        <source>Enable kernel sandbox</source>
-        <translation>Ενεργοποίηση sandbox του πυρήνα</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1939"/>
-        <source>&amp;User</source>
-        <translation>&amp;Χρήστης</translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="1929"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;απαιτείται επανεκκίνηση&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
@@ -887,49 +815,133 @@
         <translation>Ενεργοποίηση οδηγών Bluetooth στην εκκίνηση</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1984"/>
-        <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
-        <translation>Το apt εγκαθιστά και τα &quot;προτεινόμενα&quot; πακέτα ως εξαρτήσεις</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2022"/>
-        <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
-        <translation>Δημιουργία μενού εφαρμογών του fluxbox μετά την εγκατάσταση, την αφαίρεση και τις ενημερώσεις του πακέτου</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1991"/>
-        <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
-        <translation>Χρήση Client Side Decorations (CSD) σε εφαρμογές GTK3 που τις υποστηρίζουν (απαιτείται επανεκκίνηση της συνεδρίας)</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1956"/>
+        <location filename="../defaultlook.ui" line="1939"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>Χρήση του προγράμματος οδήγησης intel αντί του προεπιλεγμένου &quot;modesetting&quot; (απαιτείται επανεκκίνηση)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2091"/>
-        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
-        <translation>          ΣΗΜΕΙΩΣΗ: Θα δημιουργηθεί αντίγραφο ασφαλείας του αρχείου /etc/X11/xorg.conf.d/20-intel.conf στον αρχικό φάκελο του χρήστη</translation>
+        <location filename="../defaultlook.ui" line="1946"/>
+        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
+        <translation>          ΣΗΜΕΙΩΣΗ: Θα δημιουργηθεί αντίγραφο ασφαλείας του αρχείου /etc/X11/xorg.conf.d/20-radeon.conf στον αρχικό φάκελο του χρήστη</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2029"/>
-        <source>Use tearfree amdgpu option</source>
-        <translation>Χρήση της επιλογής tearfree στο πρόγραμμα οδήγησης amdgpu</translation>
+        <location filename="../defaultlook.ui" line="1953"/>
+        <source>Reset Lightdm (login screen) to system default theme</source>
+        <translation>Επαναφορά του προεπιλεγμένου θέματος στο Lightdm (οθόνη σύνδεσης)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1963"/>
+        <location filename="../defaultlook.ui" line="1960"/>
+        <source>Root</source>
+        <translation>Root</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1970"/>
+        <source>Change computer name (requires reboot)</source>
+        <extracomment>option to change the system hostname, requires a reboot to be 100% effective</extracomment>
+        <translation>Αλλαγή ονόματος του υπολογιστή (απαιτείται επανεκκίνηση)</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1977"/>
+        <source>Enable kernel sandbox</source>
+        <translation>Ενεργοποίηση sandbox του πυρήνα</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1984"/>
+        <source>Enable mounting of internal drives by non-root users</source>
+        <translation>Ενεργοποίηση προσάρτησης εσωτερικών δίσκων από μη διαχειριστές</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1991"/>
+        <source>Enable Bluetooth battery info for connected devices (requires system restart)</source>
+        <extracomment>expose battery info for connected bluetooth devices to the operating system via dbus</extracomment>
+        <translation>Ενεργοποίηση πληροφοριών μπαταρίας για τις συνδεδεμένες συσκευές Bluetooth (απαιτείται επανεκκίνηση του συστήματος)</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1998"/>
+        <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
+        <translation>Το apt εγκαθιστά και τα &quot;προτεινόμενα&quot; πακέτα ως εξαρτήσεις</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2015"/>
+        <source>Password for administrative tasks:</source>
+        <translation>Κωδικός πρόσβασης για εργασίες διαχειριστή:</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2022"/>
+        <source>put a hold or remove a hold on updates of Liquorix kernels</source>
+        <extracomment>toggle for apt hold action on update meta packages</extracomment>
+        <translation>αναμονή ή αφαίρεση αναμονής στις ενημερώσεις των πυρήνων Liquorix</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2025"/>
+        <source>Enable Automatic Liquorix Kernel Updates (MX ahs repository)</source>
+        <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
+        <translation>Ενεργοποίηση αυτόματων ενημερώσεων του πυρήνα Liquorix (αποθετήριο MX ahs)</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2032"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>          ΣΗΜΕΙΩΣΗ: Θα δημιουργηθεί αντίγραφο ασφαλείας του αρχείου /etc/X11/xorg.conf.d/20-amd.conf  στον αρχικό φάκελο του χρήστη</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2015"/>
+        <location filename="../defaultlook.ui" line="2056"/>
         <source>Use tearfree radeon driver option</source>
         <translation>Χρήση της επιλογής tearfree στο πρόγραμμα οδήγησης radeon</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2105"/>
-        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
-        <translation>          ΣΗΜΕΙΩΣΗ: Θα δημιουργηθεί αντίγραφο ασφαλείας του αρχείου /etc/X11/xorg.conf.d/20-radeon.conf στον αρχικό φάκελο του χρήστη</translation>
+        <location filename="../defaultlook.ui" line="2063"/>
+        <source>Use tearfree amdgpu option</source>
+        <translation>Χρήση της επιλογής tearfree στο πρόγραμμα οδήγησης amdgpu</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2070"/>
+        <source>Change Default Display Manager (login screen) (requires reboot)</source>
+        <extracomment>option to change display manager login screen.  present if more than one display manager is installed</extracomment>
+        <translation>Αλλαγή προεπιλεγμένου διαχειριστή οθόνης (οθόνη σύνδεσης) (απαιτεί επανεκκίνηση)</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2077"/>
+        <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
+        <translation>Χρήση Client Side Decorations (CSD) σε εφαρμογές GTK3 που τις υποστηρίζουν (απαιτείται επανεκκίνηση της συνεδρίας)</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2084"/>
+        <source>&amp;User</source>
+        <translation>&amp;Χρήστης</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2091"/>
+        <source>put a hold or remove a hold on updates of Debian  kernels</source>
+        <extracomment>toggle for apt hold action on update meta packages</extracomment>
+        <translation>αναμονή ή αφαίρεση αναμονής στις ενημερώσεις των πυρήνων Debian</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2094"/>
+        <source>Enable Automatic Debian Kernel Updates</source>
+        <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
+        <translation>Ενεργοποίηση αυτόματων ενημερώσεων του πυρήνα Debian</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2114"/>
+        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
+        <translation>          ΣΗΜΕΙΩΣΗ: Θα δημιουργηθεί αντίγραφο ασφαλείας του αρχείου /etc/X11/xorg.conf.d/20-intel.conf στον αρχικό φάκελο του χρήστη</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2121"/>
+        <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
+        <translation>Δημιουργία μενού εφαρμογών του fluxbox μετά την εγκατάσταση, την αφαίρεση και τις ενημερώσεις του πακέτου</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2128"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Early loading of KVM module is new to  kernel 6.12 and conflicts with some non-KVM virtual machine applications, including virtualbox &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <extracomment>early loading is new on 6.12 kernel and conflicts with virtualbox</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2131"/>
+        <source>Disable early KVM module load (must be disabled for Virtualbox operation on kernel 6.12 and up)</source>
+        <extracomment>disable early loading of KVM module.  necessary for virtualbox to function with kernels 6.12 and up.  actually default behavior on kernels 6.11 and earlier.</extracomment>
+        <translation>Απενεργοποίηση της πρόωρης φόρτωσης μονάδων KVM (πρέπει να είναι απενεργοποιημένη για τη λειτουργία του Virtualbox σε πυρήνα 6.12 και άνω)</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="61"/>
@@ -1007,41 +1019,41 @@
         <translation>Οι τρέχουσες ρυθμίσεις του ταμπλό σας αποθηκεύτηκαν σαν αντίγραφο ασφαλείας, σε έναν κρυφό φάκελο με όνομα .restore στον αρχικό κατάλογο του χρήστη (~/.restore /)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1644"/>
+        <location filename="../defaultlook.cpp" line="1662"/>
         <source>Plasma Widget Themes</source>
         <comment>theme style of the kde plasma widgets</comment>
-        <translation type="unfinished"></translation>
+        <translation>Θέματα Widget Plasma</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1645"/>
+        <location filename="../defaultlook.cpp" line="1663"/>
         <source>Color Schemes</source>
         <comment>plasma widget color schemes</comment>
-        <translation type="unfinished"></translation>
+        <translation>Χρωματικά σχήματα</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1646"/>
+        <location filename="../defaultlook.cpp" line="1664"/>
         <source>Plasma Look &amp; Feel Global Themes</source>
         <comment>plasma global themes</comment>
-        <translation type="unfinished"></translation>
+        <translation>Plasma Look &amp; Feel Παγκόσμια θέματα</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1914"/>
+        <location filename="../defaultlook.cpp" line="1932"/>
         <source>settings</source>
         <translation>ρυθμίσεις</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2255"/>
+        <location filename="../defaultlook.cpp" line="2273"/>
         <source>Choose a theme set</source>
         <translation>Επιλογή θέματος</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2705"/>
+        <location filename="../defaultlook.cpp" line="2737"/>
         <source>Please enter a computer name.</source>
         <comment>question to enter a name for the computer hostname</comment>
         <translation>Εισαγάγετε ένα όνομα υπολογιστή.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2709"/>
+        <location filename="../defaultlook.cpp" line="2741"/>
         <source>Sorry, your computer name contains invalid characters.
 You&apos;ll have to select a different
 name before proceeding.</source>
@@ -1051,7 +1063,7 @@ name before proceeding.</source>
 πριν προχωρήσετε.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="4342"/>
+        <location filename="../defaultlook.cpp" line="4374"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
         <translation>Επιλογή εφαρμογής για εκτέλεση</translation>

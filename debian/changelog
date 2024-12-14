@@ -1,3 +1,11 @@
+mx-tweak (24.12.01mx23) mx; urgency=medium
+
+  * add switch for disabling kvm module early loading
+  * overrides new defualt in kernel 6.12
+  * disabling currently necessary for apps like virtuabox to load their modules
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 14 Dec 2024 13:41:20 -0500
+
 mx-tweak (24.11.03mx23) mx; urgency=medium
 
   * fix localization on theme tab

@@ -121,6 +121,36 @@
         <translation>एमएक्स-अनुकूलन</translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="41"/>
+        <source>Xfce Settings</source>
+        <translation>एक्सएफसीई सेटिंग्स</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="107"/>
+        <source>About</source>
+        <translation>बारे में</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="118"/>
+        <source>Help</source>
+        <translation>सहायता</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="135"/>
+        <source>Quit application</source>
+        <translation>अनुप्रयोग बंद करें</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="138"/>
+        <source>Close</source>
+        <translation>बंद करें</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="145"/>
+        <source>Alt+N</source>
+        <translation>Alt+N</translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="165"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the panel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;पैनल अनुकूलन&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
@@ -150,36 +180,6 @@
         <location filename="../defaultlook.ui" line="243"/>
         <source>Appearance</source>
         <translation>स्वरूप</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="41"/>
-        <source>Xfce Settings</source>
-        <translation>एक्सएफसीई सेटिंग्स</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="107"/>
-        <source>About</source>
-        <translation>बारे में</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="118"/>
-        <source>Help</source>
-        <translation>सहायता</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="135"/>
-        <source>Quit application</source>
-        <translation>अनुप्रयोग बंद करें</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="138"/>
-        <source>Close</source>
-        <translation>बंद करें</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="145"/>
-        <source>Alt+N</source>
-        <translation>Alt+N</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="270"/>
@@ -303,7 +303,7 @@
         <location filename="../defaultlook.ui" line="1290"/>
         <location filename="../defaultlook.ui" line="1839"/>
         <location filename="../defaultlook.ui" line="1898"/>
-        <location filename="../defaultlook.ui" line="2073"/>
+        <location filename="../defaultlook.ui" line="2045"/>
         <source>Apply</source>
         <extracomment>apply changes</extracomment>
         <translation>लागू करें</translation>
@@ -326,30 +326,14 @@
         <translation>थीम</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="638"/>
-        <source>Size</source>
-        <extracomment>size of the mouse pointer or cursor</extracomment>
-        <translation>आकार</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="666"/>
-        <source>Theme Options</source>
-        <translation>थीम विकल्प</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="582"/>
-        <source>Remove User Theme Set</source>
-        <translation>उपयोक्ता थीम संग्रह हटाएँ</translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="575"/>
         <source>Preview</source>
         <translation>अवलोकन</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="682"/>
-        <source>Undo</source>
-        <translation>पूर्ववत करें</translation>
+        <location filename="../defaultlook.ui" line="582"/>
+        <source>Remove User Theme Set</source>
+        <translation>उपयोक्ता थीम संग्रह हटाएँ</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="593"/>
@@ -358,21 +342,14 @@
         <translation>वर्तमान सेटिंग्स को थीम संग्रह रूप में संचित करें</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="631"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Cursors&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <extracomment>cursor theme</extracomment>
-        <translation type="unfinished"></translation>
+        <location filename="../defaultlook.ui" line="604"/>
+        <source>default</source>
+        <extracomment>default pointer size determined by X server</extracomment>
+        <translation>डिफ़ॉल्ट</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="651"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Manager&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <extracomment>theme a window manager border will get</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="689"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <extracomment>theme an application will get</extracomment>
+        <location filename="../defaultlook.ui" line="617"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Themes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -382,8 +359,37 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="617"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Themes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <location filename="../defaultlook.ui" line="631"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Cursors&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <extracomment>cursor theme</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="638"/>
+        <source>Size</source>
+        <extracomment>size of the mouse pointer or cursor</extracomment>
+        <translation>आकार</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="651"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Manager&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <extracomment>theme a window manager border will get</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="666"/>
+        <source>Theme Options</source>
+        <translation>थीम विकल्प</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="682"/>
+        <source>Undo</source>
+        <translation>पूर्ववत करें</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="689"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <extracomment>theme an application will get</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -398,55 +404,9 @@
         <translation>पारदर्शिता व छाया विकल्प</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="862"/>
-        <source>Edit compton.conf directly in text editor</source>
-        <translation>लेख संपादक में compton.conf फाइल संपादित करें</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="865"/>
-        <source>Edit compton.conf</source>
-        <translation>compton.conf फाइल संपादित करें</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="876"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce Compositor Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;एक्सएफसीई संयोजक सेटिंग्स&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="879"/>
-        <source>Xfwm Settings</source>
-        <translation>एक्सएफ-डब्लूएम सेटिंग्स</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="838"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Changing the VBlank mode may help alleviate some screen tearing issues.  See Help for more information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;VBlank मोड परिवर्तन से स्क्रीन प्रदर्शन संबंधी समस्याओं का आंशिक निवारण हो सकता है। अधिक सूचना हेतु सहायता देखें।&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="841"/>
-        <source>VBlank</source>
-        <translation>VBlank</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="848"/>
-        <source>Launch compton-conf configuration tool</source>
-        <translation>कॉम्प्टन विन्यास साधन खोलें</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="851"/>
-        <source>Compton settings</source>
-        <translation>कॉम्प्टन सेटिंग्स</translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="783"/>
         <source>None</source>
         <translation>कोई नहीं</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="604"/>
-        <source>default</source>
-        <extracomment>default pointer size determined by X server</extracomment>
-        <translation>डिफ़ॉल्ट</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="788"/>
@@ -479,6 +439,46 @@
         <source>off</source>
         <extracomment>setting to 0 turns off screensaver screen blank</extracomment>
         <translation>बंद</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="838"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Changing the VBlank mode may help alleviate some screen tearing issues.  See Help for more information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;VBlank मोड परिवर्तन से स्क्रीन प्रदर्शन संबंधी समस्याओं का आंशिक निवारण हो सकता है। अधिक सूचना हेतु सहायता देखें।&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="841"/>
+        <source>VBlank</source>
+        <translation>VBlank</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="848"/>
+        <source>Launch compton-conf configuration tool</source>
+        <translation>कॉम्प्टन विन्यास साधन खोलें</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="851"/>
+        <source>Compton settings</source>
+        <translation>कॉम्प्टन सेटिंग्स</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="862"/>
+        <source>Edit compton.conf directly in text editor</source>
+        <translation>लेख संपादक में compton.conf फाइल संपादित करें</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="865"/>
+        <source>Edit compton.conf</source>
+        <translation>compton.conf फाइल संपादित करें</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="876"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce Compositor Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;एक्सएफसीई संयोजक सेटिंग्स&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="879"/>
+        <source>Xfwm Settings</source>
+        <translation>एक्सएफ-डब्लूएम सेटिंग्स</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="919"/>
@@ -750,29 +750,6 @@
         <translation>प्लाज़्मा</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1826"/>
-        <source>Workspace</source>
-        <translation>कार्यस्थल</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2060"/>
-        <source>Change computer name (requires reboot)</source>
-        <extracomment>option to change the system hostname, requires a reboot to be 100% effective</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2043"/>
-        <source>Change Default Display Manager (login screen) (requires reboot)</source>
-        <extracomment>option to change display manager login screen.  present if more than one display manager is installed</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2084"/>
-        <source>Enable Bluetooth battery info for connected devices (requires system restart)</source>
-        <extracomment>expose battery info for connected bluetooth devices to the operating system via dbus</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="1768"/>
         <source>Enable single-click</source>
         <translation>एकल-क्लिक सक्रिय करें</translation>
@@ -781,6 +758,11 @@
         <location filename="../defaultlook.ui" line="1775"/>
         <source>Reset KDE/Plasma defaults</source>
         <translation>केडीई/प्लाज़्मा डिफ़ॉल्ट पुनः सेट करें</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1826"/>
+        <source>Workspace</source>
+        <translation>कार्यस्थल</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1850"/>
@@ -823,60 +805,6 @@
         <translation>अन्य</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1946"/>
-        <source>Reset Lightdm (login screen) to system default theme</source>
-        <translation>लाइट-डीएम (लॉगिन स्क्रीन) को सिस्टम डिफ़ॉल्ट थीम पर पुनः सेट करें</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1998"/>
-        <source>put a hold or remove a hold on updates of Liquorix kernels</source>
-        <extracomment>toggle for apt hold action on update meta packages</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2001"/>
-        <source>Enable Automatic Liquorix Kernel Updates (MX ahs repository)</source>
-        <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2050"/>
-        <source>put a hold or remove a hold on updates of Debian  kernels</source>
-        <extracomment>toggle for apt hold action on update meta packages</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2053"/>
-        <source>Enable Automatic Debian Kernel Updates</source>
-        <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1970"/>
-        <source>Password for administrative tasks:</source>
-        <translation>प्रशासक कार्यों हेतु कूटशब्द :</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2098"/>
-        <source>Enable mounting of internal drives by non-root users</source>
-        <translation>गैर-रूट उपयोक्ता द्वारा आंतरिक ड्राइव माउंट करना सक्रिय करें</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1977"/>
-        <source>Root</source>
-        <translation>रूट</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2036"/>
-        <source>Enable kernel sandbox</source>
-        <translation>कर्नेल सैंडबॉक्स सक्रिय करें</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1939"/>
-        <source>&amp;User</source>
-        <translation>उपयोक्ता (&amp;U)</translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="1929"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
@@ -887,49 +815,133 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1984"/>
-        <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2022"/>
-        <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1991"/>
-        <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1956"/>
+        <location filename="../defaultlook.ui" line="1939"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>डिफ़ॉल्ट &quot;modesetting&quot; ड्राइवर के स्थान पर इंटेल ड्राइवर उपयोग करें (पुनः आरंभ आवश्यक)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2091"/>
-        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
-        <translation>          ध्यान दें : मौजूदा /etc/X11/xorg.conf.d/20-intel.conf होम फोल्डर में बैकअप होगी</translation>
+        <location filename="../defaultlook.ui" line="1946"/>
+        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
+        <translation>          ध्यान दें : मौजूदा /etc/X11/xorg.conf.d/20-radeon.conf होम फोल्डर में बैकअप होगी</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2029"/>
-        <source>Use tearfree amdgpu option</source>
-        <translation>स्क्रीन समस्या समाधन हेतु amdgpu विकल्प उपयोग करें</translation>
+        <location filename="../defaultlook.ui" line="1953"/>
+        <source>Reset Lightdm (login screen) to system default theme</source>
+        <translation>लाइट-डीएम (लॉगिन स्क्रीन) को सिस्टम डिफ़ॉल्ट थीम पर पुनः सेट करें</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1963"/>
+        <location filename="../defaultlook.ui" line="1960"/>
+        <source>Root</source>
+        <translation>रूट</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1970"/>
+        <source>Change computer name (requires reboot)</source>
+        <extracomment>option to change the system hostname, requires a reboot to be 100% effective</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1977"/>
+        <source>Enable kernel sandbox</source>
+        <translation>कर्नेल सैंडबॉक्स सक्रिय करें</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1984"/>
+        <source>Enable mounting of internal drives by non-root users</source>
+        <translation>गैर-रूट उपयोक्ता द्वारा आंतरिक ड्राइव माउंट करना सक्रिय करें</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1991"/>
+        <source>Enable Bluetooth battery info for connected devices (requires system restart)</source>
+        <extracomment>expose battery info for connected bluetooth devices to the operating system via dbus</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="1998"/>
+        <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2015"/>
+        <source>Password for administrative tasks:</source>
+        <translation>प्रशासक कार्यों हेतु कूटशब्द :</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2022"/>
+        <source>put a hold or remove a hold on updates of Liquorix kernels</source>
+        <extracomment>toggle for apt hold action on update meta packages</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2025"/>
+        <source>Enable Automatic Liquorix Kernel Updates (MX ahs repository)</source>
+        <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2032"/>
         <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>          ध्यान दें : मौजूदा /etc/X11/xorg.conf.d/20-amd.conf होम फोल्डर में बैकअप होगी</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2015"/>
+        <location filename="../defaultlook.ui" line="2056"/>
         <source>Use tearfree radeon driver option</source>
         <translation>स्क्रीन समस्या समाधन हेतु radeon विकल्प उपयोग करें</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="2105"/>
-        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
-        <translation>          ध्यान दें : मौजूदा /etc/X11/xorg.conf.d/20-radeon.conf होम फोल्डर में बैकअप होगी</translation>
+        <location filename="../defaultlook.ui" line="2063"/>
+        <source>Use tearfree amdgpu option</source>
+        <translation>स्क्रीन समस्या समाधन हेतु amdgpu विकल्प उपयोग करें</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2070"/>
+        <source>Change Default Display Manager (login screen) (requires reboot)</source>
+        <extracomment>option to change display manager login screen.  present if more than one display manager is installed</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2077"/>
+        <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2084"/>
+        <source>&amp;User</source>
+        <translation>उपयोक्ता (&amp;U)</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2091"/>
+        <source>put a hold or remove a hold on updates of Debian  kernels</source>
+        <extracomment>toggle for apt hold action on update meta packages</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2094"/>
+        <source>Enable Automatic Debian Kernel Updates</source>
+        <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2114"/>
+        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
+        <translation>          ध्यान दें : मौजूदा /etc/X11/xorg.conf.d/20-intel.conf होम फोल्डर में बैकअप होगी</translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2121"/>
+        <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2128"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Early loading of KVM module is new to  kernel 6.12 and conflicts with some non-KVM virtual machine applications, including virtualbox &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <extracomment>early loading is new on 6.12 kernel and conflicts with virtualbox</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="2131"/>
+        <source>Disable early KVM module load (must be disabled for Virtualbox operation on kernel 6.12 and up)</source>
+        <extracomment>disable early loading of KVM module.  necessary for virtualbox to function with kernels 6.12 and up.  actually default behavior on kernels 6.11 and earlier.</extracomment>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="61"/>
@@ -1007,41 +1019,41 @@
         <translation>आपकी वर्तमान पैनल सेटिंग्स का आपके होम फोल्डर के .restore नामक अदृश्य फोल्डर में बैकअप कर दिया गया (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1644"/>
+        <location filename="../defaultlook.cpp" line="1662"/>
         <source>Plasma Widget Themes</source>
         <comment>theme style of the kde plasma widgets</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1645"/>
+        <location filename="../defaultlook.cpp" line="1663"/>
         <source>Color Schemes</source>
         <comment>plasma widget color schemes</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1646"/>
+        <location filename="../defaultlook.cpp" line="1664"/>
         <source>Plasma Look &amp; Feel Global Themes</source>
         <comment>plasma global themes</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1914"/>
+        <location filename="../defaultlook.cpp" line="1932"/>
         <source>settings</source>
         <translation>सेटिंग्स</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2255"/>
+        <location filename="../defaultlook.cpp" line="2273"/>
         <source>Choose a theme set</source>
         <translation>थीम संग्रह चुनें</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2705"/>
+        <location filename="../defaultlook.cpp" line="2737"/>
         <source>Please enter a computer name.</source>
         <comment>question to enter a name for the computer hostname</comment>
         <translation>कृपया कंप्यूटर नाम दर्ज करें।</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2709"/>
+        <location filename="../defaultlook.cpp" line="2741"/>
         <source>Sorry, your computer name contains invalid characters.
 You&apos;ll have to select a different
 name before proceeding.</source>
@@ -1051,7 +1063,7 @@ name before proceeding.</source>
 रखने से पहले एक उचित नाम चुनें।</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="4342"/>
+        <location filename="../defaultlook.cpp" line="4374"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
         <translation type="unfinished"></translation>
