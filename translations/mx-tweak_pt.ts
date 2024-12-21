@@ -935,7 +935,7 @@
         <location filename="../defaultlook.ui" line="2128"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Early loading of KVM module is new to  kernel 6.12 and conflicts with some non-KVM virtual machine applications, including virtualbox &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>early loading is new on 6.12 kernel and conflicts with virtualbox</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;O carregamento antecipado do módulo KVM é novo no kernel 6.12 e entra em conflito com alguns programas de virtualização não compatíveis com KVM, como é o caso do VirtualBox &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2131"/>

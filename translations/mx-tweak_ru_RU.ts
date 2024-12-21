@@ -941,7 +941,7 @@
         <location filename="../defaultlook.ui" line="2131"/>
         <source>Disable early KVM module load (must be disabled for Virtualbox operation on kernel 6.12 and up)</source>
         <extracomment>disable early loading of KVM module.  necessary for virtualbox to function with kernels 6.12 and up.  actually default behavior on kernels 6.11 and earlier.</extracomment>
-        <translation>Отключить предзагрузку модуля KVM (необходимо отключить для работы Virtualbox на ядре 6.12 и выше)</translation>
+        <translation>Отключить предзагрузку модуля KVM (для работы Virtualbox на ядре 6.12 и выше)</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="61"/>

@@ -935,13 +935,13 @@
         <location filename="../defaultlook.ui" line="2128"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Early loading of KVM module is new to  kernel 6.12 and conflicts with some non-KVM virtual machine applications, including virtualbox &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>early loading is new on 6.12 kernel and conflicts with virtualbox</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;KVM-moduulin lataus on uutta kernel 6.12 ja se on ristiriidassa joidenkin muiden kuin KVM-virtuaalikoneiden kanssa, mukaan lukien virtualbox&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2131"/>
         <source>Disable early KVM module load (must be disabled for Virtualbox operation on kernel 6.12 and up)</source>
         <extracomment>disable early loading of KVM module.  necessary for virtualbox to function with kernels 6.12 and up.  actually default behavior on kernels 6.11 and earlier.</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Poista käytöstä edellinen KVM-moduuli (täytyy poistaa käytöstä Virtualbox kernel 6.12 ja uudemmat)</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="61"/>

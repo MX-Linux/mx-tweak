@@ -1,3 +1,9 @@
+mx-tweak (24.12.02mx23) mx; urgency=medium
+
+  * update translations
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Fri, 20 Dec 2024 19:29:44 -0500
+
 mx-tweak (24.12.01mx23) mx; urgency=medium
 
   * add switch for disabling kvm module early loading
