@@ -1019,41 +1019,41 @@
         <translation>Dina nuvarande panelinställningar har en backup i en dold mapp som heter .restore i din hemkatalog (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1662"/>
+        <location filename="../defaultlook.cpp" line="1663"/>
         <source>Plasma Widget Themes</source>
         <comment>theme style of the kde plasma widgets</comment>
         <translation>Plasma Widget teman</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1663"/>
+        <location filename="../defaultlook.cpp" line="1664"/>
         <source>Color Schemes</source>
         <comment>plasma widget color schemes</comment>
         <translation>Färgscheman</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1664"/>
+        <location filename="../defaultlook.cpp" line="1665"/>
         <source>Plasma Look &amp; Feel Global Themes</source>
         <comment>plasma global themes</comment>
         <translation>Plasma Look &amp; Feel globala teman</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1932"/>
+        <location filename="../defaultlook.cpp" line="1933"/>
         <source>settings</source>
         <translation>inställningar</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2273"/>
+        <location filename="../defaultlook.cpp" line="2274"/>
         <source>Choose a theme set</source>
         <translation>Välj en temauppsättning</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2737"/>
+        <location filename="../defaultlook.cpp" line="2738"/>
         <source>Please enter a computer name.</source>
         <comment>question to enter a name for the computer hostname</comment>
         <translation>Var vänlig ange ett datornamn.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2741"/>
+        <location filename="../defaultlook.cpp" line="2742"/>
         <source>Sorry, your computer name contains invalid characters.
 You&apos;ll have to select a different
 name before proceeding.</source>
@@ -1063,7 +1063,7 @@ Du måste välja ett annat
 namn innan du fortsätter.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="4374"/>
+        <location filename="../defaultlook.cpp" line="4375"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
         <translation>Välj applikation att köra</translation>

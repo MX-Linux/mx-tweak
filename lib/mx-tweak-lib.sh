@@ -195,29 +195,29 @@ disable_sandbox()
 
 hold_debian_kernel_updates()
 {
-if [ -n "$(LC_ALL=C dpkg --status linux-image-686 2>/dev/null | grep "ok installed")" ]; then
+if [ -n "$(LC_ALL=C dpkg --status linux-image-686 2>/dev/null | grep 'ok installed')" ]; then
 	echo "found linux-image-686"
 	apt-mark hold linux-image-686 linux-headers-686  2>/dev/null
 fi
-if [ -n "$(LC_ALL=C dpkg --status linux-image-686-pae 2>/dev/null| grep "ok installed")" ]; then
+if [ -n "$(LC_ALL=C dpkg --status linux-image-686-pae 2>/dev/null| grep 'ok installed')" ]; then
 	echo "found linux-image-686-pae"
 	apt-mark hold linux-image-686-pae linux-headers-686-pae 2>/dev/null
 fi
-if [ -n "$(LC_ALL=C dpkg --status linux-image-amd64 2>/dev/null| grep "ok installed")" ]; then
+if [ -n "$(LC_ALL=C dpkg --status linux-image-amd64 2>/dev/null| grep 'ok installed')" ]; then
 	echo "found linux-image-amd64"
 	apt-mark hold linux-image-amd64 linux-headers-amd64 2>/dev/null
 fi
 }
 unhold_debian_kernel_updates(){
-if [ -n "$(LC_ALL=C dpkg --status linux-image-686 2>/dev/null| grep "ok installed")" ]; then
+if [ -n "$(LC_ALL=C dpkg --status linux-image-686 2>/dev/null| grep 'ok installed')" ]; then
 	echo "found linux-image-686"
 	apt-mark unhold linux-image-686 linux-headers-686 2>/dev/null
 fi
-if [ -n "$(LC_ALL=C dpkg --status linux-image-686-pae 2>/dev/null| grep "ok installed")" ]; then
+if [ -n "$(LC_ALL=C dpkg --status linux-image-686-pae 2>/dev/null| grep 'ok installed')" ]; then
 	echo "found linux-image-686-pae"
 	apt-mark unhold linux-image-686-pae linux-headers-686-pae 2>/dev/null
 fi
-if [ -n "$(LC_ALL=C dpkg --status linux-image-amd64 2>/dev/null| grep "ok installed")" ]; then
+if [ -n "$(LC_ALL=C dpkg --status linux-image-amd64 2>/dev/null| grep 'ok installed')" ]; then
 	echo "found linux-image-amd64"
 	apt-mark unhold linux-image-amd64 linux-headers-amd64 2>/dev/null
 fi
@@ -225,14 +225,14 @@ fi
 }
 hold_liquorix_kernel_updates()
 {
-if [ -n "$(LC_ALL=C dpkg --status linux-image-liquorix-amd64 2>/dev/null| grep "ok installed")" ]; then
+if [ -n "$(LC_ALL=C dpkg --status linux-image-liquorix-amd64 2>/dev/null| grep 'ok installed')" ]; then
 	echo "found linux-image-liquorix-amd64"
 	apt-mark hold linux-image-liquorix-amd64 linux-headers-liquorix-amd64 2>/dev/null
 fi
 }
-unhold_liquroix_kernel_updates()
+unhold_liquorix_kernel_updates()
 {
-if [ -n "$(LC_ALL=C dpkg --status linux-image-liquorix-amd64 2>/dev/null| grep "ok installed")"]; then
+if [ -n "$(LC_ALL=C dpkg --status linux-image-liquorix-amd64 2>/dev/null| grep 'ok installed')" ]; then
 	echo "found linux-image-liquorix-amd64"
 	apt-mark unhold linux-image-liquorix-amd64 linux-headers-liquorix-amd64 2>/dev/null
 fi

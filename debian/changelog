@@ -1,3 +1,9 @@
+mx-tweak (24.12.03mx23) mx; urgency=medium
+
+  * fix liquorix enable/disable updates function
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Tue, 31 Dec 2024 11:00:13 -0500
+
 mx-tweak (24.12.02mx23) mx; urgency=medium
 
   * update translations
