@@ -1019,41 +1019,41 @@
         <translation>Rregullimet tuaja të tanishme të panelit janë kopjeruajtur në një dosje të fshehur, të quajtur .restore, te dosja juaj shtëpi (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1662"/>
+        <location filename="../defaultlook.cpp" line="1663"/>
         <source>Plasma Widget Themes</source>
         <comment>theme style of the kde plasma widgets</comment>
         <translation>Tema me Widget-e Plasma</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1663"/>
+        <location filename="../defaultlook.cpp" line="1664"/>
         <source>Color Schemes</source>
         <comment>plasma widget color schemes</comment>
         <translation>Skema Ngjyrash</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1664"/>
+        <location filename="../defaultlook.cpp" line="1665"/>
         <source>Plasma Look &amp; Feel Global Themes</source>
         <comment>plasma global themes</comment>
         <translation>Tema Globale me Pamje &amp; Ndjesi Plasma</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1932"/>
+        <location filename="../defaultlook.cpp" line="1933"/>
         <source>settings</source>
         <translation>rregullime</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2273"/>
+        <location filename="../defaultlook.cpp" line="2274"/>
         <source>Choose a theme set</source>
         <translation>Zgjidhni një grup teme</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2737"/>
+        <location filename="../defaultlook.cpp" line="2738"/>
         <source>Please enter a computer name.</source>
         <comment>question to enter a name for the computer hostname</comment>
         <translation>Ju lutemi, jepni emër kompjuteri.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2741"/>
+        <location filename="../defaultlook.cpp" line="2742"/>
         <source>Sorry, your computer name contains invalid characters.
 You&apos;ll have to select a different
 name before proceeding.</source>
@@ -1063,7 +1063,7 @@ të pavlefshme. Do t’ju duhet të përzgjidhni
 tjetër emër, para se të ecni më tej.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="4374"/>
+        <location filename="../defaultlook.cpp" line="4375"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
         <translation>Përzgjidhni aplikacion për xhirim</translation>

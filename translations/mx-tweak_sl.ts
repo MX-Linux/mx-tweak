@@ -935,13 +935,13 @@
         <location filename="../defaultlook.ui" line="2128"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Early loading of KVM module is new to  kernel 6.12 and conflicts with some non-KVM virtual machine applications, including virtualbox &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>early loading is new on 6.12 kernel and conflicts with virtualbox</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Zgodnje nalaganje KVM modula je novost v jedru 6.12 in ne deluje z nekaterimi ne-KVM programi za virtualizacijo, vključno s programom Virtualbox. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2131"/>
         <source>Disable early KVM module load (must be disabled for Virtualbox operation on kernel 6.12 and up)</source>
         <extracomment>disable early loading of KVM module.  necessary for virtualbox to function with kernels 6.12 and up.  actually default behavior on kernels 6.11 and earlier.</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Onemogoči zgodnje nalaganje KVM modula (mora biti onemogočen za delovanje Virtualbox-a od jedra 6.12 naprej)</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="61"/>
@@ -1019,41 +1019,41 @@
         <translation>Trenutne nastavitve orodne vrstice so se shranile v skrito mapo z imenom .restore  v uporabnikovi domači mapi (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1662"/>
+        <location filename="../defaultlook.cpp" line="1663"/>
         <source>Plasma Widget Themes</source>
         <comment>theme style of the kde plasma widgets</comment>
         <translation>Teme za plazma gradnike</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1663"/>
+        <location filename="../defaultlook.cpp" line="1664"/>
         <source>Color Schemes</source>
         <comment>plasma widget color schemes</comment>
         <translation>Barvne sheme</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1664"/>
+        <location filename="../defaultlook.cpp" line="1665"/>
         <source>Plasma Look &amp; Feel Global Themes</source>
         <comment>plasma global themes</comment>
         <translation>Plasma teme za videz in občutek</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1932"/>
+        <location filename="../defaultlook.cpp" line="1933"/>
         <source>settings</source>
         <translation>nastavitve</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2273"/>
+        <location filename="../defaultlook.cpp" line="2274"/>
         <source>Choose a theme set</source>
         <translation>Izberite tematski set</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2737"/>
+        <location filename="../defaultlook.cpp" line="2738"/>
         <source>Please enter a computer name.</source>
         <comment>question to enter a name for the computer hostname</comment>
         <translation>Vnesite ime računalnika.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2741"/>
+        <location filename="../defaultlook.cpp" line="2742"/>
         <source>Sorry, your computer name contains invalid characters.
 You&apos;ll have to select a different
 name before proceeding.</source>
@@ -1063,7 +1063,7 @@ Morali boste izbrati
 drugo ime, preden lahko nadaljujete.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="4374"/>
+        <location filename="../defaultlook.cpp" line="4375"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
         <translation>Izbira programa za zagon</translation>

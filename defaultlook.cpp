@@ -1547,6 +1547,7 @@ void defaultlook::setupEtc()
     if ( autoupdate.contains("linux-image-686") || autoupdate.contains("linux-image-amd64") ){
         ui->checkBoxDebianKernelUpdates->setChecked(false);
     }
+
     if ( autoupdate.contains("linux-image-liquorix-amd64") ){
         ui->checkBoxLiqKernelUpdates->setChecked(false);
     }
@@ -2675,7 +2676,7 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     }
     //liquorix kernel updates
     if (liqKernelUpdateFlag){
-        if ( ui->checkBoxDebianKernelUpdates->isChecked()){
+        if (ui->checkBoxLiqKernelUpdates->isChecked()){
             liq_kernel_updates_option = "unhold_liquorix_kernel_updates";
         } else {
             liq_kernel_updates_option = "hold_liquorix_kernel_updates";

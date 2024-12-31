@@ -935,7 +935,7 @@
         <location filename="../defaultlook.ui" line="2128"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Early loading of KVM module is new to  kernel 6.12 and conflicts with some non-KVM virtual machine applications, including virtualbox &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>early loading is new on 6.12 kernel and conflicts with virtualbox</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;La càrrega anticipada del mòdul KVM és una novetat del  kernel 6.12 i entra en conflicte amb algunes aplicacions de màquina virtual  no-KVM, incloent-hi virtualbox &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2131"/>
@@ -1019,41 +1019,41 @@
         <translation>S&apos;ha fet còpia de seguretat dels vostres paràmetres del plafó en un fitxer amagat anomenat .restore al vostre directori d&apos;usuari (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1662"/>
+        <location filename="../defaultlook.cpp" line="1663"/>
         <source>Plasma Widget Themes</source>
         <comment>theme style of the kde plasma widgets</comment>
         <translation>Temes dels ginys del Plasma</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1663"/>
+        <location filename="../defaultlook.cpp" line="1664"/>
         <source>Color Schemes</source>
         <comment>plasma widget color schemes</comment>
         <translation>Combinacions de color</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1664"/>
+        <location filename="../defaultlook.cpp" line="1665"/>
         <source>Plasma Look &amp; Feel Global Themes</source>
         <comment>plasma global themes</comment>
         <translation>Aspecte i comportament del Plasma i Temes Globals</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1932"/>
+        <location filename="../defaultlook.cpp" line="1933"/>
         <source>settings</source>
         <translation>paràmetres</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2273"/>
+        <location filename="../defaultlook.cpp" line="2274"/>
         <source>Choose a theme set</source>
         <translation>Trieu un conjunt de temes</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2737"/>
+        <location filename="../defaultlook.cpp" line="2738"/>
         <source>Please enter a computer name.</source>
         <comment>question to enter a name for the computer hostname</comment>
         <translation>Si us plau, entreu un nom per a l&apos;ordinador.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2741"/>
+        <location filename="../defaultlook.cpp" line="2742"/>
         <source>Sorry, your computer name contains invalid characters.
 You&apos;ll have to select a different
 name before proceeding.</source>
@@ -1063,7 +1063,7 @@ Cal que trieu un nom diferent
 abans de continuar.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="4374"/>
+        <location filename="../defaultlook.cpp" line="4375"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
         <translation>Trieu l&apos;aplicació a executar</translation>

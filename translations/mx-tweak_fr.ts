@@ -1019,41 +1019,41 @@
         <translation>Les paramètres actuels de votre tableau de bord ont été enregistrés dans un dossier caché nommé .restore dans votre dossier home (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1662"/>
+        <location filename="../defaultlook.cpp" line="1663"/>
         <source>Plasma Widget Themes</source>
         <comment>theme style of the kde plasma widgets</comment>
         <translation>Thèmes Plasma Widget</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1663"/>
+        <location filename="../defaultlook.cpp" line="1664"/>
         <source>Color Schemes</source>
         <comment>plasma widget color schemes</comment>
         <translation>Schémas de couleurs</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1664"/>
+        <location filename="../defaultlook.cpp" line="1665"/>
         <source>Plasma Look &amp; Feel Global Themes</source>
         <comment>plasma global themes</comment>
         <translation>Plasma apparence thèmes généraux</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1932"/>
+        <location filename="../defaultlook.cpp" line="1933"/>
         <source>settings</source>
         <translation>paramètres</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2273"/>
+        <location filename="../defaultlook.cpp" line="2274"/>
         <source>Choose a theme set</source>
         <translation>Choisir un jeu de thèmes</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2737"/>
+        <location filename="../defaultlook.cpp" line="2738"/>
         <source>Please enter a computer name.</source>
         <comment>question to enter a name for the computer hostname</comment>
         <translation>Veuillez entrer le nom de l’ordinateur.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2741"/>
+        <location filename="../defaultlook.cpp" line="2742"/>
         <source>Sorry, your computer name contains invalid characters.
 You&apos;ll have to select a different
 name before proceeding.</source>
@@ -1062,7 +1062,7 @@ name before proceeding.</source>
 Veuillez choisir un nom différent avant de continuer.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="4374"/>
+        <location filename="../defaultlook.cpp" line="4375"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
         <translation>Sélectionner l’application à exécuter</translation>
