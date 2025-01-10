@@ -3864,7 +3864,7 @@ void defaultlook::populatethemelists(const QString &value)
 
         ui->listWidgetWMtheme->clear();
         ui->listWidgetWMtheme->addItems(themelist);
-        current = runCmd(QStringLiteral(basename $(grep styleFile $HOME/.fluxbox/init |grep -v ^# |grep -oE '/[^ ]+'))).output;
+        current = runCmd(QStringLiteral("basename $(grep styleFile $HOME/.fluxbox/init |grep -v ^# |grep -oE '/[^ ]+'"))).output;
         ui->listWidgetWMtheme->setCurrentRow(themelist.indexOf(current));
     }
 
