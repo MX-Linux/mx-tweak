@@ -1061,7 +1061,7 @@ name before proceeding.</source>
         <translation>O nome do computador contén caracteres inválidos. Ten que ser escollido un nome diferente antes de proseguir.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="4375"/>
+        <location filename="../defaultlook.cpp" line="4376"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
         <translation>Selecciona a aplicación para executar</translation>

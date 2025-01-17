@@ -47,7 +47,7 @@
     <message>
         <location filename="../main.cpp" line="53"/>
         <source>Display additional debug output in console</source>
-        <translation type="unfinished"></translation>
+        <translation>További hibakeresési üzenetek megjelenítése a terminálban</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="54"/>
@@ -812,7 +812,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1932"/>
         <source>Enable Bluetooth adapters on boot</source>
-        <translation type="unfinished"></translation>
+        <translation>Bluetooth engedélyezése az indításkor</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1939"/>
@@ -854,7 +854,7 @@
         <location filename="../defaultlook.ui" line="1991"/>
         <source>Enable Bluetooth battery info for connected devices (requires system restart)</source>
         <extracomment>expose battery info for connected bluetooth devices to the operating system via dbus</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Kapcsolódott Bluetooth eszközök akkumulátorállapotának megjelenítése (újraindítást igényel)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1998"/>
@@ -897,7 +897,7 @@
         <location filename="../defaultlook.ui" line="2070"/>
         <source>Change Default Display Manager (login screen) (requires reboot)</source>
         <extracomment>option to change display manager login screen.  present if more than one display manager is installed</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Bejelentkezéskezelő megváltoztatása (bejelentkezési képernyő) (újraindítást igényel)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2077"/>
@@ -935,13 +935,13 @@
         <location filename="../defaultlook.ui" line="2128"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Early loading of KVM module is new to  kernel 6.12 and conflicts with some non-KVM virtual machine applications, including virtualbox &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>early loading is new on 6.12 kernel and conflicts with virtualbox</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A KVM modul korai betöltése a 6.12-es kernel újdonsága és nem működik a nem-KVM-es virtuális gép alkalmazásokkal, mint pl. VirtualBox &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2131"/>
         <source>Disable early KVM module load (must be disabled for Virtualbox operation on kernel 6.12 and up)</source>
         <extracomment>disable early loading of KVM module.  necessary for virtualbox to function with kernels 6.12 and up.  actually default behavior on kernels 6.11 and earlier.</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>A KVM modul korai betöltésének letiltása (6.12 vagy újabb kernel esetén le kell tiltani a VirtualBox használatához)</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="61"/>
@@ -1022,19 +1022,19 @@
         <location filename="../defaultlook.cpp" line="1663"/>
         <source>Plasma Widget Themes</source>
         <comment>theme style of the kde plasma widgets</comment>
-        <translation type="unfinished"></translation>
+        <translation>Plasma beépülő modul témák</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="1664"/>
         <source>Color Schemes</source>
         <comment>plasma widget color schemes</comment>
-        <translation type="unfinished"></translation>
+        <translation>Színsémák</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="1665"/>
         <source>Plasma Look &amp; Feel Global Themes</source>
         <comment>plasma global themes</comment>
-        <translation type="unfinished"></translation>
+        <translation>Plasma megjelenési globális témák</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="1933"/>
@@ -1063,7 +1063,7 @@ Választania kell egy másik
 nevet mielőtt folytatná.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="4375"/>
+        <location filename="../defaultlook.cpp" line="4376"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
         <translation>Válassza ki a futtatandó alkalmazást</translation>

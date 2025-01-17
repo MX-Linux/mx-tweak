@@ -91,7 +91,7 @@
     <message>
         <location filename="../brightness_small.cpp" line="33"/>
         <source>MX-Tweak</source>
-        <translation type="unfinished"></translation>
+        <translation>MX-Tweak</translation>
     </message>
     <message>
         <location filename="../brightness_small.cpp" line="58"/>
@@ -101,7 +101,7 @@
     <message>
         <location filename="../brightness_small.cpp" line="63"/>
         <source>&amp;Quit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Išeiti</translation>
     </message>
 </context>
 <context>
@@ -625,13 +625,13 @@
         <location filename="../defaultlook.ui" line="1271"/>
         <location filename="../defaultlook.ui" line="1611"/>
         <source>On</source>
-        <translation type="unfinished"></translation>
+        <translation>Įjungta</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1276"/>
         <location filename="../defaultlook.ui" line="1616"/>
         <source>Off</source>
-        <translation type="unfinished"></translation>
+        <translation>Išjungta</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1297"/>
@@ -1061,7 +1061,7 @@ name before proceeding.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="4375"/>
+        <location filename="../defaultlook.cpp" line="4376"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
         <translation type="unfinished"></translation>

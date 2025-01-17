@@ -1062,7 +1062,7 @@ name before proceeding.</source>
 Veuillez choisir un nom différent avant de continuer.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="4375"/>
+        <location filename="../defaultlook.cpp" line="4376"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
         <translation>Sélectionner l’application à exécuter</translation>
