@@ -115,6 +115,7 @@ void defaultlook::setup()
 
     if (themetabflag) ui->tabWidget->setCurrentIndex(Tab::Theme);
     if (othertabflag) ui->tabWidget->setCurrentIndex(Tab::Others);
+    if (displayflag) ui->tabWidget->setCurrentIndex(Tab::Display);
 
     if (isXfce) {
         ui->toolButtonXFCEpanelSettings->setIcon(QIcon::fromTheme("org.xfce.panel"));
@@ -127,7 +128,7 @@ void defaultlook::setup()
         ui->buttonThemeUndo->hide();
         ui->buttonThemeUndo->setEnabled(false);
         //set first tab as default
-        if (!themetabflag && !othertabflag)ui->tabWidget->setCurrentIndex(Tab::Panel);
+        if (!displayflag && !themetabflag && !othertabflag)ui->tabWidget->setCurrentIndex(Tab::Panel);
         ui->tabWidget->removeTab(Tab::Plasma);
         ui->tabWidget->removeTab(Tab::Fluxbox);
         //setup panel tab
@@ -146,6 +147,7 @@ void defaultlook::setup()
         } else {
             setupSuperKey();
         }
+
     }
 
     //setup fluxbox

@@ -64,7 +64,7 @@ brightness_small::brightness_small(QWidget *parent, const QStringList &args) :
     connect(quitAction, &QAction::triggered, qApp, &QGuiApplication::quit);
     menu->addAction(quitAction);
 
-    connect(trayicon, &QSystemTrayIcon::messageClicked, this, &brightness_small::messageClicked);
+    //connect(trayicon, &QSystemTrayIcon::messageClicked, this, &brightness_small::messageClicked);
     connect(trayicon, &QSystemTrayIcon::activated, this, &brightness_small::iconActivated);
 
     trayicon->setContextMenu(menu);
