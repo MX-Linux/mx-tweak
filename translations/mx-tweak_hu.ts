@@ -47,7 +47,7 @@
     <message>
         <location filename="../main.cpp" line="53"/>
         <source>Display additional debug output in console</source>
-        <translation type="unfinished"></translation>
+        <translation>További hibakeresési üzenetek megjelenítése a terminálban</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="54"/>
@@ -110,13 +110,13 @@
         <location filename="../defaultlook.ui" line="20"/>
         <location filename="../defaultlook.cpp" line="60"/>
         <location filename="../defaultlook.cpp" line="108"/>
-        <location filename="../defaultlook.cpp" line="672"/>
-        <location filename="../defaultlook.cpp" line="691"/>
-        <location filename="../defaultlook.cpp" line="700"/>
-        <location filename="../defaultlook.cpp" line="747"/>
-        <location filename="../defaultlook.cpp" line="755"/>
-        <location filename="../defaultlook.cpp" line="782"/>
-        <location filename="../defaultlook.cpp" line="785"/>
+        <location filename="../defaultlook.cpp" line="674"/>
+        <location filename="../defaultlook.cpp" line="693"/>
+        <location filename="../defaultlook.cpp" line="702"/>
+        <location filename="../defaultlook.cpp" line="749"/>
+        <location filename="../defaultlook.cpp" line="757"/>
+        <location filename="../defaultlook.cpp" line="784"/>
+        <location filename="../defaultlook.cpp" line="787"/>
         <source>MX Tweak</source>
         <translation>MX finomhangoló</translation>
     </message>
@@ -812,7 +812,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1932"/>
         <source>Enable Bluetooth adapters on boot</source>
-        <translation type="unfinished"></translation>
+        <translation>Bluetooth engedélyezése az indításkor</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1939"/>
@@ -854,7 +854,7 @@
         <location filename="../defaultlook.ui" line="1991"/>
         <source>Enable Bluetooth battery info for connected devices (requires system restart)</source>
         <extracomment>expose battery info for connected bluetooth devices to the operating system via dbus</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Kapcsolódott Bluetooth eszközök akkumulátorállapotának megjelenítése (újraindítást igényel)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1998"/>
@@ -897,7 +897,7 @@
         <location filename="../defaultlook.ui" line="2070"/>
         <source>Change Default Display Manager (login screen) (requires reboot)</source>
         <extracomment>option to change display manager login screen.  present if more than one display manager is installed</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Bejelentkezéskezelő megváltoztatása (bejelentkezési képernyő) (újraindítást igényel)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2077"/>
@@ -935,13 +935,13 @@
         <location filename="../defaultlook.ui" line="2128"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Early loading of KVM module is new to  kernel 6.12 and conflicts with some non-KVM virtual machine applications, including virtualbox &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>early loading is new on 6.12 kernel and conflicts with virtualbox</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A KVM modul korai betöltése a 6.12-es kernel újdonsága és nem működik a nem-KVM-es virtuális gép alkalmazásokkal, mint pl. VirtualBox &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2131"/>
         <source>Disable early KVM module load (must be disabled for Virtualbox operation on kernel 6.12 and up)</source>
         <extracomment>disable early loading of KVM module.  necessary for virtualbox to function with kernels 6.12 and up.  actually default behavior on kernels 6.11 and earlier.</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>A KVM modul korai betöltésének letiltása (6.12 vagy újabb kernel esetén le kell tiltani a VirtualBox használatához)</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="61"/>
@@ -949,111 +949,111 @@
         <translation>--display kapcsoló csak Xfce-hez érvényes</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="671"/>
+        <location filename="../defaultlook.cpp" line="673"/>
         <source>About MX Tweak</source>
         <translation>Az MX finomhangolóról</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="673"/>
+        <location filename="../defaultlook.cpp" line="675"/>
         <source>Version: </source>
         <translation>Verzió:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="674"/>
+        <location filename="../defaultlook.cpp" line="676"/>
         <source>App for quick default ui theme changes and tweaks</source>
         <translation>Alkalmazás a felhasználó felület gyors beállításához és finomhangolásához</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="676"/>
+        <location filename="../defaultlook.cpp" line="678"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="677"/>
+        <location filename="../defaultlook.cpp" line="679"/>
         <source>%1 License</source>
         <translation>%1 licenc</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="691"/>
+        <location filename="../defaultlook.cpp" line="693"/>
         <source>%1 Help</source>
         <translation>%1 Súgó</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="701"/>
+        <location filename="../defaultlook.cpp" line="703"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
         <translation>Kész! A változtatások alkalmazásához a Firefox újraindítása lehet szükséges</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="748"/>
+        <location filename="../defaultlook.cpp" line="750"/>
         <source>Plese remove special characters</source>
         <translation>Távolítsa el a speciális karaktereket</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="748"/>
+        <location filename="../defaultlook.cpp" line="750"/>
         <source>from file name</source>
         <translation>a fájlnévből</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="755"/>
+        <location filename="../defaultlook.cpp" line="757"/>
         <source>File name already exists.  Choose another name</source>
         <translation>A fájlnév már létezik. Válasszon másik nevet</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="783"/>
+        <location filename="../defaultlook.cpp" line="785"/>
         <source>File is not a valid tar.xz archive file</source>
         <translation>A fájl nem egy érvényes tar.xz archívum</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="786"/>
+        <location filename="../defaultlook.cpp" line="788"/>
         <source>Archive does not contain a panel config</source>
         <translation>Az archívum nem panelbeállításokat tartalmaz</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="961"/>
+        <location filename="../defaultlook.cpp" line="963"/>
         <source>Panel settings</source>
         <translation>Panelbeállítások</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="962"/>
+        <location filename="../defaultlook.cpp" line="964"/>
         <source>Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
         <translation>Az aktuális panelbeállításokról biztonsági másolat készült egy rejtett .restore nevű mappába a saját mappájában (~/.restore/).</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1663"/>
+        <location filename="../defaultlook.cpp" line="1665"/>
         <source>Plasma Widget Themes</source>
         <comment>theme style of the kde plasma widgets</comment>
-        <translation type="unfinished"></translation>
+        <translation>Plasma beépülő modul témák</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1664"/>
+        <location filename="../defaultlook.cpp" line="1666"/>
         <source>Color Schemes</source>
         <comment>plasma widget color schemes</comment>
-        <translation type="unfinished"></translation>
+        <translation>Színsémák</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1665"/>
+        <location filename="../defaultlook.cpp" line="1667"/>
         <source>Plasma Look &amp; Feel Global Themes</source>
         <comment>plasma global themes</comment>
-        <translation type="unfinished"></translation>
+        <translation>Plasma megjelenési globális témák</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1933"/>
+        <location filename="../defaultlook.cpp" line="1935"/>
         <source>settings</source>
         <translation>beállítások</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2274"/>
+        <location filename="../defaultlook.cpp" line="2276"/>
         <source>Choose a theme set</source>
         <translation>Válasszon egy témakészletet</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2738"/>
+        <location filename="../defaultlook.cpp" line="2740"/>
         <source>Please enter a computer name.</source>
         <comment>question to enter a name for the computer hostname</comment>
         <translation>Adjon meg egy számítógép nevet.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2742"/>
+        <location filename="../defaultlook.cpp" line="2744"/>
         <source>Sorry, your computer name contains invalid characters.
 You&apos;ll have to select a different
 name before proceeding.</source>
@@ -1063,7 +1063,7 @@ Választania kell egy másik
 nevet mielőtt folytatná.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="4375"/>
+        <location filename="../defaultlook.cpp" line="4378"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
         <translation>Válassza ki a futtatandó alkalmazást</translation>

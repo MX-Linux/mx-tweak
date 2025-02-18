@@ -110,13 +110,13 @@
         <location filename="../defaultlook.ui" line="20"/>
         <location filename="../defaultlook.cpp" line="60"/>
         <location filename="../defaultlook.cpp" line="108"/>
-        <location filename="../defaultlook.cpp" line="672"/>
-        <location filename="../defaultlook.cpp" line="691"/>
-        <location filename="../defaultlook.cpp" line="700"/>
-        <location filename="../defaultlook.cpp" line="747"/>
-        <location filename="../defaultlook.cpp" line="755"/>
-        <location filename="../defaultlook.cpp" line="782"/>
-        <location filename="../defaultlook.cpp" line="785"/>
+        <location filename="../defaultlook.cpp" line="674"/>
+        <location filename="../defaultlook.cpp" line="693"/>
+        <location filename="../defaultlook.cpp" line="702"/>
+        <location filename="../defaultlook.cpp" line="749"/>
+        <location filename="../defaultlook.cpp" line="757"/>
+        <location filename="../defaultlook.cpp" line="784"/>
+        <location filename="../defaultlook.cpp" line="787"/>
         <source>MX Tweak</source>
         <translation>MX Tweak</translation>
     </message>
@@ -949,111 +949,111 @@
         <translation>--display schakel enkel geldig voor Xfce</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="671"/>
+        <location filename="../defaultlook.cpp" line="673"/>
         <source>About MX Tweak</source>
         <translation>Over MX Tweak</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="673"/>
+        <location filename="../defaultlook.cpp" line="675"/>
         <source>Version: </source>
         <translation>Versie:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="674"/>
+        <location filename="../defaultlook.cpp" line="676"/>
         <source>App for quick default ui theme changes and tweaks</source>
         <translation>App voor snelle standaard ui thema veranderingen en fijninstellingen</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="676"/>
+        <location filename="../defaultlook.cpp" line="678"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="677"/>
+        <location filename="../defaultlook.cpp" line="679"/>
         <source>%1 License</source>
         <translation>%1 Licentie</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="691"/>
+        <location filename="../defaultlook.cpp" line="693"/>
         <source>%1 Help</source>
         <translation>%1 Help</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="701"/>
+        <location filename="../defaultlook.cpp" line="703"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
         <translation>Klaar! Firefox kan een herstart vereisen om de veranderingen door te voeren</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="748"/>
+        <location filename="../defaultlook.cpp" line="750"/>
         <source>Plese remove special characters</source>
         <translation>Gelieve speciale tekens te verwijderen</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="748"/>
+        <location filename="../defaultlook.cpp" line="750"/>
         <source>from file name</source>
         <translation>van bestandsnaam</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="755"/>
+        <location filename="../defaultlook.cpp" line="757"/>
         <source>File name already exists.  Choose another name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="783"/>
+        <location filename="../defaultlook.cpp" line="785"/>
         <source>File is not a valid tar.xz archive file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="786"/>
+        <location filename="../defaultlook.cpp" line="788"/>
         <source>Archive does not contain a panel config</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="961"/>
+        <location filename="../defaultlook.cpp" line="963"/>
         <source>Panel settings</source>
         <translation>Paneel instellingen</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="962"/>
+        <location filename="../defaultlook.cpp" line="964"/>
         <source>Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
         <translation>Uw huidige paneelinstellingen zijn gebackupt in een verborgen folder genaamd .restore in uw home folder (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1663"/>
+        <location filename="../defaultlook.cpp" line="1665"/>
         <source>Plasma Widget Themes</source>
         <comment>theme style of the kde plasma widgets</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1664"/>
+        <location filename="../defaultlook.cpp" line="1666"/>
         <source>Color Schemes</source>
         <comment>plasma widget color schemes</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1665"/>
+        <location filename="../defaultlook.cpp" line="1667"/>
         <source>Plasma Look &amp; Feel Global Themes</source>
         <comment>plasma global themes</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1933"/>
+        <location filename="../defaultlook.cpp" line="1935"/>
         <source>settings</source>
         <translation>instellingen</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2274"/>
+        <location filename="../defaultlook.cpp" line="2276"/>
         <source>Choose a theme set</source>
         <translation>Kies een thema set</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2738"/>
+        <location filename="../defaultlook.cpp" line="2740"/>
         <source>Please enter a computer name.</source>
         <comment>question to enter a name for the computer hostname</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2742"/>
+        <location filename="../defaultlook.cpp" line="2744"/>
         <source>Sorry, your computer name contains invalid characters.
 You&apos;ll have to select a different
 name before proceeding.</source>
@@ -1061,7 +1061,7 @@ name before proceeding.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="4375"/>
+        <location filename="../defaultlook.cpp" line="4378"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
         <translation type="unfinished"></translation>

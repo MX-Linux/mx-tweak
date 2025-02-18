@@ -110,13 +110,13 @@
         <location filename="../defaultlook.ui" line="20"/>
         <location filename="../defaultlook.cpp" line="60"/>
         <location filename="../defaultlook.cpp" line="108"/>
-        <location filename="../defaultlook.cpp" line="672"/>
-        <location filename="../defaultlook.cpp" line="691"/>
-        <location filename="../defaultlook.cpp" line="700"/>
-        <location filename="../defaultlook.cpp" line="747"/>
-        <location filename="../defaultlook.cpp" line="755"/>
-        <location filename="../defaultlook.cpp" line="782"/>
-        <location filename="../defaultlook.cpp" line="785"/>
+        <location filename="../defaultlook.cpp" line="674"/>
+        <location filename="../defaultlook.cpp" line="693"/>
+        <location filename="../defaultlook.cpp" line="702"/>
+        <location filename="../defaultlook.cpp" line="749"/>
+        <location filename="../defaultlook.cpp" line="757"/>
+        <location filename="../defaultlook.cpp" line="784"/>
+        <location filename="../defaultlook.cpp" line="787"/>
         <source>MX Tweak</source>
         <translation>MX Ρυθμίσεις</translation>
     </message>
@@ -935,7 +935,7 @@
         <location filename="../defaultlook.ui" line="2128"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Early loading of KVM module is new to  kernel 6.12 and conflicts with some non-KVM virtual machine applications, including virtualbox &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>early loading is new on 6.12 kernel and conflicts with virtualbox</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Η πρόωρη φόρτωση της μονάδας KVM είναι νέα στον πυρήνα 6.12 και συγκρούεται με ορισμένες εφαρμογές εικονικών μηχανών που δεν είναι KVM, συμπεριλαμβανομένου του virtuabox &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2131"/>
@@ -949,111 +949,111 @@
         <translation>--διακόπτης οθόνης μόνο για το Xfce</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="671"/>
+        <location filename="../defaultlook.cpp" line="673"/>
         <source>About MX Tweak</source>
         <translation>Περί του MX Ρυθμίσεις</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="673"/>
+        <location filename="../defaultlook.cpp" line="675"/>
         <source>Version: </source>
         <translation>Έκδοση: </translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="674"/>
+        <location filename="../defaultlook.cpp" line="676"/>
         <source>App for quick default ui theme changes and tweaks</source>
         <translation>Εφαρμογή για γρήγορες αλλαγές και διορθώσεις του προεπιλεγμένου θέματος</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="676"/>
+        <location filename="../defaultlook.cpp" line="678"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Πνευματικά δικαιώματα (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="677"/>
+        <location filename="../defaultlook.cpp" line="679"/>
         <source>%1 License</source>
         <translation>Άδεια %1</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="691"/>
+        <location filename="../defaultlook.cpp" line="693"/>
         <source>%1 Help</source>
         <translation>Βοήθεια %1</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="701"/>
+        <location filename="../defaultlook.cpp" line="703"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
         <translation>Ολοκληρώθηκε! Το Firefox μπορεί να χρειαστεί επανεκκίνηση για να ισχύσουν οι αλλαγές</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="748"/>
+        <location filename="../defaultlook.cpp" line="750"/>
         <source>Plese remove special characters</source>
         <translation>Παρακαλώ αφαιρέστε τους ειδικούς χαρακτήρες</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="748"/>
+        <location filename="../defaultlook.cpp" line="750"/>
         <source>from file name</source>
         <translation>από το όνομα του αρχείου</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="755"/>
+        <location filename="../defaultlook.cpp" line="757"/>
         <source>File name already exists.  Choose another name</source>
         <translation>Υπάρχει το όνομα του αρχείου.  Επιλέξτε άλλο όνομα</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="783"/>
+        <location filename="../defaultlook.cpp" line="785"/>
         <source>File is not a valid tar.xz archive file</source>
         <translation>Το αρχείο δεν είναι έγκυρο αρχείο αρχειοθέτησης tar.xz</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="786"/>
+        <location filename="../defaultlook.cpp" line="788"/>
         <source>Archive does not contain a panel config</source>
         <translation>Το αρχείο δεν περιέχει ρυθμίσεις του ταμπλό</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="961"/>
+        <location filename="../defaultlook.cpp" line="963"/>
         <source>Panel settings</source>
         <translation>Ρυθμίσεις ταμπλό</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="962"/>
+        <location filename="../defaultlook.cpp" line="964"/>
         <source>Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
         <translation>Οι τρέχουσες ρυθμίσεις του ταμπλό σας αποθηκεύτηκαν σαν αντίγραφο ασφαλείας, σε έναν κρυφό φάκελο με όνομα .restore στον αρχικό κατάλογο του χρήστη (~/.restore /)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1663"/>
+        <location filename="../defaultlook.cpp" line="1665"/>
         <source>Plasma Widget Themes</source>
         <comment>theme style of the kde plasma widgets</comment>
         <translation>Θέματα Widget Plasma</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1664"/>
+        <location filename="../defaultlook.cpp" line="1666"/>
         <source>Color Schemes</source>
         <comment>plasma widget color schemes</comment>
         <translation>Χρωματικά σχήματα</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1665"/>
+        <location filename="../defaultlook.cpp" line="1667"/>
         <source>Plasma Look &amp; Feel Global Themes</source>
         <comment>plasma global themes</comment>
         <translation>Plasma Look &amp; Feel Παγκόσμια θέματα</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1933"/>
+        <location filename="../defaultlook.cpp" line="1935"/>
         <source>settings</source>
         <translation>ρυθμίσεις</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2274"/>
+        <location filename="../defaultlook.cpp" line="2276"/>
         <source>Choose a theme set</source>
         <translation>Επιλογή θέματος</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2738"/>
+        <location filename="../defaultlook.cpp" line="2740"/>
         <source>Please enter a computer name.</source>
         <comment>question to enter a name for the computer hostname</comment>
         <translation>Εισαγάγετε ένα όνομα υπολογιστή.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2742"/>
+        <location filename="../defaultlook.cpp" line="2744"/>
         <source>Sorry, your computer name contains invalid characters.
 You&apos;ll have to select a different
 name before proceeding.</source>
@@ -1063,7 +1063,7 @@ name before proceeding.</source>
 πριν προχωρήσετε.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="4375"/>
+        <location filename="../defaultlook.cpp" line="4378"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
         <translation>Επιλογή εφαρμογής για εκτέλεση</translation>

@@ -32,7 +32,7 @@
     <message>
         <location filename="../main.cpp" line="50"/>
         <source>launches brightness-systray</source>
-        <translation>uruchamia zasobnik systemowy jasności</translation>
+        <translation>uruchamia brightness-systray</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="51"/>
@@ -47,7 +47,7 @@
     <message>
         <location filename="../main.cpp" line="53"/>
         <source>Display additional debug output in console</source>
-        <translation type="unfinished"></translation>
+        <translation>Wyświetl dodatkowe dane debugowania w konsoli</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="54"/>
@@ -110,13 +110,13 @@
         <location filename="../defaultlook.ui" line="20"/>
         <location filename="../defaultlook.cpp" line="60"/>
         <location filename="../defaultlook.cpp" line="108"/>
-        <location filename="../defaultlook.cpp" line="672"/>
-        <location filename="../defaultlook.cpp" line="691"/>
-        <location filename="../defaultlook.cpp" line="700"/>
-        <location filename="../defaultlook.cpp" line="747"/>
-        <location filename="../defaultlook.cpp" line="755"/>
-        <location filename="../defaultlook.cpp" line="782"/>
-        <location filename="../defaultlook.cpp" line="785"/>
+        <location filename="../defaultlook.cpp" line="674"/>
+        <location filename="../defaultlook.cpp" line="693"/>
+        <location filename="../defaultlook.cpp" line="702"/>
+        <location filename="../defaultlook.cpp" line="749"/>
+        <location filename="../defaultlook.cpp" line="757"/>
+        <location filename="../defaultlook.cpp" line="784"/>
+        <location filename="../defaultlook.cpp" line="787"/>
         <source>MX Tweak</source>
         <translation>MX Ulepszenia</translation>
     </message>
@@ -232,7 +232,7 @@
         <location filename="../defaultlook.ui" line="1787"/>
         <source>Affects 1st panel</source>
         <extracomment>acts on the first poanel found in Xfce panel xml fle</extracomment>
-        <translation>Dotyczy 1-go panelu</translation>
+        <translation>Dotyczy 1. panelu</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="356"/>
@@ -527,7 +527,7 @@
         <location filename="../defaultlook.ui" line="998"/>
         <location filename="../defaultlook.ui" line="1095"/>
         <source>TextLabel</source>
-        <translation>Etykieta Tekstowa</translation>
+        <translation>Etykieta tekstowa</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1005"/>
@@ -768,36 +768,36 @@
         <location filename="../defaultlook.ui" line="1850"/>
         <source>Autostart plasma-discover system tray update notification utility</source>
         <extracomment>enable or disable autostartup of plasma-discover updater utility on login</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Automatyczne uruchamianie narzędzia do powiadamiania o aktualizacji w zasobniku systemowym plasma-discover</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1860"/>
         <source>Super Key</source>
         <extracomment>referring to the meta or Left Super Key</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Klawisz Super</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1868"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Choose application&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>description of button action to launch file dialog to choose an application</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wybierz aplikację&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1881"/>
         <source>Xfce-superkey defaults</source>
         <extracomment>indicates that xfce-superkey will select a command by its default logic</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Domyślne xfce-superkey</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1888"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Also known as the &amp;quot;windows&amp;quot; key&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Znany również jako klawisz Windows&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1891"/>
         <source>Command to run with Super (Meta) key</source>
         <extracomment>label for the field to enter the command to use with super key</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Polecenie do uruchomienia klawiszem Super (Meta)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1921"/>
@@ -812,7 +812,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1932"/>
         <source>Enable Bluetooth adapters on boot</source>
-        <translation type="unfinished"></translation>
+        <translation>Włącz adaptery Bluetooth podczas rozruchu</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1939"/>
@@ -838,7 +838,7 @@
         <location filename="../defaultlook.ui" line="1970"/>
         <source>Change computer name (requires reboot)</source>
         <extracomment>option to change the system hostname, requires a reboot to be 100% effective</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Zmień nazwę komputera (wymaga ponownego uruchomienia)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1977"/>
@@ -854,7 +854,7 @@
         <location filename="../defaultlook.ui" line="1991"/>
         <source>Enable Bluetooth battery info for connected devices (requires system restart)</source>
         <extracomment>expose battery info for connected bluetooth devices to the operating system via dbus</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Włącz informacje o baterii Bluetooth dla podłączonych urządzeń (wymaga ponownego uruchomienia systemu)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1998"/>
@@ -870,13 +870,13 @@
         <location filename="../defaultlook.ui" line="2022"/>
         <source>put a hold or remove a hold on updates of Liquorix kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>wstrzymaj lub usuń wstrzymanie aktualizacji jąder Liquorix</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2025"/>
         <source>Enable Automatic Liquorix Kernel Updates (MX ahs repository)</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Włącz automatyczne aktualizacje jądra Liquorix (repozytorium MX ahs)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2032"/>
@@ -897,7 +897,7 @@
         <location filename="../defaultlook.ui" line="2070"/>
         <source>Change Default Display Manager (login screen) (requires reboot)</source>
         <extracomment>option to change display manager login screen.  present if more than one display manager is installed</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Zmień domyślny menedżer wyświetlania (ekran logowania) (wymaga ponownego uruchomienia)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2077"/>
@@ -913,13 +913,13 @@
         <location filename="../defaultlook.ui" line="2091"/>
         <source>put a hold or remove a hold on updates of Debian  kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>wstrzymaj lub usuń wstrzymanie aktualizacji jąder Debiana</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2094"/>
         <source>Enable Automatic Debian Kernel Updates</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Włącz automatyczne aktualizacje jądra Debiana</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2114"/>
@@ -935,13 +935,13 @@
         <location filename="../defaultlook.ui" line="2128"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Early loading of KVM module is new to  kernel 6.12 and conflicts with some non-KVM virtual machine applications, including virtualbox &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>early loading is new on 6.12 kernel and conflicts with virtualbox</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wczesne ładowanie modułu KVM jest nowością w jądrze 6.12 i powoduje konflikty z niektórymi aplikacjami maszyn wirtualnych innych niż KVM, w tym z VirtualBox.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2131"/>
         <source>Disable early KVM module load (must be disabled for Virtualbox operation on kernel 6.12 and up)</source>
         <extracomment>disable early loading of KVM module.  necessary for virtualbox to function with kernels 6.12 and up.  actually default behavior on kernels 6.11 and earlier.</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Wyłącz wczesne ładowanie modułu KVM (musi być wyłączone w przypadku działania Virtualbox na jądrze 6.12 i nowszym)</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="61"/>
@@ -949,111 +949,111 @@
         <translation>--przełącznik wyświetlania działa tylko dla Xfce</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="671"/>
+        <location filename="../defaultlook.cpp" line="673"/>
         <source>About MX Tweak</source>
         <translation>O programie MX Ulepszenia</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="673"/>
+        <location filename="../defaultlook.cpp" line="675"/>
         <source>Version: </source>
         <translation>Wersja:</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="674"/>
+        <location filename="../defaultlook.cpp" line="676"/>
         <source>App for quick default ui theme changes and tweaks</source>
         <translation>Aplikacja do szybkiego zmieniania wyglądu i dostosowywania interfejsu do potrzeb użytkownika</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="676"/>
+        <location filename="../defaultlook.cpp" line="678"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Prawa autorskie © MX Linux</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="677"/>
+        <location filename="../defaultlook.cpp" line="679"/>
         <source>%1 License</source>
         <translation>%1 Licencja</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="691"/>
+        <location filename="../defaultlook.cpp" line="693"/>
         <source>%1 Help</source>
         <translation>%1 Pomoc</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="701"/>
+        <location filename="../defaultlook.cpp" line="703"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
         <translation>Gotowe! Firefox może wymagać ponownego uruchomienia, aby zmiany przyniosły efekt</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="748"/>
+        <location filename="../defaultlook.cpp" line="750"/>
         <source>Plese remove special characters</source>
         <translation>Usuń znaki specjalne</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="748"/>
+        <location filename="../defaultlook.cpp" line="750"/>
         <source>from file name</source>
         <translation>od nazwy pliku</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="755"/>
+        <location filename="../defaultlook.cpp" line="757"/>
         <source>File name already exists.  Choose another name</source>
         <translation>Nazwa pliku już istnieje. Wybierz inną nazwę</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="783"/>
+        <location filename="../defaultlook.cpp" line="785"/>
         <source>File is not a valid tar.xz archive file</source>
         <translation>Plik nie jest prawidłowym plikiem archiwum tar.xz</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="786"/>
+        <location filename="../defaultlook.cpp" line="788"/>
         <source>Archive does not contain a panel config</source>
         <translation>Archiwum nie zawiera konfiguracji panelu</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="961"/>
+        <location filename="../defaultlook.cpp" line="963"/>
         <source>Panel settings</source>
         <translation>Ustawienia panelu</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="962"/>
+        <location filename="../defaultlook.cpp" line="964"/>
         <source>Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
         <translation>Kopia zapasowa bieżących ustawień panelu została zapisana w ukrytym folderze o nazwie .restore w twoim folderze domowym (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1663"/>
+        <location filename="../defaultlook.cpp" line="1665"/>
         <source>Plasma Widget Themes</source>
         <comment>theme style of the kde plasma widgets</comment>
-        <translation type="unfinished"></translation>
+        <translation>Motywy widżetu Plasma</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1664"/>
+        <location filename="../defaultlook.cpp" line="1666"/>
         <source>Color Schemes</source>
         <comment>plasma widget color schemes</comment>
-        <translation type="unfinished"></translation>
+        <translation>Schematy kolorów</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1665"/>
+        <location filename="../defaultlook.cpp" line="1667"/>
         <source>Plasma Look &amp; Feel Global Themes</source>
         <comment>plasma global themes</comment>
-        <translation type="unfinished"></translation>
+        <translation>Globalne motywy wyglądu i działania Plasmy</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1933"/>
+        <location filename="../defaultlook.cpp" line="1935"/>
         <source>settings</source>
         <translation>ustawienia</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2274"/>
+        <location filename="../defaultlook.cpp" line="2276"/>
         <source>Choose a theme set</source>
         <translation>Wybierz zestaw motywów</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2738"/>
+        <location filename="../defaultlook.cpp" line="2740"/>
         <source>Please enter a computer name.</source>
         <comment>question to enter a name for the computer hostname</comment>
         <translation>Wprowadź nazwę komputera.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2742"/>
+        <location filename="../defaultlook.cpp" line="2744"/>
         <source>Sorry, your computer name contains invalid characters.
 You&apos;ll have to select a different
 name before proceeding.</source>
@@ -1063,10 +1063,10 @@ Zanim przejdziesz dalej,
 musisz wybrać inną nazwę.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="4375"/>
+        <location filename="../defaultlook.cpp" line="4378"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
-        <translation type="unfinished"></translation>
+        <translation>Wybierz aplikację do uruchomienia</translation>
     </message>
 </context>
 <context>

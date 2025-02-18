@@ -110,13 +110,13 @@
         <location filename="../defaultlook.ui" line="20"/>
         <location filename="../defaultlook.cpp" line="60"/>
         <location filename="../defaultlook.cpp" line="108"/>
-        <location filename="../defaultlook.cpp" line="672"/>
-        <location filename="../defaultlook.cpp" line="691"/>
-        <location filename="../defaultlook.cpp" line="700"/>
-        <location filename="../defaultlook.cpp" line="747"/>
-        <location filename="../defaultlook.cpp" line="755"/>
-        <location filename="../defaultlook.cpp" line="782"/>
-        <location filename="../defaultlook.cpp" line="785"/>
+        <location filename="../defaultlook.cpp" line="674"/>
+        <location filename="../defaultlook.cpp" line="693"/>
+        <location filename="../defaultlook.cpp" line="702"/>
+        <location filename="../defaultlook.cpp" line="749"/>
+        <location filename="../defaultlook.cpp" line="757"/>
+        <location filename="../defaultlook.cpp" line="784"/>
+        <location filename="../defaultlook.cpp" line="787"/>
         <source>MX Tweak</source>
         <translation>MX Tweak</translation>
     </message>
@@ -949,111 +949,111 @@
         <translation>--commutador de pantalla vàlid només per Xfce</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="671"/>
+        <location filename="../defaultlook.cpp" line="673"/>
         <source>About MX Tweak</source>
         <translation>Quant a MX Tweak</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="673"/>
+        <location filename="../defaultlook.cpp" line="675"/>
         <source>Version: </source>
         <translation>Versió: </translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="674"/>
+        <location filename="../defaultlook.cpp" line="676"/>
         <source>App for quick default ui theme changes and tweaks</source>
         <translation>Aplicació per al parametratge ràpid del tema IU per omissió</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="676"/>
+        <location filename="../defaultlook.cpp" line="678"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="677"/>
+        <location filename="../defaultlook.cpp" line="679"/>
         <source>%1 License</source>
         <translation>Llicència de %1</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="691"/>
+        <location filename="../defaultlook.cpp" line="693"/>
         <source>%1 Help</source>
         <translation>Ajuda de %1</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="701"/>
+        <location filename="../defaultlook.cpp" line="703"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
         <translation>Acabat! Firefox potser necessita tornar a arrencar per veure els canvis</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="748"/>
+        <location filename="../defaultlook.cpp" line="750"/>
         <source>Plese remove special characters</source>
         <translation>Si us plau, eviteu els caràcters especials</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="748"/>
+        <location filename="../defaultlook.cpp" line="750"/>
         <source>from file name</source>
         <translation>del nom del fitxer</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="755"/>
+        <location filename="../defaultlook.cpp" line="757"/>
         <source>File name already exists.  Choose another name</source>
         <translation>El nom de fitxer ja hi és. Trieu-ne un altre.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="783"/>
+        <location filename="../defaultlook.cpp" line="785"/>
         <source>File is not a valid tar.xz archive file</source>
         <translation>El fitxer no és un arxiu tar.xz vàlid</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="786"/>
+        <location filename="../defaultlook.cpp" line="788"/>
         <source>Archive does not contain a panel config</source>
         <translation>L&apos;arxiu no conté cap configuració de plafó</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="961"/>
+        <location filename="../defaultlook.cpp" line="963"/>
         <source>Panel settings</source>
         <translation>Paràmetres del plafó</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="962"/>
+        <location filename="../defaultlook.cpp" line="964"/>
         <source>Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
         <translation>S&apos;ha fet còpia de seguretat dels vostres paràmetres del plafó en un fitxer amagat anomenat .restore al vostre directori d&apos;usuari (~/.restore/)</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1663"/>
+        <location filename="../defaultlook.cpp" line="1665"/>
         <source>Plasma Widget Themes</source>
         <comment>theme style of the kde plasma widgets</comment>
         <translation>Temes dels ginys del Plasma</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1664"/>
+        <location filename="../defaultlook.cpp" line="1666"/>
         <source>Color Schemes</source>
         <comment>plasma widget color schemes</comment>
         <translation>Combinacions de color</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1665"/>
+        <location filename="../defaultlook.cpp" line="1667"/>
         <source>Plasma Look &amp; Feel Global Themes</source>
         <comment>plasma global themes</comment>
         <translation>Aspecte i comportament del Plasma i Temes Globals</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1933"/>
+        <location filename="../defaultlook.cpp" line="1935"/>
         <source>settings</source>
         <translation>paràmetres</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2274"/>
+        <location filename="../defaultlook.cpp" line="2276"/>
         <source>Choose a theme set</source>
         <translation>Trieu un conjunt de temes</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2738"/>
+        <location filename="../defaultlook.cpp" line="2740"/>
         <source>Please enter a computer name.</source>
         <comment>question to enter a name for the computer hostname</comment>
         <translation>Si us plau, entreu un nom per a l&apos;ordinador.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2742"/>
+        <location filename="../defaultlook.cpp" line="2744"/>
         <source>Sorry, your computer name contains invalid characters.
 You&apos;ll have to select a different
 name before proceeding.</source>
@@ -1063,7 +1063,7 @@ Cal que trieu un nom diferent
 abans de continuar.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="4375"/>
+        <location filename="../defaultlook.cpp" line="4378"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
         <translation>Trieu l&apos;aplicació a executar</translation>

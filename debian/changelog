@@ -1,3 +1,17 @@
+mx-tweak (25.02.01mx23) mx; urgency=medium
+
+  * fix popup for tray utility when notification message button is clicked on
+  * fix --display switch
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Mon, 17 Feb 2025 19:33:55 -0500
+
+mx-tweak (25.01.01mx23) mx; urgency=medium
+
+  * fluxbox style select bug fix
+  * update translations 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Thu, 16 Jan 2025 21:20:12 -0500
+
 mx-tweak (24.12.03mx23) mx; urgency=medium
 
   * fix liquorix enable/disable updates function
