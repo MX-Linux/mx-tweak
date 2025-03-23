@@ -34,6 +34,7 @@
 #include <QStringList>
 #include <QTextStream>
 #include <QTimer>
+#include <QRegularExpression>
 
 #include "about.h"
 #include "cmd.h"
@@ -742,8 +743,9 @@ void defaultlook::backupPanel()
     //validate file name
     qDebug() << "ui file name " << ui->lineEditBackupName->text();
     //QRegExp rx("(@|\\$|%|\\&|\\*|(|)|{|}|[|]|/|\\|\\?");
-    QRegExp rx("\\$|@|%|\\&|\\*|\\(|\\)|\\[|\\]|\\{|\\}|\\||\\?");
-    int rxtest = rx.indexIn(ui->lineEditBackupName->text());
+    QRegularExpression rx("\\$|@|%|\\&|\\*|\\(|\\)|\\[|\\]|\\{|\\}|\\||\\?");
+    QRegularExpressionMatch match = rx.match(ui->lineEditBackupName->text());
+    int rxtest = match.hasMatch() ? match.capturedStart(0) : -1;
     qDebug() << "rxtest" << rxtest;
     if ( rxtest > 0 ){
         QMessageBox::information(nullptr, tr("MX Tweak"),
@@ -2111,7 +2113,7 @@ void defaultlook::setrefreshrate(const QString &display, const QString &resoluti
     //set refreshrate too
     QString refreshrate = runCmd("/usr/lib/mx-tweak/mx-tweak-lib-randr.sh " + display + " refreshrate").output;
     refreshrate=refreshrate.simplified();
-    QStringList refreshratelist = refreshrate.split(QRegExp("\\s"));
+    QStringList refreshratelist = refreshrate.split(QRegularExpression("\\s"));
     refreshratelist.removeAll(resolution);
     if (verbose) qDebug() << "defualt refreshreate list is :" << refreshratelist.at(0).section(QStringLiteral("*"),0,0);
     runCmd("xfconf-query --channel displays -p /" + activeprofile + "/" + display + "/RefreshRate -t double -s " + refreshratelist.at(0).section(QStringLiteral("*"),0,0) + " --create; sleep 1");
@@ -3811,7 +3813,7 @@ void defaultlook::populatethemelists(const QString &value)
 
     if ( value == QLatin1String("plasma")){
         ui->listWidgetTheme->clear();
-        QRegExp regex(".*current.*", Qt::CaseInsensitive);
+        QRegularExpression regex(".*current.*", QRegularExpression::CaseInsensitiveOption);
         int index = themelist.indexOf(regex);
         themelist[index] = themelist[index].section("(",0,0);
         //index of theme in list
@@ -3821,7 +3823,7 @@ void defaultlook::populatethemelists(const QString &value)
     }
     if ( value == QLatin1String("colorscheme")){
         ui->listWidgetWMtheme->clear();
-        QRegExp regex(".*current.*", Qt::CaseInsensitive);
+        QRegularExpression regex(".*current.*", QRegularExpression::CaseInsensitiveOption);
         int index = themelist.indexOf(regex);
         themelist[index] = themelist[index].section("(",0,0);
         //index of theme in list
@@ -3831,7 +3833,7 @@ void defaultlook::populatethemelists(const QString &value)
     }
     if ( value == QLatin1String("kdecursors")){
         ui->listWidgetCursorThemes->clear();
-        QRegExp regex(".*current.*", Qt::CaseInsensitive);
+        QRegularExpression regex(".*current.*", QRegularExpression::CaseInsensitiveOption);
         int index = themelist.indexOf(regex);
         for (int i = 0; i < themelist.size(); ++i ){
             themelist[i] = themelist[i].section("[",1,1).section("]",0,0);
