@@ -2,7 +2,7 @@ Source: mx-tweak
 Section: admin
 Priority: optional
 Maintainer: dolphinoracle <dolphinoracle@gmail.com>
-Build-Depends: debhelper (>=10), qtbase5-dev, qttools5-dev-tools
+Build-Depends: debhelper (>=10), qt6-base-dev, qt6-base-dev-tools, qt-6-tools-dev, qt6-tools-dev-tools
 Standards-Version: 3.9.5
 Vcs-Git: git://github.com/mxlinux/mx-tweak.git
 
