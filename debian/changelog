@@ -1,3 +1,9 @@
+mx-tweak (25.03.01mx25) mx; urgency=medium
+
+  * qt6 build
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 22 Mar 2025 21:00:18 -0400
+
 mx-tweak (25.02.01mx23) mx; urgency=medium
 
   * fix popup for tray utility when notification message button is clicked on
