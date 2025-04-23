@@ -3260,7 +3260,7 @@ void defaultlook::on_pushButtonSettingsToThemeSet_clicked()
     fileLines << "background-style=" + QString::number(backgroundStyle);
     if (backgroundStyle == 1) {
         QString line;
-        for (double num : qAsConst(backgroundColor)) {
+        for (double num : std::as_const(backgroundColor)) {
             line.append(QString::number(num) + ',');
         }
         if (line.endsWith(',')) line.chop(1);
@@ -3289,7 +3289,7 @@ void defaultlook::on_pushButtonSettingsToThemeSet_clicked()
         return;
     }
     QTextStream fileStream(&file);
-    for (const QString &line : qAsConst(fileLines)) {
+    for (const QString &line : std::as_const(fileLines)) {
         fileStream << line + '\n';
     }
     file.close();
