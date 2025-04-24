@@ -117,6 +117,7 @@ void defaultlook::setup()
     if (themetabflag) ui->tabWidget->setCurrentIndex(Tab::Theme);
     if (othertabflag) ui->tabWidget->setCurrentIndex(Tab::Others);
     if (displayflag) ui->tabWidget->setCurrentIndex(Tab::Display);
+    ui->checkBoxFluxboxLegacyStyles->hide();
 
     if (isXfce) {
         ui->toolButtonXFCEpanelSettings->setIcon(QIcon::fromTheme("org.xfce.panel"));
@@ -177,6 +178,7 @@ void defaultlook::setup()
         ui->tabWidget->removeTab(Tab::Display);
         ui->tabWidget->removeTab(Tab::Compositor);
         ui->tabWidget->removeTab(Tab::Panel);
+        ui->checkBoxFluxboxLegacyStyles->show();
         setupFluxbox();
         setuptheme();
         //setup other tab;
@@ -239,6 +241,7 @@ void defaultlook::setup()
             runCmd("cp /usr/share/mx-tweak-data/mx.tweak.template " + userdir.absolutePath());
         }
     }
+    setupflag=true;
     version = getVersion(QStringLiteral("mx-tweak"));
     this->adjustSize();
 }
@@ -1009,29 +1012,33 @@ void defaultlook::on_toolButtonXFCEWMsettings_clicked()
     this->show();
 }
 
-void defaultlook::on_comboboxHorzPostition_currentIndexChanged(const QString & /*arg1*/)
+void defaultlook::on_comboboxHorzPostition_currentIndexChanged(const int & /*arg1*/)
 {
-    if (verbose) qDebug() << "top or bottom output " << ui->comboboxHorzPostition->currentText();
-    QString test = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/mode").output;
-    if (verbose) qDebug() << "test value, blank or 0 runs left_or_right" << test;
-    if (test == QLatin1String("")) {
-        top_or_bottom();
-    }
-    if (test == QLatin1String("0")) {
-        top_or_bottom();
+    if (setupflag){
+        if (verbose) qDebug() << "top or bottom output " << ui->comboboxHorzPostition->currentText();
+        QString test = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/mode").output;
+        if (verbose) qDebug() << "test value, blank or 0 runs left_or_right" << test;
+        if (test == QLatin1String("")) {
+            top_or_bottom();
+        }
+        if (test == QLatin1String("0")) {
+            top_or_bottom();
+        }
     }
 }
 
-void defaultlook::on_comboboxVertpostition_currentIndexChanged(const QString & /*arg1*/)
+void defaultlook::on_comboboxVertpostition_currentIndexChanged(const int & /*arg1*/)
 {
-    if (verbose) qDebug() << "left or right output " << ui->comboboxVertpostition->currentText();
-    QString test = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/mode").output;
-    if (verbose) qDebug() << "test value, 1 or 2 runs top_or_bottom" << test;
-    if (test == QLatin1String("1")) {
-        left_or_right();
-    }
-    if (test == QLatin1String("2")) {
-        left_or_right();
+    if (setupflag){
+        if (verbose) qDebug() << "left or right output " << ui->comboboxVertpostition->currentText();
+        QString test = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + panel +"/mode").output;
+        if (verbose) qDebug() << "test value, 1 or 2 runs top_or_bottom" << test;
+        if (test == QLatin1String("1")) {
+            left_or_right();
+        }
+        if (test == QLatin1String("2")) {
+            left_or_right();
+        }
     }
 }
 
@@ -2038,30 +2045,34 @@ void defaultlook::on_buttonApplyDisplayScaling_clicked()
 
 void defaultlook::on_comboBoxDisplay_currentIndexChanged(int  /*index*/)
 {
-    setupBrightness();
-    setupscale();
-    setupresolutions();
-    setupGamma();
+    if (setupflag){
+        setupBrightness();
+        setupscale();
+        setupresolutions();
+        setupGamma();
+    }
 }
 
 void defaultlook::setupDisplay()
 {
-    //populate combobox
-    QString displaydata = runCmd(QStringLiteral("LANG=C xrandr |grep -w connected | cut -d' ' -f1")).output;
-    QStringList displaylist = displaydata.split(QStringLiteral("\n"));
-    ui->comboBoxDisplay->clear();
-    ui->comboBoxDisplay->addItems(displaylist);
-    setupBrightness();
-    setupGamma();
-    setupscale();
-    setupbacklight();
-    setupresolutions();
-    brightnessflag = true;
+    if (setupflag){
+        //populate combobox
+        QString displaydata = runCmd(QStringLiteral("LANG=C xrandr |grep -w connected | cut -d' ' -f1")).output;
+        QStringList displaylist = displaydata.split(QStringLiteral("\n"));
+        ui->comboBoxDisplay->clear();
+        ui->comboBoxDisplay->addItems(displaylist);
+        setupBrightness();
+        setupGamma();
+        setupscale();
+        setupbacklight();
+        setupresolutions();
+        brightnessflag = true;
 
-    //get gtk scaling value
-    QString GTKScale = runCmd(QStringLiteral("LANG=C xfconf-query --channel xsettings -p /Gdk/WindowScalingFactor")).output;
-    ui->spinBoxgtkscaling->setValue(GTKScale.toInt());
-    //disable resolution stuff
+        //get gtk scaling value
+        QString GTKScale = runCmd(QStringLiteral("LANG=C xfconf-query --channel xsettings -p /Gdk/WindowScalingFactor")).output;
+        ui->spinBoxgtkscaling->setValue(GTKScale.toInt());
+        //disable resolution stuff
+    }
 }
 
 void defaultlook::setupresolutions()
@@ -2346,15 +2357,18 @@ void defaultlook::setupComboTheme()
     }
 }
 
-void defaultlook::on_comboTheme_activated(const QString & /*arg1*/)
+void defaultlook::on_comboTheme_activated(const int & /*arg1*/)
 {
-    if (isXfce) {
-        if (ui->comboTheme->currentIndex() != 0) {
+    if (setupflag){
+        qDebug() << "combo box activated";
+        if (isXfce) {
+            if (ui->comboTheme->currentIndex() != 0) {
+                ui->buttonThemeApply->setEnabled(true);
+                ui->pushButtonPreview->setEnabled(true);
+            }
+        } else if (isKDE) {
             ui->buttonThemeApply->setEnabled(true);
-            ui->pushButtonPreview->setEnabled(true);
         }
-    } else if (isKDE) {
-        ui->buttonThemeApply->setEnabled(true);
     }
 }
 
@@ -2953,27 +2967,29 @@ void defaultlook::on_buttonEditComptonConf_clicked()
     runCmd("xdg-open " + file_conf.absoluteFilePath());
 }
 
-void defaultlook::on_comboBoxCompositor_currentIndexChanged(const QString & /*arg1*/)
+void defaultlook::on_comboBoxCompositor_currentIndexChanged(const int & /*arg1*/)
 {
-    if (ui->comboBoxCompositor->currentIndex() == 0) {
-        ui->buttonCompositorApply->setEnabled(true);
-        ui->buttonConfigureCompton->setEnabled(false);
-        ui->buttonConfigureXfwm->setEnabled(false);
-        ui->buttonEditComptonConf->setEnabled(false);
-    }
+    if (setupflag){
+        if (ui->comboBoxCompositor->currentIndex() == 0) {
+            ui->buttonCompositorApply->setEnabled(true);
+            ui->buttonConfigureCompton->setEnabled(false);
+            ui->buttonConfigureXfwm->setEnabled(false);
+            ui->buttonEditComptonConf->setEnabled(false);
+        }
 
-    if (ui->comboBoxCompositor->currentIndex() == 1) {
-        ui->buttonCompositorApply->setEnabled(true);
-        ui->buttonConfigureCompton->setEnabled(false);
-        ui->buttonConfigureXfwm->setEnabled(true);
-        ui->buttonEditComptonConf->setEnabled(false);
-    }
+        if (ui->comboBoxCompositor->currentIndex() == 1) {
+            ui->buttonCompositorApply->setEnabled(true);
+            ui->buttonConfigureCompton->setEnabled(false);
+            ui->buttonConfigureXfwm->setEnabled(true);
+            ui->buttonEditComptonConf->setEnabled(false);
+        }
 
-    if (ui->comboBoxCompositor->currentIndex() == 2) {
-        ui->buttonCompositorApply->setEnabled(true);
-        ui->buttonConfigureCompton->setEnabled(true);
-        ui->buttonConfigureXfwm->setEnabled(false);
-        ui->buttonEditComptonConf->setEnabled(true);
+        if (ui->comboBoxCompositor->currentIndex() == 2) {
+            ui->buttonCompositorApply->setEnabled(true);
+            ui->buttonConfigureCompton->setEnabled(true);
+            ui->buttonConfigureXfwm->setEnabled(false);
+            ui->buttonEditComptonConf->setEnabled(true);
+        }
     }
 }
 
@@ -3322,10 +3338,12 @@ void defaultlook::on_pushButtonRemoveUserThemeSet_clicked()
     setupComboTheme();
 }
 
-void defaultlook::on_comboBoxvblank_activated(const QString & /*arg1*/)
+void defaultlook::on_comboBoxvblank_activated(const int & /*arg1*/)
 {
-    vblankflag = vblankinitial != ui->comboBoxvblank->currentText();
-    ui->buttonCompositorApply->setEnabled(true);
+    if (setupflag){
+        vblankflag = vblankinitial != ui->comboBoxvblank->currentText();
+        ui->buttonCompositorApply->setEnabled(true);
+    }
 }
 
 void defaultlook::on_buttonSaveBrightness_clicked()
@@ -3590,7 +3608,9 @@ void defaultlook::on_checkboxfluxreseteverything_clicked()
 
 void defaultlook::on_combofluxtoolbarlocatoin_currentIndexChanged(int  /*index*/)
 {
+    if (setupflag){
     ui->ApplyFluxboxResets->setEnabled(true);
+    }
 }
 
 void defaultlook::on_checkboxfluxtoolbarautohide_clicked()
@@ -3610,8 +3630,10 @@ void defaultlook::on_spinBoxFluxToolbarHeight_valueChanged(int  /*arg1*/)
 
 void defaultlook::on_combofluxslitlocation_currentIndexChanged(int  /*index*/)
 {
-    ui->ApplyFluxboxResets->setEnabled(true);
-    slitflag = true;
+    if (setupflag){
+        ui->ApplyFluxboxResets->setEnabled(true);
+        slitflag = true;
+    }
 }
 
 void defaultlook::on_checkboxfluxSlitautohide_clicked()
@@ -3622,20 +3644,26 @@ void defaultlook::on_checkboxfluxSlitautohide_clicked()
 
 void defaultlook::on_comboBoxfluxIcons_currentIndexChanged(int  /*index*/)
 {
-    ui->ApplyFluxboxResets->setEnabled(true);
-    fluxiconflag = true;
+    if (setupflag){
+        ui->ApplyFluxboxResets->setEnabled(true);
+        fluxiconflag = true;
+    }
 }
 
 void defaultlook::on_comboBoxfluxcaptions_currentIndexChanged(int  /*index*/)
 {
-    ui->ApplyFluxboxResets->setEnabled(true);
-    fluxcaptionflag = true;
+    if (setupflag){
+        ui->ApplyFluxboxResets->setEnabled(true);
+        fluxcaptionflag = true;
+    }
 }
 
 void defaultlook::on_comboPlasmaPanelLocation_currentIndexChanged(int  /*index*/)
 {
-    ui->ButtonApplyPlasma->setEnabled(true);
-    plasmaplacementflag = true;
+    if (setupflag){
+        ui->ButtonApplyPlasma->setEnabled(true);
+        plasmaplacementflag = true;
+    }
 }
 
 void defaultlook::on_checkBoxPlasmaSingleClick_clicked()
@@ -3747,8 +3775,10 @@ void defaultlook::writeTaskmanagerConfig(const QString &key, const QString &valu
 
 void defaultlook::on_comboBoxPlasmaSystrayIcons_currentIndexChanged(int  /*index*/)
 {
+    if (setupflag){
     ui->ButtonApplyPlasma->setEnabled(true);
     plasmasystrayiconsizeflag = true;
+    }
 }
 
 void defaultlook::populatethemelists(const QString &value)
@@ -3788,10 +3818,14 @@ void defaultlook::populatethemelists(const QString &value)
     }
 
     if ( value == QLatin1String("fluxbox")) {
-        themes = runCmd("find /usr/share/fluxbox/styles/ -maxdepth 1 2>/dev/null |cut -d\"/\" -f6").output;
+        themes = runCmd("find /usr/share/mx-fluxbox/styles/ -maxdepth 1 2>/dev/null |cut -d\"/\" -f6").output;
         themes.append("\n");
         themes.append(runCmd("find $HOME/.fluxbox/styles/ -maxdepth 1 2>/dev/null |cut -d\"/\" -f6").output);
         themes.append("\n");
+        if (ui->checkBoxFluxboxLegacyStyles->isChecked()){
+            themes.append(runCmd("find /usr/share/fluxbox/styles/ -maxdepth 1 2>/dev/null |cut -d\"/\" -f6").output);
+            themes.append("\n");
+        }
     }
 
     if ( value == QLatin1String("cursors")){
@@ -4006,12 +4040,18 @@ void defaultlook::settheme(const QString &type, const QString &theme, const QStr
             }
         }
         if ( type == QLatin1String("fluxbox") ) {
+            //always take home folder version, then mx-fluxbox version, then fluxbox version if conflicts arise
             QString filepath = home_path + "/.fluxbox/styles/" + theme;
             if (QFile(filepath).exists()){
                 home_path.replace("/", "\\/");
                 cmd = "sed -i 's/session.styleFile:.*/session.styleFile: " + home_path + "\\/.fluxbox\\/styles\\/" + theme + "/' $HOME/.fluxbox/init && fluxbox-remote reconfigure && fluxbox-remote reloadstyle";
             } else {
-                cmd = "sed -i 's/session.styleFile:.*/session.styleFile: \\/usr\\/share\\/fluxbox\\/styles\\/" + theme + "/' $HOME/.fluxbox/init && fluxbox-remote reconfigure && fluxbox-remote reloadstyle";
+                if (QFile("/usr/share/fluxbox/styles/" + theme).exists()){
+                    cmd = "sed -i 's/session.styleFile:.*/session.styleFile: \\/usr\\/share\\/fluxbox\\/styles\\/" + theme + "/' $HOME/.fluxbox/init && fluxbox-remote reconfigure && fluxbox-remote reloadstyle";
+                }
+                if (QFile("/usr/share/mx-fluxbox/styles/" + theme).exists()){
+                    cmd = "sed -i 's/session.styleFile:.*/session.styleFile: \\/usr\\/share\\/mx-fluxbox\\/styles\\/" + theme + "/' $HOME/.fluxbox/init && fluxbox-remote reconfigure && fluxbox-remote reloadstyle";
+                }
             }
             system(cmd.toUtf8());
         }
@@ -4315,9 +4355,10 @@ void defaultlook::on_comboBoxTasklistPlugin_currentIndexChanged(int /*index*/)
 {
     //toggle tasklistflag
     //changing tasklistflag only happens if block is actually changed
-
-    tasklistflag = !tasklistflag;
-    if (verbose) qDebug() << "tasklist flag is " << tasklistflag;
+    if (setupflag){
+        tasklistflag = !tasklistflag;
+        if (verbose) qDebug() << "tasklist flag is " << tasklistflag;
+    }
 }
 
 void defaultlook::tasklistchange(){
@@ -4501,4 +4542,10 @@ void defaultlook::on_checkBoxKVMVirtLoad_clicked()
     ui->ButtonApplyEtc->setEnabled(true);
     kvmflag = !kvmflag;
 }
+
+void defaultlook::on_checkBoxFluxboxLegacyStyles_stateChanged(int arg1)
+{
+    populatethemelists(QStringLiteral("fluxbox"));
+}
+
 

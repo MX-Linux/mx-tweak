@@ -75,6 +75,7 @@ public:
     QString originalhostname;
     QStringList undotheme;
     QString currentdisplaymanager;
+    bool setupflag=false;
     bool verbose = false;
     bool panelflag{};
     bool hibernate_flag{};
@@ -243,16 +244,16 @@ private slots:
     void on_checkboxfluxresetmenu_clicked();
     void on_checkboxfluxtoolbarautohide_clicked();
     void on_checkboxplasmaresetdock_clicked();
-    void on_comboBoxCompositor_currentIndexChanged(const QString &arg1);
+    void on_comboBoxCompositor_currentIndexChanged(const int &arg1);
     void on_comboBoxDisplay_currentIndexChanged(int index);
     void on_comboBoxPlasmaSystrayIcons_currentIndexChanged(int index);
     void on_comboBoxfluxIcons_currentIndexChanged(int index);
     void on_comboBoxfluxcaptions_currentIndexChanged(int index);
-    void on_comboBoxvblank_activated(const QString &arg1);
+    void on_comboBoxvblank_activated(const int &arg1);
     void on_comboPlasmaPanelLocation_currentIndexChanged(int index);
-    void on_comboTheme_activated(const QString &arg1);
-    void on_comboboxHorzPostition_currentIndexChanged(const QString &arg1);
-    void on_comboboxVertpostition_currentIndexChanged(const QString &arg1);
+    void on_comboTheme_activated(const int &arg1);
+    void on_comboboxHorzPostition_currentIndexChanged(const int &arg1);
+    void on_comboboxVertpostition_currentIndexChanged(const int &arg1);
     void on_combofluxslitlocation_currentIndexChanged(int index);
     void on_combofluxtoolbarlocatoin_currentIndexChanged(int index);
     void on_horizontalSliderBrightness_valueChanged(int value);
@@ -335,6 +336,9 @@ private slots:
     void on_checkBoxDisplayManager_clicked();
 
     void on_checkBoxKVMVirtLoad_clicked();
+
+
+    void on_checkBoxFluxboxLegacyStyles_stateChanged(int arg1);
 
 private:
     Ui::defaultlook *ui;

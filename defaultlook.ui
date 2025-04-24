@@ -28,7 +28,7 @@
   </property>
   <layout class="QGridLayout" name="gridLayout_9">
    <property name="sizeConstraint">
-    <enum>QLayout::SetNoConstraint</enum>
+    <enum>QLayout::SizeConstraint::SetNoConstraint</enum>
    </property>
    <item row="2" column="0">
     <widget class="QLabel" name="label_7">
@@ -45,15 +45,15 @@
    <item row="5" column="0">
     <layout class="QGridLayout" name="gridLayout_2">
      <property name="sizeConstraint">
-      <enum>QLayout::SetNoConstraint</enum>
+      <enum>QLayout::SizeConstraint::SetNoConstraint</enum>
      </property>
      <item row="0" column="2">
       <spacer name="horizontalSpacer1">
        <property name="orientation">
-        <enum>Qt::Horizontal</enum>
+        <enum>Qt::Orientation::Horizontal</enum>
        </property>
        <property name="sizeType">
-        <enum>QSizePolicy::MinimumExpanding</enum>
+        <enum>QSizePolicy::Policy::MinimumExpanding</enum>
        </property>
        <property name="sizeHint" stdset="0">
         <size>
@@ -88,10 +88,10 @@
      <item row="0" column="4">
       <spacer name="horizontalSpacer2">
        <property name="orientation">
-        <enum>Qt::Horizontal</enum>
+        <enum>Qt::Orientation::Horizontal</enum>
        </property>
        <property name="sizeType">
-        <enum>QSizePolicy::MinimumExpanding</enum>
+        <enum>QSizePolicy::Policy::MinimumExpanding</enum>
        </property>
        <property name="sizeHint" stdset="0">
         <size>
@@ -107,8 +107,7 @@
         <string>About</string>
        </property>
        <property name="icon">
-        <iconset theme="help-about">
-         <normaloff>.</normaloff>.</iconset>
+        <iconset theme="help-about"/>
        </property>
       </widget>
      </item>
@@ -118,8 +117,7 @@
         <string>Help</string>
        </property>
        <property name="icon">
-        <iconset theme="help-contents">
-         <normaloff>.</normaloff>.</iconset>
+        <iconset theme="help-contents"/>
        </property>
       </widget>
      </item>
@@ -138,8 +136,7 @@
         <string>Close</string>
        </property>
        <property name="icon">
-        <iconset theme="window-close">
-         <normaloff>.</normaloff>.</iconset>
+        <iconset theme="window-close"/>
        </property>
        <property name="shortcut">
         <string>Alt+N</string>
@@ -157,7 +154,7 @@
    <item row="3" column="0">
     <layout class="QHBoxLayout" name="horizontalLayout">
      <property name="sizeConstraint">
-      <enum>QLayout::SetNoConstraint</enum>
+      <enum>QLayout::SizeConstraint::SetNoConstraint</enum>
      </property>
      <item>
       <widget class="QToolButton" name="toolButtonXFCEpanelSettings">
@@ -179,7 +176,7 @@
      <item>
       <spacer name="horizontalSpacer_2">
        <property name="orientation">
-        <enum>Qt::Horizontal</enum>
+        <enum>Qt::Orientation::Horizontal</enum>
        </property>
        <property name="sizeHint" stdset="0">
         <size>
@@ -198,8 +195,7 @@
         <string/>
        </property>
        <property name="icon">
-        <iconset theme="xfwm4">
-         <normaloff>.</normaloff>.</iconset>
+        <iconset theme="xfwm4"/>
        </property>
       </widget>
      </item>
@@ -213,7 +209,7 @@
      <item>
       <spacer name="horizontalSpacer_3">
        <property name="orientation">
-        <enum>Qt::Horizontal</enum>
+        <enum>Qt::Orientation::Horizontal</enum>
        </property>
        <property name="sizeHint" stdset="0">
         <size>
@@ -232,8 +228,7 @@
         <string/>
        </property>
        <property name="icon">
-        <iconset theme="preferences-desktop-theme">
-         <normaloff>.</normaloff>.</iconset>
+        <iconset theme="preferences-desktop-theme"/>
        </property>
       </widget>
      </item>
@@ -249,10 +244,10 @@
    <item row="0" column="0">
     <widget class="QTabWidget" name="tabWidget">
      <property name="tabPosition">
-      <enum>QTabWidget::North</enum>
+      <enum>QTabWidget::TabPosition::North</enum>
      </property>
      <property name="currentIndex">
-      <number>8</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="Panel">
       <attribute name="title">
@@ -262,7 +257,7 @@
        <item row="0" column="0">
         <layout class="QGridLayout" name="gridLayout">
          <property name="sizeConstraint">
-          <enum>QLayout::SetNoConstraint</enum>
+          <enum>QLayout::SizeConstraint::SetNoConstraint</enum>
          </property>
          <item row="1" column="0">
           <widget class="QRadioButton" name="checkHorz">
@@ -274,7 +269,7 @@
            </property>
           </widget>
          </item>
-         <item row="2" column="2" alignment="Qt::AlignRight">
+         <item row="2" column="2" alignment="Qt::AlignmentFlag::AlignRight">
           <widget class="QLabel" name="Label_Volume_plugin">
            <property name="text">
             <string extracomment="volume plugin scale factor">Volume</string>
@@ -350,7 +345,7 @@
            </property>
           </widget>
          </item>
-         <item row="0" column="2" alignment="Qt::AlignRight">
+         <item row="0" column="2" alignment="Qt::AlignmentFlag::AlignRight">
           <widget class="QLabel" name="label_panel_plugin_scales">
            <property name="text">
             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Panel Plugin Scales&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -400,7 +395,7 @@
            </property>
           </widget>
          </item>
-         <item row="3" column="2" alignment="Qt::AlignRight">
+         <item row="3" column="2" alignment="Qt::AlignmentFlag::AlignRight">
           <widget class="QLabel" name="Label_power_manager_plugin">
            <property name="text">
             <string extracomment="power manager plugin scale factor">Power Manager</string>
@@ -420,7 +415,7 @@
          <item row="13" column="0">
           <spacer name="verticalSpacer_9">
            <property name="orientation">
-            <enum>Qt::Vertical</enum>
+            <enum>Qt::Orientation::Vertical</enum>
            </property>
            <property name="sizeHint" stdset="0">
             <size>
@@ -430,7 +425,7 @@
            </property>
           </spacer>
          </item>
-         <item row="1" column="2" alignment="Qt::AlignRight">
+         <item row="1" column="2" alignment="Qt::AlignmentFlag::AlignRight">
           <widget class="QRadioButton" name="radioButtonSetPanelPluginScales">
            <property name="text">
             <string extracomment="set a scale factor">Set Scales</string>
@@ -523,8 +518,7 @@
             <string>Apply</string>
            </property>
            <property name="icon">
-            <iconset theme="dialog-ok">
-             <normaloff>.</normaloff>.</iconset>
+            <iconset theme="dialog-ok"/>
            </property>
            <property name="shortcut">
             <string/>
@@ -582,8 +576,7 @@
             <string>Remove User Theme Set</string>
            </property>
            <property name="icon">
-            <iconset theme="list-remove">
-             <normaloff>.</normaloff>.</iconset>
+            <iconset theme="list-remove"/>
            </property>
           </widget>
          </item>
@@ -593,8 +586,7 @@
             <string extracomment="save theme settings as a group">Save Current Settings as a Theme Set</string>
            </property>
            <property name="icon">
-            <iconset theme="document-save">
-             <normaloff>.</normaloff>.</iconset>
+            <iconset theme="document-save"/>
            </property>
           </widget>
          </item>
@@ -638,7 +630,7 @@
             <string extracomment="size of the mouse pointer or cursor">Size</string>
            </property>
            <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
            </property>
           </widget>
          </item>
@@ -706,7 +698,7 @@
          <item row="3" column="0" colspan="5">
           <widget class="Line" name="line_3">
            <property name="orientation">
-            <enum>Qt::Horizontal</enum>
+            <enum>Qt::Orientation::Horizontal</enum>
            </property>
           </widget>
          </item>
@@ -722,8 +714,7 @@
             <string>Apply</string>
            </property>
            <property name="icon">
-            <iconset theme="dialog-ok">
-             <normaloff>.</normaloff>.</iconset>
+            <iconset theme="dialog-ok"/>
            </property>
            <property name="shortcut">
             <string/>
@@ -733,6 +724,13 @@
            </property>
            <property name="default">
             <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="3" colspan="2">
+          <widget class="QCheckBox" name="checkBoxFluxboxLegacyStyles">
+           <property name="text">
+            <string>Legacy Styles</string>
            </property>
           </widget>
          </item>
@@ -748,16 +746,16 @@
        <item row="0" column="0">
         <layout class="QGridLayout" name="gridLayout_4">
          <property name="sizeConstraint">
-          <enum>QLayout::SetNoConstraint</enum>
+          <enum>QLayout::SizeConstraint::SetNoConstraint</enum>
          </property>
-         <item row="3" column="0" alignment="Qt::AlignLeft">
+         <item row="3" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
           <widget class="QLabel" name="label_9">
            <property name="text">
             <string>Compositor</string>
            </property>
           </widget>
          </item>
-         <item row="2" column="0" alignment="Qt::AlignLeft">
+         <item row="2" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
           <widget class="QLabel" name="label_8">
            <property name="text">
             <string>Transparency and shadow options</string>
@@ -822,7 +820,7 @@
          <item row="6" column="0">
           <spacer name="verticalSpacer_5">
            <property name="orientation">
-            <enum>Qt::Vertical</enum>
+            <enum>Qt::Orientation::Vertical</enum>
            </property>
            <property name="sizeHint" stdset="0">
             <size>
@@ -832,7 +830,7 @@
            </property>
           </spacer>
          </item>
-         <item row="1" column="0" alignment="Qt::AlignLeft">
+         <item row="1" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
           <widget class="QLabel" name="label_10">
            <property name="toolTip">
             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Changing the VBlank mode may help alleviate some screen tearing issues.  See Help for more information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -879,8 +877,7 @@
             <string>Xfwm Settings</string>
            </property>
            <property name="icon">
-            <iconset theme="wmtweaks">
-             <normaloff>.</normaloff>.</iconset>
+            <iconset theme="wmtweaks"/>
            </property>
           </widget>
          </item>
@@ -896,8 +893,7 @@
             <string>Apply</string>
            </property>
            <property name="icon">
-            <iconset theme="dialog-ok">
-             <normaloff>.</normaloff>.</iconset>
+            <iconset theme="dialog-ok"/>
            </property>
            <property name="shortcut">
             <string/>
@@ -922,7 +918,7 @@
        <item row="0" column="0">
         <layout class="QGridLayout" name="gridLayout_13">
          <property name="sizeConstraint">
-          <enum>QLayout::SetNoConstraint</enum>
+          <enum>QLayout::SizeConstraint::SetNoConstraint</enum>
          </property>
          <item row="1" column="0" colspan="2">
           <widget class="QLabel" name="label_xbacklight">
@@ -941,7 +937,7 @@
          <item row="10" column="3">
           <spacer name="verticalSpacer_11">
            <property name="orientation">
-            <enum>Qt::Vertical</enum>
+            <enum>Qt::Orientation::Vertical</enum>
            </property>
            <property name="sizeHint" stdset="0">
             <size>
@@ -954,7 +950,7 @@
          <item row="3" column="0" colspan="7">
           <widget class="Line" name="line">
            <property name="orientation">
-            <enum>Qt::Horizontal</enum>
+            <enum>Qt::Orientation::Horizontal</enum>
            </property>
           </widget>
          </item>
@@ -1009,7 +1005,7 @@
          <item row="7" column="6">
           <spacer name="horizontalSpacer_4">
            <property name="orientation">
-            <enum>Qt::Horizontal</enum>
+            <enum>Qt::Orientation::Horizontal</enum>
            </property>
            <property name="sizeHint" stdset="0">
             <size>
@@ -1032,7 +1028,7 @@
             <number>200</number>
            </property>
            <property name="orientation">
-            <enum>Qt::Horizontal</enum>
+            <enum>Qt::Orientation::Horizontal</enum>
            </property>
           </widget>
          </item>
@@ -1108,7 +1104,7 @@
             <number>1</number>
            </property>
            <property name="orientation">
-            <enum>Qt::Horizontal</enum>
+            <enum>Qt::Orientation::Horizontal</enum>
            </property>
           </widget>
          </item>
@@ -1124,7 +1120,7 @@
        <item row="0" column="0">
         <layout class="QGridLayout" name="gridLayout_11">
          <property name="sizeConstraint">
-          <enum>QLayout::SetNoConstraint</enum>
+          <enum>QLayout::SizeConstraint::SetNoConstraint</enum>
          </property>
          <item row="10" column="0" colspan="2">
           <widget class="QCheckBox" name="checkboxNoEllipse">
@@ -1145,8 +1141,7 @@
             <string>Apply</string>
            </property>
            <property name="icon">
-            <iconset theme="dialog-ok">
-             <normaloff>.</normaloff>.</iconset>
+            <iconset theme="dialog-ok"/>
            </property>
           </widget>
          </item>
@@ -1160,7 +1155,7 @@
          <item row="13" column="1">
           <spacer name="verticalSpacer_10">
            <property name="orientation">
-            <enum>Qt::Vertical</enum>
+            <enum>Qt::Orientation::Vertical</enum>
            </property>
            <property name="sizeHint" stdset="0">
             <size>
@@ -1246,7 +1241,7 @@
             <string>( also turns off Client Side Decorations for Xfce applications)</string>
            </property>
            <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
            </property>
           </widget>
          </item>
@@ -1262,7 +1257,7 @@
        <item row="0" column="0">
         <layout class="QGridLayout" name="gridLayout_14">
          <property name="sizeConstraint">
-          <enum>QLayout::SetNoConstraint</enum>
+          <enum>QLayout::SizeConstraint::SetNoConstraint</enum>
          </property>
          <item row="1" column="4">
           <widget class="QComboBox" name="comboBoxfluxIcons">
@@ -1308,7 +1303,7 @@
          <item row="2" column="5">
           <spacer name="horizontalSpacer_6">
            <property name="orientation">
-            <enum>Qt::Horizontal</enum>
+            <enum>Qt::Orientation::Horizontal</enum>
            </property>
            <property name="sizeHint" stdset="0">
             <size>
@@ -1328,7 +1323,7 @@
          <item row="14" column="0">
           <spacer name="verticalSpacer_3">
            <property name="orientation">
-            <enum>Qt::Vertical</enum>
+            <enum>Qt::Orientation::Vertical</enum>
            </property>
            <property name="sizeHint" stdset="0">
             <size>
@@ -1575,8 +1570,7 @@
             <string>Manage Tint2 Panel</string>
            </property>
            <property name="icon">
-            <iconset theme="systemtray">
-             <normaloff>.</normaloff>.</iconset>
+            <iconset theme="systemtray"/>
            </property>
           </widget>
          </item>
@@ -1657,7 +1651,7 @@
          <item row="9" column="2">
           <spacer name="horizontalSpacer_5">
            <property name="orientation">
-            <enum>Qt::Horizontal</enum>
+            <enum>Qt::Orientation::Horizontal</enum>
            </property>
            <property name="sizeHint" stdset="0">
             <size>
@@ -1713,7 +1707,7 @@
        <item row="0" column="0">
         <layout class="QGridLayout" name="gridLayout_16">
          <property name="sizeConstraint">
-          <enum>QLayout::SetNoConstraint</enum>
+          <enum>QLayout::SizeConstraint::SetNoConstraint</enum>
          </property>
          <item row="6" column="0" colspan="3">
           <widget class="QLabel" name="label_24">
@@ -1725,7 +1719,7 @@
          <item row="1" column="2">
           <spacer name="horizontalSpacer_7">
            <property name="orientation">
-            <enum>Qt::Horizontal</enum>
+            <enum>Qt::Orientation::Horizontal</enum>
            </property>
            <property name="sizeHint" stdset="0">
             <size>
@@ -1738,7 +1732,7 @@
          <item row="8" column="0">
           <spacer name="verticalSpacer_12">
            <property name="orientation">
-            <enum>Qt::Vertical</enum>
+            <enum>Qt::Orientation::Vertical</enum>
            </property>
            <property name="sizeHint" stdset="0">
             <size>
@@ -1839,8 +1833,7 @@
             <string>Apply</string>
            </property>
            <property name="icon">
-            <iconset theme="dialog-ok">
-             <normaloff>.</normaloff>.</iconset>
+            <iconset theme="dialog-ok"/>
            </property>
           </widget>
          </item>
@@ -1904,7 +1897,7 @@
        <item row="1" column="0">
         <spacer name="verticalSpacer_4">
          <property name="orientation">
-          <enum>Qt::Vertical</enum>
+          <enum>Qt::Orientation::Vertical</enum>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
@@ -2005,7 +1998,7 @@
          <item row="19" column="0" colspan="4">
           <widget class="Line" name="line_2">
            <property name="orientation">
-            <enum>Qt::Horizontal</enum>
+            <enum>Qt::Orientation::Horizontal</enum>
            </property>
           </widget>
          </item>
@@ -2045,8 +2038,7 @@
             <string>Apply</string>
            </property>
            <property name="icon">
-            <iconset theme="dialog-ok">
-             <normaloff>.</normaloff>.</iconset>
+            <iconset theme="dialog-ok"/>
            </property>
           </widget>
          </item>
@@ -2098,7 +2090,7 @@
          <item row="21" column="0">
           <spacer name="verticalSpacer_6">
            <property name="orientation">
-            <enum>Qt::Vertical</enum>
+            <enum>Qt::Orientation::Vertical</enum>
            </property>
            <property name="sizeHint" stdset="0">
             <size>
@@ -2141,7 +2133,7 @@
    <item row="4" column="0">
     <spacer name="verticalSpacer">
      <property name="orientation">
-      <enum>Qt::Vertical</enum>
+      <enum>Qt::Orientation::Vertical</enum>
      </property>
      <property name="sizeHint" stdset="0">
       <size>
@@ -2154,10 +2146,10 @@
    <item row="1" column="0">
     <spacer name="verticalSpacer_2">
      <property name="orientation">
-      <enum>Qt::Vertical</enum>
+      <enum>Qt::Orientation::Vertical</enum>
      </property>
      <property name="sizeType">
-      <enum>QSizePolicy::MinimumExpanding</enum>
+      <enum>QSizePolicy::Policy::MinimumExpanding</enum>
      </property>
      <property name="sizeHint" stdset="0">
       <size>

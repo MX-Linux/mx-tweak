@@ -1,3 +1,9 @@
+mx-tweak (25.04.01mx25) mx; urgency=medium
+
+  * fix combo box index change signals
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 06 Apr 2025 17:11:28 -0400
+
 mx-tweak (25.03.01mx25) mx; urgency=medium
 
   * qt6 build
