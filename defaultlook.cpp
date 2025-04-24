@@ -117,6 +117,7 @@ void defaultlook::setup()
     if (themetabflag) ui->tabWidget->setCurrentIndex(Tab::Theme);
     if (othertabflag) ui->tabWidget->setCurrentIndex(Tab::Others);
     if (displayflag) ui->tabWidget->setCurrentIndex(Tab::Display);
+    ui->checkBoxFluxboxLegacyStyles->hide();
 
     if (isXfce) {
         ui->toolButtonXFCEpanelSettings->setIcon(QIcon::fromTheme("org.xfce.panel"));
@@ -177,6 +178,7 @@ void defaultlook::setup()
         ui->tabWidget->removeTab(Tab::Display);
         ui->tabWidget->removeTab(Tab::Compositor);
         ui->tabWidget->removeTab(Tab::Panel);
+        ui->checkBoxFluxboxLegacyStyles->show();
         setupFluxbox();
         setuptheme();
         //setup other tab;
@@ -3816,10 +3818,14 @@ void defaultlook::populatethemelists(const QString &value)
     }
 
     if ( value == QLatin1String("fluxbox")) {
-        themes = runCmd("find /usr/share/fluxbox/styles/ -maxdepth 1 2>/dev/null |cut -d\"/\" -f6").output;
+        themes = runCmd("find /usr/share/mx-fluxbox/styles/ -maxdepth 1 2>/dev/null |cut -d\"/\" -f6").output;
         themes.append("\n");
         themes.append(runCmd("find $HOME/.fluxbox/styles/ -maxdepth 1 2>/dev/null |cut -d\"/\" -f6").output);
         themes.append("\n");
+        if (ui->checkBoxFluxboxLegacyStyles->isChecked()){
+            themes.append(runCmd("find /usr/share/fluxbox/styles/ -maxdepth 1 2>/dev/null |cut -d\"/\" -f6").output);
+            themes.append("\n");
+        }
     }
 
     if ( value == QLatin1String("cursors")){
@@ -4034,12 +4040,18 @@ void defaultlook::settheme(const QString &type, const QString &theme, const QStr
             }
         }
         if ( type == QLatin1String("fluxbox") ) {
+            //always take home folder version, then mx-fluxbox version, then fluxbox version if conflicts arise
             QString filepath = home_path + "/.fluxbox/styles/" + theme;
             if (QFile(filepath).exists()){
                 home_path.replace("/", "\\/");
                 cmd = "sed -i 's/session.styleFile:.*/session.styleFile: " + home_path + "\\/.fluxbox\\/styles\\/" + theme + "/' $HOME/.fluxbox/init && fluxbox-remote reconfigure && fluxbox-remote reloadstyle";
             } else {
-                cmd = "sed -i 's/session.styleFile:.*/session.styleFile: \\/usr\\/share\\/fluxbox\\/styles\\/" + theme + "/' $HOME/.fluxbox/init && fluxbox-remote reconfigure && fluxbox-remote reloadstyle";
+                if (QFile("/usr/share/fluxbox/styles/" + theme).exists()){
+                    cmd = "sed -i 's/session.styleFile:.*/session.styleFile: \\/usr\\/share\\/fluxbox\\/styles\\/" + theme + "/' $HOME/.fluxbox/init && fluxbox-remote reconfigure && fluxbox-remote reloadstyle";
+                }
+                if (QFile("/usr/share/mx-fluxbox/styles/" + theme).exists()){
+                    cmd = "sed -i 's/session.styleFile:.*/session.styleFile: \\/usr\\/share\\/mx-fluxbox\\/styles\\/" + theme + "/' $HOME/.fluxbox/init && fluxbox-remote reconfigure && fluxbox-remote reloadstyle";
+                }
             }
             system(cmd.toUtf8());
         }
@@ -4530,3 +4542,10 @@ void defaultlook::on_checkBoxKVMVirtLoad_clicked()
     ui->ButtonApplyEtc->setEnabled(true);
     kvmflag = !kvmflag;
 }
+
+void defaultlook::on_checkBoxFluxboxLegacyStyles_stateChanged(int arg1)
+{
+    populatethemelists(QStringLiteral("fluxbox"));
+}
+
+

@@ -337,6 +337,9 @@ private slots:
 
     void on_checkBoxKVMVirtLoad_clicked();
 
+
+    void on_checkBoxFluxboxLegacyStyles_stateChanged(int arg1);
+
 private:
     Ui::defaultlook *ui;
 };
