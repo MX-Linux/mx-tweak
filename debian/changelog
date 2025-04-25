@@ -1,3 +1,9 @@
+mx-tweak (25.04.02mx25) mx; urgency=medium
+
+  * add legacy style checkbox to fluxbox theme tab
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Thu, 24 Apr 2025 20:50:21 -0400
+
 mx-tweak (25.04.01mx25) mx; urgency=medium
 
   * fix combo box index change signals
