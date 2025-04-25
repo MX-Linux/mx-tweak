@@ -27,4 +27,4 @@ override_dh_shlibdeps:
 override_dh_usrlocal:
 
 %:
-	dh $@ --no-automatic-dbgsym --parallel
+	dh $@ --no-automatic-dbgsym

@@ -1,22 +1,32 @@
 Source: mx-tweak
 Section: admin
-Priority: optional
-Maintainer: dolphinoracle <dolphinoracle@gmail.com>
-Build-Depends: debhelper (>=10), qt6-base-dev, qt6-base-dev-tools, qt6-tools-dev, qt6-tools-dev-tools
-Standards-Version: 3.9.5
-Vcs-Git: git://github.com/mxlinux/mx-tweak.git
+Priority: optionalMaintainer: dolphinoracle <dolphinoracle@gmail.com>
+Build-Depends: debhelper-compat (= 13),
+               qt6-base-dev,
+               qt6-base-dev-tools,
+               qt6-tools-dev,
+               qt6-tools-dev-tools
+Standards-Version: 3.9.8
+Vcs-Git: git://github.com/MX-Linux/mx-tweak
+Homepage: https://github.com/MX-Linux/mx-tweak
 
 Package: mx-tweak
 Architecture: any
 Depends: ${misc:Depends},
-        ${shlibs:Depends},
-        mx-viewer | xdg-utils,
-        mx-tweak-data,
-        libglib2.0-bin,
-        qt6-svg-plugins
+         ${shlibs:Depends},
+         mx-viewer | xdg-utils,
+         mx-tweak-data,
+         libglib2.0-bin,
+         qt6-svg-plugins
 Recommends: compton,
-        compton-conf,
-        preview-mx,
-        mx-launcher-l10n
-Description: MX Tweak
- MX Tweak is a tool for quick tweaks to the Xfce environment supplied with MX Linux
+            compton-conf,
+            preview-mx,
+            mx-launcher-l10n
+Description: Desktop configuration tool for MX Linux
+ MX Tweak is a graphical utility that allows users to easily customize
+ and configure the Xfce desktop environment in MX Linux. It provides
+ a user-friendly interface for:
+  * Adjusting desktop appearance and behavior
+  * Configuring panel layouts and themes
+  * Fine-tuning system performance settings
+  * Managing compositor effects
