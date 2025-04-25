@@ -34,7 +34,7 @@
 #include <QStringList>
 #include <QTextStream>
 #include <QTimer>
-#include <QRegularExpression>zz
+#include <QRegularExpression>
 
 #include "about.h"
 #include "cmd.h"
