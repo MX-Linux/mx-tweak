@@ -3818,7 +3818,7 @@ void defaultlook::populatethemelists(const QString &value)
     }
 
     if ( value == QLatin1String("fluxbox")) {
-        themes = runCmd("find /usr/share/mx-fluxbox/styles/ -maxdepth 1 2>/dev/null |cut -d\"/\" -f6").output;
+        themes = runCmd("find /usr/share/mxflux/styles/ -maxdepth 1 2>/dev/null |cut -d\"/\" -f6").output;
         themes.append("\n");
         themes.append(runCmd("find $HOME/.fluxbox/styles/ -maxdepth 1 2>/dev/null |cut -d\"/\" -f6").output);
         themes.append("\n");
@@ -4049,8 +4049,8 @@ void defaultlook::settheme(const QString &type, const QString &theme, const QStr
                 if (QFile("/usr/share/fluxbox/styles/" + theme).exists()){
                     cmd = "sed -i 's/session.styleFile:.*/session.styleFile: \\/usr\\/share\\/fluxbox\\/styles\\/" + theme + "/' $HOME/.fluxbox/init && fluxbox-remote reconfigure && fluxbox-remote reloadstyle";
                 }
-                if (QFile("/usr/share/mx-fluxbox/styles/" + theme).exists()){
-                    cmd = "sed -i 's/session.styleFile:.*/session.styleFile: \\/usr\\/share\\/mx-fluxbox\\/styles\\/" + theme + "/' $HOME/.fluxbox/init && fluxbox-remote reconfigure && fluxbox-remote reloadstyle";
+                if (QFile("/usr/share/mxflux/styles/" + theme).exists()){
+                    cmd = "sed -i 's/session.styleFile:.*/session.styleFile: \\/usr\\/share\\/mxflux\\/styles\\/" + theme + "/' $HOME/.fluxbox/init && fluxbox-remote reconfigure && fluxbox-remote reloadstyle";
                 }
             }
             system(cmd.toUtf8());
