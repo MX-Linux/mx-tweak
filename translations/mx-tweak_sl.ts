@@ -1063,7 +1063,7 @@ Morali boste izbrati
 drugo ime, preden lahko nadaljujete.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="4378"/>
+        <location filename="../defaultlook.cpp" line="4386"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
         <translation>Izbira programa za zagon</translation>

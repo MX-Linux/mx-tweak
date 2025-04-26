@@ -1063,7 +1063,7 @@ të pavlefshme. Do t’ju duhet të përzgjidhni
 tjetër emër, para se të ecni më tej.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="4378"/>
+        <location filename="../defaultlook.cpp" line="4386"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
         <translation>Përzgjidhni aplikacion për xhirim</translation>

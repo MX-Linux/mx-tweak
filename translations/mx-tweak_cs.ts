@@ -47,12 +47,12 @@
     <message>
         <location filename="../main.cpp" line="53"/>
         <source>Display additional debug output in console</source>
-        <translation type="unfinished"></translation>
+        <translation>Zobrazení dalšího výstupu ladění v konzoli</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="54"/>
         <source>Opens Other tab directly.  Valid on all desktops</source>
-        <translation type="unfinished"></translation>
+        <translation>Otevře přímo kartu Ostatní. Platí na všech plochách</translation>
     </message>
 </context>
 <context>
@@ -219,7 +219,7 @@
     <message>
         <location filename="../defaultlook.ui" line="327"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Tasklist&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Seznam úloh&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="334"/>
@@ -255,7 +255,7 @@
         <location filename="../defaultlook.ui" line="406"/>
         <source>Power Manager</source>
         <extracomment>power manager plugin scale factor</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Správce napájení</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="413"/>
@@ -362,7 +362,7 @@
         <location filename="../defaultlook.ui" line="631"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Cursors&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>cursor theme</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Kurzory&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="638"/>
@@ -593,7 +593,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1218"/>
         <source>Show percentages in notifcations when available</source>
-        <translation type="unfinished"></translation>
+        <translation>Zobrazení procent v oznámeních, pokud jsou k dispozici</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1225"/>
@@ -705,7 +705,7 @@
         <location filename="../defaultlook.ui" line="1600"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Screensaver&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>screensaver screen blank settings</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Spořič obrazovky&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1621"/>
@@ -742,7 +742,7 @@
         <location filename="../defaultlook.ui" line="1697"/>
         <source>Idle time (minutes)</source>
         <extracomment>set the time of inactivity  before screensaver screen blank occurs</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Doba nečinnosti (v minutách)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1710"/>
@@ -780,7 +780,7 @@
         <location filename="../defaultlook.ui" line="1868"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Choose application&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <extracomment>description of button action to launch file dialog to choose an application</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Výběr aplikace&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1881"/>
@@ -812,7 +812,7 @@
     <message>
         <location filename="../defaultlook.ui" line="1932"/>
         <source>Enable Bluetooth adapters on boot</source>
-        <translation type="unfinished"></translation>
+        <translation>Povolení adaptérů Bluetooth při spuštění systému</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1939"/>
@@ -838,7 +838,7 @@
         <location filename="../defaultlook.ui" line="1970"/>
         <source>Change computer name (requires reboot)</source>
         <extracomment>option to change the system hostname, requires a reboot to be 100% effective</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Změna názvu počítače (vyžaduje restart)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1977"/>
@@ -854,7 +854,7 @@
         <location filename="../defaultlook.ui" line="1991"/>
         <source>Enable Bluetooth battery info for connected devices (requires system restart)</source>
         <extracomment>expose battery info for connected bluetooth devices to the operating system via dbus</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Povolení informací o baterii připojených Bluetooth zařízení (vyžaduje restart systému)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="1998"/>
@@ -870,13 +870,13 @@
         <location filename="../defaultlook.ui" line="2022"/>
         <source>put a hold or remove a hold on updates of Liquorix kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>pozastavit nebo odstranit pozastavení aktualizací jader Liquorix.</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2025"/>
         <source>Enable Automatic Liquorix Kernel Updates (MX ahs repository)</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Povolení automatických aktualizací jádra Liquorix (repozitář MX ahs)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2032"/>
@@ -897,7 +897,7 @@
         <location filename="../defaultlook.ui" line="2070"/>
         <source>Change Default Display Manager (login screen) (requires reboot)</source>
         <extracomment>option to change display manager login screen.  present if more than one display manager is installed</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Změna výchozího správce zobrazení (přihlašovací obrazovka) (vyžaduje restart)</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2077"/>
@@ -913,13 +913,13 @@
         <location filename="../defaultlook.ui" line="2091"/>
         <source>put a hold or remove a hold on updates of Debian  kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>pozastavit nebo odstranit pozastavení aktualizací jader Debianu.</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2094"/>
         <source>Enable Automatic Debian Kernel Updates</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
-        <translation type="unfinished"></translation>
+        <translation>Povolení automatických aktualizací jádra Debianu</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2114"/>
@@ -929,7 +929,7 @@
     <message>
         <location filename="../defaultlook.ui" line="2121"/>
         <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Generování nabídky Všechny aplikace ve fluxboxu po instalaci, odebrání a aktualizaci balíčku</translation>
     </message>
     <message>
         <location filename="../defaultlook.ui" line="2128"/>
@@ -1028,7 +1028,7 @@
         <location filename="../defaultlook.cpp" line="1666"/>
         <source>Color Schemes</source>
         <comment>plasma widget color schemes</comment>
-        <translation type="unfinished"></translation>
+        <translation>Barevná schémata</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="1667"/>
@@ -1050,7 +1050,7 @@
         <location filename="../defaultlook.cpp" line="2740"/>
         <source>Please enter a computer name.</source>
         <comment>question to enter a name for the computer hostname</comment>
-        <translation type="unfinished"></translation>
+        <translation>Zadejte název počítače.</translation>
     </message>
     <message>
         <location filename="../defaultlook.cpp" line="2744"/>
@@ -1058,13 +1058,15 @@
 You&apos;ll have to select a different
 name before proceeding.</source>
         <comment>unacceptable characters are found in hostname, pick a new name</comment>
-        <translation type="unfinished"></translation>
+        <translation>Omlouváme se, název vašeho počítače obsahuje neplatné znaky.
+Budete muset vybrat jiné
+jméno, než budete moci pokračovat.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="4378"/>
+        <location filename="../defaultlook.cpp" line="4386"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
-        <translation type="unfinished"></translation>
+        <translation>Vyberte aplikaci, kterou chcete spustit</translation>
     </message>
 </context>
 <context>
