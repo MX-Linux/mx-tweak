@@ -1,6 +1,7 @@
 Source: mx-tweak
 Section: admin
-Priority: optionalMaintainer: dolphinoracle <dolphinoracle@gmail.com>
+Priority: optional
+Maintainer: dolphinoracle <dolphinoracle@gmail.com>
 Build-Depends: debhelper-compat (= 13),
                qt6-base-dev,
                qt6-base-dev-tools,
