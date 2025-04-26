@@ -1,3 +1,10 @@
+mx-tweak (25.04.03mx25) mx; urgency=medium
+
+  * adjust location of fluxbox styles searches
+  * remember state of legacy checkbox
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Fri, 25 Apr 2025 21:17:16 -0400
+
 mx-tweak (25.04.02mx25) mx; urgency=medium
 
   * add legacy style checkbox to fluxbox theme tab
