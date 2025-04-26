@@ -35,6 +35,7 @@
 #include <QTextStream>
 #include <QTimer>
 #include <QRegularExpression>
+#include <QSettings>
 
 #include "about.h"
 #include "cmd.h"
@@ -113,6 +114,8 @@ void defaultlook::setup()
     if (!checklightdm()) {
         ui->checkBoxLightdmReset->hide();
     }
+    //load saved settings, for now only fluxbox legacy styles checkbox
+    loadSettings();
 
     if (themetabflag) ui->tabWidget->setCurrentIndex(Tab::Theme);
     if (othertabflag) ui->tabWidget->setCurrentIndex(Tab::Others);
@@ -4546,6 +4549,17 @@ void defaultlook::on_checkBoxKVMVirtLoad_clicked()
 void defaultlook::on_checkBoxFluxboxLegacyStyles_stateChanged(int arg1)
 {
     populatethemelists(QStringLiteral("fluxbox"));
+    saveSettings();
 }
 
 
+void defaultlook::saveSettings() {
+        QSettings settings("MX-Linux", "MX-Tweak");
+        settings.setValue("checkbox_state", ui->checkBoxFluxboxLegacyStyles->checkState());
+    }
+
+void defaultlook::loadSettings() {
+        QSettings settings("MX-Linux", "MX-Tweak");
+        bool checked = settings.value("checkbox_state", false).toBool();
+        ui->checkBoxFluxboxLegacyStyles->setChecked(checked);
+    }
