@@ -1,4 +1,4 @@
-mx-tweak (25.04.01mx23) mx; urgency=medium
+mx-tweak (25.04.03mx23) mx; urgency=medium
 
   * allow for future custom mx-fluxbox styles 
   * update translations
