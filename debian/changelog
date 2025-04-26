@@ -1,3 +1,10 @@
+mx-tweak (25.04.01mx23) mx; urgency=medium
+
+  * allow for future custom mx-fluxbox styles 
+  * update translations
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Fri, 25 Apr 2025 21:00:19 -0400
+
 mx-tweak (25.02.01mx23) mx; urgency=medium
 
   * fix popup for tray utility when notification message button is clicked on
