@@ -1,3 +1,9 @@
+mx-tweak (25.04.04mx23) mx; urgency=medium
+
+  * filter out attributions from fluxbox style list
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Mon, 28 Apr 2025 19:13:02 -0400
+
 mx-tweak (25.04.03mx23) mx; urgency=medium
 
   * allow for future custom mx-fluxbox styles 
