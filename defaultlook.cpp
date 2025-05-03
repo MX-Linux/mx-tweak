@@ -1960,6 +1960,7 @@ void defaultlook::CheckComptonRunning()
         if (verbose) qDebug() << "etc test is "<< test;
         if (test == QLatin1String("true")) {
             ui->comboBoxCompositor->setCurrentIndex(1);
+            ui->buttonConfigureXfwm->setEnabled(true);
         } else {
             ui->comboBoxCompositor->setCurrentIndex(0);
         }
