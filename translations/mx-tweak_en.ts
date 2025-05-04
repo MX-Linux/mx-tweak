@@ -108,15 +108,15 @@
     <name>defaultlook</name>
     <message>
         <location filename="../defaultlook.ui" line="20"/>
-        <location filename="../defaultlook.cpp" line="61"/>
-        <location filename="../defaultlook.cpp" line="109"/>
-        <location filename="../defaultlook.cpp" line="678"/>
-        <location filename="../defaultlook.cpp" line="697"/>
-        <location filename="../defaultlook.cpp" line="706"/>
-        <location filename="../defaultlook.cpp" line="754"/>
-        <location filename="../defaultlook.cpp" line="762"/>
-        <location filename="../defaultlook.cpp" line="789"/>
+        <location filename="../defaultlook.cpp" line="62"/>
+        <location filename="../defaultlook.cpp" line="110"/>
+        <location filename="../defaultlook.cpp" line="681"/>
+        <location filename="../defaultlook.cpp" line="700"/>
+        <location filename="../defaultlook.cpp" line="709"/>
+        <location filename="../defaultlook.cpp" line="757"/>
+        <location filename="../defaultlook.cpp" line="765"/>
         <location filename="../defaultlook.cpp" line="792"/>
+        <location filename="../defaultlook.cpp" line="795"/>
         <source>MX Tweak</source>
         <translation type="unfinished"></translation>
     </message>
@@ -419,11 +419,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="791"/>
-        <source>Compton </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="800"/>
         <source>auto</source>
         <translation type="unfinished"></translation>
@@ -461,18 +456,23 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="849"/>
-        <source>Compton settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../defaultlook.ui" line="860"/>
         <source>Edit compton.conf directly in text editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../defaultlook.ui" line="791"/>
+        <source>Picom</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../defaultlook.ui" line="849"/>
+        <source>Picom settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../defaultlook.ui" line="863"/>
-        <source>Edit compton.conf</source>
+        <source>Edit picom.conf</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -949,116 +949,111 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="62"/>
+        <location filename="../defaultlook.cpp" line="63"/>
         <source>--display switch only valid for Xfce</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="677"/>
+        <location filename="../defaultlook.cpp" line="680"/>
         <source>About MX Tweak</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="679"/>
+        <location filename="../defaultlook.cpp" line="682"/>
         <source>Version: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="680"/>
+        <location filename="../defaultlook.cpp" line="683"/>
         <source>App for quick default ui theme changes and tweaks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="682"/>
+        <location filename="../defaultlook.cpp" line="685"/>
         <source>Copyright (c) MX Linux</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="683"/>
+        <location filename="../defaultlook.cpp" line="686"/>
         <source>%1 License</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="697"/>
+        <location filename="../defaultlook.cpp" line="700"/>
         <source>%1 Help</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="707"/>
+        <location filename="../defaultlook.cpp" line="710"/>
         <source>Finished! Firefox may require a restart for changes to take effect</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="755"/>
+        <location filename="../defaultlook.cpp" line="758"/>
         <source>Plese remove special characters</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="755"/>
+        <location filename="../defaultlook.cpp" line="758"/>
         <source>from file name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="762"/>
+        <location filename="../defaultlook.cpp" line="765"/>
         <source>File name already exists.  Choose another name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="790"/>
+        <location filename="../defaultlook.cpp" line="793"/>
         <source>File is not a valid tar.xz archive file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="793"/>
+        <location filename="../defaultlook.cpp" line="796"/>
         <source>Archive does not contain a panel config</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="968"/>
+        <location filename="../defaultlook.cpp" line="971"/>
         <source>Panel settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="969"/>
+        <location filename="../defaultlook.cpp" line="972"/>
         <source>Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1674"/>
+        <location filename="../defaultlook.cpp" line="1677"/>
         <source>Plasma Widget Themes</source>
         <comment>theme style of the kde plasma widgets</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1675"/>
+        <location filename="../defaultlook.cpp" line="1678"/>
         <source>Color Schemes</source>
         <comment>plasma widget color schemes</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1676"/>
+        <location filename="../defaultlook.cpp" line="1679"/>
         <source>Plasma Look &amp; Feel Global Themes</source>
         <comment>plasma global themes</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="1944"/>
-        <source>settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.cpp" line="2289"/>
+        <location filename="../defaultlook.cpp" line="2285"/>
         <source>Choose a theme set</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2756"/>
+        <location filename="../defaultlook.cpp" line="2752"/>
         <source>Please enter a computer name.</source>
         <comment>question to enter a name for the computer hostname</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="2760"/>
+        <location filename="../defaultlook.cpp" line="2756"/>
         <source>Sorry, your computer name contains invalid characters.
 You&apos;ll have to select a different
 name before proceeding.</source>
@@ -1066,7 +1061,7 @@ name before proceeding.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="4421"/>
+        <location filename="../defaultlook.cpp" line="4417"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
         <translation type="unfinished"></translation>
