@@ -1800,21 +1800,21 @@ void defaultlook::setupCompositor()
         // check to see if compton is enabled
         QString home_path = QDir::homePath();
         if (verbose) qDebug() << "Home Path =" << home_path;
-        QFileInfo file_start(home_path + "/.config/autostart/zcompton.desktop");
-        //check to see if compton.desktop startup file exists
+        QFileInfo file_start(home_path + "/.config/autostart/zpicom.desktop");
+        //check to see if picom.desktop startup file exists
         if (file_start.exists()) {
-            if (verbose) qDebug() << "compton startup file exists";
+            if (verbose) qDebug() << "picom startup file exists";
         } else {
             //copy in a startup file, startup initially disabled
-            runCmd("cp /usr/share/mx-tweak/zcompton.desktop " + file_start.absoluteFilePath());
+            runCmd("cp /usr/share/mx-tweak/zpicom.desktop " + file_start.absoluteFilePath());
         }
 
-        //check to see if existing compton.conf file
-        QFileInfo file_conf(home_path + "/.config/compton.conf");
+        //check to see if existing picom.conf file
+        QFileInfo file_conf(home_path + "/.config/picom.conf");
         if (file_conf.exists()) {
             if (verbose) qDebug() << "Found existing conf file";
         } else {
-            runCmd("cp /usr/share/mx-tweak/compton.conf " + file_conf.absoluteFilePath());
+            runCmd("cp /usr/share/mx-tweak/picom.conf " + file_conf.absoluteFilePath());
         }
         CheckComptonRunning();
     }
@@ -1929,41 +1929,33 @@ void defaultlook::setupConfigoptions()
 
 void defaultlook::CheckComptonRunning()
 {
-    //Index for combo box:  0=none, 1=xfce, 2=compton
+    //Index for combo box:  0=none, 1=xfce, 2=picom (formerly compton)
 
-    if ( system("ps -ax -o comm,pid |grep -w ^compton") == 0 ) {
-        if (verbose) qDebug() << "Compton is running";
+    if ( system("ps -ax -o comm,pid |grep -w ^picom") == 0 ) {
+        if (verbose) qDebug() << "picom is running";
         ui->comboBoxCompositor->setCurrentIndex(2);
     } else {
-        if (verbose) qDebug() << "Compton is NOT running";
+        if (verbose) qDebug() << "picom is NOT running";
 
-        //check if compton is present on system, remove from choices if not
-        QFileInfo compton(QStringLiteral("/usr/bin/compton"));
-
-        //adjust for picom
-        if (compton.symLinkTarget() == QLatin1String("/usr/bin/picom") ) {
-            QFileInfo picom(compton.symLinkTarget());
-            ui->comboBoxCompositor->setItemText(2,picom.baseName());
-            ui->buttonConfigureCompton->setText(picom.baseName() + " " + tr("settings"));
-        } else {
-            //hide compton settings
-            if ( !compton.exists() ) {
-                ui->comboBoxCompositor->removeItem(2);
-                ui->buttonConfigureCompton->hide();
-                ui->buttonEditComptonConf->hide();
-            }
+        //check if picom is present on system, remove from choices if not
+        QFileInfo picom(QStringLiteral("/usr/bin/picom"));
+        //hide picom settings
+        if ( !picom.exists() ) {
+            ui->comboBoxCompositor->removeItem(2);
+            ui->buttonConfigureCompton->hide();
+            ui->buttonEditComptonConf->hide();
         }
+    }
 
-        //check if xfce compositor is enabled
-        QString test;
-        test = runCmd(QStringLiteral("xfconf-query -c xfwm4 -p /general/use_compositing")).output;
-        if (verbose) qDebug() << "etc test is "<< test;
-        if (test == QLatin1String("true")) {
-            ui->comboBoxCompositor->setCurrentIndex(1);
-            ui->buttonConfigureXfwm->setEnabled(true);
-        } else {
-            ui->comboBoxCompositor->setCurrentIndex(0);
-        }
+    //check if xfce compositor is enabled
+    QString test;
+    test = runCmd(QStringLiteral("xfconf-query -c xfwm4 -p /general/use_compositing")).output;
+    if (verbose) qDebug() << "etc test is "<< test;
+    if (test == QLatin1String("true")) {
+        ui->comboBoxCompositor->setCurrentIndex(1);
+        ui->buttonConfigureXfwm->setEnabled(true);
+    } else {
+        ui->comboBoxCompositor->setCurrentIndex(0);
     }
 }
 
@@ -2908,7 +2900,7 @@ void defaultlook::on_buttonThemeUndo_clicked()
 void defaultlook::on_buttonConfigureCompton_clicked()
 {
     this->hide();
-    system("compton-conf");
+    system("picom-conf");
     this->show();
 }
 
@@ -2920,34 +2912,34 @@ void defaultlook::on_buttonCompositorApply_clicked()
     if (ui->comboBoxCompositor->currentIndex() == 2) {
         //turn off xfce compositor
         runCmd(QStringLiteral("xfconf-query -c xfwm4 -p /general/use_compositing -s false"));
-        //launch compton
-        system("pkill -x compton");
-        system("compton-launch.sh");
+        //launch picom
+        system("pkill -x picom");
+        system("picom-launch.sh");
         //restart apt-notifier if necessary
         CheckAptNotifierRunning();
     }
     if (ui->comboBoxCompositor->currentIndex() == 1) {
-        //turn off compton
-        system("pkill -x compton");
+        //turn off picom
+        system("pkill -x picom");
         //launch xfce compositor
         runCmd(QStringLiteral("xfconf-query -c xfwm4 -p /general/use_compositing -s true"));
         //restart apt-notifier if necessary
         CheckAptNotifierRunning();
     }
     if (ui->comboBoxCompositor->currentIndex() == 0) {
-        //turn off compton and xfce compositor
+        //turn off picom and xfce compositor
         //turn off xfce compositor
         runCmd(QStringLiteral("xfconf-query -c xfwm4 -p /general/use_compositing -s false"));
-        system("pkill -x compton");
+        system("pkill -x picom");
         CheckAptNotifierRunning();
 
     }
 
-    //figure out whether to autostart compton or not
-    //if compton is configured in the combo box, then enable.  otherwise disable
+    //figure out whether to autostart picom or not
+    //if picom is configured in the combo box, then enable.  otherwise disable
 
     QString home_path = QDir::homePath();
-    QFileInfo file_start(home_path + "/.config/autostart/zcompton.desktop");
+    QFileInfo file_start(home_path + "/.config/autostart/zpicom.desktop");
     if (ui->comboBoxCompositor->currentIndex() == 2) {
         runCmd("sed -i -r s/Hidden=.*/Hidden=false/ " + file_start.absoluteFilePath());
     } else {
@@ -2967,7 +2959,7 @@ void defaultlook::on_buttonCompositorApply_clicked()
 void defaultlook::on_buttonEditComptonConf_clicked()
 {
     QString home_path = QDir::homePath();
-    QFileInfo file_conf(home_path + "/.config/compton.conf");
+    QFileInfo file_conf(home_path + "/.config/picom.conf");
     runCmd("xdg-open " + file_conf.absoluteFilePath());
 }
 
