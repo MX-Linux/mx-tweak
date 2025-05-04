@@ -340,6 +340,9 @@ private slots:
 
     void on_checkBoxFluxboxLegacyStyles_stateChanged(int arg1);
 
+    void saveSettings();
+
+    void loadSettings();
 private:
     Ui::defaultlook *ui;
 };

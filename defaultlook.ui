@@ -247,7 +247,7 @@
       <enum>QTabWidget::TabPosition::North</enum>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>2</number>
      </property>
      <widget class="QWidget" name="Panel">
       <attribute name="title">
@@ -788,7 +788,7 @@
            </item>
            <item>
             <property name="text">
-             <string>Compton </string>
+             <string>Picom</string>
             </property>
            </item>
           </widget>
@@ -846,7 +846,7 @@
             <string>Launch compton-conf configuration tool</string>
            </property>
            <property name="text">
-            <string>Compton settings</string>
+            <string>Picom settings</string>
            </property>
            <property name="icon">
             <iconset theme="preferences-system">
@@ -860,7 +860,7 @@
             <string>Edit compton.conf directly in text editor</string>
            </property>
            <property name="text">
-            <string>Edit compton.conf</string>
+            <string>Edit picom.conf</string>
            </property>
            <property name="icon">
             <iconset theme="edit">
