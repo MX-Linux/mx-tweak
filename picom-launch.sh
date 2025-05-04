@@ -1,9 +1,8 @@
 #!/bin/bash
-##this file is part of MX Compton Manager, created for the MX Linux project
-##by dolphin oracle, January 2017.  
-##code is gpl3 licensed.
+##this file is part of MX Tweak Manager, created for the MX Linux project
+##by dolphin oracle, May 2025.  
 
-#launch compton, with user config file
+#launch picom, with user config file
 
 #deactivate xfce4 compositor if its running
 if [ $(xfconf-query -c xfwm4 -p /general/use_compositing) ]; then
@@ -11,6 +10,6 @@ if [ $(xfconf-query -c xfwm4 -p /general/use_compositing) ]; then
 fi
 
 #lauch compton with default config file
-compton --dbus --config /home/$USER/.config/compton.conf -b
+picom --dbus --config /home/$USER/.config/picom.conf -b
 
 exit 0
