@@ -19,8 +19,8 @@ Depends: ${misc:Depends},
          mx-tweak-data,
          libglib2.0-bin,
          qt6-svg-plugins
-Recommends: compton,
-            compton-conf,
+Recommends: picom,
+            picom-conf,
             preview-mx,
             mx-launcher-l10n
 Description: Desktop configuration tool for MX Linux
