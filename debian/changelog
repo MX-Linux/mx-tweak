@@ -1,3 +1,9 @@
+mx-tweak (25.04.05mx23) mx; urgency=medium
+
+  * fix permissions and compton-launch.sh
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Mon, 09 Jun 2025 18:31:24 -0400
+
 mx-tweak (25.04.04mx23) mx; urgency=medium
 
   * filter out attributions from fluxbox style list
