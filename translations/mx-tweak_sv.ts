@@ -1063,7 +1063,7 @@ Du måste välja ett annat
 namn innan du fortsätter.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="4378"/>
+        <location filename="../defaultlook.cpp" line="4386"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
         <translation>Välj applikation att köra</translation>

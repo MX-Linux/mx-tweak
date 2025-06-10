@@ -1,3 +1,22 @@
+mx-tweak (25.04.05mx23) mx; urgency=medium
+
+  * fix permissions and compton-launch.sh
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Mon, 09 Jun 2025 18:31:24 -0400
+
+mx-tweak (25.04.04mx23) mx; urgency=medium
+
+  * filter out attributions from fluxbox style list
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Mon, 28 Apr 2025 19:13:02 -0400
+
+mx-tweak (25.04.03mx23) mx; urgency=medium
+
+  * allow for future custom mx-fluxbox styles 
+  * update translations
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Fri, 25 Apr 2025 21:00:19 -0400
+
 mx-tweak (25.02.01mx23) mx; urgency=medium
 
   * fix popup for tray utility when notification message button is clicked on

@@ -1062,7 +1062,7 @@ name before proceeding.</source>
 Для продолжения выберите другое имя.</translation>
     </message>
     <message>
-        <location filename="../defaultlook.cpp" line="4378"/>
+        <location filename="../defaultlook.cpp" line="4386"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
         <translation>Выберите приложение для запуска</translation>
