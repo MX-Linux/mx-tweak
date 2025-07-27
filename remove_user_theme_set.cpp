@@ -5,7 +5,6 @@
 #include <QFileInfo>
 
 #include "cmd.h"
-#include "defaultlook.h"
 #include "remove_user_theme_set.h"
 #include "ui_remove_user_theme_set.h"
 

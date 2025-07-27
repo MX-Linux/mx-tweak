@@ -27,7 +27,7 @@ brightness_small::brightness_small(QWidget *parent, const QStringList &args) :
     setWindowFlags(Qt::CustomizeWindowHint); // for the close, min and max buttons
     QIcon save;
     save = QIcon::fromTheme(u"gtk-save"_s);
-    ui->buttonSave->setIcon(save);
+    ui->pushSave->setIcon(save);
     setupDisplay();
     QIcon icon;
     icon = QIcon::fromTheme(u"brightness-systray"_s);
@@ -39,15 +39,9 @@ brightness_small::brightness_small(QWidget *parent, const QStringList &args) :
     if (args.contains("--full"_L1) || QFileInfo::exists(config_file_path)) {
         expand = true;
     }
-    if (expand) {
-        ui->label_xbacklight->show();
-        ui->horizsliderhardwarebacklight->show();
-        ui->backlight_label->show();
-    } else {
-        ui->label_xbacklight->hide();
-        ui->horizsliderhardwarebacklight->hide();
-        ui->backlight_label->hide();
-    }
+    ui->labelHardwareBacklight->setVisible(expand);
+    ui->sliderHardwareBacklight->setVisible(expand);
+    ui->labelBacklight->setVisible(expand);
     trayicon = new QSystemTrayIcon;
     trayicon->setIcon(icon);
     trayicon->show();
@@ -66,10 +60,14 @@ brightness_small::brightness_small(QWidget *parent, const QStringList &args) :
     connect(quitAction, &QAction::triggered, qApp, &QGuiApplication::quit);
     menu->addAction(quitAction);
 
-    //connect(trayicon, &QSystemTrayIcon::messageClicked, this, &brightness_small::messageClicked);
     connect(trayicon, &QSystemTrayIcon::activated, this, &brightness_small::iconActivated);
-
     trayicon->setContextMenu(menu);
+
+    connect(ui->pushSave, &QPushButton::clicked, this, &brightness_small::pushSave_clicked);
+    connect(ui->comboDisplay, &QComboBox::currentIndexChanged, this, &brightness_small::comboDisplay_currentIndexChanged);
+    connect(ui->sliderBrightness, &QSlider::valueChanged, this, &brightness_small::sliderBrightness_valueChanged);
+    connect(ui->sliderHardwareBacklight, &QSlider::actionTriggered, this, &brightness_small::sliderHardwareBacklight_actionTriggered);
+    connect(ui->pushExpandBacklight, &QToolButton::clicked, this, &brightness_small::pushExpandBacklight_clicked);
 }
 
 void brightness_small::iconActivated(QSystemTrayIcon::ActivationReason reason)
@@ -99,11 +97,6 @@ void brightness_small::setPosition()
     this->move(pos);
 }
 
-void brightness_small::messageClicked()
-{
-    this->show();
-}
-
 brightness_small::~brightness_small()
 {
     delete ui;
@@ -115,13 +108,13 @@ void brightness_small::setmissingxfconfvariables(const QString &activeprofile, c
     //set resolution, set active, set scales, set display name
 
     //set display name
-    runCmd("xfconf-query --channel displays -p /"_L1 + activeprofile + '/' + ui->comboBoxDisplay->currentText() + " -t string -s "_L1 + ui->comboBoxDisplay->currentText() + " --create"_L1);
+    runCmd("xfconf-query --channel displays -p /"_L1 + activeprofile + '/' + ui->comboDisplay->currentText() + " -t string -s "_L1 + ui->comboDisplay->currentText() + " --create"_L1);
 
     //set resolution
-    runCmd("xfconf-query --channel displays -p /"_L1 + activeprofile + '/' + ui->comboBoxDisplay->currentText() + "/Resolution -t string -s "_L1 + resolution.simplified() + " --create"_L1);
+    runCmd("xfconf-query --channel displays -p /"_L1 + activeprofile + '/' + ui->comboDisplay->currentText() + "/Resolution -t string -s "_L1 + resolution.simplified() + " --create"_L1);
 
     //set active profile
-    runCmd("xfconf-query --channel displays -p /"_L1 + activeprofile + '/' + ui->comboBoxDisplay->currentText() + "/Active -t bool -s true --create"_L1);
+    runCmd("xfconf-query --channel displays -p /"_L1 + activeprofile + '/' + ui->comboDisplay->currentText() + "/Active -t bool -s true --create"_L1);
 }
 
 void brightness_small::setupbacklight()
@@ -132,42 +125,43 @@ void brightness_small::setupbacklight()
         //get backlight value for currently
         QString backlight=runCmd(u"sudo /usr/lib/mx-tweak/backlight-brightness -g"_s).output;
         int backlight_slider_value = backlight.toInt();
-        ui->horizsliderhardwarebacklight->setValue(backlight_slider_value);
-        ui->horizsliderhardwarebacklight->setToolTip(backlight);
-        ui->backlight_label->setText(backlight);
+        ui->sliderHardwareBacklight->setValue(backlight_slider_value);
+        ui->sliderHardwareBacklight->setToolTip(backlight);
+        ui->labelBacklight->setText(backlight);
         qDebug() << "backlight string is " << backlight;
         qDebug() << " backlight_slider_value is " << backlight_slider_value;
     } else {
-        ui->toolButtonExpandBacklight->hide();
-        ui->horizsliderhardwarebacklight->hide();
-        ui->backlight_label->hide();
-        ui->label_xbacklight->hide();
+        ui->pushExpandBacklight->hide();
+        ui->sliderHardwareBacklight->hide();
+        ui->labelBacklight->hide();
+        ui->labelHardwareBacklight->hide();
     }
 }
 
 void brightness_small::setbacklight()
 {
-    QString backlight = QString::number(ui->horizsliderhardwarebacklight->value());
+    QString backlight = QString::number(ui->sliderHardwareBacklight->value());
     QString cmd = "sudo /usr/lib/mx-tweak/backlight-brightness -s "_L1 + backlight;
-    ui->backlight_label->setText(backlight);
+    ui->labelBacklight->setText(backlight);
     system(cmd.toUtf8());
 }
 
 void brightness_small::setupBrightness()
 {
     //get brightness value for currently shown display
-    QString brightness=runCmd("LANG=C xrandr --verbose | awk '/"_L1 + ui->comboBoxDisplay->currentText() +"/{flag=1;next}/Clones/{flag=0}flag'|grep Brightness|cut -d' ' -f2"_L1).output;
+    QString brightness=runCmd("LANG=C xrandr --verbose | awk '/"_L1 + ui->comboDisplay->currentText()
+        + "/{flag=1;next}/Clones/{flag=0}flag'|grep Brightness|cut -d' ' -f2"_L1).output;
     int brightness_slider_value = static_cast<int>(brightness.toFloat() * 100);
-    ui->horizontalSliderBrightness->setValue(brightness_slider_value);
+    ui->sliderBrightness->setValue(brightness_slider_value);
     qDebug() << "brightness string is " << brightness;
     qDebug() << " brightness_slider_value is " << brightness_slider_value;
-    ui->horizontalSliderBrightness->setToolTip(QString::number(ui->horizontalSliderBrightness->value()));
-    ui->label_brightness_slider->setText(QString::number(ui->horizontalSliderBrightness->value()));
+    ui->sliderBrightness->setToolTip(QString::number(ui->sliderBrightness->value()));
+    ui->labelBrightness->setText(QString::number(ui->sliderBrightness->value()));
 }
 
 void brightness_small::setupGamma()
 {
-    QString gamma = runCmd("/usr/lib/mx-tweak/mx-tweak-lib-randr.sh "_L1 + ui->comboBoxDisplay->currentText() + " gamma"_L1).output;
+    QString gamma = runCmd("/usr/lib/mx-tweak/mx-tweak-lib-randr.sh "_L1 + ui->comboDisplay->currentText() + " gamma"_L1).output;
     gamma=gamma.simplified();
     gamma = gamma.section(':',1,3).simplified();
     double gamma1 = 1.0 / gamma.section(':',0,0).toDouble();
@@ -179,11 +173,11 @@ void brightness_small::setupGamma()
     qDebug() << "gamma is " << g1 << " " << g2 << " " << g3;
 }
 
-void brightness_small::on_horizontalSliderBrightness_valueChanged(int  /*value*/)
+void brightness_small::sliderBrightness_valueChanged(int value)
 {
-    QString slider_value = QString::number(ui->horizontalSliderBrightness->value());
-    ui->horizontalSliderBrightness->setToolTip(slider_value);
-    ui->label_brightness_slider->setText(slider_value);
+    QString slider_value = QString::number(value);
+    ui->sliderBrightness->setToolTip(slider_value);
+    ui->labelBrightness->setText(slider_value);
     if ( brightnessflag ) {
         //setupBrightness();
         //setupGamma();
@@ -195,19 +189,19 @@ void brightness_small::on_horizontalSliderBrightness_valueChanged(int  /*value*/
 void brightness_small::setBrightness()
 {
     QString cmd;
-    double num = ui->horizontalSliderBrightness->value() / 100.0;
+    double num = ui->sliderBrightness->value() / 100.0;
     qDebug() << "num is :" << num;
     QString brightness = QString::number(num, 'G', 5);
     qDebug() << "changed brightness is :" << brightness;
-    cmd = "xrandr --output "_L1 + ui->comboBoxDisplay->currentText() + " --brightness "_L1 + brightness + " --gamma "_L1 + g1 + ':' + g2 + ':' +g3;
+    cmd = "xrandr --output "_L1 + ui->comboDisplay->currentText() + " --brightness "_L1 + brightness + " --gamma "_L1 + g1 + ':' + g2 + ':' +g3;
     system(cmd.toUtf8());
 }
 
-void brightness_small::saveBrightness()
+void brightness_small::pushSave_clicked()
 {
     //save cmd used in user's home file under .config
     //make directory when its not present
-    double num = ui->horizontalSliderBrightness->value() / 100.0;
+    double num = ui->sliderBrightness->value() / 100.0;
     qDebug() << "num is :" << num;
     QString brightness = QString::number(num, 'G', 5);
     QString home_path = QDir::homePath();
@@ -216,10 +210,12 @@ void brightness_small::saveBrightness()
         runCmd("mkdir -p "_L1 + config_file_path);
     }
     //save config in file named after the display
-    runCmd("echo 'xrandr --output "_L1 + ui->comboBoxDisplay->currentText() + " --brightness "_L1 + brightness + " --gamma "_L1 + g1 + ':' + g2 + ':' + g3 + "'>"_L1 + config_file_path + '/' + ui->comboBoxDisplay->currentText());
+    runCmd("echo 'xrandr --output "_L1 + ui->comboDisplay->currentText()
+        + " --brightness "_L1 + brightness + " --gamma "_L1 + g1 + ':' + g2 + ':' + g3
+        + "'>"_L1 + config_file_path + '/' + ui->comboDisplay->currentText());
 }
 
-void brightness_small::on_comboBoxDisplay_currentIndexChanged(int  /*index*/)
+void brightness_small::comboDisplay_currentIndexChanged(int)
 {
     if (brightnessflag) {
         setupBrightness();
@@ -232,12 +228,12 @@ void brightness_small::setupDisplay()
     //populate combobox
     QString displaydata = runCmd(u"LANG=C xrandr |grep -w connected | cut -d' ' -f1"_s).output;
     QStringList displaylist = displaydata.split('\n');
-    ui->comboBoxDisplay->clear();
-    ui->comboBoxDisplay->addItems(displaylist);
+    ui->comboDisplay->clear();
+    ui->comboDisplay->addItems(displaylist);
     brightnessflag = true;
 }
 
-void brightness_small::on_horizsliderhardwarebacklight_actionTriggered(int  /*action*/)
+void brightness_small::sliderHardwareBacklight_actionTriggered(int)
 {
     setbacklight();
 }
@@ -270,26 +266,21 @@ void brightness_small::launchfulldisplaydialog()
     system(cmd.toUtf8());
 }
 
-void brightness_small::on_buttonSave_clicked()
-{
-    saveBrightness();
-}
-
-void brightness_small::on_toolButtonExpandBacklight_clicked()
+void brightness_small::pushExpandBacklight_clicked()
 {
     QString config_file_path = QDir::homePath() + "/.config/MX-Linux/MX-Tweak/expand"_L1;
     //expand toggle
     expand = !expand;
     if (! expand) {
         QFile::remove(config_file_path);
-        ui->label_xbacklight->hide();
-        ui->horizsliderhardwarebacklight->hide();
-        ui->backlight_label->hide();
+        ui->labelHardwareBacklight->hide();
+        ui->sliderHardwareBacklight->hide();
+        ui->labelBacklight->hide();
     } else {
         QFile file(config_file_path);
         file.open(QIODevice::NewOnly);
-        ui->label_xbacklight->show();
-        ui->horizsliderhardwarebacklight->show();
-        ui->backlight_label->show();
+        ui->labelHardwareBacklight->show();
+        ui->sliderHardwareBacklight->show();
+        ui->labelBacklight->show();
     }
 }

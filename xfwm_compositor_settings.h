@@ -2,7 +2,6 @@
 #define XFWM_COMPOSITOR_SETTINGS_H
 
 #include <QDialog>
-#include "defaultlook.h"
 
 namespace Ui {
 class xfwm_compositor_settings;
@@ -18,22 +17,20 @@ public:
 
     void setup();
 
-private slots:
-    void on_ButtonCloseXfwmSettings_clicked();
-    void on_checkBoxDockShadows_clicked();
-    void on_checkBoxFrameShadows_clicked();
-    void on_checkBoxPopupShadows_clicked();
-    void on_checkBoxPreview_clicked();
-    void on_checkBoxRedirect_clicked();
-    void on_checkBoxVsync_clicked();
-    void on_horizontalSliderInactiveWindows_valueChanged(int value);
-    void on_horizontalSliderPopup_valueChanged(int value);
-    void on_horizontalSliderWIndowDecorations_valueChanged(int value);
-    void on_horizontalSliderWindowsMove_valueChanged(int value);
-    void on_horizontalSliderWindowsResize_valueChanged(int value);
-
 private:
     Ui::xfwm_compositor_settings *ui;
+
+    void checkDockShadows_toggled(bool checked);
+    void checkFrameShadows_toggled(bool checked);
+    void checkPopupShadows_toggled(bool checked);
+    void checkPreview_toggled(bool checked);
+    void checkRedirect_toggled(bool checked);
+    void checkVsync_toggled(bool checked);
+    void sliderInactiveWindows_valueChanged(int value);
+    void sliderPopup_valueChanged(int value);
+    void sliderWindowDecorations_valueChanged(int value);
+    void sliderWindowsMove_valueChanged(int value);
+    void sliderWindowsResize_valueChanged(int value);
 };
 
 #endif // XFWM_COMPOSITOR_SETTINGS_H

@@ -30,21 +30,21 @@
         </widget>
        </item>
        <item row="1" column="0" colspan="2">
-        <widget class="QCheckBox" name="checkBoxbuttonlabels">
+        <widget class="QCheckBox" name="checkButtonLabels">
          <property name="text">
           <string>Show button labels</string>
          </property>
         </widget>
        </item>
        <item row="2" column="0" colspan="2">
-        <widget class="QCheckBox" name="checkBoxshowflatbuttons">
+        <widget class="QCheckBox" name="checkShowFlatButtons">
          <property name="text">
           <string>Show flat buttons</string>
          </property>
         </widget>
        </item>
        <item row="3" column="0">
-        <widget class="QCheckBox" name="checkBoxshowhandle">
+        <widget class="QCheckBox" name="checkShowHandle">
          <property name="text">
           <string>Show handle</string>
          </property>
@@ -58,7 +58,7 @@
         </widget>
        </item>
        <item row="4" column="1">
-        <widget class="QComboBox" name="comboBoxsortingorder">
+        <widget class="QComboBox" name="comboSortingOrder">
          <item>
           <property name="text">
            <string>Timestamp</string>
@@ -101,7 +101,7 @@
         </widget>
        </item>
        <item row="7" column="1">
-        <widget class="QComboBox" name="comboBoxwindowgrouping">
+        <widget class="QComboBox" name="comboWindowGrouping">
          <item>
           <property name="text">
            <string>Never</string>
@@ -122,7 +122,7 @@
         </widget>
        </item>
        <item row="8" column="1">
-        <widget class="QComboBox" name="comboBoxmiddleclickaction">
+        <widget class="QComboBox" name="comboMiddleClickAction">
          <item>
           <property name="text">
            <string>Nothing</string>
@@ -141,21 +141,21 @@
         </widget>
        </item>
        <item row="9" column="0" colspan="2">
-        <widget class="QCheckBox" name="checkBoxrestoreminwindows">
+        <widget class="QCheckBox" name="checkRestoreMinWindows">
          <property name="text">
           <string>Restore minimized windows to current workspace</string>
          </property>
         </widget>
        </item>
        <item row="10" column="0" colspan="2">
-        <widget class="QCheckBox" name="checkBoxdrawframes">
+        <widget class="QCheckBox" name="checkDrawFrames">
          <property name="text">
           <string>Draw window frame when hovering over a button</string>
          </property>
         </widget>
        </item>
        <item row="11" column="0" colspan="2">
-        <widget class="QCheckBox" name="checkBoxswitchwindowsmousewheel">
+        <widget class="QCheckBox" name="checkSwitchWindowsMouseWheel">
          <property name="text">
           <string>Switch windows using the mouse wheel</string>
          </property>
@@ -169,21 +169,21 @@
         </widget>
        </item>
        <item row="14" column="0" colspan="2">
-        <widget class="QCheckBox" name="checkBoxwindowsallworkspaces">
+        <widget class="QCheckBox" name="checkWindowsAllWorkspaces">
          <property name="text">
           <string>Show windows from all workspaces or viewports</string>
          </property>
         </widget>
        </item>
        <item row="15" column="0" colspan="2">
-        <widget class="QCheckBox" name="checkBoxonlyminwindows">
+        <widget class="QCheckBox" name="checkOnlyMinWindows">
          <property name="text">
           <string>Show only minimized windows</string>
          </property>
         </widget>
        </item>
        <item row="16" column="0" colspan="2">
-        <widget class="QCheckBox" name="checkBoxwindowsallmonitors">
+        <widget class="QCheckBox" name="checkWindowsAllMonitors">
          <property name="text">
           <string>Show windows from all monitors</string>
          </property>
@@ -233,7 +233,7 @@
         </spacer>
        </item>
        <item row="0" column="1">
-        <widget class="QPushButton" name="pushButton">
+        <widget class="QPushButton" name="pushClose">
          <property name="text">
           <string>Close</string>
          </property>

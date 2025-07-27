@@ -10,6 +10,7 @@ xfwm_compositor_settings::xfwm_compositor_settings(QWidget *parent) :
 {
     ui->setupUi(this);
     setWindowFlags(Qt::Window); // for the close, min and max buttons
+    connect(ui->pushClose, &QPushButton::clicked, this, &xfwm_compositor_settings::close);
     setup();
 }
 
@@ -27,60 +28,71 @@ void xfwm_compositor_settings::setup()
 
     QString value;
     value = runCmd(u"xfconf-query -c xfwm4 -p /general/unredirect_overlays"_s).output;
-    ui->checkBoxRedirect->setChecked(value == "true"_L1);
+    ui->checkRedirect->setChecked(value == "true"_L1);
 
     value = runCmd(u"xfconf-query -c xfwm4 -p /general/sync_to_vblank"_s).output;
-    ui->checkBoxVsync->setChecked(value == "true"_L1);
+    ui->checkVsync->setChecked(value == "true"_L1);
 
     value = runCmd(u"xfconf-query -c xfwm4 -p /general/cycle_preview"_s).output;
-    ui->checkBoxPreview->setChecked(value == "true"_L1);
+    ui->checkPreview->setChecked(value == "true"_L1);
 
     value = runCmd(u"xfconf-query -c xfwm4 -p /general/show_popup_shadow"_s).output;
-    ui->checkBoxPopupShadows->setChecked(value == "true"_L1);
+    ui->checkPopupShadows->setChecked(value == "true"_L1);
 
     value = runCmd(u"xfconf-query -c xfwm4 -p /general/show_dock_shadow"_s).output;
-    ui->checkBoxDockShadows->setChecked(value == "true"_L1);
+    ui->checkDockShadows->setChecked(value == "true"_L1);
 
     value = runCmd(u"xfconf-query -c xfwm4 -p /general/show_frame_shadow"_s).output;
-    ui->checkBoxFrameShadows->setChecked(value == "true"_L1);
+    ui->checkFrameShadows->setChecked(value == "true"_L1);
 
     value = runCmd(u"xfconf-query -c xfwm4 -p /general/frame_opacity"_s).output;
-    ui->horizontalSliderWIndowDecorations->setValue(value.toInt());
-    ui->horizontalSliderWIndowDecorations->setToolTip(value);
+    ui->sliderWindowDecorations->setValue(value.toInt());
+    ui->sliderWindowDecorations->setToolTip(value);
 
     value = runCmd(u"xfconf-query -c xfwm4 -p /general/inactive_opacity"_s).output;
-    ui->horizontalSliderInactiveWindows->setValue(value.toInt());
-    ui->horizontalSliderInactiveWindows->setToolTip(value);
+    ui->sliderInactiveWindows->setValue(value.toInt());
+    ui->sliderInactiveWindows->setToolTip(value);
 
     value = runCmd(u"xfconf-query -c xfwm4 -p /general/move_opacity"_s).output;
-    ui->horizontalSliderWindowsMove->setValue(value.toInt());
-    ui->horizontalSliderWindowsMove->setToolTip(value);
+    ui->sliderWindowsMove->setValue(value.toInt());
+    ui->sliderWindowsMove->setToolTip(value);
 
     value = runCmd(u"xfconf-query -c xfwm4 -p /general/resize_opacity"_s).output;
-    ui->horizontalSliderWindowsResize->setValue(value.toInt());
-    ui->horizontalSliderWindowsResize->setToolTip(value);
+    ui->sliderWindowsResize->setValue(value.toInt());
+    ui->sliderWindowsResize->setToolTip(value);
 
     value = runCmd(u"xfconf-query -c xfwm4 -p /general/popup_opacity"_s).output;
-    ui->horizontalSliderPopup->setValue(value.toInt());
-    ui->horizontalSliderPopup->setToolTip(value);
+    ui->sliderPopup->setValue(value.toInt());
+    ui->sliderPopup->setToolTip(value);
+
+    connect(ui->checkRedirect, &QCheckBox::toggled, this, &xfwm_compositor_settings::checkRedirect_toggled);
+    connect(ui->checkVsync, &QCheckBox::toggled, this, &xfwm_compositor_settings::checkVsync_toggled);
+    connect(ui->checkPreview, &QCheckBox::toggled, this, &xfwm_compositor_settings::checkPreview_toggled);
+    connect(ui->checkPopupShadows, &QCheckBox::toggled, this, &xfwm_compositor_settings::checkPopupShadows_toggled);
+    connect(ui->checkDockShadows, &QCheckBox::toggled, this, &xfwm_compositor_settings::checkDockShadows_toggled);
+    connect(ui->checkFrameShadows, &QCheckBox::toggled, this, &xfwm_compositor_settings::checkFrameShadows_toggled);
+    connect(ui->sliderWindowDecorations, &QSlider::valueChanged, this, &xfwm_compositor_settings::sliderWindowDecorations_valueChanged);
+    connect(ui->sliderInactiveWindows, &QSlider::valueChanged, this, &xfwm_compositor_settings::sliderInactiveWindows_valueChanged);
+    connect(ui->sliderWindowsMove, &QSlider::valueChanged, this, &xfwm_compositor_settings::sliderWindowsMove_valueChanged);
+    connect(ui->sliderWindowsResize, &QSlider::valueChanged, this, &xfwm_compositor_settings::sliderWindowsResize_valueChanged);
+    connect(ui->sliderPopup, &QSlider::valueChanged, this, &xfwm_compositor_settings::sliderPopup_valueChanged);
 }
 
-void xfwm_compositor_settings::on_checkBoxRedirect_clicked()
+void xfwm_compositor_settings::checkRedirect_toggled(bool checked)
 {
     QString cmd;
-    if (ui->checkBoxRedirect->isChecked()) {
+    if (checked) {
         cmd = u"xfconf-query -c xfwm4 -p /general/unredirect_overlays -s true"_s;
-
     } else {
         cmd = u"xfconf-query -c xfwm4 -p /general/unredirect_overlays -s false"_s;
     }
     system(cmd.toUtf8());
 }
 
-void xfwm_compositor_settings::on_checkBoxVsync_clicked()
+void xfwm_compositor_settings::checkVsync_toggled(bool checked)
 {
     QString cmd;
-    if (ui->checkBoxVsync->isChecked()) {
+    if (checked) {
         cmd = u"xfconf-query -c xfwm4 -p /general/sync_to_vblank -s true"_s;
     } else {
         cmd = u"xfconf-query -c xfwm4 -p /general/sync_to_vblank -s false"_s;
@@ -88,10 +100,10 @@ void xfwm_compositor_settings::on_checkBoxVsync_clicked()
     system(cmd.toUtf8());
 }
 
-void xfwm_compositor_settings::on_checkBoxPreview_clicked()
+void xfwm_compositor_settings::checkPreview_toggled(bool checked)
 {
     QString cmd;
-    if (ui->checkBoxPreview->isChecked()) {
+    if (checked) {
         cmd = u"xfconf-query -c xfwm4 -p /general/cycle_preview -s true"_s;
     } else {
         cmd = u"xfconf-query -c xfwm4 -p /general/cycle_preview -s false"_s;
@@ -99,10 +111,10 @@ void xfwm_compositor_settings::on_checkBoxPreview_clicked()
     system(cmd.toUtf8());
 }
 
-void xfwm_compositor_settings::on_checkBoxPopupShadows_clicked()
+void xfwm_compositor_settings::checkPopupShadows_toggled(bool checked)
 {
     QString cmd;
-    if (ui->checkBoxPopupShadows->isChecked()) {
+    if (checked) {
         cmd = u"xfconf-query -c xfwm4 -p /general/show_popup_shadow -s true"_s;
     } else {
         cmd = u"xfconf-query -c xfwm4 -p /general/show_popup_shadow -s false"_s;
@@ -110,10 +122,10 @@ void xfwm_compositor_settings::on_checkBoxPopupShadows_clicked()
     system(cmd.toUtf8());
 }
 
-void xfwm_compositor_settings::on_checkBoxDockShadows_clicked()
+void xfwm_compositor_settings::checkDockShadows_toggled(bool checked)
 {
     QString cmd;
-    if (ui->checkBoxDockShadows->isChecked()) {
+    if (checked) {
         cmd = u"xfconf-query -c xfwm4 -p /general/show_dock_shadow -s true"_s;
     } else {
         cmd = u"xfconf-query -c xfwm4 -p /general/show_dock_shadow -s false"_s;
@@ -121,63 +133,59 @@ void xfwm_compositor_settings::on_checkBoxDockShadows_clicked()
     system(cmd.toUtf8());
 }
 
-void xfwm_compositor_settings::on_checkBoxFrameShadows_clicked()
+void xfwm_compositor_settings::checkFrameShadows_toggled(bool checked)
 {
     QString cmd;
-    if (ui->checkBoxFrameShadows->isChecked()) {
+    if (checked) {
         cmd = u"xfconf-query -c xfwm4 -p /general/show_frame_shadow -s true"_s;
     } else {
         cmd = u"xfconf-query -c xfwm4 -p /general/show_frame_shadow -s false"_s;
     }
+    system(cmd.toUtf8());
 }
 
-void xfwm_compositor_settings::on_horizontalSliderWIndowDecorations_valueChanged(int value)
+void xfwm_compositor_settings::sliderWindowDecorations_valueChanged(int value)
 {
     QString param = QString::number(value);
     QString cmd;
-    ui->horizontalSliderWIndowDecorations->setToolTip(param);
+    ui->sliderWindowDecorations->setToolTip(param);
 
     cmd = "xfconf-query -c xfwm4 -p /general/frame_opacity -s "_L1 + param;
     system(cmd.toUtf8());
 }
 
-void xfwm_compositor_settings::on_horizontalSliderInactiveWindows_valueChanged(int value)
+void xfwm_compositor_settings::sliderInactiveWindows_valueChanged(int value)
 {
     QString param = QString::number(value);
     QString cmd;
-    ui->horizontalSliderInactiveWindows->setToolTip(param);
+    ui->sliderInactiveWindows->setToolTip(param);
     cmd = "xfconf-query -c xfwm4 -p /general/inactive_opacity -s "_L1 + param;
     system(cmd.toUtf8());
 }
 
-void xfwm_compositor_settings::on_horizontalSliderWindowsMove_valueChanged(int value)
+void xfwm_compositor_settings::sliderWindowsMove_valueChanged(int value)
 {
     QString param = QString::number(value);
     QString cmd;
-    ui->horizontalSliderWindowsMove->setToolTip(param);
+    ui->sliderWindowsMove->setToolTip(param);
     cmd = "xfconf-query -c xfwm4 -p /general/move_opacity -s "_L1 + param;
     system(cmd.toUtf8());
 }
 
-void xfwm_compositor_settings::on_horizontalSliderWindowsResize_valueChanged(int value)
+void xfwm_compositor_settings::sliderWindowsResize_valueChanged(int value)
 {
     QString param = QString::number(value);
     QString cmd;
-    ui->horizontalSliderWindowsResize->setToolTip(param);
+    ui->sliderWindowsResize->setToolTip(param);
     cmd = "xfconf-query -c xfwm4 -p /general/resize_opacity -s "_L1 + param;
     system(cmd.toUtf8());
 }
 
-void xfwm_compositor_settings::on_horizontalSliderPopup_valueChanged(int value)
+void xfwm_compositor_settings::sliderPopup_valueChanged(int value)
 {
     QString param = QString::number(value);
     QString cmd;
-    ui->horizontalSliderWIndowDecorations->setToolTip(param);
+    ui->sliderWindowDecorations->setToolTip(param);
     cmd = "xfconf-query -c xfwm4 -p /general/popup_opacity -s "_L1 + param;
     system(cmd.toUtf8());
-}
-
-void xfwm_compositor_settings::on_ButtonCloseXfwmSettings_clicked()
-{
-    close();
 }
