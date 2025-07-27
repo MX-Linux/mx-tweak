@@ -5,12 +5,17 @@
 #-------------------------------------------------
 
 QT       += core gui widgets
-CONFIG   += c++1z
+CONFIG   += c++20
+DEFINES += QT_DISABLE_DEPRECATED_UP_TO=0x060800
 
 TARGET = mx-tweak
 TEMPLATE = app
-
-DEFINES += QT_DEPRECATED_WARNINGS
+CONFIG += debug_and_release warn_on strict_c++
+CONFIG(release, debug|release) {
+    DEFINES += NDEBUG
+    QMAKE_CXXFLAGS += -flto=auto
+    QMAKE_LFLAGS += -flto=auto
+}
 
 SOURCES += main.cpp\
     about.cpp \

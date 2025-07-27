@@ -9,6 +9,8 @@
 #include "remove_user_theme_set.h"
 #include "ui_remove_user_theme_set.h"
 
+using namespace Qt::Literals::StringLiterals;
+
 remove_user_theme_set::remove_user_theme_set(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::remove_user_theme_set)
@@ -32,7 +34,7 @@ void remove_user_theme_set::setupThemeSelector()
     //build theme list
     ui->comboBoxThemes->clear();
     QStringList theme_list;
-    QStringList filter(QStringLiteral("*.tweak"));
+    QStringList filter(u"*.tweak"_s);
     bool xsettings_gtk_theme_present = false;
     bool icontheme_present = false;
     bool xfwm4_theme_present = false;
@@ -40,26 +42,26 @@ void remove_user_theme_set::setupThemeSelector()
     //add user entries in ~/.local/share/mx-tweak-data
 
     QString home_path = QDir::homePath();
-    QDirIterator it2(home_path + "/.local/share/mx-tweak-data", filter, QDir::Files, QDirIterator::Subdirectories);
+    QDirIterator it2(home_path + "/.local/share/mx-tweak-data"_L1, filter, QDir::Files, QDirIterator::Subdirectories);
     while (it2.hasNext()) {
         QFileInfo file_info(it2.next());
         QString filename = file_info.absoluteFilePath();
-        QString name = runCmd("cat '" + filename + "'|grep Name=").output.section(QStringLiteral("="),1,1);
+        QString name = runCmd("cat '"_L1 + filename + "'|grep Name="_L1).output.section('=',1,1);
 
-        QString xsettings_gtk_theme = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xsettings_gtk_theme=").output.section(QStringLiteral("="),1,1);
+        QString xsettings_gtk_theme = runCmd("cat '"_L1 + file_info.absoluteFilePath() + "' |grep xsettings_gtk_theme="_L1).output.section('=',1,1);
         qDebug() << "xsettings_gtk_theme = " << xsettings_gtk_theme;
-        QString xsettings_icon_theme = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xsettings_icon_theme=").output.section(QStringLiteral("="),1,1);
+        QString xsettings_icon_theme = runCmd("cat '"_L1 + file_info.absoluteFilePath() + "' |grep xsettings_icon_theme="_L1).output.section('=',1,1);
         qDebug() << "xsettings_icon_theme = " << xsettings_icon_theme;
-        QString xfwm4_window_decorations = runCmd("cat '" + file_info.absoluteFilePath() + "' |grep xfwm4_window_decorations=").output.section(QStringLiteral("="),1,1);
+        QString xfwm4_window_decorations = runCmd("cat '"_L1 + file_info.absoluteFilePath() + "' |grep xfwm4_window_decorations="_L1).output.section('=',1,1);
         qDebug() << "xfwm4_window_decorations = " << xfwm4_window_decorations;
 
         //check theme existence, only list if all 3 elements present
-        QFileInfo xsettings_theme("/usr/share/themes/" + xsettings_gtk_theme);
-        QFileInfo xfwm4_theme("/usr/share/themes/" + xfwm4_window_decorations);
-        QFileInfo icon_theme("/usr/share/icons/" + xsettings_icon_theme);
-        QFileInfo xsettings_theme_home(home_path + "/.themes/" + xsettings_gtk_theme);
-        QFileInfo xfwm4_theme_home("" + home_path + "/.themes/" + xfwm4_window_decorations);
-        QFileInfo icon_theme_home("" + home_path + "/.icons/" + xsettings_icon_theme);
+        QFileInfo xsettings_theme("/usr/share/themes/"_L1 + xsettings_gtk_theme);
+        QFileInfo xfwm4_theme("/usr/share/themes/"_L1 + xfwm4_window_decorations);
+        QFileInfo icon_theme("/usr/share/icons/"_L1 + xsettings_icon_theme);
+        QFileInfo xsettings_theme_home(home_path + "/.themes/"_L1 + xsettings_gtk_theme);
+        QFileInfo xfwm4_theme_home(home_path + "/.themes/"_L1 + xfwm4_window_decorations);
+        QFileInfo icon_theme_home(home_path + "/.icons/"_L1 + xsettings_icon_theme);
         qDebug() << "xsettings_theme_home path" << xsettings_theme_home.absoluteFilePath();
 
         if (xsettings_theme.exists() || xsettings_theme_home.exists() ) {
@@ -83,7 +85,7 @@ void remove_user_theme_set::setupThemeSelector()
         }
     }
 
-    theme_list.insert(0, QStringLiteral("Select User Theme Set to Remove"));
+    theme_list.insert(0, u"Select User Theme Set to Remove"_s);
     ui->comboBoxThemes->addItems(theme_list);
     ui->comboBoxThemes->setCurrentIndex(0);
 

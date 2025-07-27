@@ -193,10 +193,10 @@ public:
     void setmissingxfconfvariables(const QString &activeprofile, const QString &resolution);
     void fluxboxchangeinitvariable(const QString &initline, const QString &value) const;
     void fluxboxchangedock() const;
-    void changecomputername(QString hostname);
-    bool validatecomputername(QString hostname);
-    void changedisplaymanager(QString dm);
-    void kvm_early_switch(QString action, QString file);
+    void changecomputername(const QString &hostname);
+    bool validatecomputername(const QString &hostname);
+    void changedisplaymanager(const QString &dm);
+    void kvm_early_switch(const QString &action, const QString &file);
 
 private slots:
     static void on_buttonCancel_clicked();
@@ -244,16 +244,16 @@ private slots:
     void on_checkboxfluxresetmenu_clicked();
     void on_checkboxfluxtoolbarautohide_clicked();
     void on_checkboxplasmaresetdock_clicked();
-    void on_comboBoxCompositor_currentIndexChanged(const int &arg1);
+    void on_comboBoxCompositor_currentIndexChanged(const int);
     void on_comboBoxDisplay_currentIndexChanged(int index);
     void on_comboBoxPlasmaSystrayIcons_currentIndexChanged(int index);
     void on_comboBoxfluxIcons_currentIndexChanged(int index);
     void on_comboBoxfluxcaptions_currentIndexChanged(int index);
-    void on_comboBoxvblank_activated(const int &arg1);
+    void on_comboBoxvblank_activated(int);
     void on_comboPlasmaPanelLocation_currentIndexChanged(int index);
-    void on_comboTheme_activated(const int &arg1);
-    void on_comboboxHorzPostition_currentIndexChanged(const int &arg1);
-    void on_comboboxVertpostition_currentIndexChanged(const int &arg1);
+    void on_comboTheme_activated(const int arg1);
+    void on_comboboxHorzPostition_currentIndexChanged(const int arg1);
+    void on_comboboxVertpostition_currentIndexChanged(const int arg1);
     void on_combofluxslitlocation_currentIndexChanged(int index);
     void on_combofluxtoolbarlocatoin_currentIndexChanged(int index);
     void on_horizontalSliderBrightness_valueChanged(int value);
@@ -313,19 +313,19 @@ private slots:
 
     void on_listWidgetCursorThemes_currentTextChanged(const QString &currentText);
 
-    void on_spinBoxScreenBlankingTimeout_valueChanged(int arg1);
+    void on_spinBoxScreenBlankingTimeout_valueChanged(int);
 
     void on_toolButtonSuperFileBrowser_clicked();
 
     void on_pushButtonSuperKeyApply_clicked();
 
-    void on_lineEditSuperCommand_textChanged(const QString &arg1);
+    void on_lineEditSuperCommand_textChanged(const QString &);
 
     void on_checkBoxLiqKernelUpdates_clicked();
 
     void on_checkBoxDebianKernelUpdates_clicked();
 
-    void on_spinBoxPointerSize_valueChanged(int arg1);
+    void on_spinBoxPointerSize_valueChanged(int);
 
     void on_checkBoxPlasmaDiscoverUpdater_clicked();
 
@@ -338,7 +338,7 @@ private slots:
     void on_checkBoxKVMVirtLoad_clicked();
 
 
-    void on_checkBoxFluxboxLegacyStyles_stateChanged(int arg1);
+    void on_checkBoxFluxboxLegacyStyles_stateChanged(int);
 
     void saveSettings();
 
