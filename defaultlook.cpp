@@ -2765,13 +2765,10 @@ void defaultlook::on_checkBoxSingleClick_clicked()
 {
     ui->ButtonApplyMiscDefualts->setEnabled(true);
 }
-
 void defaultlook::on_checkBoxThunarSingleClick_clicked()
 {
     ui->ButtonApplyMiscDefualts->setEnabled(true);
 }
-
-
 void defaultlook::on_checkboxNoEllipse_clicked()
 {
     ui->ButtonApplyMiscDefualts->setEnabled(true);
@@ -3773,14 +3770,6 @@ void defaultlook::writeTaskmanagerConfig(const QString &key, const QString &valu
     runCmd("kwriteconfig5 --file plasma-org.kde.plasma.desktop-appletsrc --group Containments --group "_L1 + ID + " --group Applets --group "_L1 + Applet + " --key "_L1 + key + ' ' + value);
 }
 
-void defaultlook::on_comboBoxPlasmaSystrayIcons_currentIndexChanged(int  /*index*/)
-{
-    if (setupflag){
-    ui->ButtonApplyPlasma->setEnabled(true);
-    plasmasystrayiconsizeflag = true;
-    }
-}
-
 void defaultlook::populatethemelists(const QString &value)
 {
     themeflag = false;
@@ -4346,9 +4335,6 @@ QString defaultlook::get_tasklistid(){
     return tasklistID;
 
 }
-
-
-
 
 void defaultlook::on_comboBoxTasklistPlugin_currentIndexChanged(int /*index*/)
 {

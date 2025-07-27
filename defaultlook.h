@@ -246,7 +246,6 @@ private slots:
     void on_checkboxplasmaresetdock_clicked();
     void on_comboBoxCompositor_currentIndexChanged(const int);
     void on_comboBoxDisplay_currentIndexChanged(int index);
-    void on_comboBoxPlasmaSystrayIcons_currentIndexChanged(int index);
     void on_comboBoxfluxIcons_currentIndexChanged(int index);
     void on_comboBoxfluxcaptions_currentIndexChanged(int index);
     void on_comboBoxvblank_activated(int);
