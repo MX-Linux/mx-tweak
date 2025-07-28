@@ -199,16 +199,13 @@ public:
     void kvm_early_switch(const QString &action, const QString &file);
 
 private slots:
-    static void on_buttonCancel_clicked();
     static void on_buttonConfigureXfwm_clicked();
-    static void on_buttonHelp_clicked();
     static void on_pushButtonDocklikeSetttings_clicked();
     static void on_pushButtontasklist_clicked();
     void on_ApplyFluxboxResets_clicked();
     void on_ButtonApplyEtc_clicked();
     void on_ButtonApplyMiscDefualts_clicked();
     void on_ButtonApplyPlasma_clicked();
-    void on_buttonAbout_clicked();
     void on_buttonApplyDisplayScaling_clicked();
     void on_buttonApply_clicked();
     void on_buttonCompositorApply_clicked();
@@ -270,10 +267,6 @@ private slots:
     void on_radioSudoUser_clicked();
     void on_spinBoxFluxToolbarHeight_valueChanged(int arg1);
     void on_spinBoxFluxToolbarWidth_valueChanged(int arg1);
-    void on_tabWidget_currentChanged(int index);
-    void on_toolButtonXFCEAppearance_clicked();
-    void on_toolButtonXFCEWMsettings_clicked();
-    void on_toolButtonXFCEpanelSettings_clicked();
     void saveBrightness();
 
     void on_checkBoxFileDialogActionButtonsPosition_clicked();
@@ -344,6 +337,13 @@ private slots:
     void loadSettings();
 private:
     Ui::defaultlook *ui;
+    void pushAbout_clicked();
+    void pushHelp_clicked();
+
+    void tabWidget_currentChanged(int index);
+    void pushXFCEAppearance_clicked();
+    void pushXFCEWMsettings_clicked();
+    void pushXFCEPanelSettings_clicked();
 };
 
 #endif // DEFAULTLOOK_H

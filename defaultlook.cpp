@@ -78,6 +78,11 @@ defaultlook::defaultlook(QWidget *parent, const QStringList &args) :
         verbose = true;
     }
 
+    connect(ui->pushAbout, &QPushButton::clicked, this, &defaultlook::pushAbout_clicked);
+    connect(ui->pushHelp, &QPushButton::clicked, this, &defaultlook::pushHelp_clicked);
+    connect(ui->pushClose, &QPushButton::clicked, this, &defaultlook::close);
+    connect(ui->tabWidget, &QTabWidget::currentChanged, this, &defaultlook::tabWidget_currentChanged);
+
     setup();
 }
 
@@ -123,9 +128,9 @@ void defaultlook::setup()
     ui->checkBoxFluxboxLegacyStyles->hide();
 
     if (isXfce) {
-        ui->toolButtonXFCEpanelSettings->setIcon(QIcon::fromTheme(u"org.xfce.panel"_s));
-        ui->toolButtonXFCEAppearance->setIcon(QIcon::fromTheme(u"org.xfce.settings.appearance"_s));
-        ui->toolButtonXFCEWMsettings->setIcon(QIcon::fromTheme(u"org.xfce.xfwm4"_s));
+        ui->pushXFCEPanelSettings->setIcon(QIcon::fromTheme(u"org.xfce.panel"_s));
+        ui->pushXFCEAppearance->setIcon(QIcon::fromTheme(u"org.xfce.settings.appearance"_s));
+        ui->pushXFCEWMsettings->setIcon(QIcon::fromTheme(u"org.xfce.xfwm4"_s));
         whichpanel();
         message_flag = false;
         //setup theme tab
@@ -133,7 +138,9 @@ void defaultlook::setup()
         ui->buttonThemeUndo->hide();
         ui->buttonThemeUndo->setEnabled(false);
         //set first tab as default
-        if (!displayflag && !themetabflag && !othertabflag)ui->tabWidget->setCurrentIndex(Tab::Panel);
+        if (!displayflag && !themetabflag && !othertabflag) {
+            ui->tabWidget->setCurrentIndex(Tab::Panel);
+        }
         ui->tabWidget->removeTab(Tab::Plasma);
         ui->tabWidget->removeTab(Tab::Fluxbox);
         //setup panel tab
@@ -153,6 +160,9 @@ void defaultlook::setup()
             setupSuperKey();
         }
 
+        connect(ui->pushXFCEPanelSettings, &QPushButton::clicked, this, &defaultlook::pushXFCEPanelSettings_clicked);
+        connect(ui->pushXFCEAppearance, &QPushButton::clicked, this, &defaultlook::pushXFCEAppearance_clicked);
+        connect(ui->pushXFCEWMsettings, &QPushButton::clicked, this, &defaultlook::pushXFCEWMsettings_clicked);
     }
 
     //setup fluxbox
@@ -171,10 +181,12 @@ void defaultlook::setup()
         //ui->listWidgeticons->hide();
         //ui->label_28->hide();
         //ui->label_30->hide();
-        ui->toolButtonXFCEAppearance->hide();
-        ui->toolButtonXFCEWMsettings->hide();
-        ui->toolButtonXFCEpanelSettings->hide();
-        if (!themetabflag && !othertabflag) ui->tabWidget->setCurrentIndex(Tab::Fluxbox);
+        ui->pushXFCEAppearance->hide();
+        ui->pushXFCEWMsettings->hide();
+        ui->pushXFCEPanelSettings->hide();
+        if (!themetabflag && !othertabflag) {
+            ui->tabWidget->setCurrentIndex(Tab::Fluxbox);
+        }
         ui->tabWidget->removeTab(Tab::Superkey);
         ui->tabWidget->removeTab(Tab::Plasma);
         ui->tabWidget->removeTab(Tab::Config);
@@ -198,10 +210,12 @@ void defaultlook::setup()
         ui->buttonThemeUndo->hide();
         ui->pushButtonPreview->hide();
         ui->pushButtonRemoveUserThemeSet->hide();
-        ui->toolButtonXFCEAppearance->hide();
-        ui->toolButtonXFCEWMsettings->hide();
-        ui->toolButtonXFCEpanelSettings->hide();
-        if (!themetabflag && !othertabflag) ui->tabWidget->setCurrentIndex(Tab::Plasma);
+        ui->pushXFCEAppearance->hide();
+        ui->pushXFCEWMsettings->hide();
+        ui->pushXFCEPanelSettings->hide();
+        if (!themetabflag && !othertabflag) {
+            ui->tabWidget->setCurrentIndex(Tab::Plasma);
+        }
         ui->tabWidget->removeTab(Tab::Superkey);
         ui->tabWidget->removeTab(Tab::Fluxbox);
         ui->tabWidget->removeTab(Tab::Config);
@@ -221,12 +235,13 @@ void defaultlook::setup()
         ui->label_5->hide();
         ui->label_6->hide();
         ui->label_7->hide();
-        ui->toolButtonXFCEAppearance->hide();
-        ui->toolButtonXFCEWMsettings->hide();
-        ui->toolButtonXFCEpanelSettings->hide();
+        ui->pushXFCEAppearance->hide();
+        ui->pushXFCEWMsettings->hide();
+        ui->pushXFCEPanelSettings->hide();
         ui->tabWidget->setCurrentIndex(Tab::Others);
-        for (int i = 6; i >= 0; --i)
+        for (int i = 6; i >= 0; --i) {
             ui->tabWidget->removeTab(i);
+        }
         //setup other tab;
         setupEtc();
     }
@@ -668,13 +683,7 @@ void defaultlook::on_buttonApply_clicked()
     }
 }
 
-
-void defaultlook::on_buttonCancel_clicked()
-{
-    qApp->quit();
-}
-
-void defaultlook::on_buttonAbout_clicked()
+void defaultlook::pushAbout_clicked()
 {
     this->hide();
     displayAboutMsgBox(tr("About MX Tweak"),
@@ -687,7 +696,7 @@ void defaultlook::on_buttonAbout_clicked()
     this->show();
 }
 
-void defaultlook::on_buttonHelp_clicked()
+void defaultlook::pushHelp_clicked()
 {
     QLocale locale;
     QString lang = locale.bcp47Name();
@@ -972,7 +981,7 @@ void defaultlook::message2()
                              tr("Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)"));
 }
 
-void defaultlook::on_toolButtonXFCEpanelSettings_clicked()
+void defaultlook::pushXFCEPanelSettings_clicked()
 {
     this->hide();
     system("xfce4-panel --preferences");
@@ -1001,14 +1010,14 @@ void defaultlook::on_toolButtonXFCEpanelSettings_clicked()
     setuppanel();
 }
 
-void defaultlook::on_toolButtonXFCEAppearance_clicked()
+void defaultlook::pushXFCEAppearance_clicked()
 {
     this->hide();
     system("xfce4-appearance-settings");
     this->show();
 }
 
-void defaultlook::on_toolButtonXFCEWMsettings_clicked()
+void defaultlook::pushXFCEWMsettings_clicked()
 {
     this->hide();
     system("xfwm4-settings");
@@ -4158,10 +4167,10 @@ void defaultlook::on_listWidgetCursorThemes_currentTextChanged(const QString &cu
 }
 
 
-void defaultlook::on_tabWidget_currentChanged(int /*index*/)
+void defaultlook::tabWidget_currentChanged(int index)
 {
     if (!displaysetupflag) {
-        if (ui->tabWidget->currentIndex() == Tab::Display) {
+        if (index == Tab::Display) {
             setupDisplay();
             displaysetupflag = true;
         }

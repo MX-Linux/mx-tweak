@@ -102,7 +102,7 @@
       </spacer>
      </item>
      <item row="0" column="0">
-      <widget class="QPushButton" name="buttonAbout">
+      <widget class="QPushButton" name="pushAbout">
        <property name="text">
         <string>About</string>
        </property>
@@ -112,7 +112,7 @@
       </widget>
      </item>
      <item row="0" column="1">
-      <widget class="QPushButton" name="buttonHelp">
+      <widget class="QPushButton" name="pushHelp">
        <property name="text">
         <string>Help</string>
        </property>
@@ -122,7 +122,7 @@
       </widget>
      </item>
      <item row="0" column="7">
-      <widget class="QPushButton" name="buttonCancel">
+      <widget class="QPushButton" name="pushClose">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -157,7 +157,7 @@
       <enum>QLayout::SizeConstraint::SetNoConstraint</enum>
      </property>
      <item>
-      <widget class="QToolButton" name="toolButtonXFCEpanelSettings">
+      <widget class="QToolButton" name="pushXFCEPanelSettings">
        <property name="toolTip">
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the panel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
@@ -187,7 +187,7 @@
       </spacer>
      </item>
      <item>
-      <widget class="QToolButton" name="toolButtonXFCEWMsettings">
+      <widget class="QToolButton" name="pushXFCEWMsettings">
        <property name="toolTip">
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configure window behavior and shortcuts&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
@@ -220,7 +220,7 @@
       </spacer>
      </item>
      <item>
-      <widget class="QToolButton" name="toolButtonXFCEAppearance">
+      <widget class="QToolButton" name="pushXFCEAppearance">
        <property name="toolTip">
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the look of your desktop&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
