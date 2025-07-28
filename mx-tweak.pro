@@ -20,6 +20,11 @@ CONFIG(release, debug|release) {
 SOURCES += main.cpp\
     about.cpp \
         defaultlook.cpp \
+    base_manager.cpp \
+    desktop_detector.cpp \
+    panel_manager.cpp \
+    theme_manager.cpp \
+    compositor_manager.cpp \
     tweak_plasma.cpp \
     xfwm_compositor_settings.cpp \
     window_buttons.cpp \
@@ -30,6 +35,11 @@ SOURCES += main.cpp\
 HEADERS  += defaultlook.h \
     about.h \
     cmd.h \
+    base_manager.h \
+    desktop_detector.h \
+    panel_manager.h \
+    theme_manager.h \
+    compositor_manager.h \
     tweak_plasma.h \
     version.h \
     xfwm_compositor_settings.h \
