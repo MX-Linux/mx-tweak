@@ -17,7 +17,19 @@ public:
 
 private:
     Ui::defaultlook *ui;
+
     bool verbose;
+    QString panelID;
+    QString taskManagerID;
+    struct {
+        bool placement : 1;
+        bool workspaces : 1;
+        bool singleClick : 1;
+        bool reset : 1;
+        bool sysTrayIconSize : 1;
+        bool autoStartDiscover : 1;
+    } flags = {};
+
     void pushApplyPlasma_clicked();
     void comboPlasmaPanelLocation_currentIndexChanged(int);
     void checkPlasmaSingleClick_toggled(bool);
@@ -25,15 +37,6 @@ private:
     void checkPlasmaResetDock_toggled(bool);
     void checkPlasmaDiscoverUpdater_toggled(bool);
 
-public:
-    QString plasmaPanelId;
-    QString plasmataskmanagerID;
-    bool plasmaplacementflag = false;
-    bool plasmaworkspacesflag = false;
-    bool plasmasingleclickflag = false;
-    bool plasmaresetflag = false;
-    bool plasmasystrayiconsizeflag = false;
-    bool plasmadisoverautostartflag = false;
     QString readPlasmaPanelConfig(const QString &Key) const;
     QString readTaskmanagerConfig(const QString &Key) const;
     void writePlasmaPanelConfig(const QString &key, const QString &value) const;

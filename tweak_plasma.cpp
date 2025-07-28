@@ -23,7 +23,7 @@ void TweakPlasma::setup()
 {
     QString home_path = QDir::homePath();
     //get panel ID
-    plasmaPanelId = runCmd(u"grep --max-count 1 -B 8 panel $HOME/.config/plasma-org.kde.plasma.desktop-appletsrc |grep Containment"_s).output;
+    panelID = runCmd(u"grep --max-count 1 -B 8 panel $HOME/.config/plasma-org.kde.plasma.desktop-appletsrc |grep Containment"_s).output;
     QString panellocation = readPlasmaPanelConfig(u"location"_s);
 
     switch(panellocation.toInt()) {
@@ -59,7 +59,7 @@ void TweakPlasma::setup()
     ui->checkPlasmaSingleClick->setChecked(singleclick != "false");
 
     //get taskmanager ID and setup showOnlyCurrentDesktop
-    plasmataskmanagerID = runCmd(u"grep --max-count 1 -B 2 taskmanager $HOME/.config/plasma-org.kde.plasma.desktop-appletsrc |grep Containment"_s).output;
+    taskManagerID = runCmd(u"grep --max-count 1 -B 2 taskmanager $HOME/.config/plasma-org.kde.plasma.desktop-appletsrc |grep Containment"_s).output;
     QString showOnlyCurrentDesktop = readTaskmanagerConfig(u"showOnlyCurrentDesktop"_s);
     if (showOnlyCurrentDesktop == "true"_L1) {
         ui->checkPlasmaShowAllWorkspaces->setChecked(false);
@@ -70,13 +70,6 @@ void TweakPlasma::setup()
     ui->pushApplyPlasma->setDisabled(true);
 
     ui->checkPlasmaResetDock->setChecked(false);
-
-    plasmaplacementflag = false;
-    plasmaworkspacesflag = false;
-    plasmasingleclickflag = false;
-    plasmaresetflag = false;
-    plasmasystrayiconsizeflag = false;
-    plasmadisoverautostartflag = false;
 
     connect(ui->pushApplyPlasma, &QPushButton::clicked, this, &TweakPlasma::pushApplyPlasma_clicked);
     connect(ui->comboPlasmaPanelLocation, &QComboBox::currentIndexChanged, this, &TweakPlasma::comboPlasmaPanelLocation_currentIndexChanged);
@@ -95,12 +88,14 @@ bool TweakPlasma::checkPlasma() const
 
 QString TweakPlasma::readTaskmanagerConfig(const QString &key) const
 {
-    QString ID = plasmataskmanagerID.section(u"["_s,2,2).section(u"]"_s,0,0);
-    QString Applet = plasmataskmanagerID.section(u"["_s,4,4).section(u"]"_s,0,0);
-    if (verbose) qDebug() << "plasma taskmanager ID is " << ID;
-    if (verbose) qDebug() << "plasma taskmanger Applet ID is " << Applet;
+    const QString &panID = taskManagerID.section('[',2,2).section(']',0,0);
+    const QString &applet = taskManagerID.section('[',4,4).section(']',0,0);
+    if (verbose) {
+        qDebug() << "plasma taskmanager ID is " << panID;
+        qDebug() << "plasma taskmanger Applet ID is " << applet;
+    }
     //read key
-    QString value = runCmd("kreadconfig5 --file plasma-org.kde.plasma.desktop-appletsrc --group Containments --group "_L1 + ID + " --group Applets --group "_L1 + Applet + " --key "_L1 + key).output;
+    QString value = runCmd("kreadconfig5 --file plasma-org.kde.plasma.desktop-appletsrc --group Containments --group "_L1 + panID + " --group Applets --group "_L1 + applet + " --key "_L1 + key).output;
     if (value.isEmpty()) {
         value = u"false"_s;
     }
@@ -110,65 +105,64 @@ QString TweakPlasma::readTaskmanagerConfig(const QString &key) const
 
 QString TweakPlasma::readPlasmaPanelConfig(const QString &key) const
 {
-    QString ID = plasmaPanelId.section(u"["_s,2,2).section(u"]"_s,0,0);
-    if (verbose) qDebug() << "plasma panel ID" << ID;
+    const QString &panID = panelID.section('[',2,2).section(']',0,0);
+    if (verbose) qDebug() << "plasma panel ID" << panID;
     //read key
-    QString value = runCmd("kreadconfig5 --file plasma-org.kde.plasma.desktop-appletsrc --group Containments --group "_L1 + ID + " --key "_L1 + key).output;
+    QString value = runCmd("kreadconfig5 --file plasma-org.kde.plasma.desktop-appletsrc --group Containments --group "_L1 + panID + " --key "_L1 + key).output;
     if (verbose) qDebug() << "key is " << value;
     return value;
 }
 
 void TweakPlasma::writePlasmaPanelConfig(const QString &key, const QString &value) const
 {
-    QString ID;
-    ID = plasmaPanelId.section('[',2,2).section(']',0,0);
-    runCmd("kwriteconfig5 --file plasma-org.kde.plasma.desktop-appletsrc --group Containments --group "_L1 + ID + " --key "_L1 + key + ' ' + value);
+    const QString &panID = panelID.section('[',2,2).section(']',0,0);
+    runCmd("kwriteconfig5 --file plasma-org.kde.plasma.desktop-appletsrc --group Containments --group "_L1 + panID + " --key "_L1 + key + ' ' + value);
 }
 
 void TweakPlasma::writeTaskmanagerConfig(const QString &key, const QString &value) const
 {
-    QString ID = plasmataskmanagerID.section('[',2,2).section(']',0,0);
-    QString Applet = plasmataskmanagerID.section('[',4,4).section(']',0,0);
-    runCmd("kwriteconfig5 --file plasma-org.kde.plasma.desktop-appletsrc --group Containments --group "_L1 + ID + " --group Applets --group "_L1 + Applet + " --key "_L1 + key + ' ' + value);
+    const QString &panID = taskManagerID.section('[',2,2).section(']',0,0);
+    const QString &applet = taskManagerID.section('[',4,4).section(']',0,0);
+    runCmd("kwriteconfig5 --file plasma-org.kde.plasma.desktop-appletsrc --group Containments --group "_L1 + panID + " --group Applets --group "_L1 + applet + " --key "_L1 + key + ' ' + value);
 }
 
 void TweakPlasma::comboPlasmaPanelLocation_currentIndexChanged(int  /*index*/)
 {
     ui->pushApplyPlasma->setEnabled(true);
-    plasmaplacementflag = true;
+    flags.placement = true;
 }
 void TweakPlasma::checkPlasmaDiscoverUpdater_toggled(bool)
 {
     ui->pushApplyPlasma->setEnabled(true);
-    plasmadisoverautostartflag = true;
+    flags.autoStartDiscover = true;
 }
 void TweakPlasma::checkPlasmaSingleClick_toggled(bool)
 {
     ui->pushApplyPlasma->setEnabled(true);
-    plasmasingleclickflag = true;
+    flags.singleClick = true;
 }
 void TweakPlasma::checkPlasmaShowAllWorkspaces_toggled(bool)
 {
     ui->pushApplyPlasma->setEnabled(true);
-    plasmaworkspacesflag = true;
+    flags.workspaces = true;
 }
 void TweakPlasma::checkPlasmaResetDock_toggled(bool)
 {
     ui->pushApplyPlasma->setEnabled(true);
-    plasmaresetflag = true;
+    flags.reset = true;
 }
 
 void TweakPlasma::pushApplyPlasma_clicked()
 {
     QString home_path = QDir::homePath();
-    if (plasmaresetflag) {
-        plasmaplacementflag = false;
-        plasmasingleclickflag = false;
-        plasmaworkspacesflag = false;
+    if (flags.reset) {
+        flags.placement = false;
+        flags.singleClick = false;
+        flags.workspaces = false;
         //reset plasma script Adrian
         runCmd(u"/usr/lib/mx-tweak/reset-kde-mx"_s);
     }
-    if (plasmaplacementflag) {
+    if (flags.placement) {
         switch(ui->comboPlasmaPanelLocation->currentIndex()) {
         case PanelIndex::Bottom:
             writePlasmaPanelConfig(u"location"_s, QString::number(PanelLocation::Bottom));
@@ -189,19 +183,19 @@ void TweakPlasma::pushApplyPlasma_clicked()
         }
     }
 
-    if (plasmasingleclickflag) {
+    if (flags.singleClick) {
         QString value = ui->checkPlasmaSingleClick->isChecked() ? u"true"_s : u"false"_s;
         runCmd("kwriteconfig5 --group KDE --key SingleClick "_L1 + value);
         runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-kde-edit.sh "_L1 + value);
     }
 
-    if (plasmaworkspacesflag) {
+    if (flags.workspaces) {
         QString value = ui->checkPlasmaShowAllWorkspaces->isChecked() ? u"false"_s : u"true"_s;
         writeTaskmanagerConfig(u"showOnlyCurrentDesktop"_s, value);
     }
 
     //plasma-discover autostart
-    if (plasmadisoverautostartflag){
+    if (flags.autoStartDiscover){
         QString plasmadiscoverautostart = home_path + "/.config/autostart/org.kde.discover.notifier.desktop"_L1;
         qDebug() << "discover autostart path is " << plasmadiscoverautostart;
         if (ui->checkPlasmaDiscoverUpdater->isChecked()){
@@ -221,7 +215,7 @@ void TweakPlasma::pushApplyPlasma_clicked()
     }
 
     //time to reset kwin and plasmashell
-    if (plasmaworkspacesflag || plasmasingleclickflag || plasmaplacementflag || plasmaresetflag || plasmasystrayiconsizeflag) {
+    if (flags.workspaces || flags.singleClick || flags.placement || flags.reset || flags.sysTrayIconSize) {
         //restart kwin first
         runCmd(u"sleep 1; qdbus org.kde.KWin /KWin reconfigure"_s);
         //then plasma
