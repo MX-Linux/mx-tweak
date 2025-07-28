@@ -1,4 +1,4 @@
-mx-locale
+mx-tweak
 # C++ objects and libs
 
 *.slo
@@ -36,4 +36,5 @@ ui_*.h
 
 # QtCtreator CMake
 CMakeLists.txt.user*
+build
 
