@@ -173,17 +173,7 @@ void defaultlook::setup()
         ui->buttonThemeUndo->hide();
         ui->pushButtonPreview->hide();
         ui->pushButtonRemoveUserThemeSet->hide();
-        ui->label_4->hide();
-        ui->label_5->hide();
-        ui->label_6->hide();
-        ui->label_7->hide();
-        //ui->listWidgetTheme->hide();
-        //ui->listWidgeticons->hide();
-        //ui->label_28->hide();
-        //ui->label_30->hide();
-        ui->pushXFCEAppearance->hide();
-        ui->pushXFCEWMsettings->hide();
-        ui->pushXFCEPanelSettings->hide();
+        ui->groupXFCESettings->hide();
         if (!themetabflag && !othertabflag) {
             ui->tabWidget->setCurrentIndex(Tab::Fluxbox);
         }
@@ -203,16 +193,10 @@ void defaultlook::setup()
 //Panel, Theme, Compositor, Display, Config, Fluxbox, Plasma, Superkey, Others
     //setup plasma
     else if (isKDE) {
-        ui->label_4->hide();
-        ui->label_5->hide();
-        ui->label_6->hide();
-        ui->label_7->hide();
         ui->buttonThemeUndo->hide();
         ui->pushButtonPreview->hide();
         ui->pushButtonRemoveUserThemeSet->hide();
-        ui->pushXFCEAppearance->hide();
-        ui->pushXFCEWMsettings->hide();
-        ui->pushXFCEPanelSettings->hide();
+        ui->groupXFCESettings->hide();
         if (!themetabflag && !othertabflag) {
             ui->tabWidget->setCurrentIndex(Tab::Plasma);
         }
@@ -231,13 +215,7 @@ void defaultlook::setup()
 
     //for other non-supported desktops, show only
     } else {
-        ui->label_4->hide();
-        ui->label_5->hide();
-        ui->label_6->hide();
-        ui->label_7->hide();
-        ui->pushXFCEAppearance->hide();
-        ui->pushXFCEWMsettings->hide();
-        ui->pushXFCEPanelSettings->hide();
+        ui->groupXFCESettings->hide();
         ui->tabWidget->setCurrentIndex(Tab::Others);
         for (int i = 6; i >= 0; --i) {
             ui->tabWidget->removeTab(i);
