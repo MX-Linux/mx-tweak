@@ -224,9 +224,6 @@
      <property name="tabPosition">
       <enum>QTabWidget::TabPosition::North</enum>
      </property>
-     <property name="currentIndex">
-      <number>2</number>
-     </property>
      <widget class="QWidget" name="Panel">
       <attribute name="title">
        <string>Panel</string>
@@ -1720,7 +1717,7 @@
           </spacer>
          </item>
          <item row="5" column="0" colspan="3">
-          <widget class="QCheckBox" name="checkBoxPlasmaShowAllWorkspaces">
+          <widget class="QCheckBox" name="checkPlasmaShowAllWorkspaces">
            <property name="text">
             <string>Show windows from all workspaces in panel</string>
            </property>
@@ -1734,14 +1731,14 @@
           </widget>
          </item>
          <item row="4" column="0" colspan="3">
-          <widget class="QCheckBox" name="checkBoxPlasmaSingleClick">
+          <widget class="QCheckBox" name="checkPlasmaSingleClick">
            <property name="text">
             <string>Enable single-click</string>
            </property>
           </widget>
          </item>
          <item row="7" column="0" colspan="3">
-          <widget class="QCheckBox" name="checkboxplasmaresetdock">
+          <widget class="QCheckBox" name="checkPlasmaResetDock">
            <property name="text">
             <string>Reset KDE/Plasma defaults</string>
            </property>
@@ -1799,7 +1796,7 @@
           </widget>
          </item>
          <item row="9" column="0" colspan="3">
-          <widget class="QPushButton" name="ButtonApplyPlasma">
+          <widget class="QPushButton" name="pushApplyPlasma">
            <property name="minimumSize">
             <size>
              <width>0</width>
@@ -1815,7 +1812,7 @@
           </widget>
          </item>
          <item row="3" column="0">
-          <widget class="QCheckBox" name="checkBoxPlasmaDiscoverUpdater">
+          <widget class="QCheckBox" name="checkPlasmaDiscoverUpdater">
            <property name="text">
             <string extracomment="enable or disable autostartup of plasma-discover updater utility on login">Autostart plasma-discover system tray update notification utility</string>
            </property>

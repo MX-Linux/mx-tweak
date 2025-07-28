@@ -20,6 +20,7 @@ CONFIG(release, debug|release) {
 SOURCES += main.cpp\
     about.cpp \
         defaultlook.cpp \
+    tweak_plasma.cpp \
     xfwm_compositor_settings.cpp \
     window_buttons.cpp \
     theming_to_tweak.cpp \
@@ -29,6 +30,7 @@ SOURCES += main.cpp\
 HEADERS  += defaultlook.h \
     about.h \
     cmd.h \
+    tweak_plasma.h \
     version.h \
     xfwm_compositor_settings.h \
     window_buttons.h \

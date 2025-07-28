@@ -40,6 +40,7 @@
 
 #include "about.h"
 #include "cmd.h"
+#include "tweak_plasma.h"
 #include "defaultlook.h"
 #include "remove_user_theme_set.h"
 #include "theming_to_tweak.h"
@@ -88,6 +89,9 @@ defaultlook::defaultlook(QWidget *parent, const QStringList &args) :
 
 defaultlook::~defaultlook()
 {
+    if (tweakPlasma) {
+        delete tweakPlasma;
+    }
     delete ui;
 }
 
@@ -112,9 +116,6 @@ void defaultlook::checkSession() {
 // setup versious items first time program runs
 void defaultlook::setup()
 {
-    this->setWindowTitle(tr("MX Tweak"));
-    this->adjustSize();
-
     QString home_path = QDir::homePath();
     if (!checklightdm()) {
         ui->checkBoxLightdmReset->hide();
@@ -206,7 +207,7 @@ void defaultlook::setup()
         ui->tabWidget->removeTab(Tab::Display);
         ui->tabWidget->removeTab(Tab::Compositor);
         ui->tabWidget->removeTab(Tab::Panel);
-        setupPlasma();
+        tweakPlasma = new TweakPlasma(ui, verbose, this);
         setuptheme();
         setupComboTheme();
         //setup other tab;
@@ -718,13 +719,6 @@ bool defaultlook::checklightdm()
     return (test.exists());
 }
 
-bool defaultlook::checkPlasma() const
-{
-    QString test = runCmd(u"pgrep plasma"_s).output;
-    if (verbose) qDebug() << test;
-    return (!test.isEmpty());
-}
-
 // backs up the current panel configuration
 void defaultlook::backupPanel()
 {
@@ -760,9 +754,9 @@ void defaultlook::backupPanel()
 void defaultlook::restoreDefaultPanel()
 {
     // copy template files
-    runCmd(QStringLiteral("xfce4-panel --quit;pkill xfconfd; rm -Rf ~/.config/xfce4/panel; cp -Rf /etc/skel/.config/xfce4/panel ~/.config/xfce4; sleep 1; \
+    runCmd(u"xfce4-panel --quit;pkill xfconfd; rm -Rf ~/.config/xfce4/panel; cp -Rf /etc/skel/.config/xfce4/panel ~/.config/xfce4; sleep 1; \
            cp -f /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml; \
-           sleep 5; xfce4-panel &"));
+           sleep 5; xfce4-panel &"_s);
 }
 
 void defaultlook::restoreBackup()
@@ -1198,92 +1192,6 @@ void defaultlook::setuppanel()
     }
 
     panelflag = true;
-}
-
-void defaultlook::setupPlasma()
-{
-    QString home_path = QDir::homePath();
-    //get panel ID
-    plasmaPanelId = runCmd(u"grep --max-count 1 -B 8 panel $HOME/.config/plasma-org.kde.plasma.desktop-appletsrc |grep Containment"_s).output;
-    QString panellocation = readPlasmaPanelConfig(u"location"_s);
-
-    switch(panellocation.toInt()) {
-    case PanelLocation::Top:
-        ui->comboPlasmaPanelLocation->setCurrentIndex(PanelIndex::Top);
-        break;
-    case PanelLocation::Bottom:
-        ui->comboPlasmaPanelLocation->setCurrentIndex(PanelIndex::Bottom);
-        break;
-    case PanelLocation::Left:
-        ui->comboPlasmaPanelLocation->setCurrentIndex(PanelIndex::Left);
-        break;
-    case PanelLocation::Right:
-        ui->comboPlasmaPanelLocation->setCurrentIndex(PanelIndex::Right);
-        break;
-    default: ui->comboPlasmaPanelLocation->setCurrentIndex(PanelIndex::Bottom);
-    }
-
-    //setup plasma-discover autostart
-    if (QFile::exists(u"/usr/lib/x86_64-linux-gnu/libexec/DiscoverNotifier"_s)){
-        QString plasmadiscoverautostart = home_path + "/.config/autostart/org.kde.discover.notifier.desktop"_L1;
-        if (runCmd("grep Hidden=true "_L1 + plasmadiscoverautostart).exitCode == 0 ){
-            ui->checkBoxPlasmaDiscoverUpdater->setChecked(false);
-        } else {
-            ui->checkBoxPlasmaDiscoverUpdater->setChecked(true);
-        }
-    } else {
-        ui->checkBoxPlasmaDiscoverUpdater->hide();
-    }
-
-    //setup singleclick
-    QString singleclick = runCmd(u"kreadconfig5 --group KDE --key SingleClick"_s).output;
-    ui->checkBoxPlasmaSingleClick->setChecked(singleclick != "false");
-
-    //get taskmanager ID and setup showOnlyCurrentDesktop
-    plasmataskmanagerID = runCmd(u"grep --max-count 1 -B 2 taskmanager $HOME/.config/plasma-org.kde.plasma.desktop-appletsrc |grep Containment"_s).output;
-    QString showOnlyCurrentDesktop = readTaskmanagerConfig(u"showOnlyCurrentDesktop"_s);
-    if (showOnlyCurrentDesktop == "true"_L1) {
-        ui->checkBoxPlasmaShowAllWorkspaces->setChecked(false);
-    } else {
-        ui->checkBoxPlasmaShowAllWorkspaces->setChecked(true);
-    }
-
-    ui->ButtonApplyPlasma->setDisabled(true);
-
-    ui->checkboxplasmaresetdock->setChecked(false);
-
-    plasmaplacementflag = false;
-    plasmaworkspacesflag = false;
-    plasmasingleclickflag = false;
-    plasmaresetflag = false;
-    plasmasystrayiconsizeflag = false;
-    plasmadisoverautostartflag = false;
-}
-
-QString defaultlook::readTaskmanagerConfig(const QString &key) const
-{
-    QString ID = plasmataskmanagerID.section(u"["_s,2,2).section(u"]"_s,0,0);
-    QString Applet = plasmataskmanagerID.section(u"["_s,4,4).section(u"]"_s,0,0);
-    if (verbose) qDebug() << "plasma taskmanager ID is " << ID;
-    if (verbose) qDebug() << "plasma taskmanger Applet ID is " << Applet;
-    //read key
-    QString value = runCmd("kreadconfig5 --file plasma-org.kde.plasma.desktop-appletsrc --group Containments --group "_L1 + ID + " --group Applets --group "_L1 + Applet + " --key "_L1 + key).output;
-    if (value.isEmpty()) {
-        value = u"false"_s;
-    }
-    if (verbose) qDebug() << "key is " << value;
-    return value;
-}
-
-QString defaultlook::readPlasmaPanelConfig(const QString &key) const
-{
-    QString ID;
-    ID = plasmaPanelId.section(u"["_s,2,2).section(u"]"_s,0,0);
-    if (verbose) qDebug() << "plasma panel ID" << ID;
-    //read key
-    QString value = runCmd("kreadconfig5 --file plasma-org.kde.plasma.desktop-appletsrc --group Containments --group "_L1 + ID + " --key "_L1 + key).output;
-    if (verbose) qDebug() << "key is " << value;
-    return value;
 }
 
 
@@ -3643,120 +3551,6 @@ void defaultlook::on_comboBoxfluxcaptions_currentIndexChanged(int  /*index*/)
     }
 }
 
-void defaultlook::on_comboPlasmaPanelLocation_currentIndexChanged(int  /*index*/)
-{
-    if (setupflag){
-        ui->ButtonApplyPlasma->setEnabled(true);
-        plasmaplacementflag = true;
-    }
-}
-
-void defaultlook::on_checkBoxPlasmaSingleClick_clicked()
-{
-    ui->ButtonApplyPlasma->setEnabled(true);
-    plasmasingleclickflag = true;
-}
-
-void defaultlook::on_checkBoxPlasmaShowAllWorkspaces_clicked()
-{
-    ui->ButtonApplyPlasma->setEnabled(true);
-    plasmaworkspacesflag = true;
-}
-
-void defaultlook::on_checkboxplasmaresetdock_clicked()
-{
-    ui->ButtonApplyPlasma->setEnabled(true);
-    plasmaresetflag = true;
-}
-
-void defaultlook::on_ButtonApplyPlasma_clicked()
-{
-    QString home_path = QDir::homePath();
-    if (plasmaresetflag) {
-        plasmaplacementflag = false;
-        plasmasingleclickflag = false;
-        plasmaworkspacesflag = false;
-        //reset plasma script Adrian
-        runCmd(u"/usr/lib/mx-tweak/reset-kde-mx"_s);
-    }
-    if (plasmaplacementflag) {
-        switch(ui->comboPlasmaPanelLocation->currentIndex()) {
-        case PanelIndex::Bottom:
-            writePlasmaPanelConfig(u"location"_s, QString::number(PanelLocation::Bottom));
-            writePlasmaPanelConfig(u"formfactor"_s, u"2"_s);
-            break;
-        case PanelIndex::Left:
-            writePlasmaPanelConfig(u"location"_s, QString::number(PanelLocation::Left));
-            writePlasmaPanelConfig(u"formfactor"_s, u"3"_s);
-            break;
-        case PanelIndex::Top:
-            writePlasmaPanelConfig(u"location"_s, QString::number(PanelLocation::Top));
-            writePlasmaPanelConfig(u"formfactor"_s, u"2"_s);
-            break;
-        case PanelIndex::Right:
-            writePlasmaPanelConfig(u"location"_s, QString::number(PanelLocation::Right));
-            writePlasmaPanelConfig(u"formfactor"_s, u"3"_s);
-            break;
-        }
-    }
-
-    if (plasmasingleclickflag) {
-        QString value = ui->checkBoxPlasmaSingleClick->isChecked() ? u"true"_s : u"false"_s;
-        runCmd("kwriteconfig5 --group KDE --key SingleClick "_L1 + value);
-        runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-kde-edit.sh "_L1 + value);
-    }
-
-    if (plasmaworkspacesflag) {
-        QString value = ui->checkBoxPlasmaShowAllWorkspaces->isChecked() ? u"false"_s : u"true"_s;
-        writeTaskmanagerConfig(u"showOnlyCurrentDesktop"_s, value);
-    }
-
-    //plasma-discover autostart
-    if (plasmadisoverautostartflag){
-        QString plasmadiscoverautostart = home_path + "/.config/autostart/org.kde.discover.notifier.desktop"_L1;
-        qDebug() << "discover autostart path is " << plasmadiscoverautostart;
-        if (ui->checkBoxPlasmaDiscoverUpdater->isChecked()){
-            //delete any Hidden=true lines to make sure its processed by xdg autostart
-            runCmd("sed -i /Hidden=true/d "_L1 + plasmadiscoverautostart);
-        } else {
-            //copy if it doesn't exist already
-            if (!QFile(plasmadiscoverautostart).exists()){
-                if (QFile::exists(u"/etc/xdg/autostart/org.kde.discover.notifier.desktop"_s)){
-                    runCmd("cp /etc/xdg/autostart/org.kde.discover.notifier.desktop "_L1 + plasmadiscoverautostart);
-                }
-            }
-            //remove any previous Hidden= attribute, then add Hidden=true to make it not autostart
-            runCmd("sed -i /Hidden=*/d "_L1 + plasmadiscoverautostart);
-            runCmd("echo Hidden=true >> "_L1 + plasmadiscoverautostart); //this also creates file if the /etc/xdg version is missing
-        }
-    }
-
-    //time to reset kwin and plasmashell
-    if (plasmaworkspacesflag || plasmasingleclickflag || plasmaplacementflag || plasmaresetflag || plasmasystrayiconsizeflag) {
-        //restart kwin first
-        runCmd(u"sleep 1; qdbus org.kde.KWin /KWin reconfigure"_s);
-        //then plasma
-        system("sleep 1; plasmashell --replace &");
-    }
-
-    setupPlasma();
-
-}
-
-void defaultlook::writePlasmaPanelConfig(const QString &key, const QString &value) const
-{
-    QString ID;
-    ID = plasmaPanelId.section('[',2,2).section(']',0,0);
-    runCmd("kwriteconfig5 --file plasma-org.kde.plasma.desktop-appletsrc --group Containments --group "_L1 + ID + " --key "_L1 + key + ' ' + value);
-}
-
-void defaultlook::writeTaskmanagerConfig(const QString &key, const QString &value) const
-{
-    QString ID = plasmataskmanagerID.section('[',2,2).section(']',0,0);
-    QString Applet = plasmataskmanagerID.section('[',4,4).section(']',0,0);
-    runCmd("kwriteconfig5 --file plasma-org.kde.plasma.desktop-appletsrc --group Containments --group "_L1 + ID + " --group Applets --group "_L1 + Applet + " --key "_L1 + key + ' ' + value);
-}
-
 void defaultlook::populatethemelists(const QString &value)
 {
     themeflag = false;
@@ -4463,12 +4257,6 @@ void defaultlook::on_checkBoxDebianKernelUpdates_clicked()
 void defaultlook::on_spinBoxPointerSize_valueChanged(int)
 {
     set_cursor_size();
-}
-
-void defaultlook::on_checkBoxPlasmaDiscoverUpdater_clicked()
-{
-    plasmadisoverautostartflag = true;
-    ui->ButtonApplyPlasma->setEnabled(true);
 }
 
 void defaultlook::on_checkBoxComputerName_clicked()

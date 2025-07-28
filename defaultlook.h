@@ -38,14 +38,6 @@ namespace IconSize {
 enum {Default, Small, Medium, Large, Larger, Largest};
 }
 
-namespace PanelIndex { // location combo index - 0=bottom, 1=left, 2=top, 3=right
-enum {Bottom, Left, Top, Right};
-}
-
-namespace PanelLocation { // location plasma settings - 4=bottom, 3 top, 5 left, 6 right
-enum {Top = 3, Bottom, Left, Right};
-}
-
 namespace Tab {
 enum {Panel, Theme, Compositor, Display, Config, Fluxbox, Plasma, Superkey, Others};
 }
@@ -66,8 +58,6 @@ public:
     QString output;
     QStringList panelIDs;
     QString panel;
-    QString plasmaPanelId;
-    QString plasmataskmanagerID;
     bool message_flag{};
     QHash<QString, QString>  theme_info;
     QString pluginidsystray;
@@ -95,11 +85,6 @@ public:
     bool slitflag = false;
     bool fluxcaptionflag = false;
     bool fluxiconflag = false;
-    bool plasmaplacementflag{};
-    bool plasmaworkspacesflag{};
-    bool plasmasingleclickflag{};
-    bool plasmaresetflag{};
-    bool plasmasystrayiconsizeflag{};
     bool themeflag = false;
     bool validateflag = false;
     bool tasklistflag = false;
@@ -119,7 +104,6 @@ public:
     bool isSuperkey = false;
     bool liqKernelUpdateFlag = false;
     bool debianKernelUpdateFlag = false;
-    bool plasmadisoverautostartflag = false;
     bool graphicssetupflag=true;
     bool kvmflag=false;
     QString kvmconffile;
@@ -140,12 +124,7 @@ public:
     static void settheme(const QString &type, const QString &theme, const QString &desktop);
     void setupEtc();
     void setupFluxbox();
-    void setupPlasma();
     void setupSuperKey();
-    QString readPlasmaPanelConfig(const QString &Key) const;
-    QString readTaskmanagerConfig(const QString &Key) const;
-    void writePlasmaPanelConfig(const QString &key, const QString &value) const;
-    void writeTaskmanagerConfig(const QString &key, const QString &value) const;
     void setupDisplay();
     void setupConfigoptions();
     void setupComboTheme();
@@ -158,7 +137,6 @@ public:
     bool checkFluxbox() const;
     void checkSession();
     static bool checklightdm();
-    bool checkPlasma() const;
     void CheckComptonRunning();
     void setupCompositor();
     void CheckAptNotifierRunning() const;
@@ -205,7 +183,6 @@ private slots:
     void on_ApplyFluxboxResets_clicked();
     void on_ButtonApplyEtc_clicked();
     void on_ButtonApplyMiscDefualts_clicked();
-    void on_ButtonApplyPlasma_clicked();
     void on_buttonApplyDisplayScaling_clicked();
     void on_buttonApply_clicked();
     void on_buttonCompositorApply_clicked();
@@ -222,8 +199,6 @@ private slots:
     void on_checkBoxLightdmReset_clicked();
     void on_checkBoxMenuMigrate_clicked();
     void on_checkBoxMountInternalDrivesNonRoot_clicked();
-    void on_checkBoxPlasmaShowAllWorkspaces_clicked();
-    void on_checkBoxPlasmaSingleClick_clicked();
     void on_checkBoxSandbox_clicked();
     void on_checkBoxShowAllWorkspaces_clicked();
     void on_checkBoxSingleClick_clicked();
@@ -240,13 +215,11 @@ private slots:
     void on_checkboxfluxreseteverything_clicked();
     void on_checkboxfluxresetmenu_clicked();
     void on_checkboxfluxtoolbarautohide_clicked();
-    void on_checkboxplasmaresetdock_clicked();
     void on_comboBoxCompositor_currentIndexChanged(const int);
     void on_comboBoxDisplay_currentIndexChanged(int index);
     void on_comboBoxfluxIcons_currentIndexChanged(int index);
     void on_comboBoxfluxcaptions_currentIndexChanged(int index);
     void on_comboBoxvblank_activated(int);
-    void on_comboPlasmaPanelLocation_currentIndexChanged(int index);
     void on_comboTheme_activated(const int arg1);
     void on_comboboxHorzPostition_currentIndexChanged(const int arg1);
     void on_comboboxVertpostition_currentIndexChanged(const int arg1);
@@ -319,8 +292,6 @@ private slots:
 
     void on_spinBoxPointerSize_valueChanged(int);
 
-    void on_checkBoxPlasmaDiscoverUpdater_clicked();
-
     void on_checkBoxComputerName_clicked();
 
     void on_checkBoxBluetoothBattery_clicked();
@@ -337,6 +308,8 @@ private slots:
     void loadSettings();
 private:
     Ui::defaultlook *ui;
+    class TweakPlasma *tweakPlasma = nullptr;
+
     void pushAbout_clicked();
     void pushHelp_clicked();
 
