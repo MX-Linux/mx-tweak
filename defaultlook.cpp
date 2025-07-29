@@ -3814,12 +3814,12 @@ void defaultlook::populatethemelists(const QString &value)
     }
 
     if ( value == QLatin1String("fluxbox")) {
-        themes = runCmd("find /usr/share/mxflux/styles/ ! -name *attribution* -maxdepth 1 2>/dev/null |cut -d\"/\" -f6").output;
+        themes = runCmd("find /usr/share/mxflux/styles/ ! -name *attribution* ! -iname *README* -maxdepth 1 2>/dev/null |cut -d\"/\" -f6").output;
         themes.append("\n");
-        themes.append(runCmd("find $HOME/.fluxbox/styles/ ! -name *attribution* -maxdepth 1 2>/dev/null |cut -d\"/\" -f6").output);
+        themes.append(runCmd("find $HOME/.fluxbox/styles/ ! -name *attribution* ! -iname *README* -maxdepth 1 2>/dev/null |cut -d\"/\" -f6").output);
         themes.append("\n");
         if (ui->checkBoxFluxboxLegacyStyles->isChecked()){
-            themes.append(runCmd("find /usr/share/fluxbox/styles/ ! -name *attribution* -maxdepth 1 2>/dev/null |cut -d\"/\" -f6").output);
+            themes.append(runCmd("find /usr/share/fluxbox/styles/ ! -name *attribution* ! -iname *README* -maxdepth 1 2>/dev/null |cut -d\"/\" -f6").output);
             themes.append("\n");
         }
     }
