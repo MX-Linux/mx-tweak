@@ -1,3 +1,9 @@
+mx-tweak (25.07.01mx25) mx; urgency=medium
+
+  * filter out README files from fluxbox style areas
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Tue, 29 Jul 2025 21:56:09 -0400
+
 mx-tweak (25.04.04mx25) mx; urgency=medium
 
   * filter out attribution file from fluxbox style choosing 
