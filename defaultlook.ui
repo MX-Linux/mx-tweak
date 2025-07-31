@@ -599,7 +599,7 @@
           </widget>
          </item>
          <item row="9" column="3">
-          <widget class="QLabel" name="label_35">
+          <widget class="QLabel" name="labelPointerSize">
            <property name="text">
             <string extracomment="size of the mouse pointer or cursor">Size</string>
            </property>
@@ -612,7 +612,7 @@
           <widget class="QListWidget" name="listWidgetCursorThemes"/>
          </item>
          <item row="5" column="1" colspan="2">
-          <widget class="QLabel" name="label_29">
+          <widget class="QLabel" name="labelWMThemes">
            <property name="text">
             <string extracomment="theme a window manager border will get">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Manager&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
@@ -622,7 +622,7 @@
           <widget class="QListWidget" name="listWidgetWMtheme"/>
          </item>
          <item row="0" column="0">
-          <widget class="QLabel" name="label">
+          <widget class="QLabel" name="labelTheme">
            <property name="font">
             <font>
              <bold>true</bold>
@@ -650,7 +650,7 @@
           </widget>
          </item>
          <item row="5" column="0">
-          <widget class="QLabel" name="label_28">
+          <widget class="QLabel" name="labelThemes">
            <property name="text">
             <string extracomment="theme an application will get">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
@@ -1977,7 +1977,7 @@
           </widget>
          </item>
          <item row="20" column="0" colspan="2">
-          <widget class="QLabel" name="label_11">
+          <widget class="QLabel" name="labelSudo">
            <property name="text">
             <string>Password for administrative tasks:</string>
            </property>

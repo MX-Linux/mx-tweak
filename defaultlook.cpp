@@ -169,7 +169,7 @@ void defaultlook::setup()
     //setup fluxbox
     else if (isFluxbox) {
         ui->comboTheme->hide();
-        ui->label->hide();
+        ui->labelTheme->hide();
         ui->buttonThemeApply->hide();
         ui->buttonThemeUndo->hide();
         ui->pushButtonPreview->hide();
@@ -1362,7 +1362,7 @@ void defaultlook::setupEtc()
     if (test.contains("NP"_L1)) {
         ui->radioSudoRoot->setEnabled(false);
         ui->radioSudoUser->setEnabled(false);
-        ui->label_11->setEnabled(false);
+        ui->labelSudo->setEnabled(false);
     }
 
     //setup user namespaces option (99-sandbox-mx.conf)
@@ -1571,16 +1571,16 @@ void defaultlook::setuptheme()
     }
 
     if (isKDE) {
-        ui->label_28->setText("<b>"_L1 + tr("Plasma Widget Themes","theme style of the kde plasma widgets") + "</b>"_L1);
-        ui->label_29->setText("<b>"_L1 + tr("Color Schemes", "plasma widget color schemes") + "</b>"_L1);
-        ui->label->setText("<b>"_L1 + tr("Plasma Look & Feel Global Themes", "plasma global themes") + "</b>"_L1);
+        ui->labelThemes->setText("<b>"_L1 + tr("Plasma Widget Themes","theme style of the kde plasma widgets") + "</b>"_L1);
+        ui->labelWMThemes->setText("<b>"_L1 + tr("Color Schemes", "plasma widget color schemes") + "</b>"_L1);
+        ui->labelTheme->setText("<b>"_L1 + tr("Plasma Look & Feel Global Themes", "plasma global themes") + "</b>"_L1);
         populatethemelists(u"plasma"_s);
         populatethemelists(u"colorscheme"_s);
         populatethemelists(u"kdecursors"_s);
         populatethemelists(u"icons"_s);
         ui->pushButtonSettingsToThemeSet->hide();
         ui->spinBoxPointerSize->hide();
-        ui->label_35->hide();
+        ui->labelPointerSize->hide();
     }
 
 
