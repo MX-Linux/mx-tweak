@@ -225,6 +225,17 @@ void defaultlook::setup()
         setupEtc();
     }
 
+    // Thunar (on MX installed with XFCE or Fluxbox by default)
+    if (QFile::exists(u"/usr/bin/thunar"_s)) {
+        if (isFluxbox) {
+            ui->layoutFluxboxTab->replaceWidget(ui->widgetFluxboxThunar, ui->groupThunar);
+        }
+        connect(ui->checkThunarSingleClick, &QCheckBox::clicked, this, &defaultlook::slotThunarChanged);
+        connect(ui->checkThunarResetCustomActions, &QCheckBox::clicked, this, &defaultlook::slotThunarChanged);
+        connect(ui->checkThunarSplitView, &QCheckBox::clicked, this, &defaultlook::slotThunarChanged);
+        connect(ui->checkThunarSplitViewHorizontal, &QCheckBox::clicked, this, &defaultlook::slotThunarChanged);
+    }
+
     //copy template file to ~/.local/share/mx-tweak-data if it doesn't exist
     QDir userdir(home_path + "/.local/share/mx-tweak-data"_L1);
     QFileInfo template_file(home_path + "/.local/share/mx-tweak-data/mx.tweak.template"_L1);
@@ -1287,18 +1298,9 @@ void defaultlook::setupFluxbox()
     ui->checkboxfluxSlitautohide->setChecked(slitautohide == "true"_L1);
     ui->ApplyFluxboxResets->setDisabled(true);
 
-    //thunar options
-    //only if thunar exists, else hide
-    if (QFile::exists(u"/usr/bin/thunar"_s)){
-        //thunar single click
-        thunarsingleclicksetup();
-        //thunarsetupsplitview
-        thunarsetupsplitview();
-    } else {
-        ui->checkBoxThunarCAReset_2->hide();
-        ui->checkBoxThunarSplitView_2->hide();
-        ui->checkBoxsplitviewhorizontal_2->hide();
-        ui->checkBoxThunarSingleClick_2->hide();
+    // Setup thunar options (only if thunar exists)
+    if (QFile::exists(u"/usr/bin/thunar"_s)) {
+        setupThunar();
     }
 }
 
@@ -1736,11 +1738,6 @@ void defaultlook::setupConfigoptions()
         test = runCmd(u"xfconf-query  -c xfce4-desktop -p /desktop-icons/single-click"_s).output;
         ui->checkBoxSingleClick->setChecked(test == "true"_L1);
 
-        //check single click thunar status
-        thunarsingleclicksetup();
-
-        //check split window status
-        thunarsetupsplitview();
         //check systray frame status
         //frame has been removed from systray
 
@@ -1820,7 +1817,7 @@ void defaultlook::setupConfigoptions()
             hibernate_flag = false;
         }
 
-        ui->checkBoxThunarCAReset->setChecked(false);
+        setupThunar();
     }
 }
 
@@ -2660,10 +2657,6 @@ void defaultlook::on_checkBoxSingleClick_clicked()
 {
     ui->ButtonApplyMiscDefualts->setEnabled(true);
 }
-void defaultlook::on_checkBoxThunarSingleClick_clicked()
-{
-    ui->ButtonApplyMiscDefualts->setEnabled(true);
-}
 void defaultlook::on_checkboxNoEllipse_clicked()
 {
     ui->ButtonApplyMiscDefualts->setEnabled(true);
@@ -2945,27 +2938,6 @@ void defaultlook::on_ButtonApplyMiscDefualts_clicked()
     } else {
         runCmd(u"xfconf-query  -c xfce4-desktop -p /desktop-icons/single-click -s false"_s);
     }
-
-    //thunar single click
-    if (ui->checkBoxThunarSingleClick->isChecked()){
-        thunarsetsingleclick(true);
-    } else {
-        thunarsetsingleclick(false);
-    }
-
-    //split view thunar
-    if (ui->checkBoxThunarSplitView->isChecked() ){
-        thunarsplitview(true);
-    } else {
-        thunarsplitview(false);
-    }
-
-    //split view thunar horizontal or vertical
-    if (ui->checkBoxsplitviewhorizontal->isChecked()){
-        thunarsplitviewhorizontal(true);
-    } else {
-        thunarsplitviewhorizontal(false);
-    }
     //systray frame removed
 
     //notification percentages
@@ -2980,10 +2952,6 @@ void defaultlook::on_ButtonApplyMiscDefualts_clicked()
         runCmd(u"xfconf-query -c xfwm4 -p /general/zoom_desktop -s true"_s);
     } else {
         runCmd(u"xfconf-query -c xfwm4 -p /general/zoom_desktop -s false"_s);
-    }
-
-    if (ui->checkBoxThunarCAReset->isChecked()) {
-        resetthunar();
     }
 
     //deal with gtk dialog button settings
@@ -3046,6 +3014,7 @@ void defaultlook::on_ButtonApplyMiscDefualts_clicked()
         }
     }
 
+    applyThunar();
     setupConfigoptions();
 }
 
@@ -3055,11 +3024,6 @@ void defaultlook::on_checkBoxLightdmReset_clicked()
 }
 
 void defaultlook::on_checkBoxDesktopZoom_clicked()
-{
-    ui->ButtonApplyMiscDefualts->setEnabled(true);
-}
-
-void defaultlook::on_checkBoxThunarCAReset_clicked()
 {
     ui->ButtonApplyMiscDefualts->setEnabled(true);
 }
@@ -3415,33 +3379,9 @@ void defaultlook::on_ApplyFluxboxResets_clicked()
         runCmd(u"chmod a+x $HOME/.config/MX-Linux/screenblanking-mxtweak"_s);
     }
 
-    //thunar actions
-    //only if thunar installed
-    if (QFile::exists(u"/usr/bin/thunar"_s)){
-        //reset thunar custom actions
-        if (ui->checkBoxThunarCAReset->isChecked()) {
-            resetthunar();
-        }
-        //thunar single click
-        if (ui->checkBoxThunarSingleClick_2->isChecked()){
-            thunarsetsingleclick(true);
-        } else {
-            thunarsetsingleclick(false);
-        }
-
-        //split view thunar
-        if (ui->checkBoxThunarSplitView_2->isChecked() ){
-            thunarsplitview(true);
-        } else {
-            thunarsplitview(false);
-        }
-
-        //split view thunar horizontal or vertical
-        if (ui->checkBoxsplitviewhorizontal_2->isChecked()){
-            thunarsplitviewhorizontal(true);
-        } else {
-            thunarsplitviewhorizontal(false);
-        }
+    //thunar actions (only if thunar installed)
+    if (QFile::exists(u"/usr/bin/thunar"_s)) {
+        applyThunar();
     }
     //when all done, restart fluxbox
     ui->checkboxfluxresetdock->setChecked(false);
@@ -4018,85 +3958,55 @@ void defaultlook::on_checkBoxInstallRecommends_clicked()
     enable_recommendsflag = true;
 }
 
-void defaultlook::on_checkBoxThunarSplitView_clicked()
+void defaultlook::setupThunar()
 {
-    ui->ButtonApplyMiscDefualts->setEnabled(true);
-}
+    ui->checkThunarResetCustomActions->setChecked(false);
+    QString test;
 
-void defaultlook::on_checkBoxsplitviewhorizontal_clicked()
+    //check single click thunar status
+    test = runCmd(u"xfconf-query  -c thunar -p /misc-single-click"_s).output;
+    ui->checkThunarSingleClick->setChecked(test == "true"_L1);
+
+    //check split window status
+    test = runCmd(u"xfconf-query  -c thunar -p /misc-open-new-windows-in-split-view"_s).output;
+    ui->checkThunarSplitView->setChecked(test == "true"_L1);
+    //check split view horizontal or vertical.  default false is vertical, true is horizontal;
+    test = runCmd(u"xfconf-query  -c thunar -p /misc-vertical-split-pane"_s).output;
+    ui->checkThunarSplitViewHorizontal->setChecked(test == "true"_L1);
+}
+void defaultlook::applyThunar()
 {
-    ui->ButtonApplyMiscDefualts->setEnabled(true);
-}
-
-void defaultlook::thunarsplitview(bool state){
-
-    if (state){
+    // Single-click
+    if (ui->checkThunarSingleClick->isChecked()) {
+        runCmd(u"xfconf-query  -c thunar -p /misc-single-click -t bool -s true --create"_s);
+    } else {
+        runCmd(u"xfconf-query  -c thunar -p /misc-single-click -t bool -s false --create"_s);
+    }
+    // Reset right-click custom actions
+    if (ui->checkThunarResetCustomActions->isChecked()) {
+        system("cp /home/$USER/.config/Thunar/uca.xml /home/$USER/.config/Thunar/uca.xml.$(date +%Y%m%H%M%S)");
+        runCmd(u"cp /etc/skel/.config/Thunar/uca.xml /home/$USER/.config/Thunar/uca.xml"_s);
+    }
+    // Split view
+    if (ui->checkThunarSplitView->isChecked()) {
         runCmd(u"xfconf-query  -c thunar -p /misc-open-new-windows-in-split-view -t bool -s true --create"_s);
     } else {
         runCmd(u"xfconf-query  -c thunar -p /misc-open-new-windows-in-split-view --reset"_s);
     }
-}
-
-void defaultlook::thunarsplitviewhorizontal(bool state){
-    if (state){
+    // Split view thunar horizontal or vertical
+    if (ui->checkThunarSplitViewHorizontal->isChecked()) {
         runCmd(u"xfconf-query -c thunar -p /misc-vertical-split-pane -t bool -s true --create"_s);
     } else {
         runCmd(u"xfconf-query -c thunar -p /misc-vertical-split-pane --reset"_s);
     }
 }
-
-void defaultlook::thunarsetupsplitview(){
-    QString test;
-    //check split window status
-    test = runCmd(u"xfconf-query  -c thunar -p /misc-open-new-windows-in-split-view"_s).output;
-    ui->checkBoxThunarSplitView->setChecked(test == "true"_L1);
-    ui->checkBoxThunarSplitView_2->setChecked(test == "true"_L1);
-
-    //check split view horizontal or vertical.  default false is vertical, true is horizontal;
-    test = runCmd(u"xfconf-query  -c thunar -p /misc-vertical-split-pane"_s).output;
-    ui->checkBoxsplitviewhorizontal->setChecked(test == "true"_L1);
-    ui->checkBoxsplitviewhorizontal_2->setChecked(test == "true"_L1);
-}
-
-void defaultlook::resetthunar(){
-    system("cp /home/$USER/.config/Thunar/uca.xml /home/$USER/.config/Thunar/uca.xml.$(date +%Y%m%H%M%S)");
-    runCmd(u"cp /etc/skel/.config/Thunar/uca.xml /home/$USER/.config/Thunar/uca.xml"_s);
-}
-
-void defaultlook::thunarsingleclicksetup(){
-    //check single click thunar status
-    QString test = runCmd(u"xfconf-query  -c thunar -p /misc-single-click"_s).output;
-    ui->checkBoxThunarSingleClick->setChecked(test == "true"_L1);
-    ui->checkBoxThunarSingleClick_2->setChecked(test == "true"_L1);
-
-}
-
-void defaultlook::thunarsetsingleclick(bool state){
-    if (state) {
-        runCmd(u"xfconf-query  -c thunar -p /misc-single-click -t bool -s true --create"_s);
+void defaultlook::slotThunarChanged()
+{
+    if (ui->tabFluxbox->isVisible()) {
+        ui->ApplyFluxboxResets->setEnabled(true);
     } else {
-        runCmd(u"xfconf-query  -c thunar -p /misc-single-click -t bool -s false --create"_s);
+        ui->ButtonApplyMiscDefualts->setEnabled(true);
     }
-}
-
-void defaultlook::on_checkBoxThunarCAReset_2_clicked()
-{
-    ui->ApplyFluxboxResets->setEnabled(true);
-}
-
-void defaultlook::on_checkBoxThunarSplitView_2_clicked()
-{
-    ui->ApplyFluxboxResets->setEnabled(true);
-}
-
-void defaultlook::on_checkBoxsplitviewhorizontal_2_clicked()
-{
-    ui->ApplyFluxboxResets->setEnabled(true);
-}
-
-void defaultlook::on_checkBoxThunarSingleClick_2_clicked()
-{
-    ui->ApplyFluxboxResets->setEnabled(true);
 }
 
 //returns first tasklist or docklike id

@@ -90,12 +90,6 @@ public:
     bool tasklistflag = false;
     bool cursor_size_flag = false;
     bool screenblankflag = false;
-    void thunarsplitview(bool state);
-    void thunarsplitviewhorizontal(bool state);
-    void thunarsetupsplitview();
-    void resetthunar();
-    void thunarsingleclicksetup();
-    void thunarsetsingleclick(bool state);
     void tasklistchange();
     bool isXfce = false;
     bool isFluxbox = false;
@@ -168,6 +162,10 @@ public:
     void setrefreshrate(const QString &display, const QString &resolution, const QString &activeprofile) const;
     void setupGamma();
 
+    void setupThunar();
+    void applyThunar();
+    void slotThunarChanged();
+
     void setmissingxfconfvariables(const QString &activeprofile, const QString &resolution);
     void fluxboxchangeinitvariable(const QString &initline, const QString &value) const;
     void fluxboxchangedock() const;
@@ -202,8 +200,6 @@ private slots:
     void on_checkBoxSandbox_clicked();
     void on_checkBoxShowAllWorkspaces_clicked();
     void on_checkBoxSingleClick_clicked();
-    void on_checkBoxThunarCAReset_clicked();
-    void on_checkBoxThunarSingleClick_clicked();
     void on_checkHorz_clicked();
     void on_checkVert_clicked();
     void on_checkboxAMDtearfree_clicked();
@@ -254,18 +250,6 @@ private slots:
     void on_lineEditBackupName_returnPressed();
 
     void on_checkBoxInstallRecommends_clicked();
-
-    void on_checkBoxThunarSplitView_clicked();
-
-    void on_checkBoxsplitviewhorizontal_clicked();
-
-    void on_checkBoxThunarCAReset_2_clicked();
-
-    void on_checkBoxThunarSplitView_2_clicked();
-
-    void on_checkBoxsplitviewhorizontal_2_clicked();
-
-    void on_checkBoxThunarSingleClick_2_clicked();
 
     void on_radioButtonTasklist_clicked();
 

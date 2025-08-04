@@ -1129,28 +1129,28 @@
          </property>
          <layout class="QVBoxLayout">
           <item>
-           <widget class="QCheckBox" name="checkBoxThunarSingleClick">
+           <widget class="QCheckBox" name="checkThunarSingleClick">
             <property name="text">
              <string>Enable single-click in Thunar File Manager</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QCheckBox" name="checkBoxThunarCAReset">
+           <widget class="QCheckBox" name="checkThunarResetCustomActions">
             <property name="text">
              <string>Reset custom right-click actions to system defaults</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QCheckBox" name="checkBoxThunarSplitView">
+           <widget class="QCheckBox" name="checkThunarSplitView">
             <property name="text">
              <string>Thunar windows always open in split view</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QCheckBox" name="checkBoxsplitviewhorizontal">
+           <widget class="QCheckBox" name="checkThunarSplitViewHorizontal">
             <property name="text">
              <string>Thunar split view opens horizontal</string>
             </property>
@@ -1219,11 +1219,11 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="tab">
+     <widget class="QWidget" name="tabFluxbox">
       <attribute name="title">
        <string>Fluxbox</string>
       </attribute>
-      <layout class="QGridLayout">
+      <layout class="QGridLayout" name="layoutFluxboxTab">
        <item row="0" column="0">
         <widget class="QLabel" name="label_14">
          <property name="text">
@@ -1322,19 +1322,8 @@
          </property>
         </widget>
        </item>
-       <item row="3" column="3">
-        <widget class="QLabel" name="label_32">
-         <property name="text">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Thunar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="3" colspan="3">
-        <widget class="QCheckBox" name="checkBoxThunarCAReset_2">
-         <property name="text">
-          <string>Reset Thunar custom right-click actions to system defaults</string>
-         </property>
-        </widget>
+       <item row="3" column="3" colspan="3" rowspan="5">
+        <widget class="QWidget" name="widgetFluxboxThunar"/>
        </item>
        <item row="4" column="0" colspan="3">
         <widget class="QCheckBox" name="checkBoxMenuMigrate">
@@ -1350,13 +1339,6 @@
         <widget class="QLabel" name="label_27">
          <property name="text">
           <string extracomment="screensaver screen blank settings">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Screensaver&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="3" colspan="3">
-        <widget class="QCheckBox" name="checkBoxThunarSingleClick_2">
-         <property name="text">
-          <string>Enable single-click in Thunar File Manager</string>
          </property>
         </widget>
        </item>
@@ -1377,20 +1359,6 @@
          </property>
          <property name="maximum">
           <number>240</number>
-         </property>
-        </widget>
-       </item>
-       <item row="6" column="3" colspan="3">
-        <widget class="QCheckBox" name="checkBoxThunarSplitView_2">
-         <property name="text">
-          <string>Thunar windows always open in split view</string>
-         </property>
-        </widget>
-       </item>
-       <item row="7" column="3" colspan="3">
-        <widget class="QCheckBox" name="checkBoxsplitviewhorizontal_2">
-         <property name="text">
-          <string>Thunar split view opens horizontal</string>
          </property>
         </widget>
        </item>
