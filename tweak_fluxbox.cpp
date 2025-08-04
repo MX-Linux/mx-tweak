@@ -10,19 +10,19 @@ TweakFluxbox::TweakFluxbox(Ui::defaultlook *ui, bool verbose, QObject *parent)
 {
     setup();
     connect(ui->pushFluxboxApply, &QPushButton::clicked, this, &TweakFluxbox::pushFluxboxApply_clicked);
-    connect(ui->checkFluxboxShowToolbar, &QCheckBox::clicked, this, &TweakFluxbox::checkFluxboxShowToolbar_clicked);
-    connect(ui->checkFluxboxResetDock, &QCheckBox::clicked, this, &TweakFluxbox::checkFluxboxResetDock_clicked);
+    connect(ui->checkFluxboxShowToolbar, &QCheckBox::clicked, this, &TweakFluxbox::slotSettingChanged);
+    connect(ui->checkFluxboxResetDock, &QCheckBox::clicked, this, &TweakFluxbox::slotSettingChanged);
     connect(ui->checkFluxboxResetEverything, &QCheckBox::clicked, this, &TweakFluxbox::checkFluxboxResetEverything_clicked);
     connect(ui->checkFluxboxResetMenu, &QCheckBox::clicked, this, &TweakFluxbox::checkFluxboxResetMenu_clicked);
     connect(ui->checkFluxboxMenuMigrate, &QCheckBox::clicked, this, &TweakFluxbox::checkFluxboxMenuMigrate_clicked);
     connect(ui->spinFluxboxScreenBlankingTimeout, &QSpinBox::valueChanged, this, &TweakFluxbox::spinFluxboxScreenBlankingTimeout_valueChanged);
-    connect(ui->comboFluxboxToolbarLocation, &QComboBox::currentIndexChanged, this, &TweakFluxbox::comboFluxboxToolbarLocation_currentIndexChanged);
-    connect(ui->checkFluxboxToolbarAutoHide, &QCheckBox::clicked, this, &TweakFluxbox::checkFluxboxToolbarAutoHide_clicked);
-    connect(ui->checkFluxboxShowToolbar, &QCheckBox::clicked, this, &TweakFluxbox::checkFluxboxShowToolbar_clicked);
-    connect(ui->spinFluxboxToolbarHeight, &QSpinBox::valueChanged, this, &TweakFluxbox::spinFluxboxToolbarHeight_valueChanged);
-    connect(ui->spinFluxboxToolbarWidth, &QSpinBox::valueChanged, this, &TweakFluxbox::spinFluxboxToolbarWidth_valueChanged);
+    connect(ui->comboFluxboxToolbarLocation, &QComboBox::currentIndexChanged, this, &TweakFluxbox::slotSettingChanged);
+    connect(ui->checkFluxboxToolbarAutoHide, &QCheckBox::clicked, this, &TweakFluxbox::slotSettingChanged);
+    connect(ui->checkFluxboxShowToolbar, &QCheckBox::clicked, this, &TweakFluxbox::slotSettingChanged);
+    connect(ui->spinFluxboxToolbarWidth, &QSpinBox::valueChanged, this, &TweakFluxbox::slotSettingChanged);
+    connect(ui->spinFluxboxToolbarHeight, &QSpinBox::valueChanged, this, &TweakFluxbox::slotSettingChanged);
     connect(ui->comboFluxboxSlitLocation, &QComboBox::currentIndexChanged, this, &TweakFluxbox::comboFluxboxSlitLocation_currentIndexChanged);
-    connect(ui->checkFluxboxSlitAutoHide, &QCheckBox::clicked, this, &TweakFluxbox::checkFluxboxSlitAutoHide_clicked);
+    connect(ui->checkFluxboxSlitAutoHide, &QCheckBox::clicked, this, &TweakFluxbox::slotSettingChanged);
     connect(ui->comboFluxboxIcons, &QComboBox::currentIndexChanged, this, &TweakFluxbox::comboFluxboxIcons_currentIndexChanged);
     connect(ui->comboFluxboxCaptions, &QComboBox::currentIndexChanged, this, &TweakFluxbox::comboFluxboxCaptions_currentIndexChanged);
 }
@@ -138,8 +138,14 @@ void TweakFluxbox::changeDock() const
     }
 }
 
+void TweakFluxbox::slotSettingChanged()
+{
+    ui->pushFluxboxApply->setEnabled(true);
+}
 void TweakFluxbox::pushFluxboxApply_clicked()
 {
+    ui->tabFluxbox->setEnabled(false);
+
     // toggle icons
     // flux captions - 0=on 1=off 2=On Hover
     enum FluxCaptions {On, Off, OnHover};
@@ -295,12 +301,10 @@ void TweakFluxbox::pushFluxboxApply_clicked()
     ui->checkFluxboxMenuMigrate->setChecked(false);
     runCmd(u"sleep 2; /usr/bin/fluxbox-remote restart"_s);
     setup();
+
+    ui->tabFluxbox->setEnabled(true);
 }
 
-void TweakFluxbox::checkFluxboxResetDock_clicked()
-{
-    ui->pushFluxboxApply->setEnabled(true);
-}
 void TweakFluxbox::checkFluxboxMenuMigrate_clicked()
 {
     ui->pushFluxboxApply->setEnabled(true);
@@ -323,34 +327,10 @@ void TweakFluxbox::spinFluxboxScreenBlankingTimeout_valueChanged(int)
     flags.screenBlank = true;
     ui->pushFluxboxApply->setEnabled(true);
 }
-void TweakFluxbox::comboFluxboxToolbarLocation_currentIndexChanged(int  /*index*/)
-{
-    ui->pushFluxboxApply->setEnabled(true);
-}
-void TweakFluxbox::checkFluxboxToolbarAutoHide_clicked()
-{
-    ui->pushFluxboxApply->setEnabled(true);
-}
-void TweakFluxbox::checkFluxboxShowToolbar_clicked()
-{
-    ui->pushFluxboxApply->setEnabled(true);
-}
-void TweakFluxbox::spinFluxboxToolbarWidth_valueChanged(int  /*arg1*/)
-{
-    ui->pushFluxboxApply->setEnabled(true);
-}
-void TweakFluxbox::spinFluxboxToolbarHeight_valueChanged(int  /*arg1*/)
-{
-    ui->pushFluxboxApply->setEnabled(true);
-}
 void TweakFluxbox::comboFluxboxSlitLocation_currentIndexChanged(int  /*index*/)
 {
     ui->pushFluxboxApply->setEnabled(true);
     flags.slit = true;
-}
-void TweakFluxbox::checkFluxboxSlitAutoHide_clicked()
-{
-    ui->pushFluxboxApply->setEnabled(true);
 }
 void TweakFluxbox::comboFluxboxIcons_currentIndexChanged(int  /*index*/)
 {

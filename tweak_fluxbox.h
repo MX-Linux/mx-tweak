@@ -26,19 +26,14 @@ private:
         bool screenBlank : 1;
     } flags = {};
 
+    void slotSettingChanged();
     void pushFluxboxApply_clicked();
-    void checkFluxboxResetDock_clicked();
+
     void checkFluxboxResetEverything_clicked();
     void checkFluxboxResetMenu_clicked();
     void checkFluxboxMenuMigrate_clicked();
     void spinFluxboxScreenBlankingTimeout_valueChanged(int);
-    void comboFluxboxToolbarLocation_currentIndexChanged(int index);
-    void checkFluxboxToolbarAutoHide_clicked();
-    void checkFluxboxShowToolbar_clicked();
-    void spinFluxboxToolbarHeight_valueChanged(int arg1);
-    void spinFluxboxToolbarWidth_valueChanged(int arg1);
     void comboFluxboxSlitLocation_currentIndexChanged(int index);
-    void checkFluxboxSlitAutoHide_clicked();
     void comboFluxboxIcons_currentIndexChanged(int index);
     void comboFluxboxCaptions_currentIndexChanged(int index);
 
