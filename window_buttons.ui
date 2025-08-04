@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ui version="4.0">
+<ui version="4.0" connectslotsbyname="false">
  <class>window_buttons</class>
  <widget class="QDialog" name="window_buttons">
   <property name="geometry">

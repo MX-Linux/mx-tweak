@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ui version="4.0">
+<ui version="4.0" connectslotsbyname="false">
  <class>xfwm_compositor_settings</class>
  <widget class="QDialog" name="xfwm_compositor_settings">
   <property name="geometry">
