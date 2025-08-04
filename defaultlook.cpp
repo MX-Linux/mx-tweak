@@ -1688,19 +1688,6 @@ void defaultlook::setupConfigoptions()
             ui->label_hibernate->hide();
         }
 
-        // also hide hibernate if /etc/uswsusp.conf is missing
-        //only on mx-21 and up
-        test = runCmd(u"cat /etc/mx-version"_s).output;
-        if ( test.contains("MX-19"_L1)) {
-            QFileInfo file(u"/etc/uswsusp.conf"_s);
-            if (file.exists()) {
-                if (verbose) qDebug() << "uswsusp.conf found";
-            } else {
-                ui->checkBoxHibernate->hide();
-                ui->label_hibernate->hide();
-            }
-        }
-
         //and hide hibernate if swap is encrypted
         QString cmd = u"grep swap /etc/crypttab |grep -q luks"_s;
         int swaptest2 = system(cmd.toUtf8());
@@ -2904,14 +2891,6 @@ void defaultlook::on_ButtonApplyMiscDefualts_clicked()
             system("xfconf-query -c xfce4-session -p /shutdown/ShowHibernate -t bool -s true --create");
         } else {
             system("xfconf-query -c xfce4-session -p /shutdown/ShowHibernate -t bool -s false --create");
-        }
-    }
-
-    //only do this part on MX-19.  MX-21 and later do not have uswsusp
-    if ( !hibernate_option.isEmpty() ) {
-        QString test = runCmd(u"cat /etc/mx-version"_s).output;
-        if (test.contains("MX-19"_L1)) {
-            runCmd("x-terminal-emulator -e 'pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh "_L1 + hibernate_option + '\'');
         }
     }
 
