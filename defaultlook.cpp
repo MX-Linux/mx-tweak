@@ -229,11 +229,15 @@ void defaultlook::setup()
     if (QFile::exists(u"/usr/bin/thunar"_s)) {
         if (isFluxbox) {
             ui->layoutFluxboxTab->replaceWidget(ui->widgetFluxboxThunar, ui->groupThunar);
+            connect(ui->ApplyFluxboxResets, &QCheckBox::clicked, this, &defaultlook::applyThunar);
+        } else {
+            connect(ui->ButtonApplyMiscDefualts, &QPushButton::clicked, this, &defaultlook::applyThunar);
         }
         connect(ui->checkThunarSingleClick, &QCheckBox::clicked, this, &defaultlook::slotThunarChanged);
         connect(ui->checkThunarResetCustomActions, &QCheckBox::clicked, this, &defaultlook::slotThunarChanged);
         connect(ui->checkThunarSplitView, &QCheckBox::clicked, this, &defaultlook::slotThunarChanged);
         connect(ui->checkThunarSplitViewHorizontal, &QCheckBox::clicked, this, &defaultlook::slotThunarChanged);
+        setupThunar();
     }
 
     //copy template file to ~/.local/share/mx-tweak-data if it doesn't exist
@@ -1297,11 +1301,6 @@ void defaultlook::setupFluxbox()
     if (verbose) qDebug() << "slit autohide" << slitautohide;
     ui->checkboxfluxSlitautohide->setChecked(slitautohide == "true"_L1);
     ui->ApplyFluxboxResets->setDisabled(true);
-
-    // Setup thunar options (only if thunar exists)
-    if (QFile::exists(u"/usr/bin/thunar"_s)) {
-        setupThunar();
-    }
 }
 
 void defaultlook::setupEtc()
@@ -1816,8 +1815,6 @@ void defaultlook::setupConfigoptions()
             ui->checkBoxHibernate->setChecked(false);
             hibernate_flag = false;
         }
-
-        setupThunar();
     }
 }
 
@@ -3999,6 +3996,8 @@ void defaultlook::applyThunar()
     } else {
         runCmd(u"xfconf-query -c thunar -p /misc-vertical-split-pane --reset"_s);
     }
+
+    setupThunar();
 }
 void defaultlook::slotThunarChanged()
 {
