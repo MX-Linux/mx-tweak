@@ -1239,7 +1239,7 @@
         </widget>
        </item>
        <item row="1" column="0" colspan="3">
-        <widget class="QCheckBox" name="checkboxfluxresetdock">
+        <widget class="QCheckBox" name="checkFluxboxResetDock">
          <property name="text">
           <string>Reset DefaultDock</string>
          </property>
@@ -1253,7 +1253,7 @@
         </widget>
        </item>
        <item row="1" column="4">
-        <widget class="QComboBox" name="comboBoxfluxIcons">
+        <widget class="QComboBox" name="comboFluxboxIcons">
          <item>
           <property name="text">
            <string>On</string>
@@ -1267,7 +1267,7 @@
         </widget>
        </item>
        <item row="2" column="0" colspan="3">
-        <widget class="QCheckBox" name="checkboxfluxresetmenu">
+        <widget class="QCheckBox" name="checkFluxboxResetMenu">
          <property name="text">
           <string>Reset Fluxbox Menu</string>
          </property>
@@ -1281,7 +1281,7 @@
         </widget>
        </item>
        <item row="2" column="4">
-        <widget class="QComboBox" name="comboBoxfluxcaptions">
+        <widget class="QComboBox" name="comboFluxboxCaptions">
          <property name="currentIndex">
           <number>0</number>
          </property>
@@ -1316,7 +1316,7 @@
         </spacer>
        </item>
        <item row="3" column="0" colspan="3">
-        <widget class="QCheckBox" name="checkboxfluxreseteverything">
+        <widget class="QCheckBox" name="checkFluxboxResetEverything">
          <property name="text">
           <string>Reset ALL mx-fluxbox settings</string>
          </property>
@@ -1326,9 +1326,9 @@
         <widget class="QWidget" name="widgetFluxboxThunar"/>
        </item>
        <item row="4" column="0" colspan="3">
-        <widget class="QCheckBox" name="checkBoxMenuMigrate">
+        <widget class="QCheckBox" name="checkFluxboxMenuMigrate">
          <property name="toolTip">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          <string>Add new default menu items, if any, to existing fluxbox menu.</string>
          </property>
          <property name="text">
           <string>Upgrade existing menu entries</string>
@@ -1353,7 +1353,7 @@
         </widget>
        </item>
        <item row="6" column="1">
-        <widget class="QSpinBox" name="spinBoxScreenBlankingTimeout">
+        <widget class="QSpinBox" name="spinFluxboxScreenBlankingTimeout">
          <property name="specialValueText">
           <string extracomment="setting to 0 turns off screensaver screen blank">off</string>
          </property>
@@ -1377,7 +1377,7 @@
         </widget>
        </item>
        <item row="9" column="1">
-        <widget class="QComboBox" name="combofluxtoolbarlocatoin">
+        <widget class="QComboBox" name="comboFluxboxToolbarLocation">
          <property name="currentText">
           <string notr="true">TopLeft</string>
          </property>
@@ -1458,17 +1458,17 @@
         </widget>
        </item>
        <item row="9" column="4">
-        <widget class="QSpinBox" name="spinBoxFluxToolbarWidth"/>
+        <widget class="QSpinBox" name="spinFluxboxToolbarWidth"/>
        </item>
        <item row="10" column="0">
-        <widget class="QCheckBox" name="checkboxfluxtoolbarautohide">
+        <widget class="QCheckBox" name="checkFluxboxToolbarAutoHide">
          <property name="text">
           <string>Autohide</string>
          </property>
         </widget>
        </item>
        <item row="10" column="1">
-        <widget class="QCheckBox" name="checkBoxFluxShowToolbar">
+        <widget class="QCheckBox" name="checkFluxboxShowToolbar">
          <property name="text">
           <string>Show Toolbar</string>
          </property>
@@ -1482,7 +1482,7 @@
         </widget>
        </item>
        <item row="10" column="4">
-        <widget class="QSpinBox" name="spinBoxFluxToolbarHeight"/>
+        <widget class="QSpinBox" name="spinFluxboxToolbarHeight"/>
        </item>
        <item row="11" column="0">
         <widget class="QLabel" name="label_19">
@@ -1492,14 +1492,14 @@
         </widget>
        </item>
        <item row="12" column="0">
-        <widget class="QLabel" name="label_slit_location">
+        <widget class="QLabel" name="labelFluxboxSlitLocation">
          <property name="text">
           <string>Placement</string>
          </property>
         </widget>
        </item>
        <item row="12" column="1">
-        <widget class="QComboBox" name="combofluxslitlocation">
+        <widget class="QComboBox" name="comboFluxboxSlitLocation">
          <property name="currentText">
           <string notr="true">TopLeft</string>
          </property>
@@ -1566,7 +1566,7 @@
         </widget>
        </item>
        <item row="12" column="3" colspan="2">
-        <widget class="QPushButton" name="buttonManageTint2">
+        <widget class="QPushButton" name="pushManageTint2">
          <property name="text">
           <string>Manage Tint2 Panel</string>
          </property>
@@ -1576,7 +1576,7 @@
         </widget>
        </item>
        <item row="13" column="0">
-        <widget class="QCheckBox" name="checkboxfluxSlitautohide">
+        <widget class="QCheckBox" name="checkFluxboxSlitAutoHide">
          <property name="text">
           <string>Autohide</string>
          </property>
@@ -1590,7 +1590,7 @@
         </spacer>
        </item>
        <item row="15" column="0" colspan="6">
-        <widget class="QPushButton" name="ApplyFluxboxResets">
+        <widget class="QPushButton" name="pushFluxboxApply">
          <property name="minimumSize">
           <size>
            <width>0</width>

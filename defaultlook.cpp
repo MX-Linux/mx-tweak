@@ -41,6 +41,7 @@
 #include "about.h"
 #include "cmd.h"
 #include "tweak_plasma.h"
+#include "tweak_fluxbox.h"
 #include "defaultlook.h"
 #include "remove_user_theme_set.h"
 #include "theming_to_tweak.h"
@@ -91,6 +92,9 @@ defaultlook::~defaultlook()
 {
     if (tweakPlasma) {
         delete tweakPlasma;
+    }
+    if (tweakFluxbox) {
+        delete tweakFluxbox;
     }
     delete ui;
 }
@@ -185,11 +189,12 @@ void defaultlook::setup()
         ui->tabWidget->removeTab(Tab::Compositor);
         ui->tabWidget->removeTab(Tab::Panel);
         ui->checkBoxFluxboxLegacyStyles->show();
-        setupFluxbox();
+        tweakFluxbox = new TweakFluxbox(ui, verbose, this);
         setuptheme();
         //setup other tab;
         setupEtc();
 
+        connect(ui->pushManageTint2, &QPushButton::clicked, this, &defaultlook::pushManageTint2_clicked);
     }
 //Panel, Theme, Compositor, Display, Config, Fluxbox, Plasma, Superkey, Others
     //setup plasma
@@ -229,7 +234,7 @@ void defaultlook::setup()
     if (QFile::exists(u"/usr/bin/thunar"_s)) {
         if (isFluxbox) {
             ui->layoutFluxboxTab->replaceWidget(ui->widgetFluxboxThunar, ui->groupThunar);
-            connect(ui->ApplyFluxboxResets, &QCheckBox::clicked, this, &defaultlook::applyThunar);
+            connect(ui->pushFluxboxApply, &QCheckBox::clicked, this, &defaultlook::applyThunar);
         } else {
             connect(ui->ButtonApplyMiscDefualts, &QPushButton::clicked, this, &defaultlook::applyThunar);
         }
@@ -721,13 +726,6 @@ bool defaultlook::checkXFCE() const
     return (!test.isEmpty());
 }
 
-bool defaultlook::checkFluxbox() const
-{
-    QString test = runCmd(u"pgrep fluxbox"_s).output;
-    if (verbose) qDebug() << "current fluxbox test is" << test;
-    return (!test.isEmpty());
-}
-
 bool defaultlook::checklightdm()
 {
     QFileInfo test(u"/etc/lightdm/lightdm-gtk-greeter.conf"_s);
@@ -1207,100 +1205,6 @@ void defaultlook::setuppanel()
     }
 
     panelflag = true;
-}
-
-
-void defaultlook::setupFluxbox()
-{
-    //resets
-    QFileInfo resetALL(u"/usr/bin/mxflux_install.sh"_s);
-    QFileInfo resetDefaultDock(u"/etc/skel/.fluxbox/scripts/DefaultDock.mxdk"_s);
-    QFileInfo resetDefaultMenu(u"/etc/skel/.fluxbox/menu-mx"_s);
-    QFileInfo idesktogglepresent(u"/usr/bin/idesktoggle"_s);
-    QFileInfo ideskpresent(u"/usr/bin/idesk"_s);
-    QFileInfo menumigrate(u"/usr/bin/menu-migrate"_s);
-
-    if (!menumigrate.exists()) {
-        ui->checkBoxMenuMigrate->setDisabled(true);
-    }
-
-    if (!resetALL.exists()) {
-        ui->checkboxfluxreseteverything->setDisabled(true);
-    }
-
-    if (!resetDefaultDock.exists()) {
-        ui->checkboxfluxresetdock->setDisabled(true);
-    }
-
-    if (!resetDefaultMenu.exists()) {
-        ui->checkboxfluxresetmenu->setDisabled(true);
-    }
-
-    if (!idesktogglepresent.exists() || !ideskpresent.exists()) {
-        ui->comboBoxfluxIcons->setDisabled(true);
-        ui->comboBoxfluxcaptions->setDisabled(true);
-    } else {
-        QString test;
-        test = runCmd(u"grep \\#Caption $HOME/.idesktop/*.lnk"_s).output;
-        if (test.isEmpty()) {
-            ui->comboBoxfluxcaptions->setCurrentIndex(0);
-            test = runCmd(u"grep CaptionOnHover $HOME/.ideskrc |grep -v ToolTip"_s).output.section(u":"_s,1,1).trimmed();
-            if (verbose) qDebug() << "hover test" << test;
-            if (test.contains("true"_L1)) {
-                ui->comboBoxfluxcaptions->setCurrentIndex(2);
-            }
-        }
-        test = runCmd(u"grep \\#Icon $HOME/.idesktop/*.lnk"_s).output;
-        if (test.isEmpty()) {
-            ui->comboBoxfluxIcons->setCurrentIndex(0);
-        }
-
-    }
-
-    fluxiconflag = false;
-    fluxcaptionflag =false;
-
-    //screenblanking value;
-    QString screenblanktimeout = runCmd(u"xset q |grep timeout | awk '{print $2}'"_s).output.trimmed();
-    ui->spinBoxScreenBlankingTimeout->setValue(screenblanktimeout.toInt()/60);
-    ui->spinBoxScreenBlankingTimeout->setToolTip(u"set to 0 minutes to disable screensaver"_s);
-
-    //toolbar autohide
-    QString toolbarautohide = runCmd(u"grep screen0.toolbar.autoHide $HOME/.fluxbox/init"_s).output.section(u":"_s,1,1).trimmed();
-    if (verbose) qDebug() << "Toolbar autohide" << toolbarautohide;
-    if (toolbarautohide == "true"_L1) {
-        ui->checkboxfluxtoolbarautohide->setChecked(true);
-    } else {
-        ui->checkboxfluxtoolbarautohide->setChecked(false);
-    }
-    QString toolbarvisible = runCmd(u"grep session.screen0.toolbar.visible: $HOME/.fluxbox/init"_s).output.section(u":"_s,1,1).trimmed();
-    if (verbose) qDebug() << "Toolbar visible" << toolbarautohide;
-    if (toolbarvisible == "true"_L1) {
-        ui->checkBoxFluxShowToolbar->setChecked(true);
-    } else {
-        ui->checkBoxFluxShowToolbar->setChecked(false);
-    }
-    //toolbar location
-    QString toolbarlocation = runCmd(u"grep screen0.toolbar.placement $HOME/.fluxbox/init"_s).output.section(u":"_s,1,1).trimmed();
-    if (verbose) qDebug() << "Toolbar location" << toolbarlocation;
-    ui->combofluxtoolbarlocatoin->setCurrentText(toolbarlocation);
-    //slit location
-    QString slitlocation = runCmd(u"grep screen0.slit.placement $HOME/.fluxbox/init"_s).output.section(u":"_s,1,1).trimmed();
-    if (verbose) qDebug() << "Slit location" << slitlocation;
-    ui->combofluxslitlocation->setCurrentText(slitlocation);
-    //toolbar width;
-    QString toolbarwidth = runCmd(u"grep screen0.toolbar.widthPercent $HOME/.fluxbox/init"_s).output.section(u":"_s,1,1).trimmed();
-    if (verbose) qDebug() << "Toolbar width" << toolbarwidth;
-    ui->spinBoxFluxToolbarWidth->setValue(toolbarwidth.toInt());
-    //toolbar height
-    QString toolbarheight = runCmd(u"grep screen0.toolbar.height $HOME/.fluxbox/init"_s).output.section(u":"_s,1,1).trimmed();
-    if (verbose) qDebug() << "Toolbar height" << toolbarheight;
-    ui->spinBoxFluxToolbarHeight->setValue(toolbarheight.toInt());
-    //slit autohide
-    QString slitautohide = runCmd(u"grep screen0.slit.autoHide $HOME/.fluxbox/init"_s).output.section(u":"_s,1,1).trimmed();
-    if (verbose) qDebug() << "slit autohide" << slitautohide;
-    ui->checkboxfluxSlitautohide->setChecked(slitautohide == "true"_L1);
-    ui->ApplyFluxboxResets->setDisabled(true);
 }
 
 void defaultlook::setupEtc()
@@ -3226,268 +3130,6 @@ void defaultlook::on_checkBoxSandbox_clicked()
     sandboxflag = true;
 }
 
-void defaultlook::on_ApplyFluxboxResets_clicked()
-{
-    // toggle icons
-    // flux captions - 0=on 1=off 2=On Hover
-    enum FluxCaptions {On, Off, OnHover};
-
-    if (fluxcaptionflag) {
-        switch(ui->comboBoxfluxcaptions->currentIndex()) {
-        case FluxCaptions::On:
-            runCmd(u"/usr/bin/idesktoggle caption on"_s);
-            runCmd(u"/usr/bin/idesktoggle CaptionOnHover off"_s);
-            break;
-        case FluxCaptions::Off:
-            runCmd(u"/usr/bin/idesktoggle caption off"_s);
-            break;
-        case FluxCaptions::OnHover:
-            runCmd(u"/usr/bin/idesktoggle caption on"_s);
-            runCmd(u"/usr/bin/idesktoggle CaptionOnHover On"_s);
-            break;
-        }
-    }
-
-    // flux icons 0=on 1=off
-    if (fluxiconflag) {
-        switch(ui->comboBoxfluxIcons->currentIndex()) {
-        case 0:
-            runCmd(u"/usr/bin/idesktoggle Icon on"_s);
-            break;
-        case 1:
-            runCmd(u"/usr/bin/idesktoggle Icon off"_s);
-            break;
-        }
-    }
-
-    //setup slit autohide
-    //get slit line
-    QString initline;
-    QString value;
-    if (ui->checkboxfluxSlitautohide->isChecked()) {
-        value = u"true"_s;
-    } else {
-        value = u"false"_s;
-    }
-    initline = runCmd(u"grep screen0.slit.autoHide  $HOME/.fluxbox/init"_s).output;
-    fluxboxchangeinitvariable(initline,value);
-
-    //set slit placement
-    //setup toolbar location
-    value = ui->combofluxslitlocation->currentText();
-    initline = runCmd(u"grep screen0.slit.placement  $HOME/.fluxbox/init"_s).output;
-    fluxboxchangeinitvariable(initline,value);
-    fluxboxchangedock();
-
-    //setup toolbar autohide
-    if (ui->checkboxfluxtoolbarautohide->isChecked()) {
-        value = u"true"_s;
-    } else {
-        value = u"false"_s;
-    }
-    initline = runCmd(u"grep screen0.toolbar.autoHide  $HOME/.fluxbox/init"_s).output;
-    fluxboxchangeinitvariable(initline,value);
-
-    //setup toolbar visible
-    if (ui->checkBoxFluxShowToolbar->isChecked()) {
-        value = u"true"_s;
-    } else {
-        value = u"false"_s;
-    }
-    initline = runCmd(u"grep session.screen0.toolbar.visible  $HOME/.fluxbox/init"_s).output;
-    fluxboxchangeinitvariable(initline,value);
-
-    //setup toolbar location
-    value = ui->combofluxtoolbarlocatoin->currentText();
-    initline = runCmd(u"grep screen0.toolbar.placement  $HOME/.fluxbox/init"_s).output;
-    fluxboxchangeinitvariable(initline,value);
-
-    //setup toolbar widthpercent
-    value = QString::number(ui->spinBoxFluxToolbarWidth->value(), 'G', 5);
-    initline = runCmd(u"grep screen0.toolbar.widthPercent  $HOME/.fluxbox/init"_s).output;
-    fluxboxchangeinitvariable(initline,value);
-
-    //setup toolbar height
-    value = QString::number(ui->spinBoxFluxToolbarHeight->value(), 'G', 5);
-    initline = runCmd(u"grep screen0.toolbar.height  $HOME/.fluxbox/init"_s).output;
-    fluxboxchangeinitvariable(initline,value);
-
-    //Reset Everything
-    if (ui->checkboxfluxreseteverything->isChecked()) {
-        ui->checkboxfluxresetdock->setChecked(false);
-        ui->checkboxfluxresetmenu->setChecked(false);
-        ui->checkBoxMenuMigrate->setChecked(false);
-        runCmd(u"/usr/bin/mxflux_install.sh"_s);
-        runCmd(u"pkill wmalauncher"_s);
-        runCmd(u"$HOME/.fluxbox/scripts/DefaultDock.mxdk"_s);
-    }
-
-    //Reset Menu
-    if (ui->checkboxfluxresetmenu->isChecked() && !ui->checkboxfluxreseteverything->isChecked()) {
-        //determine menu in use
-        QString menumx = runCmd(u"grep session.menuFile $HOME/.fluxbox/init"_s).output.section(u":"_s,1,1).trimmed();
-        if (verbose) qDebug() << "menu mx is " << menumx;
-        //backup menu
-        runCmd("cp "_L1 + menumx + ' ' + menumx + ".$(date +%Y%m%d%H%M%S)"_L1);
-        //copy menu-mx from /etc/skel/.fluxbox
-        runCmd(u"cp /etc/skel/.fluxbox/menu-mx $HOME/.fluxbox"_s);
-        //run localize-fluxbox-menu to generate new menu
-        runCmd(u"localize_fluxbox_menu-mx"_s);
-    }
-
-    //Migrate Menu
-    if (ui->checkBoxMenuMigrate->isChecked() && !ui->checkboxfluxreseteverything->isChecked()) {
-        //run menu-migrate script
-        runCmd(u"/usr/bin/menu-migrate"_s);
-    }
-
-    //Reset Dock
-    if (ui->checkboxfluxresetdock->isChecked() && !ui->checkboxfluxreseteverything->isChecked()) {
-        //copy backup dock and copy one from usr/share/mxflux/.fluxbox/scripts
-        runCmd(u"cp $HOME/.fluxbox/scripts/DefaultDock.mxdk $HOME/.fluxbox/scripts/DefaultDock.mxdk.$(date +%Y%m%d%H%M%S)"_s);
-        runCmd(u"cp /etc/skel/.fluxbox/scripts/DefaultDock.mxdk $HOME/.fluxbox/scripts/DefaultDock.mxdk"_s);
-        runCmd(u"pkill wmalauncher"_s);
-        runCmd(u"$HOME/.fluxbox/scripts/DefaultDock.mxdk"_s);
-    }
-
-    //screenblanking
-    if (screenblankflag){
-        //comment default line if it exists
-        runCmd(u"sed -i 's/^[[:blank:]]*xset[[:blank:]].*dpms.*/#&/' $HOME/.fluxbox/startup"_s);
-        //add new values to fluxbox startup menu if don't exist
-        QString test = runCmd(u"grep '$HOME/.config/MX-Linux/screenblanking-mxtweak' $HOME/.fluxbox/startup"_s).output;
-        if (test.isEmpty()){ 
-            //add comment and new config file
-            runCmd(u"sed -i '/^exec.*/i#screenblanking added by mx-tweak' $HOME/.fluxbox/startup"_s);
-            runCmd(u"sed -i '/^exec.*/i$HOME\\/.config\\/MX-Linux\\/screenblanking-mxtweak &' $HOME/.fluxbox/startup"_s);
-            //blank space before exec
-            runCmd(u"sed -i '/^exec.*/i\\\\' $HOME/.fluxbox/startup"_s);
-        }
-        //set new value
-        int value = ui->spinBoxScreenBlankingTimeout->value() * 60;
-        runCmd(u"echo \\#\\!/bin/bash >$HOME/.config/MX-Linux/screenblanking-mxtweak"_s);
-        QString cmd = "xset dpms "_L1 + QString::number(value) + ' ' + QString::number(value) + ' ' + QString::number(value);
-        runCmd(cmd);
-        runCmd("echo "_L1 + cmd + " >>$HOME/.config/MX-Linux/screenblanking-mxtweak"_L1);
-        cmd = "xset s "_L1 + QString::number(value);
-        runCmd(cmd);
-        runCmd("echo "_L1 + cmd + " >>$HOME/.config/MX-Linux/screenblanking-mxtweak"_L1);
-        //make sure script is executable
-        runCmd(u"chmod a+x $HOME/.config/MX-Linux/screenblanking-mxtweak"_s);
-    }
-
-    //thunar actions (only if thunar installed)
-    if (QFile::exists(u"/usr/bin/thunar"_s)) {
-        applyThunar();
-    }
-    //when all done, restart fluxbox
-    ui->checkboxfluxresetdock->setChecked(false);
-    ui->checkboxfluxresetmenu->setChecked(false);
-    ui->checkboxfluxreseteverything->setChecked(false);
-    ui->checkBoxMenuMigrate->setChecked(false);
-    runCmd(u"sleep 2; /usr/bin/fluxbox-remote restart"_s);
-    setupFluxbox();
-}
-
-void defaultlook::fluxboxchangeinitvariable(const QString &initline, const QString &value) const
-{
-    if (verbose) qDebug() << "checking for init value changes";
-    QString initialvalue = initline.section(':',1,1).trimmed();
-    if ( initialvalue != value) {
-        QString cmd = "sed -i 's/^"_L1 + initline +'/' + initline.section(':',0,0).trimmed() + ":    "_L1 + value + "/' $HOME/.fluxbox/init"_L1;
-        if (verbose) qDebug() << "init change command " << cmd;
-        runCmd(cmd);
-    }
-}
-
-void defaultlook::fluxboxchangedock() const
-{
-    if (verbose) qDebug() << "comment slit changes in mxdk files";
-
-    if (slitflag) {
-        runCmd(u"sed -i 's/^fluxbox-remote/#&/' $HOME/.fluxbox/scripts/*.mxdk"_s);
-        runCmd(u"sed -i 's/^sed/#&/' $HOME/.fluxbox/scripts/*.mxdk"_s);
-    }
-}
-
-void defaultlook::on_checkboxfluxresetdock_clicked()
-{
-    ui->ApplyFluxboxResets->setEnabled(true);
-}
-
-void defaultlook::on_checkBoxMenuMigrate_clicked()
-{
-    ui->ApplyFluxboxResets->setEnabled(true);
-    ui->checkboxfluxresetmenu->setChecked(false);
-}
-
-
-void defaultlook::on_checkboxfluxresetmenu_clicked()
-{
-    ui->ApplyFluxboxResets->setEnabled(true);
-    ui->checkBoxMenuMigrate->setChecked(false);
-}
-
-void defaultlook::on_checkboxfluxreseteverything_clicked()
-{
-    ui->ApplyFluxboxResets->setEnabled(true);
-    ui->checkboxfluxresetdock->setChecked(false);
-    ui->checkboxfluxresetmenu->setChecked(false);
-    ui->checkBoxMenuMigrate->setChecked(false);
-}
-
-void defaultlook::on_combofluxtoolbarlocatoin_currentIndexChanged(int  /*index*/)
-{
-    if (setupflag){
-    ui->ApplyFluxboxResets->setEnabled(true);
-    }
-}
-
-void defaultlook::on_checkboxfluxtoolbarautohide_clicked()
-{
-    ui->ApplyFluxboxResets->setEnabled(true);
-}
-
-void defaultlook::on_spinBoxFluxToolbarWidth_valueChanged(int  /*arg1*/)
-{
-    ui->ApplyFluxboxResets->setEnabled(true);
-}
-
-void defaultlook::on_spinBoxFluxToolbarHeight_valueChanged(int  /*arg1*/)
-{
-    ui->ApplyFluxboxResets->setEnabled(true);
-}
-
-void defaultlook::on_combofluxslitlocation_currentIndexChanged(int  /*index*/)
-{
-    if (setupflag){
-        ui->ApplyFluxboxResets->setEnabled(true);
-        slitflag = true;
-    }
-}
-
-void defaultlook::on_checkboxfluxSlitautohide_clicked()
-{
-    ui->ApplyFluxboxResets->setEnabled(true);
-}
-
-
-void defaultlook::on_comboBoxfluxIcons_currentIndexChanged(int  /*index*/)
-{
-    if (setupflag){
-        ui->ApplyFluxboxResets->setEnabled(true);
-        fluxiconflag = true;
-    }
-}
-
-void defaultlook::on_comboBoxfluxcaptions_currentIndexChanged(int  /*index*/)
-{
-    if (setupflag){
-        ui->ApplyFluxboxResets->setEnabled(true);
-        fluxcaptionflag = true;
-    }
-}
-
 void defaultlook::populatethemelists(const QString &value)
 {
     themeflag = false;
@@ -3908,12 +3550,7 @@ void defaultlook::on_checkBoxbluetoothAutoEnable_clicked()
     if (verbose) qDebug() << "bluetooth flag is " << bluetoothautoenableflag;
 }
 
-void defaultlook::on_checkBoxFluxShowToolbar_clicked()
-{
-    ui->ApplyFluxboxResets->setEnabled(true);
-}
-
-void defaultlook::on_buttonManageTint2_clicked()
+void defaultlook::pushManageTint2_clicked()
 {
     this->hide();
     system("/usr/bin/mxfb-tint2-manager");
@@ -4002,7 +3639,7 @@ void defaultlook::applyThunar()
 void defaultlook::slotThunarChanged()
 {
     if (ui->tabFluxbox->isVisible()) {
-        ui->ApplyFluxboxResets->setEnabled(true);
+        ui->pushFluxboxApply->setEnabled(true);
     } else {
         ui->ButtonApplyMiscDefualts->setEnabled(true);
     }
@@ -4077,12 +3714,6 @@ void defaultlook::tasklistchange(){
 void defaultlook::on_checkBoxDisableFluxboxMenuGeneration_clicked()
 {
     ui->ButtonApplyEtc->setEnabled(true);
-}
-
-void defaultlook::on_spinBoxScreenBlankingTimeout_valueChanged(int)
-{
-    screenblankflag = true;
-    ui->ApplyFluxboxResets->setEnabled(true);
 }
 
 void defaultlook::on_toolButtonSuperFileBrowser_clicked()

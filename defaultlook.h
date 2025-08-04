@@ -82,14 +82,10 @@ public:
     bool displaysetupflag = false;
     bool brightnessflag = false;
     bool sandboxflag = false;
-    bool slitflag = false;
-    bool fluxcaptionflag = false;
-    bool fluxiconflag = false;
     bool themeflag = false;
     bool validateflag = false;
     bool tasklistflag = false;
     bool cursor_size_flag = false;
-    bool screenblankflag = false;
     void tasklistchange();
     bool isXfce = false;
     bool isFluxbox = false;
@@ -117,7 +113,6 @@ public:
     void populatethemelists(const QString &value);
     static void settheme(const QString &type, const QString &theme, const QString &desktop);
     void setupEtc();
-    void setupFluxbox();
     void setupSuperKey();
     void setupDisplay();
     void setupConfigoptions();
@@ -128,7 +123,6 @@ public:
     void whichpanel();
     void message() const;
     bool checkXFCE() const;
-    bool checkFluxbox() const;
     void checkSession();
     static bool checklightdm();
     void CheckComptonRunning();
@@ -167,8 +161,6 @@ public:
     void slotThunarChanged();
 
     void setmissingxfconfvariables(const QString &activeprofile, const QString &resolution);
-    void fluxboxchangeinitvariable(const QString &initline, const QString &value) const;
-    void fluxboxchangedock() const;
     void changecomputername(const QString &hostname);
     bool validatecomputername(const QString &hostname);
     void changedisplaymanager(const QString &dm);
@@ -178,7 +170,6 @@ private slots:
     static void on_buttonConfigureXfwm_clicked();
     static void on_pushButtonDocklikeSetttings_clicked();
     static void on_pushButtontasklist_clicked();
-    void on_ApplyFluxboxResets_clicked();
     void on_ButtonApplyEtc_clicked();
     void on_ButtonApplyMiscDefualts_clicked();
     void on_buttonApplyDisplayScaling_clicked();
@@ -195,7 +186,6 @@ private slots:
     void on_checkBoxDesktopZoom_clicked();
     void on_checkBoxHibernate_clicked();
     void on_checkBoxLightdmReset_clicked();
-    void on_checkBoxMenuMigrate_clicked();
     void on_checkBoxMountInternalDrivesNonRoot_clicked();
     void on_checkBoxSandbox_clicked();
     void on_checkBoxShowAllWorkspaces_clicked();
@@ -206,21 +196,12 @@ private slots:
     void on_checkboxIntelDriver_clicked();
     void on_checkboxNoEllipse_clicked();
     void on_checkboxRadeontearfree_clicked();
-    void on_checkboxfluxSlitautohide_clicked();
-    void on_checkboxfluxresetdock_clicked();
-    void on_checkboxfluxreseteverything_clicked();
-    void on_checkboxfluxresetmenu_clicked();
-    void on_checkboxfluxtoolbarautohide_clicked();
     void on_comboBoxCompositor_currentIndexChanged(const int);
     void on_comboBoxDisplay_currentIndexChanged(int index);
-    void on_comboBoxfluxIcons_currentIndexChanged(int index);
-    void on_comboBoxfluxcaptions_currentIndexChanged(int index);
     void on_comboBoxvblank_activated(int);
     void on_comboTheme_activated(const int arg1);
     void on_comboboxHorzPostition_currentIndexChanged(const int arg1);
     void on_comboboxVertpostition_currentIndexChanged(const int arg1);
-    void on_combofluxslitlocation_currentIndexChanged(int index);
-    void on_combofluxtoolbarlocatoin_currentIndexChanged(int index);
     void on_horizontalSliderBrightness_valueChanged(int value);
     void on_horizsliderhardwarebacklight_actionTriggered(int action);
     void on_listWidgetTheme_currentTextChanged(const QString &currentText);
@@ -234,18 +215,12 @@ private slots:
     void on_radioRestoreBackup_clicked();
     void on_radioSudoRoot_clicked();
     void on_radioSudoUser_clicked();
-    void on_spinBoxFluxToolbarHeight_valueChanged(int arg1);
-    void on_spinBoxFluxToolbarWidth_valueChanged(int arg1);
     void saveBrightness();
 
     void on_checkBoxFileDialogActionButtonsPosition_clicked();
 
     void on_checkBoxbluetoothAutoEnable_clicked();
 
-
-    void on_checkBoxFluxShowToolbar_clicked();
-
-    void on_buttonManageTint2_clicked();
 
     void on_lineEditBackupName_returnPressed();
 
@@ -261,8 +236,6 @@ private slots:
 
 
     void on_listWidgetCursorThemes_currentTextChanged(const QString &currentText);
-
-    void on_spinBoxScreenBlankingTimeout_valueChanged(int);
 
     void on_toolButtonSuperFileBrowser_clicked();
 
@@ -293,9 +266,12 @@ private slots:
 private:
     Ui::defaultlook *ui;
     class TweakPlasma *tweakPlasma = nullptr;
+    class TweakFluxbox *tweakFluxbox = nullptr;
 
     void pushAbout_clicked();
     void pushHelp_clicked();
+
+    void pushManageTint2_clicked();
 
     void tabWidget_currentChanged(int index);
     void pushXFCEAppearance_clicked();
