@@ -1052,9 +1052,9 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="MiscDefaults">
+     <widget class="QWidget" name="tabXfce">
       <attribute name="title">
-       <string>Config Options</string>
+       <string>Xfce</string>
       </attribute>
       <layout class="QGridLayout">
        <item row="0" column="0">
@@ -1064,30 +1064,30 @@
          </property>
          <layout class="QVBoxLayout">
           <item>
-           <widget class="QCheckBox" name="checkBoxSingleClick">
+           <widget class="QCheckBox" name="checkXfceSingleClick">
             <property name="text">
              <string>Enable single-click on desktop</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QCheckBox" name="checkBoxDesktopZoom">
+           <widget class="QCheckBox" name="checkXfceDesktopZoom">
             <property name="text">
              <string>Enable Desktop Zoom </string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QCheckBox" name="checkBoxShowAllWorkspaces">
+           <widget class="QCheckBox" name="checkXfceShowAllWorkspaces">
             <property name="text">
              <string>Show windows from all workspaces in panel</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QCheckBox" name="checkboxNoEllipse">
+           <widget class="QCheckBox" name="checkXfceNoEllipseFileNames">
             <property name="text">
-             <string>Disable shortening of long filenames on the desktop</string>
+             <string>Do not shorten file names on the desktop</string>
             </property>
            </widget>
           </item>
@@ -1132,21 +1132,21 @@
         </widget>
        </item>
        <item row="1" column="0" colspan="2">
-        <widget class="QCheckBox" name="checkBoxNotificatonPercentages">
+        <widget class="QCheckBox" name="checkXfceNotificationPercentages">
          <property name="text">
           <string>Show percentages in notifcations when available</string>
          </property>
         </widget>
        </item>
        <item row="2" column="0" colspan="2">
-        <widget class="QCheckBox" name="checkBoxFileDialogActionButtonsPosition">
+        <widget class="QCheckBox" name="checkXfceFileDialogActionButtonsAtBottom">
          <property name="text">
           <string>Show GTK File Dialog action buttons at bottom of dialogs</string>
          </property>
         </widget>
        </item>
        <item row="3" column="0" colspan="2">
-        <widget class="QLabel" name="label_Xfce_CSD">
+        <widget class="QLabel" name="labelXfceCSD">
          <property name="text">
           <string>(also turns off Client Side Decorations for Xfce applications)</string>
          </property>
@@ -1156,14 +1156,14 @@
         </widget>
        </item>
        <item row="4" column="0" colspan="2">
-        <widget class="QCheckBox" name="checkBoxHibernate">
+        <widget class="QCheckBox" name="checkXfceHibernate">
          <property name="text">
           <string>Enable hibernate on Log Out menu </string>
          </property>
         </widget>
        </item>
        <item row="5" column="0" colspan="2">
-        <widget class="QLabel" name="label_hibernate">
+        <widget class="QLabel" name="labelXfceHibernate">
          <property name="text">
           <string>note: to hibernate, swap needs to be &gt;= RAM</string>
          </property>
@@ -1180,7 +1180,7 @@
         </spacer>
        </item>
        <item row="7" column="0" colspan="2">
-        <widget class="QPushButton" name="ButtonApplyMiscDefualts">
+        <widget class="QPushButton" name="pushXfceApply">
          <property name="text">
           <string>Apply</string>
          </property>

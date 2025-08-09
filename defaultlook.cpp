@@ -41,6 +41,7 @@
 #include "about.h"
 #include "cmd.h"
 #include "tweak_plasma.h"
+#include "tweak_xfce.h"
 #include "tweak_fluxbox.h"
 #include "defaultlook.h"
 #include "remove_user_theme_set.h"
@@ -92,6 +93,9 @@ defaultlook::~defaultlook()
 {
     if (tweakPlasma) {
         delete tweakPlasma;
+    }
+    if (tweakXfce) {
+        delete tweakXfce;
     }
     if (tweakFluxbox) {
         delete tweakFluxbox;
@@ -148,6 +152,7 @@ void defaultlook::setup()
         }
         ui->tabWidget->removeTab(Tab::Plasma);
         ui->tabWidget->removeTab(Tab::Fluxbox);
+        tweakXfce = new TweakXfce(ui, verbose, this);
         //setup panel tab
         setuppanel();
         setuptheme();
@@ -155,8 +160,6 @@ void defaultlook::setup()
         setupCompositor();
         //setup theme combo box
         setupComboTheme();
-        //setup Config Options
-        setupConfigoptions();
         //setup other tab;
         setupEtc();
         if (!isSuperkey || ! QFile(u"/usr/bin/xfce-superkey-launcher"_s).exists()){
@@ -236,8 +239,8 @@ void defaultlook::setup()
         if (isFluxbox) {
             ui->layoutFluxboxTab->replaceWidget(ui->widgetFluxboxThunar, ui->groupThunar);
             connect(ui->pushFluxboxApply, &QCheckBox::clicked, this, &defaultlook::applyThunar);
-        } else {
-            connect(ui->ButtonApplyMiscDefualts, &QPushButton::clicked, this, &defaultlook::applyThunar);
+        } else if (isXfce) {
+            connect(ui->pushXfceApply, &QPushButton::clicked, this, &defaultlook::applyThunar);
         }
         connect(ui->checkThunarSingleClick, &QCheckBox::clicked, this, &defaultlook::slotThunarChanged);
         connect(ui->checkThunarResetCustomActions, &QCheckBox::clicked, this, &defaultlook::slotThunarChanged);
@@ -718,13 +721,6 @@ void defaultlook::message() const
         QMessageBox::information(nullptr, tr("MX Tweak"),
                                  tr("Finished! Firefox may require a restart for changes to take effect"));
     }
-}
-
-bool defaultlook::checkXFCE() const
-{
-    QString test = runCmd(u"pgrep xfce4-session"_s).output;
-    if (verbose) qDebug() << "current xfce desktop test is " << test;
-    return (!test.isEmpty());
 }
 
 bool defaultlook::checklightdm()
@@ -1628,93 +1624,6 @@ void defaultlook::setupCompositor()
     }
 }
 
-void defaultlook::setupConfigoptions()
-{
-    QString home_path = QDir::homePath();
-    ui->ButtonApplyMiscDefualts->setEnabled(false);
-    float versioncheck = 4.18;
-
-    QString XfceVersion = runCmd(u"dpkg-query --show xfce4-session | awk '{print $2}'"_s).output.section('.',0,1);
-    if (verbose) qDebug() << "XfceVersion = " << XfceVersion.toFloat();
-    if ( XfceVersion.toFloat() < versioncheck ){
-        ui->label_Xfce_CSD->hide();
-    }
-
-    //set xfce values
-    if (isXfce) {
-        //check single click status
-        QString test;
-        test = runCmd(u"xfconf-query  -c xfce4-desktop -p /desktop-icons/single-click"_s).output;
-        ui->checkBoxSingleClick->setChecked(test == "true"_L1);
-
-        //check systray frame status
-        //frame has been removed from systray
-
-        // show all workspaces - tasklist/show buttons feature
-        plugintasklist = runCmd(uR"(grep \"tasklist\" ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml |cut -d '=' -f2 | cut -d '' -f1| cut -d '"' -f2)"_s).output;
-        if (verbose) qDebug() << "tasklist is " << plugintasklist;
-        if ( ! plugintasklist.isEmpty()) {
-            test = runCmd("xfconf-query -c xfce4-panel -p /plugins/"_L1 + plugintasklist + "/include-all-workspaces"_L1).output;
-            ui->checkBoxShowAllWorkspaces->setChecked(test == "true"_L1);
-        } else {
-            ui->checkBoxShowAllWorkspaces->setEnabled(false);
-        }
-
-        // set percentages in notifications
-        test = runCmd(u"xfconf-query -c xfce4-notifyd -p /show-text-with-gauge"_s).output;
-        ui->checkBoxNotificatonPercentages->setChecked(test == "true"_L1);
-
-        //switch zoom_desktop
-
-        test = runCmd(u"xfconf-query -c xfwm4 -p /general/zoom_desktop"_s).output;
-        ui->checkBoxDesktopZoom->setChecked(test == "true"_L1);
-
-        //setup no-ellipse option
-        QFileInfo fileinfo2(home_path + "/.config/gtk-3.0/no-ellipse-desktop-filenames.css"_L1);
-        ui->checkboxNoEllipse->setChecked(fileinfo2.exists());
-
-        //setup classic file dialog buttons
-        test = runCmd(u"xfconf-query -c xsettings -p /Gtk/DialogsUseHeader"_s).output;
-        ui->checkBoxFileDialogActionButtonsPosition->setChecked(test == "false"_L1);
-
-        //setup hibernate switch
-        //first, hide if running live
-        test = runCmd(u"df -T / |tail -n1 |awk '{print $2}'"_s).output;
-        if (verbose) qDebug() << test;
-        if ( test == "aufs"_L1 || test == "overlay"_L1 ) {
-            ui->checkBoxHibernate->hide();
-            ui->label_hibernate->hide();
-        }
-
-        //hide hibernate if there is no swap
-        QString swaptest = runCmd(u"/usr/sbin/swapon --show"_s).output;
-        if (verbose) qDebug() << "swaptest swap present is " << swaptest;
-        if (swaptest.isEmpty()) {
-            ui->checkBoxHibernate->hide();
-            ui->label_hibernate->hide();
-        }
-
-        //and hide hibernate if swap is encrypted
-        QString cmd = u"grep swap /etc/crypttab |grep -q luks"_s;
-        int swaptest2 = system(cmd.toUtf8());
-        if (verbose) qDebug() << "swaptest encrypted is " << swaptest2;
-        if (swaptest2 == 0) {
-            ui->checkBoxHibernate->hide();
-            ui->label_hibernate->hide();
-        }
-
-        //set checkbox
-        test = runCmd(u"xfconf-query -c xfce4-session -p /shutdown/ShowHibernate"_s).output;
-        if ( test == "true"_L1) {
-            ui->checkBoxHibernate->setChecked(true);
-            hibernate_flag = true;
-        } else {
-            ui->checkBoxHibernate->setChecked(false);
-            hibernate_flag = false;
-        }
-    }
-}
-
 void defaultlook::CheckComptonRunning()
 {
     //Index for combo box:  0=none, 1=xfce, 2=picom (formerly compton)
@@ -2550,15 +2459,6 @@ bool defaultlook::validatecomputername(const QString &hostname)
     return true;
 }
 
-void defaultlook::on_checkBoxSingleClick_clicked()
-{
-    ui->ButtonApplyMiscDefualts->setEnabled(true);
-}
-void defaultlook::on_checkboxNoEllipse_clicked()
-{
-    ui->ButtonApplyMiscDefualts->setEnabled(true);
-}
-
 void defaultlook::savethemeundo()
 {
     QString home_path = QDir::homePath();
@@ -2771,11 +2671,6 @@ void defaultlook::on_buttonConfigureXfwm_clicked()
     fred.exec();
 }
 
-void defaultlook::on_checkBoxShowAllWorkspaces_clicked()
-{
-    ui->ButtonApplyMiscDefualts->setEnabled(true);
-}
-
 void defaultlook::on_checkBoxMountInternalDrivesNonRoot_clicked()
 {
     ui->ButtonApplyEtc->setEnabled(true);
@@ -2796,11 +2691,6 @@ void defaultlook::on_pushButtonPreview_clicked()
     preview_box.exec();
 }
 
-void defaultlook::on_checkBoxHibernate_clicked()
-{
-    ui->ButtonApplyMiscDefualts->setEnabled(true);
-}
-
 void defaultlook::on_radioSudoUser_clicked()
 {
     ui->ButtonApplyEtc->setEnabled(true);
@@ -2810,102 +2700,9 @@ void defaultlook::on_radioSudoRoot_clicked()
     ui->ButtonApplyEtc->setEnabled(true);
 }
 
-void defaultlook::on_ButtonApplyMiscDefualts_clicked()
-{
-    QString hibernate_option;
-    hibernate_option.clear();
-
-    if (ui->checkBoxShowAllWorkspaces->isChecked()) {
-        runCmd("xfconf-query -c xfce4-panel -p /plugins/"_L1 + plugintasklist + "/include-all-workspaces -s true"_L1);
-    } else {
-        runCmd("xfconf-query -c xfce4-panel -p /plugins/"_L1 + plugintasklist + "/include-all-workspaces -s false"_L1);
-    }
-
-    if (ui->checkBoxSingleClick->isChecked()) {
-        runCmd(u"xfconf-query  -c xfce4-desktop -p /desktop-icons/single-click -s true"_s);
-    } else {
-        runCmd(u"xfconf-query  -c xfce4-desktop -p /desktop-icons/single-click -s false"_s);
-    }
-    //systray frame removed
-
-    //notification percentages
-    if (ui->checkBoxNotificatonPercentages->isChecked()){
-        runCmd(u"xfconf-query -c xfce4-notifyd -p /show-text-with-gauge -t bool -s true --create"_s);
-    } else {
-        runCmd(u"xfconf-query -c xfce4-notifyd -p /show-text-with-gauge --reset"_s);
-    }
-
-    //set desktop zoom
-    if (ui->checkBoxDesktopZoom->isChecked()) {
-        runCmd(u"xfconf-query -c xfwm4 -p /general/zoom_desktop -s true"_s);
-    } else {
-        runCmd(u"xfconf-query -c xfwm4 -p /general/zoom_desktop -s false"_s);
-    }
-
-    //deal with gtk dialog button settings
-    if (ui->checkBoxFileDialogActionButtonsPosition->isChecked()){
-        runCmd(u"xfconf-query -c xsettings -p /Gtk/DialogsUseHeader -s false"_s);
-    } else {
-        runCmd(u"xfconf-query -c xsettings -p /Gtk/DialogsUseHeader -s true"_s);
-    }
-
-    //deal with no-ellipse-filenames option
-    QString home_path = QDir::homePath();
-    if (ui->checkboxNoEllipse->isChecked()) {
-        //set desktop themeing
-        QFileInfo gtk_check(home_path + "/.config/gtk-3.0/gtk.css"_L1);
-        if (gtk_check.exists()) {
-            if (verbose) qDebug() << "existing gtk.css found";
-            QString cmd = "cat "_L1 + home_path + "/.config/gtk-3.0/gtk.css |grep -q no-ellipse-desktop-filenames.css"_L1;
-            if (system(cmd.toUtf8()) == 0 ) {
-                if (verbose) qDebug() << "include statement found";
-            } else {
-                if (verbose) qDebug() << "adding include statement";
-                QString cmd = "echo '@import url(\"no-ellipse-desktop-filenames.css\");' >> "_L1 + home_path + "/.config/gtk-3.0/gtk.css"_L1;
-                system(cmd.toUtf8());
-            }
-        } else {
-            if (verbose) qDebug() << "creating simple gtk.css file";
-            QString cmd = "echo '@import url(\"no-ellipse-desktop-filenames.css\");' >> "_L1 + home_path + "/.config/gtk-3.0/gtk.css"_L1;
-            system(cmd.toUtf8());
-        }
-        //add modification config
-        runCmd("cp /usr/share/mx-tweak/no-ellipse-desktop-filenames.css "_L1 + home_path + "/.config/gtk-3.0/no-ellipse-desktop-filenames.css "_L1);
-
-        //restart xfdesktop by with xfdesktop --quite && xfdesktop &
-
-        system("xfdesktop --quit && sleep .5 && xfdesktop &");
-    } else {
-        QFileInfo noellipse_check(home_path + "/.config/gtk-3.0/no-ellipse-desktop-filenames.css"_L1);
-        if (noellipse_check.exists()) {
-            runCmd("rm -f "_L1 + home_path + "/.config/gtk-3.0/no-ellipse-desktop-filenames.css"_L1);
-            runCmd("sed -i '/no-ellipse-desktop-filenames.css/d' "_L1 + home_path + "/.config/gtk-3.0/gtk.css"_L1);
-            system("xfdesktop --quit && sleep .5 && xfdesktop &");
-        }
-    }
-
-    //deal with hibernate
-    if (ui->checkBoxHibernate->isChecked() != hibernate_flag) {
-        if (ui->checkBoxHibernate->isChecked()) {
-            hibernate_option =  "hibernate"_L1;
-            system("xfconf-query -c xfce4-session -p /shutdown/ShowHibernate -t bool -s true --create");
-        } else {
-            system("xfconf-query -c xfce4-session -p /shutdown/ShowHibernate -t bool -s false --create");
-        }
-    }
-
-    applyThunar();
-    setupConfigoptions();
-}
-
 void defaultlook::on_checkBoxLightdmReset_clicked()
 {
     ui->ButtonApplyEtc->setEnabled(true);
-}
-
-void defaultlook::on_checkBoxDesktopZoom_clicked()
-{
-    ui->ButtonApplyMiscDefualts->setEnabled(true);
 }
 
 void defaultlook::on_checkboxIntelDriver_clicked()
@@ -3517,11 +3314,6 @@ void defaultlook::on_pushButtonDocklikeSetttings_clicked()
     system("xfce4-panel --plugin-event=docklike:settings");
 }
 
-void defaultlook::on_checkBoxFileDialogActionButtonsPosition_clicked()
-{
-    ui->ButtonApplyMiscDefualts->setEnabled(true);
-}
-
 void defaultlook::on_checkBoxbluetoothAutoEnable_clicked()
 {
     ui->ButtonApplyEtc->setEnabled(true);
@@ -3620,7 +3412,7 @@ void defaultlook::slotThunarChanged()
     if (ui->tabFluxbox->isVisible()) {
         ui->pushFluxboxApply->setEnabled(true);
     } else {
-        ui->ButtonApplyMiscDefualts->setEnabled(true);
+        ui->pushXfceApply->setEnabled(true);
     }
 }
 

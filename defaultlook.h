@@ -61,14 +61,12 @@ public:
     bool message_flag{};
     QHash<QString, QString>  theme_info;
     QString pluginidsystray;
-    QString plugintasklist;
     QString originalhostname;
     QStringList undotheme;
     QString currentdisplaymanager;
     bool setupflag=false;
     bool verbose = false;
     bool panelflag{};
-    bool hibernate_flag{};
     bool Intel_flag{};
     bool radeon_flag{};
     bool amdgpuflag{};
@@ -115,7 +113,6 @@ public:
     void setupEtc();
     void setupSuperKey();
     void setupDisplay();
-    void setupConfigoptions();
     void setupComboTheme();
     void setupBrightness();
     void fliptohorizontal();
@@ -171,7 +168,6 @@ private slots:
     static void on_pushButtonDocklikeSetttings_clicked();
     static void on_pushButtontasklist_clicked();
     void on_ButtonApplyEtc_clicked();
-    void on_ButtonApplyMiscDefualts_clicked();
     void on_buttonApplyDisplayScaling_clicked();
     void on_buttonApply_clicked();
     void on_buttonCompositorApply_clicked();
@@ -183,18 +179,13 @@ private slots:
     void on_buttonThemeUndo_clicked();
     void on_buttonapplyresolution_clicked();
     void on_checkBoxCSD_clicked();
-    void on_checkBoxDesktopZoom_clicked();
-    void on_checkBoxHibernate_clicked();
     void on_checkBoxLightdmReset_clicked();
     void on_checkBoxMountInternalDrivesNonRoot_clicked();
     void on_checkBoxSandbox_clicked();
-    void on_checkBoxShowAllWorkspaces_clicked();
-    void on_checkBoxSingleClick_clicked();
     void on_checkHorz_clicked();
     void on_checkVert_clicked();
     void on_checkboxAMDtearfree_clicked();
     void on_checkboxIntelDriver_clicked();
-    void on_checkboxNoEllipse_clicked();
     void on_checkboxRadeontearfree_clicked();
     void on_comboBoxDisplay_currentIndexChanged(int index);
     void on_comboBoxvblank_activated(int);
@@ -215,8 +206,6 @@ private slots:
     void on_radioSudoRoot_clicked();
     void on_radioSudoUser_clicked();
     void saveBrightness();
-
-    void on_checkBoxFileDialogActionButtonsPosition_clicked();
 
     void on_checkBoxbluetoothAutoEnable_clicked();
 
@@ -265,6 +254,7 @@ private slots:
 private:
     Ui::defaultlook *ui;
     class TweakPlasma *tweakPlasma = nullptr;
+    class TweakXfce *tweakXfce = nullptr;
     class TweakFluxbox *tweakFluxbox = nullptr;
 
     void pushAbout_clicked();
