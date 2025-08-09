@@ -186,10 +186,11 @@ void defaultlook::setup()
         ui->tabWidget->removeTab(Tab::Plasma);
         ui->tabWidget->removeTab(Tab::Config);
         ui->tabWidget->removeTab(Tab::Display);
-        ui->tabWidget->removeTab(Tab::Compositor);
         ui->tabWidget->removeTab(Tab::Panel);
         ui->checkBoxFluxboxLegacyStyles->show();
         tweakFluxbox = new TweakFluxbox(ui, verbose, this);
+
+        setupCompositor();
         setuptheme();
         //setup other tab;
         setupEtc();
@@ -1578,6 +1579,7 @@ void defaultlook::set_cursor_size() {
 
 void defaultlook::setupCompositor()
 {
+    connect(ui->comboCompositor, &QComboBox::currentIndexChanged, this, &defaultlook::comboCompositor_currentIndexChanged);
     //set comboboxvblank to current setting
 
     vblankflag = false;
@@ -1618,6 +1620,10 @@ void defaultlook::setupCompositor()
         } else {
             runCmd("cp /usr/share/mx-tweak/picom.conf "_L1 + file_conf.absoluteFilePath());
         }
+
+        ui->comboCompositor->addItem(tr("None"));
+        ui->comboCompositor->addItem(tr("Xfwm (Xfce) Compositor"), u"xfwm"_s);
+        ui->comboCompositor->addItem(tr("Picom"), u"picom"_s);
         CheckComptonRunning();
     }
 }
@@ -1715,7 +1721,8 @@ void defaultlook::CheckComptonRunning()
 
     if ( system("ps -ax -o comm,pid |grep -w ^picom") == 0 ) {
         if (verbose) qDebug() << "picom is running";
-        ui->comboBoxCompositor->setCurrentIndex(2);
+        const int i = ui->comboCompositor->findData(u"picom"_s);
+        ui->comboCompositor->setCurrentIndex(i);
     } else {
         if (verbose) qDebug() << "picom is NOT running";
 
@@ -1723,22 +1730,24 @@ void defaultlook::CheckComptonRunning()
         QFileInfo picom(u"/usr/bin/picom"_s);
         //hide picom settings
         if ( !picom.exists() ) {
-            ui->comboBoxCompositor->removeItem(2);
+            const int i = ui->comboCompositor->findData(u"picom"_s);
+            ui->comboCompositor->removeItem(i);
             ui->buttonConfigureCompton->hide();
             ui->buttonEditComptonConf->hide();
         }
     }
 
     //check if xfce compositor is enabled
-    QString test;
-    test = runCmd(u"xfconf-query -c xfwm4 -p /general/use_compositing"_s).output;
+    const QString &test = runCmd(u"xfconf-query -c xfwm4 -p /general/use_compositing"_s).output;
     if (verbose) qDebug() << "etc test is "<< test;
+    int compIndex = ui->comboCompositor->findData(u"xfwm"_s);
     if (test == "true"_L1) {
-        ui->comboBoxCompositor->setCurrentIndex(1);
         ui->buttonConfigureXfwm->setEnabled(true);
     } else {
-        ui->comboBoxCompositor->setCurrentIndex(0);
+        ui->comboCompositor->removeItem(compIndex);
+        compIndex = ui->comboCompositor->findData(QVariant());
     }
+    ui->comboCompositor->setCurrentIndex(compIndex);
 }
 
 void defaultlook::CheckAptNotifierRunning() const
@@ -2684,7 +2693,7 @@ void defaultlook::on_buttonCompositorApply_clicked()
     //disable apply button
     ui->buttonCompositorApply->setEnabled(false);
 
-    if (ui->comboBoxCompositor->currentIndex() == 2) {
+    if (ui->comboCompositor->currentData() == "picom"_L1) {
         //turn off xfce compositor
         runCmd(u"xfconf-query -c xfwm4 -p /general/use_compositing -s false"_s);
         //launch picom
@@ -2692,22 +2701,19 @@ void defaultlook::on_buttonCompositorApply_clicked()
         system("picom-launch.sh");
         //restart apt-notifier if necessary
         CheckAptNotifierRunning();
-    }
-    if (ui->comboBoxCompositor->currentIndex() == 1) {
+    } else if (ui->comboCompositor->currentData() == "xfwm"_L1) {
         //turn off picom
         system("pkill -x picom");
         //launch xfce compositor
         runCmd(u"xfconf-query -c xfwm4 -p /general/use_compositing -s true"_s);
         //restart apt-notifier if necessary
         CheckAptNotifierRunning();
-    }
-    if (ui->comboBoxCompositor->currentIndex() == 0) {
+    } else {
         //turn off picom and xfce compositor
         //turn off xfce compositor
         runCmd(u"xfconf-query -c xfwm4 -p /general/use_compositing -s false"_s);
         system("pkill -x picom");
         CheckAptNotifierRunning();
-
     }
 
     //figure out whether to autostart picom or not
@@ -2715,7 +2721,7 @@ void defaultlook::on_buttonCompositorApply_clicked()
 
     QString home_path = QDir::homePath();
     QFileInfo file_start(home_path + "/.config/autostart/zpicom.desktop"_L1);
-    if (ui->comboBoxCompositor->currentIndex() == 2) {
+    if (ui->comboCompositor->currentIndex() == 2) {
         runCmd("sed -i -r s/Hidden=.*/Hidden=false/ "_L1 + file_start.absoluteFilePath());
     } else {
         runCmd("sed -i -r s/Hidden=.*/Hidden=true/ "_L1 + file_start.absoluteFilePath());
@@ -2738,29 +2744,23 @@ void defaultlook::on_buttonEditComptonConf_clicked()
     runCmd("xdg-open "_L1 + file_conf.absoluteFilePath());
 }
 
-void defaultlook::on_comboBoxCompositor_currentIndexChanged(const int)
+void defaultlook::comboCompositor_currentIndexChanged(const int)
 {
     if (setupflag){
-        if (ui->comboBoxCompositor->currentIndex() == 0) {
-            ui->buttonCompositorApply->setEnabled(true);
+        if (!ui->comboCompositor->currentData().isValid()) {
             ui->buttonConfigureCompton->setEnabled(false);
             ui->buttonConfigureXfwm->setEnabled(false);
             ui->buttonEditComptonConf->setEnabled(false);
-        }
-
-        if (ui->comboBoxCompositor->currentIndex() == 1) {
-            ui->buttonCompositorApply->setEnabled(true);
+        } else if (ui->comboCompositor->currentData() == "xfwm"_L1) {
             ui->buttonConfigureCompton->setEnabled(false);
             ui->buttonConfigureXfwm->setEnabled(true);
             ui->buttonEditComptonConf->setEnabled(false);
-        }
-
-        if (ui->comboBoxCompositor->currentIndex() == 2) {
-            ui->buttonCompositorApply->setEnabled(true);
+        } else if (ui->comboCompositor->currentData() == "picom"_L1) {
             ui->buttonConfigureCompton->setEnabled(true);
             ui->buttonConfigureXfwm->setEnabled(false);
             ui->buttonEditComptonConf->setEnabled(true);
         }
+        ui->buttonCompositorApply->setEnabled(true);
     }
 }
 

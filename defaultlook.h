@@ -196,7 +196,6 @@ private slots:
     void on_checkboxIntelDriver_clicked();
     void on_checkboxNoEllipse_clicked();
     void on_checkboxRadeontearfree_clicked();
-    void on_comboBoxCompositor_currentIndexChanged(const int);
     void on_comboBoxDisplay_currentIndexChanged(int index);
     void on_comboBoxvblank_activated(int);
     void on_comboTheme_activated(const int arg1);
@@ -277,6 +276,8 @@ private:
     void pushXFCEAppearance_clicked();
     void pushXFCEWMsettings_clicked();
     void pushXFCEPanelSettings_clicked();
+
+    void comboCompositor_currentIndexChanged(const int);
 };
 
 #endif // DEFAULTLOOK_H
