@@ -56,8 +56,6 @@ public:
     static QString getVersion(const QString &name);
     QString version;
     QString output;
-    QStringList panelIDs;
-    QString panel;
     bool message_flag{};
     QHash<QString, QString>  theme_info;
     QString pluginidsystray;
@@ -105,7 +103,6 @@ public:
     QString vblankinitial;
     void setup();
     void setupuiselections();
-    void setuppanel();
     void setuptheme();
     void setupthemechoosers();
     void populatethemelists(const QString &value);
@@ -128,10 +125,6 @@ public:
     void set_cursor_size();
 
     void backupPanel();
-    void migratepanel(const QString &date) const;
-    int validatearchive(const QString &path) const;
-    static void restoreDefaultPanel();
-    void restoreBackup();
 
     void top_or_bottom();
     void left_or_right();
@@ -165,11 +158,8 @@ public:
 
 private slots:
     static void on_buttonConfigureXfwm_clicked();
-    static void on_pushButtonDocklikeSetttings_clicked();
-    static void on_pushButtontasklist_clicked();
     void on_ButtonApplyEtc_clicked();
     void on_buttonApplyDisplayScaling_clicked();
-    void on_buttonApply_clicked();
     void on_buttonCompositorApply_clicked();
     void on_buttonConfigureCompton_clicked();
     static void on_buttonEditComptonConf_clicked();
@@ -182,16 +172,12 @@ private slots:
     void on_checkBoxLightdmReset_clicked();
     void on_checkBoxMountInternalDrivesNonRoot_clicked();
     void on_checkBoxSandbox_clicked();
-    void on_checkHorz_clicked();
-    void on_checkVert_clicked();
     void on_checkboxAMDtearfree_clicked();
     void on_checkboxIntelDriver_clicked();
     void on_checkboxRadeontearfree_clicked();
     void on_comboBoxDisplay_currentIndexChanged(int index);
     void on_comboBoxvblank_activated(int);
     void on_comboTheme_activated(const int arg1);
-    void on_comboboxHorzPostition_currentIndexChanged(const int arg1);
-    void on_comboboxVertpostition_currentIndexChanged(const int arg1);
     void on_horizontalSliderBrightness_valueChanged(int value);
     void on_horizsliderhardwarebacklight_actionTriggered(int action);
     void on_listWidgetTheme_currentTextChanged(const QString &currentText);
@@ -200,25 +186,13 @@ private slots:
     void on_pushButtonPreview_clicked();
     void on_pushButtonRemoveUserThemeSet_clicked();
     void on_pushButtonSettingsToThemeSet_clicked();
-    void on_radioBackupPanel_clicked();
-    void on_radioDefaultPanel_clicked();
-    void on_radioRestoreBackup_clicked();
     void on_radioSudoRoot_clicked();
     void on_radioSudoUser_clicked();
     void saveBrightness();
 
     void on_checkBoxbluetoothAutoEnable_clicked();
 
-
-    void on_lineEditBackupName_returnPressed();
-
     void on_checkBoxInstallRecommends_clicked();
-
-    void on_radioButtonTasklist_clicked();
-
-    void on_comboBoxTasklistPlugin_currentIndexChanged(int);
-
-    void on_radioButtonSetPanelPluginScales_clicked();
 
     void on_checkBoxDisableFluxboxMenuGeneration_clicked();
 
