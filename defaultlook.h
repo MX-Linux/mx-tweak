@@ -60,7 +60,6 @@ public:
     QHash<QString, QString>  theme_info;
     QString pluginidsystray;
     QString originalhostname;
-    QStringList undotheme;
     QString currentdisplaymanager;
     bool setupflag=false;
     bool verbose = false;
@@ -129,8 +128,6 @@ public:
     void top_or_bottom();
     void left_or_right();
     static void message2();
-    void savethemeundo();
-    void themeundo();
     QString get_tasklistid();
     void get_cursor_size();
 
@@ -166,7 +163,6 @@ private slots:
     void on_buttonGTKscaling_clicked();
     void on_buttonSaveBrightness_clicked();
     void on_buttonThemeApply_clicked();
-    void on_buttonThemeUndo_clicked();
     void on_buttonapplyresolution_clicked();
     void on_checkBoxCSD_clicked();
     void on_checkBoxLightdmReset_clicked();
