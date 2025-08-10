@@ -170,7 +170,7 @@ void defaultlook::setup()
     //setup fluxbox
     else if (isFluxbox) {
         ui->comboTheme->hide();
-        ui->labelTheme->hide();
+        ui->groupTheme->hide();
         ui->buttonThemeApply->hide();
         ui->pushButtonRemoveUserThemeSet->hide();
         ui->groupXFCESettings->hide();
@@ -620,7 +620,7 @@ void defaultlook::setuptheme()
     if (isKDE) {
         ui->labelThemes->setText("<b>"_L1 + tr("Plasma Widget Themes","theme style of the kde plasma widgets") + "</b>"_L1);
         ui->labelWMThemes->setText("<b>"_L1 + tr("Color Schemes", "plasma widget color schemes") + "</b>"_L1);
-        ui->labelTheme->setText("<b>"_L1 + tr("Plasma Look & Feel Global Themes", "plasma global themes") + "</b>"_L1);
+        ui->groupTheme->setTitle(tr("Plasma Look & Feel Global Themes", "plasma global themes"));
         populatethemelists(u"plasma"_s);
         populatethemelists(u"colorscheme"_s);
         populatethemelists(u"kdecursors"_s);
