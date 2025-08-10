@@ -403,13 +403,6 @@
       <layout class="QGridLayout" name="gridLayout_6">
        <item row="0" column="0">
         <layout class="QGridLayout" name="gridLayout_5">
-         <item row="1" column="4">
-          <widget class="QPushButton" name="pushButtonPreview">
-           <property name="text">
-            <string>Preview</string>
-           </property>
-          </widget>
-         </item>
          <item row="2" column="2" colspan="2">
           <widget class="QPushButton" name="pushButtonRemoveUserThemeSet">
            <property name="text">

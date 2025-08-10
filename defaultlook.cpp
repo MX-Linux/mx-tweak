@@ -141,8 +141,6 @@ void defaultlook::setup()
         ui->pushXFCEAppearance->setIcon(QIcon::fromTheme(u"org.xfce.settings.appearance"_s));
         ui->pushXFCEWMsettings->setIcon(QIcon::fromTheme(u"org.xfce.xfwm4"_s));
         message_flag = false;
-        //setup theme tab
-        ui->pushButtonPreview->hide();
         //set first tab as default
         if (!displayflag && !themetabflag && !othertabflag) {
             ui->tabWidget->setCurrentIndex(Tab::Panel);
@@ -174,7 +172,6 @@ void defaultlook::setup()
         ui->comboTheme->hide();
         ui->labelTheme->hide();
         ui->buttonThemeApply->hide();
-        ui->pushButtonPreview->hide();
         ui->pushButtonRemoveUserThemeSet->hide();
         ui->groupXFCESettings->hide();
         if (!themetabflag && !othertabflag) {
@@ -198,7 +195,6 @@ void defaultlook::setup()
 //Panel, Theme, Compositor, Display, Config, Fluxbox, Plasma, Superkey, Others
     //setup plasma
     else if (isKDE) {
-        ui->pushButtonPreview->hide();
         ui->pushButtonRemoveUserThemeSet->hide();
         ui->groupXFCESettings->hide();
         if (!themetabflag && !othertabflag) {
@@ -605,7 +601,6 @@ void defaultlook::setuptheme()
         ui->buttonThemeApply->setIcon(QIcon(":/icons/dialog-ok.svg"));
     }
 
-    ui->pushButtonPreview->setEnabled(false);
     //reset all checkboxes to unchecked
 
     if (isXfce || isFluxbox){
@@ -1210,7 +1205,6 @@ void defaultlook::on_comboTheme_activated(const int /*arg1*/)
         if (isXfce) {
             if (ui->comboTheme->currentIndex() != 0) {
                 ui->buttonThemeApply->setEnabled(true);
-                ui->pushButtonPreview->setEnabled(true);
             }
         } else if (isKDE) {
             ui->buttonThemeApply->setEnabled(true);
@@ -1700,21 +1694,6 @@ void defaultlook::on_buttonConfigureXfwm_clicked()
 void defaultlook::on_checkBoxMountInternalDrivesNonRoot_clicked()
 {
     ui->ButtonApplyEtc->setEnabled(true);
-}
-
-void defaultlook::on_pushButtonPreview_clicked()
-{
-    QString themename = theme_info.value(ui->comboTheme->currentText());
-    QFileInfo fileinfo(themename);
-
-    //initialize variables
-    QString file_name = runCmd("cat '"_L1 + fileinfo.absoluteFilePath() + "' |grep screenshot="_L1).output.section('=' , 1,1);
-    QString path = fileinfo.absolutePath();
-    QString full_file_path = path + '/' + file_name;
-
-    QMessageBox preview_box(QMessageBox::NoIcon, file_name, QString(), QMessageBox::Close, this);
-    preview_box.setIconPixmap(QPixmap(full_file_path));
-    preview_box.exec();
 }
 
 void defaultlook::on_radioSudoUser_clicked()

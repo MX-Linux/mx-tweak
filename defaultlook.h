@@ -179,7 +179,6 @@ private slots:
     void on_listWidgetTheme_currentTextChanged(const QString &currentText);
     void on_listWidgetWMtheme_currentTextChanged(const QString &currentText) const;
     void on_listWidgeticons_currentTextChanged(const QString &currentText) const;
-    void on_pushButtonPreview_clicked();
     void on_pushButtonRemoveUserThemeSet_clicked();
     void on_pushButtonSettingsToThemeSet_clicked();
     void on_radioSudoRoot_clicked();
