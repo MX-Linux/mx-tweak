@@ -95,7 +95,11 @@ fi
 lightdm_reset()
 {
 cp /etc/lightdm/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf.$(date +%Y%m%H%M%S)
-cp /etc/lightdm/mx$(grep DISTRIB_RELEASE /etc/lsb-release |cut -d\= -f2|cut -d\. -f1)/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf
+if [ -d /usr/share/lightdm-greeter-mx ]; then
+	cp /usr/share/lightdm-greeter-mx/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf
+else
+	cp /etc/lightdm/mx$(grep DISTRIB_RELEASE /etc/lsb-release |cut -d\= -f2|cut -d\. -f1)/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf
+fi
 
 }
 
