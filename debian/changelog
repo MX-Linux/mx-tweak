@@ -1,3 +1,9 @@
+mx-tweak (25.08.01mx25) ; urgency=medium
+
+  * revise ligthdm reset for trixie
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Mon, 11 Aug 2025 17:21:56 -0400
+
 mx-tweak (25.07.01mx25) mx; urgency=medium
 
   * filter out README files from fluxbox style areas
