@@ -6,6 +6,9 @@ theming_to_tweak::theming_to_tweak(QWidget *parent) :
     ui(new Ui::theming_to_tweak)
 {
     ui->setupUi(this);
+    setMaximumHeight(height());
+    connect(ui->buttonBox, &QDialogButtonBox::accepted, this, &theming_to_tweak::accept);
+    connect(ui->buttonBox, &QDialogButtonBox::rejected, this, &theming_to_tweak::reject);
     connect(ui->lineEdit_Name, &QLineEdit::textChanged, this, [this](){
         QString text = ui->lineEdit_Name->text();
         text.replace('\'', QString());

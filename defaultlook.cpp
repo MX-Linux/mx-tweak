@@ -1748,12 +1748,11 @@ void defaultlook::on_pushButtonSettingsToThemeSet_clicked()
             return;
         }
     }
-    QString fileName;
-    auto *dialog = new theming_to_tweak;
-    int userInput = dialog->exec();
-    if (userInput == QDialog::Rejected)
+    theming_to_tweak dialog(this);
+    if (dialog.exec() == QDialog::Rejected) {
         return;
-    fileName = dialog->nameEditor()->text();
+    }
+    const QString &fileName = dialog.nameEditor()->text();
 
     //declared locally to prevent an issues with other code
     auto pathAppend = [](const QString& path1, const QString& path2) {
