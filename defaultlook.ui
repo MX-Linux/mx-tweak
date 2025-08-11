@@ -194,9 +194,6 @@
      <property name="tabPosition">
       <enum>QTabWidget::TabPosition::North</enum>
      </property>
-     <property name="currentIndex">
-      <number>0</number>
-     </property>
      <widget class="QWidget" name="tabXfcePanel">
       <attribute name="title">
        <string>Xfce Panel</string>
@@ -384,7 +381,7 @@
          </property>
          <layout class="QGridLayout">
           <item row="0" column="1">
-           <widget class="QPushButton" name="buttonThemeApply">
+           <widget class="QPushButton" name="pushThemeApply">
             <property name="text">
              <string>Apply</string>
             </property>
@@ -413,7 +410,7 @@
            </widget>
           </item>
           <item row="1" column="1">
-           <widget class="QPushButton" name="pushButtonRemoveUserThemeSet">
+           <widget class="QPushButton" name="pushThemeRemoveSet">
             <property name="text">
              <string>Remove User Theme Set</string>
             </property>
@@ -431,71 +428,55 @@
           <string>Themes</string>
          </property>
          <layout class="QGridLayout">
-          <item row="4" column="2">
-           <widget class="QLabel" name="labelPointerSize">
+          <item row="0" column="0">
+           <widget class="QLabel" name="labelThemeWidget">
             <property name="text">
-             <string extracomment="size of the mouse pointer or cursor">Size</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+             <string extracomment="theme an application will get">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
            </widget>
           </item>
-          <item row="1" column="1" colspan="3">
-           <widget class="QListWidget" name="listWidgetWMtheme"/>
-          </item>
           <item row="0" column="1">
-           <widget class="QLabel" name="labelWMThemes">
+           <widget class="QLabel" name="labelThemeWindow">
             <property name="text">
              <string extracomment="theme a window manager border will get">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Manager&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
            </widget>
           </item>
-          <item row="3" column="0">
-           <widget class="QListWidget" name="listWidgeticons"/>
+          <item row="0" column="2" colspan="2">
+           <widget class="QCheckBox" name="checkThemeFluxboxLegacyStyles">
+            <property name="text">
+             <string>Legacy Styles</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QListWidget" name="listThemeWidget"/>
+          </item>
+          <item row="1" column="1" colspan="3">
+           <widget class="QListWidget" name="listThemeWindow"/>
           </item>
           <item row="2" column="0">
-           <widget class="QLabel" name="label_30">
+           <widget class="QLabel" name="labelThemeIcons">
             <property name="text">
              <string extracomment="icon theme">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
            </widget>
           </item>
           <item row="2" column="1" colspan="3">
-           <widget class="QLabel" name="label_33">
+           <widget class="QLabel" name="labelThemeCursors">
             <property name="text">
              <string extracomment="cursor theme">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Cursors&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
            </widget>
           </item>
-          <item row="1" column="0">
-           <widget class="QListWidget" name="listWidgetTheme"/>
-          </item>
-          <item row="4" column="3">
-           <widget class="QSpinBox" name="spinBoxPointerSize">
-            <property name="specialValueText">
-             <string extracomment="default pointer size determined by X server">default</string>
-            </property>
-            <property name="maximum">
-             <number>256</number>
-            </property>
-            <property name="singleStep">
-             <number>16</number>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="2" colspan="2">
-           <widget class="QCheckBox" name="checkBoxFluxboxLegacyStyles">
-            <property name="text">
-             <string>Legacy Styles</string>
-            </property>
-           </widget>
+          <item row="3" column="0">
+           <widget class="QListWidget" name="listThemeIcons"/>
           </item>
           <item row="3" column="1" colspan="3">
-           <widget class="QListWidget" name="listWidgetCursorThemes"/>
+           <widget class="QListWidget" name="listThemeCursors"/>
           </item>
           <item row="4" column="0">
-           <widget class="QPushButton" name="pushButtonSettingsToThemeSet">
+           <widget class="QPushButton" name="pushThemeSaveSet">
             <property name="text">
              <string extracomment="save theme settings as a group">Save Current Settings as a Theme Set</string>
             </property>
@@ -504,10 +485,26 @@
             </property>
            </widget>
           </item>
-          <item row="0" column="0">
-           <widget class="QLabel" name="labelThemes">
+          <item row="4" column="2">
+           <widget class="QLabel" name="labelThemeCursorSize">
             <property name="text">
-             <string extracomment="theme an application will get">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string extracomment="size of the cursor">Size</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="3">
+           <widget class="QSpinBox" name="spinThemeCursorSize">
+            <property name="specialValueText">
+             <string extracomment="default cursor size determined by X server">default</string>
+            </property>
+            <property name="maximum">
+             <number>256</number>
+            </property>
+            <property name="singleStep">
+             <number>16</number>
             </property>
            </widget>
           </item>

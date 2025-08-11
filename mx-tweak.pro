@@ -22,6 +22,7 @@ SOURCES += main.cpp\
         defaultlook.cpp \
     tweak_fluxbox.cpp \
     tweak_plasma.cpp \
+    tweak_theme.cpp \
     tweak_xfce.cpp \
     xfwm_compositor_settings.cpp \
     window_buttons.cpp \
@@ -34,6 +35,7 @@ HEADERS  += defaultlook.h \
     cmd.h \
     tweak_fluxbox.h \
     tweak_plasma.h \
+    tweak_theme.h \
     tweak_xfce.h \
     version.h \
     xfwm_compositor_settings.h \

@@ -27,7 +27,6 @@
 
 #include <QDialog>
 #include <QFile>
-#include <QHash>
 #include <QMessageBox>
 
 namespace Ui {
@@ -56,8 +55,6 @@ public:
     static QString getVersion(const QString &name);
     QString version;
     QString output;
-    bool message_flag{};
-    QHash<QString, QString>  theme_info;
     QString pluginidsystray;
     QString originalhostname;
     QString currentdisplaymanager;
@@ -79,9 +76,6 @@ public:
     bool sandboxflag = false;
     bool themeflag = false;
     bool validateflag = false;
-    bool tasklistflag = false;
-    bool cursor_size_flag = false;
-    void tasklistchange();
     bool isXfce = false;
     bool isFluxbox = false;
     bool isKDE = false;
@@ -101,35 +95,21 @@ public:
 
     QString vblankinitial;
     void setup();
-    void setupuiselections();
-    void setuptheme();
-    void setupthemechoosers();
-    void populatethemelists(const QString &value);
-    static void settheme(const QString &type, const QString &theme, const QString &desktop);
     void setupEtc();
     void setupSuperKey();
     void setupDisplay();
-    void setupComboTheme();
     void setupBrightness();
-    void fliptohorizontal();
-    void fliptovertical();
-    void whichpanel();
     void message() const;
-    bool checkXFCE() const;
     void checkSession();
     static bool checklightdm();
     void CheckComptonRunning();
     void setupCompositor();
     void CheckAptNotifierRunning() const;
-    void set_cursor_size();
-
-    void backupPanel();
 
     void top_or_bottom();
     void left_or_right();
     static void message2();
     QString get_tasklistid();
-    void get_cursor_size();
 
     void setBrightness();
 
@@ -162,7 +142,6 @@ private slots:
     static void on_buttonEditComptonConf_clicked();
     void on_buttonGTKscaling_clicked();
     void on_buttonSaveBrightness_clicked();
-    void on_buttonThemeApply_clicked();
     void on_buttonapplyresolution_clicked();
     void on_checkBoxCSD_clicked();
     void on_checkBoxLightdmReset_clicked();
@@ -173,14 +152,8 @@ private slots:
     void on_checkboxRadeontearfree_clicked();
     void on_comboBoxDisplay_currentIndexChanged(int index);
     void on_comboBoxvblank_activated(int);
-    void on_comboTheme_activated(const int arg1);
     void on_horizontalSliderBrightness_valueChanged(int value);
     void on_horizsliderhardwarebacklight_actionTriggered(int action);
-    void on_listWidgetTheme_currentTextChanged(const QString &currentText);
-    void on_listWidgetWMtheme_currentTextChanged(const QString &currentText) const;
-    void on_listWidgeticons_currentTextChanged(const QString &currentText) const;
-    void on_pushButtonRemoveUserThemeSet_clicked();
-    void on_pushButtonSettingsToThemeSet_clicked();
     void on_radioSudoRoot_clicked();
     void on_radioSudoUser_clicked();
     void saveBrightness();
@@ -190,9 +163,6 @@ private slots:
     void on_checkBoxInstallRecommends_clicked();
 
     void on_checkBoxDisableFluxboxMenuGeneration_clicked();
-
-
-    void on_listWidgetCursorThemes_currentTextChanged(const QString &currentText);
 
     void on_toolButtonSuperFileBrowser_clicked();
 
@@ -204,8 +174,6 @@ private slots:
 
     void on_checkBoxDebianKernelUpdates_clicked();
 
-    void on_spinBoxPointerSize_valueChanged(int);
-
     void on_checkBoxComputerName_clicked();
 
     void on_checkBoxBluetoothBattery_clicked();
@@ -214,14 +182,11 @@ private slots:
 
     void on_checkBoxKVMVirtLoad_clicked();
 
-
-    void on_checkBoxFluxboxLegacyStyles_stateChanged(int);
-
     void saveSettings();
-
     void loadSettings();
 private:
     Ui::defaultlook *ui;
+    class TweakTheme *tweakTheme = nullptr;
     class TweakPlasma *tweakPlasma = nullptr;
     class TweakXfce *tweakXfce = nullptr;
     class TweakFluxbox *tweakFluxbox = nullptr;
