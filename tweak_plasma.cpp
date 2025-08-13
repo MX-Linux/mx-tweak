@@ -12,14 +12,14 @@ namespace PanelLocation { // location plasma settings - 4=bottom, 3 top, 5 left,
 enum {Top = 3, Bottom, Left, Right};
 }
 
-TweakPlasma::TweakPlasma(Ui::defaultlook *ui, bool verbose, QObject *parent)
+TweakPlasma::TweakPlasma(Ui::defaultlook *ui, bool verbose, QObject *parent) noexcept
     : QObject(parent), ui(ui), verbose(verbose)
 {
     connect(ui->pushApplyPlasma, &QPushButton::clicked, this, &TweakPlasma::pushApplyPlasma_clicked);
     setup();
 }
 
-void TweakPlasma::setup()
+void TweakPlasma::setup() noexcept
 {
     QString home_path = QDir::homePath();
     //get panel ID
@@ -79,14 +79,14 @@ void TweakPlasma::setup()
     connect(ui->checkPlasmaDiscoverUpdater, &QCheckBox::toggled, this, &TweakPlasma::checkPlasmaDiscoverUpdater_toggled);
 }
 
-bool TweakPlasma::checkPlasma() const
+bool TweakPlasma::checkPlasma() const noexcept
 {
     QString test = runCmd(u"pgrep plasma"_s).output;
     if (verbose) qDebug() << test;
     return (!test.isEmpty());
 }
 
-QString TweakPlasma::readTaskmanagerConfig(const QString &key) const
+QString TweakPlasma::readTaskmanagerConfig(const QString &key) const noexcept
 {
     const QString &panID = taskManagerID.section('[',2,2).section(']',0,0);
     const QString &applet = taskManagerID.section('[',4,4).section(']',0,0);
@@ -103,7 +103,7 @@ QString TweakPlasma::readTaskmanagerConfig(const QString &key) const
     return value;
 }
 
-QString TweakPlasma::readPlasmaPanelConfig(const QString &key) const
+QString TweakPlasma::readPlasmaPanelConfig(const QString &key) const noexcept
 {
     const QString &panID = panelID.section('[',2,2).section(']',0,0);
     if (verbose) qDebug() << "plasma panel ID" << panID;
@@ -113,46 +113,46 @@ QString TweakPlasma::readPlasmaPanelConfig(const QString &key) const
     return value;
 }
 
-void TweakPlasma::writePlasmaPanelConfig(const QString &key, const QString &value) const
+void TweakPlasma::writePlasmaPanelConfig(const QString &key, const QString &value) const noexcept
 {
     const QString &panID = panelID.section('[',2,2).section(']',0,0);
     runCmd("kwriteconfig5 --file plasma-org.kde.plasma.desktop-appletsrc --group Containments --group "_L1 + panID + " --key "_L1 + key + ' ' + value);
 }
 
-void TweakPlasma::writeTaskmanagerConfig(const QString &key, const QString &value) const
+void TweakPlasma::writeTaskmanagerConfig(const QString &key, const QString &value) const noexcept
 {
     const QString &panID = taskManagerID.section('[',2,2).section(']',0,0);
     const QString &applet = taskManagerID.section('[',4,4).section(']',0,0);
     runCmd("kwriteconfig5 --file plasma-org.kde.plasma.desktop-appletsrc --group Containments --group "_L1 + panID + " --group Applets --group "_L1 + applet + " --key "_L1 + key + ' ' + value);
 }
 
-void TweakPlasma::comboPlasmaPanelLocation_currentIndexChanged(int  /*index*/)
+void TweakPlasma::comboPlasmaPanelLocation_currentIndexChanged(int  /*index*/) noexcept
 {
     ui->pushApplyPlasma->setEnabled(true);
     flags.placement = true;
 }
-void TweakPlasma::checkPlasmaDiscoverUpdater_toggled(bool)
+void TweakPlasma::checkPlasmaDiscoverUpdater_toggled(bool) noexcept
 {
     ui->pushApplyPlasma->setEnabled(true);
     flags.autoStartDiscover = true;
 }
-void TweakPlasma::checkPlasmaSingleClick_toggled(bool)
+void TweakPlasma::checkPlasmaSingleClick_toggled(bool) noexcept
 {
     ui->pushApplyPlasma->setEnabled(true);
     flags.singleClick = true;
 }
-void TweakPlasma::checkPlasmaShowAllWorkspaces_toggled(bool)
+void TweakPlasma::checkPlasmaShowAllWorkspaces_toggled(bool) noexcept
 {
     ui->pushApplyPlasma->setEnabled(true);
     flags.workspaces = true;
 }
-void TweakPlasma::checkPlasmaResetDock_toggled(bool)
+void TweakPlasma::checkPlasmaResetDock_toggled(bool) noexcept
 {
     ui->pushApplyPlasma->setEnabled(true);
     flags.reset = true;
 }
 
-void TweakPlasma::pushApplyPlasma_clicked()
+void TweakPlasma::pushApplyPlasma_clicked() noexcept
 {
     QString home_path = QDir::homePath();
     if (flags.reset) {

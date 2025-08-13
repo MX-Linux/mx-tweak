@@ -11,9 +11,9 @@ class TweakPlasma : public QObject
 {
     Q_OBJECT
 public:
-    TweakPlasma(Ui::defaultlook *ui, bool verbose, QObject *parent = nullptr);
-    void setup();
-    bool checkPlasma() const;
+    TweakPlasma(Ui::defaultlook *ui, bool verbose, QObject *parent = nullptr) noexcept;
+    void setup() noexcept;
+    bool checkPlasma() const noexcept;
 
 private:
     Ui::defaultlook *ui;
@@ -30,17 +30,17 @@ private:
         bool autoStartDiscover : 1;
     } flags = {};
 
-    void pushApplyPlasma_clicked();
-    void comboPlasmaPanelLocation_currentIndexChanged(int);
-    void checkPlasmaSingleClick_toggled(bool);
-    void checkPlasmaShowAllWorkspaces_toggled(bool);
-    void checkPlasmaResetDock_toggled(bool);
-    void checkPlasmaDiscoverUpdater_toggled(bool);
+    void pushApplyPlasma_clicked() noexcept;
+    void comboPlasmaPanelLocation_currentIndexChanged(int) noexcept;
+    void checkPlasmaSingleClick_toggled(bool) noexcept;
+    void checkPlasmaShowAllWorkspaces_toggled(bool) noexcept;
+    void checkPlasmaResetDock_toggled(bool) noexcept;
+    void checkPlasmaDiscoverUpdater_toggled(bool) noexcept;
 
-    QString readPlasmaPanelConfig(const QString &Key) const;
-    QString readTaskmanagerConfig(const QString &Key) const;
-    void writePlasmaPanelConfig(const QString &key, const QString &value) const;
-    void writeTaskmanagerConfig(const QString &key, const QString &value) const;
+    QString readPlasmaPanelConfig(const QString &Key) const noexcept;
+    QString readTaskmanagerConfig(const QString &Key) const noexcept;
+    void writePlasmaPanelConfig(const QString &key, const QString &value) const noexcept;
+    void writeTaskmanagerConfig(const QString &key, const QString &value) const noexcept;
 };
 
 #endif // TWEAK_PLASMA_H

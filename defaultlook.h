@@ -91,9 +91,9 @@ public:
     void setupCompositor();
     void CheckAptNotifierRunning() const;
 
-    void setupThunar();
-    void applyThunar();
-    void slotThunarChanged();
+    void setupThunar() noexcept;
+    void applyThunar() noexcept;
+    void slotThunarChanged() noexcept;
 
     void changecomputername(const QString &hostname);
     bool validatecomputername(const QString &hostname);
@@ -146,17 +146,17 @@ private:
     class TweakDisplay *tweakDisplay = nullptr;
     class TweakSuperKey *tweakSuperKey = nullptr;
 
-    void pushAbout_clicked();
-    void pushHelp_clicked();
+    void pushAbout_clicked() noexcept;
+    void pushHelp_clicked() noexcept;
 
-    void pushManageTint2_clicked();
+    void pushManageTint2_clicked() noexcept;
 
-    void tabWidget_currentChanged(int index);
-    void pushXFCEAppearance_clicked();
-    void pushXFCEWMsettings_clicked();
-    void pushXFCEPanelSettings_clicked();
+    void tabWidget_currentChanged(int index) noexcept;
+    void pushXFCEAppearance_clicked() noexcept;
+    void pushXFCEWMsettings_clicked() noexcept;
+    void pushXFCEPanelSettings_clicked() noexcept;
 
-    void comboCompositor_currentIndexChanged(const int);
+    void comboCompositor_currentIndexChanged(const int) noexcept;
 };
 
 #endif // DEFAULTLOOK_H

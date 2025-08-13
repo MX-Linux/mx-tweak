@@ -4,7 +4,7 @@
 
 using namespace Qt::Literals::StringLiterals;
 
-xfwm_compositor_settings::xfwm_compositor_settings(QWidget *parent) :
+xfwm_compositor_settings::xfwm_compositor_settings(QWidget *parent) noexcept :
     QDialog(parent),
     ui(new Ui::xfwm_compositor_settings)
 {
@@ -14,13 +14,13 @@ xfwm_compositor_settings::xfwm_compositor_settings(QWidget *parent) :
     setup();
 }
 
-xfwm_compositor_settings::~xfwm_compositor_settings()
+xfwm_compositor_settings::~xfwm_compositor_settings() noexcept
 {
     delete ui;
 }
 
 //setup some initial values
-void xfwm_compositor_settings::setup()
+void xfwm_compositor_settings::setup() noexcept
 {
     this->setWindowTitle(tr("Xfwm Compositor Settings"));
 
@@ -78,7 +78,7 @@ void xfwm_compositor_settings::setup()
     connect(ui->sliderPopup, &QSlider::valueChanged, this, &xfwm_compositor_settings::sliderPopup_valueChanged);
 }
 
-void xfwm_compositor_settings::checkRedirect_toggled(bool checked)
+void xfwm_compositor_settings::checkRedirect_toggled(bool checked) noexcept
 {
     QString cmd;
     if (checked) {
@@ -89,7 +89,7 @@ void xfwm_compositor_settings::checkRedirect_toggled(bool checked)
     system(cmd.toUtf8());
 }
 
-void xfwm_compositor_settings::checkVsync_toggled(bool checked)
+void xfwm_compositor_settings::checkVsync_toggled(bool checked) noexcept
 {
     QString cmd;
     if (checked) {
@@ -100,7 +100,7 @@ void xfwm_compositor_settings::checkVsync_toggled(bool checked)
     system(cmd.toUtf8());
 }
 
-void xfwm_compositor_settings::checkPreview_toggled(bool checked)
+void xfwm_compositor_settings::checkPreview_toggled(bool checked) noexcept
 {
     QString cmd;
     if (checked) {
@@ -111,7 +111,7 @@ void xfwm_compositor_settings::checkPreview_toggled(bool checked)
     system(cmd.toUtf8());
 }
 
-void xfwm_compositor_settings::checkPopupShadows_toggled(bool checked)
+void xfwm_compositor_settings::checkPopupShadows_toggled(bool checked) noexcept
 {
     QString cmd;
     if (checked) {
@@ -122,7 +122,7 @@ void xfwm_compositor_settings::checkPopupShadows_toggled(bool checked)
     system(cmd.toUtf8());
 }
 
-void xfwm_compositor_settings::checkDockShadows_toggled(bool checked)
+void xfwm_compositor_settings::checkDockShadows_toggled(bool checked) noexcept
 {
     QString cmd;
     if (checked) {
@@ -133,7 +133,7 @@ void xfwm_compositor_settings::checkDockShadows_toggled(bool checked)
     system(cmd.toUtf8());
 }
 
-void xfwm_compositor_settings::checkFrameShadows_toggled(bool checked)
+void xfwm_compositor_settings::checkFrameShadows_toggled(bool checked) noexcept
 {
     QString cmd;
     if (checked) {
@@ -144,7 +144,7 @@ void xfwm_compositor_settings::checkFrameShadows_toggled(bool checked)
     system(cmd.toUtf8());
 }
 
-void xfwm_compositor_settings::sliderWindowDecorations_valueChanged(int value)
+void xfwm_compositor_settings::sliderWindowDecorations_valueChanged(int value) noexcept
 {
     QString param = QString::number(value);
     QString cmd;
@@ -154,7 +154,7 @@ void xfwm_compositor_settings::sliderWindowDecorations_valueChanged(int value)
     system(cmd.toUtf8());
 }
 
-void xfwm_compositor_settings::sliderInactiveWindows_valueChanged(int value)
+void xfwm_compositor_settings::sliderInactiveWindows_valueChanged(int value) noexcept
 {
     QString param = QString::number(value);
     QString cmd;
@@ -163,7 +163,7 @@ void xfwm_compositor_settings::sliderInactiveWindows_valueChanged(int value)
     system(cmd.toUtf8());
 }
 
-void xfwm_compositor_settings::sliderWindowsMove_valueChanged(int value)
+void xfwm_compositor_settings::sliderWindowsMove_valueChanged(int value) noexcept
 {
     QString param = QString::number(value);
     QString cmd;
@@ -172,7 +172,7 @@ void xfwm_compositor_settings::sliderWindowsMove_valueChanged(int value)
     system(cmd.toUtf8());
 }
 
-void xfwm_compositor_settings::sliderWindowsResize_valueChanged(int value)
+void xfwm_compositor_settings::sliderWindowsResize_valueChanged(int value) noexcept
 {
     QString param = QString::number(value);
     QString cmd;
@@ -181,7 +181,7 @@ void xfwm_compositor_settings::sliderWindowsResize_valueChanged(int value)
     system(cmd.toUtf8());
 }
 
-void xfwm_compositor_settings::sliderPopup_valueChanged(int value)
+void xfwm_compositor_settings::sliderPopup_valueChanged(int value) noexcept
 {
     QString param = QString::number(value);
     QString cmd;

@@ -5,7 +5,7 @@
 
 using namespace Qt::Literals::StringLiterals;
 
-TweakFluxbox::TweakFluxbox(Ui::defaultlook *ui, bool verbose, QObject *parent)
+TweakFluxbox::TweakFluxbox(Ui::defaultlook *ui, bool verbose, QObject *parent) noexcept
     : QObject{parent}, ui{ui}, verbose{verbose}
 {
     setup();
@@ -27,7 +27,7 @@ TweakFluxbox::TweakFluxbox(Ui::defaultlook *ui, bool verbose, QObject *parent)
     connect(ui->comboFluxboxCaptions, &QComboBox::currentIndexChanged, this, &TweakFluxbox::comboFluxboxCaptions_currentIndexChanged);
 }
 
-void TweakFluxbox::setup()
+void TweakFluxbox::setup() noexcept
 {
     //resets
     if (!QFile::exists(u"/usr/bin/menu-migrate"_s)) {
@@ -110,14 +110,14 @@ void TweakFluxbox::setup()
     ui->pushFluxboxApply->setDisabled(true);
 }
 
-bool TweakFluxbox::checkFluxbox() const
+bool TweakFluxbox::checkFluxbox() const noexcept
 {
     QString test = runCmd(u"pgrep fluxbox"_s).output;
     if (verbose) qDebug() << "current fluxbox test is" << test;
     return (!test.isEmpty());
 }
 
-void TweakFluxbox::changeInitVariable(const QString &initline, const QString &value) const
+void TweakFluxbox::changeInitVariable(const QString &initline, const QString &value) const noexcept
 {
     if (verbose) qDebug() << "checking for init value changes";
     QString initialvalue = initline.section(':',1,1).trimmed();
@@ -128,7 +128,7 @@ void TweakFluxbox::changeInitVariable(const QString &initline, const QString &va
     }
 }
 
-void TweakFluxbox::changeDock() const
+void TweakFluxbox::changeDock() const noexcept
 {
     if (verbose) qDebug() << "comment slit changes in mxdk files";
 
@@ -138,11 +138,11 @@ void TweakFluxbox::changeDock() const
     }
 }
 
-void TweakFluxbox::slotSettingChanged()
+void TweakFluxbox::slotSettingChanged() noexcept
 {
     ui->pushFluxboxApply->setEnabled(true);
 }
-void TweakFluxbox::pushFluxboxApply_clicked()
+void TweakFluxbox::pushFluxboxApply_clicked() noexcept
 {
     ui->tabFluxbox->setEnabled(false);
 
@@ -305,39 +305,39 @@ void TweakFluxbox::pushFluxboxApply_clicked()
     ui->tabFluxbox->setEnabled(true);
 }
 
-void TweakFluxbox::checkFluxboxMenuMigrate_clicked()
+void TweakFluxbox::checkFluxboxMenuMigrate_clicked() noexcept
 {
     ui->pushFluxboxApply->setEnabled(true);
     ui->checkFluxboxResetMenu->setChecked(false);
 }
-void TweakFluxbox::checkFluxboxResetMenu_clicked()
+void TweakFluxbox::checkFluxboxResetMenu_clicked() noexcept
 {
     ui->pushFluxboxApply->setEnabled(true);
     ui->checkFluxboxMenuMigrate->setChecked(false);
 }
-void TweakFluxbox::checkFluxboxResetEverything_clicked()
+void TweakFluxbox::checkFluxboxResetEverything_clicked() noexcept
 {
     ui->pushFluxboxApply->setEnabled(true);
     ui->checkFluxboxResetDock->setChecked(false);
     ui->checkFluxboxResetMenu->setChecked(false);
     ui->checkFluxboxMenuMigrate->setChecked(false);
 }
-void TweakFluxbox::spinFluxboxScreenBlankingTimeout_valueChanged(int)
+void TweakFluxbox::spinFluxboxScreenBlankingTimeout_valueChanged(int) noexcept
 {
     flags.screenBlank = true;
     ui->pushFluxboxApply->setEnabled(true);
 }
-void TweakFluxbox::comboFluxboxSlitLocation_currentIndexChanged(int  /*index*/)
+void TweakFluxbox::comboFluxboxSlitLocation_currentIndexChanged(int  /*index*/) noexcept
 {
     ui->pushFluxboxApply->setEnabled(true);
     flags.slit = true;
 }
-void TweakFluxbox::comboFluxboxIcons_currentIndexChanged(int  /*index*/)
+void TweakFluxbox::comboFluxboxIcons_currentIndexChanged(int  /*index*/) noexcept
 {
     ui->pushFluxboxApply->setEnabled(true);
     flags.icons = true;
 }
-void TweakFluxbox::comboFluxboxCaptions_currentIndexChanged(int  /*index*/)
+void TweakFluxbox::comboFluxboxCaptions_currentIndexChanged(int  /*index*/) noexcept
 {
     ui->pushFluxboxApply->setEnabled(true);
     flags.captions = true;

@@ -6,7 +6,7 @@
 
 using namespace Qt::Literals::StringLiterals;
 
-TweakDisplay::TweakDisplay(Ui::defaultlook *ui, bool verbose, QObject *parent)
+TweakDisplay::TweakDisplay(Ui::defaultlook *ui, bool verbose, QObject *parent) noexcept
     : QObject{parent}, ui{ui}, verbose{verbose}
 {
     setup();
@@ -19,7 +19,7 @@ TweakDisplay::TweakDisplay(Ui::defaultlook *ui, bool verbose, QObject *parent)
     connect(ui->sliderDisplayBrightness, &QSlider::valueChanged, this, &TweakDisplay::sliderDisplayBrightness_valueChanged);
 }
 
-void TweakDisplay::setup()
+void TweakDisplay::setup() noexcept
 {
     //populate combobox
     QString displaydata = runCmd(u"LANG=C xrandr |grep -w connected | cut -d' ' -f1"_s).output;
@@ -39,7 +39,7 @@ void TweakDisplay::setup()
     //disable resolution stuff
 }
 
-void TweakDisplay::setMissingXfconfVariables(const QString &activeProfile, const QString &resolution)
+void TweakDisplay::setMissingXfconfVariables(const QString &activeProfile, const QString &resolution) noexcept
 {
     //set display name
     runCmd("xfconf-query --channel displays -p /"_L1 + activeProfile + '/' + ui->comboDisplay->currentText() + " -t string -s "_L1 + ui->comboDisplay->currentText() + " --create"_L1);
@@ -51,7 +51,7 @@ void TweakDisplay::setMissingXfconfVariables(const QString &activeProfile, const
     runCmd("xfconf-query --channel displays -p /"_L1 + activeProfile + '/' + ui->comboDisplay->currentText() + "/Active -t bool -s true --create"_L1);
 }
 
-void TweakDisplay::setupResolutions()
+void TweakDisplay::setupResolutions() noexcept
 {
     const QString &display = ui->comboDisplay->currentText();
     ui->comboDisplayResolutions->clear();
@@ -65,7 +65,7 @@ void TweakDisplay::setupResolutions()
     if (verbose) qDebug() << "resolution is : " << resolution;
     ui->comboDisplayResolutions->setCurrentText(resolution);
 }
-void TweakDisplay::setResolution()
+void TweakDisplay::setResolution() noexcept
 {
     const QString &activeProfile = runCmd(u"LANG=C xfconf-query --channel displays -p /ActiveProfile"_s).output;
     const QString &display = ui->comboDisplay->currentText();
@@ -77,7 +77,7 @@ void TweakDisplay::setResolution()
     setRefreshRate(display, resolution, activeProfile);
 }
 
-void TweakDisplay::setupScale()
+void TweakDisplay::setupScale() noexcept
 {
     //setup scale for currently shown display and in the active profile
     QString xscale = u"1"_s;
@@ -113,7 +113,7 @@ void TweakDisplay::setupScale()
         ui->pushDisplayApplyScaling->hide();
     }
 }
-void TweakDisplay::setScale()
+void TweakDisplay::setScale() noexcept
 {
     //get active profile and desired scale for given resolution
     double scale = 1 / ui->spinDisplayScale->value();
@@ -136,7 +136,7 @@ void TweakDisplay::setScale()
     runCmd("xrandr --output "_L1 + ui->comboDisplay->currentText() + " --scale "_L1 + scaleString + 'x' + scaleString);
 }
 
-void TweakDisplay::setRefreshRate(const QString &display, const QString &resolution, const QString &activeProfile) const
+void TweakDisplay::setRefreshRate(const QString &display, const QString &resolution, const QString &activeProfile) const noexcept
 {
     const QString &rate = runCmd("/usr/lib/mx-tweak/mx-tweak-lib-randr.sh "_L1 + display + " refreshrate"_L1).output;
     QStringList rates = rate.split(QRegularExpression(u"\\s"_s), Qt::SkipEmptyParts);
@@ -148,7 +148,7 @@ void TweakDisplay::setRefreshRate(const QString &display, const QString &resolut
         + "/RefreshRate -t double -s "_L1 + rates.at(0).section('*',0,0) + " --create; sleep 1"_L1);
 }
 
-void TweakDisplay::setupBacklight()
+void TweakDisplay::setupBacklight() noexcept
 {
     //check for backlights
     const QString &test = runCmd(u"ls /sys/class/backlight"_s).output;
@@ -165,7 +165,7 @@ void TweakDisplay::setupBacklight()
         ui->labelHardwareBacklight->hide();
     }
 }
-void TweakDisplay::setBacklight()
+void TweakDisplay::setBacklight() noexcept
 {
     const QString &backlight = QString::number(ui->sliderDisplayHardwareBacklight->value());
     const QString &cmd = "sudo /usr/lib/mx-tweak/backlight-brightness -s "_L1 + backlight;
@@ -173,14 +173,14 @@ void TweakDisplay::setBacklight()
     ui->labelCurrentBacklight->setText(backlight);
 }
 
-void TweakDisplay::setGTKScaling()
+void TweakDisplay::setGTKScaling() noexcept
 {
     runCmd("xfconf-query --channel xsettings -p /Gdk/WindowScalingFactor -t int -s "_L1
         + QString::number(ui->spinDisplayGTKScaling->value()));
     runCmd(u"xfce4-panel --restart"_s);
 }
 
-void TweakDisplay::setupBrightness()
+void TweakDisplay::setupBrightness() noexcept
 {
     //get brightness value for currently shown display
     const QString &brightness = runCmd("LANG=C xrandr --verbose | awk '/"_L1 + ui->comboDisplay->currentText()
@@ -194,7 +194,7 @@ void TweakDisplay::setupBrightness()
     ui->sliderDisplayBrightness->setToolTip(strValue);
     ui->labelDisplayBrightness->setText(strValue);
 }
-void TweakDisplay::setBrightness()
+void TweakDisplay::setBrightness() noexcept
 {
     double num = ui->sliderDisplayBrightness->value() / 100.0;
     if (verbose) qDebug() << "num is :" << num;
@@ -205,7 +205,7 @@ void TweakDisplay::setBrightness()
         + " --gamma "_L1 + strGamma1 + ':' + strGamma2 + ':' + strGamma3;
     system(cmd.toUtf8());
 }
-void TweakDisplay::saveBrightness()
+void TweakDisplay::saveBrightness() noexcept
 {
     //save cmd used in user's home file under .config
     //make directory when its not present
@@ -222,7 +222,7 @@ void TweakDisplay::saveBrightness()
         + "'>"_L1 + configPath + '/' + ui->comboDisplay->currentText());
 }
 
-void TweakDisplay::setupGamma()
+void TweakDisplay::setupGamma() noexcept
 {
     QString gamma = runCmd("/usr/lib/mx-tweak/mx-tweak-lib-randr.sh "_L1
                            + ui->comboDisplay->currentText() + " gamma"_L1).output;
@@ -237,7 +237,7 @@ void TweakDisplay::setupGamma()
     if (verbose) qDebug() << "gamma is" << strGamma1 << strGamma2 << strGamma3;
 }
 
-void TweakDisplay::comboDisplay_currentIndexChanged(int  /*index*/)
+void TweakDisplay::comboDisplay_currentIndexChanged(int  /*index*/) noexcept
 {
     setupBrightness();
     setupScale();
@@ -245,7 +245,7 @@ void TweakDisplay::comboDisplay_currentIndexChanged(int  /*index*/)
     setupGamma();
 }
 
-void TweakDisplay::sliderDisplayBrightness_valueChanged(int value)
+void TweakDisplay::sliderDisplayBrightness_valueChanged(int value) noexcept
 {
     const QString &strValue = QString::number(value);
     ui->sliderDisplayBrightness->setToolTip(strValue);

@@ -13,10 +13,10 @@ class theming_to_tweak : public QDialog
     Q_OBJECT
 
 public:
-    explicit theming_to_tweak(QWidget *parent = 0);
-    ~theming_to_tweak();
+    explicit theming_to_tweak(QWidget *parent = 0) noexcept;
+    ~theming_to_tweak() noexcept;
 
-    QLineEdit* nameEditor();
+    QLineEdit* nameEditor() noexcept;
 private:
     Ui::theming_to_tweak *ui;
 };

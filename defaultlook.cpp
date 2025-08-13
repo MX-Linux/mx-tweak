@@ -249,7 +249,7 @@ void defaultlook::setup()
     this->adjustSize();
 }
 
-void defaultlook::pushAbout_clicked()
+void defaultlook::pushAbout_clicked() noexcept
 {
     this->hide();
     displayAboutMsgBox(tr("About MX Tweak"),
@@ -262,7 +262,7 @@ void defaultlook::pushAbout_clicked()
     this->show();
 }
 
-void defaultlook::pushHelp_clicked()
+void defaultlook::pushHelp_clicked() noexcept
 {
     QLocale locale;
     QString lang = locale.bcp47Name();
@@ -281,7 +281,7 @@ bool defaultlook::checklightdm()
     return (test.exists());
 }
 
-void defaultlook::pushXFCEPanelSettings_clicked()
+void defaultlook::pushXFCEPanelSettings_clicked() noexcept
 {
     this->hide();
     system("xfce4-panel --preferences");
@@ -311,14 +311,14 @@ void defaultlook::pushXFCEPanelSettings_clicked()
     tweakXfce->panelSetup();
 }
 
-void defaultlook::pushXFCEAppearance_clicked()
+void defaultlook::pushXFCEAppearance_clicked() noexcept
 {
     this->hide();
     system("xfce4-appearance-settings");
     this->show();
 }
 
-void defaultlook::pushXFCEWMsettings_clicked()
+void defaultlook::pushXFCEWMsettings_clicked() noexcept
 {
     this->hide();
     system("xfwm4-settings");
@@ -1005,7 +1005,7 @@ void defaultlook::on_buttonEditComptonConf_clicked()
     runCmd("xdg-open "_L1 + file_conf.absoluteFilePath());
 }
 
-void defaultlook::comboCompositor_currentIndexChanged(const int)
+void defaultlook::comboCompositor_currentIndexChanged(const int) noexcept
 {
     if (setupflag){
         if (!ui->comboCompositor->currentData().isValid()) {
@@ -1093,7 +1093,7 @@ void defaultlook::on_checkBoxSandbox_clicked()
 }
 
 
-void defaultlook::tabWidget_currentChanged(int index)
+void defaultlook::tabWidget_currentChanged(int index) noexcept
 {
     if (index == Tab::Display && tweakDisplay == nullptr) {
         tweakDisplay = new TweakDisplay(ui, verbose, this);
@@ -1112,7 +1112,7 @@ void defaultlook::on_checkBoxbluetoothAutoEnable_clicked()
     if (verbose) qDebug() << "bluetooth flag is " << bluetoothautoenableflag;
 }
 
-void defaultlook::pushManageTint2_clicked()
+void defaultlook::pushManageTint2_clicked() noexcept
 {
     this->hide();
     system("/usr/bin/mxfb-tint2-manager");
@@ -1126,7 +1126,7 @@ void defaultlook::on_checkBoxInstallRecommends_clicked()
     enable_recommendsflag = true;
 }
 
-void defaultlook::setupThunar()
+void defaultlook::setupThunar() noexcept
 {
     ui->checkThunarResetCustomActions->setChecked(false);
     QString test;
@@ -1142,7 +1142,7 @@ void defaultlook::setupThunar()
     test = runCmd(u"xfconf-query  -c thunar -p /misc-vertical-split-pane"_s).output;
     ui->checkThunarSplitViewHorizontal->setChecked(test == "true"_L1);
 }
-void defaultlook::applyThunar()
+void defaultlook::applyThunar() noexcept
 {
     // Single-click
     if (ui->checkThunarSingleClick->isChecked()) {
@@ -1170,7 +1170,7 @@ void defaultlook::applyThunar()
 
     setupThunar();
 }
-void defaultlook::slotThunarChanged()
+void defaultlook::slotThunarChanged() noexcept
 {
     if (ui->tabFluxbox->isVisible()) {
         ui->pushFluxboxApply->setEnabled(true);

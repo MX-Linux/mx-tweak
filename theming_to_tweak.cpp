@@ -1,7 +1,7 @@
 #include "theming_to_tweak.h"
 #include "ui_theming_to_tweak.h"
 
-theming_to_tweak::theming_to_tweak(QWidget *parent) :
+theming_to_tweak::theming_to_tweak(QWidget *parent) noexcept :
     QDialog(parent),
     ui(new Ui::theming_to_tweak)
 {
@@ -16,12 +16,12 @@ theming_to_tweak::theming_to_tweak(QWidget *parent) :
     });
 }
 
-theming_to_tweak::~theming_to_tweak()
+theming_to_tweak::~theming_to_tweak() noexcept
 {
     delete ui;
 }
 
-QLineEdit *theming_to_tweak::nameEditor()
+QLineEdit *theming_to_tweak::nameEditor() noexcept
 {
     return ui->lineEdit_Name;
 }

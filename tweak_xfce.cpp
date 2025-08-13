@@ -8,7 +8,7 @@
 
 using namespace Qt::Literals::StringLiterals;
 
-TweakXfce::TweakXfce(Ui::defaultlook *ui, bool verbose, QObject *parent)
+TweakXfce::TweakXfce(Ui::defaultlook *ui, bool verbose, QObject *parent) noexcept
     : QObject{parent}, ui{ui}, verbose{verbose}
 {
     setup();
@@ -49,7 +49,7 @@ TweakXfce::TweakXfce(Ui::defaultlook *ui, bool verbose, QObject *parent)
     connect(ui->pushXfcePanelRestore, &QPushButton::clicked, this, &TweakXfce::pushXfcePanelRestore_clicked);
     connect(ui->pushXfcePanelDefault, &QPushButton::clicked, this, &TweakXfce::pushXfcePanelDefault_clicked);
 }
-void TweakXfce::setup()
+void TweakXfce::setup() noexcept
 {
     ui->pushXfceApply->setEnabled(false);
     float versioncheck = 4.18;
@@ -132,18 +132,18 @@ void TweakXfce::setup()
         flags.hibernate = false;
     }
 }
-bool TweakXfce::checkXfce() const
+bool TweakXfce::checkXfce() const noexcept
 {
     QString test = runCmd(u"pgrep xfce4-session"_s).output;
     if (verbose) qDebug() << "current xfce desktop test is " << test;
     return (!test.isEmpty());
 }
 
-void TweakXfce::slotSettingChanged()
+void TweakXfce::slotSettingChanged() noexcept
 {
     ui->pushXfceApply->setEnabled(true);
 }
-void TweakXfce::pushXfceApply_clicked()
+void TweakXfce::pushXfceApply_clicked() noexcept
 {
     QString hibernate_option;
     hibernate_option.clear();
@@ -234,7 +234,7 @@ void TweakXfce::pushXfceApply_clicked()
  * PANEL SETTINGS *
 \******************/
 
-void TweakXfce::panelWhich()
+void TweakXfce::panelWhich() noexcept
 {
     // take the first panel we see as default
     const QString &panel_content = runCmd(u"LC_ALL=en_US.UTF-8 xfconf-query"_s
@@ -246,7 +246,7 @@ void TweakXfce::panelWhich()
         qDebug() << "panel to use: " << panel;
     }
 }
-void TweakXfce::panelSetup()
+void TweakXfce::panelSetup() noexcept
 {
     QString home_path = QDir::homePath();
     // Migrate existing older backup directory to multi-backup structure.
@@ -370,12 +370,12 @@ void TweakXfce::panelSetup()
     ui->comboXfcePanelPlacement->setCurrentIndex(posItem);
 }
 
-void TweakXfce::slotPluginScaleChanged(double)
+void TweakXfce::slotPluginScaleChanged(double) noexcept
 {
     ui->pushXfcePanelApply->setEnabled(true);
     flags.scales = true;
 }
-void TweakXfce::pushXfcePanelApply_clicked()
+void TweakXfce::pushXfcePanelApply_clicked() noexcept
 {
     ui->pushXfcePanelApply->setEnabled(false);
 
@@ -418,18 +418,18 @@ void TweakXfce::pushXfcePanelApply_clicked()
     panelSetup();
 }
 
-void TweakXfce::comboXfcePanelPlacement_currentIndexChanged(int)
+void TweakXfce::comboXfcePanelPlacement_currentIndexChanged(int) noexcept
 {
     ui->pushXfcePanelApply->setEnabled(true);
     flags.panel = true;
 }
 
-void TweakXfce::comboXfcePanelTasklistPlugin_currentIndexChanged(int)
+void TweakXfce::comboXfcePanelTasklistPlugin_currentIndexChanged(int) noexcept
 {
     ui->pushXfcePanelApply->setEnabled(true);
     flags.tasklist = true;
 }
-void TweakXfce::pushXfcePanelTasklistOptions_clicked()
+void TweakXfce::pushXfcePanelTasklistOptions_clicked() noexcept
 {
     ui->tabWidget->setEnabled(false);
     if (ui->comboXfcePanelTasklistPlugin->currentData() == "tasklist"_L1) {
@@ -443,7 +443,7 @@ void TweakXfce::pushXfcePanelTasklistOptions_clicked()
 }
 
 // backs up the current panel configuration
-void TweakXfce::pushXfcePanelBackup_clicked()
+void TweakXfce::pushXfcePanelBackup_clicked() noexcept
 {
     //ensure .restore folder exists
     QString home_path = QDir::homePath();
@@ -477,7 +477,7 @@ void TweakXfce::pushXfcePanelBackup_clicked()
     }
     populatePanelBackups();
 }
-void TweakXfce::pushXfcePanelRestore_clicked()
+void TweakXfce::pushXfcePanelRestore_clicked() noexcept
 {
     //validate file first
     switch(validateArchive("$HOME/.restore/\""_L1 + ui->comboXfcePanelBackups->currentText() + ".tar.xz\""_L1)){
@@ -499,7 +499,7 @@ void TweakXfce::pushXfcePanelRestore_clicked()
     panelWhich();
     panelSetup();
 }
-void TweakXfce::pushXfcePanelDefault_clicked()
+void TweakXfce::pushXfcePanelDefault_clicked() noexcept
 {
     // copy template files
     runCmd(u"xfce4-panel --quit;pkill xfconfd; rm -Rf ~/.config/xfce4/panel; cp -Rf /etc/skel/.config/xfce4/panel ~/.config/xfce4; sleep 1; \
@@ -509,7 +509,7 @@ void TweakXfce::pushXfcePanelDefault_clicked()
     panelWhich();
     panelSetup();
 }
-int TweakXfce::populatePanelBackups()
+int TweakXfce::populatePanelBackups() noexcept
 {
     ui->comboXfcePanelBackups->clear();
     QStringList backups = QDir(QDir::homePath() + "/.restore"_L1).entryList({u"*.tar.xz"_s},
@@ -518,7 +518,7 @@ int TweakXfce::populatePanelBackups()
     ui->comboXfcePanelBackups->addItems(backups);
     return backups.count();
 }
-int TweakXfce::validateArchive(const QString &path) const
+int TweakXfce::validateArchive(const QString &path) const noexcept
 {
     QString test = runCmd("file --mime-type --brief "_L1 + path).output;
     if ( verbose ) qDebug() << test;
@@ -536,7 +536,7 @@ int TweakXfce::validateArchive(const QString &path) const
 }
 
 //returns first tasklist or docklike id
-QString TweakXfce::getTasklistID() const
+QString TweakXfce::getTasklistID() const noexcept
 {
     QString id = runCmd(u"grep -m 1 tasklist ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml"_s).output;
     id = id.remove('"').section('-',1,1).section(' ',0,0);
@@ -548,7 +548,7 @@ QString TweakXfce::getTasklistID() const
     }
     return id;
 }
-void TweakXfce::tasklistChange()
+void TweakXfce::tasklistChange() noexcept
 {
     //choice of tasklist
     const QString &choice = ui->comboXfcePanelTasklistPlugin->currentData().toString();
@@ -580,7 +580,7 @@ void TweakXfce::tasklistChange()
 
 /* Panel orientation switching (horizontal vs vertical) */
 
-void TweakXfce::panelFlipToHorizontal()
+void TweakXfce::panelFlipToHorizontal() noexcept
 {
     QString file_content;
     QStringList pluginIDs;
@@ -732,7 +732,7 @@ void TweakXfce::panelFlipToHorizontal()
         runCmd("xfconf-query -c xfce4-panel --property /plugins/plugin-"_L1 + workspacesID + "/rows --type int --set 1"_L1);
     }
 }
-void TweakXfce::panelFlipToVertical()
+void TweakXfce::panelFlipToVertical() noexcept
 {
     QString file_content;
     QStringList pluginIDs;
@@ -896,7 +896,7 @@ void TweakXfce::panelFlipToVertical()
         runCmd("xfconf-query -c xfce4-panel --property /plugins/plugin-"_L1 + workspacesID + "/rows --type int --set 2"_L1);
     }
 }
-void TweakXfce::panelSetPosition()
+void TweakXfce::panelSetPosition() noexcept
 {
     //move to user selected top or bottom border per mx-16 defaults
     QString newPos = ui->comboXfcePanelPlacement->currentData().toString();

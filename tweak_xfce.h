@@ -11,12 +11,12 @@ class TweakXfce : public QObject
 {
     Q_OBJECT
 public:
-    TweakXfce(Ui::defaultlook *ui, bool verbose, QObject *parent = nullptr);
-    void setup();
-    bool checkXfce() const;
+    TweakXfce(Ui::defaultlook *ui, bool verbose, QObject *parent = nullptr) noexcept;
+    void setup() noexcept;
+    bool checkXfce() const noexcept;
     /* Panel */
     QStringList panelIDs;
-    void panelSetup();
+    void panelSetup() noexcept;
 
 private:
     Ui::defaultlook *ui;
@@ -32,31 +32,31 @@ private:
         bool scales;
     } flags = {};
 
-    void slotSettingChanged();
-    void pushXfceApply_clicked();
+    void slotSettingChanged() noexcept;
+    void pushXfceApply_clicked() noexcept;
 
     /* Panel */
     QString panel;
-    void panelWhich();
+    void panelWhich() noexcept;
 
-    void slotPluginScaleChanged(double);
-    void pushXfcePanelApply_clicked();
-    void comboXfcePanelPlacement_currentIndexChanged(int);
-    void comboXfcePanelTasklistPlugin_currentIndexChanged(int);
-    void pushXfcePanelTasklistOptions_clicked();
-    void pushXfcePanelBackup_clicked();
-    void pushXfcePanelRestore_clicked();
-    void pushXfcePanelDefault_clicked();
+    void slotPluginScaleChanged(double) noexcept;
+    void pushXfcePanelApply_clicked() noexcept;
+    void comboXfcePanelPlacement_currentIndexChanged(int) noexcept;
+    void comboXfcePanelTasklistPlugin_currentIndexChanged(int) noexcept;
+    void pushXfcePanelTasklistOptions_clicked() noexcept;
+    void pushXfcePanelBackup_clicked() noexcept;
+    void pushXfcePanelRestore_clicked() noexcept;
+    void pushXfcePanelDefault_clicked() noexcept;
 
-    QString getTasklistID() const;
-    void tasklistChange();
+    QString getTasklistID() const noexcept;
+    void tasklistChange() noexcept;
 
-    void panelFlipToHorizontal();
-    void panelFlipToVertical();
-    void panelSetPosition();
+    void panelFlipToHorizontal() noexcept;
+    void panelFlipToVertical() noexcept;
+    void panelSetPosition() noexcept;
 
-    int populatePanelBackups();
-    int validateArchive(const QString &path) const;
+    int populatePanelBackups() noexcept;
+    int validateArchive(const QString &path) const noexcept;
 };
 
 #endif // TWEAK_XFCE_H

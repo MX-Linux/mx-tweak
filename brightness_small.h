@@ -19,17 +19,17 @@ class brightness_small : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit brightness_small(QWidget *parent = 0, const QStringList &args = QStringList());
-    ~brightness_small();
-    void setmissingxfconfvariables(const QString &activeprofile, const QString &resolution);
-    void setupbacklight();
-    void setbacklight();
-    void setupBrightness();
-    void setupGamma();
-    void setBrightness();
-    void setupDisplay();
+    explicit brightness_small(QWidget *parent = 0, const QStringList &args = QStringList()) noexcept;
+    ~brightness_small() noexcept;
+    void setmissingxfconfvariables(const QString &activeprofile, const QString &resolution) noexcept;
+    void setupbacklight() noexcept;
+    void setbacklight() noexcept;
+    void setupBrightness() noexcept;
+    void setupGamma() noexcept;
+    void setBrightness() noexcept;
+    void setupDisplay() noexcept;
     bool brightnessflag = false;
-    static void launchfulldisplaydialog();
+    static void launchfulldisplaydialog() noexcept;
     QString g1;
     QString g2;
     QString g3;
@@ -41,16 +41,15 @@ private:
     QAction *quitAction;
     QAction *full;
     QMenu *menu;
-    void setPosition();
+    void setPosition() noexcept;
 
-    void changeEvent(QEvent *event);
-    void keyPressEvent(QKeyEvent *event);
-    void iconActivated(QSystemTrayIcon::ActivationReason reason);
-    void pushSave_clicked();
-    void comboDisplay_currentIndexChanged(int index);
-    void sliderBrightness_valueChanged(int value);
-    void sliderHardwareBacklight_actionTriggered(int action);
-    void pushExpandBacklight_clicked();
+    void changeEvent(QEvent *event) noexcept;
+    void keyPressEvent(QKeyEvent *event) noexcept;
+    void iconActivated(QSystemTrayIcon::ActivationReason reason) noexcept;
+    void pushSave_clicked() noexcept;
+    void comboDisplay_currentIndexChanged(int index) noexcept;
+    void sliderBrightness_valueChanged(int value) noexcept;
+    void pushExpandBacklight_clicked() noexcept;
 };
 
 #endif // BRIGHTNESS_SMALL_H

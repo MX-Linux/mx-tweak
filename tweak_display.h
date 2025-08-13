@@ -11,8 +11,8 @@ class TweakDisplay : public QObject
 {
     Q_OBJECT
 public:
-    TweakDisplay(Ui::defaultlook *ui, bool verbose, QObject *parent = nullptr);
-    void setup();
+    TweakDisplay(Ui::defaultlook *ui, bool verbose, QObject *parent = nullptr) noexcept;
+    void setup() noexcept;
 
 private:
     Ui::defaultlook *ui;
@@ -27,22 +27,22 @@ private:
         bool brightness;
     } flags = {};
 
-    void setMissingXfconfVariables(const QString &activeProfile, const QString &resolution);
-    void setupResolutions();
-    void setResolution();
-    void setupScale();
-    void setScale();
-    void setRefreshRate(const QString &display, const QString &resolution, const QString &activeProfile) const;
-    void setupBacklight();
-    void setBacklight();
-    void setGTKScaling();
-    void setupBrightness();
-    void setBrightness();
-    void saveBrightness();
-    void setupGamma();
+    void setMissingXfconfVariables(const QString &activeProfile, const QString &resolution) noexcept;
+    void setupResolutions() noexcept;
+    void setResolution() noexcept;
+    void setupScale() noexcept;
+    void setScale() noexcept;
+    void setRefreshRate(const QString &display, const QString &resolution, const QString &activeProfile) const noexcept;
+    void setupBacklight() noexcept;
+    void setBacklight() noexcept;
+    void setGTKScaling() noexcept;
+    void setupBrightness() noexcept;
+    void setBrightness() noexcept;
+    void saveBrightness() noexcept;
+    void setupGamma() noexcept;
 
-    void comboDisplay_currentIndexChanged(int  /*index*/);
-    void sliderDisplayBrightness_valueChanged(int value);
+    void comboDisplay_currentIndexChanged(int  /*index*/) noexcept;
+    void sliderDisplayBrightness_valueChanged(int value) noexcept;
 };
 
 #endif // TWEAK_DISPLAY_H

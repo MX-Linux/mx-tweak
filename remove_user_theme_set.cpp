@@ -10,7 +10,7 @@
 
 using namespace Qt::Literals::StringLiterals;
 
-remove_user_theme_set::remove_user_theme_set(QWidget *parent) :
+remove_user_theme_set::remove_user_theme_set(QWidget *parent) noexcept :
     QDialog(parent),
     ui(new Ui::remove_user_theme_set)
 {
@@ -18,17 +18,17 @@ remove_user_theme_set::remove_user_theme_set(QWidget *parent) :
     setupThemeSelector();
 }
 
-remove_user_theme_set::~remove_user_theme_set()
+remove_user_theme_set::~remove_user_theme_set() noexcept
 {
     delete ui;
 }
 
-QComboBox *remove_user_theme_set::themeSelector()
+QComboBox *remove_user_theme_set::themeSelector() const noexcept
 {
     return ui->comboBoxThemes;
 }
 
-void remove_user_theme_set::setupThemeSelector()
+void remove_user_theme_set::setupThemeSelector() noexcept
 {
     //build theme list
     ui->comboBoxThemes->clear();
@@ -90,7 +90,7 @@ void remove_user_theme_set::setupThemeSelector()
 
 }
 
-QString remove_user_theme_set::getFilename(const QString &name)
+QString remove_user_theme_set::getFilename(const QString &name) const noexcept
 {
     return theme_info.value(name);
 }

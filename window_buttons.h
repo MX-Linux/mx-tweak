@@ -12,26 +12,26 @@ class window_buttons : public QDialog
     Q_OBJECT
 
 public:
-    explicit window_buttons(QWidget *parent = 0);
-    ~window_buttons();
-    void setup();
+    explicit window_buttons(QWidget *parent = 0) noexcept;
+    ~window_buttons() noexcept;
+    void setup() noexcept;
     QString plugintasklist;
 
 private:
     Ui::window_buttons *ui;
 
-    void checkButtonLabels_toggled(bool checked);
-    void checkDrawFrames_toggled(bool checked);
-    void checkOnlyMinWindows_toggled(bool checked);
-    void checkRestoreMinWindows_toggled(bool checked);
-    void checkShowFlatButtons_toggled(bool checked);
-    void checkShowHandle_toggled(bool checked);
-    void checkSwitchWindowsMouseWheel_toggled(bool checked);
-    void checkWindowsAllMonitors_toggled(bool checked);
-    void checkWindowsAllWorkspaces_toggled(bool checked);
-    void comboMiddleClickAction_currentIndexChanged(int index) const;
-    void comboSortingOrder_currentIndexChanged(int index) const;
-    void comboWindowGrouping_currentIndexChanged(int index) const;
+    void checkButtonLabels_toggled(bool checked) noexcept;
+    void checkDrawFrames_toggled(bool checked) noexcept;
+    void checkOnlyMinWindows_toggled(bool checked) noexcept;
+    void checkRestoreMinWindows_toggled(bool checked) noexcept;
+    void checkShowFlatButtons_toggled(bool checked) noexcept;
+    void checkShowHandle_toggled(bool checked) noexcept;
+    void checkSwitchWindowsMouseWheel_toggled(bool checked) noexcept;
+    void checkWindowsAllMonitors_toggled(bool checked) noexcept;
+    void checkWindowsAllWorkspaces_toggled(bool checked) noexcept;
+    void comboMiddleClickAction_currentIndexChanged(int index) const noexcept;
+    void comboSortingOrder_currentIndexChanged(int index) const noexcept;
+    void comboWindowGrouping_currentIndexChanged(int index) const noexcept;
 };
 
 #endif // WINDOW_BUTTONS_H

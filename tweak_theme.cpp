@@ -12,7 +12,7 @@
 
 using namespace Qt::Literals::StringLiterals;
 
-TweakTheme::TweakTheme(Ui::defaultlook *ui, bool verbose, Desktop desktop, QObject *parent)
+TweakTheme::TweakTheme(Ui::defaultlook *ui, bool verbose, Desktop desktop, QObject *parent) noexcept
     : QObject{parent}, ui{ui}, verbose{verbose}, desktop{desktop}
 {
     ui->checkThemeFluxboxLegacyStyles->setVisible(desktop == Fluxbox);
@@ -29,14 +29,14 @@ TweakTheme::TweakTheme(Ui::defaultlook *ui, bool verbose, Desktop desktop, QObje
     connect(ui->listThemeIcons, &QListWidget::currentTextChanged, this, &TweakTheme::listThemeIcons_currentTextChanged);
     connect(ui->listThemeCursors, &QListWidget::currentTextChanged, this, &TweakTheme::listThemeCursors_currentTextChanged);
 }
-TweakTheme::TweakTheme(Ui::defaultlook *ui, bool verbose, TweakXfce *tweak, QObject *parent)
+TweakTheme::TweakTheme(Ui::defaultlook *ui, bool verbose, TweakXfce *tweak, QObject *parent) noexcept
     : TweakTheme(ui, verbose, Xfce, parent)
 {
     tweakXfce = tweak;
     assert(tweakXfce != nullptr);
 }
 
-void TweakTheme::setup()
+void TweakTheme::setup() noexcept
 {
     ui->pushThemeApply->setEnabled(false);
 
@@ -69,7 +69,7 @@ void TweakTheme::setup()
     }
 }
 
-void TweakTheme::setupComboTheme()
+void TweakTheme::setupComboTheme() noexcept
 {
     QStringList theme_list;
     ui->comboTheme->clear();
@@ -200,7 +200,7 @@ void TweakTheme::setupComboTheme()
     }
 }
 
-void TweakTheme::getCursorSize()
+void TweakTheme::getCursorSize() noexcept
 {
     ui->spinThemeCursorSize->blockSignals(true);
     if (desktop == Fluxbox) {
@@ -220,7 +220,7 @@ void TweakTheme::getCursorSize()
     ui->spinThemeCursorSize->blockSignals(false);
 }
 
-void TweakTheme::populateThemeLists(const QString &value)
+void TweakTheme::populateThemeLists(const QString &value) noexcept
 {
     flags.theme = false;
     QString home_path = QDir::homePath();
@@ -391,7 +391,7 @@ void TweakTheme::populateThemeLists(const QString &value)
     flags.theme = true;
 }
 
-void TweakTheme::setTheme(const QString &type, const QString &theme) const
+void TweakTheme::setTheme(const QString &type, const QString &theme) const noexcept
 {   //set new theme
     QString cmd;
     QString cmd1;
@@ -553,7 +553,7 @@ void TweakTheme::setTheme(const QString &type, const QString &theme) const
     }
 }
 
-void TweakTheme::comboTheme_currentIndexChanged(int index)
+void TweakTheme::comboTheme_currentIndexChanged(int index) noexcept
 {
     qDebug() << "combo box activated";
     if (desktop == Xfce) {
@@ -564,7 +564,7 @@ void TweakTheme::comboTheme_currentIndexChanged(int index)
         ui->pushThemeApply->setEnabled(true);
     }
 }
-void TweakTheme::pushThemeSaveSet_clicked()
+void TweakTheme::pushThemeSaveSet_clicked() noexcept
 {
     if (desktop == Fluxbox) {
         if (QFile::exists(u"/usr/bin/mxfb-look"_s)) {
@@ -673,7 +673,7 @@ void TweakTheme::pushThemeSaveSet_clicked()
     setupComboTheme();
 }
 
-void TweakTheme::pushThemeRemoveSet_clicked()
+void TweakTheme::pushThemeRemoveSet_clicked() noexcept
 {
     remove_user_theme_set dialog;
     int result = dialog.exec();
@@ -698,7 +698,7 @@ void TweakTheme::pushThemeRemoveSet_clicked()
     setupComboTheme();
 }
 
-void TweakTheme::pushThemeApply_clicked()
+void TweakTheme::pushThemeApply_clicked() noexcept
 {
     flags.theme = false;
     if (desktop == Xfce){
@@ -807,7 +807,7 @@ void TweakTheme::pushThemeApply_clicked()
     setup();
 }
 
-void TweakTheme::listThemeWidget_currentTextChanged(const QString &currentText)
+void TweakTheme::listThemeWidget_currentTextChanged(const QString &currentText) noexcept
 {
     if (flags.theme) {
         if (desktop == Xfce) {
@@ -820,11 +820,11 @@ void TweakTheme::listThemeWidget_currentTextChanged(const QString &currentText)
     }
 }
 
-void TweakTheme::checkThemeFluxboxLegacyStyles_toggled(bool)
+void TweakTheme::checkThemeFluxboxLegacyStyles_toggled(bool) noexcept
 {
     populateThemeLists(u"fluxbox"_s);
 }
-void TweakTheme::listThemeWindow_currentTextChanged(const QString &currentText) const
+void TweakTheme::listThemeWindow_currentTextChanged(const QString &currentText) const noexcept
 {
     if (flags.theme) {
         if (desktop == Xfce) {
@@ -837,7 +837,7 @@ void TweakTheme::listThemeWindow_currentTextChanged(const QString &currentText) 
     }
 }
 
-void TweakTheme::listThemeIcons_currentTextChanged(const QString &currentText) const
+void TweakTheme::listThemeIcons_currentTextChanged(const QString &currentText) const noexcept
 {
     if (flags.theme) {
         if (desktop == Xfce) {
@@ -850,7 +850,7 @@ void TweakTheme::listThemeIcons_currentTextChanged(const QString &currentText) c
     }
 }
 
-void TweakTheme::listThemeCursors_currentTextChanged(const QString &currentText)
+void TweakTheme::listThemeCursors_currentTextChanged(const QString &currentText) noexcept
 {
     if (flags.theme) {
         if (desktop == Xfce) {
@@ -863,7 +863,7 @@ void TweakTheme::listThemeCursors_currentTextChanged(const QString &currentText)
     }
 }
 
-void TweakTheme::spinThemeCursorSize_valueChanged(int value)
+void TweakTheme::spinThemeCursorSize_valueChanged(int value) noexcept
 {
     const QString &size = QString::number(value);
     QString cmd;

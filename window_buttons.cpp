@@ -6,7 +6,7 @@
 
 using namespace Qt::Literals::StringLiterals;
 
-window_buttons::window_buttons(QWidget *parent) :
+window_buttons::window_buttons(QWidget *parent) noexcept :
     QDialog(parent),
     ui(new Ui::window_buttons)
 {
@@ -16,12 +16,12 @@ window_buttons::window_buttons(QWidget *parent) :
     connect(ui->pushClose, &QPushButton::clicked, this, &window_buttons::close);
 }
 
-window_buttons::~window_buttons()
+window_buttons::~window_buttons() noexcept
 {
     delete ui;
 }
 
-void window_buttons::setup()
+void window_buttons::setup() noexcept
 {
     setWindowTitle(tr("Window Buttons"));
 
@@ -119,14 +119,14 @@ void window_buttons::setup()
     connect(ui->checkWindowsAllMonitors, &QCheckBox::toggled, this, &window_buttons::checkWindowsAllMonitors_toggled);
 }
 
-void window_buttons::checkButtonLabels_toggled(bool checked)
+void window_buttons::checkButtonLabels_toggled(bool checked) noexcept
 {
     QString param = checked ? u"true"_s : u"false"_s;
     QString cmd = "xfconf-query -c xfce4-panel -p /plugins/"_L1 + plugintasklist + "/show-labels -t bool"_L1 + " -s "_L1 + param  + " --create"_L1;
     system(cmd.toUtf8());
 }
 
-void window_buttons::checkShowFlatButtons_toggled(bool checked)
+void window_buttons::checkShowFlatButtons_toggled(bool checked) noexcept
 {
     QString param = checked ? u"true"_s : u"false"_s;
     QString cmd = "xfconf-query -c xfce4-panel -p /plugins/"_L1 + plugintasklist + "/flat-buttons -t bool"_L1 + " -s "_L1 + param  + " --create"_L1;
@@ -134,14 +134,14 @@ void window_buttons::checkShowFlatButtons_toggled(bool checked)
 }
 
 
-void window_buttons::checkShowHandle_toggled(bool checked)
+void window_buttons::checkShowHandle_toggled(bool checked) noexcept
 {
     QString param = checked ? u"true"_s : u"false"_s;
     QString cmd = "xfconf-query -c xfce4-panel -p /plugins/"_L1 + plugintasklist + "/show-handle -t bool"_L1 + " -s "_L1 + param  + " --create"_L1;
     system(cmd.toUtf8());
 }
 
-void window_buttons::comboSortingOrder_currentIndexChanged(int index) const
+void window_buttons::comboSortingOrder_currentIndexChanged(int index) const noexcept
 {
     QString param = QString::number(index);
     QString cmd = "xfconf-query -c xfce4-panel -p /plugins/"_L1 + plugintasklist + "/sort-order -t int"_L1 + " -s "_L1 + param  + " --create"_L1;
@@ -149,56 +149,56 @@ void window_buttons::comboSortingOrder_currentIndexChanged(int index) const
 }
 
 
-void window_buttons::comboWindowGrouping_currentIndexChanged(int index) const
+void window_buttons::comboWindowGrouping_currentIndexChanged(int index) const noexcept
 {
     QString param = QString::number(index);
     QString cmd = "xfconf-query -c xfce4-panel -p /plugins/"_L1 + plugintasklist + "/grouping -t int"_L1 + " -s "_L1 + param  + " --create"_L1;
     system(cmd.toUtf8());
 }
 
-void window_buttons::comboMiddleClickAction_currentIndexChanged(int index) const
+void window_buttons::comboMiddleClickAction_currentIndexChanged(int index) const noexcept
 {
     QString param = QString::number(index);
     QString cmd = "xfconf-query -c xfce4-panel -p /plugins/"_L1 + plugintasklist + "/middle-click -t int"_L1 + " -s "_L1 + param  + " --create"_L1;
     system(cmd.toUtf8());
 }
 
-void window_buttons::checkRestoreMinWindows_toggled(bool checked)
+void window_buttons::checkRestoreMinWindows_toggled(bool checked) noexcept
 {
     QString param = checked ? u"true"_s : u"false"_s;
     QString cmd = "xfconf-query -c xfce4-panel -p /plugins/"_L1 + plugintasklist + "/switch-workspace-on-unminimize -t bool"_L1 + " -s "_L1 + param  + " --create"_L1;
     system(cmd.toUtf8());
 }
 
-void window_buttons::checkDrawFrames_toggled(bool checked)
+void window_buttons::checkDrawFrames_toggled(bool checked) noexcept
 {
     QString param = checked ? u"true"_s : u"false"_s;
     QString cmd = "xfconf-query -c xfce4-panel -p /plugins/"_L1 + plugintasklist + "/show-wireframes -t bool"_L1 + " -s "_L1 + param  + " --create"_L1;
     system(cmd.toUtf8());
 }
 
-void window_buttons::checkSwitchWindowsMouseWheel_toggled(bool checked)
+void window_buttons::checkSwitchWindowsMouseWheel_toggled(bool checked) noexcept
 {
     QString param = checked ? u"true"_s : u"false"_s;
     QString cmd = "xfconf-query -c xfce4-panel -p /plugins/"_L1 + plugintasklist + "/window-scrolling -t bool"_L1 + " -s "_L1 + param  + " --create"_L1;
     system(cmd.toUtf8());
 }
 
-void window_buttons::checkWindowsAllWorkspaces_toggled(bool checked)
+void window_buttons::checkWindowsAllWorkspaces_toggled(bool checked) noexcept
 {
     QString param = checked ? u"true"_s : u"false"_s;
     QString cmd = "xfconf-query -c xfce4-panel -p /plugins/"_L1 + plugintasklist + "/include-all-workspaces boolean -t bool"_L1 + " -s "_L1 + param  + " --create"_L1;
     system(cmd.toUtf8());
 }
 
-void window_buttons::checkOnlyMinWindows_toggled(bool checked)
+void window_buttons::checkOnlyMinWindows_toggled(bool checked) noexcept
 {
     QString param = checked ? u"true"_s : u"false"_s;
     QString cmd = "xfconf-query -c xfce4-panel -p /plugins/"_L1 + plugintasklist + "/show-only-minimized boolean -t bool"_L1 + " -s "_L1 + param  + " --create"_L1;
     system(cmd.toUtf8());
 }
 
-void window_buttons::checkWindowsAllMonitors_toggled(bool checked)
+void window_buttons::checkWindowsAllMonitors_toggled(bool checked) noexcept
 {
     QString param = checked ? u"true"_s : u"false"_s;
     QString cmd = "xfconf-query -c xfce4-panel -p /plugins/"_L1 + plugintasklist + "/include-all-monitors -t bool"_L1 + " -s "_L1 + param  + " --create"_L1;

@@ -10,7 +10,7 @@ struct Result {
     QString output;
 };
 
-inline Result runCmd(const QString &cmd)
+inline Result runCmd(const QString &cmd) noexcept
 {
     QEventLoop loop;
     QProcess proc;
