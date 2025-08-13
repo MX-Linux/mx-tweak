@@ -60,7 +60,6 @@ public:
     QString currentdisplaymanager;
     bool setupflag=false;
     bool verbose = false;
-    bool panelflag{};
     bool Intel_flag{};
     bool radeon_flag{};
     bool amdgpuflag{};
@@ -71,11 +70,7 @@ public:
     bool displayflag = false;
     bool themetabflag = false;
     bool othertabflag = false;
-    bool displaysetupflag = false;
-    bool brightnessflag = false;
     bool sandboxflag = false;
-    bool themeflag = false;
-    bool validateflag = false;
     bool isXfce = false;
     bool isFluxbox = false;
     bool isKDE = false;
@@ -87,47 +82,20 @@ public:
     bool kvmflag=false;
     QString kvmconffile;
 
-
-
-    QString g1;
-    QString g2;
-    QString g3;
-
     QString vblankinitial;
     void setup();
     void setupEtc();
     void setupSuperKey();
-    void setupDisplay();
-    void setupBrightness();
-    void message() const;
     void checkSession();
     static bool checklightdm();
     void CheckComptonRunning();
     void setupCompositor();
     void CheckAptNotifierRunning() const;
 
-    void top_or_bottom();
-    void left_or_right();
-    static void message2();
-    QString get_tasklistid();
-
-    void setBrightness();
-
-    void setupscale();
-    void setscale();
-    void setupbacklight();
-    void setbacklight();
-    void setgtkscaling();
-    void setupresolutions();
-    void setresolution();
-    void setrefreshrate(const QString &display, const QString &resolution, const QString &activeprofile) const;
-    void setupGamma();
-
     void setupThunar();
     void applyThunar();
     void slotThunarChanged();
 
-    void setmissingxfconfvariables(const QString &activeprofile, const QString &resolution);
     void changecomputername(const QString &hostname);
     bool validatecomputername(const QString &hostname);
     void changedisplaymanager(const QString &dm);
@@ -136,13 +104,9 @@ public:
 private slots:
     static void on_buttonConfigureXfwm_clicked();
     void on_ButtonApplyEtc_clicked();
-    void on_buttonApplyDisplayScaling_clicked();
     void on_buttonCompositorApply_clicked();
     void on_buttonConfigureCompton_clicked();
     static void on_buttonEditComptonConf_clicked();
-    void on_buttonGTKscaling_clicked();
-    void on_buttonSaveBrightness_clicked();
-    void on_buttonapplyresolution_clicked();
     void on_checkBoxCSD_clicked();
     void on_checkBoxLightdmReset_clicked();
     void on_checkBoxMountInternalDrivesNonRoot_clicked();
@@ -150,13 +114,9 @@ private slots:
     void on_checkboxAMDtearfree_clicked();
     void on_checkboxIntelDriver_clicked();
     void on_checkboxRadeontearfree_clicked();
-    void on_comboBoxDisplay_currentIndexChanged(int index);
     void on_comboBoxvblank_activated(int);
-    void on_horizontalSliderBrightness_valueChanged(int value);
-    void on_horizsliderhardwarebacklight_actionTriggered(int action);
     void on_radioSudoRoot_clicked();
     void on_radioSudoUser_clicked();
-    void saveBrightness();
 
     void on_checkBoxbluetoothAutoEnable_clicked();
 
@@ -190,6 +150,7 @@ private:
     class TweakPlasma *tweakPlasma = nullptr;
     class TweakXfce *tweakXfce = nullptr;
     class TweakFluxbox *tweakFluxbox = nullptr;
+    class TweakDisplay *tweakDisplay = nullptr;
 
     void pushAbout_clicked();
     void pushHelp_clicked();
