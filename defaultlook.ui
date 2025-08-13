@@ -1469,53 +1469,49 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="Superkey">
+     <widget class="QWidget" name="tabSuperkey">
       <attribute name="title">
        <string extracomment="referring to the meta or Left Super Key">Super Key</string>
       </attribute>
-      <layout class="QGridLayout" name="gridLayout_20">
+      <layout class="QGridLayout">
        <item row="0" column="0">
-        <layout class="QGridLayout" name="gridLayout_19">
-         <item row="0" column="3">
-          <widget class="QToolButton" name="toolButtonSuperFileBrowser">
-           <property name="toolTip">
-            <string extracomment="description of button action to launch file dialog to choose an application">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Choose application&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-           </property>
-           <property name="text">
-            <string notr="true" extracomment="file chooser dialog">...</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QLineEdit" name="lineEditSuperCommand">
-           <property name="text">
-            <string/>
-           </property>
-           <property name="placeholderText">
-            <string extracomment="indicates that xfce-superkey will select a command by its default logic">Xfce-superkey defaults</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="0">
-          <widget class="QLabel" name="labelSuperKey">
-           <property name="toolTip">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Also known as the &amp;quot;windows&amp;quot; key&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-           </property>
-           <property name="text">
-            <string extracomment="label for the field to enter the command to use with super key">Command to run with Super (Meta) key</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0" colspan="5">
-          <widget class="QPushButton" name="pushButtonSuperKeyApply">
-           <property name="text">
-            <string extracomment="apply changes">Apply</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
+        <widget class="QLabel" name="labelSuperKey">
+         <property name="toolTip">
+          <string>Also known as the "windows" key</string>
+         </property>
+         <property name="text">
+          <string extracomment="label for the field to enter the command to use with super key">Command to run with Super (Meta) key</string>
+         </property>
+        </widget>
        </item>
-       <item row="1" column="0">
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="textSuperKeyCommand">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="placeholderText">
+          <string extracomment="indicates that xfce-superkey will select a command by its default logic">xfce-superkey defaults</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QToolButton" name="pushSuperKeyBrowseAppFile">
+         <property name="toolTip">
+          <string extracomment="description of button action to launch file dialog to choose an application">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Choose application&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="text">
+          <string notr="true" extracomment="file chooser dialog">...</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="3">
+        <widget class="QPushButton" name="pushSuperKeyApply">
+         <property name="text">
+          <string extracomment="apply changes">Apply</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
         <spacer>
          <property name="orientation">
           <enum>Qt::Orientation::Vertical</enum>

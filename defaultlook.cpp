@@ -46,6 +46,7 @@
 #include "tweak_xfce.h"
 #include "tweak_fluxbox.h"
 #include "tweak_display.h"
+#include "tweak_superkey.h"
 #include "defaultlook.h"
 #include "remove_user_theme_set.h"
 #include "ui_defaultlook.h"
@@ -98,6 +99,7 @@ defaultlook::~defaultlook()
     if (tweakXfce) delete tweakXfce;
     if (tweakFluxbox) delete tweakFluxbox;
     if (tweakDisplay) delete tweakDisplay;
+    if (tweakSuperKey) delete tweakSuperKey;
     delete ui;
 }
 
@@ -144,15 +146,15 @@ void defaultlook::setup()
         ui->tabWidget->removeTab(Tab::Plasma);
         ui->tabWidget->removeTab(Tab::Fluxbox);
         tweakXfce = new TweakXfce(ui, verbose, this);
-        tweakTheme = new TweakTheme(ui, verbose, tweakXfce);
+        tweakTheme = new TweakTheme(ui, verbose, tweakXfce, this);
         //setup compositor tab
         setupCompositor();
         //setup other tab;
         setupEtc();
-        if (!isSuperkey || ! QFile(u"/usr/bin/xfce-superkey-launcher"_s).exists()){
-            ui->tabWidget->removeTab(Tab::Superkey);
+        if (isSuperkey && TweakSuperKey::checkSuperKey()) {
+            tweakSuperKey = new TweakSuperKey(ui, verbose, this);
         } else {
-            setupSuperKey();
+            ui->tabWidget->removeTab(Tab::Superkey);
         }
 
         connect(ui->pushXFCEPanelSettings, &QPushButton::clicked, this, &defaultlook::pushXFCEPanelSettings_clicked);
@@ -1182,61 +1184,6 @@ void defaultlook::on_checkBoxDisableFluxboxMenuGeneration_clicked()
     ui->ButtonApplyEtc->setEnabled(true);
 }
 
-void defaultlook::on_toolButtonSuperFileBrowser_clicked()
-{
-    QString customcommand = QFileDialog::getOpenFileName(this, tr("Select application to run","will show in file dialog when selection an application to run"), u"/usr/bin"_s);
-    QString cmd;
-
-    //process file
-    QFileInfo customcommandcheck(customcommand);
-    if (customcommandcheck.fileName().endsWith(".desktop"_L1)){
-        cmd = runCmd("grep Exec= "_L1 + customcommand).output.section('=',1,1).section('%',0,0).trimmed();
-        cmd = runCmd("which "_L1 + cmd).output;
-    } else {
-        cmd = runCmd("which "_L1 + customcommand).output;
-    }
-    if (verbose) {
-        qDebug() << "custom command is " << cmd;
-    }
-     ui->lineEditSuperCommand->setText(cmd);
-     ui->pushButtonSuperKeyApply->setEnabled(true);
-
-}
-
-void defaultlook::on_pushButtonSuperKeyApply_clicked()
-{
-    QString home_path = QDir::homePath();
-    if (!QFile(home_path + "/.config/xfce-superkey/xfce-superkey.conf"_L1).exists()){
-        runCmd("mkdir -p "_L1 + home_path + "/.config/xfce-superkey/xfce-superkey.conf"_L1);
-        runCmd("cp /usr/share/xfce-superkey/xfce-superkey.conf "_L1 + home_path + "/.config/xfce-superkey/xfce-superkey.conf"_L1);
-    }
-    QString cmd = ui->lineEditSuperCommand->text();
-    //add command if no uncommented lines
-    if (runCmd(u"grep -m1 -v -e '^#' -e '^$' $HOME/.config/xfce-superkey/xfce-superkey.conf"_s).output.isEmpty()){
-        runCmd("echo "_L1 + cmd + ">> $HOME/.config/xfce-superkey/xfce-superkey.conf"_L1);
-    } else { //replace first uncommented line with new command
-        runCmd("sed -i '/^[^#]/s;.*;"_L1 + cmd + ";' $HOME/.config/xfce-superkey/xfce-superkey.conf"_L1);
-    }
-    //restart xfce-superkey
-    runCmd(u"pkill xfce-superkey"_s);
-    runCmd(u"xfce-superkey-launcher"_s);
-    setupSuperKey();
-}
-
-void defaultlook::setupSuperKey()
-{
-    QString test = runCmd(u"grep -m1 -v -e '^#' -e '^$' $HOME/.config/xfce-superkey/xfce-superkey.conf"_s).output;
-    ui->pushButtonSuperKeyApply->setEnabled(false);
-    if (!test.isEmpty()){
-        ui->lineEditSuperCommand->setText(test);
-    }
-
-}
-
-void defaultlook::on_lineEditSuperCommand_textChanged(const QString &)
-{
-    ui->pushButtonSuperKeyApply->setEnabled(true);
-}
 
 void defaultlook::on_checkBoxLiqKernelUpdates_clicked()
 {

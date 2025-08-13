@@ -23,6 +23,7 @@ SOURCES += main.cpp\
     tweak_display.cpp \
     tweak_fluxbox.cpp \
     tweak_plasma.cpp \
+    tweak_superkey.cpp \
     tweak_theme.cpp \
     tweak_xfce.cpp \
     xfwm_compositor_settings.cpp \
@@ -37,6 +38,7 @@ HEADERS  += defaultlook.h \
     tweak_display.h \
     tweak_fluxbox.h \
     tweak_plasma.h \
+    tweak_superkey.h \
     tweak_theme.h \
     tweak_xfce.h \
     version.h \

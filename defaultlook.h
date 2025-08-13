@@ -85,7 +85,6 @@ public:
     QString vblankinitial;
     void setup();
     void setupEtc();
-    void setupSuperKey();
     void checkSession();
     static bool checklightdm();
     void CheckComptonRunning();
@@ -124,12 +123,6 @@ private slots:
 
     void on_checkBoxDisableFluxboxMenuGeneration_clicked();
 
-    void on_toolButtonSuperFileBrowser_clicked();
-
-    void on_pushButtonSuperKeyApply_clicked();
-
-    void on_lineEditSuperCommand_textChanged(const QString &);
-
     void on_checkBoxLiqKernelUpdates_clicked();
 
     void on_checkBoxDebianKernelUpdates_clicked();
@@ -151,6 +144,7 @@ private:
     class TweakXfce *tweakXfce = nullptr;
     class TweakFluxbox *tweakFluxbox = nullptr;
     class TweakDisplay *tweakDisplay = nullptr;
+    class TweakSuperKey *tweakSuperKey = nullptr;
 
     void pushAbout_clicked();
     void pushHelp_clicked();
