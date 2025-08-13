@@ -144,8 +144,7 @@ void defaultlook::setup()
         ui->tabWidget->removeTab(Tab::Plasma);
         ui->tabWidget->removeTab(Tab::Fluxbox);
         tweakXfce = new TweakXfce(ui, verbose, this);
-        tweakTheme = new TweakTheme(ui, verbose, TweakTheme::Xfce);
-        tweakTheme->tweakXfce = tweakXfce;
+        tweakTheme = new TweakTheme(ui, verbose, tweakXfce);
         //setup compositor tab
         setupCompositor();
         //setup other tab;

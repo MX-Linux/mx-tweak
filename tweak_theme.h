@@ -17,8 +17,8 @@ public:
         Plasma,
         Fluxbox
     };
-    class TweakXfce *tweakXfce = nullptr;
     TweakTheme(Ui::defaultlook *ui, bool verbose, Desktop desktop, QObject *parent = nullptr);
+    TweakTheme(Ui::defaultlook *ui, bool verbose, class TweakXfce *tweak, QObject *parent = nullptr);
     void setup();
 
 private:
@@ -26,11 +26,12 @@ private:
 
     bool verbose;
     Desktop desktop;
+    class TweakXfce *tweakXfce = nullptr;
 
     struct {
         bool theme;
     } flags = {};
-    QHash<QString, QString>  theme_info;
+    QHash<QString, QString> theme_info;
 
     void setupComboTheme();
     void getCursorSize();

@@ -29,6 +29,12 @@ TweakTheme::TweakTheme(Ui::defaultlook *ui, bool verbose, Desktop desktop, QObje
     connect(ui->listThemeIcons, &QListWidget::currentTextChanged, this, &TweakTheme::listThemeIcons_currentTextChanged);
     connect(ui->listThemeCursors, &QListWidget::currentTextChanged, this, &TweakTheme::listThemeCursors_currentTextChanged);
 }
+TweakTheme::TweakTheme(Ui::defaultlook *ui, bool verbose, TweakXfce *tweak, QObject *parent)
+    : TweakTheme(ui, verbose, Xfce, parent)
+{
+    tweakXfce = tweak;
+    assert(tweakXfce != nullptr);
+}
 
 void TweakTheme::setup()
 {
