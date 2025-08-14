@@ -66,7 +66,6 @@ public:
     bool bluetoothautoenableflag{};
     bool bluetoothbatteryflag{};
     bool enable_recommendsflag{};
-    bool vblankflag{};
     bool displayflag = false;
     bool themetabflag = false;
     bool othertabflag = false;
@@ -82,14 +81,10 @@ public:
     bool kvmflag=false;
     QString kvmconffile;
 
-    QString vblankinitial;
     void setup();
     void setupEtc();
     void checkSession();
     static bool checklightdm();
-    void CheckComptonRunning();
-    void setupCompositor();
-    void CheckAptNotifierRunning() const;
 
     void setupThunar() noexcept;
     void applyThunar() noexcept;
@@ -101,11 +96,7 @@ public:
     void kvm_early_switch(const QString &action, const QString &file);
 
 private slots:
-    static void on_buttonConfigureXfwm_clicked();
     void on_ButtonApplyEtc_clicked();
-    void on_buttonCompositorApply_clicked();
-    void on_buttonConfigureCompton_clicked();
-    static void on_buttonEditComptonConf_clicked();
     void on_checkBoxCSD_clicked();
     void on_checkBoxLightdmReset_clicked();
     void on_checkBoxMountInternalDrivesNonRoot_clicked();
@@ -113,7 +104,6 @@ private slots:
     void on_checkboxAMDtearfree_clicked();
     void on_checkboxIntelDriver_clicked();
     void on_checkboxRadeontearfree_clicked();
-    void on_comboBoxvblank_activated(int);
     void on_radioSudoRoot_clicked();
     void on_radioSudoUser_clicked();
 
@@ -143,6 +133,7 @@ private:
     class TweakPlasma *tweakPlasma = nullptr;
     class TweakXfce *tweakXfce = nullptr;
     class TweakFluxbox *tweakFluxbox = nullptr;
+    class TweakCompositor *tweakCompositor = nullptr;
     class TweakDisplay *tweakDisplay = nullptr;
     class TweakSuperKey *tweakSuperKey = nullptr;
 
@@ -155,8 +146,6 @@ private:
     void pushXFCEAppearance_clicked() noexcept;
     void pushXFCEWMsettings_clicked() noexcept;
     void pushXFCEPanelSettings_clicked() noexcept;
-
-    void comboCompositor_currentIndexChanged(const int) noexcept;
 };
 
 #endif // DEFAULTLOOK_H

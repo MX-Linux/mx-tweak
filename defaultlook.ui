@@ -369,7 +369,7 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="Theme">
+     <widget class="QWidget" name="tabTheme">
       <attribute name="title">
        <string>Theme</string>
       </attribute>
@@ -513,135 +513,136 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="CompositorTab">
+     <widget class="QWidget" name="tabCompositor">
       <attribute name="title">
        <string>Compositor</string>
       </attribute>
-      <layout class="QGridLayout" name="gridLayout_10">
+      <layout class="QGridLayout">
        <item row="0" column="0">
-        <layout class="QGridLayout" name="gridLayout_4">
-         <property name="sizeConstraint">
-          <enum>QLayout::SizeConstraint::SetNoConstraint</enum>
+        <widget class="QLabel" name="labelCompositorVBlank">
+         <property name="toolTip">
+          <string>Changing the VBlank mode may help alleviate some screen tearing issues. See Help for more information.</string>
          </property>
-         <item row="3" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
-          <widget class="QLabel" name="label_9">
-           <property name="text">
-            <string>Compositor</string>
-           </property>
-          </widget>
+         <property name="text">
+          <string>VBlank</string>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QComboBox" name="comboCompositorVBlank">
+         <item>
+          <property name="text">
+           <string>auto</string>
+          </property>
          </item>
-         <item row="2" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
-          <widget class="QLabel" name="label_8">
-           <property name="text">
-            <string>Transparency and shadow options</string>
-           </property>
-          </widget>
+         <item>
+          <property name="text">
+           <string>glx</string>
+          </property>
          </item>
-         <item row="3" column="1" colspan="2">
-          <widget class="QComboBox" name="comboCompositor"/>
+         <item>
+          <property name="text">
+           <string>xpresent</string>
+          </property>
          </item>
-         <item row="1" column="1">
-          <widget class="QComboBox" name="comboBoxvblank">
-           <item>
+         <item>
+          <property name="text">
+           <string>off</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="2">
+        <widget class="QGroupBox" name="groupCompositorShadow">
+         <property name="title">
+          <string>Transparency and shadow options</string>
+         </property>
+         <layout class="QGridLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="labelCompositor">
             <property name="text">
-             <string>auto</string>
+             <string>Compositor</string>
             </property>
-           </item>
-           <item>
+           </widget>
+          </item>
+          <item row="0" column="1" colspan="2">
+           <widget class="QComboBox" name="comboCompositor"/>
+          </item>
+          <item row="1" column="0" colspan="4">
+           <widget class="QPushButton" name="pushCompositorXfwmSettings">
+            <property name="toolTip">
+             <string>Xfce Compositor Settings</string>
+            </property>
             <property name="text">
-             <string>glx</string>
+             <string>Xfwm Settings</string>
             </property>
-           </item>
-           <item>
+            <property name="icon">
+             <iconset theme="wmtweaks"/>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0" colspan="3">
+           <widget class="QPushButton" name="pushCompositorPicomSettings">
+            <property name="toolTip">
+             <string>Launch compton-conf configuration tool</string>
+            </property>
             <property name="text">
-             <string>xpresent</string>
+             <string>Picom settings</string>
             </property>
-           </item>
-           <item>
+            <property name="icon">
+             <iconset theme="preferences-system">
+              <normaloff>../../mx-compton/app</normaloff>../../mx-compton/app</iconset>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="3">
+           <widget class="QPushButton" name="pushCompositorEditPicomConf">
+            <property name="toolTip">
+             <string>Edit compton.conf directly in text editor</string>
+            </property>
             <property name="text">
-             <string>off</string>
+             <string>Edit picom.conf</string>
             </property>
-           </item>
-          </widget>
-         </item>
-         <item row="6" column="0">
-          <spacer>
-           <property name="orientation">
-            <enum>Qt::Orientation::Vertical</enum>
-           </property>
-          </spacer>
-         </item>
-         <item row="1" column="0" alignment="Qt::AlignmentFlag::AlignLeft">
-          <widget class="QLabel" name="label_10">
-           <property name="toolTip">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Changing the VBlank mode may help alleviate some screen tearing issues.  See Help for more information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-           </property>
-           <property name="text">
-            <string>VBlank</string>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="0" colspan="3">
-          <widget class="QPushButton" name="buttonConfigureCompton">
-           <property name="toolTip">
-            <string>Launch compton-conf configuration tool</string>
-           </property>
-           <property name="text">
-            <string>Picom settings</string>
-           </property>
-           <property name="icon">
-            <iconset theme="preferences-system">
-             <normaloff>../../mx-compton/app</normaloff>../../mx-compton/app</iconset>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="3">
-          <widget class="QPushButton" name="buttonEditComptonConf">
-           <property name="toolTip">
-            <string>Edit compton.conf directly in text editor</string>
-           </property>
-           <property name="text">
-            <string>Edit picom.conf</string>
-           </property>
-           <property name="icon">
-            <iconset theme="edit">
-             <normaloff>../../mx-compton/app</normaloff>../../mx-compton/app</iconset>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="0" colspan="4">
-          <widget class="QPushButton" name="buttonConfigureXfwm">
-           <property name="toolTip">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce Compositor Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-           </property>
-           <property name="text">
-            <string>Xfwm Settings</string>
-           </property>
-           <property name="icon">
-            <iconset theme="wmtweaks"/>
-           </property>
-          </widget>
-         </item>
-         <item row="7" column="0" colspan="4">
-          <widget class="QPushButton" name="buttonCompositorApply">
-           <property name="text">
-            <string>Apply</string>
-           </property>
-           <property name="icon">
-            <iconset theme="dialog-ok"/>
-           </property>
-           <property name="shortcut">
-            <string/>
-           </property>
-           <property name="autoDefault">
-            <bool>true</bool>
-           </property>
-           <property name="default">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-        </layout>
+            <property name="icon">
+             <iconset theme="edit">
+              <normaloff>../../mx-compton/app</normaloff>../../mx-compton/app</iconset>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <spacer>
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
+         </property>
+        </spacer>
+       </item>
+       <item row="3" column="0" colspan="4">
+        <widget class="QPushButton" name="pushCompositorApply">
+         <property name="text">
+          <string>Apply</string>
+         </property>
+         <property name="icon">
+          <iconset theme="dialog-ok"/>
+         </property>
+         <property name="shortcut">
+          <string/>
+         </property>
+         <property name="autoDefault">
+          <bool>true</bool>
+         </property>
+         <property name="default">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>
@@ -1477,7 +1478,7 @@
        <item row="0" column="0">
         <widget class="QLabel" name="labelSuperKey">
          <property name="toolTip">
-          <string>Also known as the "windows" key</string>
+          <string>Also known as the &quot;windows&quot; key</string>
          </property>
          <property name="text">
           <string extracomment="label for the field to enter the command to use with super key">Command to run with Super (Meta) key</string>

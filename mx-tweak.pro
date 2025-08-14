@@ -20,6 +20,7 @@ CONFIG(release, debug|release) {
 SOURCES += main.cpp\
     about.cpp \
         defaultlook.cpp \
+    tweak_compositor.cpp \
     tweak_display.cpp \
     tweak_fluxbox.cpp \
     tweak_plasma.cpp \
@@ -35,6 +36,7 @@ SOURCES += main.cpp\
 HEADERS  += defaultlook.h \
     about.h \
     cmd.h \
+    tweak_compositor.h \
     tweak_display.h \
     tweak_fluxbox.h \
     tweak_plasma.h \
