@@ -28,6 +28,7 @@ SOURCES += main.cpp\
     tweak_theme.cpp \
     tweak_thunar.cpp \
     tweak_xfce.cpp \
+    tweak_xfce_panel.cpp \
     xfwm_compositor_settings.cpp \
     window_buttons.cpp \
     theming_to_tweak.cpp \
@@ -45,6 +46,7 @@ HEADERS  += defaultlook.h \
     tweak_theme.h \
     tweak_thunar.h \
     tweak_xfce.h \
+    tweak_xfce_panel.h \
     version.h \
     xfwm_compositor_settings.h \
     window_buttons.h \

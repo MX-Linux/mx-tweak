@@ -45,6 +45,7 @@
 #include "tweak_plasma.h"
 #include "tweak_xfce.h"
 #include "tweak_fluxbox.h"
+#include "tweak_xfce_panel.h"
 #include "tweak_thunar.h"
 #include "tweak_compositor.h"
 #include "tweak_display.h"
@@ -99,6 +100,7 @@ defaultlook::~defaultlook()
     if (tweakPlasma) delete tweakPlasma;
     if (tweakXfce) delete tweakXfce;
     if (tweakFluxbox) delete tweakFluxbox;
+    if (tweakXfcePanel) delete tweakXfcePanel;
     if (tweakThunar) delete tweakThunar;
     if (tweakCompositor) delete tweakCompositor;
     if (tweakDisplay) delete tweakDisplay;
@@ -149,7 +151,8 @@ void defaultlook::setup()
         ui->tabWidget->removeTab(Tab::Plasma);
         ui->tabWidget->removeTab(Tab::Fluxbox);
         tweakXfce = new TweakXfce(ui, verbose, this);
-        tweakTheme = new TweakTheme(ui, verbose, tweakXfce, this);
+        tweakXfcePanel = new TweakXfcePanel(ui, verbose, this);
+        tweakTheme = new TweakTheme(ui, verbose, tweakXfcePanel, this);
         tweakThunar = new TweakThunar(ui, false, this);
         if (TweakCompositor::check()) {
             tweakCompositor = new TweakCompositor(ui, verbose, this);
@@ -300,8 +303,8 @@ void defaultlook::pushXFCEPanelSettings_clicked() noexcept
         runProc(u"xfce4-panel"_s, {u"--restart"_s});
     }
 
-    assert(isXfce && tweakXfce != nullptr);
-    tweakXfce->panelSetup();
+    assert(isXfce && tweakXfcePanel != nullptr);
+    tweakXfcePanel->setup();
 }
 
 void defaultlook::pushXFCEAppearance_clicked() noexcept

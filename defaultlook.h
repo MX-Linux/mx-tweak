@@ -128,6 +128,7 @@ private:
     class TweakPlasma *tweakPlasma = nullptr;
     class TweakXfce *tweakXfce = nullptr;
     class TweakFluxbox *tweakFluxbox = nullptr;
+    class TweakXfcePanel *tweakXfcePanel = nullptr;
     class TweakThunar *tweakThunar = nullptr;
     class TweakCompositor *tweakCompositor = nullptr;
     class TweakDisplay *tweakDisplay = nullptr;

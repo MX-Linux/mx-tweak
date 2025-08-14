@@ -7,7 +7,7 @@
 #include "cmd.h"
 #include "theming_to_tweak.h"
 #include "remove_user_theme_set.h"
-#include "tweak_xfce.h"
+#include "tweak_xfce_panel.h"
 #include "tweak_theme.h"
 
 using namespace Qt::Literals::StringLiterals;
@@ -29,11 +29,11 @@ TweakTheme::TweakTheme(Ui::defaultlook *ui, bool verbose, Desktop desktop, QObje
     connect(ui->listThemeIcons, &QListWidget::currentTextChanged, this, &TweakTheme::listThemeIcons_currentTextChanged);
     connect(ui->listThemeCursors, &QListWidget::currentTextChanged, this, &TweakTheme::listThemeCursors_currentTextChanged);
 }
-TweakTheme::TweakTheme(Ui::defaultlook *ui, bool verbose, TweakXfce *tweak, QObject *parent) noexcept
+TweakTheme::TweakTheme(Ui::defaultlook *ui, bool verbose, TweakXfcePanel *tweak, QObject *parent) noexcept
     : TweakTheme(ui, verbose, Xfce, parent)
 {
-    tweakXfce = tweak;
-    assert(tweakXfce != nullptr);
+    tweakXfcePanel = tweak;
+    assert(tweakXfcePanel != nullptr);
 }
 
 void TweakTheme::setup() noexcept
@@ -748,8 +748,8 @@ void TweakTheme::pushThemeApply_clicked() noexcept
         }
 
         //deal with panel customizations for each panel
-        assert(tweakXfce != nullptr);
-        QStringListIterator changeIterator(tweakXfce->panelIDs);
+        assert(tweakXfcePanel != nullptr);
+        QStringListIterator changeIterator(tweakXfcePanel->panelIDs);
         while (changeIterator.hasNext()) {
             QString value = changeIterator.next();
 
