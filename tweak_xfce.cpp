@@ -20,6 +20,8 @@ TweakXfce::TweakXfce(Ui::defaultlook *ui, bool verbose, QObject *parent) noexcep
     connect(ui->checkXfceNotificationPercentages, &QCheckBox::clicked, this, &TweakXfce::slotSettingChanged);
     connect(ui->checkXfceFileDialogActionButtonsAtBottom, &QCheckBox::clicked, this, &TweakXfce::slotSettingChanged);
     connect(ui->checkXfceHibernate, &QCheckBox::clicked, this, &TweakXfce::slotSettingChanged);
+    connect(ui->pushXfceAppearance, &QPushButton::clicked, this, &TweakXfce::pushXfceAppearance_clicked);
+    connect(ui->pushXfceWindowManager, &QPushButton::clicked, this, &TweakXfce::pushXfceWindowManager_clicked);
 }
 void TweakXfce::setup() noexcept
 {
@@ -197,4 +199,17 @@ void TweakXfce::pushXfceApply_clicked() noexcept
     }
 
     setup();
+}
+
+void TweakXfce::pushXfceAppearance_clicked() noexcept
+{
+    ui->tabWidget->setEnabled(false);
+    runProc(u"xfce4-appearance-settings"_s);
+    ui->tabWidget->setEnabled(true);
+}
+void TweakXfce::pushXfceWindowManager_clicked() noexcept
+{
+    ui->tabWidget->setEnabled(false);
+    runProc(u"xfwm4-settings"_s);
+    ui->tabWidget->setEnabled(true);
 }

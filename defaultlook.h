@@ -140,9 +140,6 @@ private:
     void pushManageTint2_clicked() noexcept;
 
     void tabWidget_currentChanged(int index) noexcept;
-    void pushXFCEAppearance_clicked() noexcept;
-    void pushXFCEWMsettings_clicked() noexcept;
-    void pushXFCEPanelSettings_clicked() noexcept;
 };
 
 #endif // DEFAULTLOOK_H

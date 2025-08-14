@@ -116,7 +116,7 @@
      </property>
      <layout class="QHBoxLayout">
       <item>
-       <widget class="QToolButton" name="pushXFCEPanelSettings">
+       <widget class="QToolButton" name="pushXfcePanelSettings">
         <property name="toolTip">
          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the panel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
@@ -140,7 +140,7 @@
        </spacer>
       </item>
       <item>
-       <widget class="QToolButton" name="pushXFCEWMsettings">
+       <widget class="QToolButton" name="pushXfceWindowManager">
         <property name="toolTip">
          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configure window behavior and shortcuts&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
@@ -167,7 +167,7 @@
        </spacer>
       </item>
       <item>
-       <widget class="QToolButton" name="pushXFCEAppearance">
+       <widget class="QToolButton" name="pushXfceAppearance">
         <property name="toolTip">
          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the look of your desktop&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>

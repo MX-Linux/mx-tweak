@@ -36,6 +36,7 @@ TweakXfcePanel::TweakXfcePanel(Ui::defaultlook *ui, bool verbose, QObject *paren
     connect(ui->pushXfcePanelBackup, &QPushButton::clicked, this, &TweakXfcePanel::pushXfcePanelBackup_clicked);
     connect(ui->pushXfcePanelRestore, &QPushButton::clicked, this, &TweakXfcePanel::pushXfcePanelRestore_clicked);
     connect(ui->pushXfcePanelDefault, &QPushButton::clicked, this, &TweakXfcePanel::pushXfcePanelDefault_clicked);
+    connect(ui->pushXfcePanelSettings, &QPushButton::clicked, this, &TweakXfcePanel::pushXfcePanelSettings_clicked);
 }
 
 void TweakXfcePanel::whichPanel() noexcept
@@ -716,4 +717,29 @@ void TweakXfcePanel::setPosition() noexcept
     }
 
     runCmd("xfconf-query -c xfce4-panel -p /panels/panel-"_L1 + panel + "/position -s 'p="_L1 + newPos + ";x=0;y=0'"_L1);
+}
+
+void TweakXfcePanel::pushXfcePanelSettings_clicked() noexcept
+{
+    ui->tabWidget->setEnabled(false);
+    runProc(u"xfce4-panel"_s, {u"--preferences"_s});
+    runProc(u"xprop"_s, {u"-spy"_s, u"-name"_s, u"Panel Preferences"_s});
+
+    //restart panel if background style of any panel is 1 - solid color, affects transparency
+    const QStringList &properties = runCmd(u"xfconf-query -c xfce4-panel --list"_s
+        u" |grep background-style"_s).output.split('\n', Qt::SkipEmptyParts);
+
+    bool flag = false;
+    for (const QString &value : properties) {
+        const QString &test = runCmd("xfconf-query -c xfce4-panel -p "_L1 + value).output;
+        if (test == "1"_L1) {
+            flag = true;
+        }
+    }
+    if (flag) {
+        runProc(u"xfce4-panel"_s, {u"--restart"_s});
+    }
+
+    setup();
+    ui->tabWidget->setEnabled(true);
 }

@@ -141,9 +141,9 @@ void defaultlook::setup()
     if (displayflag) ui->tabWidget->setCurrentIndex(Tab::Display);
 
     if (isXfce) {
-        ui->pushXFCEPanelSettings->setIcon(QIcon::fromTheme(u"org.xfce.panel"_s));
-        ui->pushXFCEAppearance->setIcon(QIcon::fromTheme(u"org.xfce.settings.appearance"_s));
-        ui->pushXFCEWMsettings->setIcon(QIcon::fromTheme(u"org.xfce.xfwm4"_s));
+        ui->pushXfcePanelSettings->setIcon(QIcon::fromTheme(u"org.xfce.panel"_s));
+        ui->pushXfceAppearance->setIcon(QIcon::fromTheme(u"org.xfce.settings.appearance"_s));
+        ui->pushXfceWindowManager->setIcon(QIcon::fromTheme(u"org.xfce.xfwm4"_s));
         //set first tab as default
         if (!displayflag && !themetabflag && !othertabflag) {
             ui->tabWidget->setCurrentIndex(Tab::Panel);
@@ -166,10 +166,6 @@ void defaultlook::setup()
         } else {
             ui->tabWidget->removeTab(Tab::Superkey);
         }
-
-        connect(ui->pushXFCEPanelSettings, &QPushButton::clicked, this, &defaultlook::pushXFCEPanelSettings_clicked);
-        connect(ui->pushXFCEAppearance, &QPushButton::clicked, this, &defaultlook::pushXFCEAppearance_clicked);
-        connect(ui->pushXFCEWMsettings, &QPushButton::clicked, this, &defaultlook::pushXFCEWMsettings_clicked);
     }
 
     //setup fluxbox
@@ -275,50 +271,6 @@ bool defaultlook::checklightdm()
 {
     QFileInfo test(u"/etc/lightdm/lightdm-gtk-greeter.conf"_s);
     return (test.exists());
-}
-
-void defaultlook::pushXFCEPanelSettings_clicked() noexcept
-{
-    this->hide();
-    runProc(u"xfce4-panel"_s, {u"--preferences"_s});
-    runProc(u"xprop"_s, {u"-spy"_s, u"-name"_s, u"Panel Preferences"_s});
-    this->show();
-    QString test;
-    bool flag = false;
-
-    //restart panel if background style of any panel is 1 - solid color, affects transparency
-    QStringList panelproperties = runCmd(u"xfconf-query -c xfce4-panel --list |grep background-style"_s).output.split('\n');
-
-    QStringListIterator changeIterator(panelproperties);
-
-    while (changeIterator.hasNext()) {
-        QString value = changeIterator.next();
-        test = runCmd("xfconf-query -c xfce4-panel -p "_L1 + value).output;
-        if (test == "1"_L1) {
-            flag = true;
-        }
-    }
-
-    if (flag) {
-        runProc(u"xfce4-panel"_s, {u"--restart"_s});
-    }
-
-    assert(isXfce && tweakXfcePanel != nullptr);
-    tweakXfcePanel->setup();
-}
-
-void defaultlook::pushXFCEAppearance_clicked() noexcept
-{
-    this->hide();
-    runProc(u"xfce4-appearance-settings"_s);
-    this->show();
-}
-
-void defaultlook::pushXFCEWMsettings_clicked() noexcept
-{
-    this->hide();
-    runProc(u"xfwm4-settings"_s);
-    this->show();
 }
 
 void defaultlook::setupEtc()

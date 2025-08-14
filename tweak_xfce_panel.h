@@ -40,6 +40,7 @@ private:
     void pushXfcePanelBackup_clicked() noexcept;
     void pushXfcePanelRestore_clicked() noexcept;
     void pushXfcePanelDefault_clicked() noexcept;
+    void pushXfcePanelSettings_clicked() noexcept;
 
     QString getTasklistID() const noexcept;
     void tasklistChange() noexcept;

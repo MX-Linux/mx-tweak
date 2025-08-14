@@ -28,6 +28,8 @@ private:
 
     void slotSettingChanged() noexcept;
     void pushXfceApply_clicked() noexcept;
+    void pushXfceAppearance_clicked() noexcept;
+    void pushXfceWindowManager_clicked() noexcept;
 };
 
 #endif // TWEAK_XFCE_H
