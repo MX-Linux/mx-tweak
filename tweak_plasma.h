@@ -11,6 +11,7 @@ class TweakPlasma : public QObject
 {
     Q_OBJECT
 public:
+    TweakPlasma() = delete;
     TweakPlasma(Ui::defaultlook *ui, bool verbose, QObject *parent = nullptr) noexcept;
     void setup() noexcept;
     bool checkPlasma() const noexcept;

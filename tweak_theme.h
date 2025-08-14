@@ -17,6 +17,7 @@ public:
         Plasma,
         Fluxbox
     };
+    TweakTheme() = delete;
     TweakTheme(Ui::defaultlook *ui, bool verbose, Desktop desktop, QObject *parent = nullptr) noexcept;
     TweakTheme(Ui::defaultlook *ui, bool verbose, class TweakXfce *tweak, QObject *parent = nullptr) noexcept;
     void setup() noexcept;

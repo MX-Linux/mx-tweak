@@ -11,7 +11,8 @@ class TweakCompositor : public QObject
 {
     Q_OBJECT
 public:
-    explicit TweakCompositor(Ui::defaultlook *ui, bool verbose, QObject *parent = nullptr) noexcept;
+    TweakCompositor() = delete;
+    TweakCompositor(Ui::defaultlook *ui, bool verbose, QObject *parent = nullptr) noexcept;
     static bool check() noexcept;
     void setup() noexcept;
 

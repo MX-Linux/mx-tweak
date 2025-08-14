@@ -11,6 +11,7 @@ class TweakDisplay : public QObject
 {
     Q_OBJECT
 public:
+    TweakDisplay() = delete;
     TweakDisplay(Ui::defaultlook *ui, bool verbose, QObject *parent = nullptr) noexcept;
     void setup() noexcept;
 

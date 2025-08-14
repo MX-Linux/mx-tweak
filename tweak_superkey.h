@@ -11,6 +11,7 @@ class TweakSuperKey : public QObject
 {
     Q_OBJECT
 public:
+    TweakSuperKey() = delete;
     TweakSuperKey(Ui::defaultlook *ui, bool verbose, QObject *parent = nullptr) noexcept;
     void setup() noexcept;
     static bool checkSuperKey() noexcept;
