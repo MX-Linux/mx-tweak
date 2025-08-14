@@ -20,6 +20,9 @@ public:
 private:
     Ui::window_buttons *ui;
 
+    void changePluginBool(const QLatin1StringView setting, bool value) const noexcept;
+    void changePluginInt(const QLatin1StringView setting, int value) const noexcept;
+
     void checkButtonLabels_toggled(bool checked) noexcept;
     void checkDrawFrames_toggled(bool checked) noexcept;
     void checkOnlyMinWindows_toggled(bool checked) noexcept;

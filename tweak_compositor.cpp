@@ -23,7 +23,7 @@ TweakCompositor::TweakCompositor(Ui::defaultlook *ui, bool verbose, QObject *par
 
 bool TweakCompositor::check() noexcept
 {
-    return (system("ps -aux |grep -v grep |grep -q compiz") != 0);
+    return (runCmd("ps -aux |grep -v grep |grep -q compiz").exitCode != 0);
 }
 void TweakCompositor::setup() noexcept
 {
@@ -72,7 +72,7 @@ void TweakCompositor::checkPicomRunning() noexcept
 {
     //Index for combo box:  0=none, 1=xfce, 2=picom (formerly compton)
 
-    if ( system("ps -ax -o comm,pid |grep -w ^picom") == 0 ) {
+    if (runCmd(u"ps -ax -o comm,pid |grep -w ^picom"_s).exitCode == 0) {
         if (verbose) qDebug() << "picom is running";
         const int i = ui->comboCompositor->findData(u"picom"_s);
         ui->comboCompositor->setCurrentIndex(i);
@@ -103,14 +103,14 @@ void TweakCompositor::checkPicomRunning() noexcept
 
 void TweakCompositor::checkAptNotifierRunning() const noexcept
 {
-    if ( system("ps -aux |grep -v grep| grep python |grep --quiet apt-notifier") == 0 ) {
+    if (runCmd("ps -aux |grep -v grep| grep python |grep --quiet apt-notifier").exitCode == 0) {
         if (verbose) qDebug() << "apt-notifier is running";
         //check if icon is supposed to be hidden by user
-        if ( system("cat /home/$USER/.config/apt-notifierrc |grep --quiet DontShowIcon") == 0 ) {
+        if (runCmd(u"cat /home/$USER/.config/apt-notifierrc |grep --quiet DontShowIcon"_s).exitCode == 0) {
             if (verbose) qDebug() << "apt-notifier set to hide icon, do not restart";
         } else {
             if (verbose) qDebug() << "unhide apt-notifier icon";
-            system("/usr/bin/apt-notifier-unhide-Icon");
+            runCmd(u"/usr/bin/apt-notifier-unhide-Icon"_s);
         }
     } else {
         if (verbose) qDebug() << "apt-notifier not running, do NOT restart";
@@ -150,22 +150,24 @@ void TweakCompositor::pushCompositorApply_clicked() noexcept
         //turn off xfce compositor
         runCmd(u"xfconf-query -c xfwm4 -p /general/use_compositing -s false"_s);
         //launch picom
-        system("pkill -x picom");
-        system("picom-launch.sh");
+        runProc(u"pkill"_s, {u"-x"_s, u"picom"_s});
+        runCmd(u"picom-launch.sh"_s);
         //restart apt-notifier if necessary
         checkAptNotifierRunning();
     } else if (ui->comboCompositor->currentData() == "xfwm"_L1) {
         //turn off picom
-        system("pkill -x picom");
+        runProc(u"pkill"_s, {u"-x"_s, u"picom"_s});
         //launch xfce compositor
-        runCmd(u"xfconf-query -c xfwm4 -p /general/use_compositing -s true"_s);
+        runProc(u"xfconf-query"_s, {u"-c"_s, u"xfwm4"_s, u"-p"_s,
+            u"/general/use_compositing"_s, u"-s"_s, u"true"_s});
         //restart apt-notifier if necessary
         checkAptNotifierRunning();
     } else {
         //turn off picom and xfce compositor
         //turn off xfce compositor
-        runCmd(u"xfconf-query -c xfwm4 -p /general/use_compositing -s false"_s);
-        system("pkill -x picom");
+        runProc(u"xfconf-query"_s, {u"-c"_s, u"xfwm4"_s, u"-p"_s,
+            u"/general/use_compositing"_s, u"-s"_s, u"false"_s});
+        runProc(u"pkill"_s, {u"-x"_s, u"picom"_s});
         checkAptNotifierRunning();
     }
 
@@ -199,7 +201,7 @@ void TweakCompositor::pushCompositorXfwmSettings_clicked() noexcept
 void TweakCompositor::pushCompositorPicomSettings_clicked() noexcept
 {
     ui->tabWidget->setEnabled(false);
-    system("picom-conf");
+    runProc(u"picom-conf"_s);
     ui->tabWidget->setEnabled(true);
 }
 void TweakCompositor::pushCompositorEditPicomConf_clicked() noexcept

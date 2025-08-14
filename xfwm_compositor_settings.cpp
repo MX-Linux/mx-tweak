@@ -80,112 +80,71 @@ void xfwm_compositor_settings::setup() noexcept
 
 void xfwm_compositor_settings::checkRedirect_toggled(bool checked) noexcept
 {
-    QString cmd;
-    if (checked) {
-        cmd = u"xfconf-query -c xfwm4 -p /general/unredirect_overlays -s true"_s;
-    } else {
-        cmd = u"xfconf-query -c xfwm4 -p /general/unredirect_overlays -s false"_s;
-    }
-    system(cmd.toUtf8());
+    runProc(u"xfconf-query"_s, {u"-c"_s, u"xfwm4"_s, u"-p"_s,
+        u"/general/unredirect_overlays"_s, u"-s"_s, (checked ? u"true"_s : u"false"_s)});
 }
 
 void xfwm_compositor_settings::checkVsync_toggled(bool checked) noexcept
 {
-    QString cmd;
-    if (checked) {
-        cmd = u"xfconf-query -c xfwm4 -p /general/sync_to_vblank -s true"_s;
-    } else {
-        cmd = u"xfconf-query -c xfwm4 -p /general/sync_to_vblank -s false"_s;
-    }
-    system(cmd.toUtf8());
+    runProc(u"xfconf-query"_s, {u"-c"_s, u"xfwm4"_s, u"-p"_s,
+        u"/general/sync_to_vblank"_s, u"-s"_s, (checked ? u"true"_s : u"false"_s)});
 }
 
 void xfwm_compositor_settings::checkPreview_toggled(bool checked) noexcept
 {
-    QString cmd;
-    if (checked) {
-        cmd = u"xfconf-query -c xfwm4 -p /general/cycle_preview -s true"_s;
-    } else {
-        cmd = u"xfconf-query -c xfwm4 -p /general/cycle_preview -s false"_s;
-    }
-    system(cmd.toUtf8());
+    runProc(u"xfconf-query"_s, {u"-c"_s, u"xfwm4"_s, u"-p"_s,
+        u"/general/cycle_preview"_s, u"-s"_s, (checked ? u"true"_s : u"false"_s)});
 }
 
 void xfwm_compositor_settings::checkPopupShadows_toggled(bool checked) noexcept
 {
-    QString cmd;
-    if (checked) {
-        cmd = u"xfconf-query -c xfwm4 -p /general/show_popup_shadow -s true"_s;
-    } else {
-        cmd = u"xfconf-query -c xfwm4 -p /general/show_popup_shadow -s false"_s;
-    }
-    system(cmd.toUtf8());
+    runProc(u"xfconf-query"_s, {u"-c"_s, u"xfwm4"_s, u"-p"_s,
+        u"/general/show_popup_shadow"_s, u"-s"_s, (checked ? u"true"_s : u"false"_s)});
 }
 
 void xfwm_compositor_settings::checkDockShadows_toggled(bool checked) noexcept
 {
-    QString cmd;
-    if (checked) {
-        cmd = u"xfconf-query -c xfwm4 -p /general/show_dock_shadow -s true"_s;
-    } else {
-        cmd = u"xfconf-query -c xfwm4 -p /general/show_dock_shadow -s false"_s;
-    }
-    system(cmd.toUtf8());
+    runProc(u"xfconf-query"_s, {u"-c"_s, u"xfwm4"_s, u"-p"_s,
+        u"/general/show_dock_shadow"_s, u"-s"_s, (checked ? u"true"_s : u"false"_s)});
 }
 
 void xfwm_compositor_settings::checkFrameShadows_toggled(bool checked) noexcept
 {
-    QString cmd;
-    if (checked) {
-        cmd = u"xfconf-query -c xfwm4 -p /general/show_frame_shadow -s true"_s;
-    } else {
-        cmd = u"xfconf-query -c xfwm4 -p /general/show_frame_shadow -s false"_s;
-    }
-    system(cmd.toUtf8());
+    runProc(u"xfconf-query"_s, {u"-c"_s, u"xfwm4"_s, u"-p"_s,
+        u"/general/show_frame_shadow"_s, u"-s"_s, (checked ? u"true"_s : u"false"_s)});
 }
 
 void xfwm_compositor_settings::sliderWindowDecorations_valueChanged(int value) noexcept
 {
-    QString param = QString::number(value);
-    QString cmd;
+    const QString &param = QString::number(value);
     ui->sliderWindowDecorations->setToolTip(param);
-
-    cmd = "xfconf-query -c xfwm4 -p /general/frame_opacity -s "_L1 + param;
-    system(cmd.toUtf8());
+    runProc(u"xfconf-query"_s, {u"-c"_s, u"xfwm4"_s, u"-p"_s, u"/general/frame_opacity"_s, u"-s"_s, param});
 }
 
 void xfwm_compositor_settings::sliderInactiveWindows_valueChanged(int value) noexcept
 {
-    QString param = QString::number(value);
-    QString cmd;
+    const QString &param = QString::number(value);
     ui->sliderInactiveWindows->setToolTip(param);
-    cmd = "xfconf-query -c xfwm4 -p /general/inactive_opacity -s "_L1 + param;
-    system(cmd.toUtf8());
+    runProc(u"xfconf-query"_s, {u"-c"_s, u"xfwm4"_s, u"-p"_s, u"/general/inactive_opacity"_s, u"-s"_s, param});
 }
 
 void xfwm_compositor_settings::sliderWindowsMove_valueChanged(int value) noexcept
 {
-    QString param = QString::number(value);
-    QString cmd;
+    const QString &param = QString::number(value);
     ui->sliderWindowsMove->setToolTip(param);
-    cmd = "xfconf-query -c xfwm4 -p /general/move_opacity -s "_L1 + param;
-    system(cmd.toUtf8());
+    runProc(u"xfconf-query"_s, {u"-c"_s, u"xfwm4"_s, u"-p"_s, u"/general/move_opacity"_s, u"-s"_s, param});
 }
 
 void xfwm_compositor_settings::sliderWindowsResize_valueChanged(int value) noexcept
 {
-    QString param = QString::number(value);
-    QString cmd;
+    const QString &param = QString::number(value);
     ui->sliderWindowsResize->setToolTip(param);
-    cmd = "xfconf-query -c xfwm4 -p /general/resize_opacity -s "_L1 + param;
-    system(cmd.toUtf8());
+    runProc(u"xfconf-query"_s, {u"-c"_s, u"xfwm4"_s, u"-p"_s, u"/general/resize_opacity"_s, u"-s"_s, param});
 }
 
 void xfwm_compositor_settings::sliderPopup_valueChanged(int value) noexcept
 {
     QString param = QString::number(value);
-    QString cmd;
     ui->sliderWindowDecorations->setToolTip(param);
-    cmd = "xfconf-query -c xfwm4 -p /general/popup_opacity -s "_L1 + param;
-    system(cmd.toUtf8());
+    runProc(u"xfconf-query"_s, {u"-c"_s, u"xfwm4"_s, u"-p"_s, u"/general/popup_opacity"_s, u"-s"_s, param});
 }

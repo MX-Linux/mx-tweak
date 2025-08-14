@@ -219,7 +219,7 @@ void TweakPlasma::pushApplyPlasma_clicked() noexcept
         //restart kwin first
         runCmd(u"sleep 1; qdbus org.kde.KWin /KWin reconfigure"_s);
         //then plasma
-        system("sleep 1; plasmashell --replace &");
+        runCmd(u"sleep 1; plasmashell --replace &"_s);
     }
 
     setup();

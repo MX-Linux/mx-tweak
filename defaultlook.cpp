@@ -287,8 +287,8 @@ bool defaultlook::checklightdm()
 void defaultlook::pushXFCEPanelSettings_clicked() noexcept
 {
     this->hide();
-    system("xfce4-panel --preferences");
-    system("xprop -spy -name \"Panel Preferences\" >/dev/null");
+    runProc(u"xfce4-panel"_s, {u"--preferences"_s});
+    runProc(u"xprop"_s, {u"-spy"_s, u"-name"_s, u"Panel Preferences"_s});
     this->show();
     QString test;
     bool flag = false;
@@ -307,7 +307,7 @@ void defaultlook::pushXFCEPanelSettings_clicked() noexcept
     }
 
     if (flag) {
-        system("xfce4-panel --restart");
+        runProc(u"xfce4-panel"_s, {u"--restart"_s});
     }
 
     assert(isXfce && tweakXfce != nullptr);
@@ -317,14 +317,14 @@ void defaultlook::pushXFCEPanelSettings_clicked() noexcept
 void defaultlook::pushXFCEAppearance_clicked() noexcept
 {
     this->hide();
-    system("xfce4-appearance-settings");
+    runProc(u"xfce4-appearance-settings"_s);
     this->show();
 }
 
 void defaultlook::pushXFCEWMsettings_clicked() noexcept
 {
     this->hide();
-    system("xfwm4-settings");
+    runProc(u"xfwm4-settings"_s);
     this->show();
 }
 
@@ -650,7 +650,7 @@ void defaultlook::on_ButtonApplyEtc_clicked()
         QFileInfo check_intel(u"/etc/X11/xorg.conf.d/20-intel.conf"_s);
         if ( check_intel.exists()) {
             //backup existing 20-intel.conf file to home folder
-            system("cp /etc/X11/xorg.conf.d/20-intel.conf /home/$USER/20-intel.conf.$(date +%Y%m%H%M%S)");
+            runCmd(u"cp /etc/X11/xorg.conf.d/20-intel.conf /home/$USER/20-intel.conf.$(date +%Y%m%H%M%S)"_s);
         }
         if (ui->checkboxIntelDriver->isChecked()) {
             //copy mx-tweak version to xorg.conf.d directory
@@ -665,7 +665,7 @@ void defaultlook::on_ButtonApplyEtc_clicked()
         QFileInfo check_amd(u"/etc/X11/xorg.conf.d/20-amd.conf"_s);
         if ( check_amd.exists()) {
             //backup existing 20-amd.conf file to home folder
-            system("cp /etc/X11/xorg.conf.d/20-amd.conf /home/$USER/20-amd.conf.$(date +%Y%m%H%M%S)");
+            runCmd(u"cp /etc/X11/xorg.conf.d/20-amd.conf /home/$USER/20-amd.conf.$(date +%Y%m%H%M%S)"_s);
         }
         if (ui->checkboxAMDtearfree->isChecked()) {
             //copy mx-tweak version to xorg.conf.d directory
@@ -680,7 +680,7 @@ void defaultlook::on_ButtonApplyEtc_clicked()
         QFileInfo check_radeon(u"/etc/X11/xorg.conf.d/20-radeon.conf"_s);
         if ( check_radeon.exists()) {
             //backup existing 20-radeon.conf file to home folder
-            system("cp /etc/X11/xorg.conf.d/20-radeon.conf /home/$USER/20-radeon.conf.$(date +%Y%m%H%M%S)");
+            runCmd(u"cp /etc/X11/xorg.conf.d/20-radeon.conf /home/$USER/20-radeon.conf.$(date +%Y%m%H%M%S)"_s);
         }
         if (ui->checkboxRadeontearfree->isChecked()) {
             //copy mx-tweak version to xorg.conf.d directory
@@ -918,7 +918,7 @@ void defaultlook::on_checkBoxbluetoothAutoEnable_clicked()
 void defaultlook::pushManageTint2_clicked() noexcept
 {
     this->hide();
-    system("/usr/bin/mxfb-tint2-manager");
+    runCmd(u"/usr/bin/mxfb-tint2-manager"_s);
     this->show();
 
 }
@@ -955,7 +955,7 @@ void defaultlook::applyThunar() noexcept
     }
     // Reset right-click custom actions
     if (ui->checkThunarResetCustomActions->isChecked()) {
-        system("cp /home/$USER/.config/Thunar/uca.xml /home/$USER/.config/Thunar/uca.xml.$(date +%Y%m%H%M%S)");
+        runCmd(u"cp /home/$USER/.config/Thunar/uca.xml /home/$USER/.config/Thunar/uca.xml.$(date +%Y%m%H%M%S)"_s);
         runCmd(u"cp /etc/skel/.config/Thunar/uca.xml /home/$USER/.config/Thunar/uca.xml"_s);
     }
     // Split view

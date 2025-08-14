@@ -418,7 +418,7 @@ void TweakTheme::setTheme(const QString &type, const QString &theme) const noexc
         if (type == "cursor"_L1) {
             cmd = "xfconf-query -c xsettings -p /Gtk/CursorThemeName -s \""_L1 + theme + '"';
         }
-        system(cmd.toUtf8());
+        runCmd(cmd);
 
     } else if (desktop == Plasma) {
         if ( type == "plasma"_L1 ) {
@@ -435,7 +435,7 @@ void TweakTheme::setTheme(const QString &type, const QString &theme) const noexc
         if (type == "kdecursor"_L1) {
             cmd = "LANG=C plasma-apply-cursortheme "_L1 + theme;
         }
-        system(cmd.toUtf8());
+        runCmd(cmd);
 
     } else if (desktop == Fluxbox) {
         QString home_path = QDir::homePath();
@@ -445,14 +445,14 @@ void TweakTheme::setTheme(const QString &type, const QString &theme) const noexc
             } else {
                 cmd = "echo gtk-theme-name="_L1 + theme + "\" >> $HOME/.config/gtk-3.0/settings.ini"_L1;
             }
-            system(cmd.toUtf8());
+            runCmd(cmd);
 
             if (runCmd(u"grep gtk-theme-name $HOME/.gtkrc-2.0"_s).exitCode == 0) {
                 cmd = "sed -i 's/gtk-theme-name=.*/gtk-theme-name=\""_L1 + theme + "\"/' $HOME/.gtkrc-2.0"_L1;
             } else {
                 cmd = "echo gtk-theme-name=\""_L1 + theme + "\" >> $HOME/.gtkrc-2.0"_L1;
             }
-            system(cmd.toUtf8());
+            runCmd(cmd);
 
             cmd1 ="gsettings set org.gnome.desktop.interface gtk-theme \""_L1 + theme + '"';
             if (theme.contains("dark"_L1, Qt::CaseInsensitive) || theme.contains("Blackbird"_L1)){ //blackbird special case
@@ -472,8 +472,7 @@ void TweakTheme::setTheme(const QString &type, const QString &theme) const noexc
             }
 
             if (QFile::exists(u"/usr/bin/preview-mx"_s)){
-                cmd = "preview-mx &"_L1;
-                system(cmd.toUtf8());
+                runCmd(u"preview-mx &"_s);
             }
         }
         if ( type == "fluxbox"_L1 ) {
@@ -490,7 +489,7 @@ void TweakTheme::setTheme(const QString &type, const QString &theme) const noexc
                     cmd = "sed -i 's/session.styleFile:.*/session.styleFile: \\/usr\\/share\\/mxflux\\/styles\\/"_L1 + theme + "/' $HOME/.fluxbox/init && fluxbox-remote reconfigure && fluxbox-remote reloadstyle"_L1;
                 }
             }
-            system(cmd.toUtf8());
+            runCmd(cmd);
         }
         //for fluxbox, edit ~/.config/gtk-3.0/settings.ini and ~/.gtkrc-2.0 has quotes
         if ( type == "icons"_L1 ) {
@@ -500,17 +499,16 @@ void TweakTheme::setTheme(const QString &type, const QString &theme) const noexc
             } else {
                 cmd = "echo gtk-icon-theme-name="_L1 + theme + "\" >> $HOME/.config/gtk-3.0/settings.ini"_L1;
             }
-            system(cmd.toUtf8());
+            runCmd(cmd);
             if (runCmd(u"grep gtk-icon-theme-name $HOME/.gtkrc-2.0"_s).exitCode == 0) {
                 cmd = "sed -i 's/gtk-icon-theme-name=.*/gtk-icon-theme-name=\""_L1 + theme + "\"/' $HOME/.gtkrc-2.0"_L1;
             } else {
                 cmd = "echo gtk-icon-theme-name=\""_L1 + theme + "\" >> $HOME/.gtkrc-2.0"_L1;
             }
-            system(cmd.toUtf8());
+            runCmd(cmd);
 
             if (QFile::exists(u"/usr/bin/preview-mx"_s)){
-                cmd = "preview-mx &"_L1;
-                system(cmd.toUtf8());
+                runCmd(u"preview-mx &"_s);
             }
         }
 
@@ -522,13 +520,13 @@ void TweakTheme::setTheme(const QString &type, const QString &theme) const noexc
             } else {
                 cmd = "echo gtk-cursor-theme-name="_L1 + theme + "\" >> $HOME/.config/gtk-3.0/settings.ini"_L1;
             }
-            system(cmd.toUtf8());
+            runCmd(cmd);
             if (runCmd(u"grep gtk-cursor-theme-name $HOME/.gtkrc-2.0"_s).exitCode == 0) {
                 cmd = "sed -i 's/gtk-cursor-theme-name=.*/gtk-cursor-theme-name=\""_L1 + theme + "\"/' $HOME/.gtkrc-2.0"_L1;
             } else {
                 cmd = "echo gtk-cursor-theme-name=\""_L1 + theme + "\" >> $HOME/.gtkrc-2.0"_L1;
             }
-            system(cmd.toUtf8());
+            runCmd(cmd);
             if ( theme == "default"_L1){
                 runCmd(u"rm -R $HOME/.icons/default"_s);
             } else {
@@ -541,15 +539,14 @@ void TweakTheme::setTheme(const QString &type, const QString &theme) const noexc
                 runCmd(u"echo Comment=Default Cursor Theme >> $HOME/.icons/default/index.theme"_s);
                 runCmd("echo Inherits="_L1 + theme + " >> $HOME/.icons/default/index.theme"_L1);
             }
-            cmd = "fluxbox-remote restart"_L1;
-            system(cmd.toUtf8());
+            runCmd(u"fluxbox-remote restart"_s);
         }
     }
     if (!cmd1.isEmpty()){
-        system(cmd1.toUtf8());
+        runCmd(cmd1);
     }
     if (!cmd2.isEmpty()){
-        system(cmd2.toUtf8());
+        runCmd(cmd2);
     }
 }
 
@@ -569,7 +566,7 @@ void TweakTheme::pushThemeSaveSet_clicked() noexcept
     if (desktop == Fluxbox) {
         if (QFile::exists(u"/usr/bin/mxfb-look"_s)) {
             ui->tabWidget->setEnabled(false);
-            system("/usr/bin/mxfb-look");
+            runCmd(u"/usr/bin/mxfb-look"_s);
             setup();
             ui->tabWidget->setEnabled(true);
             return;
@@ -783,24 +780,22 @@ void TweakTheme::pushThemeApply_clicked() noexcept
         if (whisker_check.exists()) {
             if (verbose) qDebug() << "existing gtk.css found";
             QString cmd = "cat "_L1 + home_path + "/.config/gtk-3.0/gtk.css |grep -q whisker-tweak.css"_L1;
-            if (system(cmd.toUtf8()) == 0 ) {
+            if (runCmd(cmd).exitCode == 0 ) {
                 if (verbose) qDebug() << "include statement found";
             } else {
                 if (verbose) qDebug() << "adding include statement";
-                QString cmd = "echo '@import url(\"whisker-tweak.css\");' >> "_L1 + home_path + "/.config/gtk-3.0/gtk.css"_L1;
-                system(cmd.toUtf8());
+                runCmd("echo '@import url(\"whisker-tweak.css\");' >> "_L1 + home_path + "/.config/gtk-3.0/gtk.css"_L1);
             }
         } else {
             if (verbose) qDebug() << "creating simple gtk.css file";
-            QString cmd = "echo '@import url(\"whisker-tweak.css\");' >> "_L1 + home_path + "/.config/gtk-3.0/gtk.css"_L1;
-            system(cmd.toUtf8());
+            runCmd("echo '@import url(\"whisker-tweak.css\");' >> "_L1 + home_path + "/.config/gtk-3.0/gtk.css"_L1);
         }
 
         //add whisker info
         runCmd("awk '/<begin_gtk_whisker_theme_code>/{flag=1;next}/<end_gtk_whisker_theme_code>/{flag=0}flag' \""_L1 +fileinfo.absoluteFilePath() +"\" > "_L1 + home_path + "/.config/gtk-3.0/whisker-tweak.css"_L1);
 
         //restart xfce4-panel
-        system("xfce4-panel --restart");
+        runProc(u"xfce4-panel"_s, {u"--restart"_s});
     } else if (desktop == Plasma) {
         runCmd("plasma-apply-lookandfeel --apply "_L1 + ui->comboTheme->currentText());
     }
@@ -879,9 +874,9 @@ void TweakTheme::spinThemeCursorSize_valueChanged(int value) noexcept
         cmd = ("xfconf-query --channel xsettings --property /Gtk/CursorThemeSize -t int -s "_L1 + size + " --create"_L1);
     }
 
-    system(cmd.toUtf8());
+    runCmd(cmd);
     //restart fluxbox after set
     if (desktop == Fluxbox) {
-        system("xrdb -merge $HOME/.Xresources && fluxbox-remote restart");
+        runCmd(u"xrdb -merge $HOME/.Xresources && fluxbox-remote restart"_s);
     }
 }

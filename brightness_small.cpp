@@ -50,7 +50,7 @@ brightness_small::brightness_small(QWidget *parent, const QStringList &args) noe
 
     menu = new QMenu(this);
 
-    if (system("echo $XDG_CURRENT_DESKTOP | grep -q XFCE") == 0) {
+    if (runCmd(u"echo $XDG_CURRENT_DESKTOP | grep -q XFCE"_s).exitCode == 0) {
         full = new QAction(QIcon::fromTheme(u"video-display"_s), tr("Display"), this);
         connect(full, &QAction::triggered, this, &brightness_small::launchfulldisplaydialog);
         menu->addAction(full);
@@ -140,10 +140,9 @@ void brightness_small::setupbacklight() noexcept
 
 void brightness_small::setbacklight() noexcept
 {
-    QString backlight = QString::number(ui->sliderHardwareBacklight->value());
-    QString cmd = "sudo /usr/lib/mx-tweak/backlight-brightness -s "_L1 + backlight;
+    const QString &backlight = QString::number(ui->sliderHardwareBacklight->value());
+    runProc(u"sudo"_s, {u"/usr/lib/mx-tweak/backlight-brightness"_s, u"-s"_s, backlight});
     ui->labelBacklight->setText(backlight);
-    system(cmd.toUtf8());
 }
 
 void brightness_small::setupBrightness() noexcept
@@ -188,13 +187,13 @@ void brightness_small::sliderBrightness_valueChanged(int value) noexcept
 
 void brightness_small::setBrightness() noexcept
 {
-    QString cmd;
     double num = ui->sliderBrightness->value() / 100.0;
     qDebug() << "num is :" << num;
     QString brightness = QString::number(num, 'G', 5);
     qDebug() << "changed brightness is :" << brightness;
-    cmd = "xrandr --output "_L1 + ui->comboDisplay->currentText() + " --brightness "_L1 + brightness + " --gamma "_L1 + g1 + ':' + g2 + ':' +g3;
-    system(cmd.toUtf8());
+    runProc(u"xrandr"_s, {u"--output"_s, ui->comboDisplay->currentText(),
+        u"--brightness"_s, brightness,
+        u"--gamma"_s + g1+':'+g2+':'+g3});
 }
 
 void brightness_small::pushSave_clicked() noexcept
@@ -257,8 +256,7 @@ void brightness_small::keyPressEvent(QKeyEvent *event) noexcept
 
 void brightness_small::launchfulldisplaydialog() noexcept
 {
-    QString cmd = u"mx-tweak --display"_s;
-    system(cmd.toUtf8());
+    runProc(u"mx-tweak"_s, {u"--display"_s});
 }
 
 void brightness_small::pushExpandBacklight_clicked() noexcept

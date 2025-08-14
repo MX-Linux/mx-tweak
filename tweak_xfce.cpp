@@ -114,8 +114,7 @@ void TweakXfce::setup() noexcept
     }
 
     //and hide hibernate if swap is encrypted
-    QString cmd = u"grep swap /etc/crypttab |grep -q luks"_s;
-    int swaptest2 = system(cmd.toUtf8());
+    int swaptest2 = runCmd(u"grep swap /etc/crypttab |grep -q luks"_s).exitCode;
     if (verbose) qDebug() << "swaptest encrypted is " << swaptest2;
     if (swaptest2 == 0) {
         ui->checkXfceHibernate->hide();
@@ -190,41 +189,39 @@ void TweakXfce::pushXfceApply_clicked() noexcept
         if (gtk_check.exists()) {
             if (verbose) qDebug() << "existing gtk.css found";
             QString cmd = "cat "_L1 + home_path + "/.config/gtk-3.0/gtk.css |grep -q no-ellipse-desktop-filenames.css"_L1;
-            if (system(cmd.toUtf8()) == 0 ) {
+            if (runCmd(cmd).exitCode == 0 ) {
                 if (verbose) qDebug() << "include statement found";
             } else {
                 if (verbose) qDebug() << "adding include statement";
-                QString cmd = "echo '@import url(\"no-ellipse-desktop-filenames.css\");' >> "_L1 + home_path + "/.config/gtk-3.0/gtk.css"_L1;
-                system(cmd.toUtf8());
+                runCmd("echo '@import url(\"no-ellipse-desktop-filenames.css\");' >> "_L1 + home_path + "/.config/gtk-3.0/gtk.css"_L1);
             }
         } else {
             if (verbose) qDebug() << "creating simple gtk.css file";
-            QString cmd = "echo '@import url(\"no-ellipse-desktop-filenames.css\");' >> "_L1 + home_path + "/.config/gtk-3.0/gtk.css"_L1;
-            system(cmd.toUtf8());
+            runCmd("echo '@import url(\"no-ellipse-desktop-filenames.css\");' >> "_L1 + home_path + "/.config/gtk-3.0/gtk.css"_L1);
         }
         //add modification config
         runCmd("cp /usr/share/mx-tweak/no-ellipse-desktop-filenames.css "_L1 + home_path + "/.config/gtk-3.0/no-ellipse-desktop-filenames.css "_L1);
 
         //restart xfdesktop by with xfdesktop --quite && xfdesktop &
-
-        system("xfdesktop --quit && sleep .5 && xfdesktop &");
+        runCmd(u"xfdesktop --quit && sleep .5 && xfdesktop &"_s);
     } else {
         QFileInfo noellipse_check(home_path + "/.config/gtk-3.0/no-ellipse-desktop-filenames.css"_L1);
         if (noellipse_check.exists()) {
             runCmd("rm -f "_L1 + home_path + "/.config/gtk-3.0/no-ellipse-desktop-filenames.css"_L1);
             runCmd("sed -i '/no-ellipse-desktop-filenames.css/d' "_L1 + home_path + "/.config/gtk-3.0/gtk.css"_L1);
-            system("xfdesktop --quit && sleep .5 && xfdesktop &");
+            runCmd(u"xfdesktop --quit && sleep .5 && xfdesktop &"_s);
         }
     }
 
     //deal with hibernate
     if (ui->checkXfceHibernate->isChecked() != flags.hibernate) {
+        QString param = u"false"_s;
         if (ui->checkXfceHibernate->isChecked()) {
             hibernate_option =  "hibernate"_L1;
-            system("xfconf-query -c xfce4-session -p /shutdown/ShowHibernate -t bool -s true --create");
-        } else {
-            system("xfconf-query -c xfce4-session -p /shutdown/ShowHibernate -t bool -s false --create");
+            param = u"true"_s;
         }
+        runProc(u"xfconf-query"_s, {u"-c"_s, u"xfce4-session"_s, u"-p"_s,
+            u"/shutdown/ShowHibernate"_s, u"-t"_s, u"bool"_s, u"-s"_s, param, u"--create"_s});
     }
 
     setup();
@@ -263,22 +260,19 @@ void TweakXfce::panelSetup() noexcept
     if (QFileInfo::exists(home_path + "/.config/gtk-3.0/gtk.css"_L1)) {
         if (verbose) qDebug() << "existing gtk.css found";
         QString cmd = "cat "_L1 + home_path + "/.config/gtk-3.0/gtk.css |grep -q xfce4-panel-tweaks.css"_L1;
-        if (system(cmd.toUtf8()) == 0 ) {
+        if (runCmd(cmd).exitCode == 0 ) {
             if (verbose) qDebug() << "include statement found";
         } else {
             if (verbose) qDebug() << "adding include statement";
-            QString cmd = "echo '@import url(\"xfce4-panel-tweaks.css\");' >> "_L1 + home_path + "/.config/gtk-3.0/gtk.css"_L1;
-            system(cmd.toUtf8());
+            runCmd("echo '@import url(\"xfce4-panel-tweaks.css\");' >> "_L1 + home_path + "/.config/gtk-3.0/gtk.css"_L1);
         }
     } else {
         if (verbose) qDebug() << "creating simple gtk.css file";
-        QString cmd = "echo '@import url(\"xfce4-panel-tweaks.css\");' >> "_L1 + home_path + "/.config/gtk-3.0/gtk.css"_L1;
-        system(cmd.toUtf8());
+        runCmd("echo '@import url(\"xfce4-panel-tweaks.css\");' >> "_L1 + home_path + "/.config/gtk-3.0/gtk.css"_L1);
     }
 
     if (!QFileInfo::exists(home_path + "/.config/gtk-3.0/xfce4-panel-tweaks.css"_L1)) {
-        QString cmd = "cp /usr/share/mx-tweak/xfce4-panel-tweaks.css "_L1 + home_path + "/.config/gtk-3.0/"_L1;
-        system(cmd.toUtf8());
+        runCmd("cp /usr/share/mx-tweak/xfce4-panel-tweaks.css "_L1 + home_path + "/.config/gtk-3.0/"_L1);
     }
     //check for existence of plugins before running these commands, hide buttons and labels if not present.
     //Get value of scale
@@ -318,13 +312,13 @@ void TweakXfce::panelSetup() noexcept
     bool tasklist = true;
     bool docklike = true;
 
-    if ( system("xfconf-query -c xfce4-panel -p /plugins -lv |grep tasklist") != 0 ) {
+    if (runCmd(u"xfconf-query -c xfce4-panel -p /plugins -lv |grep tasklist"_s).exitCode != 0 ) {
         ui->groupXfcePanelTasklist->hide();
         tasklist = false;
     }
 
     //hide docklike settings if not present
-    if ( system("xfconf-query -c xfce4-panel -p /plugins -lv |grep docklike") != 0 ) {
+    if (runCmd(u"xfconf-query -c xfce4-panel -p /plugins -lv |grep docklike"_s).exitCode != 0 ) {
         docklike = false;
     }
 
@@ -437,7 +431,7 @@ void TweakXfce::pushXfcePanelTasklistOptions_clicked() noexcept
         wb.setModal(true);
         wb.exec();
     } else {
-        system("xfce4-panel --plugin-event=docklike:settings");
+        runProc(u"xfce4-panel"_s, {u"--plugin-event=docklike:settings"_s});
     }
     ui->tabWidget->setEnabled(true);
 }
