@@ -26,6 +26,7 @@ SOURCES += main.cpp\
     tweak_plasma.cpp \
     tweak_superkey.cpp \
     tweak_theme.cpp \
+    tweak_thunar.cpp \
     tweak_xfce.cpp \
     xfwm_compositor_settings.cpp \
     window_buttons.cpp \
@@ -42,6 +43,7 @@ HEADERS  += defaultlook.h \
     tweak_plasma.h \
     tweak_superkey.h \
     tweak_theme.h \
+    tweak_thunar.h \
     tweak_xfce.h \
     version.h \
     xfwm_compositor_settings.h \

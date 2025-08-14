@@ -58,7 +58,6 @@ public:
     QString pluginidsystray;
     QString originalhostname;
     QString currentdisplaymanager;
-    bool setupflag=false;
     bool verbose = false;
     bool Intel_flag{};
     bool radeon_flag{};
@@ -85,10 +84,6 @@ public:
     void setupEtc();
     void checkSession();
     static bool checklightdm();
-
-    void setupThunar() noexcept;
-    void applyThunar() noexcept;
-    void slotThunarChanged() noexcept;
 
     void changecomputername(const QString &hostname);
     bool validatecomputername(const QString &hostname);
@@ -133,6 +128,7 @@ private:
     class TweakPlasma *tweakPlasma = nullptr;
     class TweakXfce *tweakXfce = nullptr;
     class TweakFluxbox *tweakFluxbox = nullptr;
+    class TweakThunar *tweakThunar = nullptr;
     class TweakCompositor *tweakCompositor = nullptr;
     class TweakDisplay *tweakDisplay = nullptr;
     class TweakSuperKey *tweakSuperKey = nullptr;

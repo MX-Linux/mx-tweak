@@ -45,6 +45,7 @@
 #include "tweak_plasma.h"
 #include "tweak_xfce.h"
 #include "tweak_fluxbox.h"
+#include "tweak_thunar.h"
 #include "tweak_compositor.h"
 #include "tweak_display.h"
 #include "tweak_superkey.h"
@@ -98,6 +99,7 @@ defaultlook::~defaultlook()
     if (tweakPlasma) delete tweakPlasma;
     if (tweakXfce) delete tweakXfce;
     if (tweakFluxbox) delete tweakFluxbox;
+    if (tweakThunar) delete tweakThunar;
     if (tweakCompositor) delete tweakCompositor;
     if (tweakDisplay) delete tweakDisplay;
     if (tweakSuperKey) delete tweakSuperKey;
@@ -148,6 +150,7 @@ void defaultlook::setup()
         ui->tabWidget->removeTab(Tab::Fluxbox);
         tweakXfce = new TweakXfce(ui, verbose, this);
         tweakTheme = new TweakTheme(ui, verbose, tweakXfce, this);
+        tweakThunar = new TweakThunar(ui, false, this);
         if (TweakCompositor::check()) {
             tweakCompositor = new TweakCompositor(ui, verbose, this);
         } else {
@@ -183,6 +186,9 @@ void defaultlook::setup()
         ui->tabWidget->removeTab(Tab::Panel);
         tweakFluxbox = new TweakFluxbox(ui, verbose, this);
         tweakTheme = new TweakTheme(ui, verbose, TweakTheme::Fluxbox, this);
+        if (TweakThunar::check()) {
+            tweakThunar = new TweakThunar(ui, true, this);
+        }
 
         //setup other tab;
         setupEtc();
@@ -219,21 +225,6 @@ void defaultlook::setup()
         setupEtc();
     }
 
-    // Thunar (on MX installed with XFCE or Fluxbox by default)
-    if (QFile::exists(u"/usr/bin/thunar"_s)) {
-        if (isFluxbox) {
-            ui->layoutFluxboxTab->replaceWidget(ui->widgetFluxboxThunar, ui->groupThunar);
-            connect(ui->pushFluxboxApply, &QCheckBox::clicked, this, &defaultlook::applyThunar);
-        } else if (isXfce) {
-            connect(ui->pushXfceApply, &QPushButton::clicked, this, &defaultlook::applyThunar);
-        }
-        connect(ui->checkThunarSingleClick, &QCheckBox::clicked, this, &defaultlook::slotThunarChanged);
-        connect(ui->checkThunarResetCustomActions, &QCheckBox::clicked, this, &defaultlook::slotThunarChanged);
-        connect(ui->checkThunarSplitView, &QCheckBox::clicked, this, &defaultlook::slotThunarChanged);
-        connect(ui->checkThunarSplitViewHorizontal, &QCheckBox::clicked, this, &defaultlook::slotThunarChanged);
-        setupThunar();
-    }
-
     //copy template file to ~/.local/share/mx-tweak-data if it doesn't exist
     QDir userdir(home_path + "/.local/share/mx-tweak-data"_L1);
     QFileInfo template_file(home_path + "/.local/share/mx-tweak-data/mx.tweak.template"_L1);
@@ -247,7 +238,6 @@ void defaultlook::setup()
             runCmd("cp /usr/share/mx-tweak-data/mx.tweak.template "_L1 + userdir.absolutePath());
         }
     }
-    setupflag=true;
     version = getVersion(u"mx-tweak"_s);
     this->adjustSize();
 }
@@ -929,64 +919,10 @@ void defaultlook::on_checkBoxInstallRecommends_clicked()
     enable_recommendsflag = true;
 }
 
-void defaultlook::setupThunar() noexcept
-{
-    ui->checkThunarResetCustomActions->setChecked(false);
-    QString test;
-
-    //check single click thunar status
-    test = runCmd(u"xfconf-query  -c thunar -p /misc-single-click"_s).output;
-    ui->checkThunarSingleClick->setChecked(test == "true"_L1);
-
-    //check split window status
-    test = runCmd(u"xfconf-query  -c thunar -p /misc-open-new-windows-in-split-view"_s).output;
-    ui->checkThunarSplitView->setChecked(test == "true"_L1);
-    //check split view horizontal or vertical.  default false is vertical, true is horizontal;
-    test = runCmd(u"xfconf-query  -c thunar -p /misc-vertical-split-pane"_s).output;
-    ui->checkThunarSplitViewHorizontal->setChecked(test == "true"_L1);
-}
-void defaultlook::applyThunar() noexcept
-{
-    // Single-click
-    if (ui->checkThunarSingleClick->isChecked()) {
-        runCmd(u"xfconf-query  -c thunar -p /misc-single-click -t bool -s true --create"_s);
-    } else {
-        runCmd(u"xfconf-query  -c thunar -p /misc-single-click -t bool -s false --create"_s);
-    }
-    // Reset right-click custom actions
-    if (ui->checkThunarResetCustomActions->isChecked()) {
-        runCmd(u"cp /home/$USER/.config/Thunar/uca.xml /home/$USER/.config/Thunar/uca.xml.$(date +%Y%m%H%M%S)"_s);
-        runCmd(u"cp /etc/skel/.config/Thunar/uca.xml /home/$USER/.config/Thunar/uca.xml"_s);
-    }
-    // Split view
-    if (ui->checkThunarSplitView->isChecked()) {
-        runCmd(u"xfconf-query  -c thunar -p /misc-open-new-windows-in-split-view -t bool -s true --create"_s);
-    } else {
-        runCmd(u"xfconf-query  -c thunar -p /misc-open-new-windows-in-split-view --reset"_s);
-    }
-    // Split view thunar horizontal or vertical
-    if (ui->checkThunarSplitViewHorizontal->isChecked()) {
-        runCmd(u"xfconf-query -c thunar -p /misc-vertical-split-pane -t bool -s true --create"_s);
-    } else {
-        runCmd(u"xfconf-query -c thunar -p /misc-vertical-split-pane --reset"_s);
-    }
-
-    setupThunar();
-}
-void defaultlook::slotThunarChanged() noexcept
-{
-    if (ui->tabFluxbox->isVisible()) {
-        ui->pushFluxboxApply->setEnabled(true);
-    } else {
-        ui->pushXfceApply->setEnabled(true);
-    }
-}
-
 void defaultlook::on_checkBoxDisableFluxboxMenuGeneration_clicked()
 {
     ui->ButtonApplyEtc->setEnabled(true);
 }
-
 
 void defaultlook::on_checkBoxLiqKernelUpdates_clicked()
 {
