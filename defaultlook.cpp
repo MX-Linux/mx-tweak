@@ -58,9 +58,8 @@
 
 using namespace Qt::Literals::StringLiterals;
 
-defaultlook::defaultlook(QWidget *parent, const QStringList &args) :
-    QDialog(parent),
-    ui(new Ui::defaultlook)
+defaultlook::defaultlook(QWidget *parent, const QStringList &args) noexcept
+    : QDialog(parent), ui(new Ui::defaultlook)
 {
     ui->setupUi(this);
     setWindowFlags(Qt::Window); // for the close, min and max buttons
@@ -94,7 +93,7 @@ defaultlook::defaultlook(QWidget *parent, const QStringList &args) :
     setup();
 }
 
-defaultlook::~defaultlook()
+defaultlook::~defaultlook() noexcept
 {
     saveSettings();
     if (tweakTheme) delete tweakTheme;
@@ -110,7 +109,8 @@ defaultlook::~defaultlook()
     delete ui;
 }
 
-void defaultlook::checkSession() {
+void defaultlook::checkSession() noexcept
+{
     QString test = runCmd(u"ps -aux |grep  -E \'plasmashell|xfce4-session|fluxbox|xfce-superkey\' |grep -v grep"_s).output;
     if (test.contains("xfce4-session"_L1)){
         isXfce = true;
@@ -126,7 +126,7 @@ void defaultlook::checkSession() {
 
 }
 // setup versious items first time program runs
-void defaultlook::setup()
+void defaultlook::setup() noexcept
 {
     QString home_path = QDir::homePath();
     //load saved settings, for now only fluxbox legacy styles checkbox
@@ -254,7 +254,7 @@ void defaultlook::pushHelp_clicked() noexcept
 }
 
 // Get version of the program
-QString defaultlook::getVersion(const QString &name)
+QString defaultlook::getVersion(const QString &name) noexcept
 {
     return runCmd("dpkg-query -f '${Version}' -W "_L1 + name).output;
 }
@@ -266,13 +266,13 @@ void defaultlook::tabWidget_currentChanged(int index) noexcept
     }
 }
 
-void defaultlook::saveSettings()
+void defaultlook::saveSettings() noexcept
 {
     QSettings settings(u"MX-Linux"_s, u"MX-Tweak"_s);
     settings.setValue("checkbox_state", ui->checkThemeFluxboxLegacyStyles->checkState());
 }
 
-void defaultlook::loadSettings()
+void defaultlook::loadSettings() noexcept
 {
     QSettings settings(u"MX-Linux"_s, u"MX-Tweak"_s);
     bool checked = settings.value("checkbox_state", false).toBool();

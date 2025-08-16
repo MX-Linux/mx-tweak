@@ -10,9 +10,8 @@
 
 using namespace Qt::Literals::StringLiterals;
 
-remove_user_theme_set::remove_user_theme_set(QWidget *parent) noexcept :
-    QDialog(parent),
-    ui(new Ui::remove_user_theme_set)
+remove_user_theme_set::remove_user_theme_set(QWidget *parent) noexcept
+    : QDialog(parent), ui(new Ui::remove_user_theme_set)
 {
     ui->setupUi(this);
     setupThemeSelector();

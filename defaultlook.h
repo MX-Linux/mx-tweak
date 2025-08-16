@@ -50,9 +50,9 @@ class defaultlook : public QDialog
     Q_OBJECT
 
 public:
-    explicit defaultlook(QWidget *parent = 0, const QStringList &args = QStringList());
-    ~defaultlook();
-    static QString getVersion(const QString &name);
+    explicit defaultlook(QWidget *parent = 0, const QStringList &args = QStringList()) noexcept;
+    ~defaultlook() noexcept;
+    static QString getVersion(const QString &name) noexcept;
     QString version;
     QString output;
     bool verbose = false;
@@ -64,8 +64,8 @@ public:
     bool isKDE = false;
     bool isSuperkey = false;
 
-    void setup();
-    void checkSession();
+    void setup() noexcept;
+    void checkSession() noexcept;
 private:
     Ui::defaultlook *ui;
     class TweakTheme *tweakTheme = nullptr;
@@ -79,8 +79,8 @@ private:
     class TweakSuperKey *tweakSuperKey = nullptr;
     class TweakMisc *tweakMisc = nullptr;
 
-    void saveSettings();
-    void loadSettings();
+    void saveSettings() noexcept;
+    void loadSettings() noexcept;
 
     void pushAbout_clicked() noexcept;
     void pushHelp_clicked() noexcept;

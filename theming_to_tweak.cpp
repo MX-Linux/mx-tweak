@@ -1,9 +1,8 @@
 #include "theming_to_tweak.h"
 #include "ui_theming_to_tweak.h"
 
-theming_to_tweak::theming_to_tweak(QWidget *parent) noexcept :
-    QDialog(parent),
-    ui(new Ui::theming_to_tweak)
+theming_to_tweak::theming_to_tweak(QWidget *parent) noexcept
+    : QDialog(parent), ui(new Ui::theming_to_tweak)
 {
     ui->setupUi(this);
     setMaximumHeight(height());
@@ -11,7 +10,7 @@ theming_to_tweak::theming_to_tweak(QWidget *parent) noexcept :
     connect(ui->buttonBox, &QDialogButtonBox::rejected, this, &theming_to_tweak::reject);
     connect(ui->lineEdit_Name, &QLineEdit::textChanged, this, [this](){
         QString text = ui->lineEdit_Name->text();
-        text.replace('\'', QString());
+        text.remove(u'\'');
         ui->lineEdit_Name->setText(text);
     });
 }
