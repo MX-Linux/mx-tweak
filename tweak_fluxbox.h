@@ -24,7 +24,7 @@ private:
         bool captions : 1;
         bool icons : 1;
         bool slit : 1;
-        bool screenBlank : 1;
+        bool screenIdle : 1;
     } flags = {};
 
     void slotSettingChanged() noexcept;
@@ -33,7 +33,7 @@ private:
     void checkFluxboxResetEverything_clicked() noexcept;
     void checkFluxboxResetMenu_clicked() noexcept;
     void checkFluxboxMenuMigrate_clicked() noexcept;
-    void spinFluxboxScreenBlankingTimeout_valueChanged(int) noexcept;
+    void spinFluxboxScreenIdleTime_valueChanged(int) noexcept;
     void comboFluxboxSlitLocation_currentIndexChanged(int index) noexcept;
     void comboFluxboxIcons_currentIndexChanged(int index) noexcept;
     void comboFluxboxCaptions_currentIndexChanged(int index) noexcept;

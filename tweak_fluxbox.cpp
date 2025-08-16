@@ -15,7 +15,7 @@ TweakFluxbox::TweakFluxbox(Ui::defaultlook *ui, bool verbose, QObject *parent) n
     connect(ui->checkFluxboxResetEverything, &QCheckBox::clicked, this, &TweakFluxbox::checkFluxboxResetEverything_clicked);
     connect(ui->checkFluxboxResetMenu, &QCheckBox::clicked, this, &TweakFluxbox::checkFluxboxResetMenu_clicked);
     connect(ui->checkFluxboxMenuMigrate, &QCheckBox::clicked, this, &TweakFluxbox::checkFluxboxMenuMigrate_clicked);
-    connect(ui->spinFluxboxScreenBlankingTimeout, &QSpinBox::valueChanged, this, &TweakFluxbox::spinFluxboxScreenBlankingTimeout_valueChanged);
+    connect(ui->spinFluxboxScreenIdleTime, &QSpinBox::valueChanged, this, &TweakFluxbox::spinFluxboxScreenIdleTime_valueChanged);
     connect(ui->comboFluxboxToolbarLocation, &QComboBox::currentIndexChanged, this, &TweakFluxbox::slotSettingChanged);
     connect(ui->checkFluxboxToolbarAutoHide, &QCheckBox::clicked, this, &TweakFluxbox::slotSettingChanged);
     connect(ui->checkFluxboxShowToolbar, &QCheckBox::clicked, this, &TweakFluxbox::slotSettingChanged);
@@ -68,9 +68,9 @@ void TweakFluxbox::setup() noexcept
     flags.captions =false;
 
     //screenblanking value;
-    QString screenblanktimeout = runCmd(u"xset q |grep timeout | awk '{print $2}'"_s).output.trimmed();
-    ui->spinFluxboxScreenBlankingTimeout->setValue(screenblanktimeout.toInt()/60);
-    ui->spinFluxboxScreenBlankingTimeout->setToolTip(u"set to 0 minutes to disable screensaver"_s);
+    const QString &itime = runCmd(u"xset q |grep timeout | awk '{print $2}'"_s).output.trimmed();
+    ui->spinFluxboxScreenIdleTime->setValue(itime.toInt()/60);
+    ui->spinFluxboxScreenIdleTime->setToolTip(u"set to 0 minutes to disable screensaver"_s);
 
     //toolbar autohide
     QString toolbarautohide = runCmd(u"grep screen0.toolbar.autoHide $HOME/.fluxbox/init"_s).output.section(u":"_s,1,1).trimmed();
@@ -269,7 +269,7 @@ void TweakFluxbox::pushFluxboxApply_clicked() noexcept
     }
 
     //screenblanking
-    if (flags.screenBlank){
+    if (flags.screenIdle){
         //comment default line if it exists
         runCmd(u"sed -i 's/^[[:blank:]]*xset[[:blank:]].*dpms.*/#&/' $HOME/.fluxbox/startup"_s);
         //add new values to fluxbox startup menu if don't exist
@@ -282,7 +282,7 @@ void TweakFluxbox::pushFluxboxApply_clicked() noexcept
             runCmd(u"sed -i '/^exec.*/i\\\\' $HOME/.fluxbox/startup"_s);
         }
         //set new value
-        int value = ui->spinFluxboxScreenBlankingTimeout->value() * 60;
+        int value = ui->spinFluxboxScreenIdleTime->value() * 60;
         runCmd(u"echo \\#\\!/bin/bash >$HOME/.config/MX-Linux/screenblanking-mxtweak"_s);
         QString cmd = "xset dpms "_L1 + QString::number(value) + ' ' + QString::number(value) + ' ' + QString::number(value);
         runCmd(cmd);
@@ -322,9 +322,9 @@ void TweakFluxbox::checkFluxboxResetEverything_clicked() noexcept
     ui->checkFluxboxResetMenu->setChecked(false);
     ui->checkFluxboxMenuMigrate->setChecked(false);
 }
-void TweakFluxbox::spinFluxboxScreenBlankingTimeout_valueChanged(int) noexcept
+void TweakFluxbox::spinFluxboxScreenIdleTime_valueChanged(int) noexcept
 {
-    flags.screenBlank = true;
+    flags.screenIdle = true;
     ui->pushFluxboxApply->setEnabled(true);
 }
 void TweakFluxbox::comboFluxboxSlitLocation_currentIndexChanged(int  /*index*/) noexcept

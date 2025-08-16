@@ -11,6 +11,7 @@ TweakThunar::TweakThunar(Ui::defaultlook *ui, bool fluxbox, QObject *parent) noe
     setup();
     if (fluxbox) {
         ui->layoutFluxboxTab->replaceWidget(ui->widgetFluxboxThunar, ui->groupThunar);
+        ui->widgetFluxboxThunar->hide();
         connect(ui->pushFluxboxApply, &QCheckBox::clicked, this, &TweakThunar::slotApplyClicked);
     } else {
         connect(ui->pushXfceApply, &QPushButton::clicked, this, &TweakThunar::slotApplyClicked);

@@ -520,17 +520,17 @@
       <layout class="QGridLayout">
        <item row="0" column="0">
         <widget class="QLabel" name="labelCompositorVBlank">
-         <property name="toolTip">
-          <string>Changing the VBlank mode may help alleviate some screen tearing issues. See Help for more information.</string>
-         </property>
-         <property name="text">
-          <string>VBlank</string>
-         </property>
          <property name="sizePolicy">
           <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
+         </property>
+         <property name="toolTip">
+          <string>Changing the VBlank mode may help alleviate some screen tearing issues. See Help for more information.</string>
+         </property>
+         <property name="text">
+          <string>VBlank</string>
          </property>
         </widget>
        </item>
@@ -978,366 +978,369 @@
        <string>Fluxbox</string>
       </attribute>
       <layout class="QGridLayout" name="layoutFluxboxTab">
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_14">
-         <property name="text">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <item row="0" column="0" rowspan="2">
+        <widget class="QGroupBox" name="groupFluxboxResetDefaults">
+         <property name="title">
+          <string>Reset Defaults</string>
          </property>
+         <layout class="QVBoxLayout">
+          <item>
+           <widget class="QCheckBox" name="checkFluxboxResetDock">
+            <property name="text">
+             <string>Reset DefaultDock</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkFluxboxResetMenu">
+            <property name="text">
+             <string>Reset Fluxbox Menu</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkFluxboxResetEverything">
+            <property name="text">
+             <string>Reset ALL mx-fluxbox settings</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="checkFluxboxMenuMigrate">
+            <property name="toolTip">
+             <string>Add new default menu items, if any, to existing fluxbox menu.</string>
+            </property>
+            <property name="text">
+             <string>Upgrade existing menu entries</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
-       <item row="0" column="3">
-        <widget class="QLabel" name="label_20">
-         <property name="text">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Desktop Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <item row="0" column="1">
+        <widget class="QGroupBox" name="groupFluxboxIcons">
+         <property name="title">
+          <string>Desktop Icons</string>
          </property>
+         <layout class="QFormLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="labelFluxboxIcons">
+            <property name="text">
+             <string>Toggle desktop icons</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="comboFluxboxIcons">
+            <item>
+             <property name="text">
+              <string>On</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Off</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="labelFluxboxCaptions">
+            <property name="text">
+             <string>Toggle icon captions</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QComboBox" name="comboFluxboxCaptions">
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <item>
+             <property name="text">
+              <string>On</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Off</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>On Hover</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
-       <item row="1" column="0" colspan="3">
-        <widget class="QCheckBox" name="checkFluxboxResetDock">
-         <property name="text">
-          <string>Reset DefaultDock</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="3">
-        <widget class="QLabel" name="label_26">
-         <property name="text">
-          <string>Toggle desktop icons</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="4">
-        <widget class="QComboBox" name="comboFluxboxIcons">
-         <item>
-          <property name="text">
-           <string>On</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Off</string>
-          </property>
-         </item>
-        </widget>
-       </item>
-       <item row="2" column="0" colspan="3">
-        <widget class="QCheckBox" name="checkFluxboxResetMenu">
-         <property name="text">
-          <string>Reset Fluxbox Menu</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="3">
-        <widget class="QLabel" name="label_25">
-         <property name="text">
-          <string>Toggle icon captions</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="4">
-        <widget class="QComboBox" name="comboFluxboxCaptions">
-         <property name="currentIndex">
-          <number>0</number>
-         </property>
-         <item>
-          <property name="text">
-           <string>On</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Off</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>On Hover</string>
-          </property>
-         </item>
-        </widget>
-       </item>
-       <item row="2" column="5">
+       <item row="0" column="2">
         <spacer>
          <property name="orientation">
           <enum>Qt::Orientation::Horizontal</enum>
          </property>
         </spacer>
        </item>
-       <item row="3" column="0" colspan="3">
-        <widget class="QCheckBox" name="checkFluxboxResetEverything">
-         <property name="text">
-          <string>Reset ALL mx-fluxbox settings</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="3" rowspan="5" colspan="3">
+       <item row="1" column="1" rowspan="3">
         <widget class="QWidget" name="widgetFluxboxThunar" native="true"/>
        </item>
-       <item row="4" column="0" colspan="3">
-        <widget class="QCheckBox" name="checkFluxboxMenuMigrate">
-         <property name="toolTip">
-          <string>Add new default menu items, if any, to existing fluxbox menu.</string>
+       <item row="2" column="0">
+        <widget class="QGroupBox" name="groupFluxboxScreensaver">
+         <property name="title">
+          <string>Screensaver</string>
          </property>
-         <property name="text">
-          <string>Upgrade existing menu entries</string>
+         <layout class="QFormLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="labelFluxboxScreenIdleTime">
+            <property name="text">
+             <string extracomment="set the time of inactivity  before screensaver screen blank occurs">Idle time (minutes)</string>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QSpinBox" name="spinFluxboxScreenIdleTime">
+            <property name="specialValueText">
+             <string extracomment="setting to 0 turns off screensaver screen blank">off</string>
+            </property>
+            <property name="maximum">
+             <number>240</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="3" column="0" rowspan="2">
+        <widget class="QGroupBox" name="groupFluxboxToolbar">
+         <property name="title">
+          <string>Toolbar Settings</string>
          </property>
+         <layout class="QGridLayout">
+          <item row="5" column="0">
+           <widget class="QLabel" name="labelFluxboxToolbarHeight">
+            <property name="text">
+             <string>Height</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="labelFluxboxToolbarLocation">
+            <property name="text">
+             <string>Placement</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1" colspan="2">
+           <widget class="QComboBox" name="comboFluxboxToolbarLocation">
+            <property name="currentText">
+             <string notr="true">TopLeft</string>
+            </property>
+            <item>
+             <property name="text">
+              <string notr="true">TopLeft</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string notr="true">TopCenter</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string notr="true">TopRight</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string notr="true">LeftTop</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string notr="true">LeftCenter</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string notr="true">LeftBottom</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string notr="true">BottomLeft</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string notr="true">BottomCenter</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string notr="true">BottomRight</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string notr="true">RightTop</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string notr="true">RightCenter</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string notr="true">RightBottom</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QCheckBox" name="checkFluxboxToolbarAutoHide">
+            <property name="text">
+             <string>Autohide</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1" colspan="2">
+           <widget class="QCheckBox" name="checkFluxboxShowToolbar">
+            <property name="text">
+             <string>Show Toolbar</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="labelFluxboxToolbarWidth">
+            <property name="text">
+             <string>Width</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QSpinBox" name="spinFluxboxToolbarWidth"/>
+          </item>
+          <item row="5" column="1">
+           <widget class="QSpinBox" name="spinFluxboxToolbarHeight"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QGroupBox" name="groupFluxboxDockSettings">
+         <property name="title">
+          <string>Dock Settings</string>
+         </property>
+         <layout class="QGridLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="labelFluxboxSlitLocation">
+            <property name="text">
+             <string>Placement</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="comboFluxboxSlitLocation">
+            <property name="currentText">
+             <string notr="true">TopLeft</string>
+            </property>
+            <item>
+             <property name="text">
+              <string notr="true">TopLeft</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string notr="true">TopCenter</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string notr="true">TopRight</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string notr="true">LeftTop</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string notr="true">LeftCenter</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string notr="true">LeftBottom</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string notr="true">BottomLeft</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string notr="true">BottomCenter</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string notr="true">BottomRight</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string notr="true">RightTop</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string notr="true">RightCenter</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string notr="true">RightBottom</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QCheckBox" name="checkFluxboxSlitAutoHide">
+            <property name="text">
+             <string>Autohide</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QPushButton" name="pushManageTint2">
+            <property name="text">
+             <string>Manage Tint2 Panel</string>
+            </property>
+            <property name="icon">
+             <iconset theme="systemtray"/>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
        <item row="5" column="0">
-        <widget class="QLabel" name="label_27">
-         <property name="text">
-          <string extracomment="screensaver screen blank settings">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Screensaver&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-         </property>
-        </widget>
-       </item>
-       <item row="6" column="0">
-        <widget class="QLabel" name="label_34">
-         <property name="text">
-          <string extracomment="set the time of inactivity  before screensaver screen blank occurs">Idle time (minutes)</string>
-         </property>
-         <property name="wordWrap">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="6" column="1">
-        <widget class="QSpinBox" name="spinFluxboxScreenBlankingTimeout">
-         <property name="specialValueText">
-          <string extracomment="setting to 0 turns off screensaver screen blank">off</string>
-         </property>
-         <property name="maximum">
-          <number>240</number>
-         </property>
-        </widget>
-       </item>
-       <item row="8" column="0">
-        <widget class="QLabel" name="label_15">
-         <property name="text">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-         </property>
-        </widget>
-       </item>
-       <item row="9" column="0">
-        <widget class="QLabel" name="label_16">
-         <property name="text">
-          <string>Placement</string>
-         </property>
-        </widget>
-       </item>
-       <item row="9" column="1">
-        <widget class="QComboBox" name="comboFluxboxToolbarLocation">
-         <property name="currentText">
-          <string notr="true">TopLeft</string>
-         </property>
-         <item>
-          <property name="text">
-           <string notr="true">TopLeft</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string notr="true">TopCenter</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string notr="true">TopRight</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string notr="true">LeftTop</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string notr="true">LeftCenter</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string notr="true">LeftBottom</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string notr="true">BottomLeft</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string notr="true">BottomCenter</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string notr="true">BottomRight</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string notr="true">RightTop</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string notr="true">RightCenter</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string notr="true">RightBottom</string>
-          </property>
-         </item>
-        </widget>
-       </item>
-       <item row="9" column="2">
-        <spacer>
-         <property name="orientation">
-          <enum>Qt::Orientation::Horizontal</enum>
-         </property>
-        </spacer>
-       </item>
-       <item row="9" column="3">
-        <widget class="QLabel" name="label_17">
-         <property name="text">
-          <string>Width</string>
-         </property>
-        </widget>
-       </item>
-       <item row="9" column="4">
-        <widget class="QSpinBox" name="spinFluxboxToolbarWidth"/>
-       </item>
-       <item row="10" column="0">
-        <widget class="QCheckBox" name="checkFluxboxToolbarAutoHide">
-         <property name="text">
-          <string>Autohide</string>
-         </property>
-        </widget>
-       </item>
-       <item row="10" column="1">
-        <widget class="QCheckBox" name="checkFluxboxShowToolbar">
-         <property name="text">
-          <string>Show Toolbar</string>
-         </property>
-        </widget>
-       </item>
-       <item row="10" column="3">
-        <widget class="QLabel" name="label_18">
-         <property name="text">
-          <string>Height</string>
-         </property>
-        </widget>
-       </item>
-       <item row="10" column="4">
-        <widget class="QSpinBox" name="spinFluxboxToolbarHeight"/>
-       </item>
-       <item row="11" column="0">
-        <widget class="QLabel" name="label_19">
-         <property name="text">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-         </property>
-        </widget>
-       </item>
-       <item row="12" column="0">
-        <widget class="QLabel" name="labelFluxboxSlitLocation">
-         <property name="text">
-          <string>Placement</string>
-         </property>
-        </widget>
-       </item>
-       <item row="12" column="1">
-        <widget class="QComboBox" name="comboFluxboxSlitLocation">
-         <property name="currentText">
-          <string notr="true">TopLeft</string>
-         </property>
-         <item>
-          <property name="text">
-           <string notr="true">TopLeft</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string notr="true">TopCenter</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string notr="true">TopRight</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string notr="true">LeftTop</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string notr="true">LeftCenter</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string notr="true">LeftBottom</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string notr="true">BottomLeft</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string notr="true">BottomCenter</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string notr="true">BottomRight</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string notr="true">RightTop</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string notr="true">RightCenter</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string notr="true">RightBottom</string>
-          </property>
-         </item>
-        </widget>
-       </item>
-       <item row="12" column="3" colspan="2">
-        <widget class="QPushButton" name="pushManageTint2">
-         <property name="text">
-          <string>Manage Tint2 Panel</string>
-         </property>
-         <property name="icon">
-          <iconset theme="systemtray"/>
-         </property>
-        </widget>
-       </item>
-       <item row="13" column="0">
-        <widget class="QCheckBox" name="checkFluxboxSlitAutoHide">
-         <property name="text">
-          <string>Autohide</string>
-         </property>
-        </widget>
-       </item>
-       <item row="14" column="0">
         <spacer>
          <property name="orientation">
           <enum>Qt::Orientation::Vertical</enum>
          </property>
         </spacer>
        </item>
-       <item row="15" column="0" colspan="6">
+       <item row="6" column="0" colspan="3">
         <widget class="QPushButton" name="pushFluxboxApply">
          <property name="text">
           <string>Apply</string>
