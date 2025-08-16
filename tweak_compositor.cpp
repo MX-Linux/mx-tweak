@@ -91,12 +91,10 @@ void TweakCompositor::checkPicomRunning() noexcept
     //check if xfce compositor is enabled
     const QString &test = runCmd(u"xfconf-query -c xfwm4 -p /general/use_compositing"_s).output;
     if (verbose) qDebug() << "etc test is "<< test;
-    int compIndex = ui->comboCompositor->findData(u"xfwm"_s);
+    int compIndex = 0; // "None"
     if (test == "true"_L1) {
         ui->pushCompositorXfwmSettings->setEnabled(true);
-    } else {
-        ui->comboCompositor->removeItem(compIndex);
-        compIndex = ui->comboCompositor->findData(QVariant());
+        compIndex = ui->comboCompositor->findData(u"xfwm"_s);
     }
     ui->comboCompositor->setCurrentIndex(compIndex);
 }
