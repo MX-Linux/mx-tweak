@@ -23,6 +23,7 @@ SOURCES += main.cpp\
     tweak_compositor.cpp \
     tweak_display.cpp \
     tweak_fluxbox.cpp \
+    tweak_misc.cpp \
     tweak_plasma.cpp \
     tweak_superkey.cpp \
     tweak_theme.cpp \
@@ -41,6 +42,7 @@ HEADERS  += defaultlook.h \
     tweak_compositor.h \
     tweak_display.h \
     tweak_fluxbox.h \
+    tweak_misc.h \
     tweak_plasma.h \
     tweak_superkey.h \
     tweak_theme.h \

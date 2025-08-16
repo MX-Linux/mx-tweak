@@ -55,73 +55,17 @@ public:
     static QString getVersion(const QString &name);
     QString version;
     QString output;
-    QString pluginidsystray;
-    QString originalhostname;
-    QString currentdisplaymanager;
     bool verbose = false;
-    bool Intel_flag{};
-    bool radeon_flag{};
-    bool amdgpuflag{};
-    bool bluetoothautoenableflag{};
-    bool bluetoothbatteryflag{};
-    bool enable_recommendsflag{};
     bool displayflag = false;
     bool themetabflag = false;
     bool othertabflag = false;
-    bool sandboxflag = false;
     bool isXfce = false;
     bool isFluxbox = false;
     bool isKDE = false;
-    bool isLightdm = false;
     bool isSuperkey = false;
-    bool liqKernelUpdateFlag = false;
-    bool debianKernelUpdateFlag = false;
-    bool graphicssetupflag=true;
-    bool kvmflag=false;
-    QString kvmconffile;
 
     void setup();
-    void setupEtc();
     void checkSession();
-    static bool checklightdm();
-
-    void changecomputername(const QString &hostname);
-    bool validatecomputername(const QString &hostname);
-    void changedisplaymanager(const QString &dm);
-    void kvm_early_switch(const QString &action, const QString &file);
-
-private slots:
-    void on_ButtonApplyEtc_clicked();
-    void on_checkBoxCSD_clicked();
-    void on_checkBoxLightdmReset_clicked();
-    void on_checkBoxMountInternalDrivesNonRoot_clicked();
-    void on_checkBoxSandbox_clicked();
-    void on_checkboxAMDtearfree_clicked();
-    void on_checkboxIntelDriver_clicked();
-    void on_checkboxRadeontearfree_clicked();
-    void on_radioSudoRoot_clicked();
-    void on_radioSudoUser_clicked();
-
-    void on_checkBoxbluetoothAutoEnable_clicked();
-
-    void on_checkBoxInstallRecommends_clicked();
-
-    void on_checkBoxDisableFluxboxMenuGeneration_clicked();
-
-    void on_checkBoxLiqKernelUpdates_clicked();
-
-    void on_checkBoxDebianKernelUpdates_clicked();
-
-    void on_checkBoxComputerName_clicked();
-
-    void on_checkBoxBluetoothBattery_clicked();
-
-    void on_checkBoxDisplayManager_clicked();
-
-    void on_checkBoxKVMVirtLoad_clicked();
-
-    void saveSettings();
-    void loadSettings();
 private:
     Ui::defaultlook *ui;
     class TweakTheme *tweakTheme = nullptr;
@@ -133,6 +77,10 @@ private:
     class TweakCompositor *tweakCompositor = nullptr;
     class TweakDisplay *tweakDisplay = nullptr;
     class TweakSuperKey *tweakSuperKey = nullptr;
+    class TweakMisc *tweakMisc = nullptr;
+
+    void saveSettings();
+    void loadSettings();
 
     void pushAbout_clicked() noexcept;
     void pushHelp_clicked() noexcept;

@@ -50,6 +50,7 @@
 #include "tweak_compositor.h"
 #include "tweak_display.h"
 #include "tweak_superkey.h"
+#include "tweak_misc.h"
 #include "defaultlook.h"
 #include "remove_user_theme_set.h"
 #include "ui_defaultlook.h"
@@ -105,11 +106,12 @@ defaultlook::~defaultlook()
     if (tweakCompositor) delete tweakCompositor;
     if (tweakDisplay) delete tweakDisplay;
     if (tweakSuperKey) delete tweakSuperKey;
+    if (tweakMisc) delete tweakMisc;
     delete ui;
 }
 
 void defaultlook::checkSession() {
-    QString test = runCmd(u"ps -aux |grep  -E \'plasmashell|xfce4-session|fluxbox|lightdm|xfce-superkey\' |grep -v grep"_s).output;
+    QString test = runCmd(u"ps -aux |grep  -E \'plasmashell|xfce4-session|fluxbox|xfce-superkey\' |grep -v grep"_s).output;
     if (test.contains("xfce4-session"_L1)){
         isXfce = true;
     } else if (test.contains("plasmashell"_L1)) {
@@ -117,22 +119,16 @@ void defaultlook::checkSession() {
     } else if (test.contains("fluxbox"_L1)){
         isFluxbox = true;
     }
-    if (test.contains("lightdm"_L1)){
-        isLightdm = true;
-    }
     if (test.contains("xfce-superkey"_L1)){
         isSuperkey = true;
     }
-    if (verbose) qDebug() << "isXfce is " << isXfce << "isKDE is " << isKDE << "isFluxbox is " << isFluxbox << "isLightdm is " << isLightdm << "isSuperkey is" << isSuperkey;
+    if (verbose) qDebug() << "isXfce is " << isXfce << "isKDE is " << isKDE << "isFluxbox is " << isFluxbox << "isSuperkey is" << isSuperkey;
 
 }
 // setup versious items first time program runs
 void defaultlook::setup()
 {
     QString home_path = QDir::homePath();
-    if (!checklightdm()) {
-        ui->checkBoxLightdmReset->hide();
-    }
     //load saved settings, for now only fluxbox legacy styles checkbox
     loadSettings();
 
@@ -159,8 +155,6 @@ void defaultlook::setup()
         } else {
             ui->tabWidget->removeTab(Tab::Compositor);
         }
-        //setup other tab;
-        setupEtc();
         if (isSuperkey && TweakSuperKey::checkSuperKey()) {
             tweakSuperKey = new TweakSuperKey(ui, verbose, this);
         } else {
@@ -188,9 +182,6 @@ void defaultlook::setup()
         if (TweakThunar::check()) {
             tweakThunar = new TweakThunar(ui, true, this);
         }
-
-        //setup other tab;
-        setupEtc();
     }
 //Panel, Theme, Compositor, Display, Config, Fluxbox, Plasma, Superkey, Others
     //setup plasma
@@ -208,9 +199,6 @@ void defaultlook::setup()
         ui->tabWidget->removeTab(Tab::Panel);
         tweakPlasma = new TweakPlasma(ui, verbose, this);
         tweakTheme = new TweakTheme(ui, verbose, TweakTheme::Plasma, this);
-        //setup other tab;
-        setupEtc();
-
     //for other non-supported desktops, show only
     } else {
         ui->groupXFCESettings->hide();
@@ -218,9 +206,9 @@ void defaultlook::setup()
         for (int i = 6; i >= 0; --i) {
             ui->tabWidget->removeTab(i);
         }
-        //setup other tab;
-        setupEtc();
     }
+
+    tweakMisc = new TweakMisc(ui, verbose, this);
 
     //copy template file to ~/.local/share/mx-tweak-data if it doesn't exist
     QDir userdir(home_path + "/.local/share/mx-tweak-data"_L1);
@@ -265,659 +253,17 @@ void defaultlook::pushHelp_clicked() noexcept
     displayDoc(url, tr("%1 Help").arg(tr("MX Tweak")));
 }
 
-bool defaultlook::checklightdm()
-{
-    QFileInfo test(u"/etc/lightdm/lightdm-gtk-greeter.conf"_s);
-    return (test.exists());
-}
-
-void defaultlook::setupEtc()
-{
-    QString home_path = QDir::homePath();
-    QString DESKTOP = runCmd(u"echo $XDG_SESSION_DESKTOP"_s).output;
-    if (verbose) qDebug() << "setupetc nocsd desktop is:" << DESKTOP;
-
-    ui->checkBoxLightdmReset->setChecked(false);
-    QString test;
-    if (!isLightdm) {
-        ui->checkBoxLightdmReset->hide();
-    }
-    if (graphicssetupflag){
-        ui->checkboxIntelDriver->hide();
-        ui->labelIntel->hide();
-        ui->checkboxAMDtearfree->hide();
-        ui->labelamdgpu->hide();
-        ui->checkboxRadeontearfree->hide();
-        ui->labelradeon->hide();
-        graphicssetupflag=false;
-    }
-
-    ui->ButtonApplyEtc->setEnabled(false);
-    if (ui->ButtonApplyEtc->icon().isNull()) {
-        ui->ButtonApplyEtc->setIcon(QIcon(":/icons/dialog-ok.svg"));
-    }
-    //set values for checkboxes
-
-    //fluxbox menu auto generation on package install, removal, and upgrades
-    if ( QFile::exists(u"/usr/bin/mxfb-menu-generator"_s)){
-        if (QFile::exists(home_path + "/.fluxbox/mxfb-menu-generator-disabled.chk"_L1)){
-            ui->checkBoxDisableFluxboxMenuGeneration->setChecked(false);
-        } else {
-            ui->checkBoxDisableFluxboxMenuGeneration->setChecked(true);
-        }
-    } else {
-        ui->checkBoxDisableFluxboxMenuGeneration->hide();
-    }
-
-    //setup udisks option
-    QFileInfo fileinfo(u"/etc/tweak-udisks.chk"_s);
-    if (fileinfo.exists()) {
-        ui->checkBoxMountInternalDrivesNonRoot->setChecked(true);
-    } else {
-        ui->checkBoxMountInternalDrivesNonRoot->setChecked(false);
-    }
-
-    //setup sudo override function
-
-    int rootest = runCmd(u"pkexec /usr/lib/mx-tweak/mx-tweak-rootcheck.sh"_s).exitCode;
-    if ( rootest == 0 ){
-        ui->radioSudoRoot->setChecked(true);
-    } else {
-        ui->radioSudoUser->setChecked(true);
-    }
-
-    //if root accout disabled, disable root authentication changes
-    test = runCmd(u"pkexec /usr/lib/mx-tweak/mx-tweak-check.sh"_s).output;
-    if (test.contains("NP"_L1)) {
-        ui->radioSudoRoot->setEnabled(false);
-        ui->radioSudoUser->setEnabled(false);
-        ui->labelSudo->setEnabled(false);
-    }
-
-    //setup user namespaces option (99-sandbox-mx.conf)
-    sandboxflag = false;
-    QString userns_clone = runCmd(u"/usr/sbin/sysctl -n kernel.unprivileged_userns_clone"_s).output;
-    //QString yama_ptrace = runCmd("/usr/sbin/sysctl -n kernel.yama.ptrace_scope").output;
-    if (verbose) qDebug() << "userns_clone is: " << userns_clone;
-    if (userns_clone == "0"_L1 || userns_clone == "1"_L1) {
-        //if (userns_clone == "1"_L1 && yama_ptrace == "1"_L1) {
-        ui->checkBoxSandbox->setChecked(userns_clone == "1"_L1);
-    } else {
-        ui->checkBoxSandbox->hide();
-    }
-
-    //setup bluetooth auto enable, hide box if config file doesn't exist
-    if (QFile::exists(u"/etc/bluetooth/main.conf"_s)){
-        bluetoothautoenableflag = false;
-        test = runCmd(u"grep ^AutoEnable /etc/bluetooth/main.conf"_s).output;
-        test = test.section('=',1,1);
-        if ( test == "true"_L1){
-            ui->checkBoxbluetoothAutoEnable->setChecked(true);
-        } else {
-            ui->checkBoxbluetoothAutoEnable->setChecked(false);
-        }
-    } else {
-        ui->checkBoxbluetoothAutoEnable->hide();
-    }
-
-    //setup bluetooth battery info
-    if (QFile::exists(u"/etc/bluetooth/main.conf"_s)){
-        bluetoothbatteryflag = false;
-        test = runCmd(u"grep -E '^(#\\s*)?Experimental' /etc/bluetooth/main.conf"_s).output;
-        if (verbose) qDebug() << "bluetooth battery " << test;
-        if (test.contains('#')){
-            ui->checkBoxBluetoothBattery->setChecked(false);
-        } else if ( test.contains("true"_L1) ){
-            ui->checkBoxBluetoothBattery->setChecked(true);
-        } else if ( test.contains("false"_L1)) {
-            ui->checkBoxBluetoothBattery->setChecked(false);
-        }
-    } else {
-        ui->checkBoxBluetoothBattery->hide();
-    }
-
-    //setup early KVM module loading
-    test = runCmd(u"LANG=C grep \"enable_virt_at_load=0\" /etc/modprobe.d/* | grep kvm"_s).output;
-    if (!test.isEmpty()){
-        if (!test.section(':',1,1).startsWith('#')){
-        ui->checkBoxKVMVirtLoad->setChecked(true);
-        kvmconffile=test.section(':',0,0);
-        if (verbose) qDebug() << "kvm conf file is " << kvmconffile;
-        } else {
-            ui->checkBoxKVMVirtLoad->setChecked(false);
-            kvmconffile = "/etc/modprobe.d/kvm.conf"_L1;
-        }
-    } else {
-        ui->checkBoxKVMVirtLoad->setChecked(false);
-        kvmconffile = "/etc/modprobe.d/kvm.conf"_L1;
-    }
-    //set flag false so future changes processed, but not an unchanged checkbox
-    kvmflag=false;
-
-    //setup apt install_recommends
-    //enable checkbox only if Install-Recommends is set to 1. default is 0 or no if no existanct apt.conf
-    if (QFile::exists(u"/etc/apt/apt.conf"_s)){
-        test = runCmd(u"grep Install-Recommends /etc/apt/apt.conf"_s).output;
-        if ( test.contains('1')){
-            ui->checkBoxInstallRecommends->setChecked(true);
-        } else {
-            ui->checkBoxInstallRecommends->setChecked(false);
-        }
-    } else {
-        ui->checkBoxInstallRecommends->setChecked(false);
-    }
-
-    //setup kernel auto updates
-
-    if (runCmd(u"LC_ALL=C dpkg --status linux-image-amd64 linux-image-686 linux-image-686-pae 2>/dev/null |grep 'ok installed'"_s).output.isEmpty()){
-        ui->checkBoxDebianKernelUpdates->setChecked(false);
-        ui->checkBoxDebianKernelUpdates->hide();
-    } else {
-        ui->checkBoxDebianKernelUpdates->setChecked(true);
-    }
-    if (runCmd(u"LC_ALL=C dpkg --status linux-image-liquorix-amd64 2>/dev/null |grep 'ok installed'"_s).output.isEmpty()){
-        ui->checkBoxLiqKernelUpdates->setChecked(false);
-        ui->checkBoxLiqKernelUpdates->hide();
-    } else {
-        ui->checkBoxLiqKernelUpdates->setChecked(true);
-    }
-    QString autoupdate = runCmd(u"apt-mark showhold"_s).output;
-    if ( autoupdate.contains("linux-image-686"_L1) || autoupdate.contains("linux-image-amd64"_L1) ){
-        ui->checkBoxDebianKernelUpdates->setChecked(false);
-    }
-
-    if ( autoupdate.contains("linux-image-liquorix-amd64"_L1) ){
-        ui->checkBoxLiqKernelUpdates->setChecked(false);
-    }
-    debianKernelUpdateFlag = false;
-    liqKernelUpdateFlag = false;
-
-    //hostname
-    ui->checkBoxComputerName->setChecked(false);
-    ui->lineEditHostname->setEnabled(false);
-    originalhostname = runCmd(u"hostname"_s).output;
-    ui->lineEditHostname->setText(originalhostname);
-
-    //setup NOCSD GTK3 option
-    if (!QFileInfo::exists(u"/usr/bin/gtk3-nocsd"_s)) {
-        if (verbose) qDebug() << "gtk3-nocsd not found";
-        ui->checkBoxCSD->hide();
-    } else {
-        if (verbose) qDebug() << "gtk3-nocsd found";
-    }
-    if (verbose) {
-        qDebug() << "home path nocsd is"_L1 << home_path + "/.config/MX-Linux/nocsd/"_L1 + DESKTOP;
-    }
-    if (QFileInfo::exists(home_path + "/.config/MX-Linux/nocsd/"_L1 + DESKTOP)) {
-        ui->checkBoxCSD->setChecked(false);
-    } else {
-        ui->checkBoxCSD->setChecked(true);
-    }
-
-    Intel_flag = false;
-    amdgpuflag = false;
-    radeon_flag =false;
-    enable_recommendsflag = false;
-    //setup Intel checkbox
-
-    QString partcheck = runCmd(uR"(for i in $(lspci -n | awk '{print $2,$1}' | grep -E '^(0300|0302|0380)' | cut -f2 -d\ ); do lspci -kns "$i"; done)"_s).output;
-    if (verbose) qDebug()<< "partcheck = " << partcheck;
-
-    if ( partcheck.contains("i915"_L1)) {
-        ui->checkboxIntelDriver->show();
-        ui->labelIntel->show();
-    }
-
-    if ( partcheck.contains("Kernel driver in use: amdgpu"_L1)) {
-        ui->checkboxAMDtearfree->show();
-        ui->labelamdgpu->show();
-    }
-
-    if ( partcheck.contains("Kernel driver in use: radeon"_L1)) {
-        ui->checkboxRadeontearfree->show();
-        ui->labelradeon->show();
-    }
-
-    QFileInfo intelfile(u"/etc/X11/xorg.conf.d/20-intel.conf"_s);
-    ui->checkboxIntelDriver->setChecked(intelfile.exists());
-
-    QFileInfo amdfile(u"/etc/X11/xorg.conf.d/20-amd.conf"_s);
-    ui->checkboxAMDtearfree->setChecked(amdfile.exists());
-
-    QFileInfo radeonfile(u"/etc/X11/xorg.conf.d/20-radeon.conf"_s);
-    ui->checkboxRadeontearfree->setChecked(radeonfile.exists());
-
-    //setup display manager combo box
-    QString displaymanagers=runCmd(u"dpkg --list sddm gdm3 lightdm slim slimski xdm wdm lxdm nodm 2>/dev/null |grep ii | awk '{print $2}'"_s).output;
-    QStringList displaymanagerlist = displaymanagers.split(u"\n"_s);
-    if ( displaymanagerlist.count() > 1) {
-        //only add items once
-        if (ui->comboBoxDisplayManager->count() == 0) {
-            ui->comboBoxDisplayManager->addItems(displaymanagerlist);
-            //set default selection to current display manager
-            //read from /etc/X11/default-display-manager if it exits, else use running dm
-            QFile defaultdisplay(u"/etc/X11/default-display-manager"_s);
-            if (defaultdisplay.exists()){
-                if (defaultdisplay.open(QIODevice::ReadOnly | QIODevice::Text)){
-                    QTextStream in(&defaultdisplay);
-                    currentdisplaymanager=in.readAll().section('/',3,3).remove('\n');
-                    defaultdisplay.close();
-                }
-            } else {
-                currentdisplaymanager = runCmd(u"ps -aux |grep  -E '/usr/.*bin/sddm|/usr/.*bin*/gdm3|.*bin*/lightdm|.*bin*/slim|.*bin*/slimski|.*bin*/xdm.*bin*/wdm.*bin*/lxdm.*bin*/nodm' |grep -v grep | awk '{print $11}'"_s).output.section('/', 3,3);
-            }
-            if (verbose) qDebug() << "current display manager is " << currentdisplaymanager;
-            ui->comboBoxDisplayManager->setCurrentText(currentdisplaymanager);
-        }
-    } else {
-        ui->checkBoxDisplayManager->hide();
-        ui->comboBoxDisplayManager->hide();
-    }
-}
-
-void defaultlook::on_ButtonApplyEtc_clicked()
-{
-    QString intel_option;
-    QString amd_option;
-    QString radeon_option;
-    QString lightdm_option;
-    QString bluetooth_option;
-    QString recommends_option;
-    QString debian_kernel_updates_option;
-    QString liq_kernel_updates_option;
-    QString DESKTOP = runCmd(u"echo $XDG_SESSION_DESKTOP"_s).output;
-    QString home_path = QDir::homePath();
-    ui->ButtonApplyEtc->setEnabled(false);
-
-    intel_option.clear();
-    lightdm_option.clear();
-    bluetooth_option.clear();
-    recommends_option.clear();
-
-    //deal with udisks option
-    QFileInfo fileinfo(u"/etc/tweak-udisks.chk"_s);
-    int sudooverride = runCmd(u"pkexec /usr/lib/mx-tweak/mx-tweak-rootcheck.sh"_s).exitCode;
-    QString udisks_option;
-    QString sudo_override_option;
-    QString user_name_space_override_option;
-    udisks_option.clear();
-
-    if (verbose) qDebug() << "applyetc DESKTOP is " << DESKTOP;
-    if (verbose) qDebug() << "home path applyetc is " << home_path + "/.config/MX-Linux/nocsd/"_L1 + DESKTOP;
-    if (ui->checkBoxCSD->isChecked()) {
-        if ( QFileInfo::exists(home_path + "/.config/MX-Linux/nocsd/"_L1 + DESKTOP)) {
-            runCmd("rm "_L1 + home_path + "/.config/MX-Linux/nocsd/"_L1 + DESKTOP);
-        }
-    } else {
-        int test = runCmd("mkdir -p "_L1 + home_path + "/.config/MX-Linux/nocsd/"_L1).exitCode;
-        if ( test != 0 ) {
-            if (verbose) qDebug() << "could not make directory";
-        }
-        test = runCmd("touch "_L1 + home_path + "/.config/MX-Linux/nocsd/"_L1 + DESKTOP ).exitCode;
-        if ( test != 0 ) {
-            if (verbose) qDebug() << "could not write nocsd desktop file";
-        }
-    }
-    //fluxbox menu autogeneration
-    if (QFile::exists(u"/usr/bin/mxfb-menu-generator"_s)){
-        if (! ui->checkBoxDisableFluxboxMenuGeneration->isChecked()){
-            runCmd("echo '#this file is used to disable automatic updating of the All Apps menu' > "_L1 + home_path + "/.fluxbox/mxfb-menu-generator-disabled.chk"_L1);
-        } else {
-            runCmd("rm "_L1 + home_path + "/.fluxbox/mxfb-menu-generator-disabled.chk"_L1);
-        }
-    }
-
-    //internal drive mounting for non root users
-    if (ui->checkBoxMountInternalDrivesNonRoot->isChecked()) {
-        if (fileinfo.exists()) {
-            if (verbose) qDebug() << "no change to internal drive mount settings";
-        } else {
-            udisks_option = u"enable_user_mount"_s;
-        }
-    } else {
-        if (fileinfo.exists()) {
-            udisks_option = u"disable_user_mount"_s;
-        } else {
-            if (verbose) qDebug() << "no change to internal drive mount settings";
-        }
-    }
-
-    //reset lightdm greeter config
-    if (ui->checkBoxLightdmReset->isChecked()) {
-        lightdm_option = u"lightdm_reset"_s;
-    }
-
-    //graphics driver overrides
-
-    if ( Intel_flag ) {
-        QFileInfo check_intel(u"/etc/X11/xorg.conf.d/20-intel.conf"_s);
-        if ( check_intel.exists()) {
-            //backup existing 20-intel.conf file to home folder
-            runCmd(u"cp /etc/X11/xorg.conf.d/20-intel.conf /home/$USER/20-intel.conf.$(date +%Y%m%H%M%S)"_s);
-        }
-        if (ui->checkboxIntelDriver->isChecked()) {
-            //copy mx-tweak version to xorg.conf.d directory
-            intel_option = u"enable_intel"_s;
-        } else {
-            //remove 20-intel.conf
-            intel_option = u"disable_intel"_s;
-        }
-    }
-
-    if ( amdgpuflag ) {
-        QFileInfo check_amd(u"/etc/X11/xorg.conf.d/20-amd.conf"_s);
-        if ( check_amd.exists()) {
-            //backup existing 20-amd.conf file to home folder
-            runCmd(u"cp /etc/X11/xorg.conf.d/20-amd.conf /home/$USER/20-amd.conf.$(date +%Y%m%H%M%S)"_s);
-        }
-        if (ui->checkboxAMDtearfree->isChecked()) {
-            //copy mx-tweak version to xorg.conf.d directory
-            amd_option = u"enable_amd"_s;
-        } else {
-            //remove 20-amd.conf
-            amd_option = u"disable_amd"_s;
-        }
-    }
-
-    if ( radeon_flag ) {
-        QFileInfo check_radeon(u"/etc/X11/xorg.conf.d/20-radeon.conf"_s);
-        if ( check_radeon.exists()) {
-            //backup existing 20-radeon.conf file to home folder
-            runCmd(u"cp /etc/X11/xorg.conf.d/20-radeon.conf /home/$USER/20-radeon.conf.$(date +%Y%m%H%M%S)"_s);
-        }
-        if (ui->checkboxRadeontearfree->isChecked()) {
-            //copy mx-tweak version to xorg.conf.d directory
-            radeon_option = u"enable_radeon"_s;
-        } else {
-            //remove 20-radeon.conf
-            radeon_option = u"disable_radeon"_s;
-        }
-    }
-
-    //bluetooth auto enable
-    if (bluetoothautoenableflag) {
-        if (ui->checkBoxbluetoothAutoEnable->isChecked()) {
-            bluetooth_option = u"enable_bluetooth"_s;
-            //blueman
-            if (QFile::exists(u"/usr/bin/blueman"_s)) {
-                runCmd(u"gsettings set org.blueman.plugins.powermanager auto-power-on true"_s);
-            }
-            //kde bluedevil
-            if (QFile::exists(u"/usr/bin/kwriteconfig5"_s)) {
-                runCmd(u"kwriteconfig5 --file kded5rc --group Module-bluedevil --key autoload true"_s);
-            }
-        } else {
-            bluetooth_option = u"disable_bluetooth"_s;
-            //blueman
-            if (QFile::exists(u"/usr/bin/blueman"_s)) {
-                runCmd(u"gsettings set org.blueman.plugins.powermanager auto-power-on false"_s);
-            }
-            //kde bluedevil
-            if (QFile::exists(u"/usr/bin/kwriteconfig5"_s)) {
-                runCmd(u"kwriteconfig5 --file kded5rc --group Module-bluedevil --key autoload false"_s);
-            }
-
-        }
-    }
-
-    //bluetooth battery info
-    if (bluetoothbatteryflag){
-        if (ui->checkBoxBluetoothBattery->isChecked()){
-            runCmd(u"pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh bluetooth_battery true"_s);
-        } else {
-            runCmd(u"pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh bluetooth_battery false"_s);
-        }
-    }
-
-    //install recommends option
-    if ( enable_recommendsflag ){
-        if ( ui->checkBoxInstallRecommends->isChecked()){
-            recommends_option = "install_recommends"_L1;
-        } else
-            recommends_option = "noinstall_recommends"_L1;
-    }
-
-    //deal with sudo override
-
-    if (ui->radioSudoUser->isChecked()) {
-        if (sudooverride == 0) {
-            sudo_override_option = u"enable_sudo_override"_s;
-        } else {
-            if (verbose) qDebug() << "no change to admin password settings";
-        }
-    } else {
-        if (sudooverride == 0) {
-            if (verbose) qDebug() << "no change to admin password settings";
-        } else {
-            sudo_override_option = u"disable_sudo_override"_s;
-        }
-    }
-
-    //deal with user namespace override
-    if (sandboxflag) {
-        if (ui->checkBoxSandbox->isChecked()) {
-            user_name_space_override_option = u"enable_sandbox"_s;
-        } else {
-            user_name_space_override_option = u"disable_sandbox"_s;
-        }
-    }
-
-    //debian kernel updates
-    if (debianKernelUpdateFlag){
-        if ( ui->checkBoxDebianKernelUpdates->isChecked()){
-            debian_kernel_updates_option = "unhold_debian_kernel_updates"_L1;
-            qDebug() << "debian update option" << debian_kernel_updates_option;
-        } else {
-            debian_kernel_updates_option = "hold_debian_kernel_updates"_L1;
-        }
-    }
-    //liquorix kernel updates
-    if (liqKernelUpdateFlag){
-        if (ui->checkBoxLiqKernelUpdates->isChecked()){
-            liq_kernel_updates_option = "unhold_liquorix_kernel_updates"_L1;
-        } else {
-            liq_kernel_updates_option = "hold_liquorix_kernel_updates"_L1;
-        }
-    }
-
-    //hostname setting
-    //if name doesn't validate, don't make any changes to any options, and don't reset gui.
-    if (ui->checkBoxComputerName->isChecked()){
-        if (validatecomputername(ui->lineEditHostname->text())){
-            changecomputername(ui->lineEditHostname->text());
-        } else {
-            return;
-        }
-    }
-    // display manager change
-    if (ui->checkBoxDisplayManager->isChecked()){
-        //don't do anything if selection is still default
-        if (ui->comboBoxDisplayManager->currentText() != currentdisplaymanager){
-            changedisplaymanager(ui->comboBoxDisplayManager->currentText());
-        }
-        ui->checkBoxDisplayManager->setChecked(false);
-    }
-
-    //kvm_early_switch
-    if (kvmflag){
-        if (ui->checkBoxKVMVirtLoad->isChecked()){
-           kvm_early_switch(u"on"_s, kvmconffile);
-        } else {
-            kvm_early_switch(u"off"_s, kvmconffile);
-        }
-    }
-
-    //checkbox options
-    if ( ! udisks_option.isEmpty() || ! sudo_override_option.isEmpty() || ! user_name_space_override_option.isEmpty() || ! intel_option.isEmpty() || ! lightdm_option.isEmpty() || ! amd_option.isEmpty() || ! radeon_option.isEmpty() || !bluetooth_option.isEmpty() || !recommends_option.isEmpty() || !debian_kernel_updates_option.isEmpty() || !liq_kernel_updates_option.isEmpty()){
-        runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh "_L1 + udisks_option + ' ' + sudo_override_option + ' ' + user_name_space_override_option + ' ' + intel_option + ' ' + amd_option + ' ' + radeon_option + ' ' + bluetooth_option + ' ' + recommends_option + ' ' + lightdm_option + ' ' + debian_kernel_updates_option + ' ' + liq_kernel_updates_option);
-
-    }
-    //reset gui
-    setupEtc();
-}
-
-void defaultlook::changecomputername(const QString &hostname)
-{
-    runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh hostname "_L1 + hostname);
-}
-
-void defaultlook::kvm_early_switch(const QString &action, const QString &file)
-{
-    if (verbose) qDebug() << "kvm flag is " << kvmflag << "action is " << action << " file is " << file;
-    runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh kvm_early_switch "_L1 + action + ' ' + file);
-}
-
-void defaultlook::changedisplaymanager(const QString &dm)
-{
-    runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh displaymanager "_L1 + dm);
-}
-
-bool defaultlook::validatecomputername(const QString &hostname)
-{
-    // see if name is reasonable
-    if (hostname.isEmpty()) {
-        QMessageBox::critical(this, this->windowTitle(), tr("Please enter a computer name.", "question to enter a name for the computer hostname"));
-        return false;
-    } else if (hostname.contains(QRegularExpression(u"[^0-9a-zA-Z-.]|^[.-]|[.-]$|\\.\\."_s))) {
-        QMessageBox::critical(this, this->windowTitle(),
-            tr("Sorry, your computer name contains invalid characters.\nYou'll have to select a different\nname before proceeding.", "unacceptable characters are found in hostname, pick a new name"));
-        return false;
-    }
-    return true;
-}
-
-void defaultlook::on_checkBoxMountInternalDrivesNonRoot_clicked()
-{
-    ui->ButtonApplyEtc->setEnabled(true);
-}
-
-void defaultlook::on_radioSudoUser_clicked()
-{
-    ui->ButtonApplyEtc->setEnabled(true);
-}
-void defaultlook::on_radioSudoRoot_clicked()
-{
-    ui->ButtonApplyEtc->setEnabled(true);
-}
-
-void defaultlook::on_checkBoxLightdmReset_clicked()
-{
-    ui->ButtonApplyEtc->setEnabled(true);
-}
-
-void defaultlook::on_checkboxIntelDriver_clicked()
-{
-    //toggle flag for action.  this way, if box was checked initially, the action won't take place again.
-    Intel_flag = true;
-    ui->ButtonApplyEtc->setEnabled(true);
-}
-
-void defaultlook::on_checkboxAMDtearfree_clicked()
-{
-    //toggle flag for action.  this way, if box was checked initially, the action won't take place again.
-    amdgpuflag = true;
-    ui->ButtonApplyEtc->setEnabled(true);
-}
-
-void defaultlook::on_checkboxRadeontearfree_clicked()
-{
-    //toggle flag for action.  this way, if box was checked initially, the action won't take place again.
-    radeon_flag = true;
-    ui->ButtonApplyEtc->setEnabled(true);
-}
-
 // Get version of the program
 QString defaultlook::getVersion(const QString &name)
 {
     return runCmd("dpkg-query -f '${Version}' -W "_L1 + name).output;
 }
 
-void defaultlook::on_checkBoxSandbox_clicked()
-{
-    ui->ButtonApplyEtc->setEnabled(true);
-    sandboxflag = true;
-}
-
-
 void defaultlook::tabWidget_currentChanged(int index) noexcept
 {
     if (index == Tab::Display && tweakDisplay == nullptr) {
         tweakDisplay = new TweakDisplay(ui, verbose, this);
     }
-}
-
-void defaultlook::on_checkBoxCSD_clicked()
-{
-    ui->ButtonApplyEtc->setEnabled(true);
-}
-
-void defaultlook::on_checkBoxbluetoothAutoEnable_clicked()
-{
-    ui->ButtonApplyEtc->setEnabled(true);
-    bluetoothautoenableflag = !bluetoothautoenableflag;
-    if (verbose) qDebug() << "bluetooth flag is " << bluetoothautoenableflag;
-}
-
-void defaultlook::on_checkBoxInstallRecommends_clicked()
-{
-    ui->ButtonApplyEtc->setEnabled(true);
-    enable_recommendsflag = true;
-}
-
-void defaultlook::on_checkBoxDisableFluxboxMenuGeneration_clicked()
-{
-    ui->ButtonApplyEtc->setEnabled(true);
-}
-
-void defaultlook::on_checkBoxLiqKernelUpdates_clicked()
-{
-    // set action flag, actions only happen if flag is true when apply is clicked.
-    if (liqKernelUpdateFlag){
-        liqKernelUpdateFlag = false;
-    } else {
-        liqKernelUpdateFlag = true;
-    }
-    ui->ButtonApplyEtc->setEnabled(true);
-}
-
-void defaultlook::on_checkBoxDebianKernelUpdates_clicked()
-{
-    // set action flag, actions only happen if flag is true when apply is clicked.
-    if (debianKernelUpdateFlag){
-        liqKernelUpdateFlag = false;
-    } else {
-        debianKernelUpdateFlag = true;
-    }
-    ui->ButtonApplyEtc->setEnabled(true);
-}
-
-void defaultlook::on_checkBoxComputerName_clicked()
-{
-    ui->ButtonApplyEtc->setEnabled(true);
-    if (ui->checkBoxComputerName->isChecked()){
-        ui->lineEditHostname->setEnabled(true);
-    } else {
-        ui->lineEditHostname->setEnabled(false);
-    }
-}
-
-void defaultlook::on_checkBoxBluetoothBattery_clicked()
-{
-    ui->ButtonApplyEtc->setEnabled(true);
-    bluetoothbatteryflag = !bluetoothbatteryflag;
-    if (verbose) qDebug() << "bluetooth battery flag is " << bluetoothbatteryflag;
-}
-
-
-void defaultlook::on_checkBoxDisplayManager_clicked()
-{
-    ui->ButtonApplyEtc->setEnabled(true);
-}
-
-void defaultlook::on_checkBoxKVMVirtLoad_clicked()
-{
-    ui->ButtonApplyEtc->setEnabled(true);
-    kvmflag = !kvmflag;
 }
 
 void defaultlook::saveSettings()
