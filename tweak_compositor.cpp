@@ -23,7 +23,7 @@ TweakCompositor::TweakCompositor(Ui::defaultlook *ui, bool verbose, QObject *par
 
 bool TweakCompositor::check() noexcept
 {
-    return (runCmd("ps -aux |grep -v grep |grep -q compiz").exitCode != 0);
+    return (runCmd(u"ps -aux |grep -v grep |grep -q compiz"_s).exitCode != 0);
 }
 void TweakCompositor::setup() noexcept
 {
@@ -103,7 +103,7 @@ void TweakCompositor::checkPicomRunning() noexcept
 
 void TweakCompositor::checkAptNotifierRunning() const noexcept
 {
-    if (runCmd("ps -aux |grep -v grep| grep python |grep --quiet apt-notifier").exitCode == 0) {
+    if (runCmd(u"ps -aux |grep -v grep| grep python |grep --quiet apt-notifier"_s).exitCode == 0) {
         if (verbose) qDebug() << "apt-notifier is running";
         //check if icon is supposed to be hidden by user
         if (runCmd(u"cat /home/$USER/.config/apt-notifierrc |grep --quiet DontShowIcon"_s).exitCode == 0) {
