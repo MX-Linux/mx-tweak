@@ -1321,7 +1321,7 @@
            </widget>
           </item>
           <item row="1" column="1">
-           <widget class="QPushButton" name="pushManageTint2">
+           <widget class="QPushButton" name="pushFluxboxManageTint2">
             <property name="text">
              <string>Manage Tint2 Panel</string>
             </property>

@@ -35,6 +35,7 @@ private:
     void checkFluxboxMenuMigrate_clicked() noexcept;
     void spinFluxboxScreenIdleTime_valueChanged(int) noexcept;
     void comboFluxboxSlitLocation_currentIndexChanged(int index) noexcept;
+    void pushFluxboxManageTint2_clicked() noexcept;
     void comboFluxboxIcons_currentIndexChanged(int index) noexcept;
     void comboFluxboxCaptions_currentIndexChanged(int index) noexcept;
 

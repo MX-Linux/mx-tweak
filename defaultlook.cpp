@@ -191,8 +191,6 @@ void defaultlook::setup()
 
         //setup other tab;
         setupEtc();
-
-        connect(ui->pushManageTint2, &QPushButton::clicked, this, &defaultlook::pushManageTint2_clicked);
     }
 //Panel, Theme, Compositor, Display, Config, Fluxbox, Plasma, Superkey, Others
     //setup plasma
@@ -858,14 +856,6 @@ void defaultlook::on_checkBoxbluetoothAutoEnable_clicked()
     ui->ButtonApplyEtc->setEnabled(true);
     bluetoothautoenableflag = !bluetoothautoenableflag;
     if (verbose) qDebug() << "bluetooth flag is " << bluetoothautoenableflag;
-}
-
-void defaultlook::pushManageTint2_clicked() noexcept
-{
-    this->hide();
-    runCmd(u"/usr/bin/mxfb-tint2-manager"_s);
-    this->show();
-
 }
 
 void defaultlook::on_checkBoxInstallRecommends_clicked()

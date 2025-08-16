@@ -137,8 +137,6 @@ private:
     void pushAbout_clicked() noexcept;
     void pushHelp_clicked() noexcept;
 
-    void pushManageTint2_clicked() noexcept;
-
     void tabWidget_currentChanged(int index) noexcept;
 };
 

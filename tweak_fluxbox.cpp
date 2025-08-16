@@ -23,6 +23,7 @@ TweakFluxbox::TweakFluxbox(Ui::defaultlook *ui, bool verbose, QObject *parent) n
     connect(ui->spinFluxboxToolbarHeight, &QSpinBox::valueChanged, this, &TweakFluxbox::slotSettingChanged);
     connect(ui->comboFluxboxSlitLocation, &QComboBox::currentIndexChanged, this, &TweakFluxbox::comboFluxboxSlitLocation_currentIndexChanged);
     connect(ui->checkFluxboxSlitAutoHide, &QCheckBox::clicked, this, &TweakFluxbox::slotSettingChanged);
+    connect(ui->pushFluxboxManageTint2, &QPushButton::clicked, this, &TweakFluxbox::pushFluxboxManageTint2_clicked);
     connect(ui->comboFluxboxIcons, &QComboBox::currentIndexChanged, this, &TweakFluxbox::comboFluxboxIcons_currentIndexChanged);
     connect(ui->comboFluxboxCaptions, &QComboBox::currentIndexChanged, this, &TweakFluxbox::comboFluxboxCaptions_currentIndexChanged);
 }
@@ -331,6 +332,12 @@ void TweakFluxbox::comboFluxboxSlitLocation_currentIndexChanged(int  /*index*/) 
 {
     ui->pushFluxboxApply->setEnabled(true);
     flags.slit = true;
+}
+void TweakFluxbox::pushFluxboxManageTint2_clicked() noexcept
+{
+    ui->tabWidget->setEnabled(false);
+    runCmd(u"/usr/bin/mxfb-tint2-manager"_s);
+    ui->tabWidget->setEnabled(true);
 }
 void TweakFluxbox::comboFluxboxIcons_currentIndexChanged(int  /*index*/) noexcept
 {
