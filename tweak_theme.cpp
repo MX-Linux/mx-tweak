@@ -56,8 +56,8 @@ void TweakTheme::setup() noexcept
     }
 
     if (desktop==Plasma) {
-        ui->labelThemeWidget->setText("<b>"_L1 + tr("Plasma Widget Themes","theme style of the kde plasma widgets") + "</b>"_L1);
-        ui->labelThemeWindow->setText("<b>"_L1 + tr("Color Schemes", "plasma widget color schemes") + "</b>"_L1);
+        ui->labelThemeWidget->setText(tr("Plasma Widget Themes","theme style of the kde plasma widgets"));
+        ui->labelThemeWindow->setText(tr("Color Schemes", "plasma widget color schemes"));
         ui->groupTheme->setTitle(tr("Plasma Look & Feel Global Themes", "plasma global themes"));
         populateThemeLists(u"plasma"_s);
         populateThemeLists(u"colorscheme"_s);

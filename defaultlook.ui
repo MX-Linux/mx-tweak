@@ -263,14 +263,14 @@
           <item row="0" column="0">
            <widget class="QLabel" name="labelThemeWidget">
             <property name="text">
-             <string extracomment="theme an application will get">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string extracomment="theme an application will get">Application</string>
             </property>
            </widget>
           </item>
           <item row="0" column="1">
            <widget class="QLabel" name="labelThemeWindow">
             <property name="text">
-             <string extracomment="theme a window manager border will get">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Manager&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string extracomment="theme a window manager border will get">Window Manager</string>
             </property>
            </widget>
           </item>
@@ -290,14 +290,14 @@
           <item row="2" column="0">
            <widget class="QLabel" name="labelThemeIcons">
             <property name="text">
-             <string extracomment="icon theme">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string extracomment="icon theme">Icons</string>
             </property>
            </widget>
           </item>
           <item row="2" column="1" colspan="3">
            <widget class="QLabel" name="labelThemeCursors">
             <property name="text">
-             <string extracomment="cursor theme">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Cursors&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string extracomment="cursor theme">Cursors</string>
             </property>
            </widget>
           </item>
