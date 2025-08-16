@@ -1,14 +1,14 @@
 #include <QMessageBox>
 #include <QDir>
 #include <QFile>
-#include "ui_defaultlook.h"
+#include "ui_tweak.h"
 #include "cmd.h"
 #include "window_buttons.h"
 #include "tweak_xfce.h"
 
 using namespace Qt::Literals::StringLiterals;
 
-TweakXfce::TweakXfce(Ui::defaultlook *ui, bool verbose, QObject *parent) noexcept
+TweakXfce::TweakXfce(Ui::Tweak *ui, bool verbose, QObject *parent) noexcept
     : QObject{parent}, ui{ui}, verbose{verbose}
 {
     setup();

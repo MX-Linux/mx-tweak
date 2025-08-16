@@ -1,13 +1,13 @@
 #include <QFileInfo>
 #include <QDir>
 #include <QMessageBox>
-#include "ui_defaultlook.h"
+#include "ui_tweak.h"
 #include "cmd.h"
 #include "tweak_misc.h"
 
 using namespace Qt::Literals::StringLiterals;
 
-TweakMisc::TweakMisc(Ui::defaultlook *ui, bool verbose, QObject *parent) noexcept
+TweakMisc::TweakMisc(Ui::Tweak *ui, bool verbose, QObject *parent) noexcept
     : QObject(parent), ui(ui), verbose(verbose)
 {
     if (!QFileInfo::exists(u"/usr/sbin/lightdm"_s)) {

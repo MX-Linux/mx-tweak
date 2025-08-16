@@ -4,7 +4,7 @@
 #include <QObject>
 
 namespace Ui {
-class defaultlook;
+class Tweak;
 }
 
 class TweakDisplay : public QObject
@@ -12,11 +12,11 @@ class TweakDisplay : public QObject
     Q_OBJECT
 public:
     TweakDisplay() = delete;
-    TweakDisplay(Ui::defaultlook *ui, bool verbose, QObject *parent = nullptr) noexcept;
+    TweakDisplay(Ui::Tweak *ui, bool verbose, QObject *parent = nullptr) noexcept;
     void setup() noexcept;
 
 private:
-    Ui::defaultlook *ui;
+    Ui::Tweak *ui;
 
     bool verbose;
 

@@ -3,7 +3,7 @@
 #include <QDir>
 #include <QDirIterator>
 #include <QFile>
-#include "ui_defaultlook.h"
+#include "ui_tweak.h"
 #include "cmd.h"
 #include "theming_to_tweak.h"
 #include "remove_user_theme_set.h"
@@ -12,7 +12,7 @@
 
 using namespace Qt::Literals::StringLiterals;
 
-TweakTheme::TweakTheme(Ui::defaultlook *ui, bool verbose, Desktop desktop, QObject *parent) noexcept
+TweakTheme::TweakTheme(Ui::Tweak *ui, bool verbose, Desktop desktop, QObject *parent) noexcept
     : QObject{parent}, ui{ui}, verbose{verbose}, desktop{desktop}
 {
     ui->checkThemeFluxboxLegacyStyles->setVisible(desktop == Fluxbox);
@@ -29,7 +29,7 @@ TweakTheme::TweakTheme(Ui::defaultlook *ui, bool verbose, Desktop desktop, QObje
     connect(ui->listThemeIcons, &QListWidget::currentTextChanged, this, &TweakTheme::listThemeIcons_currentTextChanged);
     connect(ui->listThemeCursors, &QListWidget::currentTextChanged, this, &TweakTheme::listThemeCursors_currentTextChanged);
 }
-TweakTheme::TweakTheme(Ui::defaultlook *ui, bool verbose, TweakXfcePanel *tweak, QObject *parent) noexcept
+TweakTheme::TweakTheme(Ui::Tweak *ui, bool verbose, TweakXfcePanel *tweak, QObject *parent) noexcept
     : TweakTheme(ui, verbose, Xfce, parent)
 {
     tweakXfcePanel = tweak;

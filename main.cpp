@@ -28,7 +28,7 @@
 #include <unistd.h>
 #include "cmd.h"
 #include "brightness_small.h"
-#include "defaultlook.h"
+#include "tweak.h"
 #include "QCommandLineParser"
 
 using namespace Qt::Literals::StringLiterals;
@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
         return QApplication::exec();
     }
 
-    defaultlook w(nullptr, QApplication::arguments());
+    Tweak w(nullptr, QApplication::arguments());
     w.show();
     return QApplication::exec();
 }

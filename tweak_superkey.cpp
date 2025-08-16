@@ -1,12 +1,12 @@
 #include <QFile>
 #include <QFileDialog>
-#include "ui_defaultlook.h"
+#include "ui_tweak.h"
 #include "cmd.h"
 #include "tweak_superkey.h"
 
 using namespace Qt::Literals::StringLiterals;
 
-TweakSuperKey::TweakSuperKey(Ui::defaultlook *ui, bool verbose, QObject *parent) noexcept
+TweakSuperKey::TweakSuperKey(Ui::Tweak *ui, bool verbose, QObject *parent) noexcept
     : QObject{parent}, ui{ui}, verbose{verbose}
 {
     setup();

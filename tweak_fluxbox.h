@@ -4,7 +4,7 @@
 #include <QObject>
 
 namespace Ui {
-class defaultlook;
+class Tweak;
 }
 
 class TweakFluxbox : public QObject
@@ -12,12 +12,12 @@ class TweakFluxbox : public QObject
     Q_OBJECT
 public:
     TweakFluxbox() = delete;
-    TweakFluxbox(Ui::defaultlook *ui, bool verbose, QObject *parent = nullptr) noexcept;
+    TweakFluxbox(Ui::Tweak *ui, bool verbose, QObject *parent = nullptr) noexcept;
     void setup() noexcept;
     bool checkFluxbox() const noexcept;
 
 private:
-    Ui::defaultlook *ui;
+    Ui::Tweak *ui;
 
     bool verbose;
     struct {

@@ -4,7 +4,7 @@
 #include <QObject>
 
 namespace Ui {
-class defaultlook;
+class Tweak;
 }
 
 class TweakSuperKey : public QObject
@@ -12,12 +12,12 @@ class TweakSuperKey : public QObject
     Q_OBJECT
 public:
     TweakSuperKey() = delete;
-    TweakSuperKey(Ui::defaultlook *ui, bool verbose, QObject *parent = nullptr) noexcept;
+    TweakSuperKey(Ui::Tweak *ui, bool verbose, QObject *parent = nullptr) noexcept;
     void setup() noexcept;
     static bool checkSuperKey() noexcept;
 
 private:
-    Ui::defaultlook *ui;
+    Ui::Tweak *ui;
     bool verbose;
 
     void textSuperKeyCommand_textChanged(const QString &) noexcept;

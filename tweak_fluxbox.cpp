@@ -1,11 +1,11 @@
 #include <QFile>
-#include "ui_defaultlook.h"
+#include "ui_tweak.h"
 #include "cmd.h"
 #include "tweak_fluxbox.h"
 
 using namespace Qt::Literals::StringLiterals;
 
-TweakFluxbox::TweakFluxbox(Ui::defaultlook *ui, bool verbose, QObject *parent) noexcept
+TweakFluxbox::TweakFluxbox(Ui::Tweak *ui, bool verbose, QObject *parent) noexcept
     : QObject{parent}, ui{ui}, verbose{verbose}
 {
     setup();

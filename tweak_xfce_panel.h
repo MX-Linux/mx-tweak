@@ -4,7 +4,7 @@
 #include <QObject>
 
 namespace Ui {
-class defaultlook;
+class Tweak;
 }
 
 class TweakXfcePanel : public QObject
@@ -12,12 +12,12 @@ class TweakXfcePanel : public QObject
     Q_OBJECT
 public:
     TweakXfcePanel() = delete;
-    TweakXfcePanel(Ui::defaultlook *ui, bool verbose, QObject *parent = nullptr) noexcept;
+    TweakXfcePanel(Ui::Tweak *ui, bool verbose, QObject *parent = nullptr) noexcept;
     void setup() noexcept;
     QStringList panelIDs;
 
 private:
-    Ui::defaultlook *ui;
+    Ui::Tweak *ui;
 
     bool verbose;
 

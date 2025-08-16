@@ -1,7 +1,7 @@
 #include <QMessageBox>
 #include <QDir>
 #include <QFile>
-#include "ui_defaultlook.h"
+#include "ui_tweak.h"
 #include "cmd.h"
 #include "window_buttons.h"
 #include "xfwm_compositor_settings.h"
@@ -9,7 +9,7 @@
 
 using namespace Qt::Literals::StringLiterals;
 
-TweakCompositor::TweakCompositor(Ui::defaultlook *ui, bool verbose, QObject *parent) noexcept
+TweakCompositor::TweakCompositor(Ui::Tweak *ui, bool verbose, QObject *parent) noexcept
     : QObject{parent}, ui{ui}, verbose{verbose}
 {
     setup();

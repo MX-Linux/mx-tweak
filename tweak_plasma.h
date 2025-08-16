@@ -4,7 +4,7 @@
 #include <QObject>
 
 namespace Ui {
-class defaultlook;
+class Tweak;
 }
 
 class TweakPlasma : public QObject
@@ -12,12 +12,12 @@ class TweakPlasma : public QObject
     Q_OBJECT
 public:
     TweakPlasma() = delete;
-    TweakPlasma(Ui::defaultlook *ui, bool verbose, QObject *parent = nullptr) noexcept;
+    TweakPlasma(Ui::Tweak *ui, bool verbose, QObject *parent = nullptr) noexcept;
     void setup() noexcept;
     bool checkPlasma() const noexcept;
 
 private:
-    Ui::defaultlook *ui;
+    Ui::Tweak *ui;
 
     bool verbose;
     QString panelID;

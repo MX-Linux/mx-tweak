@@ -1,5 +1,5 @@
 #include <QDir>
-#include "ui_defaultlook.h"
+#include "ui_tweak.h"
 #include "cmd.h"
 #include "tweak_plasma.h"
 
@@ -12,7 +12,7 @@ namespace PanelLocation { // location plasma settings - 4=bottom, 3 top, 5 left,
 enum {Top = 3, Bottom, Left, Right};
 }
 
-TweakPlasma::TweakPlasma(Ui::defaultlook *ui, bool verbose, QObject *parent) noexcept
+TweakPlasma::TweakPlasma(Ui::Tweak *ui, bool verbose, QObject *parent) noexcept
     : QObject(parent), ui(ui), verbose(verbose)
 {
     connect(ui->pushApplyPlasma, &QPushButton::clicked, this, &TweakPlasma::pushApplyPlasma_clicked);

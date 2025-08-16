@@ -19,7 +19,7 @@ CONFIG(release, debug|release) {
 
 SOURCES += main.cpp\
     about.cpp \
-        defaultlook.cpp \
+    tweak.cpp \
     tweak_compositor.cpp \
     tweak_display.cpp \
     tweak_fluxbox.cpp \
@@ -36,7 +36,7 @@ SOURCES += main.cpp\
     remove_user_theme_set.cpp \
     brightness_small.cpp
 
-HEADERS  += defaultlook.h \
+HEADERS  += tweak.h \
     about.h \
     cmd.h \
     tweak_compositor.h \
@@ -56,7 +56,7 @@ HEADERS  += defaultlook.h \
     remove_user_theme_set.h \
     brightness_small.h
 
-FORMS    += defaultlook.ui \
+FORMS    += tweak.ui \
     xfwm_compositor_settings.ui \
     window_buttons.ui \
     theming_to_tweak.ui \

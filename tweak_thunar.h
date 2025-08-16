@@ -4,7 +4,7 @@
 #include <QObject>
 
 namespace Ui {
-class defaultlook;
+class Tweak;
 }
 
 class TweakThunar : public QObject
@@ -12,12 +12,12 @@ class TweakThunar : public QObject
     Q_OBJECT
 public:
     TweakThunar() = delete;
-    TweakThunar(Ui::defaultlook *ui, bool fluxbox, QObject *parent = nullptr) noexcept;
+    TweakThunar(Ui::Tweak *ui, bool fluxbox, QObject *parent = nullptr) noexcept;
     static bool check() noexcept;
     void setup() noexcept;
 
 private:
-    Ui::defaultlook *ui;
+    Ui::Tweak *ui;
 
     bool fluxbox;
 

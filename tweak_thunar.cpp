@@ -1,11 +1,11 @@
 #include <QFileInfo>
-#include "ui_defaultlook.h"
+#include "ui_tweak.h"
 #include "cmd.h"
 #include "tweak_thunar.h"
 
 using namespace Qt::Literals::StringLiterals;
 
-TweakThunar::TweakThunar(Ui::defaultlook *ui, bool fluxbox, QObject *parent) noexcept
+TweakThunar::TweakThunar(Ui::Tweak *ui, bool fluxbox, QObject *parent) noexcept
     : QObject{parent}, ui{ui}, fluxbox{fluxbox}
 {
     setup();

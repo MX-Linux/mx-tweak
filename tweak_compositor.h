@@ -4,7 +4,7 @@
 #include <QObject>
 
 namespace Ui {
-class defaultlook;
+class Tweak;
 }
 
 class TweakCompositor : public QObject
@@ -12,12 +12,12 @@ class TweakCompositor : public QObject
     Q_OBJECT
 public:
     TweakCompositor() = delete;
-    TweakCompositor(Ui::defaultlook *ui, bool verbose, QObject *parent = nullptr) noexcept;
+    TweakCompositor(Ui::Tweak *ui, bool verbose, QObject *parent = nullptr) noexcept;
     static bool check() noexcept;
     void setup() noexcept;
 
 private:
-    Ui::defaultlook *ui;
+    Ui::Tweak *ui;
 
     bool verbose;
 

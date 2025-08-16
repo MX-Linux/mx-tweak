@@ -1,5 +1,5 @@
 /**********************************************************************
- *  defaultlook.cpp
+ *  tweak.cpp
  **********************************************************************
  * Copyright (C) 2015 MX Authors
  *
@@ -51,15 +51,15 @@
 #include "tweak_display.h"
 #include "tweak_superkey.h"
 #include "tweak_misc.h"
-#include "defaultlook.h"
+#include "tweak.h"
 #include "remove_user_theme_set.h"
-#include "ui_defaultlook.h"
+#include "ui_tweak.h"
 #include "version.h"
 
 using namespace Qt::Literals::StringLiterals;
 
-defaultlook::defaultlook(QWidget *parent, const QStringList &args) noexcept
-    : QDialog(parent), ui(new Ui::defaultlook)
+Tweak::Tweak(QWidget *parent, const QStringList &args) noexcept
+    : QDialog(parent), ui(new Ui::Tweak)
 {
     ui->setupUi(this);
     setWindowFlags(Qt::Window); // for the close, min and max buttons
@@ -85,15 +85,15 @@ defaultlook::defaultlook(QWidget *parent, const QStringList &args) noexcept
         verbose = true;
     }
 
-    connect(ui->pushAbout, &QPushButton::clicked, this, &defaultlook::pushAbout_clicked);
-    connect(ui->pushHelp, &QPushButton::clicked, this, &defaultlook::pushHelp_clicked);
-    connect(ui->pushClose, &QPushButton::clicked, this, &defaultlook::close);
-    connect(ui->tabWidget, &QTabWidget::currentChanged, this, &defaultlook::tabWidget_currentChanged);
+    connect(ui->pushAbout, &QPushButton::clicked, this, &Tweak::pushAbout_clicked);
+    connect(ui->pushHelp, &QPushButton::clicked, this, &Tweak::pushHelp_clicked);
+    connect(ui->pushClose, &QPushButton::clicked, this, &Tweak::close);
+    connect(ui->tabWidget, &QTabWidget::currentChanged, this, &Tweak::tabWidget_currentChanged);
 
     setup();
 }
 
-defaultlook::~defaultlook() noexcept
+Tweak::~Tweak() noexcept
 {
     saveSettings();
     if (tweakTheme) delete tweakTheme;
@@ -109,7 +109,7 @@ defaultlook::~defaultlook() noexcept
     delete ui;
 }
 
-void defaultlook::checkSession() noexcept
+void Tweak::checkSession() noexcept
 {
     QString test = runCmd(u"ps -aux |grep  -E \'plasmashell|xfce4-session|fluxbox|xfce-superkey\' |grep -v grep"_s).output;
     if (test.contains("xfce4-session"_L1)){
@@ -126,7 +126,7 @@ void defaultlook::checkSession() noexcept
 
 }
 // setup versious items first time program runs
-void defaultlook::setup() noexcept
+void Tweak::setup() noexcept
 {
     QString home_path = QDir::homePath();
     //load saved settings, for now only fluxbox legacy styles checkbox
@@ -227,7 +227,7 @@ void defaultlook::setup() noexcept
     this->adjustSize();
 }
 
-void defaultlook::pushAbout_clicked() noexcept
+void Tweak::pushAbout_clicked() noexcept
 {
     this->hide();
     displayAboutMsgBox(tr("About MX Tweak"),
@@ -240,7 +240,7 @@ void defaultlook::pushAbout_clicked() noexcept
     this->show();
 }
 
-void defaultlook::pushHelp_clicked() noexcept
+void Tweak::pushHelp_clicked() noexcept
 {
     QLocale locale;
     QString lang = locale.bcp47Name();
@@ -254,25 +254,25 @@ void defaultlook::pushHelp_clicked() noexcept
 }
 
 // Get version of the program
-QString defaultlook::getVersion(const QString &name) noexcept
+QString Tweak::getVersion(const QString &name) noexcept
 {
     return runCmd("dpkg-query -f '${Version}' -W "_L1 + name).output;
 }
 
-void defaultlook::tabWidget_currentChanged(int index) noexcept
+void Tweak::tabWidget_currentChanged(int index) noexcept
 {
     if (index == Tab::Display && tweakDisplay == nullptr) {
         tweakDisplay = new TweakDisplay(ui, verbose, this);
     }
 }
 
-void defaultlook::saveSettings() noexcept
+void Tweak::saveSettings() noexcept
 {
     QSettings settings(u"MX-Linux"_s, u"MX-Tweak"_s);
     settings.setValue("checkbox_state", ui->checkThemeFluxboxLegacyStyles->checkState());
 }
 
-void defaultlook::loadSettings() noexcept
+void Tweak::loadSettings() noexcept
 {
     QSettings settings(u"MX-Linux"_s, u"MX-Tweak"_s);
     bool checked = settings.value("checkbox_state", false).toBool();

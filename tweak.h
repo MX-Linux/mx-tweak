@@ -1,5 +1,5 @@
 /**********************************************************************
- *  defaultlook.h
+ *  tweak.h
  **********************************************************************
  * Copyright (C) 2015 MX Authors
  *
@@ -22,15 +22,15 @@
  * along with mx-tweak.  If not, see <http://www.gnu.org/licenses/>.
  **********************************************************************/
 
-#ifndef DEFAULTLOOK_H
-#define DEFAULTLOOK_H
+#ifndef TWEAK_H
+#define TWEAK_H
 
 #include <QDialog>
 #include <QFile>
 #include <QMessageBox>
 
 namespace Ui {
-class defaultlook;
+class Tweak;
 }
 
 namespace IconSize {
@@ -45,13 +45,13 @@ namespace ValueSize { // kde value starts from 1 vs. combobox index 1=0,2=1,3=2,
 enum {Default = 1, Small, Medium, Large, Larger, Largest};
 }
 
-class defaultlook : public QDialog
+class Tweak : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit defaultlook(QWidget *parent = 0, const QStringList &args = QStringList()) noexcept;
-    ~defaultlook() noexcept;
+    explicit Tweak(QWidget *parent = 0, const QStringList &args = QStringList()) noexcept;
+    ~Tweak() noexcept;
     static QString getVersion(const QString &name) noexcept;
     QString version;
     QString output;
@@ -67,7 +67,7 @@ public:
     void setup() noexcept;
     void checkSession() noexcept;
 private:
-    Ui::defaultlook *ui;
+    Ui::Tweak *ui;
     class TweakTheme *tweakTheme = nullptr;
     class TweakPlasma *tweakPlasma = nullptr;
     class TweakXfce *tweakXfce = nullptr;
@@ -88,4 +88,4 @@ private:
     void tabWidget_currentChanged(int index) noexcept;
 };
 
-#endif // DEFAULTLOOK_H
+#endif // TWEAK_H

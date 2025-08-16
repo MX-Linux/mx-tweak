@@ -5,7 +5,7 @@
 #include <QHash>
 
 namespace Ui {
-class defaultlook;
+class Tweak;
 }
 
 class TweakTheme : public QObject
@@ -18,12 +18,12 @@ public:
         Fluxbox
     };
     TweakTheme() = delete;
-    TweakTheme(Ui::defaultlook *ui, bool verbose, Desktop desktop, QObject *parent = nullptr) noexcept;
-    TweakTheme(Ui::defaultlook *ui, bool verbose, class TweakXfcePanel *tweak, QObject *parent = nullptr) noexcept;
+    TweakTheme(Ui::Tweak *ui, bool verbose, Desktop desktop, QObject *parent = nullptr) noexcept;
+    TweakTheme(Ui::Tweak *ui, bool verbose, class TweakXfcePanel *tweak, QObject *parent = nullptr) noexcept;
     void setup() noexcept;
 
 private:
-    Ui::defaultlook *ui;
+    Ui::Tweak *ui;
 
     bool verbose;
     Desktop desktop;

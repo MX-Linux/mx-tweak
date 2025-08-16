@@ -1,12 +1,12 @@
 #include <QFileInfo>
 #include <QDir>
-#include "ui_defaultlook.h"
+#include "ui_tweak.h"
 #include "cmd.h"
 #include "tweak_display.h"
 
 using namespace Qt::Literals::StringLiterals;
 
-TweakDisplay::TweakDisplay(Ui::defaultlook *ui, bool verbose, QObject *parent) noexcept
+TweakDisplay::TweakDisplay(Ui::Tweak *ui, bool verbose, QObject *parent) noexcept
     : QObject{parent}, ui{ui}, verbose{verbose}
 {
     setup();
