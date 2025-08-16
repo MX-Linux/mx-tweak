@@ -11,9 +11,6 @@ using namespace Qt::Literals::StringLiterals;
 TweakXfcePanel::TweakXfcePanel(Ui::Tweak *ui, bool verbose, QObject *parent) noexcept
     : QObject{parent}, ui{ui}, verbose{verbose}
 {
-    if (ui->pushXfcePanelApply->icon().isNull()) {
-        ui->pushXfcePanelApply->setIcon(QIcon(":/icons/dialog-ok.svg"));
-    }
     // Panel orientation
     ui->comboXfcePanelPlacement->addItem(tr("Horizontal (Bottom)"), u"horz-bottom"_s);
     ui->comboXfcePanelPlacement->addItem(tr("Horizontal (Top)"), u"horz-top"_s);

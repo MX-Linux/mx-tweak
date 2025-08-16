@@ -35,9 +35,6 @@ void TweakCompositor::setup() noexcept
     ui->comboCompositorVBlank->setCurrentText(initVBlank);
 
     ui->pushCompositorApply->setEnabled(false);
-    if (ui->pushCompositorApply->icon().isNull()) {
-        ui->pushCompositorApply->setIcon(QIcon(":/icons/dialog-ok.svg"));
-    }
     ui->pushCompositorPicomSettings->setEnabled(false);
     ui->pushCompositorXfwmSettings->setEnabled(false);
     ui->pushCompositorEditPicomConf->setEnabled(false);

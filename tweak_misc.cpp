@@ -61,9 +61,6 @@ void TweakMisc::setup() noexcept
     QString test;
 
     ui->pushMiscApply->setEnabled(false);
-    if (ui->pushMiscApply->icon().isNull()) {
-        ui->pushMiscApply->setIcon(QIcon(":/icons/dialog-ok.svg"));
-    }
     //set values for checkboxes
 
     //fluxbox menu auto generation on package install, removal, and upgrades
