@@ -51,6 +51,8 @@ private:
 
     int populateBackups() noexcept;
     int validateArchive(const QString &path) const noexcept;
+
+    void sleep(int msec) noexcept;
 };
 
 #endif // TWEAK_XFCE_PANEL_H

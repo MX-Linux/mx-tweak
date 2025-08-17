@@ -1,6 +1,8 @@
-#include <QMessageBox>
+#include <QProcess>
 #include <QDir>
 #include <QFile>
+#include <QTimer>
+#include <QMessageBox>
 #include "ui_tweak.h"
 #include "cmd.h"
 #include "window_buttons.h"
@@ -183,30 +185,26 @@ void TweakXfcePanel::pushXfcePanelApply_clicked() noexcept
         tasklistChange();
     }
 
-    //flip panels
+    const bool restart = (flags.panel || flags.scales);
+    if (restart) {
+        runProc(u"xfce4-panel"_s, {"--quit"});
+    }
     if (flags.panel) {
         flags.panel = false;
-        bool flipped = false;
         const QString &newPlace = ui->comboXfcePanelPlacement->currentData().toString();
         if (newPlace.startsWith("horz-"_L1)) {
             QString test = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-"_L1 + panel + "/mode"_L1).output;
             if (test == "1"_L1 || test == "2"_L1) {
                 flipToHorizontal();
-                flipped = true;
             }
         } else if (newPlace.startsWith("vert-"_L1)) {
             QString test = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-"_L1 + panel + "/mode"_L1).output;
             if (test == ""_L1 || test == "0"_L1) {
                 flipToVertical();
-                flipped = true;
             }
         }
         setPosition(); // Left/right (vertical) or bottom/top (horizontal)
-        if (flipped) {
-            runProc(u"xfce4-panel"_s, {u"--restart"_s});
-        }
     }
-
     if (flags.scales) {
         runCmd("sed -i '/xfce4-power-manager-plugin/,/\\}/ s/scale(.*)/scale("_L1
             + QString::number(ui->spinXfcePanelPluginPower->value())
@@ -214,8 +212,10 @@ void TweakXfcePanel::pushXfcePanelApply_clicked() noexcept
         runCmd("sed -i '/pulseaudio/,/\\}/ s/scale(.*)/scale("_L1
             + QString::number(ui->spinXfcePanelPluginVolume->value())
             + ")/' ~/.config/gtk-3.0/xfce4-panel-tweaks.css"_L1);
-        runCmd(u"xfce4-panel --restart"_s);
         flags.scales = false;
+    }
+    if (restart) {
+        QProcess::startDetached(u"xfce4-panel"_s);
     }
 
     setup();
@@ -298,7 +298,7 @@ void TweakXfcePanel::pushXfcePanelRestore_clicked() noexcept
             tr("Archive does not contain a panel config"));
         break;
     }
-    runCmd(u"sleep .5"_s);
+    sleep(500);
     whichPanel();
     setup();
 }
@@ -308,7 +308,7 @@ void TweakXfcePanel::pushXfcePanelDefault_clicked() noexcept
     runCmd(u"xfce4-panel --quit;pkill xfconfd; rm -Rf ~/.config/xfce4/panel; cp -Rf /etc/skel/.config/xfce4/panel ~/.config/xfce4; sleep 1; \
            cp -f /etc/skel/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml; \
            sleep 5; xfce4-panel &"_s);
-    runCmd(u"sleep .5"_s);
+    sleep(500);
     whichPanel();
     setup();
 }
@@ -378,7 +378,7 @@ void TweakXfcePanel::tasklistChange() noexcept
     runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-"_L1 + tasklistid + " -t string -s "_L1 + choice + " --create"_L1);
     //reset panel
     runCmd(u"xfce4-panel --restart"_s);
-    runCmd(u"sleep .5"_s);
+    sleep(500);
 }
 
 /* Panel orientation switching (horizontal vs vertical) */
@@ -743,4 +743,13 @@ void TweakXfcePanel::pushXfcePanelSettings_clicked() noexcept
 
     setup();
     ui->tabWidget->setEnabled(true);
+}
+
+void TweakXfcePanel::sleep(int msec) noexcept
+{
+    QTimer timer(this);
+    QEventLoop loop(this);
+    QObject::connect(&timer, &QTimer::timeout, &loop, &QEventLoop::quit);
+    timer.start(msec);
+    loop.exec();
 }
