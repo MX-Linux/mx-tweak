@@ -198,7 +198,7 @@
     </spacer>
    </item>
    <item row="4" column="0">
-    <spacer name="horizontalSpacer">
+    <spacer>
      <property name="orientation">
       <enum>Qt::Orientation::Horizontal</enum>
      </property>

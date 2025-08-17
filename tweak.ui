@@ -54,7 +54,7 @@
          <property name="title">
           <string>Tasklist</string>
          </property>
-         <layout class="QHBoxLayout" name="horizontalLayout">
+         <layout class="QHBoxLayout">
           <item>
            <widget class="QLabel" name="labelXfcePanelTasklist">
             <property name="text">
