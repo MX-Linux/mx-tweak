@@ -216,9 +216,9 @@ void TweakPlasma::pushApplyPlasma_clicked() noexcept
 
     //time to reset kwin and plasmashell
     if (flags.workspaces || flags.singleClick || flags.placement || flags.reset || flags.sysTrayIconSize) {
-        //restart kwin first
-        //runCmd(u"sleep 1; qdbus org.kde.KWin /KWin reconfigure"_s);
-        //then plasma
-        runCmd(u"sleep 1; kquitapp6 plasmashell; sleep 1;  kstart plasmashell --replace"_s);
+        //restart plasma, quit plasmashell, then restart it
+        runCmd(u"sleep 1; kquitapp6 plasmashell; sleep 1;"_s);
+        QString cmd="kstart plasmashell";
+        system(cmd.toUtf8());
     }
 }
