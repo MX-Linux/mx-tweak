@@ -94,9 +94,7 @@ void TweakMisc::setup() noexcept
     //if root accout disabled, disable root authentication changes
     test = runCmd(u"pkexec /usr/lib/mx-tweak/mx-tweak-check.sh"_s).output;
     if (test.contains("NP"_L1)) {
-        ui->radioMiscSudoRoot->setEnabled(false);
-        ui->radioMiscSudoUser->setEnabled(false);
-        ui->labelSudo->setEnabled(false);
+        ui->groupMiscSudo->setEnabled(false);
     }
 
     //setup user namespaces option (99-sandbox-mx.conf)
