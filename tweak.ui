@@ -72,7 +72,14 @@
           <item>
            <widget class="QPushButton" name="pushXfcePanelTasklistOptions">
             <property name="text">
-             <string>Options</string>
+             <string>Tasklist Options</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushXfcePanelDocklikeOptions">
+            <property name="text">
+             <string>Docklike Options</string>
             </property>
            </widget>
           </item>

@@ -32,6 +32,7 @@ TweakXfcePanel::TweakXfcePanel(Ui::Tweak *ui, bool verbose, QObject *parent) noe
     connect(ui->spinXfcePanelPluginPower, &QDoubleSpinBox::valueChanged, this, &TweakXfcePanel::slotPluginScaleChanged);
     connect(ui->comboXfcePanelTasklistPlugin, &QComboBox::currentIndexChanged, this, &TweakXfcePanel::comboXfcePanelTasklistPlugin_currentIndexChanged);
     connect(ui->pushXfcePanelTasklistOptions, &QPushButton::clicked, this, &TweakXfcePanel::pushXfcePanelTasklistOptions_clicked);
+    connect(ui->pushXfcePanelDocklikeOptions, &QPushButton::clicked, this, &TweakXfcePanel::pushXfcePanelDocklikeOptions_clicked);
     connect(ui->pushXfcePanelBackup, &QPushButton::clicked, this, &TweakXfcePanel::pushXfcePanelBackup_clicked);
     connect(ui->pushXfcePanelRestore, &QPushButton::clicked, this, &TweakXfcePanel::pushXfcePanelRestore_clicked);
     connect(ui->pushXfcePanelDefault, &QPushButton::clicked, this, &TweakXfcePanel::pushXfcePanelDefault_clicked);
@@ -120,12 +121,13 @@ void TweakXfcePanel::setup() noexcept
     bool docklike = true;
 
     if (runCmd(u"xfconf-query -c xfce4-panel -p /plugins -lv |grep tasklist"_s).exitCode != 0 ) {
-        ui->groupXfcePanelTasklist->hide();
+        ui->pushXfcePanelTasklistOptions->hide();
         tasklist = false;
     }
 
     //hide docklike settings if not present
     if (runCmd(u"xfconf-query -c xfce4-panel -p /plugins -lv |grep docklike"_s).exitCode != 0 ) {
+        ui->pushXfcePanelDocklikeOptions->hide();
         docklike = false;
     }
 
@@ -137,11 +139,14 @@ void TweakXfcePanel::setup() noexcept
 
     //display tasklist plugin selector if only one tasklist in use
     if ( tasklist && docklike ){
-        ui->groupXfcePanelTasklist->hide();
+        ui->labelXfcePanelTasklist->hide();
+        ui->comboXfcePanelTasklistPlugin->hide();
     } else if (tasklist) {
         ui->comboXfcePanelTasklistPlugin->setCurrentIndex(1); // index 1 is window buttons
     } else if (docklike) {
         ui->comboXfcePanelTasklistPlugin->setCurrentIndex(0); // index 0 is doclike
+    } else {
+        ui->groupXfcePanelTasklist->hide();
     }
 
     flags.tasklist = false;
@@ -235,13 +240,15 @@ void TweakXfcePanel::comboXfcePanelTasklistPlugin_currentIndexChanged(int) noexc
 void TweakXfcePanel::pushXfcePanelTasklistOptions_clicked() noexcept
 {
     ui->tabWidget->setEnabled(false);
-    if (ui->comboXfcePanelTasklistPlugin->currentData() == "tasklist"_L1) {
-        window_buttons wb;
-        wb.setModal(true);
-        wb.exec();
-    } else {
-        runProc(u"xfce4-panel"_s, {u"--plugin-event=docklike:settings"_s});
-    }
+    window_buttons wb;
+    wb.setModal(true);
+    wb.exec();
+    ui->tabWidget->setEnabled(true);
+}
+void TweakXfcePanel::pushXfcePanelDocklikeOptions_clicked() noexcept
+{
+    ui->tabWidget->setEnabled(false);
+    runProc(u"xfce4-panel"_s, {u"--plugin-event=docklike:settings"_s});
     ui->tabWidget->setEnabled(true);
 }
 

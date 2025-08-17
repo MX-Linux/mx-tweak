@@ -37,6 +37,7 @@ private:
     void comboXfcePanelPlacement_currentIndexChanged(int) noexcept;
     void comboXfcePanelTasklistPlugin_currentIndexChanged(int) noexcept;
     void pushXfcePanelTasklistOptions_clicked() noexcept;
+    void pushXfcePanelDocklikeOptions_clicked() noexcept;
     void pushXfcePanelBackup_clicked() noexcept;
     void pushXfcePanelRestore_clicked() noexcept;
     void pushXfcePanelDefault_clicked() noexcept;
