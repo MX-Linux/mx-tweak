@@ -55,7 +55,7 @@ void TweakPlasma::setup() noexcept
     }
 
     //setup singleclick
-    QString singleclick = runCmd(u"kreadconfig5 --group KDE --key SingleClick"_s).output;
+    QString singleclick = runCmd(u"kreadconfig6 --group KDE --key SingleClick"_s).output;
     ui->checkPlasmaSingleClick->setChecked(singleclick != "false");
 
     //get taskmanager ID and setup showOnlyCurrentDesktop
@@ -95,7 +95,7 @@ QString TweakPlasma::readTaskmanagerConfig(const QString &key) const noexcept
         qDebug() << "plasma taskmanger Applet ID is " << applet;
     }
     //read key
-    QString value = runCmd("kreadconfig5 --file plasma-org.kde.plasma.desktop-appletsrc --group Containments --group "_L1 + panID + " --group Applets --group "_L1 + applet + " --key "_L1 + key).output;
+    QString value = runCmd("kreadconfig6 --file plasma-org.kde.plasma.desktop-appletsrc --group Containments --group "_L1 + panID + " --group Applets --group "_L1 + applet + " --key "_L1 + key).output;
     if (value.isEmpty()) {
         value = u"false"_s;
     }
@@ -108,7 +108,7 @@ QString TweakPlasma::readPlasmaPanelConfig(const QString &key) const noexcept
     const QString &panID = panelID.section('[',2,2).section(']',0,0);
     if (verbose) qDebug() << "plasma panel ID" << panID;
     //read key
-    QString value = runCmd("kreadconfig5 --file plasma-org.kde.plasma.desktop-appletsrc --group Containments --group "_L1 + panID + " --key "_L1 + key).output;
+    QString value = runCmd("kreadconfig6 --file plasma-org.kde.plasma.desktop-appletsrc --group Containments --group "_L1 + panID + " --key "_L1 + key).output;
     if (verbose) qDebug() << "key is " << value;
     return value;
 }
@@ -116,14 +116,14 @@ QString TweakPlasma::readPlasmaPanelConfig(const QString &key) const noexcept
 void TweakPlasma::writePlasmaPanelConfig(const QString &key, const QString &value) const noexcept
 {
     const QString &panID = panelID.section('[',2,2).section(']',0,0);
-    runCmd("kwriteconfig5 --file plasma-org.kde.plasma.desktop-appletsrc --group Containments --group "_L1 + panID + " --key "_L1 + key + ' ' + value);
+    runCmd("kwriteconfig6 --file plasma-org.kde.plasma.desktop-appletsrc --group Containments --group "_L1 + panID + " --key "_L1 + key + ' ' + value);
 }
 
 void TweakPlasma::writeTaskmanagerConfig(const QString &key, const QString &value) const noexcept
 {
     const QString &panID = taskManagerID.section('[',2,2).section(']',0,0);
     const QString &applet = taskManagerID.section('[',4,4).section(']',0,0);
-    runCmd("kwriteconfig5 --file plasma-org.kde.plasma.desktop-appletsrc --group Containments --group "_L1 + panID + " --group Applets --group "_L1 + applet + " --key "_L1 + key + ' ' + value);
+    runCmd("kwriteconfig6 --file plasma-org.kde.plasma.desktop-appletsrc --group Containments --group "_L1 + panID + " --group Applets --group "_L1 + applet + " --key "_L1 + key + ' ' + value);
 }
 
 void TweakPlasma::comboPlasmaPanelLocation_currentIndexChanged(int  /*index*/) noexcept
@@ -185,7 +185,7 @@ void TweakPlasma::pushApplyPlasma_clicked() noexcept
 
     if (flags.singleClick) {
         QString value = ui->checkPlasmaSingleClick->isChecked() ? u"true"_s : u"false"_s;
-        runCmd("kwriteconfig5 --group KDE --key SingleClick "_L1 + value);
+        runCmd("kwriteconfig6 --group KDE --key SingleClick "_L1 + value);
         runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-kde-edit.sh "_L1 + value);
     }
 
@@ -217,7 +217,7 @@ void TweakPlasma::pushApplyPlasma_clicked() noexcept
     //time to reset kwin and plasmashell
     if (flags.workspaces || flags.singleClick || flags.placement || flags.reset || flags.sysTrayIconSize) {
         //restart kwin first
-        runCmd(u"sleep 1; qdbus org.kde.KWin /KWin reconfigure"_s);
+        //runCmd(u"sleep 1; qdbus org.kde.KWin /KWin reconfigure"_s);
         //then plasma
         runCmd(u"sleep 1; plasmashell --replace &"_s);
     }
