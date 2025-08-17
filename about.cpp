@@ -9,24 +9,25 @@
 #include "about.h"
 #include <unistd.h>
 
+using namespace Qt::Literals::StringLiterals;
+
 // display doc as nomal user when run as root
 void displayDoc(const QString &url, const QString &title) noexcept
 {
     bool started_as_root = false;
     // prefer mx-viewer otherwise use xdg-open (use runuser to run that as logname user)
-    if (QFile::exists(QStringLiteral("/usr/bin/mx-viewer"))) {
-        QProcess::startDetached(QStringLiteral("mx-viewer"), {url, title});
+    if (QFile::exists(u"/usr/bin/mx-viewer"_s)) {
+        QProcess::startDetached(u"mx-viewer"_s, {url, title});
     } else {
         if (getuid() != 0) {
-            QProcess::startDetached(QStringLiteral("xdg-open"), {url});
+            QProcess::startDetached(u"xdg-open"_s, {url});
             return;
         } else {
             QProcess proc;
-            proc.start(QStringLiteral("logname"), {}, QIODevice::ReadOnly);
+            proc.start(u"logname"_s, {}, QIODevice::ReadOnly);
             proc.waitForFinished();
             QString user = QString::fromUtf8(proc.readAllStandardOutput()).trimmed();
-            QProcess::startDetached(QStringLiteral("runuser"),
-                                    {QStringLiteral("-u"), user, QStringLiteral("--"), QStringLiteral("xdg-open"), url});
+            QProcess::startDetached(u"runuser"_s, {u"-u"_s, user, u"--"_s, u"xdg-open"_s, url});
         }
     }
     if (started_as_root)
@@ -41,7 +42,7 @@ void displayAboutMsgBox(const QString &title, const QString &message, const QStr
     auto *btnLicense = msgBox.addButton(QObject::tr("License"), QMessageBox::HelpRole);
     auto *btnChangelog = msgBox.addButton(QObject::tr("Changelog"), QMessageBox::HelpRole);
     auto *btnCancel = msgBox.addButton(QObject::tr("Cancel"), QMessageBox::NoRole);
-    btnCancel->setIcon(QIcon::fromTheme(QStringLiteral("window-close")));
+    btnCancel->setIcon(QIcon::fromTheme(u"window-close"_s));
 
     msgBox.exec();
 
@@ -55,14 +56,13 @@ void displayAboutMsgBox(const QString &title, const QString &message, const QStr
         auto *text = new QTextEdit(changelog);
         text->setReadOnly(true);
         QProcess proc;
-        proc.start(QStringLiteral("zless"), {QStringLiteral("/usr/share/doc/") +
-                                             QFileInfo(QCoreApplication::applicationFilePath()).fileName() +
-                                             QStringLiteral("/changelog.gz")}, QIODevice::ReadOnly);
+        const QString &appfile = QFileInfo(QCoreApplication::applicationFilePath()).fileName();
+        proc.start(u"zless"_s, {"/usr/share/doc/"_L1 + appfile + "/changelog.gz"_L1}, QIODevice::ReadOnly);
         proc.waitForFinished();
         text->setText(proc.readAllStandardOutput());
 
         auto *btnClose = new QPushButton(QObject::tr("&Close"), changelog);
-        btnClose->setIcon(QIcon::fromTheme(QStringLiteral("window-close")));
+        btnClose->setIcon(QIcon::fromTheme(u"window-close"_s));
         QObject::connect(btnClose, &QPushButton::clicked, changelog, &QDialog::close);
 
         auto *layout = new QVBoxLayout(changelog);
