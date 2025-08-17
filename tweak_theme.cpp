@@ -257,12 +257,12 @@ void TweakTheme::populateThemeLists(const QString &value) noexcept
     }
 
     if (value == "fluxbox"_L1) {
-        themes = runCmd(u"find /usr/share/mxflux/styles/ ! -name *attribution* -maxdepth 1 2>/dev/null |cut -d\"/\" -f6"_s).output;
+        themes = runCmd(u"find /usr/share/mxflux/styles/ ! -name *attribution* ! -iname *README* -maxdepth 1 2>/dev/null |cut -d\"/\" -f6"_s).output;
         themes.append("\n");
-        themes.append(runCmd(u"find $HOME/.fluxbox/styles/ ! -name *attribution* -maxdepth 1 2>/dev/null |cut -d\"/\" -f6"_s).output);
+        themes.append(runCmd(u"find $HOME/.fluxbox/styles/ ! -name *attribution* ! -iname *README* -maxdepth 1 2>/dev/null |cut -d\"/\" -f6"_s).output);
         themes.append("\n");
         if (ui->checkThemeFluxboxLegacyStyles->isChecked()) {
-            themes.append(runCmd(u"find /usr/share/fluxbox/styles/ ! -name *attribution* -maxdepth 1 2>/dev/null |cut -d\"/\" -f6"_s).output);
+            themes.append(runCmd(u"find /usr/share/fluxbox/styles/ ! -name *attribution* ! -iname *README* -maxdepth 1 2>/dev/null |cut -d\"/\" -f6"_s).output);
             themes.append("\n");
         }
     }
