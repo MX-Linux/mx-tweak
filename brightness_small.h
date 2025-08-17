@@ -19,34 +19,21 @@ class brightness_small : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit brightness_small(QWidget *parent = 0, const QStringList &args = QStringList());
-    ~brightness_small();
-    void setmissingxfconfvariables(const QString &activeprofile, const QString &resolution);
-    void setupbacklight();
-    void setbacklight();
-    void setupBrightness();
-    void setupGamma();
-    void setBrightness();
-    void saveBrightness();
-    void setupDisplay();
+    explicit brightness_small(QWidget *parent = 0, const QStringList &args = QStringList()) noexcept;
+    ~brightness_small() noexcept;
+    void setmissingxfconfvariables(const QString &activeprofile, const QString &resolution) noexcept;
+    void setupbacklight() noexcept;
+    void setbacklight() noexcept;
+    void setupBrightness() noexcept;
+    void setupGamma() noexcept;
+    void setBrightness() noexcept;
+    void setupDisplay() noexcept;
     bool brightnessflag = false;
-    static void launchfulldisplaydialog();
+    static void launchfulldisplaydialog() noexcept;
     QString g1;
     QString g2;
     QString g3;
     bool expand;
-
-private slots:
-    void changeEvent(QEvent *event);
-    void iconActivated(QSystemTrayIcon::ActivationReason reason);
-    void keyPressEvent(QKeyEvent *event);
-    void messageClicked();
-    void on_buttonSave_clicked();
-    void on_comboBoxDisplay_currentIndexChanged(int index);
-    void on_horizontalSliderBrightness_valueChanged(int value);
-    void on_horizsliderhardwarebacklight_actionTriggered(int action);
-    void on_toolButtonExpandBacklight_clicked();
-    void setPosition();
 
 private:
     Ui::brightness_small *ui;
@@ -54,6 +41,15 @@ private:
     QAction *quitAction;
     QAction *full;
     QMenu *menu;
+    void setPosition() noexcept;
+
+    void changeEvent(QEvent *event) noexcept;
+    void keyPressEvent(QKeyEvent *event) noexcept;
+    void iconActivated(QSystemTrayIcon::ActivationReason reason) noexcept;
+    void pushSave_clicked() noexcept;
+    void comboDisplay_currentIndexChanged(int index) noexcept;
+    void sliderBrightness_valueChanged(int value) noexcept;
+    void pushExpandBacklight_clicked() noexcept;
 };
 
 #endif // BRIGHTNESS_SMALL_H

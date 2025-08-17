@@ -26,20 +26,23 @@
 #include <QLocale>
 #include <QTranslator>
 #include <unistd.h>
+#include "cmd.h"
 #include "brightness_small.h"
-#include "defaultlook.h"
+#include "tweak.h"
 #include "QCommandLineParser"
+
+using namespace Qt::Literals::StringLiterals;
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
     QTranslator qtTran;
-    qtTran.load(QStringLiteral("qt_") + QLocale::system().name());
+    (void)qtTran.load("qt_"_L1 + QLocale::system().name());
     QApplication::installTranslator(&qtTran);
 
     QTranslator appTran;
-    appTran.load(QStringLiteral("mx-tweak_") + QLocale::system().name(), QStringLiteral("/usr/share/mx-tweak/locale"));
+    (void)appTran.load("mx-tweak_"_L1 + QLocale::system().name(), u"/usr/share/mx-tweak/locale"_s);
     QApplication::installTranslator(&appTran);
 
 
@@ -47,21 +50,38 @@ int main(int argc, char *argv[])
     parser.setApplicationDescription(QObject::tr("GUI for applying assorted useful tweaks"));
     parser.addHelpOption();
     parser.addVersionOption();
-    parser.addOption({"tray", QObject::tr("launches brightness-systray")});
-    parser.addOption({"display", QObject::tr("opens with display tab open.  Only valid with Xfce desktop running")});
-    parser.addOption({"theme", QObject::tr("Opens theme tab directly.  Valid on Xfce & Fluxbox desktops")});
-    parser.addOption({"verbose", QObject::tr("Display additional debug output in console")});
-    parser.addOption({"other", QObject::tr("Opens Other tab directly.  Valid on all desktops")});
+    parser.addOption({u"tray"_s, QObject::tr("launches brightness-systray")});
+    parser.addOption({u"display"_s, QObject::tr("opens with display tab open.  Only valid with Xfce desktop running")});
+    parser.addOption({u"theme"_s, QObject::tr("Opens theme tab directly.  Valid on Xfce & Fluxbox desktops")});
+    parser.addOption({u"verbose"_s, QObject::tr("Display additional debug output in console")});
+    parser.addOption({u"other"_s, QObject::tr("Opens Other tab directly.  Valid on all desktops")});
     parser.process(a);
 
 
-    if (parser.isSet("tray")){
+    if (parser.isSet(u"tray"_s)){
         brightness_small fred(nullptr,QApplication::arguments());
         return QApplication::exec();
     }
 
-    defaultlook w(nullptr, QApplication::arguments());
+    Tweak w(nullptr, QApplication::arguments());
     w.show();
     return QApplication::exec();
 }
 
+// Used by most modules for command line stuff
+Result runProc(const QString &program, const QStringList &arguments) noexcept
+{
+    QEventLoop loop;
+    QProcess proc;
+    proc.setProcessChannelMode(QProcess::MergedChannels);
+    QObject::connect(&proc, QOverload<QProcess::ProcessError>::of(&QProcess::errorOccurred), &loop, &QEventLoop::quit);
+    QObject::connect(&proc, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), &loop, &QEventLoop::quit);
+    proc.start(program, arguments);
+    loop.exec();
+    proc.disconnect(&loop);
+    return {proc.exitCode(), proc.readAll().trimmed()};
+}
+Result runCmd(const QString &cmd) noexcept
+{
+    return runProc(u"/bin/bash"_s, {u"-c"_s, cmd});
+}

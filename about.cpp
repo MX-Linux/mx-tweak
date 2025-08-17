@@ -10,7 +10,7 @@
 #include <unistd.h>
 
 // display doc as nomal user when run as root
-void displayDoc(const QString &url, const QString &title)
+void displayDoc(const QString &url, const QString &title) noexcept
 {
     bool started_as_root = false;
     // prefer mx-viewer otherwise use xdg-open (use runuser to run that as logname user)
@@ -33,7 +33,7 @@ void displayDoc(const QString &url, const QString &title)
         qputenv("HOME", "/root");
 }
 
-void displayAboutMsgBox(const QString &title, const QString &message, const QString &licence_url, const QString &license_title)
+void displayAboutMsgBox(const QString &title, const QString &message, const QString &licence_url, const QString &license_title) noexcept
 {
     const auto width  = 600;
     const auto height = 500;

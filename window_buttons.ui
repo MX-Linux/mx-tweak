@@ -1,251 +1,218 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ui version="4.0">
+<ui version="4.0" connectslotsbyname="false">
  <class>window_buttons</class>
  <widget class="QDialog" name="window_buttons">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>454</width>
-    <height>608</height>
+    <width>400</width>
+    <height>400</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Window Buttons</string>
   </property>
   <property name="windowIcon">
-   <iconset theme="mx-tweak">
-    <normaloff>.</normaloff>.</iconset>
+   <iconset theme="mx-tweak"/>
   </property>
-  <layout class="QGridLayout" name="gridLayout_2">
-   <item row="0" column="0">
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <layout class="QFormLayout" name="formLayout">
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_6">
+  <layout class="QGridLayout">
+   <item row="0" column="0" colspan="2">
+    <widget class="QGroupBox" name="groupAppearance">
+     <property name="title">
+      <string>Appearance</string>
+     </property>
+     <layout class="QFormLayout">
+      <item row="0" column="0" colspan="2">
+       <widget class="QCheckBox" name="checkButtonLabels">
+        <property name="text">
+         <string>Show button labels</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" colspan="2">
+       <widget class="QCheckBox" name="checkShowFlatButtons">
+        <property name="text">
+         <string>Show flat buttons</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" colspan="2">
+       <widget class="QCheckBox" name="checkShowHandle">
+        <property name="text">
+         <string>Show handle</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="labelSortingOrder">
+        <property name="text">
+         <string>Sorting Order:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QComboBox" name="comboSortingOrder">
+        <item>
          <property name="text">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Appearance&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          <string>Timestamp</string>
          </property>
-        </widget>
-       </item>
-       <item row="1" column="0" colspan="2">
-        <widget class="QCheckBox" name="checkBoxbuttonlabels">
+        </item>
+        <item>
          <property name="text">
-          <string>Show button labels</string>
+          <string>Group title and timestamp</string>
          </property>
-        </widget>
-       </item>
-       <item row="2" column="0" colspan="2">
-        <widget class="QCheckBox" name="checkBoxshowflatbuttons">
+        </item>
+        <item>
          <property name="text">
-          <string>Show flat buttons</string>
+          <string>Window Title</string>
          </property>
-        </widget>
-       </item>
-       <item row="3" column="0">
-        <widget class="QCheckBox" name="checkBoxshowhandle">
+        </item>
+        <item>
          <property name="text">
-          <string>Show handle</string>
+          <string>Group title and window title</string>
          </property>
-        </widget>
-       </item>
-       <item row="4" column="0">
-        <widget class="QLabel" name="label">
+        </item>
+        <item>
          <property name="text">
-          <string>Sorting Order:</string>
+          <string>None, allow drag-and-drop</string>
          </property>
-        </widget>
-       </item>
-       <item row="4" column="1">
-        <widget class="QComboBox" name="comboBoxsortingorder">
-         <item>
-          <property name="text">
-           <string>Timestamp</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Group title and timestamp</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Window Title</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Group title and window title</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>None, allow drag-and-drop</string>
-          </property>
-         </item>
-        </widget>
-       </item>
-       <item row="6" column="0">
-        <widget class="QLabel" name="label_2">
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="2">
+    <widget class="QGroupBox" name="groupBehavior">
+     <property name="title">
+      <string>Behavior</string>
+     </property>
+     <layout class="QFormLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="labelWindowGrouping">
+        <property name="text">
+         <string>Window grouping:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QComboBox" name="comboWindowGrouping">
+        <item>
          <property name="text">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Behavior&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          <string>Never</string>
          </property>
-        </widget>
-       </item>
-       <item row="7" column="0">
-        <widget class="QLabel" name="label_3">
+        </item>
+        <item>
          <property name="text">
-          <string>Window grouping:</string>
+          <string>Always</string>
          </property>
-        </widget>
-       </item>
-       <item row="7" column="1">
-        <widget class="QComboBox" name="comboBoxwindowgrouping">
-         <item>
-          <property name="text">
-           <string>Never</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Always</string>
-          </property>
-         </item>
-        </widget>
-       </item>
-       <item row="8" column="0">
-        <widget class="QLabel" name="label_4">
+        </item>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="labelMiddleClickAction">
+        <property name="text">
+         <string>Middle click action:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QComboBox" name="comboMiddleClickAction">
+        <item>
          <property name="text">
-          <string>Middle click action:</string>
+          <string>Nothing</string>
          </property>
-        </widget>
-       </item>
-       <item row="8" column="1">
-        <widget class="QComboBox" name="comboBoxmiddleclickaction">
-         <item>
-          <property name="text">
-           <string>Nothing</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Close window</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Minimize window</string>
-          </property>
-         </item>
-        </widget>
-       </item>
-       <item row="9" column="0" colspan="2">
-        <widget class="QCheckBox" name="checkBoxrestoreminwindows">
+        </item>
+        <item>
          <property name="text">
-          <string>Restore minimized windows to current workspace</string>
+          <string>Close window</string>
          </property>
-        </widget>
-       </item>
-       <item row="10" column="0" colspan="2">
-        <widget class="QCheckBox" name="checkBoxdrawframes">
+        </item>
+        <item>
          <property name="text">
-          <string>Draw window frame when hovering over a button</string>
+          <string>Minimize window</string>
          </property>
-        </widget>
-       </item>
-       <item row="11" column="0" colspan="2">
-        <widget class="QCheckBox" name="checkBoxswitchwindowsmousewheel">
-         <property name="text">
-          <string>Switch windows using the mouse wheel</string>
-         </property>
-        </widget>
-       </item>
-       <item row="13" column="0">
-        <widget class="QLabel" name="label_5">
-         <property name="text">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Filtering&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-         </property>
-        </widget>
-       </item>
-       <item row="14" column="0" colspan="2">
-        <widget class="QCheckBox" name="checkBoxwindowsallworkspaces">
-         <property name="text">
-          <string>Show windows from all workspaces or viewports</string>
-         </property>
-        </widget>
-       </item>
-       <item row="15" column="0" colspan="2">
-        <widget class="QCheckBox" name="checkBoxonlyminwindows">
-         <property name="text">
-          <string>Show only minimized windows</string>
-         </property>
-        </widget>
-       </item>
-       <item row="16" column="0" colspan="2">
-        <widget class="QCheckBox" name="checkBoxwindowsallmonitors">
-         <property name="text">
-          <string>Show windows from all monitors</string>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="0">
-        <spacer name="verticalSpacer">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="12" column="0">
-        <spacer name="verticalSpacer_2">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QGridLayout" name="gridLayout">
-       <item row="0" column="0">
-        <spacer name="horizontalSpacer">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>328</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="0" column="1">
-        <widget class="QPushButton" name="pushButton">
-         <property name="text">
-          <string>Close</string>
-         </property>
-         <property name="icon">
-          <iconset theme="window-close">
-           <normaloff>.</normaloff>.</iconset>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-    </layout>
+        </item>
+       </widget>
+      </item>
+      <item row="2" column="0" colspan="2">
+       <widget class="QCheckBox" name="checkRestoreMinWindows">
+        <property name="text">
+         <string>Restore minimized windows to current workspace</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0" colspan="2">
+       <widget class="QCheckBox" name="checkDrawFrames">
+        <property name="text">
+         <string>Draw window frame when hovering over a button</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0" colspan="2">
+       <widget class="QCheckBox" name="checkSwitchWindowsMouseWheel">
+        <property name="text">
+         <string>Switch windows using the mouse wheel</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="2" column="0" colspan="2">
+    <widget class="QGroupBox" name="groupFiltering">
+     <property name="title">
+      <string>Filtering</string>
+     </property>
+     <layout class="QVBoxLayout">
+      <item>
+       <widget class="QCheckBox" name="checkWindowsAllWorkspaces">
+        <property name="text">
+         <string>Show windows from all workspaces or viewports</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="checkOnlyMinWindows">
+        <property name="text">
+         <string>Show only minimized windows</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="checkWindowsAllMonitors">
+        <property name="text">
+         <string>Show windows from all monitors</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="3" column="0" colspan="2">
+    <spacer>
+     <property name="orientation">
+      <enum>Qt::Orientation::Vertical</enum>
+     </property>
+    </spacer>
+   </item>
+   <item row="4" column="0">
+    <spacer>
+     <property name="orientation">
+      <enum>Qt::Orientation::Horizontal</enum>
+     </property>
+    </spacer>
+   </item>
+   <item row="4" column="1">
+    <widget class="QPushButton" name="pushClose">
+     <property name="text">
+      <string>Close</string>
+     </property>
+     <property name="icon">
+      <iconset theme="window-close"/>
+     </property>
+    </widget>
    </item>
   </layout>
  </widget>

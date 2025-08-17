@@ -14,12 +14,12 @@ class remove_user_theme_set : public QDialog
     Q_OBJECT
 
 public:
-    explicit remove_user_theme_set(QWidget *parent = 0);
-    ~remove_user_theme_set();
+    explicit remove_user_theme_set(QWidget *parent = 0) noexcept;
+    ~remove_user_theme_set() noexcept;
 
-    QComboBox *themeSelector();
-    QString getFilename(const QString &name);
-    void setupThemeSelector();
+    QComboBox *themeSelector() const noexcept;
+    QString getFilename(const QString &name) const noexcept;
+    void setupThemeSelector() noexcept;
 
 private:
     Ui::remove_user_theme_set *ui;

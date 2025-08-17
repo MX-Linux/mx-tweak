@@ -2,7 +2,6 @@
 #define WINDOW_BUTTONS_H
 
 #include <QDialog>
-#include "defaultlook.h"
 
 namespace Ui {
 class window_buttons;
@@ -13,28 +12,29 @@ class window_buttons : public QDialog
     Q_OBJECT
 
 public:
-    explicit window_buttons(QWidget *parent = 0);
-    ~window_buttons();
-    void setup();
+    explicit window_buttons(QWidget *parent = 0) noexcept;
+    ~window_buttons() noexcept;
+    void setup() noexcept;
     QString plugintasklist;
-
-private slots:
-    void on_checkBoxbuttonlabels_toggled(bool checked);
-    void on_checkBoxdrawframes_toggled(bool checked);
-    void on_checkBoxonlyminwindows_toggled(bool checked);
-    void on_checkBoxrestoreminwindows_toggled(bool checked);
-    void on_checkBoxshowflatbuttons_toggled(bool checked);
-    void on_checkBoxshowhandle_toggled(bool checked);
-    void on_checkBoxswitchwindowsmousewheel_toggled(bool checked);
-    void on_checkBoxwindowsallmonitors_toggled(bool checked);
-    void on_checkBoxwindowsallworkspaces_toggled(bool checked);
-    void on_comboBoxmiddleclickaction_currentIndexChanged(int index) const;
-    void on_comboBoxsortingorder_currentIndexChanged(int index) const;
-    void on_comboBoxwindowgrouping_currentIndexChanged(int index) const;
-    void on_pushButton_clicked();
 
 private:
     Ui::window_buttons *ui;
+
+    void changePluginBool(const QLatin1StringView setting, bool value) const noexcept;
+    void changePluginInt(const QLatin1StringView setting, int value) const noexcept;
+
+    void checkButtonLabels_toggled(bool checked) noexcept;
+    void checkDrawFrames_toggled(bool checked) noexcept;
+    void checkOnlyMinWindows_toggled(bool checked) noexcept;
+    void checkRestoreMinWindows_toggled(bool checked) noexcept;
+    void checkShowFlatButtons_toggled(bool checked) noexcept;
+    void checkShowHandle_toggled(bool checked) noexcept;
+    void checkSwitchWindowsMouseWheel_toggled(bool checked) noexcept;
+    void checkWindowsAllMonitors_toggled(bool checked) noexcept;
+    void checkWindowsAllWorkspaces_toggled(bool checked) noexcept;
+    void comboMiddleClickAction_currentIndexChanged(int index) const noexcept;
+    void comboSortingOrder_currentIndexChanged(int index) const noexcept;
+    void comboWindowGrouping_currentIndexChanged(int index) const noexcept;
 };
 
 #endif // WINDOW_BUTTONS_H
