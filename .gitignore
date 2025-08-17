@@ -1,4 +1,4 @@
-mx-locale
+mx-tweak
 # C++ objects and libs
 
 *.slo
@@ -36,4 +36,10 @@ ui_*.h
 
 # QtCtreator CMake
 CMakeLists.txt.user*
-
+CMakeCache.txt
+CMakeFiles/*
+Makefile
+cmake_install.cmake
+compile_commands.json
+.qt/*
+build/*

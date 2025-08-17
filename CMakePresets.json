@@ -1,0 +1,74 @@
+{
+  "version": 10,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 31,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "default",
+      "displayName": "Main Configuration",
+      "description": "Recommended build using Ninja Multi-Config generator",
+      "generator": "Ninja Multi-Config",
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_CXX_COMPILER": "clang++"
+      }
+    },
+    {
+      "name": "ide",
+      "displayName": "IDE Configuration",
+      "description": "For IDEs like Qt Creator to avoid conflicting builds when loading the project",
+      "inherits": "default"
+    },
+    {
+      "name": "gcc",
+      "displayName": "GCC configuration",
+      "description": "Compile using gcc instead of clang",
+      "cacheVariables": {
+        "CMAKE_CXX_COMPILER": "g++"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "default",
+      "configurePreset": "default"
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "default",
+      "configurePreset": "default",
+      "output": {"outputOnFailure": true},
+      "execution": {"noTestsAction": "error", "stopOnFailure": true}
+    }
+  ],
+  "workflowPresets": [
+    {
+      "name": "default",
+      "steps": [
+        {
+          "type": "configure",
+          "name": "default"
+        },
+        {
+          "type": "build",
+          "name": "default"
+        }
+      ]
+    }
+  ],
+  "vendor": {
+    "qt.io/QtCreator/1.0": {
+      "AskBeforePresetsReload": false,
+      "AskReConfigureInitialParams": false,
+      "AutorunCMake": true,
+      "PackageManagerAutoSetup": false,
+      "ShowAdvancedOptionsByDefault": true,
+      "ShowSourceSubFolders": false,
+      "UseJunctionsForSourceAndBuildDirectories": false
+    }
+  }
+}
