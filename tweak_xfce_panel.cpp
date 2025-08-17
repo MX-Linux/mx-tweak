@@ -116,18 +116,12 @@ void TweakXfcePanel::setup() noexcept
     flags.panel = false;
     ui->pushXfcePanelApply->setEnabled(false);
 
-    //hide tasklist setting if not present
     bool tasklist = true;
     bool docklike = true;
-
     if (runCmd(u"xfconf-query -c xfce4-panel -p /plugins -lv |grep tasklist"_s).exitCode != 0 ) {
-        ui->pushXfcePanelTasklistOptions->hide();
         tasklist = false;
     }
-
-    //hide docklike settings if not present
     if (runCmd(u"xfconf-query -c xfce4-panel -p /plugins -lv |grep docklike"_s).exitCode != 0 ) {
-        ui->pushXfcePanelDocklikeOptions->hide();
         docklike = false;
     }
 
@@ -148,6 +142,9 @@ void TweakXfcePanel::setup() noexcept
     } else {
         ui->groupXfcePanelTasklist->hide();
     }
+    //hide tasklist or docklike buttons if not present
+    ui->pushXfcePanelTasklistOptions->setVisible(tasklist);
+    ui->pushXfcePanelDocklikeOptions->setVisible(docklike);
 
     flags.tasklist = false;
 
