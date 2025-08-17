@@ -185,7 +185,7 @@ void TweakTheme::setupComboTheme() noexcept
     }
     QString current;
     if (desktop == Plasma){
-        QString themes = runCmd(u"plasma-apply-lookandfeel --list"_s).output;
+        QString themes = runCmd(u"plasma-apply-lookandfeel --list 2>/dev/null"_s).output;
         themes.append("\n");
         theme_list = themes.split(u"\n"_s);
         current = runCmd(u"grep LookAndFeelPackage $HOME/.config/kdeglobals"_s).output.section('=',1,1);
@@ -229,15 +229,15 @@ void TweakTheme::populateThemeLists(const QString &value) noexcept
     QString current;
 
     if (value == "plasma"_L1){
-        themes = runCmd(u"LANG=C plasma-apply-desktoptheme --list-themes |grep \"*\" |cut -d\"*\" -f2"_s).output;
+        themes = runCmd(u"LANG=C.UTF-8.UTF-8 plasma-apply-desktoptheme --list-themes 2>/dev/null|grep \"*\" |cut -d\"*\" -f2"_s).output;
         themes.append("\n");
     }
     if (value == "colorscheme"_L1){
-        themes = runCmd(u"LANG=C plasma-apply-colorscheme --list-schemes |grep \"*\" |cut -d\"*\" -f2 "_s).output;
+        themes = runCmd(u"LANG=C.UTF-8.UTF-8 plasma-apply-colorscheme --list-schemes 2>/dev/null|grep \"*\" |cut -d\"*\" -f2 "_s).output;
         themes.append("\n");
     }
     if (value == "kdecursors"_L1){
-        themes = runCmd(u"LANG=C plasma-apply-cursortheme --list-themes | grep \"*\""_s).output;
+        themes = runCmd(u"LANG=C.UTF-8.UTF-8 plasma-apply-cursortheme --list-themes 2>/dev/null| grep \"*\""_s).output;
         themes.append("\n");
     }
     if (value == "gtk-3.0"_L1 || value == "xfwm4"_L1) {
@@ -422,18 +422,18 @@ void TweakTheme::setTheme(const QString &type, const QString &theme) const noexc
 
     } else if (desktop == Plasma) {
         if ( type == "plasma"_L1 ) {
-            cmd = "LANG=C plasma-apply-desktoptheme "_L1 + theme;
+            cmd = "LANG=C.UTF-8 plasma-apply-desktoptheme "_L1 + theme;
         }
         if ( type == "colorscheme"_L1 ) {
-            cmd = "LANG=C plasma-apply-colorscheme "_L1 + theme;
+            cmd = "LANG=C.UTF-8 plasma-apply-colorscheme "_L1 + theme;
         }
 
         if ( type == "icons"_L1 ) {
-            cmd = "LANG=C /usr/lib/x86_64-linux-gnu/libexec/plasma-changeicons "_L1 + theme;
+            cmd = "LANG=C.UTF-8 /usr/lib/x86_64-linux-gnu/libexec/plasma-changeicons "_L1 + theme;
         }
 
         if (type == "kdecursor"_L1) {
-            cmd = "LANG=C plasma-apply-cursortheme "_L1 + theme;
+            cmd = "LANG=C.UTF-8 plasma-apply-cursortheme "_L1 + theme;
         }
         runCmd(cmd);
 
@@ -600,7 +600,7 @@ void TweakTheme::pushThemeSaveSet_clicked() noexcept
     QString backgroundImage;
     backgroundColor.reserve(4);
     if (backgroundStyle == 1) {
-        QStringList lines = runCmd("LANG=C xfconf-query -c xfce4-panel -p /panels/"_L1 + panel + "/background-rgba"_L1).output.split('\n');
+        QStringList lines = runCmd("LANG=C.UTF-8 xfconf-query -c xfce4-panel -p /panels/"_L1 + panel + "/background-rgba"_L1).output.split('\n');
         lines.removeAt(0);
         lines.removeAt(0);
         for (int i = 0; i < 4; i++)
