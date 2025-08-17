@@ -217,7 +217,7 @@ void TweakPlasma::pushApplyPlasma_clicked() noexcept
     //time to reset kwin and plasmashell
     if (flags.workspaces || flags.singleClick || flags.placement || flags.reset || flags.sysTrayIconSize) {
         //restart kwin first
-        //runCmd(u"sleep 1; qdbus org.kde.KWin /KWin reconfigure"_s);
+        runCmd(u"sleep 1; qdbus org.kde.KWin /KWin reconfigure"_s);
         //then plasma
         runCmd(u"sleep 1; plasmashell --replace &"_s);
     }
