@@ -186,21 +186,25 @@ void TweakXfcePanel::pushXfcePanelApply_clicked() noexcept
     //flip panels
     if (flags.panel) {
         flags.panel = false;
+        bool flipped = false;
         const QString &newPlace = ui->comboXfcePanelPlacement->currentData().toString();
         if (newPlace.startsWith("horz-"_L1)) {
             QString test = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-"_L1 + panel + "/mode"_L1).output;
             if (test == "1"_L1 || test == "2"_L1) {
                 flipToHorizontal();
+                flipped = true;
             }
         } else if (newPlace.startsWith("vert-"_L1)) {
             QString test = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-"_L1 + panel + "/mode"_L1).output;
             if (test == ""_L1 || test == "0"_L1) {
                 flipToVertical();
+                flipped = true;
             }
         }
         setPosition(); // Left/right (vertical) or bottom/top (horizontal)
-        //runCmd(u"xfce4-panel --restart"_s);
-        //runCmd(u"sleep .5"_s);
+        if (flipped) {
+            runProc(u"xfce4-panel"_s, {u"--restart"_s});
+        }
     }
 
     if (flags.scales) {
@@ -385,7 +389,7 @@ void TweakXfcePanel::flipToHorizontal() noexcept
     QStringList pluginIDs;
     file_content = runCmd("LC_ALL=en_US.UTF-8 xfconf-query -c xfce4-panel -p /panels/panel-"_L1 + panel +"/plugin-ids | grep -v Value | grep -v ^$"_L1).output;
     pluginIDs = file_content.split(u"\n"_s);
-    if (verbose) qDebug() << pluginIDs;
+    if (verbose) qDebug() << "Flip to Horizontal" << pluginIDs;
 
     // figure out moving the systray, if it exists
 
@@ -537,7 +541,7 @@ void TweakXfcePanel::flipToVertical() noexcept
     QStringList pluginIDs;
     file_content = runCmd("LC_ALL=en_US.UTF-8 xfconf-query -c xfce4-panel -p /panels/panel-"_L1 + panel +"/plugin-ids | grep -v Value | grep -v ^$"_L1).output;
     pluginIDs = file_content.split(u"\n"_s);
-    if (verbose) qDebug() << pluginIDs;
+    if (verbose) qDebug() << "Flip to Vertical" << pluginIDs;
 
     // figure out moving the systray, if it exists
 
