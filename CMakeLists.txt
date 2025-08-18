@@ -61,6 +61,7 @@ target_compile_options(mx-tweak PRIVATE
     -Wextra
     -Wpedantic
     -O2
+    -gdwarf-4
     $<$<CONFIG:Release>:
         $<$<CXX_COMPILER_ID:Clang>:-flto=thin>
         $<$<CXX_COMPILER_ID:GNU>:-flto=auto>
