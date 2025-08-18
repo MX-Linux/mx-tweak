@@ -4,7 +4,7 @@ QMAKE_OPTS = DEFINES+=NO_DEBUG_ON_CONSOLE
 MAKE_OPTS  = QMAKE=qmake6 QMAKE_OPTS="$(QMAKE_OPTS)"
 
 override_dh_auto_configure:
-	qmake6
+	
 
 override_dh_auto_clean:
 	dh_auto_clean
@@ -13,7 +13,7 @@ override_dh_auto_clean:
 override_dh_auto_build:
 	/usr/lib/qt6/bin/lrelease -removeidentical -nounfinished translations/*.ts
 	head -n1 debian/changelog | sed -e "s/.*(\([^(]*\)).*/#define VERSION \"\1\"/" > version.h
-	dh_auto_build -- $(MAKE_OPTS)
+	cmake --workflow default
 
 override_dh_auto_install:
 	dh_auto_install -- $(MAKE_OPTS)
