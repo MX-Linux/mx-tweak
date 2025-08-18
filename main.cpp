@@ -26,7 +26,6 @@
 #include <QLocale>
 #include <QTranslator>
 #include <unistd.h>
-#include "cmd.h"
 #include "brightness_small.h"
 #include "tweak.h"
 #include "QCommandLineParser"
@@ -66,22 +65,4 @@ int main(int argc, char *argv[])
     Tweak w(nullptr, QApplication::arguments());
     w.show();
     return QApplication::exec();
-}
-
-// Used by most modules for command line stuff
-Result runProc(const QString &program, const QStringList &arguments) noexcept
-{
-    QEventLoop loop;
-    QProcess proc;
-    proc.setProcessChannelMode(QProcess::MergedChannels);
-    QObject::connect(&proc, QOverload<QProcess::ProcessError>::of(&QProcess::errorOccurred), &loop, &QEventLoop::quit);
-    QObject::connect(&proc, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), &loop, &QEventLoop::quit);
-    proc.start(program, arguments);
-    loop.exec();
-    proc.disconnect(&loop);
-    return {proc.exitCode(), proc.readAll().trimmed()};
-}
-Result runCmd(const QString &cmd) noexcept
-{
-    return runProc(u"/bin/bash"_s, {u"-c"_s, cmd});
 }

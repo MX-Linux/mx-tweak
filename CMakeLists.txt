@@ -19,7 +19,7 @@ qt_standard_project_setup()
 qt_add_executable(mx-tweak
     about.cpp about.h
     brightness_small.cpp brightness_small.h brightness_small.ui
-    cmd.h
+    cmd.cpp cmd.h
     main.cpp
     remove_user_theme_set.cpp remove_user_theme_set.h remove_user_theme_set.ui
     theming_to_tweak.cpp theming_to_tweak.h theming_to_tweak.ui

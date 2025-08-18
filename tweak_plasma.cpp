@@ -1,4 +1,6 @@
 #include <QDir>
+#include <QThread>
+#include <QEventLoop>
 #include "ui_tweak.h"
 #include "cmd.h"
 #include "tweak_plasma.h"
@@ -73,10 +75,10 @@ void TweakPlasma::setup() noexcept
 
     connect(ui->pushApplyPlasma, &QPushButton::clicked, this, &TweakPlasma::pushApplyPlasma_clicked);
     connect(ui->comboPlasmaPanelLocation, &QComboBox::currentIndexChanged, this, &TweakPlasma::comboPlasmaPanelLocation_currentIndexChanged);
-    connect(ui->checkPlasmaSingleClick, &QCheckBox::toggled, this, &TweakPlasma::checkPlasmaSingleClick_toggled);
-    connect(ui->checkPlasmaShowAllWorkspaces, &QCheckBox::toggled, this, &TweakPlasma::checkPlasmaShowAllWorkspaces_toggled);
-    connect(ui->checkPlasmaResetDock, &QCheckBox::toggled, this, &TweakPlasma::checkPlasmaResetDock_toggled);
-    connect(ui->checkPlasmaDiscoverUpdater, &QCheckBox::toggled, this, &TweakPlasma::checkPlasmaDiscoverUpdater_toggled);
+    connect(ui->checkPlasmaSingleClick, &QCheckBox::clicked, this, &TweakPlasma::checkPlasmaSingleClick_clicked);
+    connect(ui->checkPlasmaShowAllWorkspaces, &QCheckBox::clicked, this, &TweakPlasma::checkPlasmaShowAllWorkspaces_clicked);
+    connect(ui->checkPlasmaResetDock, &QCheckBox::clicked, this, &TweakPlasma::checkPlasmaResetDock_clicked);
+    connect(ui->checkPlasmaDiscoverUpdater, &QCheckBox::clicked, this, &TweakPlasma::checkPlasmaDiscoverUpdater_clicked);
 }
 
 bool TweakPlasma::checkPlasma() const noexcept
@@ -131,22 +133,22 @@ void TweakPlasma::comboPlasmaPanelLocation_currentIndexChanged(int  /*index*/) n
     ui->pushApplyPlasma->setEnabled(true);
     flags.placement = true;
 }
-void TweakPlasma::checkPlasmaDiscoverUpdater_toggled(bool) noexcept
+void TweakPlasma::checkPlasmaDiscoverUpdater_clicked() noexcept
 {
     ui->pushApplyPlasma->setEnabled(true);
     flags.autoStartDiscover = true;
 }
-void TweakPlasma::checkPlasmaSingleClick_toggled(bool) noexcept
+void TweakPlasma::checkPlasmaSingleClick_clicked() noexcept
 {
     ui->pushApplyPlasma->setEnabled(true);
     flags.singleClick = true;
 }
-void TweakPlasma::checkPlasmaShowAllWorkspaces_toggled(bool) noexcept
+void TweakPlasma::checkPlasmaShowAllWorkspaces_clicked() noexcept
 {
     ui->pushApplyPlasma->setEnabled(true);
     flags.workspaces = true;
 }
-void TweakPlasma::checkPlasmaResetDock_toggled(bool) noexcept
+void TweakPlasma::checkPlasmaResetDock_clicked() noexcept
 {
     ui->pushApplyPlasma->setEnabled(true);
     flags.reset = true;
@@ -154,6 +156,8 @@ void TweakPlasma::checkPlasmaResetDock_toggled(bool) noexcept
 
 void TweakPlasma::pushApplyPlasma_clicked() noexcept
 {
+    ui->tabWidget->setEnabled(false);
+    ui->pushApplyPlasma->setEnabled(false);
     QString home_path = QDir::homePath();
     if (flags.reset) {
         flags.placement = false;
@@ -218,7 +222,9 @@ void TweakPlasma::pushApplyPlasma_clicked() noexcept
     if (flags.workspaces || flags.singleClick || flags.placement || flags.reset || flags.sysTrayIconSize) {
         //restart plasma, quit plasmashell, then restart it
         runCmd(u"sleep 1; kquitapp6 plasmashell; sleep 1;"_s);
-        QString cmd="kstart plasmashell";
-        system(cmd.toUtf8());
+        runSystem("kstart plasmashell");
     }
+
+    setup();
+    ui->tabWidget->setEnabled(true);
 }

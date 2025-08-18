@@ -33,10 +33,10 @@ private:
 
     void pushApplyPlasma_clicked() noexcept;
     void comboPlasmaPanelLocation_currentIndexChanged(int) noexcept;
-    void checkPlasmaSingleClick_toggled(bool) noexcept;
-    void checkPlasmaShowAllWorkspaces_toggled(bool) noexcept;
-    void checkPlasmaResetDock_toggled(bool) noexcept;
-    void checkPlasmaDiscoverUpdater_toggled(bool) noexcept;
+    void checkPlasmaSingleClick_clicked() noexcept;
+    void checkPlasmaShowAllWorkspaces_clicked() noexcept;
+    void checkPlasmaResetDock_clicked() noexcept;
+    void checkPlasmaDiscoverUpdater_clicked() noexcept;
 
     QString readPlasmaPanelConfig(const QString &Key) const noexcept;
     QString readTaskmanagerConfig(const QString &Key) const noexcept;
