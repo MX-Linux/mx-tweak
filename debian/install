@@ -14,7 +14,7 @@ mx.tweak.template usr/share/mx-tweak-data
 share/*			usr/share/mx-tweak
 lib/*   usr/lib/mx-tweak
 actions/* usr/share/polkit-1/actions
-picom-launch.sh usr/local/bin
+picom-launch.sh usr/bin
 bin/* usr/bin
 zrestore-software-brightness.desktop etc/xdg/autostart
 mx-tweak-tray-app-autostart.desktop etc/xdg/autostart
