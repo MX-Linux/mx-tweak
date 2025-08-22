@@ -26,6 +26,7 @@
       "name": "gcc",
       "displayName": "GCC configuration",
       "description": "Compile using gcc instead of clang",
+      "inherits": "default",
       "cacheVariables": {
         "CMAKE_CXX_COMPILER": "g++"
       }
