@@ -58,14 +58,14 @@ set(CMAKE_CXX_FLAGS_RELEASE "")
 target_compile_definitions(mx-tweak PRIVATE $<$<CONFIG:Release>: NDEBUG>)
 target_compile_options(mx-tweak PRIVATE
     -Wall
+    -Werror
     -Wextra
     -Wpedantic
     -O2
     -gdwarf-4
     $<$<CONFIG:Release>:
         $<$<CXX_COMPILER_ID:Clang>:-flto=thin>
-        $<$<CXX_COMPILER_ID:GNU>:-flto=auto>
-        -Werror
+        $<$<CXX_COMPILER_ID:GNU>:-flto=auto -fno-fat-lto-objects>
     >
 )
 target_link_options(mx-tweak PRIVATE
