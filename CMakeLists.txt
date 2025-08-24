@@ -1,4 +1,11 @@
 cmake_minimum_required(VERSION 3.31 FATAL_ERROR)
+if(CMAKE_BINARY_DIR PATH_EQUAL CMAKE_SOURCE_DIR)
+    message(FATAL_ERROR
+        "Build is in the same directory as the sources. Source tree will become heavily polluted.\n"
+        "Delete the CMakeCache.txt file and CMakeFiles folder and use one of the supplied presets."
+    )
+endif()
+
 project(mx-tweak VERSION 2.0 LANGUAGES CXX)
 
 find_package(Qt6 6.8 REQUIRED COMPONENTS Core Gui Widgets LinguistTools)
