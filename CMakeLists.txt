@@ -25,12 +25,12 @@ qt_standard_project_setup()
 
 qt_add_executable(mx-tweak
     about.cpp about.h
-    brightness_small.cpp brightness_small.h brightness_small.ui
+    brightness_small.cpp brightness_small.h
     cmd.cpp cmd.h
     main.cpp
-    remove_user_theme_set.cpp remove_user_theme_set.h remove_user_theme_set.ui
-    theming_to_tweak.cpp theming_to_tweak.h theming_to_tweak.ui
-    tweak.cpp tweak.h tweak.ui
+    remove_user_theme_set.cpp remove_user_theme_set.h
+    theming_to_tweak.cpp theming_to_tweak.h
+    tweak.cpp tweak.h
     tweak_compositor.cpp tweak_compositor.h
     tweak_display.cpp tweak_display.h
     tweak_fluxbox.cpp tweak_fluxbox.h
@@ -42,9 +42,17 @@ qt_add_executable(mx-tweak
     tweak_xfce.cpp tweak_xfce.h
     tweak_xfce_panel.cpp tweak_xfce_panel.h
     version.h
-    window_buttons.cpp window_buttons.h window_buttons.ui
-    xfwm_compositor_settings.cpp xfwm_compositor_settings.h xfwm_compositor_settings.ui
+    window_buttons.cpp window_buttons.h
+    xfwm_compositor_settings.cpp xfwm_compositor_settings.h
     images.qrc
+)
+qt_add_ui(mx-tweak SOURCES
+    brightness_small.ui
+    remove_user_theme_set.ui
+    theming_to_tweak.ui
+    tweak.ui
+    window_buttons.ui
+    xfwm_compositor_settings.ui
 )
 #target_sources(mx-tweak PRIVATE FILE_SET CXX_MODULES FILES
 #    TODO: add files that are C++20 modules.
