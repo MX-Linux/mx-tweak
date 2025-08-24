@@ -62,6 +62,10 @@ qt_add_ui(mx-tweak SOURCES
 #    TODO: add files that are C++20 modules.
 #)
 
+qt_add_translations(mx-tweak TS_FILES
+    "translations/mx-tweak_en.ts"
+)
+
 target_link_libraries(mx-tweak PRIVATE
     Qt::Core
     Qt::Gui
@@ -92,12 +96,6 @@ target_link_options(mx-tweak PRIVATE
         $<$<CXX_COMPILER_ID:Clang>:-flto=thin>
         $<$<CXX_COMPILER_ID:GNU>:-flto=auto -fno-fat-lto-objects>
     >
-)
-
-file(GLOB TRANSLATION_FILES "translations/*.ts")
-qt_add_translations(mx-tweak
-    TS_FILES ${TRANSLATION_FILES}
-    QM_FILES_OUTPUT_VARIABLE qm_files
 )
 
 include(GNUInstallDirs)
