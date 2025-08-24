@@ -6,7 +6,11 @@ if(CMAKE_BINARY_DIR PATH_EQUAL CMAKE_SOURCE_DIR)
     )
 endif()
 
-project(mx-tweak VERSION 2.0 LANGUAGES CXX)
+project(mx-tweak
+    VERSION 3.0
+    DESCRIPTION "Desktop configuration tool for MX Linux"
+    LANGUAGES CXX
+)
 
 find_package(Qt6 6.8 REQUIRED COMPONENTS Core Gui Widgets LinguistTools)
 
