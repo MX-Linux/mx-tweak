@@ -52,9 +52,6 @@ class Tweak : public QDialog
 public:
     explicit Tweak(QWidget *parent = 0, const QStringList &args = QStringList()) noexcept;
     ~Tweak() noexcept;
-    static QString getVersion(const QString &name) noexcept;
-    QString version;
-    QString output;
     bool verbose = false;
     bool displayflag = false;
     bool themetabflag = false;

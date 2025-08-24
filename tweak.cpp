@@ -24,6 +24,7 @@
 
 #include <cassert>
 #include <utility>
+#include <QApplication>
 #include <QDebug>
 #include <QDir>
 #include <QDateTime>
@@ -54,7 +55,6 @@
 #include "tweak.h"
 #include "remove_user_theme_set.h"
 #include "ui_tweak.h"
-#include "version.h"
 
 using namespace Qt::Literals::StringLiterals;
 
@@ -223,7 +223,6 @@ void Tweak::setup() noexcept
             runCmd("cp /usr/share/mx-tweak-data/mx.tweak.template "_L1 + userdir.absolutePath());
         }
     }
-    version = getVersion(u"mx-tweak"_s);
     this->adjustSize();
 }
 
@@ -232,7 +231,7 @@ void Tweak::pushAbout_clicked() noexcept
     this->hide();
     displayAboutMsgBox(tr("About MX Tweak"),
                        "<p align=\"center\"><b><h2>"_L1 + tr("MX Tweak") + "</h2></b></p><p align=\"center\">"_L1 +
-                       tr("Version: ") + VERSION"</p><p align=\"center\"><h3>"_L1 +
+                       tr("Version: ") + qApp->applicationVersion() + "</p><p align=\"center\"><h3>"_L1 +
                        tr("App for quick default ui theme changes and tweaks") +
                        "</h3></p><p align=\"center\"><a href=\"http://mxlinux.org\">http://mxlinux.org</a><br /></p>"_L1
                        "<p align=\"center\">"_L1 + tr("Copyright (c) MX Linux") + "<br /><br /></p>"_L1,
@@ -251,12 +250,6 @@ void Tweak::pushHelp_clicked() noexcept
         url = u"https://mxlinux.org/wiki/help-files/help-tweak-ajustements"_s;
     }
     displayDoc(url, tr("%1 Help").arg(tr("MX Tweak")));
-}
-
-// Get version of the program
-QString Tweak::getVersion(const QString &name) noexcept
-{
-    return runCmd("dpkg-query -f '${Version}' -W "_L1 + name).output;
 }
 
 void Tweak::tabWidget_currentChanged(int index) noexcept

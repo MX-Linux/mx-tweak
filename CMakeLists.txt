@@ -45,7 +45,6 @@ qt_add_executable(mx-tweak
     tweak_thunar.cpp tweak_thunar.h
     tweak_xfce.cpp tweak_xfce.h
     tweak_xfce_panel.cpp tweak_xfce_panel.h
-    version.h
     window_buttons.cpp window_buttons.h
     xfwm_compositor_settings.cpp xfwm_compositor_settings.h
     images.qrc
@@ -64,6 +63,7 @@ qt_add_ui(mx-tweak SOURCES
 
 qt_add_translations(mx-tweak TS_FILES
     "translations/mx-tweak_en.ts"
+    LRELEASE_OPTIONS -compress -nounfinished -removeidentical -silent
 )
 
 target_link_libraries(mx-tweak PRIVATE
@@ -72,9 +72,23 @@ target_link_libraries(mx-tweak PRIVATE
     Qt::Widgets
 )
 
+# Get version from debian/changelog
+execute_process(
+    COMMAND dpkg-parsechangelog -SVersion
+    WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+    OUTPUT_VARIABLE pkg_version
+    OUTPUT_STRIP_TRAILING_WHITESPACE
+    RESULT_VARIABLE dpkg_result
+)
+if(NOT dpkg_result EQUAL 0)
+    message(WARNING "Failed to get version from debian/changelog using dpkg-parsechangelog")
+    set(pkg_version ${PROJECT_VERSION})
+endif()
+
 set(CMAKE_CXX_FLAGS_DEBUG "")
 set(CMAKE_CXX_FLAGS_RELEASE "")
 target_compile_definitions(mx-tweak PRIVATE
+    VERSION="${pkg_version}"
     QT_DISABLE_DEPRECATED_UP_TO=0x060800
     $<$<CONFIG:Release>:NDEBUG>
 )

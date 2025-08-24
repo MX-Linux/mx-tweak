@@ -2,16 +2,13 @@
 
 
 override_dh_auto_configure:
-	
+	cmake --preset default
 
 override_dh_auto_clean:
 	dh_auto_clean
-	rm -f src/translations/*.qm
 
 override_dh_auto_build:
-	/usr/lib/qt6/bin/lrelease -removeidentical -nounfinished translations/*.ts
-	head -n1 debian/changelog | sed -e "s/.*(\([^(]*\)).*/#define VERSION \"\1\"/" > version.h
-	cmake --workflow default
+	cmake --build --preset default
 
 override_dh_auto_install:
 	dh_auto_install -- $(MAKE_OPTS)

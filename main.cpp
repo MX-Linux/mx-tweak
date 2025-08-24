@@ -22,19 +22,25 @@
  * along with mx-tweak.  If not, see <http://www.gnu.org/licenses/>.
  **********************************************************************/
 
+#include <unistd.h>
 #include <QApplication>
+#include <QCommandLineParser>
 #include <QLocale>
 #include <QTranslator>
-#include <unistd.h>
 #include "brightness_small.h"
 #include "tweak.h"
-#include "QCommandLineParser"
+
+// VERSION should come from compiler flags.
+#ifndef VERSION
+    #define VERSION "?.?.?.?"
+#endif
 
 using namespace Qt::Literals::StringLiterals;
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+    a.setApplicationVersion(VERSION);
 
     QTranslator qtTran;
     (void)qtTran.load("qt_"_L1 + QLocale::system().name());
