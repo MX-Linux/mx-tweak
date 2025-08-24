@@ -88,8 +88,8 @@ endif()
 set(CMAKE_CXX_FLAGS_DEBUG "")
 set(CMAKE_CXX_FLAGS_RELEASE "")
 target_compile_definitions(mx-tweak PRIVATE
-    VERSION="${pkg_version}"
     QT_DISABLE_DEPRECATED_UP_TO=0x060800
+    VERSION="${pkg_version}"
     $<$<CONFIG:Release>:NDEBUG>
 )
 target_compile_options(mx-tweak PRIVATE

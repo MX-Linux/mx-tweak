@@ -1,6 +1,5 @@
 #!/usr/bin/make -f
 
-
 override_dh_auto_configure:
 	cmake --preset default
 
