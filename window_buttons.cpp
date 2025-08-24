@@ -1,8 +1,8 @@
 #include "QDebug"
 
-#include "cmd.h"
 #include "ui_window_buttons.h"
 #include "window_buttons.h"
+import command;
 
 using namespace Qt::Literals::StringLiterals;
 

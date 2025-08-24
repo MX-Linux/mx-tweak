@@ -2,8 +2,8 @@
 #include <QDir>
 #include <QMessageBox>
 #include "ui_tweak.h"
-#include "cmd.h"
 #include "tweak_misc.h"
+import command;
 
 using namespace Qt::Literals::StringLiterals;
 

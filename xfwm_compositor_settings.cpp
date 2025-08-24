@@ -1,6 +1,6 @@
-#include "cmd.h"
 #include "ui_xfwm_compositor_settings.h"
 #include "xfwm_compositor_settings.h"
+import command;
 
 using namespace Qt::Literals::StringLiterals;
 

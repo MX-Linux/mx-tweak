@@ -1,7 +1,7 @@
 #include <QFileInfo>
 #include "ui_tweak.h"
-#include "cmd.h"
 #include "tweak_thunar.h"
+import command;
 
 using namespace Qt::Literals::StringLiterals;
 

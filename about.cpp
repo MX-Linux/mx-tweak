@@ -1,3 +1,6 @@
+module;
+
+#include <unistd.h>
 #include <QApplication>
 #include <QFileInfo>
 #include <QMessageBox>
@@ -6,10 +9,14 @@
 #include <QTextEdit>
 #include <QVBoxLayout>
 
-#include "about.h"
-#include <unistd.h>
+export module about;
 
 using namespace Qt::Literals::StringLiterals;
+
+export void displayDoc(const QString &url, const QString &title) noexcept;
+export void displayAboutMsgBox(const QString &title, const QString &message, const QString &licence_url, const QString &license_title) noexcept;
+
+module :private;
 
 // display doc as nomal user when run as root
 void displayDoc(const QString &url, const QString &title) noexcept

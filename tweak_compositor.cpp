@@ -2,10 +2,10 @@
 #include <QDir>
 #include <QFile>
 #include "ui_tweak.h"
-#include "cmd.h"
 #include "window_buttons.h"
 #include "xfwm_compositor_settings.h"
 #include "tweak_compositor.h"
+import command;
 
 using namespace Qt::Literals::StringLiterals;
 

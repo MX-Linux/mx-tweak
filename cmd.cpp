@@ -1,11 +1,24 @@
-#include "cmd.h"
+module;
 
 #include <QEventLoop>
 #include <QProcess>
 #include <QThread>
 #include <QString>
 
+export module command;
+
 using namespace Qt::Literals::StringLiterals;
+
+export struct Result {
+    int exitCode;
+    QString output;
+};
+
+export Result runProc(const QString &program, const QStringList &arguments = {}) noexcept;
+export Result runCmd(const QString &cmd) noexcept;
+export int runSystem(const char *command) noexcept;
+
+module :private;
 
 // Used by most modules for command line stuff
 Result runProc(const QString &program, const QStringList &arguments) noexcept

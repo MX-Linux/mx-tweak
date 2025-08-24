@@ -4,9 +4,9 @@
 #include <QTimer>
 #include <QMessageBox>
 #include "ui_tweak.h"
-#include "cmd.h"
 #include "window_buttons.h"
 #include "tweak_xfce_panel.h"
+import command;
 
 using namespace Qt::Literals::StringLiterals;
 

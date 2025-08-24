@@ -4,11 +4,11 @@
 #include <QDirIterator>
 #include <QFile>
 #include "ui_tweak.h"
-#include "cmd.h"
 #include "theming_to_tweak.h"
 #include "remove_user_theme_set.h"
 #include "tweak_xfce_panel.h"
 #include "tweak_theme.h"
+import command;
 
 using namespace Qt::Literals::StringLiterals;
 

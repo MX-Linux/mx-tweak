@@ -1,8 +1,8 @@
 #include <QFile>
 #include <QFileDialog>
 #include "ui_tweak.h"
-#include "cmd.h"
 #include "tweak_superkey.h"
+import command;
 
 using namespace Qt::Literals::StringLiterals;
 

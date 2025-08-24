@@ -39,8 +39,6 @@
 #include <QRegularExpression>
 #include <QSettings>
 
-#include "about.h"
-#include "cmd.h"
 #include "tweak_theme.h"
 #include "tweak_plasma.h"
 #include "tweak_xfce.h"
@@ -55,6 +53,9 @@
 #include "remove_user_theme_set.h"
 #include "ui_tweak.h"
 #include "version.h"
+
+import about;
+import command;
 
 using namespace Qt::Literals::StringLiterals;
 

@@ -2,8 +2,8 @@
 #include <QThread>
 #include <QEventLoop>
 #include "ui_tweak.h"
-#include "cmd.h"
 #include "tweak_plasma.h"
+import command;
 
 using namespace Qt::Literals::StringLiterals;
 

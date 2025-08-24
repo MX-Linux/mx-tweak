@@ -1,8 +1,8 @@
 #include <QFileInfo>
 #include <QDir>
 #include "ui_tweak.h"
-#include "cmd.h"
 #include "tweak_display.h"
+import command;
 
 using namespace Qt::Literals::StringLiterals;
 

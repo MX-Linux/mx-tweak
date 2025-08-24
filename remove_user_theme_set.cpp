@@ -4,9 +4,9 @@
 #include <QFile>
 #include <QFileInfo>
 
-#include "cmd.h"
 #include "remove_user_theme_set.h"
 #include "ui_remove_user_theme_set.h"
+import command;
 
 using namespace Qt::Literals::StringLiterals;
 

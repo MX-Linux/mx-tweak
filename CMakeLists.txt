@@ -12,14 +12,12 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-#set(CMAKE_CXX_SCAN_FOR_MODULES ON)
+set(CMAKE_CXX_SCAN_FOR_MODULES ON)
 
 qt_standard_project_setup()
 
 qt_add_executable(mx-tweak
-    about.cpp about.h
     brightness_small.cpp brightness_small.h brightness_small.ui
-    cmd.cpp cmd.h
     main.cpp
     remove_user_theme_set.cpp remove_user_theme_set.h remove_user_theme_set.ui
     theming_to_tweak.cpp theming_to_tweak.h theming_to_tweak.ui
@@ -39,9 +37,10 @@ qt_add_executable(mx-tweak
     xfwm_compositor_settings.cpp xfwm_compositor_settings.h xfwm_compositor_settings.ui
     images.qrc
 )
-#target_sources(mx-tweak PRIVATE FILE_SET CXX_MODULES FILES
-#    TODO: add files that are C++20 modules.
-#)
+target_sources(mx-tweak PRIVATE FILE_SET CXX_MODULES FILES
+    about.cpp
+    cmd.cpp
+)
 
 target_compile_definitions(mx-tweak PRIVATE
     QT_DISABLE_DEPRECATED_UP_TO=0x060800
@@ -64,14 +63,14 @@ target_compile_options(mx-tweak PRIVATE
     -O2
     -gdwarf-4
     $<$<CONFIG:Release>:
-        $<$<CXX_COMPILER_ID:Clang>:-flto=thin>
+        # $<$<CXX_COMPILER_ID:Clang>:-flto=thin>
         $<$<CXX_COMPILER_ID:GNU>:-flto=auto -fno-fat-lto-objects>
     >
 )
 target_link_options(mx-tweak PRIVATE
     -O2
     $<$<CONFIG:Release>:
-        $<$<CXX_COMPILER_ID:Clang>:-flto=thin>
+        # $<$<CXX_COMPILER_ID:Clang>:-flto=thin>
         $<$<CXX_COMPILER_ID:GNU>:-flto=auto -fno-fat-lto-objects>
     >
 )

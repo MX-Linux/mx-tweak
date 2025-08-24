@@ -1,7 +1,7 @@
 #include <QFile>
 #include "ui_tweak.h"
-#include "cmd.h"
 #include "tweak_fluxbox.h"
+import command;
 
 using namespace Qt::Literals::StringLiterals;
 

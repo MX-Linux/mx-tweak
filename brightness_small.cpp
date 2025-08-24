@@ -7,8 +7,8 @@
 #include "QSystemTrayIcon"
 
 #include "brightness_small.h"
-#include "cmd.h"
 #include "ui_brightness_small.h"
+import command;
 
 using namespace Qt::Literals::StringLiterals;
 
