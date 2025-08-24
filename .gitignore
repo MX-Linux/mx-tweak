@@ -24,6 +24,7 @@ moc_*.cpp
 moc_*.h
 qrc_*.cpp
 ui_*.h
+Makefile*
 *build-*
 
 # QtCreator
@@ -43,3 +44,12 @@ cmake_install.cmake
 compile_commands.json
 .qt/*
 build/*
+
+# Debian folder
+debian/.debhelper/
+debian/files
+debian/*.log
+debian/*.substvars
+
+# Transifex ignore
+.tx/

@@ -112,6 +112,9 @@ target_link_options(mx-tweak PRIVATE
     >
 )
 
+if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
+  set_property(CACHE CMAKE_INSTALL_PREFIX PROPERTY VALUE "/usr")
+endif()
 include(GNUInstallDirs)
 install(TARGETS mx-tweak
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
