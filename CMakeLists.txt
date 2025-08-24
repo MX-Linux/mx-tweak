@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.31 FATAL_ERROR)
 project(mx-tweak VERSION 2.0 LANGUAGES CXX)
 
-find_package(Qt6 6.8 REQUIRED COMPONENTS Core Gui Widgets)
+find_package(Qt6 6.8 REQUIRED COMPONENTS Core Gui Widgets LinguistTools)
 
 if(CMAKE_GENERATOR STREQUAL "Ninja Multi-Config")
     set(CMAKE_DEFAULT_BUILD_TYPE "Release")
@@ -43,10 +43,6 @@ qt_add_executable(mx-tweak
 #    TODO: add files that are C++20 modules.
 #)
 
-target_compile_definitions(mx-tweak PRIVATE
-    QT_DISABLE_DEPRECATED_UP_TO=0x060800
-)
-
 target_link_libraries(mx-tweak PRIVATE
     Qt::Core
     Qt::Gui
@@ -55,7 +51,10 @@ target_link_libraries(mx-tweak PRIVATE
 
 set(CMAKE_CXX_FLAGS_DEBUG "")
 set(CMAKE_CXX_FLAGS_RELEASE "")
-target_compile_definitions(mx-tweak PRIVATE $<$<CONFIG:Release>: NDEBUG>)
+target_compile_definitions(mx-tweak PRIVATE
+    QT_DISABLE_DEPRECATED_UP_TO=0x060800
+    $<$<CONFIG:Release>:NDEBUG>
+)
 target_compile_options(mx-tweak PRIVATE
     -Wall
     -Werror
@@ -76,17 +75,13 @@ target_link_options(mx-tweak PRIVATE
     >
 )
 
+file(GLOB TRANSLATION_FILES "translations/*.ts")
+qt_add_translations(mx-tweak
+    TS_FILES ${TRANSLATION_FILES}
+    QM_FILES_OUTPUT_VARIABLE qm_files
+)
+
 include(GNUInstallDirs)
-
 install(TARGETS mx-tweak
-    BUNDLE  DESTINATION .
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
-    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
 )
-
-qt_generate_deploy_app_script(
-    TARGET mx-tweak
-    OUTPUT_SCRIPT deploy_script
-    NO_UNSUPPORTED_PLATFORM_ERROR
-)
-install(SCRIPT ${deploy_script})
