@@ -1,0 +1,5 @@
+tar-ignore = ".*"
+tar-ignore = "*.autosave"
+tar-ignore = "CMakeLists.txt.user"
+tar-ignore = "CMakeUserPresets.json"
+tar-ignore = "build"
