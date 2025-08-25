@@ -40,7 +40,7 @@ using namespace Qt::Literals::StringLiterals;
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    a.setApplicationVersion(VERSION);
+    a.setApplicationVersion(QStringLiteral(VERSION));
 
     QTranslator qtTran;
     (void)qtTran.load("qt_"_L1 + QLocale::system().name());

@@ -648,13 +648,7 @@ void TweakTheme::pushThemeSaveSet_clicked() noexcept
     fileLines << "xfwm4_window_decorations="_L1 + windowDecorationsTheme;
     fileLines << "CursorThemeName="_L1 + cursorthemename;
     fileLines << u"<begin_gtk_whisker_theme_code>"_s;
-
-    {
-        const QStringList &themeSplit = whiskerThemeData.split('\n');
-        for (const QString &line : themeSplit) {
-            fileLines << line;
-        }
-    }
+    fileLines.append(whiskerThemeData.split('\n'));
     fileLines << u"<end_gtk_whisker_theme_code>"_s;
     QFile file(pathAppend(QDir::homePath(), ".local/share/mx-tweak-data/"_L1 + fileName + ".tweak"_L1));
     if (!file.open(QFile::WriteOnly | QFile::Text)) {
