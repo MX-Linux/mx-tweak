@@ -85,28 +85,28 @@ if(NOT dpkg_result EQUAL 0)
     set(pkg_version ${PROJECT_VERSION})
 endif()
 
+set(is_release $<OR:$<CONFIG:Release>,$<CONFIG:RelWithDebInfo>,$<CONFIG:MinSizeRel>>)
 set(CMAKE_CXX_FLAGS_DEBUG "")
 set(CMAKE_CXX_FLAGS_RELEASE "")
 target_compile_definitions(mx-tweak PRIVATE
     QT_DISABLE_DEPRECATED_UP_TO=0x060800
     VERSION="${pkg_version}"
-    $<$<CONFIG:Release>:NDEBUG>
+    $<${is_release}:NDEBUG>
 )
 target_compile_options(mx-tweak PRIVATE
     -Wall
-    -Werror
     -Wextra
     -Wpedantic
     -O2
     $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:-gdwarf-4>
-    $<$<CONFIG:Release>:
+    $<${is_release}:
         $<$<CXX_COMPILER_ID:Clang>:-flto=thin>
         $<$<CXX_COMPILER_ID:GNU>:-flto=auto -fno-fat-lto-objects>
     >
 )
 target_link_options(mx-tweak PRIVATE
     -O2
-    $<$<CONFIG:Release>:
+    $<${is_release}:
         $<$<CXX_COMPILER_ID:Clang>:-flto=thin>
         $<$<CXX_COMPILER_ID:GNU>:-flto=auto -fno-fat-lto-objects>
     >

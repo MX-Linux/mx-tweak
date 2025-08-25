@@ -32,6 +32,18 @@
       "cacheVariables": {
         "CMAKE_CXX_COMPILER": "g++"
       }
+    },
+    {
+      "name": "clazy",
+      "displayName": "Check with clazy",
+      "inherits": "clang",
+      "environment": {
+        "CLAZY_CHECKS": "level0,level1,level2,qt6-deprecated-api-fixes,qt6-header-fixes,qt6-qhash-signature,qt6-qlatin1stringchar-to-u,qt6-fwd-fixes,missing-qobject-macro,$penv{CLAZY_CHECKS}",
+        "CLAZY_IGNORE_DIRS": "/usr/include/*"
+      },
+      "cacheVariables": {
+        "CMAKE_CXX_COMPILER": "clazy"
+      }
     }
   ],
   "buildPresets": [
@@ -46,6 +58,11 @@
     {
       "name": "gcc",
       "configurePreset": "gcc"
+    },
+    {
+      "name": "clazy",
+      "configurePreset": "clazy",
+      "cleanFirst": true
     }
   ],
   "testPresets": [
@@ -76,6 +93,13 @@
       "steps": [
         { "type": "configure", "name": "gcc" },
         { "type": "build", "name": "gcc" }
+      ]
+    },
+    {
+      "name": "clazy",
+      "steps": [
+        { "type": "configure", "name": "clazy" },
+        { "type": "build", "name": "clazy" }
       ]
     }
   ],
