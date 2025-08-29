@@ -38,6 +38,7 @@ private:
     void getCursorSize() noexcept;
     void populateThemeLists(const QString &value) noexcept;
     void setTheme(const QString &type, const QString &theme) const noexcept;
+    void setGTKDarkOrLightMode() const;
 
     void comboTheme_currentIndexChanged(int index) noexcept;
     void pushThemeSaveSet_clicked() noexcept;
