@@ -5,8 +5,10 @@ mx-tweak (25.08.02mx25) mx; urgency=medium
   * modularize code
   * CMake support
   * optimazations
-  [Dolphin Oracle
+  [Dolphin Oracle]
   * add explicit dark mode switch
+  [Adrian]
+  * build system updates
 
  -- Dolphin Oracle <dolphinoracle@gmail.com>  Fri, 29 Aug 2025 19:53:28 -0400
 
