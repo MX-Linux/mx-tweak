@@ -297,42 +297,45 @@
           </item>
           <item row="0" column="2">
            <widget class="QCheckBox" name="checkBoxGTKDarkMode">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Toggle Dark Mode for GTK4 libadwaita applications&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
             <property name="text">
              <string>Dark Mode</string>
             </property>
            </widget>
           </item>
           <item row="0" column="3">
-           <spacer name="horizontalSpacer_2">
-            <property name="orientation">
-             <enum>Qt::Orientation::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>408</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item row="0" column="4">
            <widget class="QLabel" name="labelThemeWindow">
             <property name="text">
              <string extracomment="theme a window manager border will get">Window Manager</string>
             </property>
            </widget>
           </item>
-          <item row="0" column="5" colspan="2">
+          <item row="0" column="4">
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>451</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="6" colspan="2">
            <widget class="QCheckBox" name="checkThemeFluxboxLegacyStyles">
             <property name="text">
              <string>Legacy Styles</string>
             </property>
            </widget>
           </item>
-          <item row="1" column="0" colspan="4">
+          <item row="1" column="0" colspan="3">
            <widget class="QListWidget" name="listThemeWidget"/>
           </item>
-          <item row="1" column="4" colspan="3">
+          <item row="1" column="3" colspan="5">
            <widget class="QListWidget" name="listThemeWindow"/>
           </item>
           <item row="2" column="0">
@@ -342,20 +345,14 @@
             </property>
            </widget>
           </item>
-          <item row="2" column="4">
+          <item row="2" column="5">
            <widget class="QLabel" name="labelThemeCursors">
             <property name="text">
              <string extracomment="cursor theme">Cursors</string>
             </property>
            </widget>
           </item>
-          <item row="3" column="0" colspan="4">
-           <widget class="QListWidget" name="listThemeIcons"/>
-          </item>
-          <item row="3" column="4" colspan="3">
-           <widget class="QListWidget" name="listThemeCursors"/>
-          </item>
-          <item row="4" column="0" colspan="3">
+          <item row="4" column="0" colspan="2">
            <widget class="QPushButton" name="pushThemeSaveSet">
             <property name="text">
              <string extracomment="save theme settings as a group">Save Current Settings as a Theme Set</string>
@@ -365,7 +362,7 @@
             </property>
            </widget>
           </item>
-          <item row="4" column="5">
+          <item row="4" column="6">
            <widget class="QLabel" name="labelThemeCursorSize">
             <property name="text">
              <string extracomment="size of the cursor">Size</string>
@@ -375,7 +372,7 @@
             </property>
            </widget>
           </item>
-          <item row="4" column="6">
+          <item row="4" column="7">
            <widget class="QSpinBox" name="spinThemeCursorSize">
             <property name="specialValueText">
              <string extracomment="default cursor size determined by X server">default</string>
@@ -387,6 +384,12 @@
              <number>16</number>
             </property>
            </widget>
+          </item>
+          <item row="3" column="0" colspan="3">
+           <widget class="QListWidget" name="listThemeIcons"/>
+          </item>
+          <item row="3" column="3" colspan="5">
+           <widget class="QListWidget" name="listThemeCursors"/>
           </item>
          </layout>
         </widget>
@@ -1558,7 +1561,7 @@
        <item row="12" column="0">
         <spacer>
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <sizepolicy hsizetype="Fixed" vsizetype="Minimum">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
