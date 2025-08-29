@@ -7,6 +7,7 @@ mx-tweak (25.08.02mx25) mx; urgency=medium
   * optimazations
   [Dolphin Oracle]
   * add explicit dark mode switch
+  * translation updates
   [Adrian]
   * build system updates
 
