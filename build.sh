@@ -7,7 +7,7 @@ set -e
 case "${1:-all}" in
     clean)
         echo "Performing ultimate clean..."
-        rm -rf build
+        rm -rf _build_
         ;;
 
     configure)

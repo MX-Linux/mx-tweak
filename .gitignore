@@ -1,6 +1,6 @@
 mx-tweak
-# C++ objects and libs
 
+# C++ objects and libs
 *.slo
 *.lo
 *.o
@@ -12,7 +12,6 @@ mx-tweak
 *.dylib
 
 # Qt-es
-
 /.qmake.cache
 /.qmake.stash
 *.pro.user
@@ -28,7 +27,6 @@ Makefile*
 *build-*
 
 # QtCreator
-
 *.autosave
 
 # QtCtreator Qml
@@ -43,7 +41,7 @@ Makefile
 cmake_install.cmake
 compile_commands.json
 .qt/*
-build/*
+_build_/*
 
 # Debian folder
 debian/.debhelper/

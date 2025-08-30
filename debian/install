@@ -1,7 +1,7 @@
-build/Release/mx-tweak	 		 usr/bin
+_build_/Release/mx-tweak	 		 usr/bin
 mx-tweak.desktop	 usr/share/applications
 mx-tweak-systray.desktop    usr/share/applications
-build/*.qm 	 usr/share/mx-tweak/locale
+_build_/*.qm 	 usr/share/mx-tweak/locale
 icons/*                 usr/share/mx-tweak/icons
 license.html            usr/share/doc/mx-tweak
 help/*					usr/share/doc/mx-tweak
