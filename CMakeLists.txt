@@ -1,10 +1,5 @@
 cmake_minimum_required(VERSION 3.31 FATAL_ERROR)
-if(CMAKE_BINARY_DIR PATH_EQUAL CMAKE_SOURCE_DIR)
-    message(FATAL_ERROR
-        "Build is in the same directory as the sources. Source tree will become heavily polluted.\n"
-        "Delete the CMakeCache.txt file and CMakeFiles folder and use one of the supplied presets."
-    )
-endif()
+include(build.cmake)
 
 project(mx-tweak
     VERSION 3.0
@@ -14,15 +9,9 @@ project(mx-tweak
 
 find_package(Qt6 6.8 REQUIRED COMPONENTS Core Gui Widgets LinguistTools)
 
-if(CMAKE_GENERATOR STREQUAL "Ninja Multi-Config")
-    set(CMAKE_DEFAULT_BUILD_TYPE "Release")
-endif()
 set(CMAKE_AUTORCC ON)
 
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
 #set(CMAKE_CXX_SCAN_FOR_MODULES ON)
 
 qt_standard_project_setup()
@@ -72,49 +61,13 @@ target_link_libraries(mx-tweak PRIVATE
     Qt::Widgets
 )
 
-# Get version from debian/changelog
-execute_process(
-    COMMAND dpkg-parsechangelog -SVersion
-    WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-    OUTPUT_VARIABLE pkg_version
-    OUTPUT_STRIP_TRAILING_WHITESPACE
-    RESULT_VARIABLE dpkg_result
-)
-if(NOT dpkg_result EQUAL 0)
-    message(WARNING "Failed to get version from debian/changelog using dpkg-parsechangelog")
-    set(pkg_version ${PROJECT_VERSION})
-endif()
+build_compilation_setup(mx-tweak)
+build_version_definition(mx-tweak VERSION)
 
-set(is_release $<OR:$<CONFIG:Release>,$<CONFIG:RelWithDebInfo>,$<CONFIG:MinSizeRel>>)
-set(CMAKE_CXX_FLAGS_DEBUG "")
-set(CMAKE_CXX_FLAGS_RELEASE "")
 target_compile_definitions(mx-tweak PRIVATE
     QT_DISABLE_DEPRECATED_UP_TO=0x060800
-    VERSION="${pkg_version}"
-    $<${is_release}:NDEBUG>
-)
-target_compile_options(mx-tweak PRIVATE
-    -Wall
-    -Wextra
-    -Wpedantic
-    -O2
-    $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:-gdwarf-4>
-    $<${is_release}:
-        $<$<CXX_COMPILER_ID:Clang>:-flto=thin>
-        $<$<CXX_COMPILER_ID:GNU>:-flto=auto -fno-fat-lto-objects>
-    >
-)
-target_link_options(mx-tweak PRIVATE
-    -O2
-    $<${is_release}:
-        $<$<CXX_COMPILER_ID:Clang>:-flto=thin>
-        $<$<CXX_COMPILER_ID:GNU>:-flto=auto -fno-fat-lto-objects>
-    >
 )
 
-if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
-  set_property(CACHE CMAKE_INSTALL_PREFIX PROPERTY VALUE "/usr")
-endif()
 include(GNUInstallDirs)
 install(TARGETS mx-tweak
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
