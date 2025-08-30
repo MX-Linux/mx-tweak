@@ -50,11 +50,6 @@ qt_add_ui(mx-tweak SOURCES
 #	TODO: add files that are C++20 modules.
 #)
 
-qt_add_translations(mx-tweak TS_FILES
-	"translations/mx-tweak_en.ts"
-	LRELEASE_OPTIONS -compress -nounfinished -removeidentical -silent
-)
-
 target_link_libraries(mx-tweak PRIVATE
 	Qt::Core
 	Qt::Gui
@@ -63,6 +58,7 @@ target_link_libraries(mx-tweak PRIVATE
 
 build_compilation_setup(mx-tweak)
 build_version_definition(mx-tweak VERSION)
+build_translation_files(mx-tweak translations)
 
 target_compile_definitions(mx-tweak PRIVATE
 	QT_DISABLE_DEPRECATED_UP_TO=0x060800
