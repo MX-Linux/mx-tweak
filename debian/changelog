@@ -1,3 +1,13 @@
+mx-tweak (25.08.03mx25) mx; urgency=medium
+
+  [AK-47]
+  * build system updates
+  * generalize translations
+  [Dolphin Oracle]
+  * update translations
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 30 Aug 2025 21:46:40 -0400
+
 mx-tweak (25.08.02mx25) mx; urgency=medium
   
   [AK-47]
