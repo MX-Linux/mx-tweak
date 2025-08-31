@@ -125,7 +125,7 @@
     <message>
         <location filename="../tweak.ui" line="114"/>
         <source>Backup/Restore Configuration (all panels)</source>
-        <translation type="unfinished"/>
+        <translation>Hacer copia de seguridad/Restaurar la configuración (todos los paneles)</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="127"/>
@@ -188,12 +188,12 @@
     <message>
         <location filename="../tweak.ui" line="301"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Toggle Dark Mode for GTK4 libadwaita applications&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Alternar el modo oscuro para aplicaciones GTK4 libadwaita&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="304"/>
         <source>Dark Mode</source>
-        <translation type="unfinished"/>
+        <translation>Modo oscuro</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="311"/>
@@ -440,7 +440,7 @@
     <message>
         <location filename="../tweak.ui" line="834"/>
         <source>(also turns off Client Side Decorations for Xfce applications)</source>
-        <translation type="unfinished"/>
+        <translation>(también desactiva las decoraciones del lado del cliente para las aplicaciones Xfce)</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="844"/>
@@ -481,7 +481,7 @@
     <message>
         <location filename="../tweak.ui" line="918"/>
         <source>Add new default menu items, if any, to existing fluxbox menu.</source>
-        <translation type="unfinished"/>
+        <translation>Añadir nuevos elementos de menú por defecto, si existiera, también al menú de Fluxbox.</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="921"/>

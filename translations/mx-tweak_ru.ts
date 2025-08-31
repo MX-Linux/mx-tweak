@@ -35,7 +35,7 @@
     <message>
         <location filename="../main.cpp" line="59"/>
         <source>opens with display tab open.  Only valid with Xfce desktop running</source>
-        <translation type="unfinished"/>
+        <translation>откроет с открытой вкладкой экрана. Действует только для рабочего стола Xfce</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="60"/>
@@ -681,19 +681,19 @@
         <location filename="../tweak.ui" line="1499"/>
         <source>Enable Bluetooth battery info for connected devices (requires system restart)</source>
         <extracomment>expose battery info for connected bluetooth devices to the operating system via dbus</extracomment>
-        <translation type="unfinished"/>
+        <translation>Включить информацию о батарее Bluetooth для подключенных устройств (требуется перезагрузка системы)</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1506"/>
         <source>Early loading of KVM module is new to  kernel 6.12 and conflicts with some non-KVM virtual machine applications, including virtualbox</source>
         <extracomment>early loading is new on 6.12 kernel and conflicts with virtualbox</extracomment>
-        <translation type="unfinished"/>
+        <translation>Предзагрузка модуля KVM возможна начиная с ядра 6.12, это приводит к конфликтам у некоторых не-KVM виртуальных машин, включая Virtualbox</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1509"/>
         <source>Disable early KVM module load (must be disabled for Virtualbox operation on kernel 6.12 and up)</source>
         <extracomment>disable early loading of KVM module.  necessary for virtualbox to function with kernels 6.12 and up.  actually default behavior on kernels 6.11 and earlier.</extracomment>
-        <translation type="unfinished"/>
+        <translation>Отключить предзагрузку модуля KVM (должно быть Отключено при использовании Virtualbox на ядре 6.12 и выше)</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1516"/>
@@ -703,36 +703,36 @@
     <message>
         <location filename="../tweak.ui" line="1523"/>
         <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
-        <translation type="unfinished"/>
+        <translation>Генерировать меню Все Приложения для fluxbox после установки, удаления и обновления пакетов</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1530"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
-        <translation>Использовать клиентское оформление окон (CSD) для приложений GTK3 (требуется перезапуск сеанса)</translation>
+        <translation>Использовать клиентское оформление окон (CSD) для приложений GTK3 которые это поддерживают (требуется перезапуск сеанса)</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1537"/>
         <source>put a hold or remove a hold on updates of Liquorix kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
-        <translation type="unfinished"/>
+        <translation>отключить или активировать обновления ядер Liquorix</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1540"/>
         <source>Enable Automatic Liquorix Kernel Updates (MX ahs repository)</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
-        <translation type="unfinished"/>
+        <translation>Включить автоматические обновления ядра Liquorix (репозиторий MX ahs)</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1547"/>
         <source>put a hold or remove a hold on updates of Debian  kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
-        <translation type="unfinished"/>
+        <translation>отключить или активировать обновления ядер Debian</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1550"/>
         <source>Enable Automatic Debian Kernel Updates</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
-        <translation type="unfinished"/>
+        <translation>Включить автоматические обновления ядра Debian</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1557"/>
@@ -742,7 +742,7 @@
     <message>
         <location filename="../tweak.ui" line="1583"/>
         <source>NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
-        <translation type="unfinished"/>
+        <translation>ПРИМЕЧАНИЕ: существующий /etc/X11/xorg.conf.d/20-intel.conf будет сохранен в домашний каталог</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1590"/>
@@ -752,7 +752,7 @@
     <message>
         <location filename="../tweak.ui" line="1597"/>
         <source>NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
-        <translation type="unfinished"/>
+        <translation>ПРИМЕЧАНИЕ: существующий /etc/X11/xorg.conf.d/20-amd.conf будет сохранен в домашний каталог</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1604"/>
@@ -762,19 +762,19 @@
     <message>
         <location filename="../tweak.ui" line="1611"/>
         <source>NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
-        <translation type="unfinished"/>
+        <translation>ПРИМЕЧАНИЕ: существующий /etc/X11/xorg.conf.d/20-radeon.conf будет сохранен в домашний каталог</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1618"/>
         <source>Change computer name (requires reboot)</source>
         <extracomment>option to change the system hostname, requires a reboot to be 100% effective</extracomment>
-        <translation type="unfinished"/>
+        <translation>Изменить имя компьютера (требуется перезагрузка)</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1628"/>
         <source>Change Default Display Manager (login screen) (requires reboot)</source>
         <extracomment>option to change display manager login screen.  present if more than one display manager is installed</extracomment>
-        <translation type="unfinished"/>
+        <translation>Изменить Default Display Manager (экран входа) (требуется перезагрузка)</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1641"/>
@@ -799,7 +799,7 @@
     <message>
         <location filename="../tweak.ui" line="1711"/>
         <source>Customize the panel</source>
-        <translation type="unfinished"/>
+        <translation>Настроить вид панели</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1721"/>
@@ -809,12 +809,12 @@
     <message>
         <location filename="../tweak.ui" line="1741"/>
         <source>Configure window behavior and shortcuts</source>
-        <translation type="unfinished"/>
+        <translation>Настроить поведение окон и сочетания клавиш</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1774"/>
         <source>Customize the look of your desktop</source>
-        <translation type="unfinished"/>
+        <translation>Настроить вид вашего рабочего стола</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1787"/>
@@ -914,7 +914,8 @@
 You'll have to select a different
 name before proceeding.</source>
         <comment>unacceptable characters are found in hostname, pick a new name</comment>
-        <translation>Извините, имя компьютера содержит недопустимые символы. Для продолжения выберите другое имя.</translation>
+        <translation>Извините, такое имя компьютера содержит недопустимые символы.
+Для продолжения выберите другое имя.</translation>
     </message>
 </context>
 <context>
@@ -923,7 +924,7 @@ name before proceeding.</source>
         <location filename="../tweak_superkey.cpp" line="43"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
-        <translation type="unfinished"/>
+        <translation>Выберите приложение для запуска</translation>
     </message>
 </context>
 <context>
@@ -932,19 +933,19 @@ name before proceeding.</source>
         <location filename="../tweak_theme.cpp" line="64"/>
         <source>Plasma Widget Themes</source>
         <comment>theme style of the kde plasma widgets</comment>
-        <translation type="unfinished"/>
+        <translation>Темы виджетов Plasma</translation>
     </message>
     <message>
         <location filename="../tweak_theme.cpp" line="65"/>
         <source>Color Schemes</source>
         <comment>plasma widget color schemes</comment>
-        <translation type="unfinished"/>
+        <translation>Цветовые Схемы</translation>
     </message>
     <message>
         <location filename="../tweak_theme.cpp" line="66"/>
         <source>Plasma Look &amp; Feel Global Themes</source>
         <comment>plasma global themes</comment>
-        <translation type="unfinished"/>
+        <translation>Глобальные темы Plasma Look &amp; Feel</translation>
     </message>
     <message>
         <location filename="../tweak_theme.cpp" line="139"/>
@@ -957,22 +958,22 @@ name before proceeding.</source>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="17"/>
         <source>Horizontal (Bottom)</source>
-        <translation type="unfinished"/>
+        <translation>Горизонтально (внизу)</translation>
     </message>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="18"/>
         <source>Horizontal (Top)</source>
-        <translation type="unfinished"/>
+        <translation>Горизонтально (сверху)</translation>
     </message>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="20"/>
         <source>Vertical (Left)</source>
-        <translation type="unfinished"/>
+        <translation>Вертикально (слева)</translation>
     </message>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="21"/>
         <source>Vertical (Right)</source>
-        <translation type="unfinished"/>
+        <translation>Вертикально (справа)</translation>
     </message>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="23"/>
@@ -1080,12 +1081,12 @@ name before proceeding.</source>
     <message>
         <location filename="../theming_to_tweak.ui" line="14"/>
         <source>New Theme Set</source>
-        <translation>Новая настройка темы</translation>
+        <translation>Новый набор тем пользователя</translation>
     </message>
     <message>
         <location filename="../theming_to_tweak.ui" line="20"/>
         <source>Enter name for new theme set</source>
-        <translation>Введите имя для настройки темы</translation>
+        <translation>Введите имя для нового набора тем</translation>
     </message>
 </context>
 <context>
@@ -1149,7 +1150,7 @@ name before proceeding.</source>
     <message>
         <location filename="../window_buttons.ui" line="89"/>
         <source>Behavior</source>
-        <translation type="unfinished"/>
+        <translation>Поведение</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="95"/>
@@ -1204,12 +1205,12 @@ name before proceeding.</source>
     <message>
         <location filename="../window_buttons.ui" line="166"/>
         <source>Filtering</source>
-        <translation type="unfinished"/>
+        <translation>Фильтрация</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="172"/>
         <source>Show windows from all workspaces or viewports</source>
-        <translation>Показывать окна со всех рабочих мест или видов</translation>
+        <translation>Показывать окна со всех рабочих пространств или видов</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="179"/>
@@ -1237,7 +1238,7 @@ name before proceeding.</source>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="23"/>
         <source>Feature Settings</source>
-        <translation type="unfinished"/>
+        <translation>Настройки возможностей</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="29"/>
@@ -1272,7 +1273,7 @@ name before proceeding.</source>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="74"/>
         <source>Opacity Settings</source>
-        <translation type="unfinished"/>
+        <translation>Настройки непрозрачности</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="80"/>
