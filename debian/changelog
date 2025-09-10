@@ -1,3 +1,9 @@
+mx-tweak (25.09.01mx25) mx; urgency=medium
+
+  * update lightdm reset function path
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Tue, 09 Sep 2025 20:02:43 -0400
+
 mx-tweak (25.08.03mx25) mx; urgency=medium
 
   [AK-47]
