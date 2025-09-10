@@ -66,7 +66,7 @@
     <message>
         <location filename="../tweak.ui" line="33"/>
         <source>Xfce Panel</source>
-        <translation type="unfinished"/>
+        <translation>Xfce pano</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="39"/>
@@ -87,7 +87,7 @@
     <message>
         <location filename="../tweak.ui" line="58"/>
         <source>Tasklist</source>
-        <translation type="unfinished"/>
+        <translation>Seznam opravil</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="64"/>
@@ -102,7 +102,7 @@
     <message>
         <location filename="../tweak.ui" line="78"/>
         <source>Tasklist Options</source>
-        <translation type="unfinished"/>
+        <translation>Možnosti seznama opravil</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="85"/>
@@ -183,7 +183,7 @@
         <location filename="../tweak.ui" line="281"/>
         <source>Application</source>
         <extracomment>theme an application will get</extracomment>
-        <translation type="unfinished"/>
+        <translation>Program</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="301"/>
@@ -193,7 +193,7 @@
     <message>
         <location filename="../tweak.ui" line="304"/>
         <source>Dark Mode</source>
-        <translation type="unfinished"/>
+        <translation>Temni način</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="311"/>
@@ -205,7 +205,7 @@
     <message>
         <location filename="../tweak.ui" line="331"/>
         <source>Legacy Styles</source>
-        <translation type="unfinished"/>
+        <translation>Starejši slogi</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="344"/>
@@ -374,7 +374,7 @@
     <message>
         <location filename="../tweak.ui" line="740"/>
         <source>Xfce</source>
-        <translation type="unfinished"/>
+        <translation>Xfce</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="746"/>
@@ -400,12 +400,12 @@
     <message>
         <location filename="../tweak.ui" line="773"/>
         <source>Do not shorten file names on the desktop</source>
-        <translation type="unfinished"/>
+        <translation>Ne okrajšaj imen datotek na namizju</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="783"/>
         <source>Thunar</source>
-        <translation type="unfinished"/>
+        <translation>Thunar</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="789"/>

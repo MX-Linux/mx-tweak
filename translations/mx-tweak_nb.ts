@@ -66,7 +66,7 @@
     <message>
         <location filename="../tweak.ui" line="33"/>
         <source>Xfce Panel</source>
-        <translation type="unfinished"/>
+        <translation>Xfce-panel</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="39"/>
@@ -87,7 +87,7 @@
     <message>
         <location filename="../tweak.ui" line="58"/>
         <source>Tasklist</source>
-        <translation type="unfinished"/>
+        <translation>Tasklist</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="64"/>
@@ -97,22 +97,22 @@
     <message>
         <location filename="../tweak.ui" line="71"/>
         <source>Docklike is the modern dock plugin for the panel. Window Buttons is the classic tasklist without dock features.</source>
-        <translation type="unfinished"/>
+        <translation>«Docklike» er et moderne programtillegg for panelet. «Window Buttons» er den klassiske kjørelista uten dokk.</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="78"/>
         <source>Tasklist Options</source>
-        <translation type="unfinished"/>
+        <translation>Alternativer for Tasklist</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="85"/>
         <source>Docklike Options</source>
-        <translation type="unfinished"/>
+        <translation>Alternativer for Docklike</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="95"/>
         <source>Affects 1st Panel</source>
-        <translation type="unfinished"/>
+        <translation>Påvirker første panel</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="101"/>
@@ -125,7 +125,7 @@
     <message>
         <location filename="../tweak.ui" line="114"/>
         <source>Backup/Restore Configuration (all panels)</source>
-        <translation type="unfinished"/>
+        <translation>Reservekopier/gjenopprett oppsett (alle paneler)</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="127"/>
@@ -135,7 +135,7 @@
     <message>
         <location filename="../tweak.ui" line="141"/>
         <source>Restore selected panel configuration</source>
-        <translation type="unfinished"/>
+        <translation>Gjenopprett valgt paneloppsett</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="148"/>
@@ -183,17 +183,17 @@
         <location filename="../tweak.ui" line="281"/>
         <source>Application</source>
         <extracomment>theme an application will get</extracomment>
-        <translation type="unfinished"/>
+        <translation>Program</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="301"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Toggle Dark Mode for GTK4 libadwaita applications&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Veksle mørk modus for GTK4 libadwaita-programmer&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="304"/>
         <source>Dark Mode</source>
-        <translation type="unfinished"/>
+        <translation>Mørk modus</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="311"/>
@@ -205,7 +205,7 @@
     <message>
         <location filename="../tweak.ui" line="331"/>
         <source>Legacy Styles</source>
-        <translation type="unfinished"/>
+        <translation>Utdaterte stiler</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="344"/>
@@ -217,7 +217,7 @@
         <location filename="../tweak.ui" line="351"/>
         <source>Cursors</source>
         <extracomment>cursor theme</extracomment>
-        <translation type="unfinished"/>
+        <translation>Pekere</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="358"/>
@@ -246,7 +246,7 @@
     <message>
         <location filename="../tweak.ui" line="413"/>
         <source>Changing the VBlank mode may help alleviate some screen tearing issues. See Help for more information.</source>
-        <translation type="unfinished"/>
+        <translation>Riktig VBlank-modus kan forhindre oppbryting av grafikken («tearing»). Se hjelpeteksten for mer informasjon.</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="416"/>
@@ -283,7 +283,7 @@
     <message>
         <location filename="../tweak.ui" line="463"/>
         <source>Xfce Compositor Settings</source>
-        <translation type="unfinished"/>
+        <translation>Innstilling av Xfwm-komposittmotor</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="466"/>
@@ -298,7 +298,7 @@
     <message>
         <location filename="../tweak.ui" line="479"/>
         <source>Picom settings</source>
-        <translation type="unfinished"/>
+        <translation>Picom-innstillinger</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="490"/>
@@ -308,7 +308,7 @@
     <message>
         <location filename="../tweak.ui" line="493"/>
         <source>Edit picom.conf</source>
-        <translation type="unfinished"/>
+        <translation>Rediger picom.conf</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="540"/>
@@ -318,7 +318,7 @@
     <message>
         <location filename="../tweak.ui" line="546"/>
         <source>Display Tweaks</source>
-        <translation type="unfinished"/>
+        <translation>Finjustering av skjerm</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="552"/>
@@ -364,7 +364,7 @@
     <message>
         <location filename="../tweak.ui" line="713"/>
         <source>Saving is per display</source>
-        <translation type="unfinished"/>
+        <translation>Lagres separat for skjerm</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="716"/>
@@ -374,7 +374,7 @@
     <message>
         <location filename="../tweak.ui" line="740"/>
         <source>Xfce</source>
-        <translation type="unfinished"/>
+        <translation>Xfce</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="746"/>
@@ -400,12 +400,12 @@
     <message>
         <location filename="../tweak.ui" line="773"/>
         <source>Do not shorten file names on the desktop</source>
-        <translation type="unfinished"/>
+        <translation>Ikke forkort filnavn på skrivebordet</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="783"/>
         <source>Thunar</source>
-        <translation type="unfinished"/>
+        <translation>Thunar</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="789"/>
@@ -415,7 +415,7 @@
     <message>
         <location filename="../tweak.ui" line="796"/>
         <source>Reset custom right-click actions to system defaults</source>
-        <translation type="unfinished"/>
+        <translation>Tilbakestill tilpassede høyreklikk-handlinger til systemets forvalgte</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="803"/>
@@ -440,7 +440,7 @@
     <message>
         <location filename="../tweak.ui" line="834"/>
         <source>(also turns off Client Side Decorations for Xfce applications)</source>
-        <translation type="unfinished"/>
+        <translation>(slår også av klientsidedekorasjoner (CSD) for Xfce-programmer)</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="844"/>
@@ -450,7 +450,7 @@
     <message>
         <location filename="../tweak.ui" line="851"/>
         <source>note: to hibernate, swap needs to be &gt;= RAM</source>
-        <translation type="unfinished"/>
+        <translation>merk: dvalemodus krever vekselminne &gt;= RAM</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="885"/>
@@ -461,7 +461,7 @@
         <location filename="../tweak.ui" line="891"/>
         <location filename="../tweak.ui" line="1365"/>
         <source>Reset Defaults</source>
-        <translation type="unfinished"/>
+        <translation>Gjenopprett standardverdier</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="897"/>
@@ -481,7 +481,7 @@
     <message>
         <location filename="../tweak.ui" line="918"/>
         <source>Add new default menu items, if any, to existing fluxbox menu.</source>
-        <translation type="unfinished"/>
+        <translation>Legg til nye standard menyelementer, hvis noen, til eksisterende fluxbox-meny.</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="921"/>
@@ -491,7 +491,7 @@
     <message>
         <location filename="../tweak.ui" line="931"/>
         <source>Desktop Icons</source>
-        <translation type="unfinished"/>
+        <translation>Skrivebordsikoner</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="937"/>
@@ -534,7 +534,7 @@
     <message>
         <location filename="../tweak.ui" line="1035"/>
         <source>Toolbar Settings</source>
-        <translation type="unfinished"/>
+        <translation>Innstilling av verktøylinje</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1041"/>
@@ -560,7 +560,7 @@
     <message>
         <location filename="../tweak.ui" line="1152"/>
         <source>Dock Settings</source>
-        <translation type="unfinished"/>
+        <translation>Dokk-innstillinger</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1239"/>
@@ -627,7 +627,7 @@
     <message>
         <location filename="../tweak.ui" line="1411"/>
         <source>Also known as the &quot;windows&quot; key</source>
-        <translation type="unfinished"/>
+        <translation>Også kjent som «Windows»-knappen</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1414"/>
@@ -639,18 +639,18 @@
         <location filename="../tweak.ui" line="1424"/>
         <source>xfce-superkey defaults</source>
         <extracomment>indicates that xfce-superkey will select a command by its default logic</extracomment>
-        <translation type="unfinished"/>
+        <translation>Forvalg for Xfce-supertast </translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1431"/>
         <source>Choose application</source>
         <extracomment>description of button action to launch file dialog to choose an application</extracomment>
-        <translation type="unfinished"/>
+        <translation>Velg program</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1462"/>
         <source>Miscellaneous</source>
-        <translation type="unfinished"/>
+        <translation>Diverse</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1468"/>
@@ -670,7 +670,7 @@
     <message>
         <location filename="../tweak.ui" line="1489"/>
         <source>requires reboot</source>
-        <translation type="unfinished"/>
+        <translation>krever omstart</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1492"/>
@@ -687,7 +687,7 @@
         <location filename="../tweak.ui" line="1506"/>
         <source>Early loading of KVM module is new to  kernel 6.12 and conflicts with some non-KVM virtual machine applications, including virtualbox</source>
         <extracomment>early loading is new on 6.12 kernel and conflicts with virtualbox</extracomment>
-        <translation type="unfinished"/>
+        <translation>Tidlig innlasting av KVM-modul er ny i kjerne 6.12 og har konflikt med noen virtuell maskin-programmer som ikke bruker KVM, blant annet virtualbox</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1509"/>
@@ -742,7 +742,7 @@
     <message>
         <location filename="../tweak.ui" line="1583"/>
         <source>NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
-        <translation type="unfinished"/>
+        <translation>MERK: eksisterende /etc/X11/xorg.conf.d/20-intel.conf vil reservekopieres til hjemmemappa</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1590"/>
@@ -752,7 +752,7 @@
     <message>
         <location filename="../tweak.ui" line="1597"/>
         <source>NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
-        <translation type="unfinished"/>
+        <translation>MERK: eksisterende /etc/X11/xorg.conf.d/20-amd.conf vil reservekopieres til hjemmemappa</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1604"/>
@@ -762,7 +762,7 @@
     <message>
         <location filename="../tweak.ui" line="1611"/>
         <source>NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
-        <translation type="unfinished"/>
+        <translation>MERK: eksisterende /etc/X11/xorg.conf.d/20-radeon.conf vil reservekopieres til hjemmemappa</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1618"/>
@@ -799,7 +799,7 @@
     <message>
         <location filename="../tweak.ui" line="1711"/>
         <source>Customize the panel</source>
-        <translation type="unfinished"/>
+        <translation>Tilpass utseende</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1721"/>
@@ -809,12 +809,12 @@
     <message>
         <location filename="../tweak.ui" line="1741"/>
         <source>Configure window behavior and shortcuts</source>
-        <translation type="unfinished"/>
+        <translation>Sett opp vindusoppførsel og hurtigtaster</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1774"/>
         <source>Customize the look of your desktop</source>
-        <translation type="unfinished"/>
+        <translation>Tilpass skrivebordets utseende</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1787"/>
@@ -897,7 +897,7 @@
     <message>
         <location filename="../tweak_compositor.cpp" line="64"/>
         <source>Picom</source>
-        <translation type="unfinished"/>
+        <translation>Picom</translation>
     </message>
 </context>
 <context>
@@ -958,27 +958,27 @@ Velg et annet navn.</translation>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="17"/>
         <source>Horizontal (Bottom)</source>
-        <translation type="unfinished"/>
+        <translation>Vannrett (bunn)</translation>
     </message>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="18"/>
         <source>Horizontal (Top)</source>
-        <translation type="unfinished"/>
+        <translation>Vannrett (topp)</translation>
     </message>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="20"/>
         <source>Vertical (Left)</source>
-        <translation type="unfinished"/>
+        <translation>Loddrett (venstre)</translation>
     </message>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="21"/>
         <source>Vertical (Right)</source>
-        <translation type="unfinished"/>
+        <translation>Loddrett (høyre)</translation>
     </message>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="23"/>
         <source>docklike</source>
-        <translation type="unfinished"/>
+        <translation>docklike</translation>
     </message>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="24"/>
@@ -1150,7 +1150,7 @@ Velg et annet navn.</translation>
     <message>
         <location filename="../window_buttons.ui" line="89"/>
         <source>Behavior</source>
-        <translation type="unfinished"/>
+        <translation>Oppførsel</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="95"/>
@@ -1205,7 +1205,7 @@ Velg et annet navn.</translation>
     <message>
         <location filename="../window_buttons.ui" line="166"/>
         <source>Filtering</source>
-        <translation type="unfinished"/>
+        <translation>Filtrering</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="172"/>
@@ -1273,7 +1273,7 @@ Velg et annet navn.</translation>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="74"/>
         <source>Opacity Settings</source>
-        <translation type="unfinished"/>
+        <translation>Innstillinger for gjennomsiktighet</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="80"/>

@@ -188,19 +188,19 @@
     <message>
         <location filename="../tweak.ui" line="301"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Toggle Dark Mode for GTK4 libadwaita applications&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vaihda tumma tila GTK4 libadwaita sovelluksille&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="304"/>
         <source>Dark Mode</source>
-        <translation type="unfinished"/>
+        <translation>Tumma teema</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="311"/>
         <location filename="../tweak.ui" line="1754"/>
         <source>Window Manager</source>
         <extracomment>theme a window manager border will get</extracomment>
-        <translation>Ikkunanhallintaohjelma</translation>
+        <translation>Ikkunanhallinta</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="331"/>
@@ -324,7 +324,7 @@
         <location filename="../tweak.ui" line="552"/>
         <source>Hardware Backlight</source>
         <extracomment>set the hardware backlight on monitors that have them</extracomment>
-        <translation>Laitteiston taustavalo</translation>
+        <translation>Laitteen taustavalo</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="575"/>
@@ -655,7 +655,7 @@
     <message>
         <location filename="../tweak.ui" line="1468"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
-        <translation>Nollaa Lightdm (kirjautumisikkuna) saadaksesi käyttöön järjestelmän vakioteeman</translation>
+        <translation>Palauta Lightdm (kirjautumisikkuna) oletusteemaan</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1475"/>
@@ -1051,7 +1051,7 @@ nimi ennen jatkamista.</translation>
     <message>
         <location filename="../brightness_small.ui" line="75"/>
         <source>Hardware Backlight</source>
-        <translation>Laitteiston taustavalo</translation>
+        <translation>Laitteen taustavalo</translation>
     </message>
     <message>
         <location filename="../brightness_small.cpp" line="35"/>

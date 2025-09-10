@@ -45,7 +45,7 @@
     <message>
         <location filename="../main.cpp" line="61"/>
         <source>Display additional debug output in console</source>
-        <translation>Εμφάνιση εντοπισμού σφαλμάτων στην κονσόλα</translation>
+        <translation>Εμφάνιση πρόσθετων στοιχείων αποσφαλμάτωσης σε τερματικό</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="62"/>
@@ -66,7 +66,7 @@
     <message>
         <location filename="../tweak.ui" line="33"/>
         <source>Xfce Panel</source>
-        <translation>Ταμπλό Xfce</translation>
+        <translation>Ταμπλό xfce</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="39"/>
@@ -87,7 +87,7 @@
     <message>
         <location filename="../tweak.ui" line="58"/>
         <source>Tasklist</source>
-        <translation type="unfinished"/>
+        <translation>Λίστα εργασιών</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="64"/>
@@ -97,17 +97,17 @@
     <message>
         <location filename="../tweak.ui" line="71"/>
         <source>Docklike is the modern dock plugin for the panel. Window Buttons is the classic tasklist without dock features.</source>
-        <translation>Το πρόσθετο Docklike είναι ένα σύγχρονο dock για το ταμπλό.  Τα κουμπιά των παραθύρων είναι η κλασική λίστα εργασιών χωρίς άλλες δυνατότητες.</translation>
+        <translation>Το πρόσθετο docklike είναι ένα σύγχρονο dock για το ταμπλό. Τα κουμπιά των παραθύρων είναι η κλασική λίστα εργασιών χωρίς άλλες δυνατότητες.</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="78"/>
         <source>Tasklist Options</source>
-        <translation type="unfinished"/>
+        <translation>Επιλογές λίστας εργασιών</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="85"/>
         <source>Docklike Options</source>
-        <translation type="unfinished"/>
+        <translation>Επιλογές docklike</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="95"/>
@@ -167,7 +167,7 @@
     <message>
         <location filename="../tweak.ui" line="227"/>
         <source>Theme Options</source>
-        <translation>Επιλογές</translation>
+        <translation>Επιλογές θέματος</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="262"/>
@@ -188,12 +188,12 @@
     <message>
         <location filename="../tweak.ui" line="301"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Toggle Dark Mode for GTK4 libadwaita applications&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Ενεργοποίηση σκοτεινής κατάστασης για εφαρμογές GTK4 libadwaita&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="304"/>
         <source>Dark Mode</source>
-        <translation type="unfinished"/>
+        <translation>Σκοτεινή κατάσταση</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="311"/>
@@ -217,7 +217,7 @@
         <location filename="../tweak.ui" line="351"/>
         <source>Cursors</source>
         <extracomment>cursor theme</extracomment>
-        <translation type="unfinished"/>
+        <translation>Δείκτες ποντικιού</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="358"/>
@@ -246,7 +246,7 @@
     <message>
         <location filename="../tweak.ui" line="413"/>
         <source>Changing the VBlank mode may help alleviate some screen tearing issues. See Help for more information.</source>
-        <translation>Η αλλαγή στη λειτουργία VBlank μπορεί να βοηθήσει στην επίλυση ορισμένων ζητημάτων απεικόνισης. Δείτε τη βοήθεια για περισσότερες πληροφορίες.</translation>
+        <translation>Η αλλαγή ρύθμισης VBlank μπορεί να βοηθήσει στην αντιμετώπιση ορισμένων ζητημάτων απεικόνισης. Δείτε τη βοήθεια για περισσότερες πληροφορίες.</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="416"/>
@@ -283,7 +283,7 @@
     <message>
         <location filename="../tweak.ui" line="463"/>
         <source>Xfce Compositor Settings</source>
-        <translation>Ρυθμίσεις συνθέτη Xfce</translation>
+        <translation>Ρυθμίσεις συνθέτη xfce</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="466"/>
@@ -298,7 +298,7 @@
     <message>
         <location filename="../tweak.ui" line="479"/>
         <source>Picom settings</source>
-        <translation>Ρυθμίσεις Picom</translation>
+        <translation>Ρυθμίσεις picom</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="490"/>
@@ -395,7 +395,7 @@
         <location filename="../tweak.ui" line="766"/>
         <location filename="../tweak.ui" line="1355"/>
         <source>Show windows from all workspaces in panel</source>
-        <translation>Εμφάνιση των παραθύρων από όλους τους χώρους εργασίας στο ταμπλό</translation>
+        <translation>Εμφάνιση παραθύρων από όλους τους χώρους εργασίας στο ταμπλό</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="773"/>
@@ -466,7 +466,7 @@
     <message>
         <location filename="../tweak.ui" line="897"/>
         <source>Reset DefaultDock</source>
-        <translation>Επαναφορά DefaultDock</translation>
+        <translation>Επαναφορά προεπιλεγμένου Dock</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="904"/>
@@ -534,7 +534,7 @@
     <message>
         <location filename="../tweak.ui" line="1035"/>
         <source>Toolbar Settings</source>
-        <translation type="unfinished"/>
+        <translation>Ρυθμίσεις εργαλειοθήκης</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1041"/>
@@ -560,7 +560,7 @@
     <message>
         <location filename="../tweak.ui" line="1152"/>
         <source>Dock Settings</source>
-        <translation type="unfinished"/>
+        <translation>Ρυθμίσεις Dock</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1239"/>
@@ -914,7 +914,7 @@
 You'll have to select a different
 name before proceeding.</source>
         <comment>unacceptable characters are found in hostname, pick a new name</comment>
-        <translation>Λυπούμαστε, το όνομα του υπολογιστή σας περιέχει μη έγκυρους χαρακτήρες.
+        <translation>Το όνομα του υπολογιστή σας περιέχει μη έγκυρους χαρακτήρες.
 Θα πρέπει να επιλέξετε διαφορετικό
 πριν προχωρήσετε.</translation>
     </message>
@@ -979,7 +979,7 @@ name before proceeding.</source>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="23"/>
         <source>docklike</source>
-        <translation type="unfinished"/>
+        <translation>docklike</translation>
     </message>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="24"/>
@@ -1007,17 +1007,17 @@ name before proceeding.</source>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="280"/>
         <source>File name already exists.  Choose another name</source>
-        <translation>Υπάρχει το όνομα του αρχείου.  Επιλέξτε άλλο όνομα</translation>
+        <translation>Το όνομα του αρχείου υπάρχει.  Επιλέξτε άλλο όνομα</translation>
     </message>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="298"/>
         <source>File is not a valid tar.xz archive file</source>
-        <translation>Το αρχείο δεν είναι έγκυρο αρχείο αρχειοθέτησης tar.xz</translation>
+        <translation>Δεν είναι έγκυρο αρχείο μορφής tar.xz</translation>
     </message>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="302"/>
         <source>Archive does not contain a panel config</source>
-        <translation>Το αρχείο δεν περιέχει ρυθμίσεις του ταμπλό</translation>
+        <translation>Το αρχείο δεν περιέχει ρυθμίσεις ταμπλό</translation>
     </message>
 </context>
 <context>
@@ -1041,7 +1041,7 @@ name before proceeding.</source>
         <location filename="../brightness_small.ui" line="61"/>
         <location filename="../brightness_small.ui" line="89"/>
         <source>TextLabel</source>
-        <translation>Επικεφαλίδα</translation>
+        <translation>Κείμενο ετικέτας</translation>
     </message>
     <message>
         <location filename="../brightness_small.ui" line="68"/>
@@ -1106,7 +1106,7 @@ name before proceeding.</source>
     <message>
         <location filename="../window_buttons.ui" line="29"/>
         <source>Show button labels</source>
-        <translation>Εμφάνιση ετικετών στα κουμπιά</translation>
+        <translation>Εμφάνιση ετικέτας στα κουμπιά</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="36"/>
@@ -1151,7 +1151,7 @@ name before proceeding.</source>
     <message>
         <location filename="../window_buttons.ui" line="89"/>
         <source>Behavior</source>
-        <translation type="unfinished"/>
+        <translation>Συμπεριφορά</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="95"/>
@@ -1206,7 +1206,7 @@ name before proceeding.</source>
     <message>
         <location filename="../window_buttons.ui" line="166"/>
         <source>Filtering</source>
-        <translation type="unfinished"/>
+        <translation>Φιλτράρισμα</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="172"/>
@@ -1239,12 +1239,12 @@ name before proceeding.</source>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="23"/>
         <source>Feature Settings</source>
-        <translation type="unfinished"/>
+        <translation>Ρυθμίσεις χαρακτηριστικών</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="29"/>
         <source>Display fullscreen overlay windows directly</source>
-        <translation>Άμεση απεικόνιση των επικαλυπτόμενων παραθύρων πλήρους οθόνης</translation>
+        <translation>Άμεση εμφάνιση επικαλυπτόμενων παραθύρων σε πλήρη οθόνη</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="36"/>
@@ -1264,7 +1264,7 @@ name before proceeding.</source>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="57"/>
         <source>Show shadows under dock windows</source>
-        <translation>Εμφάνιση σκιών κάτω από τα παράθυρα dock</translation>
+        <translation>Εμφάνιση σκιών στα παράθυρα του dock</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="64"/>

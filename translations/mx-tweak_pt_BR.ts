@@ -188,12 +188,12 @@
     <message>
         <location filename="../tweak.ui" line="301"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Toggle Dark Mode for GTK4 libadwaita applications&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ativar ou desativar o Modo Escuro para os programas GTK4 da biblioteca ‘libadwaita’&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="304"/>
         <source>Dark Mode</source>
-        <translation type="unfinished"/>
+        <translation>Modo Escuro</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="311"/>
