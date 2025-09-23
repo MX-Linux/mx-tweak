@@ -1,9 +1,9 @@
 mx-tweak (25.09.02mx25) mx; urgency=medium
 
-  * restart fluxbox after changing cursor size
+  * restart conky after changing cursor size on fluxbox
   * update translations
 
- -- Dolphin Oracle <dolphinoracle@gmail.com>  Mon, 22 Sep 2025 21:04:34 -0400
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Mon, 22 Sep 2025 21:36:07 -0400
 
 mx-tweak (25.09.01mx25) mx; urgency=medium
 
