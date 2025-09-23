@@ -869,6 +869,7 @@ void TweakTheme::spinThemeCursorSize_valueChanged(int value) noexcept
     //restart fluxbox after set
     if (desktop == Fluxbox) {
         runCmd(u"xrdb -merge $HOME/.Xresources && fluxbox-remote restart"_s);
+        runCmd(u"touch /tmp/fluxboxconkytweak"_s);
     }
 }
 

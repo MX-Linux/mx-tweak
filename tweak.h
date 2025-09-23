@@ -56,6 +56,7 @@ public:
     bool displayflag = false;
     bool themetabflag = false;
     bool othertabflag = false;
+    bool fluxboxConkyflag = false;
     bool isXfce = false;
     bool isFluxbox = false;
     bool isKDE = false;

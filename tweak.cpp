@@ -96,6 +96,10 @@ Tweak::Tweak(QWidget *parent, const QStringList &args) noexcept
 Tweak::~Tweak() noexcept
 {
     saveSettings();
+    if (QFile("/tmp/fluxboxconkytweak").exists()) {
+        runCmd("rm /tmp/fluxboxconkytweak");
+        runCmd("killall -SIGUSR1 conky");
+    }
     if (tweakTheme) delete tweakTheme;
     if (tweakPlasma) delete tweakPlasma;
     if (tweakXfce) delete tweakXfce;
