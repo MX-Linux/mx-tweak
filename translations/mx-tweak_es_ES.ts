@@ -87,7 +87,7 @@
     <message>
         <location filename="../tweak.ui" line="58"/>
         <source>Tasklist</source>
-        <translation type="unfinished"/>
+        <translation>Lista de tareas</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="64"/>
@@ -102,12 +102,12 @@
     <message>
         <location filename="../tweak.ui" line="78"/>
         <source>Tasklist Options</source>
-        <translation type="unfinished"/>
+        <translation>Opciones de la lista de tareas</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="85"/>
         <source>Docklike Options</source>
-        <translation type="unfinished"/>
+        <translation>Opciones del Docklike</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="95"/>
@@ -125,7 +125,7 @@
     <message>
         <location filename="../tweak.ui" line="114"/>
         <source>Backup/Restore Configuration (all panels)</source>
-        <translation>Hacer copia de seguridad/Restaurar la configuración (todos los paneles)</translation>
+        <translation>Copia de seguridad/Restaurar la configuración (todos los paneles)</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="127"/>
@@ -145,7 +145,7 @@
     <message>
         <location filename="../tweak.ui" line="158"/>
         <source>Panel Plugin Scales</source>
-        <translation type="unfinished"/>
+        <translation>Escalas del complemento Panel</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="164"/>
@@ -298,7 +298,7 @@
     <message>
         <location filename="../tweak.ui" line="479"/>
         <source>Picom settings</source>
-        <translation>Configuracion de Picom</translation>
+        <translation>Configuración de Picom</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="490"/>
@@ -364,7 +364,7 @@
     <message>
         <location filename="../tweak.ui" line="713"/>
         <source>Saving is per display</source>
-        <translation type="unfinished"/>
+        <translation>El guardado se aplica por pantalla.</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="716"/>
@@ -400,7 +400,7 @@
     <message>
         <location filename="../tweak.ui" line="773"/>
         <source>Do not shorten file names on the desktop</source>
-        <translation>No acortar nombres los nombres de archivo en el escritorio</translation>
+        <translation>No acortar los nombres de archivo en el escritorio.</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="783"/>
@@ -415,7 +415,7 @@
     <message>
         <location filename="../tweak.ui" line="796"/>
         <source>Reset custom right-click actions to system defaults</source>
-        <translation>Restablecer las acciones personalizadas del botón secundario (derecho) del ratón a los valores predeterminados del sistema.</translation>
+        <translation>Restablecer las acciones personalizadas del botón derecho del ratón a los valores predeterminados del sistema.</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="803"/>
@@ -481,7 +481,7 @@
     <message>
         <location filename="../tweak.ui" line="918"/>
         <source>Add new default menu items, if any, to existing fluxbox menu.</source>
-        <translation>Añadir nuevos elementos de menú por defecto, si existiera, también al menú de Fluxbox.</translation>
+        <translation>Añadir nuevos elementos de menú por defecto, si los hay, al menú Fluxbox existente.</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="921"/>
@@ -534,7 +534,7 @@
     <message>
         <location filename="../tweak.ui" line="1035"/>
         <source>Toolbar Settings</source>
-        <translation>Ajustes barra de herramientas</translation>
+        <translation>Ajustes de la Barra de herramientas</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1041"/>
@@ -560,7 +560,7 @@
     <message>
         <location filename="../tweak.ui" line="1152"/>
         <source>Dock Settings</source>
-        <translation type="unfinished"/>
+        <translation>Ajustes del Dock</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1239"/>
@@ -1206,7 +1206,7 @@ nombre diferente antes de continuar.</translation>
     <message>
         <location filename="../window_buttons.ui" line="166"/>
         <source>Filtering</source>
-        <translation type="unfinished"/>
+        <translation>Filtrado</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="172"/>
