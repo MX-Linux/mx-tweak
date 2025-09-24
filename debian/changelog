@@ -1,3 +1,10 @@
+mx-tweak (25.09.03mx25) mx; urgency=medium
+
+  * only setup display tab on Xfce where its shown
+  * only display compositor on Xfce
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Tue, 23 Sep 2025 20:12:10 -0400
+
 mx-tweak (25.09.02mx25) mx; urgency=medium
 
   * restart conky after changing cursor size on fluxbox
