@@ -63,8 +63,7 @@ Tweak::Tweak(QWidget *parent, const QStringList &args) noexcept
 {
     ui->setupUi(this);
     setWindowFlags(Qt::Window); // for the close, min and max buttons
-    // check session type
-    checkSession();
+
     if ( args.contains(u"--display"_s)) {
         if (isXfce) {
             displayflag = true;
@@ -84,6 +83,8 @@ Tweak::Tweak(QWidget *parent, const QStringList &args) noexcept
     if (args.contains(u"--verbose"_s)) {
         verbose = true;
     }
+    // check session type
+    checkSession();
 
     connect(ui->pushAbout, &QPushButton::clicked, this, &Tweak::pushAbout_clicked);
     connect(ui->pushHelp, &QPushButton::clicked, this, &Tweak::pushHelp_clicked);
@@ -155,9 +156,11 @@ void Tweak::setup() noexcept
         tweakTheme = new TweakTheme(ui, verbose, tweakXfcePanel, this);
         tweakThunar = new TweakThunar(ui, false, this);
         if (TweakCompositor::check()) {
-            tweakCompositor = new TweakCompositor(ui, verbose, this);
-        } else {
-            ui->tabWidget->removeTab(Tab::Compositor);
+            if (isXfce){
+                tweakCompositor = new TweakCompositor(ui, verbose, this);
+            } else {
+                ui->tabWidget->removeTab(Tab::Compositor);
+            }
         }
         if (isSuperkey && TweakSuperKey::checkSuperKey()) {
             tweakSuperKey = new TweakSuperKey(ui, verbose, this);
@@ -180,6 +183,7 @@ void Tweak::setup() noexcept
         ui->tabWidget->removeTab(Tab::Plasma);
         ui->tabWidget->removeTab(Tab::Config);
         ui->tabWidget->removeTab(Tab::Display);
+        ui->tabWidget->removeTab(Tab::Compositor);
         ui->tabWidget->removeTab(Tab::Panel);
         tweakFluxbox = new TweakFluxbox(ui, verbose, this);
         tweakTheme = new TweakTheme(ui, verbose, TweakTheme::Fluxbox, this);
@@ -258,7 +262,8 @@ void Tweak::pushHelp_clicked() noexcept
 
 void Tweak::tabWidget_currentChanged(int index) noexcept
 {
-    if (index == Tab::Display && tweakDisplay == nullptr) {
+    if (isXfce)
+        if (index == Tab::Display && tweakDisplay == nullptr) {
         tweakDisplay = new TweakDisplay(ui, verbose, this);
     }
 }
