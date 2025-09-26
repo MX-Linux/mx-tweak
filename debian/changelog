@@ -1,3 +1,9 @@
+mx-tweak (25.09.04mx25) mx; urgency=medium
+
+  * restore brightness control in tray mode
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Fri, 26 Sep 2025 19:57:43 -0400
+
 mx-tweak (25.09.03mx25) mx; urgency=medium
 
   * only setup display tab on Xfce where its shown
