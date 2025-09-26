@@ -193,7 +193,7 @@ void brightness_small::setBrightness() noexcept
     qDebug() << "changed brightness is :" << brightness;
     runProc(u"xrandr"_s, {u"--output"_s, ui->comboDisplay->currentText(),
         u"--brightness"_s, brightness,
-        u"--gamma"_s + g1+':'+g2+':'+g3});
+        u"--gamma"_s, g1+':'+g2+':'+g3});
 }
 
 void brightness_small::pushSave_clicked() noexcept
