@@ -112,16 +112,17 @@ void TweakMisc::setup() noexcept
     //setup bluetooth auto enable, hide box if config file doesn't exist
     if (QFile::exists(u"/etc/bluetooth/main.conf"_s)){
         flags.bluetoothAutoEnable = false;
-        test = runCmd(u"grep \"#AutoEnable=\" /etc/bluetooth/main.conf"_s).output;
+        test = runCmd(u"grep -E '^(#\\s*)?AutoEnable=' /etc/bluetooth/main.conf"_s).output;
         qDebug() << "bluetooth enable test is " << test;
-        if (! test.isEmpty() ) {
-            test = "true";
-        } else {
-            test = test = runCmd(u"grep \"^AutoEnable=\" /etc/bluetooth/main.conf"_s).output;
-            test = test.section('=',1,1);
+        if (test.contains('#')){
+            ui->checkMiscBluetoothAutoEnable->setChecked(true);
+        } else if ( test.contains("true"_L1) ){
+            ui->checkMiscBluetoothAutoEnable->setChecked(true);
+        } else if ( test.contains("false"_L1)) {
+            ui->checkMiscBluetoothAutoEnable->setChecked(false);
+        } else if ( test.isEmpty() ) {
+            ui->checkMiscBluetoothAutoEnable->hide();
         }
-        qDebug() << "bluetooth enable test is " << test;
-        ui->checkMiscBluetoothAutoEnable->setChecked(test == "true"_L1);
     } else {
         ui->checkMiscBluetoothAutoEnable->hide();
     }
