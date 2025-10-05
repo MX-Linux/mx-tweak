@@ -50,11 +50,13 @@ disable_libinput_touchpad()
 
 enable_bluetooth()
 {
+sed -i 's/#AutoEnable=.*/AutoEnable=true/' /etc/bluetooth/main.conf
 sed -i 's/^AutoEnable=.*/AutoEnable=true/' /etc/bluetooth/main.conf
 }
 
 disable_bluetooth()
 {
+sed -i 's/#AutoEnable=.*/AutoEnable=false/' /etc/bluetooth/main.conf
 sed -i 's/^AutoEnable=.*/AutoEnable=false/' /etc/bluetooth/main.conf
 }
 

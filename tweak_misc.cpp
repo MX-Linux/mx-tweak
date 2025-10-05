@@ -112,8 +112,15 @@ void TweakMisc::setup() noexcept
     //setup bluetooth auto enable, hide box if config file doesn't exist
     if (QFile::exists(u"/etc/bluetooth/main.conf"_s)){
         flags.bluetoothAutoEnable = false;
-        test = runCmd(u"grep ^AutoEnable /etc/bluetooth/main.conf"_s).output;
-        test = test.section('=',1,1);
+        test = runCmd(u"grep \"#AutoEnable=\" /etc/bluetooth/main.conf"_s).output;
+        qDebug() << "bluetooth enable test is " << test;
+        if (! test.isEmpty() ) {
+            test = "true";
+        } else {
+            test = test = runCmd(u"grep \"^AutoEnable=\" /etc/bluetooth/main.conf"_s).output;
+            test = test.section('=',1,1);
+        }
+        qDebug() << "bluetooth enable test is " << test;
         ui->checkMiscBluetoothAutoEnable->setChecked(test == "true"_L1);
     } else {
         ui->checkMiscBluetoothAutoEnable->hide();
@@ -523,9 +530,11 @@ void TweakMisc::pushMiscApply_clicked() noexcept
             (ui->checkMiscKVMVirtLoad->isChecked() ? u"on"_s : u"off"_s), kvmConfFile});
     }
 
+    //check options
+    qDebug() << "options list" << udisks_option << sudo_override_option << user_name_space_override_option << intel_option << lightdm_option << amd_option << radeon_option << bluetooth_option << recommends_option << debian_kernel_updates_option << liq_kernel_updates_option;
     //checkbox options
     if ( ! udisks_option.isEmpty() || ! sudo_override_option.isEmpty() || ! user_name_space_override_option.isEmpty() || ! intel_option.isEmpty() || ! lightdm_option.isEmpty() || ! amd_option.isEmpty() || ! radeon_option.isEmpty() || !bluetooth_option.isEmpty() || !recommends_option.isEmpty() || !debian_kernel_updates_option.isEmpty() || !liq_kernel_updates_option.isEmpty()){
-        runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh "_L1 + udisks_option + ' ' + sudo_override_option + ' ' + user_name_space_override_option + ' ' + intel_option + ' ' + amd_option + ' ' + radeon_option + ' ' + bluetooth_option + ' ' + recommends_option + ' ' + lightdm_option + ' ' + debian_kernel_updates_option + ' ' + liq_kernel_updates_option);
+        runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + udisks_option + ' ' + sudo_override_option + ' ' + user_name_space_override_option + ' ' + intel_option + ' ' + amd_option + ' ' + radeon_option + ' ' + bluetooth_option + ' ' + recommends_option + ' ' + lightdm_option + ' ' + debian_kernel_updates_option + ' ' + liq_kernel_updates_option);
     }
     //reset gui
     setup();
