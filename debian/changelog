@@ -1,3 +1,9 @@
+mx-tweak (25.10.01mx25) mx; urgency=medium
+
+  * fix bluetooth enable-disable function
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 04 Oct 2025 21:49:51 -0400
+
 mx-tweak (25.09.04mx25) mx; urgency=medium
 
   * restore brightness control in tray mode
