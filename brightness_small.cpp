@@ -32,7 +32,7 @@ brightness_small::brightness_small(QWidget *parent, const QStringList &args) noe
     QIcon icon;
     icon = QIcon::fromTheme(u"brightness-systray"_s);
     setWindowIcon(icon);
-    setWindowTitle(tr("MX-Tweak"));
+    setWindowTitle(tr("Brightness"));
     expand = false;
     QString home_path = QDir::homePath();
     QString config_file_path = home_path + "/.config/MX-Linux/MX-Tweak/expand"_L1;
