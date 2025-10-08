@@ -1,3 +1,9 @@
+mx-tweak (25.10.02mx25) mx; urgency=medium
+
+  * add NotShownIn=KDE  to brightness systray desktop file
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Tue, 07 Oct 2025 22:58:27 -0400
+
 mx-tweak (25.10.01mx25) mx; urgency=medium
 
   * fix bluetooth enable-disable function
