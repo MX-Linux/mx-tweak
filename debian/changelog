@@ -1,3 +1,9 @@
+mx-tweak (25.10.03mx25) mx; urgency=medium
+
+  * update xrandr scale set utility, xfce 4.20 uses a single value
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Thu, 16 Oct 2025 21:34:08 -0400
+
 mx-tweak (25.10.02mx25) mx; urgency=medium
 
   * add NotShownIn=KDE  to brightness systray desktop file
