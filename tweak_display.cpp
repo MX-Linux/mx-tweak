@@ -81,7 +81,6 @@ void TweakDisplay::setupScale() noexcept
 {
     //setup scale for currently shown display and in the active profile
     QString xscale = u"1"_s;
-    QString yscale = u"1"_s;
     double scale = 1;
 
     //get active profile
@@ -89,29 +88,19 @@ void TweakDisplay::setupScale() noexcept
     const QString &cmdquery = "LANG=C xfconf-query --channel displays -p /"_L1
         + activeProfile + '/' + ui->comboDisplay->currentText();
     //get scales for display show in combobox
-    Result res = runCmd(cmdquery + "/Scale/X"_L1);
+    Result res = runCmd(cmdquery + "/Scale"_L1);
     if (res.exitCode == 0) {
         xscale = res.output;
-    }
-    res = runCmd(cmdquery + "/Scale/Y"_L1);
-    if (res.exitCode == 0) {
-        yscale = res.output;
     }
 
     // since we want scales equal, set the scale spin box to xscale.  invert so that 2 = .5
     scale = 1 / xscale.toDouble();
     if (verbose) {
         qDebug() << "active profile is: " << activeProfile
-            << " xscale is " << xscale << " yscale is " << yscale << " scale is: " << scale;
+            << " xscale is " << xscale << " scale is: " << scale;
     }
     ui->spinDisplayScale->setValue(scale);
 
-    //hide scale setup if X and Y don't match
-    if ( xscale != yscale) {
-        ui->spinDisplayScale->hide();
-        ui->labelDisplayScale->hide();
-        ui->pushDisplayApplyScaling->hide();
-    }
 }
 void TweakDisplay::setScale() noexcept
 {
@@ -128,14 +117,13 @@ void TweakDisplay::setScale() noexcept
 
     //set scale value
     const QStringList args1{u"--channel"_s, u"displays"_s, u"-p"_s,
-        '/' + activeProfile + '/' + ui->comboDisplay->currentText()};
+        '/' + activeProfile + '/' + ui->comboDisplay->currentText() + "/Scale"};
     const QStringList args2{u"-t"_s, u"double"_s, u"-s"_s, scaleString, u"--create"_s};
-    runProc(u"xfconf-query"_s, QStringList() << args1 << u"/Scale/Y"_s << args2);
-    runProc(u"xfconf-query"_s, QStringList() << args1 << u"/Scale/X"_s << args2);
+    runProc(u"xfconf-query"_s, QStringList() << args1 << args2);
 
     //set initial scale with xrandr
     runProc(u"xrandr"_s, {u"--output"_s, ui->comboDisplay->currentText(),
-        u"--scale"_s, scaleString + 'x' + scaleString});
+       u"--scale"_s, scaleString + 'x' + scaleString});
 }
 
 void TweakDisplay::setRefreshRate(const QString &display, const QString &resolution, const QString &activeProfile) const noexcept
