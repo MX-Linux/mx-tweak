@@ -1,3 +1,10 @@
+mx-tweak (25.10.04mx25) mx; urgency=medium
+
+  * fix dark mode checkbox action
+  * update translations
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Mon, 27 Oct 2025 18:34:53 -0400
+
 mx-tweak (25.10.03mx25) mx; urgency=medium
 
   * update xrandr scale set utility, xfce 4.20 uses a single value
