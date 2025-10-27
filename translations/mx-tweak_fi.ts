@@ -25,7 +25,7 @@
     <message>
         <location filename="../main.cpp" line="55"/>
         <source>GUI for applying assorted useful tweaks</source>
-        <translation>GUI-tweaks erilaisia hyödyllisiä säätöjä</translation>
+        <translation>Erilaisia hyödyllisiä säätöjä</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="58"/>
@@ -107,7 +107,7 @@
     <message>
         <location filename="../tweak.ui" line="85"/>
         <source>Docklike Options</source>
-        <translation>Telakamaiset asetukset</translation>
+        <translation>Telakka lisäasetukset</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="95"/>
@@ -125,17 +125,17 @@
     <message>
         <location filename="../tweak.ui" line="114"/>
         <source>Backup/Restore Configuration (all panels)</source>
-        <translation>Varmistus- ja palautusasetukset (kaikki paneelit)</translation>
+        <translation>Varmistus ja palautus (kaikki paneelit)</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="127"/>
         <source>Backup current panel configuration</source>
-        <translation>Varmuuskopioi nykyinen paneelin konfiguraatio</translation>
+        <translation>Varmuuskopioi nykyisen paneelin määritykset</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="141"/>
         <source>Restore selected panel configuration</source>
-        <translation>Palauta valitut paneelin asetukset</translation>
+        <translation>Palauta valitusta paneelin määritykset</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="148"/>
@@ -293,7 +293,7 @@
     <message>
         <location filename="../tweak.ui" line="476"/>
         <source>Launch compton-conf configuration tool</source>
-        <translation>Käynnistä compton-conf konfigurointityökalut</translation>
+        <translation>Käynnistä compton-conf määritystyökalu</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="479"/>
@@ -384,12 +384,12 @@
     <message>
         <location filename="../tweak.ui" line="752"/>
         <source>Enable single-click on desktop</source>
-        <translation>Avaa työpöydän kohteet yhdellä napsautuksella</translation>
+        <translation>Avaa työpöydän kohteet yhdellä painalluksella</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="759"/>
         <source>Enable Desktop Zoom </source>
-        <translation>Ota käyttöön työpöydän suurennus</translation>
+        <translation>Käytä työpöydän suurennusta</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="766"/>
@@ -410,22 +410,22 @@
     <message>
         <location filename="../tweak.ui" line="789"/>
         <source>Enable single-click in Thunar File Manager</source>
-        <translation>Avaa Thunar-tiedostonhallinnan kohteet yhdellä napsautuksella</translation>
+        <translation>Avaa tiedostot yhdellä painalluksella</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="796"/>
         <source>Reset custom right-click actions to system defaults</source>
-        <translation>Palauta hiiren kakkospainikkeen toiminnot oletuksiin</translation>
+        <translation>Palauta hiiren kakkospainike oletuksiin</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="803"/>
         <source>Thunar windows always open in split view</source>
-        <translation>Thunar-ikkunat avautuvat aina jaetussa näkymässä</translation>
+        <translation>Avaa ohjelma aina jaetussa kahden palstan näkymässä</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="810"/>
         <source>Thunar split view opens horizontal</source>
-        <translation>Thunarin jaettu näkymä avautuu vaakaan</translation>
+        <translation>Avaa jaettu näkymä aina vaakaan</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="820"/>
@@ -440,12 +440,12 @@
     <message>
         <location filename="../tweak.ui" line="834"/>
         <source>(also turns off Client Side Decorations for Xfce applications)</source>
-        <translation>(poistaa käytöstä Xfce-sovellusten koristeet)</translation>
+        <translation>(poistaa käytöstä koristeet xfce-sovellusksista)</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="844"/>
         <source>Enable hibernate on Log Out menu </source>
-        <translation>Aseta horrostila valittavaksi uloskirjautumisvalikkoon</translation>
+        <translation>Aseta lepotila valittavaksi &quot;Kirjaudu ulos&quot; -valikossa</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="851"/>
@@ -471,7 +471,7 @@
     <message>
         <location filename="../tweak.ui" line="904"/>
         <source>Reset Fluxbox Menu</source>
-        <translation>Nollaa Fluxbox-valikko</translation>
+        <translation>Nollaa Fluxbox</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="911"/>
@@ -496,7 +496,7 @@
     <message>
         <location filename="../tweak.ui" line="937"/>
         <source>Toggle desktop icons</source>
-        <translation>Kytke päälle työpöydän kuvakkeet</translation>
+        <translation>Näytä tai piilota työpöydän kuvakkeet</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="945"/>
@@ -575,7 +575,7 @@
     <message>
         <location filename="../tweak.ui" line="1279"/>
         <source>Affects 1st panel</source>
-        <translation>Vaikuttaa ensimmäiseen paneeliin</translation>
+        <translation>Vaikuttaa paneeliin nro.1</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1296"/>
@@ -611,18 +611,18 @@
     <message>
         <location filename="../tweak.ui" line="1348"/>
         <source>Enable single-click</source>
-        <translation>Kytke päälle kohteiden avaaminen yhdellä napsautuksella</translation>
+        <translation>Käytä avaamista yhdellä painalluksella</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1371"/>
         <source>Reset KDE/Plasma defaults</source>
-        <translation>Palauta KDE/Plasma vakioasetukset</translation>
+        <translation>Palauta KDE Plasma oletukset</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1405"/>
         <source>Super Key</source>
         <extracomment>referring to the meta or Left Super Key</extracomment>
-        <translation>Lippu näppäin</translation>
+        <translation>Lippu-näppäin</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1411"/>
@@ -633,7 +633,7 @@
         <location filename="../tweak.ui" line="1414"/>
         <source>Command to run with Super (Meta) key</source>
         <extracomment>label for the field to enter the command to use with super key</extracomment>
-        <translation>Komento joka ajetaan Super (Meta) näppäimellä</translation>
+        <translation>Suoritettava komento Super (Meta) näppäimelle</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1424"/>
@@ -854,7 +854,7 @@
     <message>
         <location filename="../tweak.cpp" line="232"/>
         <source>About MX Tweak</source>
-        <translation>Tietoja MX Tweakista</translation>
+        <translation>Tietoja MX Tweak</translation>
     </message>
     <message>
         <location filename="../tweak.cpp" line="234"/>
@@ -864,7 +864,7 @@
     <message>
         <location filename="../tweak.cpp" line="235"/>
         <source>App for quick default ui theme changes and tweaks</source>
-        <translation>Sovellus nopeisiin oletus-käyttöliittymäteeman muutoksiin ja virittämiseen</translation>
+        <translation>Sovellus oletus-käyttöliittymäteeman muutoksiin ja virittämiseen</translation>
     </message>
     <message>
         <location filename="../tweak.cpp" line="237"/>
@@ -934,7 +934,7 @@ nimi ennen jatkamista.</translation>
         <location filename="../tweak_theme.cpp" line="64"/>
         <source>Plasma Widget Themes</source>
         <comment>theme style of the kde plasma widgets</comment>
-        <translation>Plasma-widget-teemat</translation>
+        <translation>Plasma Widget teemat</translation>
     </message>
     <message>
         <location filename="../tweak_theme.cpp" line="65"/>
@@ -1056,7 +1056,7 @@ nimi ennen jatkamista.</translation>
     <message>
         <location filename="../brightness_small.cpp" line="35"/>
         <source>MX-Tweak</source>
-        <translation>MX-viritys</translation>
+        <translation>MX Tweak</translation>
     </message>
     <message>
         <location filename="../brightness_small.cpp" line="54"/>
@@ -1087,7 +1087,7 @@ nimi ennen jatkamista.</translation>
     <message>
         <location filename="../theming_to_tweak.ui" line="20"/>
         <source>Enter name for new theme set</source>
-        <translation>Syötä nimi uudelle teemavalikoimalle</translation>
+        <translation>Anna nimi uudelle teemavalikoimalle</translation>
     </message>
 </context>
 <context>
@@ -1171,7 +1171,7 @@ nimi ennen jatkamista.</translation>
     <message>
         <location filename="../window_buttons.ui" line="116"/>
         <source>Middle click action:</source>
-        <translation>Keskimmäisen näppäimen toiminto:</translation>
+        <translation>Keskipainikkeen toiminta:</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="124"/>

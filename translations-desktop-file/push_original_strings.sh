@@ -8,5 +8,5 @@
 
 RESOURCE="$(basename $(dirname $(pwd)))-desktop"
 
-tx push -r antix-development.${RESOURCE} --translations --force
+tx push -r antix-development.${RESOURCE} --translation --force
 

@@ -25,12 +25,12 @@
     <message>
         <location filename="../main.cpp" line="55"/>
         <source>GUI for applying assorted useful tweaks</source>
-        <translation type="unfinished"/>
+        <translation>多項有用調校的GUI工具</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="58"/>
         <source>launches brightness-systray</source>
-        <translation type="unfinished"/>
+        <translation>啟動亮度 systray</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="59"/>
@@ -66,7 +66,7 @@
     <message>
         <location filename="../tweak.ui" line="33"/>
         <source>Xfce Panel</source>
-        <translation type="unfinished"/>
+        <translation>XFCE 面板</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="39"/>
@@ -87,7 +87,7 @@
     <message>
         <location filename="../tweak.ui" line="58"/>
         <source>Tasklist</source>
-        <translation type="unfinished"/>
+        <translation>任務清單</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="64"/>
@@ -125,7 +125,7 @@
     <message>
         <location filename="../tweak.ui" line="114"/>
         <source>Backup/Restore Configuration (all panels)</source>
-        <translation type="unfinished"/>
+        <translation>備份/回復組態（所有的面板）</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="127"/>
@@ -135,17 +135,17 @@
     <message>
         <location filename="../tweak.ui" line="141"/>
         <source>Restore selected panel configuration</source>
-        <translation type="unfinished"/>
+        <translation>回復點選的面板之組態</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="148"/>
         <source>Restore default panel</source>
-        <translation>回復成預設邊條</translation>
+        <translation>回復成預設面板</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="158"/>
         <source>Panel Plugin Scales</source>
-        <translation type="unfinished"/>
+        <translation>面板插件縮放</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="164"/>
@@ -157,17 +157,17 @@
         <location filename="../tweak.ui" line="184"/>
         <source>Power Manager</source>
         <extracomment>power manager plugin scale factor</extracomment>
-        <translation type="unfinished"/>
+        <translation>電源管理器</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="221"/>
         <source>Theme</source>
-        <translation>佈景</translation>
+        <translation>佈景主題</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="227"/>
         <source>Theme Options</source>
-        <translation>佈景選項 </translation>
+        <translation>佈景主題選項 </translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="262"/>
@@ -193,7 +193,7 @@
     <message>
         <location filename="../tweak.ui" line="304"/>
         <source>Dark Mode</source>
-        <translation type="unfinished"/>
+        <translation>深色模式</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="311"/>
@@ -205,7 +205,7 @@
     <message>
         <location filename="../tweak.ui" line="331"/>
         <source>Legacy Styles</source>
-        <translation type="unfinished"/>
+        <translation>傳統風格</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="344"/>

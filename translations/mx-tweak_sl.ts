@@ -97,7 +97,7 @@
     <message>
         <location filename="../tweak.ui" line="71"/>
         <source>Docklike is the modern dock plugin for the panel. Window Buttons is the classic tasklist without dock features.</source>
-        <translation type="unfinished"/>
+        <translation>Docklike je moderen vtičnik za sidrišče na panoju. Windows Buttons je klasični seznam opravil brez funkciji sidrišča.</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="78"/>
@@ -107,12 +107,12 @@
     <message>
         <location filename="../tweak.ui" line="85"/>
         <source>Docklike Options</source>
-        <translation type="unfinished"/>
+        <translation>Docklike možnosti</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="95"/>
         <source>Affects 1st Panel</source>
-        <translation type="unfinished"/>
+        <translation>Vpliva na prvi pano</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="101"/>
@@ -125,7 +125,7 @@
     <message>
         <location filename="../tweak.ui" line="114"/>
         <source>Backup/Restore Configuration (all panels)</source>
-        <translation type="unfinished"/>
+        <translation>Varnostno kopiraj/Obnovi konfiguracijo (vsi panoji)</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="127"/>
@@ -135,7 +135,7 @@
     <message>
         <location filename="../tweak.ui" line="141"/>
         <source>Restore selected panel configuration</source>
-        <translation type="unfinished"/>
+        <translation>Obnovi izbrano konfiguracijo panoja</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="148"/>
@@ -145,7 +145,7 @@
     <message>
         <location filename="../tweak.ui" line="158"/>
         <source>Panel Plugin Scales</source>
-        <translation type="unfinished"/>
+        <translation>Povečava vtičnika panoja</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="164"/>
@@ -188,7 +188,7 @@
     <message>
         <location filename="../tweak.ui" line="301"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Toggle Dark Mode for GTK4 libadwaita applications&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Preklopi temni način za GTK4 libadwaita programe &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="304"/>
@@ -217,7 +217,7 @@
         <location filename="../tweak.ui" line="351"/>
         <source>Cursors</source>
         <extracomment>cursor theme</extracomment>
-        <translation type="unfinished"/>
+        <translation>Kazalci</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="358"/>
@@ -246,7 +246,7 @@
     <message>
         <location filename="../tweak.ui" line="413"/>
         <source>Changing the VBlank mode may help alleviate some screen tearing issues. See Help for more information.</source>
-        <translation type="unfinished"/>
+        <translation>Spreminjanje VBlank načina lahko odpravi težave s prelivanjem sličic na zaslonu. Glej pomoč za več podatkov.</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="416"/>
@@ -283,7 +283,7 @@
     <message>
         <location filename="../tweak.ui" line="463"/>
         <source>Xfce Compositor Settings</source>
-        <translation type="unfinished"/>
+        <translation>Nastavitve za Xfwm kompozitor</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="466"/>
@@ -298,7 +298,7 @@
     <message>
         <location filename="../tweak.ui" line="479"/>
         <source>Picom settings</source>
-        <translation type="unfinished"/>
+        <translation>Picom nastavitve</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="490"/>
@@ -308,7 +308,7 @@
     <message>
         <location filename="../tweak.ui" line="493"/>
         <source>Edit picom.conf</source>
-        <translation type="unfinished"/>
+        <translation>Uredi picom.conf</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="540"/>
@@ -318,7 +318,7 @@
     <message>
         <location filename="../tweak.ui" line="546"/>
         <source>Display Tweaks</source>
-        <translation type="unfinished"/>
+        <translation>Prikaži prilagoditve</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="552"/>
@@ -364,7 +364,7 @@
     <message>
         <location filename="../tweak.ui" line="713"/>
         <source>Saving is per display</source>
-        <translation type="unfinished"/>
+        <translation>Shranjuje se za en zaslon</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="716"/>
@@ -415,7 +415,7 @@
     <message>
         <location filename="../tweak.ui" line="796"/>
         <source>Reset custom right-click actions to system defaults</source>
-        <translation type="unfinished"/>
+        <translation>Ponastavi dejanja za desni klik po meri na sistemsko privzete</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="803"/>
@@ -440,7 +440,7 @@
     <message>
         <location filename="../tweak.ui" line="834"/>
         <source>(also turns off Client Side Decorations for Xfce applications)</source>
-        <translation type="unfinished"/>
+        <translation>(za Xfce programe izklopi tudi  okrasitve s strani odjemalca)</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="844"/>
@@ -450,7 +450,7 @@
     <message>
         <location filename="../tweak.ui" line="851"/>
         <source>note: to hibernate, swap needs to be &gt;= RAM</source>
-        <translation type="unfinished"/>
+        <translation>opomba: za spanje mora biti swap &gt;= RAM</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="885"/>
@@ -461,7 +461,7 @@
         <location filename="../tweak.ui" line="891"/>
         <location filename="../tweak.ui" line="1365"/>
         <source>Reset Defaults</source>
-        <translation type="unfinished"/>
+        <translation>Ponastavi na privzeto</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="897"/>
@@ -481,7 +481,7 @@
     <message>
         <location filename="../tweak.ui" line="918"/>
         <source>Add new default menu items, if any, to existing fluxbox menu.</source>
-        <translation type="unfinished"/>
+        <translation>Dodaj nove privzete predmete menija, če obstajajo, v obstoječi fluxbox meni.</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="921"/>
@@ -491,7 +491,7 @@
     <message>
         <location filename="../tweak.ui" line="931"/>
         <source>Desktop Icons</source>
-        <translation type="unfinished"/>
+        <translation>Ikone namizja</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="937"/>
@@ -534,7 +534,7 @@
     <message>
         <location filename="../tweak.ui" line="1035"/>
         <source>Toolbar Settings</source>
-        <translation type="unfinished"/>
+        <translation>Nastavitve orodne vrstice</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1041"/>
@@ -560,7 +560,7 @@
     <message>
         <location filename="../tweak.ui" line="1152"/>
         <source>Dock Settings</source>
-        <translation type="unfinished"/>
+        <translation>Nastavitve sidrišča</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1239"/>
@@ -627,7 +627,7 @@
     <message>
         <location filename="../tweak.ui" line="1411"/>
         <source>Also known as the &quot;windows&quot; key</source>
-        <translation type="unfinished"/>
+        <translation>Znana tudi kot tipka &quot;windows&quot;</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1414"/>
@@ -639,18 +639,18 @@
         <location filename="../tweak.ui" line="1424"/>
         <source>xfce-superkey defaults</source>
         <extracomment>indicates that xfce-superkey will select a command by its default logic</extracomment>
-        <translation type="unfinished"/>
+        <translation>xfce-superkey privzeto</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1431"/>
         <source>Choose application</source>
         <extracomment>description of button action to launch file dialog to choose an application</extracomment>
-        <translation type="unfinished"/>
+        <translation>Izberite program</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1462"/>
         <source>Miscellaneous</source>
-        <translation type="unfinished"/>
+        <translation>Razno</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1468"/>
@@ -670,7 +670,7 @@
     <message>
         <location filename="../tweak.ui" line="1489"/>
         <source>requires reboot</source>
-        <translation type="unfinished"/>
+        <translation>zahteva ponovni zagon</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1492"/>
@@ -687,7 +687,7 @@
         <location filename="../tweak.ui" line="1506"/>
         <source>Early loading of KVM module is new to  kernel 6.12 and conflicts with some non-KVM virtual machine applications, including virtualbox</source>
         <extracomment>early loading is new on 6.12 kernel and conflicts with virtualbox</extracomment>
-        <translation type="unfinished"/>
+        <translation>Zgodnje nalaganje KVM modula je novost v jedru 6.12 in ne deluje z nekaterimi ne-KVM programi za virtualizacijo, vključno s programom Virtualbox. </translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1509"/>
@@ -742,7 +742,7 @@
     <message>
         <location filename="../tweak.ui" line="1583"/>
         <source>NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
-        <translation type="unfinished"/>
+        <translation>POMNI: obstoječi /etc/X11/xorg.conf.d/20-intel.conf bo varnostno kopiran v domačo home mapo</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1590"/>
@@ -752,7 +752,7 @@
     <message>
         <location filename="../tweak.ui" line="1597"/>
         <source>NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
-        <translation type="unfinished"/>
+        <translation>POMNI: obstoječi /etc/X11/xorg.conf.d/20-amd.conf bo varnostno shranjen v domačo home mapo</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1604"/>
@@ -762,7 +762,7 @@
     <message>
         <location filename="../tweak.ui" line="1611"/>
         <source>NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
-        <translation type="unfinished"/>
+        <translation>POMNI: obstoječi /etc/X11/xorg.conf.d/20-radeon.conf bo varnostno kopiran v domačo home mapo</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1618"/>
@@ -799,7 +799,7 @@
     <message>
         <location filename="../tweak.ui" line="1711"/>
         <source>Customize the panel</source>
-        <translation type="unfinished"/>
+        <translation>Prilagodi pano</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1721"/>
@@ -809,12 +809,12 @@
     <message>
         <location filename="../tweak.ui" line="1741"/>
         <source>Configure window behavior and shortcuts</source>
-        <translation type="unfinished"/>
+        <translation>Nastavi obnašanje oken in bližnjice</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1774"/>
         <source>Customize the look of your desktop</source>
-        <translation type="unfinished"/>
+        <translation>Prilagodi videz namizja</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1787"/>
@@ -897,7 +897,7 @@
     <message>
         <location filename="../tweak_compositor.cpp" line="64"/>
         <source>Picom</source>
-        <translation type="unfinished"/>
+        <translation>Picom</translation>
     </message>
 </context>
 <context>
@@ -959,27 +959,27 @@ drugo ime, preden lahko nadaljujete.</translation>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="17"/>
         <source>Horizontal (Bottom)</source>
-        <translation type="unfinished"/>
+        <translation>Vodoravno (spodaj)</translation>
     </message>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="18"/>
         <source>Horizontal (Top)</source>
-        <translation type="unfinished"/>
+        <translation>Vodoravno (zgoraj)</translation>
     </message>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="20"/>
         <source>Vertical (Left)</source>
-        <translation type="unfinished"/>
+        <translation>Navpično (levo)</translation>
     </message>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="21"/>
         <source>Vertical (Right)</source>
-        <translation type="unfinished"/>
+        <translation>Navpično (desno)</translation>
     </message>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="23"/>
         <source>docklike</source>
-        <translation type="unfinished"/>
+        <translation>docklike</translation>
     </message>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="24"/>
@@ -1151,7 +1151,7 @@ drugo ime, preden lahko nadaljujete.</translation>
     <message>
         <location filename="../window_buttons.ui" line="89"/>
         <source>Behavior</source>
-        <translation type="unfinished"/>
+        <translation>Obnašanje</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="95"/>
@@ -1206,7 +1206,7 @@ drugo ime, preden lahko nadaljujete.</translation>
     <message>
         <location filename="../window_buttons.ui" line="166"/>
         <source>Filtering</source>
-        <translation type="unfinished"/>
+        <translation>Filtriranje</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="172"/>
@@ -1239,7 +1239,7 @@ drugo ime, preden lahko nadaljujete.</translation>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="23"/>
         <source>Feature Settings</source>
-        <translation type="unfinished"/>
+        <translation>Funkcionalne nastavitve</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="29"/>
@@ -1274,7 +1274,7 @@ drugo ime, preden lahko nadaljujete.</translation>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="74"/>
         <source>Opacity Settings</source>
-        <translation type="unfinished"/>
+        <translation>Nastavitve prekrivnosti</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="80"/>
