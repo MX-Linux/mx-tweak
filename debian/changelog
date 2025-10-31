@@ -1,3 +1,9 @@
+mx-tweak (25.10.05mx25) mx; urgency=medium
+
+  * refresh themes and panel if applets are used
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Fri, 31 Oct 2025 19:33:32 -0400
+
 mx-tweak (25.10.04mx25) mx; urgency=medium
 
   * fix dark mode checkbox action
