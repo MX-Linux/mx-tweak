@@ -203,13 +203,19 @@ void TweakXfce::pushXfceApply_clicked() noexcept
 
 void TweakXfce::pushXfceAppearance_clicked() noexcept
 {
+    ui->groupXFCESettings->setEnabled(false);
     ui->tabWidget->setEnabled(false);
     runProc(u"xfce4-appearance-settings"_s);
+    emit toolRun();
     ui->tabWidget->setEnabled(true);
+    ui->groupXFCESettings->setEnabled(true);
 }
 void TweakXfce::pushXfceWindowManager_clicked() noexcept
 {
+    ui->groupXFCESettings->setEnabled(false);
     ui->tabWidget->setEnabled(false);
     runProc(u"xfwm4-settings"_s);
+    emit toolRun();
     ui->tabWidget->setEnabled(true);
+    ui->groupXFCESettings->setEnabled(true);
 }

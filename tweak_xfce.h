@@ -16,6 +16,9 @@ public:
     void setup() noexcept;
     bool checkXfce() const noexcept;
 
+signals:
+    void toolRun() noexcept;
+
 private:
     Ui::Tweak *ui;
 

@@ -726,6 +726,7 @@ void TweakXfcePanel::setPosition() noexcept
 
 void TweakXfcePanel::pushXfcePanelSettings_clicked() noexcept
 {
+    ui->groupXFCESettings->setEnabled(false);
     ui->tabWidget->setEnabled(false);
     runProc(u"xfce4-panel"_s, {u"--preferences"_s});
     runProc(u"xprop"_s, {u"-spy"_s, u"-name"_s, u"Panel Preferences"_s});
@@ -747,6 +748,7 @@ void TweakXfcePanel::pushXfcePanelSettings_clicked() noexcept
 
     setup();
     ui->tabWidget->setEnabled(true);
+    ui->groupXFCESettings->setEnabled(true);
 }
 
 void TweakXfcePanel::sleep(int msec) noexcept

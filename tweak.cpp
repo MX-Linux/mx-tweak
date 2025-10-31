@@ -155,6 +155,7 @@ void Tweak::setup() noexcept
         tweakXfcePanel = new TweakXfcePanel(ui, verbose, this);
         tweakTheme = new TweakTheme(ui, verbose, tweakXfcePanel, this);
         tweakThunar = new TweakThunar(ui, false, this);
+        connect(tweakXfce, &TweakXfce::toolRun, tweakTheme, &TweakTheme::setup);
         if (TweakCompositor::check()) {
             if (isXfce){
                 tweakCompositor = new TweakCompositor(ui, verbose, this);
