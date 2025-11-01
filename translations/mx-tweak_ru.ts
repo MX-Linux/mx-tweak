@@ -1,4 +1,6 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="ru">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="ru">
 <context>
     <name>QObject</name>
     <message>
@@ -57,9 +59,9 @@
     <name>Tweak</name>
     <message>
         <location filename="../tweak.ui" line="14"/>
-        <location filename="../tweak.cpp" line="72"/>
-        <location filename="../tweak.cpp" line="233"/>
-        <location filename="../tweak.cpp" line="252"/>
+        <location filename="../tweak.cpp" line="71"/>
+        <location filename="../tweak.cpp" line="242"/>
+        <location filename="../tweak.cpp" line="261"/>
         <source>MX Tweak</source>
         <translation>MX Tweak</translation>
     </message>
@@ -71,15 +73,15 @@
     <message>
         <location filename="../tweak.ui" line="39"/>
         <location filename="../tweak.ui" line="233"/>
-        <location filename="../tweak.ui" line="520"/>
-        <location filename="../tweak.ui" line="599"/>
-        <location filename="../tweak.ui" line="655"/>
-        <location filename="../tweak.ui" line="682"/>
-        <location filename="../tweak.ui" line="874"/>
-        <location filename="../tweak.ui" line="1265"/>
-        <location filename="../tweak.ui" line="1394"/>
-        <location filename="../tweak.ui" line="1441"/>
-        <location filename="../tweak.ui" line="1691"/>
+        <location filename="../tweak.ui" line="508"/>
+        <location filename="../tweak.ui" line="587"/>
+        <location filename="../tweak.ui" line="643"/>
+        <location filename="../tweak.ui" line="670"/>
+        <location filename="../tweak.ui" line="862"/>
+        <location filename="../tweak.ui" line="1253"/>
+        <location filename="../tweak.ui" line="1382"/>
+        <location filename="../tweak.ui" line="1429"/>
+        <location filename="../tweak.ui" line="1679"/>
         <source>Apply</source>
         <extracomment>apply changes</extracomment>
         <translation>Применить</translation>
@@ -87,7 +89,7 @@
     <message>
         <location filename="../tweak.ui" line="58"/>
         <source>Tasklist</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="64"/>
@@ -116,9 +118,9 @@
     </message>
     <message>
         <location filename="../tweak.ui" line="101"/>
-        <location filename="../tweak.ui" line="1048"/>
-        <location filename="../tweak.ui" line="1158"/>
-        <location filename="../tweak.ui" line="1285"/>
+        <location filename="../tweak.ui" line="1036"/>
+        <location filename="../tweak.ui" line="1146"/>
+        <location filename="../tweak.ui" line="1273"/>
         <source>Placement</source>
         <translation>Размещение</translation>
     </message>
@@ -145,7 +147,7 @@
     <message>
         <location filename="../tweak.ui" line="158"/>
         <source>Panel Plugin Scales</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="164"/>
@@ -186,698 +188,698 @@
         <translation>Приложение</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="301"/>
+        <location filename="../tweak.ui" line="295"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Toggle Dark Mode for GTK4 libadwaita applications&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Переключить Темную тему для приложений GTK4 libadwaita&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="304"/>
+        <location filename="../tweak.ui" line="298"/>
         <source>Dark Mode</source>
         <translation>Темная тема</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="311"/>
-        <location filename="../tweak.ui" line="1754"/>
+        <location filename="../tweak.ui" line="305"/>
+        <location filename="../tweak.ui" line="1742"/>
         <source>Window Manager</source>
         <extracomment>theme a window manager border will get</extracomment>
         <translation>Оконный менеджер</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="331"/>
+        <location filename="../tweak.ui" line="319"/>
         <source>Legacy Styles</source>
         <translation>Устаревшие стили</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="344"/>
+        <location filename="../tweak.ui" line="332"/>
         <source>Icons</source>
         <extracomment>icon theme</extracomment>
         <translation>Значки</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="351"/>
+        <location filename="../tweak.ui" line="339"/>
         <source>Cursors</source>
         <extracomment>cursor theme</extracomment>
         <translation>Курсоры</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="358"/>
+        <location filename="../tweak.ui" line="346"/>
         <source>Save Current Settings as a Theme Set</source>
         <extracomment>save theme settings as a group</extracomment>
         <translation>Сохранить текущие настройки как набор тем</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="368"/>
+        <location filename="../tweak.ui" line="356"/>
         <source>Size</source>
         <extracomment>size of the cursor</extracomment>
         <translation>Размер</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="378"/>
+        <location filename="../tweak.ui" line="366"/>
         <source>default</source>
         <extracomment>default cursor size determined by X server</extracomment>
         <translation>по умолчанию</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="401"/>
-        <location filename="../tweak.ui" line="453"/>
+        <location filename="../tweak.ui" line="389"/>
+        <location filename="../tweak.ui" line="441"/>
         <source>Compositor</source>
         <translation>Композитор</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="413"/>
+        <location filename="../tweak.ui" line="401"/>
         <source>Changing the VBlank mode may help alleviate some screen tearing issues. See Help for more information.</source>
         <translation>Изменение режима VBlank может смягчить некоторые проблемы тиринга. Для подробностей смотрите Справку.</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="416"/>
+        <location filename="../tweak.ui" line="404"/>
         <source>VBlank</source>
         <translation>VBlank</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="424"/>
+        <location filename="../tweak.ui" line="412"/>
         <source>auto</source>
         <translation>авторежим</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="429"/>
+        <location filename="../tweak.ui" line="417"/>
         <source>glx</source>
         <translation>glx</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="434"/>
+        <location filename="../tweak.ui" line="422"/>
         <source>xpresent</source>
         <translation>xpresent</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="439"/>
-        <location filename="../tweak.ui" line="1022"/>
+        <location filename="../tweak.ui" line="427"/>
+        <location filename="../tweak.ui" line="1010"/>
         <source>off</source>
         <extracomment>setting to 0 turns off screensaver screen blank</extracomment>
         <translation>откл.</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="447"/>
+        <location filename="../tweak.ui" line="435"/>
         <source>Transparency and shadow options</source>
         <translation>Параметры прозрачности и теней</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="463"/>
+        <location filename="../tweak.ui" line="451"/>
         <source>Xfce Compositor Settings</source>
         <translation>Настройки композитора Xfce</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="466"/>
+        <location filename="../tweak.ui" line="454"/>
         <source>Xfwm Settings</source>
         <translation>Настройки Xfwm</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="476"/>
+        <location filename="../tweak.ui" line="464"/>
         <source>Launch compton-conf configuration tool</source>
         <translation>Запустить конфигуратор compton-conf</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="479"/>
+        <location filename="../tweak.ui" line="467"/>
         <source>Picom settings</source>
         <translation>Настройки Picom</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="490"/>
+        <location filename="../tweak.ui" line="478"/>
         <source>Edit compton.conf directly in text editor</source>
         <translation>Править compton.conf в текстовом редакторе</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="493"/>
+        <location filename="../tweak.ui" line="481"/>
         <source>Edit picom.conf</source>
         <translation>Править picom.conf</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="540"/>
+        <location filename="../tweak.ui" line="528"/>
         <source>Display</source>
         <translation>Экран</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="546"/>
+        <location filename="../tweak.ui" line="534"/>
         <source>Display Tweaks</source>
         <translation>Твики экрана</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="552"/>
+        <location filename="../tweak.ui" line="540"/>
         <source>Hardware Backlight</source>
         <extracomment>set the hardware backlight on monitors that have them</extracomment>
         <translation>Аппаратная подсветка</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="575"/>
-        <location filename="../tweak.ui" line="706"/>
+        <location filename="../tweak.ui" line="563"/>
+        <location filename="../tweak.ui" line="694"/>
         <source>TextLabel</source>
         <translation>TextLabel</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="582"/>
+        <location filename="../tweak.ui" line="570"/>
         <source>GTK scaling</source>
         <extracomment>gtk scale factor</extracomment>
         <translation>Масштабирование GTK</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="635"/>
+        <location filename="../tweak.ui" line="623"/>
         <source>Choose Display for xrandr tweaks</source>
         <extracomment>choose the display that the xrandr tweaks will be acted upon</extracomment>
         <translation>Выберите экран для настроек xrandr</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="645"/>
+        <location filename="../tweak.ui" line="633"/>
         <source>Resolution</source>
         <translation>Разрешение</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="662"/>
+        <location filename="../tweak.ui" line="650"/>
         <source>xrandr Scaling</source>
         <extracomment>xrandr scale factor</extracomment>
         <translation>Масштабирование xrandr</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="689"/>
+        <location filename="../tweak.ui" line="677"/>
         <source>Software (xrandr) Brightness</source>
         <extracomment>adjust brightness (not backlight) via software</extracomment>
         <translation>Программная (xrandr) яркость</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="713"/>
+        <location filename="../tweak.ui" line="701"/>
         <source>Saving is per display</source>
         <translation>Сохраняет для каждого экрана</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="716"/>
+        <location filename="../tweak.ui" line="704"/>
         <source>Save</source>
         <translation>Сохранить</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="740"/>
+        <location filename="../tweak.ui" line="728"/>
         <source>Xfce</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="746"/>
+        <location filename="../tweak.ui" line="734"/>
         <source>Desktop</source>
         <translation>Рабочий стол</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="752"/>
+        <location filename="../tweak.ui" line="740"/>
         <source>Enable single-click on desktop</source>
         <translation>Задействовать одиночный щелчок на рабочем столе</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="759"/>
+        <location filename="../tweak.ui" line="747"/>
         <source>Enable Desktop Zoom </source>
         <translation>Включить масштабирование рабочего стола</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="766"/>
-        <location filename="../tweak.ui" line="1355"/>
+        <location filename="../tweak.ui" line="754"/>
+        <location filename="../tweak.ui" line="1343"/>
         <source>Show windows from all workspaces in panel</source>
         <translation>Показывать на панели окна со всех рабочих столов</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="773"/>
+        <location filename="../tweak.ui" line="761"/>
         <source>Do not shorten file names on the desktop</source>
         <translation>Не сокращать имена файлов на рабочем столе</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="783"/>
+        <location filename="../tweak.ui" line="771"/>
         <source>Thunar</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="789"/>
+        <location filename="../tweak.ui" line="777"/>
         <source>Enable single-click in Thunar File Manager</source>
         <translation>Задействовать одиночный щелчок в файловом менеджере Thunar</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="796"/>
+        <location filename="../tweak.ui" line="784"/>
         <source>Reset custom right-click actions to system defaults</source>
         <translation>Сбросить пользовательские настройки действий по правому щелчку</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="803"/>
+        <location filename="../tweak.ui" line="791"/>
         <source>Thunar windows always open in split view</source>
         <translation>Окна Thunar всегда открываются в режиме раздельного просмотра</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="810"/>
+        <location filename="../tweak.ui" line="798"/>
         <source>Thunar split view opens horizontal</source>
         <translation>Разделенный просмотр Thunar открывается горизонтально</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="820"/>
+        <location filename="../tweak.ui" line="808"/>
         <source>Show percentages in notifcations when available</source>
         <translation>Показывать проценты в уведомлениях, если возможно</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="827"/>
+        <location filename="../tweak.ui" line="815"/>
         <source>Show GTK File Dialog action buttons at bottom of dialogs</source>
         <translation>Показать кнопки действий файлового диалога GTK в нижней части окон</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="834"/>
+        <location filename="../tweak.ui" line="822"/>
         <source>(also turns off Client Side Decorations for Xfce applications)</source>
         <translation>(также отключает клиентское оформление для приложений Xfce)</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="844"/>
+        <location filename="../tweak.ui" line="832"/>
         <source>Enable hibernate on Log Out menu </source>
         <translation>Добавить hibernate в меню Выхода из системы</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="851"/>
+        <location filename="../tweak.ui" line="839"/>
         <source>note: to hibernate, swap needs to be &gt;= RAM</source>
         <translation>примечание: для hibernate необходим swap &gt;= RAM</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="885"/>
+        <location filename="../tweak.ui" line="873"/>
         <source>Fluxbox</source>
         <translation>Fluxbox</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="891"/>
-        <location filename="../tweak.ui" line="1365"/>
+        <location filename="../tweak.ui" line="879"/>
+        <location filename="../tweak.ui" line="1353"/>
         <source>Reset Defaults</source>
         <translation>Сбросить настройки по умолчанию</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="897"/>
+        <location filename="../tweak.ui" line="885"/>
         <source>Reset DefaultDock</source>
         <translation>Сброс дока</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="904"/>
+        <location filename="../tweak.ui" line="892"/>
         <source>Reset Fluxbox Menu</source>
         <translation>Сброс меню Fluxbox</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="911"/>
+        <location filename="../tweak.ui" line="899"/>
         <source>Reset ALL mx-fluxbox settings</source>
         <translation>Сбросить ВСЕ настройки mx-fluxbox</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="918"/>
+        <location filename="../tweak.ui" line="906"/>
         <source>Add new default menu items, if any, to existing fluxbox menu.</source>
         <translation>Добавить новые элементы меню по умолчанию к существующему меню fluxbox.</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="921"/>
+        <location filename="../tweak.ui" line="909"/>
         <source>Upgrade existing menu entries</source>
         <translation>Обновить существующие элементы</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="931"/>
+        <location filename="../tweak.ui" line="919"/>
         <source>Desktop Icons</source>
         <translation>Значки рабочего стола</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="937"/>
+        <location filename="../tweak.ui" line="925"/>
         <source>Toggle desktop icons</source>
         <translation>Переключить значки на рабочем столе</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="945"/>
-        <location filename="../tweak.ui" line="969"/>
+        <location filename="../tweak.ui" line="933"/>
+        <location filename="../tweak.ui" line="957"/>
         <source>On</source>
         <translation>Вкл</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="950"/>
-        <location filename="../tweak.ui" line="974"/>
+        <location filename="../tweak.ui" line="938"/>
+        <location filename="../tweak.ui" line="962"/>
         <source>Off</source>
         <translation>Откл.</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="958"/>
+        <location filename="../tweak.ui" line="946"/>
         <source>Toggle icon captions</source>
         <translation>Переключить подписи у значков</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="979"/>
+        <location filename="../tweak.ui" line="967"/>
         <source>On Hover</source>
         <translation>При наведении</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1006"/>
+        <location filename="../tweak.ui" line="994"/>
         <source>Screensaver</source>
         <translation>Экранные заставки</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1012"/>
+        <location filename="../tweak.ui" line="1000"/>
         <source>Idle time (minutes)</source>
         <extracomment>set the time of inactivity  before screensaver screen blank occurs</extracomment>
         <translation>Время простоя (минуты)</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1035"/>
+        <location filename="../tweak.ui" line="1023"/>
         <source>Toolbar Settings</source>
         <translation>Настройки панели инструментов</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1041"/>
+        <location filename="../tweak.ui" line="1029"/>
         <source>Height</source>
         <translation>Высота</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1122"/>
-        <location filename="../tweak.ui" line="1232"/>
+        <location filename="../tweak.ui" line="1110"/>
+        <location filename="../tweak.ui" line="1220"/>
         <source>Autohide</source>
         <translation>Скрывать автоматически</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1129"/>
+        <location filename="../tweak.ui" line="1117"/>
         <source>Show Toolbar</source>
         <translation>Показать панель инструментов</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1136"/>
+        <location filename="../tweak.ui" line="1124"/>
         <source>Width</source>
         <translation>Ширина</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1152"/>
+        <location filename="../tweak.ui" line="1140"/>
         <source>Dock Settings</source>
         <translation>Настройки dock</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1239"/>
+        <location filename="../tweak.ui" line="1227"/>
         <source>Manage Tint2 Panel</source>
         <translation>Управление панелью Tint2</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1273"/>
+        <location filename="../tweak.ui" line="1261"/>
         <source>Plasma</source>
         <translation>Plasma</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1279"/>
+        <location filename="../tweak.ui" line="1267"/>
         <source>Affects 1st panel</source>
         <translation>Влияет на 1-ю панель</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1296"/>
+        <location filename="../tweak.ui" line="1284"/>
         <source>Bottom</source>
         <translation>Внизу</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1301"/>
+        <location filename="../tweak.ui" line="1289"/>
         <source>Left</source>
         <translation>Слева</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1306"/>
+        <location filename="../tweak.ui" line="1294"/>
         <source>Top</source>
         <translation>Сверху</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1311"/>
+        <location filename="../tweak.ui" line="1299"/>
         <source>Right</source>
         <translation>Справа</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1335"/>
+        <location filename="../tweak.ui" line="1323"/>
         <source>Workspace</source>
         <translation>Рабочее место</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1341"/>
+        <location filename="../tweak.ui" line="1329"/>
         <source>Autostart plasma-discover system tray update notification utility</source>
         <extracomment>enable or disable autostartup of plasma-discover updater utility on login</extracomment>
         <translation>Автоматически вызывать утилиту plasma-discover, обновляющую поступающие уведомления</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1348"/>
+        <location filename="../tweak.ui" line="1336"/>
         <source>Enable single-click</source>
         <translation>Использовать одиночный щелчок</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1371"/>
+        <location filename="../tweak.ui" line="1359"/>
         <source>Reset KDE/Plasma defaults</source>
         <translation>Сброс настроек KDE/Plasma</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1405"/>
+        <location filename="../tweak.ui" line="1393"/>
         <source>Super Key</source>
         <extracomment>referring to the meta or Left Super Key</extracomment>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1411"/>
+        <location filename="../tweak.ui" line="1399"/>
         <source>Also known as the &quot;windows&quot; key</source>
         <translation>Иначе именуемая WIN-клавишей </translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1414"/>
+        <location filename="../tweak.ui" line="1402"/>
         <source>Command to run with Super (Meta) key</source>
         <extracomment>label for the field to enter the command to use with super key</extracomment>
         <translation>Команда запускаемая при нажатии клавиши Super (Meta)</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1424"/>
+        <location filename="../tweak.ui" line="1412"/>
         <source>xfce-superkey defaults</source>
         <extracomment>indicates that xfce-superkey will select a command by its default logic</extracomment>
         <translation>Значения по умолчанию для xfce-superkey</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1431"/>
+        <location filename="../tweak.ui" line="1419"/>
         <source>Choose application</source>
         <extracomment>description of button action to launch file dialog to choose an application</extracomment>
         <translation>Выбрать приложение</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1462"/>
+        <location filename="../tweak.ui" line="1450"/>
         <source>Miscellaneous</source>
         <translation>Различные штучки</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1468"/>
+        <location filename="../tweak.ui" line="1456"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
         <translation>Сбросить Lightdm (экран логина) к системной теме по умолчанию</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1475"/>
+        <location filename="../tweak.ui" line="1463"/>
         <source>Enable mounting of internal drives by non-root users</source>
         <translation>Включить монтирование внешних носителей для не-root пользователей</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1482"/>
+        <location filename="../tweak.ui" line="1470"/>
         <source>Enable kernel sandbox</source>
         <translation>Задействовать песочницу ядра</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1489"/>
+        <location filename="../tweak.ui" line="1477"/>
         <source>requires reboot</source>
         <translation>потребуется перезагрузка</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1492"/>
+        <location filename="../tweak.ui" line="1480"/>
         <source>Enable Bluetooth adapters on boot</source>
         <translation>Включить адаптеры Bluetooth при загрузке</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1499"/>
+        <location filename="../tweak.ui" line="1487"/>
         <source>Enable Bluetooth battery info for connected devices (requires system restart)</source>
         <extracomment>expose battery info for connected bluetooth devices to the operating system via dbus</extracomment>
         <translation>Включить информацию о батарее Bluetooth для подключенных устройств (требуется перезагрузка системы)</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1506"/>
+        <location filename="../tweak.ui" line="1494"/>
         <source>Early loading of KVM module is new to  kernel 6.12 and conflicts with some non-KVM virtual machine applications, including virtualbox</source>
         <extracomment>early loading is new on 6.12 kernel and conflicts with virtualbox</extracomment>
         <translation>Предзагрузка модуля KVM возможна начиная с ядра 6.12, это приводит к конфликтам у некоторых не-KVM виртуальных машин, включая Virtualbox</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1509"/>
+        <location filename="../tweak.ui" line="1497"/>
         <source>Disable early KVM module load (must be disabled for Virtualbox operation on kernel 6.12 and up)</source>
         <extracomment>disable early loading of KVM module.  necessary for virtualbox to function with kernels 6.12 and up.  actually default behavior on kernels 6.11 and earlier.</extracomment>
         <translation>Отключить предзагрузку модуля KVM (должно быть Отключено при использовании Virtualbox на ядре 6.12 и выше)</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1516"/>
+        <location filename="../tweak.ui" line="1504"/>
         <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
         <translation>Apt устанавливает дополнительные «рекомендуемые» пакеты в качестве зависимостей</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1523"/>
+        <location filename="../tweak.ui" line="1511"/>
         <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
         <translation>Генерировать меню Все Приложения для fluxbox после установки, удаления и обновления пакетов</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1530"/>
+        <location filename="../tweak.ui" line="1518"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
         <translation>Использовать клиентское оформление окон (CSD) для приложений GTK3 которые это поддерживают (требуется перезапуск сеанса)</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1537"/>
+        <location filename="../tweak.ui" line="1525"/>
         <source>put a hold or remove a hold on updates of Liquorix kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
         <translation>отключить или активировать обновления ядер Liquorix</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1540"/>
+        <location filename="../tweak.ui" line="1528"/>
         <source>Enable Automatic Liquorix Kernel Updates (MX ahs repository)</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
         <translation>Включить автоматические обновления ядра Liquorix (репозиторий MX ahs)</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1547"/>
+        <location filename="../tweak.ui" line="1535"/>
         <source>put a hold or remove a hold on updates of Debian  kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
         <translation>отключить или активировать обновления ядер Debian</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1550"/>
+        <location filename="../tweak.ui" line="1538"/>
         <source>Enable Automatic Debian Kernel Updates</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
         <translation>Включить автоматические обновления ядра Debian</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1557"/>
+        <location filename="../tweak.ui" line="1545"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
         <translation>Использовать драйвер Intel вместо драйвера &quot;modesetting&quot; (требуется перезапуск)</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1583"/>
+        <location filename="../tweak.ui" line="1571"/>
         <source>NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation>ПРИМЕЧАНИЕ: существующий /etc/X11/xorg.conf.d/20-intel.conf будет сохранен в домашний каталог</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1590"/>
+        <location filename="../tweak.ui" line="1578"/>
         <source>Use tearfree amdgpu option</source>
         <translation>Использовать опцию amdgpu видео без тиринга</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1597"/>
+        <location filename="../tweak.ui" line="1585"/>
         <source>NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
         <translation>ПРИМЕЧАНИЕ: существующий /etc/X11/xorg.conf.d/20-amd.conf будет сохранен в домашний каталог</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1604"/>
+        <location filename="../tweak.ui" line="1592"/>
         <source>Use tearfree radeon driver option</source>
         <translation>Использовать опцию драйвера radeon видео без тиринга</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1611"/>
+        <location filename="../tweak.ui" line="1599"/>
         <source>NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
         <translation>ПРИМЕЧАНИЕ: существующий /etc/X11/xorg.conf.d/20-radeon.conf будет сохранен в домашний каталог</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1618"/>
+        <location filename="../tweak.ui" line="1606"/>
         <source>Change computer name (requires reboot)</source>
         <extracomment>option to change the system hostname, requires a reboot to be 100% effective</extracomment>
         <translation>Изменить имя компьютера (требуется перезагрузка)</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1628"/>
+        <location filename="../tweak.ui" line="1616"/>
         <source>Change Default Display Manager (login screen) (requires reboot)</source>
         <extracomment>option to change display manager login screen.  present if more than one display manager is installed</extracomment>
         <translation>Изменить Default Display Manager (экран входа) (требуется перезагрузка)</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1641"/>
+        <location filename="../tweak.ui" line="1629"/>
         <source>Password for administrative tasks:</source>
         <translation>Пароль для задач администрирования:</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1648"/>
+        <location filename="../tweak.ui" line="1636"/>
         <source>&amp;User</source>
         <translation>&amp;Пользователь</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1655"/>
+        <location filename="../tweak.ui" line="1643"/>
         <source>Root</source>
         <translation>Корень</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1705"/>
+        <location filename="../tweak.ui" line="1693"/>
         <source>Xfce Settings</source>
         <translation>Настройки Xfce</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1711"/>
+        <location filename="../tweak.ui" line="1699"/>
         <source>Customize the panel</source>
         <translation>Настроить вид панели</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1721"/>
+        <location filename="../tweak.ui" line="1709"/>
         <source>Panel</source>
         <translation>Панель</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1741"/>
+        <location filename="../tweak.ui" line="1729"/>
         <source>Configure window behavior and shortcuts</source>
         <translation>Настроить поведение окон и сочетания клавиш</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1774"/>
+        <location filename="../tweak.ui" line="1762"/>
         <source>Customize the look of your desktop</source>
         <translation>Настроить вид вашего рабочего стола</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1787"/>
+        <location filename="../tweak.ui" line="1775"/>
         <source>Appearance</source>
         <translation>Внешний вид</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1799"/>
+        <location filename="../tweak.ui" line="1787"/>
         <source>About</source>
         <translation>О системе</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1809"/>
+        <location filename="../tweak.ui" line="1797"/>
         <source>Help</source>
         <translation>Справка</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1867"/>
+        <location filename="../tweak.ui" line="1855"/>
         <source>Quit application</source>
         <translation>Выход</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1870"/>
+        <location filename="../tweak.ui" line="1858"/>
         <source>Close</source>
         <translation>Закрыть</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1876"/>
+        <location filename="../tweak.ui" line="1864"/>
         <source>Alt+N</source>
         <translation>Alt+N</translation>
     </message>
     <message>
-        <location filename="../tweak.cpp" line="73"/>
+        <location filename="../tweak.cpp" line="72"/>
         <source>--display switch only valid for Xfce</source>
         <translation>--переключатель экрана действует только в Xfce</translation>
     </message>
     <message>
-        <location filename="../tweak.cpp" line="232"/>
+        <location filename="../tweak.cpp" line="241"/>
         <source>About MX Tweak</source>
         <translation>О MX Tweak</translation>
     </message>
     <message>
-        <location filename="../tweak.cpp" line="234"/>
+        <location filename="../tweak.cpp" line="243"/>
         <source>Version: </source>
         <translation>Версия: </translation>
     </message>
     <message>
-        <location filename="../tweak.cpp" line="235"/>
+        <location filename="../tweak.cpp" line="244"/>
         <source>App for quick default ui theme changes and tweaks</source>
         <translation>Приложение для быстрой доводки штатного оформления</translation>
     </message>
     <message>
-        <location filename="../tweak.cpp" line="237"/>
+        <location filename="../tweak.cpp" line="246"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../tweak.cpp" line="238"/>
+        <location filename="../tweak.cpp" line="247"/>
         <source>%1 License</source>
         <translation>%1 Лицензия</translation>
     </message>
     <message>
-        <location filename="../tweak.cpp" line="252"/>
+        <location filename="../tweak.cpp" line="261"/>
         <source>%1 Help</source>
         <translation>%1 Справка</translation>
     </message>
@@ -897,21 +899,21 @@
     <message>
         <location filename="../tweak_compositor.cpp" line="64"/>
         <source>Picom</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>TweakMisc</name>
     <message>
-        <location filename="../tweak_misc.cpp" line="281"/>
+        <location filename="../tweak_misc.cpp" line="289"/>
         <source>Please enter a computer name.</source>
         <comment>question to enter a name for the computer hostname</comment>
         <translation>Пожалуйста, введите имя компьютера.</translation>
     </message>
     <message>
-        <location filename="../tweak_misc.cpp" line="285"/>
+        <location filename="../tweak_misc.cpp" line="293"/>
         <source>Sorry, your computer name contains invalid characters.
-You'll have to select a different
+You&apos;ll have to select a different
 name before proceeding.</source>
         <comment>unacceptable characters are found in hostname, pick a new name</comment>
         <translation>Извините, такое имя компьютера содержит недопустимые символы.
@@ -978,7 +980,7 @@ name before proceeding.</source>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="23"/>
         <source>docklike</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="24"/>
@@ -1018,6 +1020,11 @@ name before proceeding.</source>
         <source>Archive does not contain a panel config</source>
         <translation>Архив не содержит настройки панели</translation>
     </message>
+    <message>
+        <location filename="../tweak_xfce_panel.cpp" line="733"/>
+        <source>Panel Preferences</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>brightness_small</name>
@@ -1053,9 +1060,13 @@ name before proceeding.</source>
         <translation>Аппаратная подсветка</translation>
     </message>
     <message>
-        <location filename="../brightness_small.cpp" line="35"/>
         <source>MX-Tweak</source>
-        <translation>MX-Tweak</translation>
+        <translation type="vanished">MX-Tweak</translation>
+    </message>
+    <message>
+        <location filename="../brightness_small.cpp" line="35"/>
+        <source>Brightness</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../brightness_small.cpp" line="54"/>
