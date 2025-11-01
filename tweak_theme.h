@@ -38,7 +38,6 @@ private:
     void getCursorSize() noexcept;
     void populateThemeLists(const QString &value) noexcept;
     void setTheme(const QString &type, const QString &theme) const noexcept;
-    void checkThemeGTKDarkMode_clicked() const noexcept;
 
     void comboTheme_currentIndexChanged(int index) noexcept;
     void pushThemeSaveSet_clicked() noexcept;
@@ -50,6 +49,7 @@ private:
     void listThemeWindow_currentTextChanged(const QString &currentText) const noexcept;
     void listThemeIcons_currentTextChanged(const QString &currentText) const noexcept;
     void listThemeCursors_currentTextChanged(const QString &currentText) noexcept;
+    void checkThemeGTKDarkMode_checkStateChanged(Qt::CheckState state) const noexcept;
 };
 
 #endif // TWEAK_THEME_H

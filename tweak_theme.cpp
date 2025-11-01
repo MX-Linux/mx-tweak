@@ -28,7 +28,7 @@ TweakTheme::TweakTheme(Ui::Tweak *ui, bool verbose, Desktop desktop, QObject *pa
     connect(ui->listThemeWindow, &QListWidget::currentTextChanged, this, &TweakTheme::listThemeWindow_currentTextChanged);
     connect(ui->listThemeIcons, &QListWidget::currentTextChanged, this, &TweakTheme::listThemeIcons_currentTextChanged);
     connect(ui->listThemeCursors, &QListWidget::currentTextChanged, this, &TweakTheme::listThemeCursors_currentTextChanged);
-    connect(ui->checkThemeGTKDarkMode, &QCheckBox::stateChanged, this, &TweakTheme::checkThemeGTKDarkMode_clicked);
+    connect(ui->checkThemeGTKDarkMode, &QCheckBox::checkStateChanged, this, &TweakTheme::checkThemeGTKDarkMode_checkStateChanged);
 }
 TweakTheme::TweakTheme(Ui::Tweak *ui, bool verbose, TweakXfcePanel *tweak, QObject *parent) noexcept
     : TweakTheme(ui, verbose, Xfce, parent)
@@ -873,12 +873,11 @@ void TweakTheme::spinThemeCursorSize_valueChanged(int value) noexcept
     }
 }
 
-void TweakTheme::checkThemeGTKDarkMode_clicked() const noexcept
+void TweakTheme::checkThemeGTKDarkMode_checkStateChanged(Qt::CheckState state) const noexcept
 {
-
     if (desktop == Xfce || desktop == Fluxbox) {
         const char *cmd = "gsettings set org.gnome.desktop.interface color-scheme default";
-        if (ui->checkThemeGTKDarkMode->isChecked()){
+        if (state == Qt::Checked){
             cmd = "gsettings set org.gnome.desktop.interface color-scheme prefer-dark";
         }
         runSystem(cmd);
