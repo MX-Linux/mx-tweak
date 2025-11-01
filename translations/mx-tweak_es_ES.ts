@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="es_ES">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="es_ES">
 <context>
     <name>QObject</name>
     <message>
@@ -913,7 +911,7 @@
     <message>
         <location filename="../tweak_misc.cpp" line="293"/>
         <source>Sorry, your computer name contains invalid characters.
-You&apos;ll have to select a different
+You'll have to select a different
 name before proceeding.</source>
         <comment>unacceptable characters are found in hostname, pick a new name</comment>
         <translation>Lo sentimos, el nombre que eligió para su equipo contiene caracteres inválidos.
@@ -1024,7 +1022,7 @@ nombre diferente antes de continuar.</translation>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="733"/>
         <source>Panel Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Preferencias del panel</translation>
     </message>
 </context>
 <context>
@@ -1061,13 +1059,9 @@ nombre diferente antes de continuar.</translation>
         <translation>Luz de fondo de hardware</translation>
     </message>
     <message>
-        <source>MX-Tweak</source>
-        <translation type="vanished">MX-Retoques</translation>
-    </message>
-    <message>
         <location filename="../brightness_small.cpp" line="35"/>
         <source>Brightness</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../brightness_small.cpp" line="54"/>

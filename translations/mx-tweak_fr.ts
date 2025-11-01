@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="fr">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="fr">
 <context>
     <name>QObject</name>
     <message>
@@ -94,7 +92,7 @@
     <message>
         <location filename="../tweak.ui" line="64"/>
         <source>Set Tasklist plugin to:</source>
-        <translation>Régler le plugin Tasklist sur&#xa0;:</translation>
+        <translation>Régler le plugin Tasklist sur :</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="71"/>
@@ -452,7 +450,7 @@
     <message>
         <location filename="../tweak.ui" line="839"/>
         <source>note: to hibernate, swap needs to be &gt;= RAM</source>
-        <translation>remarque&#xa0;: pour mettre en hibernation, la mémoire swap doit être &gt;= RAM</translation>
+        <translation>remarque : pour mettre en hibernation, la mémoire swap doit être &gt;= RAM</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="873"/>
@@ -629,7 +627,7 @@
     <message>
         <location filename="../tweak.ui" line="1399"/>
         <source>Also known as the &quot;windows&quot; key</source>
-        <translation>Également appelée touche «&#xa0;Windows&#xa0;»</translation>
+        <translation>Également appelée touche « Windows »</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1402"/>
@@ -744,7 +742,7 @@
     <message>
         <location filename="../tweak.ui" line="1571"/>
         <source>NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
-        <translation>REMARQUE&#xa0;: le fichier existant /etc/X11/xorg.conf.d/20-intel.conf sera sauvegardé dans le dossier home</translation>
+        <translation>REMARQUE : le fichier existant /etc/X11/xorg.conf.d/20-intel.conf sera sauvegardé dans le dossier home</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1578"/>
@@ -754,7 +752,7 @@
     <message>
         <location filename="../tweak.ui" line="1585"/>
         <source>NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
-        <translation>REMARQUE&#xa0;: le fichier existant /etc/X11/xorg.conf.d/20-amd.conf sera sauvegardé dans le dossier home</translation>
+        <translation>REMARQUE : le fichier existant /etc/X11/xorg.conf.d/20-amd.conf sera sauvegardé dans le dossier home</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1592"/>
@@ -764,7 +762,7 @@
     <message>
         <location filename="../tweak.ui" line="1599"/>
         <source>NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
-        <translation>REMARQUE&#xa0;: le fichier existant /etc/X11/xorg.conf.d/20-radeon.conf sera sauvegardé dans le dossier home.</translation>
+        <translation>REMARQUE : le fichier existant /etc/X11/xorg.conf.d/20-radeon.conf sera sauvegardé dans le dossier home.</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1606"/>
@@ -781,7 +779,7 @@
     <message>
         <location filename="../tweak.ui" line="1629"/>
         <source>Password for administrative tasks:</source>
-        <translation>Mot de passe pour les tâches administratives&#xa0;:</translation>
+        <translation>Mot de passe pour les tâches administratives :</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1636"/>
@@ -861,7 +859,7 @@
     <message>
         <location filename="../tweak.cpp" line="243"/>
         <source>Version: </source>
-        <translation>Version&#xa0;: </translation>
+        <translation>Version : </translation>
     </message>
     <message>
         <location filename="../tweak.cpp" line="244"/>
@@ -913,7 +911,7 @@
     <message>
         <location filename="../tweak_misc.cpp" line="293"/>
         <source>Sorry, your computer name contains invalid characters.
-You&apos;ll have to select a different
+You'll have to select a different
 name before proceeding.</source>
         <comment>unacceptable characters are found in hostname, pick a new name</comment>
         <translation>Désolé mais le nom de votre ordinateur contient des caractères non valides. 
@@ -1023,7 +1021,7 @@ Veuillez choisir un nom différent avant de continuer.</translation>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="733"/>
         <source>Panel Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Préférences du tableau de bord</translation>
     </message>
 </context>
 <context>
@@ -1060,13 +1058,9 @@ Veuillez choisir un nom différent avant de continuer.</translation>
         <translation>Rétroéclairage matériel</translation>
     </message>
     <message>
-        <source>MX-Tweak</source>
-        <translation type="vanished">MX Ajustements - MX Tweak</translation>
-    </message>
-    <message>
         <location filename="../brightness_small.cpp" line="35"/>
         <source>Brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>Luminosité</translation>
     </message>
     <message>
         <location filename="../brightness_small.cpp" line="54"/>
@@ -1131,7 +1125,7 @@ Veuillez choisir un nom différent avant de continuer.</translation>
     <message>
         <location filename="../window_buttons.ui" line="50"/>
         <source>Sorting Order:</source>
-        <translation>Ordre de tri&#xa0;:</translation>
+        <translation>Ordre de tri :</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="58"/>
@@ -1166,7 +1160,7 @@ Veuillez choisir un nom différent avant de continuer.</translation>
     <message>
         <location filename="../window_buttons.ui" line="95"/>
         <source>Window grouping:</source>
-        <translation>Groupement de fenêtres&#xa0;:</translation>
+        <translation>Groupement de fenêtres :</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="103"/>
@@ -1181,7 +1175,7 @@ Veuillez choisir un nom différent avant de continuer.</translation>
     <message>
         <location filename="../window_buttons.ui" line="116"/>
         <source>Middle click action:</source>
-        <translation>Action du clic du milieu&#xa0;:</translation>
+        <translation>Action du clic du milieu :</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="124"/>

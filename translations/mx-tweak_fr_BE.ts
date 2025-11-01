@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="fr_BE">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="fr_BE">
 <context>
     <name>QObject</name>
     <message>
@@ -629,7 +627,7 @@
     <message>
         <location filename="../tweak.ui" line="1399"/>
         <source>Also known as the &quot;windows&quot; key</source>
-        <translation>Également appelée touche «&#xa0;Windows&#xa0;»</translation>
+        <translation>Également appelée touche « Windows »</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1402"/>
@@ -913,7 +911,7 @@
     <message>
         <location filename="../tweak_misc.cpp" line="293"/>
         <source>Sorry, your computer name contains invalid characters.
-You&apos;ll have to select a different
+You'll have to select a different
 name before proceeding.</source>
         <comment>unacceptable characters are found in hostname, pick a new name</comment>
         <translation>Désolé mais le nom de votre ordinateur contient des caractères non valides. 
@@ -1023,7 +1021,7 @@ Veuillez choisir un nom différent avant de continuer.</translation>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="733"/>
         <source>Panel Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation>Préférences du panneau</translation>
     </message>
 </context>
 <context>
@@ -1060,13 +1058,9 @@ Veuillez choisir un nom différent avant de continuer.</translation>
         <translation>Rétroéclairage matériel</translation>
     </message>
     <message>
-        <source>MX-Tweak</source>
-        <translation type="vanished">MX Ajustements - MX Tweak</translation>
-    </message>
-    <message>
         <location filename="../brightness_small.cpp" line="35"/>
         <source>Brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>Luminosité</translation>
     </message>
     <message>
         <location filename="../brightness_small.cpp" line="54"/>

@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="gl_ES">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="gl_ES">
 <context>
     <name>QObject</name>
     <message>
@@ -68,7 +66,7 @@
     <message>
         <location filename="../tweak.ui" line="33"/>
         <source>Xfce Panel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="39"/>
@@ -89,7 +87,7 @@
     <message>
         <location filename="../tweak.ui" line="58"/>
         <source>Tasklist</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="64"/>
@@ -99,22 +97,22 @@
     <message>
         <location filename="../tweak.ui" line="71"/>
         <source>Docklike is the modern dock plugin for the panel. Window Buttons is the classic tasklist without dock features.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="78"/>
         <source>Tasklist Options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="85"/>
         <source>Docklike Options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="95"/>
         <source>Affects 1st Panel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="101"/>
@@ -127,7 +125,7 @@
     <message>
         <location filename="../tweak.ui" line="114"/>
         <source>Backup/Restore Configuration (all panels)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="127"/>
@@ -137,7 +135,7 @@
     <message>
         <location filename="../tweak.ui" line="141"/>
         <source>Restore selected panel configuration</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="148"/>
@@ -147,7 +145,7 @@
     <message>
         <location filename="../tweak.ui" line="158"/>
         <source>Panel Plugin Scales</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="164"/>
@@ -185,17 +183,17 @@
         <location filename="../tweak.ui" line="281"/>
         <source>Application</source>
         <extracomment>theme an application will get</extracomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="295"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Toggle Dark Mode for GTK4 libadwaita applications&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="298"/>
         <source>Dark Mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="305"/>
@@ -207,7 +205,7 @@
     <message>
         <location filename="../tweak.ui" line="319"/>
         <source>Legacy Styles</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="332"/>
@@ -219,7 +217,7 @@
         <location filename="../tweak.ui" line="339"/>
         <source>Cursors</source>
         <extracomment>cursor theme</extracomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="346"/>
@@ -248,7 +246,7 @@
     <message>
         <location filename="../tweak.ui" line="401"/>
         <source>Changing the VBlank mode may help alleviate some screen tearing issues. See Help for more information.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="404"/>
@@ -285,7 +283,7 @@
     <message>
         <location filename="../tweak.ui" line="451"/>
         <source>Xfce Compositor Settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="454"/>
@@ -300,7 +298,7 @@
     <message>
         <location filename="../tweak.ui" line="467"/>
         <source>Picom settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="478"/>
@@ -310,7 +308,7 @@
     <message>
         <location filename="../tweak.ui" line="481"/>
         <source>Edit picom.conf</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="528"/>
@@ -320,7 +318,7 @@
     <message>
         <location filename="../tweak.ui" line="534"/>
         <source>Display Tweaks</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="540"/>
@@ -366,7 +364,7 @@
     <message>
         <location filename="../tweak.ui" line="701"/>
         <source>Saving is per display</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="704"/>
@@ -376,7 +374,7 @@
     <message>
         <location filename="../tweak.ui" line="728"/>
         <source>Xfce</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="734"/>
@@ -402,12 +400,12 @@
     <message>
         <location filename="../tweak.ui" line="761"/>
         <source>Do not shorten file names on the desktop</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="771"/>
         <source>Thunar</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="777"/>
@@ -417,7 +415,7 @@
     <message>
         <location filename="../tweak.ui" line="784"/>
         <source>Reset custom right-click actions to system defaults</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="791"/>
@@ -442,7 +440,7 @@
     <message>
         <location filename="../tweak.ui" line="822"/>
         <source>(also turns off Client Side Decorations for Xfce applications)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="832"/>
@@ -452,7 +450,7 @@
     <message>
         <location filename="../tweak.ui" line="839"/>
         <source>note: to hibernate, swap needs to be &gt;= RAM</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="873"/>
@@ -463,7 +461,7 @@
         <location filename="../tweak.ui" line="879"/>
         <location filename="../tweak.ui" line="1353"/>
         <source>Reset Defaults</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="885"/>
@@ -483,7 +481,7 @@
     <message>
         <location filename="../tweak.ui" line="906"/>
         <source>Add new default menu items, if any, to existing fluxbox menu.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="909"/>
@@ -493,7 +491,7 @@
     <message>
         <location filename="../tweak.ui" line="919"/>
         <source>Desktop Icons</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="925"/>
@@ -536,7 +534,7 @@
     <message>
         <location filename="../tweak.ui" line="1023"/>
         <source>Toolbar Settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="1029"/>
@@ -562,7 +560,7 @@
     <message>
         <location filename="../tweak.ui" line="1140"/>
         <source>Dock Settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="1227"/>
@@ -629,7 +627,7 @@
     <message>
         <location filename="../tweak.ui" line="1399"/>
         <source>Also known as the &quot;windows&quot; key</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="1402"/>
@@ -641,18 +639,18 @@
         <location filename="../tweak.ui" line="1412"/>
         <source>xfce-superkey defaults</source>
         <extracomment>indicates that xfce-superkey will select a command by its default logic</extracomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="1419"/>
         <source>Choose application</source>
         <extracomment>description of button action to launch file dialog to choose an application</extracomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="1450"/>
         <source>Miscellaneous</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="1456"/>
@@ -672,7 +670,7 @@
     <message>
         <location filename="../tweak.ui" line="1477"/>
         <source>requires reboot</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="1480"/>
@@ -689,7 +687,7 @@
         <location filename="../tweak.ui" line="1494"/>
         <source>Early loading of KVM module is new to  kernel 6.12 and conflicts with some non-KVM virtual machine applications, including virtualbox</source>
         <extracomment>early loading is new on 6.12 kernel and conflicts with virtualbox</extracomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="1497"/>
@@ -744,7 +742,7 @@
     <message>
         <location filename="../tweak.ui" line="1571"/>
         <source>NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="1578"/>
@@ -754,7 +752,7 @@
     <message>
         <location filename="../tweak.ui" line="1585"/>
         <source>NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="1592"/>
@@ -764,7 +762,7 @@
     <message>
         <location filename="../tweak.ui" line="1599"/>
         <source>NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="1606"/>
@@ -801,7 +799,7 @@
     <message>
         <location filename="../tweak.ui" line="1699"/>
         <source>Customize the panel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="1709"/>
@@ -811,12 +809,12 @@
     <message>
         <location filename="../tweak.ui" line="1729"/>
         <source>Configure window behavior and shortcuts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="1762"/>
         <source>Customize the look of your desktop</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="1775"/>
@@ -899,7 +897,7 @@
     <message>
         <location filename="../tweak_compositor.cpp" line="64"/>
         <source>Picom</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -913,7 +911,7 @@
     <message>
         <location filename="../tweak_misc.cpp" line="293"/>
         <source>Sorry, your computer name contains invalid characters.
-You&apos;ll have to select a different
+You'll have to select a different
 name before proceeding.</source>
         <comment>unacceptable characters are found in hostname, pick a new name</comment>
         <translation>O nome do computador contén caracteres inválidos. Ten que ser escollido un nome diferente antes de proseguir.</translation>
@@ -959,27 +957,27 @@ name before proceeding.</source>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="17"/>
         <source>Horizontal (Bottom)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="18"/>
         <source>Horizontal (Top)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="20"/>
         <source>Vertical (Left)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="21"/>
         <source>Vertical (Right)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="23"/>
         <source>docklike</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="24"/>
@@ -1022,7 +1020,7 @@ name before proceeding.</source>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="733"/>
         <source>Panel Preferences</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -1059,13 +1057,9 @@ name before proceeding.</source>
         <translation>Retroiluminación da pantalla</translation>
     </message>
     <message>
-        <source>MX-Tweak</source>
-        <translation type="vanished">MX-axustes rápidos</translation>
-    </message>
-    <message>
         <location filename="../brightness_small.cpp" line="35"/>
         <source>Brightness</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../brightness_small.cpp" line="54"/>
@@ -1160,7 +1154,7 @@ name before proceeding.</source>
     <message>
         <location filename="../window_buttons.ui" line="89"/>
         <source>Behavior</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="95"/>
@@ -1215,7 +1209,7 @@ name before proceeding.</source>
     <message>
         <location filename="../window_buttons.ui" line="166"/>
         <source>Filtering</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="172"/>
@@ -1248,7 +1242,7 @@ name before proceeding.</source>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="23"/>
         <source>Feature Settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="29"/>
@@ -1283,7 +1277,7 @@ name before proceeding.</source>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="74"/>
         <source>Opacity Settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="80"/>

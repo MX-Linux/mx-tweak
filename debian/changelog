@@ -1,3 +1,10 @@
+mx-tweak (25.11.01mx25) mx; urgency=medium
+
+  * update translations
+  * improve panel-preferences window detection
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 01 Nov 2025 10:53:39 -0400
+
 mx-tweak (25.10.05mx25) mx; urgency=medium
 
   * refresh themes and panel if applets are used
