@@ -107,7 +107,7 @@
     <message>
         <location filename="../tweak.ui" line="85"/>
         <source>Docklike Options</source>
-        <translation>Opcions de l&apos;acobaldor</translation>
+        <translation>Opcions de l&apos;acoblador</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="95"/>
@@ -205,7 +205,7 @@
     <message>
         <location filename="../tweak.ui" line="319"/>
         <source>Legacy Styles</source>
-        <translation>Estils de llegat</translation>
+        <translation>Estils clàssics</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="332"/>
@@ -687,7 +687,7 @@
         <location filename="../tweak.ui" line="1494"/>
         <source>Early loading of KVM module is new to  kernel 6.12 and conflicts with some non-KVM virtual machine applications, including virtualbox</source>
         <extracomment>early loading is new on 6.12 kernel and conflicts with virtualbox</extracomment>
-        <translation>La càrrega anticipada del mòdul KVM és una novetat del nucli 6.12 i té conflicte amb algunes aplicacions de màquina virtual que no són de KVM, inclosa Virtualbox.</translation>
+        <translation>La càrrega anticipada del mòdul KVM és una novetat del nucli 6.12 i entra en conflicte amb algunes aplicacions de màquina virtual que no són de KVM, inclosa Virtualbox.</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1497"/>

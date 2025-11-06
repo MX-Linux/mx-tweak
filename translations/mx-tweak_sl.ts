@@ -1061,7 +1061,7 @@ drugo ime, preden lahko nadaljujete.</translation>
     <message>
         <location filename="../brightness_small.cpp" line="35"/>
         <source>Brightness</source>
-        <translation type="unfinished"/>
+        <translation>Osvetljenost</translation>
     </message>
     <message>
         <location filename="../brightness_small.cpp" line="54"/>

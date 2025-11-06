@@ -1061,7 +1061,7 @@ nimi ennen jatkamista.</translation>
     <message>
         <location filename="../brightness_small.cpp" line="35"/>
         <source>Brightness</source>
-        <translation type="unfinished"/>
+        <translation>Kirkkaus</translation>
     </message>
     <message>
         <location filename="../brightness_small.cpp" line="54"/>
