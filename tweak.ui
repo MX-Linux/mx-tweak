@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1451</width>
-    <height>1020</height>
+    <height>1174</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -26,7 +26,7 @@
       <enum>QTabWidget::TabPosition::North</enum>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>8</number>
      </property>
      <widget class="QWidget" name="tabXfcePanel">
       <attribute name="title">
@@ -287,6 +287,12 @@
             <property name="orientation">
              <enum>Qt::Orientation::Horizontal</enum>
             </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
            </spacer>
           </item>
           <item row="0" column="2">
@@ -310,6 +316,12 @@
            <spacer>
             <property name="orientation">
              <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
             </property>
            </spacer>
           </item>
@@ -1450,43 +1462,28 @@
        <string>Miscellaneous</string>
       </attribute>
       <layout class="QGridLayout">
-       <item row="0" column="0" colspan="3">
-        <widget class="QCheckBox" name="checkMiscLightdmReset">
+       <item row="18" column="2">
+        <widget class="QLineEdit" name="textMiscHostName"/>
+       </item>
+       <item row="12" column="1" colspan="2">
+        <widget class="QLabel" name="labelMiscIntelDriver">
          <property name="text">
-          <string>Reset Lightdm (login screen) to system default theme</string>
+          <string>NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</string>
          </property>
         </widget>
        </item>
-       <item row="1" column="0" colspan="3">
-        <widget class="QCheckBox" name="checkMiscMountInternalDrivesNonRoot">
-         <property name="text">
-          <string>Enable mounting of internal drives by non-root users</string>
+       <item row="21" column="0">
+        <spacer>
+         <property name="orientation">
+          <enum>Qt::Orientation::Vertical</enum>
          </property>
-        </widget>
-       </item>
-       <item row="2" column="0" colspan="3">
-        <widget class="QCheckBox" name="checkMiscSandbox">
-         <property name="text">
-          <string>Enable kernel sandbox</string>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
          </property>
-        </widget>
-       </item>
-       <item row="3" column="0" colspan="3">
-        <widget class="QCheckBox" name="checkMiscBluetoothAutoEnable">
-         <property name="toolTip">
-          <string>requires reboot</string>
-         </property>
-         <property name="text">
-          <string>Enable Bluetooth adapters on boot</string>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="0" colspan="3">
-        <widget class="QCheckBox" name="checkMiscBluetoothBattery">
-         <property name="text">
-          <string extracomment="expose battery info for connected bluetooth devices to the operating system via dbus">Enable Bluetooth battery info for connected devices (requires system restart)</string>
-         </property>
-        </widget>
+        </spacer>
        </item>
        <item row="5" column="0" colspan="3">
         <widget class="QCheckBox" name="checkMiscKVMVirtLoad">
@@ -1498,24 +1495,10 @@
          </property>
         </widget>
        </item>
-       <item row="6" column="0" colspan="3">
-        <widget class="QCheckBox" name="checkMiscInstallRecommends">
+       <item row="16" column="1" colspan="2">
+        <widget class="QLabel" name="labelMiscTearfreeRadeon">
          <property name="text">
-          <string>Apt installs additional &quot;recommends&quot; packages as dependencies</string>
-         </property>
-        </widget>
-       </item>
-       <item row="7" column="0" colspan="3">
-        <widget class="QCheckBox" name="checkMiscDisableFluxboxMenuGeneration">
-         <property name="text">
-          <string>Generate fluxbox All Apps menu after package installation, removal, and updates</string>
-         </property>
-        </widget>
-       </item>
-       <item row="8" column="0" colspan="3">
-        <widget class="QCheckBox" name="checkMiscCSD">
-         <property name="text">
-          <string>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</string>
+          <string>NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</string>
          </property>
         </widget>
        </item>
@@ -1529,27 +1512,82 @@
          </property>
         </widget>
        </item>
-       <item row="10" column="0" colspan="3">
-        <widget class="QCheckBox" name="checkMiscDebianKernelUpdates">
-         <property name="toolTip">
-          <string extracomment="toggle for apt hold action on update meta packages">put a hold or remove a hold on updates of Debian  kernels</string>
-         </property>
+       <item row="0" column="0" colspan="3">
+        <widget class="QCheckBox" name="checkMiscLightdmReset">
          <property name="text">
-          <string extracomment="uses apt-mark to hold or unhold updates to kernel metapackages">Enable Automatic Debian Kernel Updates</string>
+          <string>Reset Lightdm (login screen) to system default theme</string>
          </property>
         </widget>
        </item>
-       <item row="11" column="0" colspan="3">
-        <widget class="QCheckBox" name="checkMiscIntelDriver">
+       <item row="15" column="0" colspan="3">
+        <widget class="QCheckBox" name="checkMiscTearfreeRadeon">
          <property name="text">
-          <string>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</string>
+          <string>Use tearfree radeon driver option</string>
+         </property>
+        </widget>
+       </item>
+       <item row="22" column="0" colspan="3">
+        <widget class="QPushButton" name="pushMiscApply">
+         <property name="text">
+          <string>Apply</string>
+         </property>
+         <property name="icon">
+          <iconset theme="dialog-ok"/>
+         </property>
+        </widget>
+       </item>
+       <item row="19" column="2">
+        <widget class="QComboBox" name="comboBoxDisplayManager"/>
+       </item>
+       <item row="14" column="1" colspan="2">
+        <widget class="QLabel" name="labelMiscTearfreeAMD">
+         <property name="text">
+          <string>NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</string>
+         </property>
+        </widget>
+       </item>
+       <item row="19" column="0" colspan="2">
+        <widget class="QCheckBox" name="checkMiscDisplayManager">
+         <property name="text">
+          <string extracomment="option to change display manager login screen.  present if more than one display manager is installed">Change Default Display Manager (login screen) (requires reboot)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="18" column="0" colspan="2">
+        <widget class="QCheckBox" name="checkMiscHostName">
+         <property name="text">
+          <string extracomment="option to change the system hostname, requires a reboot to be 100% effective">Change computer name (requires reboot)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0" colspan="3">
+        <widget class="QCheckBox" name="checkMiscBluetoothAutoEnable">
+         <property name="toolTip">
+          <string>requires reboot</string>
+         </property>
+         <property name="text">
+          <string>Enable Bluetooth adapters on boot</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0" colspan="3">
+        <widget class="QCheckBox" name="checkMiscDisableFluxboxMenuGeneration">
+         <property name="text">
+          <string>Generate fluxbox All Apps menu after package installation, removal, and updates</string>
+         </property>
+        </widget>
+       </item>
+       <item row="13" column="0" colspan="3">
+        <widget class="QCheckBox" name="checkMiscTearfreeAMD">
+         <property name="text">
+          <string>Use tearfree amdgpu option</string>
          </property>
         </widget>
        </item>
        <item row="12" column="0">
         <spacer>
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Minimum">
+          <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
@@ -1565,62 +1603,42 @@
          </property>
         </spacer>
        </item>
-       <item row="12" column="1" colspan="2">
-        <widget class="QLabel" name="labelMiscIntelDriver">
+       <item row="8" column="0" colspan="3">
+        <widget class="QCheckBox" name="checkMiscCSD">
          <property name="text">
-          <string>NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</string>
+          <string>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</string>
          </property>
         </widget>
        </item>
-       <item row="13" column="0" colspan="3">
-        <widget class="QCheckBox" name="checkMiscTearfreeAMD">
+       <item row="2" column="0" colspan="3">
+        <widget class="QCheckBox" name="checkMiscSandbox">
          <property name="text">
-          <string>Use tearfree amdgpu option</string>
+          <string>Enable kernel sandbox</string>
          </property>
         </widget>
        </item>
-       <item row="14" column="1" colspan="2">
-        <widget class="QLabel" name="labelMiscTearfreeAMD">
+       <item row="1" column="0" colspan="3">
+        <widget class="QCheckBox" name="checkMiscMountInternalDrivesNonRoot">
          <property name="text">
-          <string>NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</string>
+          <string>Enable mounting of internal drives by non-root users</string>
          </property>
         </widget>
        </item>
-       <item row="15" column="0" colspan="3">
-        <widget class="QCheckBox" name="checkMiscTearfreeRadeon">
+       <item row="6" column="0" colspan="3">
+        <widget class="QCheckBox" name="checkMiscInstallRecommends">
          <property name="text">
-          <string>Use tearfree radeon driver option</string>
+          <string>Apt installs additional &quot;recommends&quot; packages as dependencies</string>
          </property>
         </widget>
        </item>
-       <item row="16" column="1" colspan="2">
-        <widget class="QLabel" name="labelMiscTearfreeRadeon">
+       <item row="11" column="0" colspan="3">
+        <widget class="QCheckBox" name="checkMiscIntelDriver">
          <property name="text">
-          <string>NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</string>
+          <string>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</string>
          </property>
         </widget>
        </item>
-       <item row="17" column="0" colspan="2">
-        <widget class="QCheckBox" name="checkMiscHostName">
-         <property name="text">
-          <string extracomment="option to change the system hostname, requires a reboot to be 100% effective">Change computer name (requires reboot)</string>
-         </property>
-        </widget>
-       </item>
-       <item row="17" column="2">
-        <widget class="QLineEdit" name="textMiscHostName"/>
-       </item>
-       <item row="18" column="0" colspan="2">
-        <widget class="QCheckBox" name="checkMiscDisplayManager">
-         <property name="text">
-          <string extracomment="option to change display manager login screen.  present if more than one display manager is installed">Change Default Display Manager (login screen) (requires reboot)</string>
-         </property>
-        </widget>
-       </item>
-       <item row="18" column="2">
-        <widget class="QComboBox" name="comboBoxDisplayManager"/>
-       </item>
-       <item row="19" column="0" colspan="3">
+       <item row="20" column="0" colspan="3">
         <widget class="QGroupBox" name="groupMiscSudo">
          <layout class="QHBoxLayout">
           <item>
@@ -1660,27 +1678,45 @@
          </layout>
         </widget>
        </item>
-       <item row="20" column="0">
-        <spacer>
-         <property name="orientation">
-          <enum>Qt::Orientation::Vertical</enum>
+       <item row="10" column="0" colspan="3">
+        <widget class="QCheckBox" name="checkMiscDebianKernelUpdates">
+         <property name="toolTip">
+          <string extracomment="toggle for apt hold action on update meta packages">put a hold or remove a hold on updates of Debian  kernels</string>
          </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>0</width>
-           <height>0</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="21" column="0" colspan="3">
-        <widget class="QPushButton" name="pushMiscApply">
          <property name="text">
-          <string>Apply</string>
+          <string extracomment="uses apt-mark to hold or unhold updates to kernel metapackages">Enable Automatic Debian Kernel Updates</string>
          </property>
-         <property name="icon">
-          <iconset theme="dialog-ok"/>
+        </widget>
+       </item>
+       <item row="4" column="0" colspan="3">
+        <widget class="QCheckBox" name="checkMiscBluetoothBattery">
+         <property name="text">
+          <string extracomment="expose battery info for connected bluetooth devices to the operating system via dbus">Enable Bluetooth battery info for connected devices (requires system restart)</string>
          </property>
+        </widget>
+       </item>
+       <item row="17" column="0" colspan="2">
+        <widget class="QCheckBox" name="checkboxChangeInitSystem">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Init system that is used as the default on the main grub boot menu entry&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="text">
+          <string>Change Default Init System</string>
+         </property>
+        </widget>
+       </item>
+       <item row="17" column="2">
+        <widget class="QComboBox" name="comboxBoxInitSystems">
+         <item>
+          <property name="text">
+           <string notr="true">sysVinit</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">systemd</string>
+          </property>
+         </item>
         </widget>
        </item>
       </layout>

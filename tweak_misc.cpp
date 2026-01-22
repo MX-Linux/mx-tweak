@@ -46,6 +46,7 @@ TweakMisc::TweakMisc(Ui::Tweak *ui, bool verbose, QObject *parent) noexcept
     connect(ui->checkMiscIntelDriver, &QCheckBox::clicked, this, &TweakMisc::checkMiscIntelDriver_clicked);
     connect(ui->checkMiscTearfreeAMD, &QCheckBox::clicked, this, &TweakMisc::checkMiscTearfreeAMD_clicked);
     connect(ui->checkMiscTearfreeRadeon, &QCheckBox::clicked, this, &TweakMisc::checkMiscTearfreeRadeon_clicked);
+    connect(ui->checkboxChangeInitSystem, &QCheckBox::clicked, this, &TweakMisc::slotSettingChanged);
 }
 
 void TweakMisc::setup() noexcept
@@ -63,6 +64,21 @@ void TweakMisc::setup() noexcept
     ui->pushMiscApply->setEnabled(false);
     //set values for checkboxes
 
+    //init system change
+    //show combo box if dual init detected
+    flags.changeinitsystem = false;
+    if ( QFile("/usr/lib/sysvinit/init").exists() && QFile("/usr/lib/systemd/systemd").exists()) {
+        ui->checkboxChangeInitSystem->setChecked(false);
+        QString init = QFile("/usr/sbin/init").symLinkTarget();
+        if (init.contains("sysvinit")) {
+            ui->comboxBoxInitSystems->setCurrentText("sysVinit");
+        } else {
+            ui->comboxBoxInitSystems->setCurrentText("systemd");
+        }
+    } else {
+        ui->checkboxChangeInitSystem->hide();
+        ui->comboxBoxInitSystems->hide();
+    }
     //fluxbox menu auto generation on package install, removal, and upgrades
     if ( QFile::exists(u"/usr/bin/mxfb-menu-generator"_s)){
         if (QFile::exists(home_path + "/.fluxbox/mxfb-menu-generator-disabled.chk"_L1)){
@@ -523,6 +539,12 @@ void TweakMisc::pushMiscApply_clicked() noexcept
                 u"displaymanager"_s, ui->comboBoxDisplayManager->currentText()});
         }
         ui->checkMiscDisplayManager->setChecked(false);
+    }
+
+    //init system change
+    if (ui->checkboxChangeInitSystem->isChecked()){
+        runProc(u"pkexec"_s, {u"/usr/lib/mx-tweak/mx-tweak-lib.sh"_s,u"initchange"_s,ui->comboxBoxInitSystems->currentText()});
+        ui->checkboxChangeInitSystem->setChecked(false);
     }
 
     //kvm_early_switch

@@ -19,6 +19,7 @@ private:
     Ui::Tweak *ui;
     bool verbose;
     struct {
+        bool changeinitsystem : 1;
         bool sandbox : 1;
         bool intel : 1;
         bool amdgpu : 1;

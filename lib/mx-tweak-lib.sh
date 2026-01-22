@@ -301,6 +301,25 @@ for i in $installed_dm
 DEBIAN_FRONTEND=noninteractive /usr/sbin/dpkg-reconfigure $newdm
 }
 
+initchange(){
+local init="$1" 
+local dir="$1"
+if [ "$init" = "sysVinit" ]; then
+	init="init"
+	dir="sysvinit"
+fi
+echo "switching default init to /usr/lib/$dir/$init"
+ln -rsf /usr/lib/$dir/$init /usr/sbin/init
+#test for live system, exit if found  (check used below)
+LIVE_CHECK=$(df -T / |tail -n1 |awk '{print $2}')
+#only update on non-live systems and when there is an actual change 
+if [ "$LIVE_CHECK" != "overlay" ] && [ -x /usr/sbin/update-grub ]; then
+	if [ -e /boot/grub/grub.cfg ]; then
+		exec update-grub
+	fi
+fi
+}
+
 kvm_early_switch(){
 	local action="$1" file="$2"
 
@@ -348,6 +367,8 @@ case "$CMD1" in
 	displaymanager) change_display_manager "$CMD2"
 	;;
 	kvm_early_switch) kvm_early_switch "$CMD2" "$CMD3"
+	;;
+	initchange) initchange "$CMD2"
 	;;
 	*) main
 	;;
