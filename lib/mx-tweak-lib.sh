@@ -315,7 +315,7 @@ LIVE_CHECK=$(df -T / |tail -n1 |awk '{print $2}')
 #only update on non-live systems and when there is an actual change 
 if [ "$LIVE_CHECK" != "overlay" ] && [ -x /usr/sbin/update-grub ]; then
 	if [ -e /boot/grub/grub.cfg ]; then
-		exec update-grub
+		/usr/sbin/update-grub
 	fi
 fi
 }
