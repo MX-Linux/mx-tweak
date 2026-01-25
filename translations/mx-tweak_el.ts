@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="el">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="el">
 <context>
     <name>QObject</name>
     <message>
@@ -32,17 +30,17 @@
     <message>
         <location filename="../main.cpp" line="58"/>
         <source>launches brightness-systray</source>
-        <translation>εμφάνιση εικονιδίου στο σύστημα</translation>
+        <translation>εμφανίζει το εικονίδιο φωτεινότητας του συστήματος</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="59"/>
         <source>opens with display tab open.  Only valid with Xfce desktop running</source>
-        <translation>ανοίγει την εμφάνιση.  Μόνο σε Xfce</translation>
+        <translation>ανοίγει τη καρτέλα Εμφάνιση.  Μόνο σε Xfce</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="60"/>
         <source>Opens theme tab directly.  Valid on Xfce &amp; Fluxbox desktops</source>
-        <translation>Ανοίγει άμεσα το θέμα. Σε Xfce και Fluxbox</translation>
+        <translation>Ανοίγει άμεσα το θέμα.  Σε Xfce και Fluxbox</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="61"/>
@@ -52,7 +50,7 @@
     <message>
         <location filename="../main.cpp" line="62"/>
         <source>Opens Other tab directly.  Valid on all desktops</source>
-        <translation>Ανοίγει τη καρτέλα Άλλα.  Σε όλα τα γραφικά περιβάλλοντα</translation>
+        <translation>Ανοίγει τη καρτέλα Διάφορα.  Σε όλα τα γραφικά περιβάλλοντα</translation>
     </message>
 </context>
 <context>
@@ -796,12 +794,12 @@
     <message>
         <location filename="../tweak.ui" line="1701"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Init system that is used as the default on the main grub boot menu entry&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="1704"/>
         <source>Change Default Init System</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="1729"/>
@@ -861,7 +859,7 @@
     <message>
         <location filename="../tweak.cpp" line="72"/>
         <source>--display switch only valid for Xfce</source>
-        <translation>--διακόπτης οθόνης μόνο για το Xfce</translation>
+        <translation>--η λειτουργία είναι διαθέσιμη μόνο για το Xfce</translation>
     </message>
     <message>
         <location filename="../tweak.cpp" line="241"/>
@@ -923,12 +921,11 @@
     <message>
         <location filename="../tweak_misc.cpp" line="309"/>
         <source>Sorry, your computer name contains invalid characters.
-You&apos;ll have to select a different
+You'll have to select a different
 name before proceeding.</source>
         <comment>unacceptable characters are found in hostname, pick a new name</comment>
         <translation>Το όνομα του υπολογιστή σας περιέχει μη έγκυρους χαρακτήρες.
-Θα πρέπει να επιλέξετε διαφορετικό
-πριν προχωρήσετε.</translation>
+Θα πρέπει πριν προχωρήσετε να επιλέξετε διαφορετικό.</translation>
     </message>
 </context>
 <context>
@@ -1073,7 +1070,7 @@ name before proceeding.</source>
     <message>
         <location filename="../brightness_small.cpp" line="35"/>
         <source>Brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>Φωτεινότητα</translation>
     </message>
     <message>
         <location filename="../brightness_small.cpp" line="54"/>

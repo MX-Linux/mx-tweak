@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="pt">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="pt">
 <context>
     <name>QObject</name>
     <message>
@@ -796,12 +794,12 @@
     <message>
         <location filename="../tweak.ui" line="1701"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Init system that is used as the default on the main grub boot menu entry&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; O Sistema de Inicialização usado no menu principal do grub&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1704"/>
         <source>Change Default Init System</source>
-        <translation type="unfinished"></translation>
+        <translation>Alterar o Sistema de Inicialização padrão</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1729"/>
@@ -923,7 +921,7 @@
     <message>
         <location filename="../tweak_misc.cpp" line="309"/>
         <source>Sorry, your computer name contains invalid characters.
-You&apos;ll have to select a different
+You'll have to select a different
 name before proceeding.</source>
         <comment>unacceptable characters are found in hostname, pick a new name</comment>
         <translation>O nome do computador contém caracteres inválidos.
@@ -1073,7 +1071,7 @@ diferente antes de prosseguir.</translation>
     <message>
         <location filename="../brightness_small.cpp" line="35"/>
         <source>Brightness</source>
-        <translation type="unfinished"></translation>
+        <translation>Brilho</translation>
     </message>
     <message>
         <location filename="../brightness_small.cpp" line="54"/>

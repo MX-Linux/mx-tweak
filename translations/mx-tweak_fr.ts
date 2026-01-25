@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="fr">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="fr">
 <context>
     <name>QObject</name>
     <message>
@@ -225,7 +223,7 @@
         <location filename="../tweak.ui" line="358"/>
         <source>Save Current Settings as a Theme Set</source>
         <extracomment>save theme settings as a group</extracomment>
-        <translation>Enregistrer réglages actuels comme un jeu de thème</translation>
+        <translation>Enregistrer les paramètres du thème actuel comme un jeu de thèmes</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="368"/>
@@ -285,7 +283,7 @@
     <message>
         <location filename="../tweak.ui" line="463"/>
         <source>Xfce Compositor Settings</source>
-        <translation>Paramètres de Xfce Compositor</translation>
+        <translation>Paramètres du compositeur Xfce</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="466"/>
@@ -305,7 +303,7 @@
     <message>
         <location filename="../tweak.ui" line="490"/>
         <source>Edit compton.conf directly in text editor</source>
-        <translation>Editer directement compton.conf dans l’éditeur de texte</translation>
+        <translation>Éditer directement compton.conf dans l’éditeur de texte</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="493"/>
@@ -332,7 +330,7 @@
         <location filename="../tweak.ui" line="575"/>
         <location filename="../tweak.ui" line="706"/>
         <source>TextLabel</source>
-        <translation>Texte de l’étiquette</translation>
+        <translation>Libellé</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="582"/>
@@ -452,7 +450,7 @@
     <message>
         <location filename="../tweak.ui" line="851"/>
         <source>note: to hibernate, swap needs to be &gt;= RAM</source>
-        <translation>remarque : pour mettre en hibernation, la mémoire swap doit être &gt;= RAM</translation>
+        <translation>remarque : pour mettre en hibernation, la mémoire swap doit être ⩾ RAM</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="885"/>
@@ -739,7 +737,7 @@
     <message>
         <location filename="../tweak.ui" line="1637"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
-        <translation>Utiliser le pilote Intel à la place du pilote par défaut « modesetting » (nécessite un redémarrage)</translation>
+        <translation>Utiliser le pilote Intel au lieu du pilote par défaut « modesetting » (redémarrage requis)</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1471"/>
@@ -749,7 +747,7 @@
     <message>
         <location filename="../tweak.ui" line="1583"/>
         <source>Use tearfree amdgpu option</source>
-        <translation>Utiliser l’option amdgpu sans tearing - sans déchirure d’écran</translation>
+        <translation>Activer l’option TearFree (suppression du tearing) pour amdgpu</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1545"/>
@@ -759,7 +757,7 @@
     <message>
         <location filename="../tweak.ui" line="1525"/>
         <source>Use tearfree radeon driver option</source>
-        <translation>Utiliser l’option du pilote radeon sans tearing - sans déchirure d’écran</translation>
+        <translation>Activer l’option TearFree (suppression du tearing) pour le pilote radeon</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1501"/>
@@ -776,7 +774,7 @@
         <location filename="../tweak.ui" line="1552"/>
         <source>Change Default Display Manager (login screen) (requires reboot)</source>
         <extracomment>option to change display manager login screen.  present if more than one display manager is installed</extracomment>
-        <translation>Modifier le gestionnaire d’affichage par défaut pour l’écran de connexion (login). (Nécessite un redémarrage).</translation>
+        <translation>Modifier le gestionnaire d’affichage par défaut pour l’écran de connexion (login). (redémarrage requis).</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1647"/>
@@ -796,12 +794,12 @@
     <message>
         <location filename="../tweak.ui" line="1701"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Init system that is used as the default on the main grub boot menu entry&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Système d’initialisation utilisé par défaut dans l’entrée principale du menu de démarrage GRUB&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1704"/>
         <source>Change Default Init System</source>
-        <translation type="unfinished"></translation>
+        <translation>Changer le système d’initialisation par défaut</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1729"/>
@@ -923,7 +921,7 @@
     <message>
         <location filename="../tweak_misc.cpp" line="309"/>
         <source>Sorry, your computer name contains invalid characters.
-You&apos;ll have to select a different
+You'll have to select a different
 name before proceeding.</source>
         <comment>unacceptable characters are found in hostname, pick a new name</comment>
         <translation>Désolé mais le nom de votre ordinateur contient des caractères non valides. 
@@ -1057,7 +1055,7 @@ Veuillez choisir un nom différent avant de continuer.</translation>
         <location filename="../brightness_small.ui" line="61"/>
         <location filename="../brightness_small.ui" line="89"/>
         <source>TextLabel</source>
-        <translation>Étiquette de texte</translation>
+        <translation>Libellé</translation>
     </message>
     <message>
         <location filename="../brightness_small.ui" line="68"/>
@@ -1137,7 +1135,7 @@ Veuillez choisir un nom différent avant de continuer.</translation>
     <message>
         <location filename="../window_buttons.ui" line="50"/>
         <source>Sorting Order:</source>
-        <translation>Ordre de tri :</translation>
+        <translation>Ordre de tri :</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="58"/>
@@ -1172,7 +1170,7 @@ Veuillez choisir un nom différent avant de continuer.</translation>
     <message>
         <location filename="../window_buttons.ui" line="95"/>
         <source>Window grouping:</source>
-        <translation>Groupement de fenêtres :</translation>
+        <translation>Groupement de fenêtres :</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="103"/>
@@ -1187,7 +1185,7 @@ Veuillez choisir un nom différent avant de continuer.</translation>
     <message>
         <location filename="../window_buttons.ui" line="116"/>
         <source>Middle click action:</source>
-        <translation>Action du clic du milieu :</translation>
+        <translation>Action du clic du milieu :</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="124"/>
@@ -1227,7 +1225,7 @@ Veuillez choisir un nom différent avant de continuer.</translation>
     <message>
         <location filename="../window_buttons.ui" line="172"/>
         <source>Show windows from all workspaces or viewports</source>
-        <translation>Afficher les fenêtres de tous les espaces de travail ou fenêtres d’affichage viewports</translation>
+        <translation>Afficher les fenêtres de tous les espaces de travail ou bureaux virtuels</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="179"/>
@@ -1255,12 +1253,12 @@ Veuillez choisir un nom différent avant de continuer.</translation>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="23"/>
         <source>Feature Settings</source>
-        <translation>Paramètres des fonctions</translation>
+        <translation>Paramètres des fonctionnalités</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="29"/>
         <source>Display fullscreen overlay windows directly</source>
-        <translation>Afficher directement le recouvrement de fenêtres en plein écran</translation>
+        <translation>Afficher immédiatement les fenêtres (ex : notifications) par-dessus l’écran</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="36"/>
@@ -1270,22 +1268,22 @@ Veuillez choisir un nom différent avant de continuer.</translation>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="43"/>
         <source>Show windows preview in place of icons when cycling</source>
-        <translation>Afficher un aperçu des fenêtres plutôt que des icônes lors de l’alternance</translation>
+        <translation>Afficher un aperçu des fenêtres plutôt que des icônes lors de l’alternance (Alt + Tab)</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="50"/>
         <source>Show shadows under popup windows</source>
-        <translation>Afficher des ombres sous les fenêtres contextuelles (popup)</translation>
+        <translation>Afficher les ombres sous les fenêtres contextuelles (popup)</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="57"/>
         <source>Show shadows under dock windows</source>
-        <translation>Afficher des ombres sous les fenêtres du dock</translation>
+        <translation>Afficher les ombres sous les fenêtres du dock</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="64"/>
         <source>Show shadows under regular windows</source>
-        <translation>Afficher des ombres sous les fenêtres régulières</translation>
+        <translation>Afficher les ombres sous les fenêtres normales</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="74"/>
@@ -1295,7 +1293,7 @@ Veuillez choisir un nom différent avant de continuer.</translation>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="80"/>
         <source>Window decorations</source>
-        <translation>Décors des fenêtres</translation>
+        <translation>Décorations des fenêtres</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="103"/>

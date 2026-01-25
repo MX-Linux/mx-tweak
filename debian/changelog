@@ -1,8 +1,10 @@
-mx-tweak (26.01.01mx25) MX; urgency=medium
+mx-tweak (26.01.02mx25) MX; urgency=medium
 
-  * add switching between sysvinit and systemd
+  * chooser for sysvinit or systemd as "default" init system
+  * affects top level grub entry
+  * update translations
 
- -- Dolphin Oracle <dolphinoracle@gmail.com>  Wed, 21 Jan 2026 21:26:38 -0500
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 24 Jan 2026 20:42:24 -0500
 
 mx-tweak (25.11.02mx25) mx; urgency=medium
 

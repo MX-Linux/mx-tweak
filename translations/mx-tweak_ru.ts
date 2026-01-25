@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="ru">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="ru">
 <context>
     <name>QObject</name>
     <message>
@@ -89,7 +87,7 @@
     <message>
         <location filename="../tweak.ui" line="58"/>
         <source>Tasklist</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="64"/>
@@ -147,7 +145,7 @@
     <message>
         <location filename="../tweak.ui" line="158"/>
         <source>Panel Plugin Scales</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="164"/>
@@ -376,7 +374,7 @@
     <message>
         <location filename="../tweak.ui" line="740"/>
         <source>Xfce</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="746"/>
@@ -407,7 +405,7 @@
     <message>
         <location filename="../tweak.ui" line="783"/>
         <source>Thunar</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="789"/>
@@ -624,7 +622,7 @@
         <location filename="../tweak.ui" line="1405"/>
         <source>Super Key</source>
         <extracomment>referring to the meta or Left Super Key</extracomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="1411"/>
@@ -796,12 +794,12 @@
     <message>
         <location filename="../tweak.ui" line="1701"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Init system that is used as the default on the main grub boot menu entry&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="1704"/>
         <source>Change Default Init System</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="1729"/>
@@ -909,7 +907,7 @@
     <message>
         <location filename="../tweak_compositor.cpp" line="64"/>
         <source>Picom</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
 </context>
 <context>
@@ -923,7 +921,7 @@
     <message>
         <location filename="../tweak_misc.cpp" line="309"/>
         <source>Sorry, your computer name contains invalid characters.
-You&apos;ll have to select a different
+You'll have to select a different
 name before proceeding.</source>
         <comment>unacceptable characters are found in hostname, pick a new name</comment>
         <translation>Извините, такое имя компьютера содержит недопустимые символы.
@@ -990,7 +988,7 @@ name before proceeding.</source>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="23"/>
         <source>docklike</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="24"/>
@@ -1072,7 +1070,7 @@ name before proceeding.</source>
     <message>
         <location filename="../brightness_small.cpp" line="35"/>
         <source>Brightness</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../brightness_small.cpp" line="54"/>
