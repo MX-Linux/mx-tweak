@@ -136,7 +136,7 @@ void TweakDisplay::setRefreshRate(const QString &display, const QString &resolut
     }
     runProc(u"xfconf-query"_s, {u"--channel"_s, u"displays"_s, u"-p"_s,
         (u'/' + activeProfile + u'/' + display + "/RefreshRate"_L1),
-        u"-t"_s, u"double"_s, u"-s"_s, rates.at(0).section('*',0,0), u" --create"_s});
+        u"-t"_s, u"double"_s, u"-s"_s, rates.at(0).section('*',0,0), u"--create"_s});
 }
 
 void TweakDisplay::setupBacklight() noexcept

@@ -130,7 +130,7 @@ void window_buttons::changePluginInt(const QLatin1StringView setting, int value)
 {
     runProc(u"xfconf-query"_s, {u"-c"_s, u"xfce4-panel"_s, u"-p"_s,
         ("/plugins/"_L1 + plugintasklist + setting),
-        u"-t"_s, u"int"_s, u"-s"_s, QString::number(value), u" --create"_s});
+        u"-t"_s, u"int"_s, u"-s"_s, QString::number(value), u"--create"_s});
 }
 
 void window_buttons::checkButtonLabels_toggled(bool checked) noexcept
