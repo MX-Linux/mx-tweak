@@ -159,7 +159,7 @@ void window_buttons::comboMiddleClickAction_currentIndexChanged(int index) const
 }
 void window_buttons::checkRestoreMinWindows_toggled(bool checked) noexcept
 {
-    changePluginBool("/switch-windows"_L1, checked);
+    changePluginBool("/switch-workspace-on-unminimize"_L1, checked);
 }
 void window_buttons::checkDrawFrames_toggled(bool checked) noexcept
 {
