@@ -64,7 +64,14 @@ Tweak::Tweak(QWidget *parent, const QStringList &args) noexcept
     ui->setupUi(this);
     setWindowFlags(Qt::Window); // for the close, min and max buttons
 
-    if ( args.contains(u"--display"_s)) {
+    if (args.contains(u"--verbose"_s)) {
+        verbose = true;
+    }
+
+    // check session type
+    checkSession();
+
+    if (args.contains(u"--display"_s)) {
         if (isXfce) {
             displayflag = true;
         } else {
@@ -80,11 +87,6 @@ Tweak::Tweak(QWidget *parent, const QStringList &args) noexcept
     if (args.contains(u"--other"_s)){
         othertabflag = true;
     }
-    if (args.contains(u"--verbose"_s)) {
-        verbose = true;
-    }
-    // check session type
-    checkSession();
 
     connect(ui->pushAbout, &QPushButton::clicked, this, &Tweak::pushAbout_clicked);
     connect(ui->pushHelp, &QPushButton::clicked, this, &Tweak::pushHelp_clicked);
