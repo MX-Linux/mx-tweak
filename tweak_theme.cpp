@@ -123,7 +123,7 @@ void TweakTheme::setupComboTheme() noexcept
                 xfwm4_theme_present = true;
             }
 
-            if ( icon_theme.exists() || icon_theme_home.exists() || xfwm4_theme_home_alt.exists()) {
+            if ( icon_theme.exists() || icon_theme_home.exists() || icon_theme_home_alt.exists()) {
                 icontheme_present = true;
             }
 
