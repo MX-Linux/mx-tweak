@@ -605,7 +605,7 @@ void TweakTheme::pushThemeSaveSet_clicked() noexcept
             backgroundColor << lines.at(i).toDouble();
         }
     } else if (backgroundStyle == 2) {
-        backgroundImage = runCmd("xfconf-query -c /panels/"_L1 + panel + "/background-image"_L1).output;
+        backgroundImage = runCmd("xfconf-query -c xfce4-panel -p /panels/"_L1 + panel + "/background-image"_L1).output;
     }
 
     QString iconThemeName = runCmd(u"xfconf-query -c xsettings -p /Net/IconThemeName"_s).output;
