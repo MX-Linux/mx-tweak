@@ -9,8 +9,9 @@ mx-tweak (26.03.01mx25) mx; urgency=medium
   * fix --display option session check
   [ Dolphin ]
   * update translations 
+  * update help
 
- -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 15 Mar 2026 15:34:59 -0400
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 15 Mar 2026 16:14:47 -0400
 
 mx-tweak (26.01.02mx25) MX; urgency=medium
 
