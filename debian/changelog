@@ -1,3 +1,17 @@
+mx-tweak (26.03.01mx25) mx; urgency=medium
+  
+  [ Adrian ]
+
+  * fix xfce theme set icon lookup
+  * fix xfconf create arguements
+  * fix xfce panel background save
+  * fix window buttons restore setting
+  * fix --display option session check
+  [ Dolphin ]
+  * update translations 
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 15 Mar 2026 15:34:59 -0400
+
 mx-tweak (26.01.02mx25) MX; urgency=medium
 
   * chooser for sysvinit or systemd as "default" init system
