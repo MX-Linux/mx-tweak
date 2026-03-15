@@ -92,7 +92,7 @@
     <message>
         <location filename="../tweak.ui" line="64"/>
         <source>Set Tasklist plugin to:</source>
-        <translation>Καθορισμός πρόσθετου λίστας εργασιών σε:</translation>
+        <translation>Ρύθμιση πρόσθετου λίστας εργασιών σε:</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="71"/>
@@ -145,7 +145,7 @@
     <message>
         <location filename="../tweak.ui" line="158"/>
         <source>Panel Plugin Scales</source>
-        <translation>Κλίμακα πρόσθετου στο ταμπλό</translation>
+        <translation>Κλίμακα αντικειμένων στο ταμπλό</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="164"/>
@@ -183,17 +183,17 @@
         <location filename="../tweak.ui" line="281"/>
         <source>Application</source>
         <extracomment>theme an application will get</extracomment>
-        <translation>Χρήση</translation>
+        <translation>Στυλ</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="301"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Toggle Dark Mode for GTK4 libadwaita applications&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Ενεργοποίηση σκοτεινής κατάστασης για εφαρμογές GTK4 libadwaita&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Ενεργοποίηση σκοτεινού στυλ για εφαρμογές GTK4 libadwaita&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="304"/>
         <source>Dark Mode</source>
-        <translation>Σκοτεινή κατάσταση</translation>
+        <translation>Σκοτεινό</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="311"/>
@@ -794,12 +794,12 @@
     <message>
         <location filename="../tweak.ui" line="1701"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Init system that is used as the default on the main grub boot menu entry&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Σύστημα εκκίνησης που χρησιμοποιείται ως προεπιλογή στην κύρια καταχώριση του μενού εκκίνησης grub&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1704"/>
         <source>Change Default Init System</source>
-        <translation type="unfinished"/>
+        <translation>Αλλαγή προεπιλεγμένου συστήματος εκκίνησης</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1729"/>
@@ -1258,7 +1258,7 @@ name before proceeding.</source>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="29"/>
         <source>Display fullscreen overlay windows directly</source>
-        <translation>Άμεση εμφάνιση επικαλυπτόμενων παραθύρων σε πλήρη οθόνη</translation>
+        <translation>Άμεση απεικόνιση των επικαλυπτόμενων παραθύρων πλήρους οθόνης</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="36"/>

@@ -293,7 +293,7 @@
     <message>
         <location filename="../tweak.ui" line="476"/>
         <source>Launch compton-conf configuration tool</source>
-        <translation type="unfinished"/>
+        <translation>Compton-conf მორგების პროგრამის გაშვება</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="479"/>
@@ -303,7 +303,7 @@
     <message>
         <location filename="../tweak.ui" line="490"/>
         <source>Edit compton.conf directly in text editor</source>
-        <translation type="unfinished"/>
+        <translation>compton.conf-ის პირდაპირ, რედაქტორში ჩასწორება</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="493"/>
@@ -844,7 +844,7 @@
     <message>
         <location filename="../tweak.ui" line="1891"/>
         <source>Quit application</source>
-        <translation type="unfinished"/>
+        <translation>აპლიკაციიდან გასვლა</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1894"/>
@@ -879,17 +879,17 @@
     <message>
         <location filename="../tweak.cpp" line="246"/>
         <source>Copyright (c) MX Linux</source>
-        <translation type="unfinished"/>
+        <translation>(c) MX Linux საავტორო ფულებები დაცულია</translation>
     </message>
     <message>
         <location filename="../tweak.cpp" line="247"/>
         <source>%1 License</source>
-        <translation type="unfinished"/>
+        <translation>ლიცენზია %1</translation>
     </message>
     <message>
         <location filename="../tweak.cpp" line="261"/>
         <source>%1 Help</source>
-        <translation type="unfinished"/>
+        <translation>%1-ის დახმარება</translation>
     </message>
 </context>
 <context>

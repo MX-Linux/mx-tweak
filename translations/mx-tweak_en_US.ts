@@ -1,56 +1,56 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="ru_RU">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="en_US">
 <context>
     <name>QObject</name>
     <message>
         <location filename="../about.cpp" line="42"/>
         <source>License</source>
-        <translation>Лицензия</translation>
+        <translation>License</translation>
     </message>
     <message>
         <location filename="../about.cpp" line="43"/>
         <location filename="../about.cpp" line="53"/>
         <source>Changelog</source>
-        <translation>Список изменений</translation>
+        <translation>Changelog</translation>
     </message>
     <message>
         <location filename="../about.cpp" line="44"/>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Cancel</translation>
     </message>
     <message>
         <location filename="../about.cpp" line="64"/>
         <source>&amp;Close</source>
-        <translation>&amp;Закрыть</translation>
+        <translation>&amp;Close</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="55"/>
         <source>GUI for applying assorted useful tweaks</source>
-        <translation>Графический интерфейс для применения различных полезных настроек</translation>
+        <translation>GUI for applying assorted useful tweaks</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="58"/>
         <source>launches brightness-systray</source>
-        <translation>запускает brightness-systray</translation>
+        <translation>launches brightness-systray</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="59"/>
         <source>opens with display tab open.  Only valid with Xfce desktop running</source>
-        <translation>открывается с открытой вкладкой дисплея. Действительно только с рабочим столом Xfce</translation>
+        <translation>opens with display tab open.  Only valid with Xfce desktop running</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="60"/>
         <source>Opens theme tab directly.  Valid on Xfce &amp; Fluxbox desktops</source>
-        <translation>Открывает вкладку темы напрямую. Действительно на рабочих столах Xfce и Fluxbox.</translation>
+        <translation>Opens theme tab directly.  Valid on Xfce &amp; Fluxbox desktops</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="61"/>
         <source>Display additional debug output in console</source>
-        <translation>Отображать дополнительные данные отладки в консоли</translation>
+        <translation>Display additional debug output in console</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="62"/>
         <source>Opens Other tab directly.  Valid on all desktops</source>
-        <translation>Открывает другую вкладку напрямую. Действительно на всех рабочих столах.</translation>
+        <translation>Opens Other tab directly.  Valid on all desktops</translation>
     </message>
 </context>
 <context>
@@ -66,7 +66,7 @@
     <message>
         <location filename="../tweak.ui" line="33"/>
         <source>Xfce Panel</source>
-        <translation>Панель Xfce</translation>
+        <translation>Xfce Panel</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="39"/>
@@ -82,37 +82,37 @@
         <location filename="../tweak.ui" line="1532"/>
         <source>Apply</source>
         <extracomment>apply changes</extracomment>
-        <translation>Применить</translation>
+        <translation>Apply</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="58"/>
         <source>Tasklist</source>
-        <translation>Список задач</translation>
+        <translation>Tasklist</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="64"/>
         <source>Set Tasklist plugin to:</source>
-        <translation>Задать плагин Tasklist:</translation>
+        <translation>Set Tasklist plugin to:</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="71"/>
         <source>Docklike is the modern dock plugin for the panel. Window Buttons is the classic tasklist without dock features.</source>
-        <translation>Docklike — современный плагин для док-панели. Window Buttons — классический список задач без функций док-панели.</translation>
+        <translation>Docklike is the modern dock plugin for the panel. Window Buttons is the classic tasklist without dock features.</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="78"/>
         <source>Tasklist Options</source>
-        <translation>Параметры списка задач</translation>
+        <translation>Tasklist Options</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="85"/>
         <source>Docklike Options</source>
-        <translation>Параметры Docklike</translation>
+        <translation>Docklike Options</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="95"/>
         <source>Affects 1st Panel</source>
-        <translation>Основная панель</translation>
+        <translation>Affects 1st Panel</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="101"/>
@@ -120,133 +120,133 @@
         <location filename="../tweak.ui" line="1158"/>
         <location filename="../tweak.ui" line="1285"/>
         <source>Placement</source>
-        <translation>Размещение</translation>
+        <translation>Placement</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="114"/>
         <source>Backup/Restore Configuration (all panels)</source>
-        <translation>Настройка резервного копирования/восстановления (все панели)</translation>
+        <translation>Backup/Restore Configuration (all panels)</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="127"/>
         <source>Backup current panel configuration</source>
-        <translation>Сохранить текущую конфигурацию панели</translation>
+        <translation>Backup current panel configuration</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="141"/>
         <source>Restore selected panel configuration</source>
-        <translation>Восстановить выбранную конфигурацию панели</translation>
+        <translation>Restore selected panel configuration</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="148"/>
         <source>Restore default panel</source>
-        <translation>Восстановить панель по умолчанию</translation>
+        <translation>Restore default panel</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="158"/>
         <source>Panel Plugin Scales</source>
-        <translation>Масштабы плагинов панели</translation>
+        <translation>Panel Plugin Scales</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="164"/>
         <source>Volume</source>
         <extracomment>volume plugin scale factor</extracomment>
-        <translation>Том</translation>
+        <translation>Volume</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="184"/>
         <source>Power Manager</source>
         <extracomment>power manager plugin scale factor</extracomment>
-        <translation>Диспетчер питания</translation>
+        <translation>Power Manager</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="221"/>
         <source>Theme</source>
-        <translation>Тема</translation>
+        <translation>Theme</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="227"/>
         <source>Theme Options</source>
-        <translation>Опции темы</translation>
+        <translation>Theme Options</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="262"/>
         <source>Remove User Theme Set</source>
-        <translation>Удалить набор тем пользователя</translation>
+        <translation>Remove User Theme Set</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="275"/>
         <source>Themes</source>
-        <translation>Темы</translation>
+        <translation>Themes</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="281"/>
         <source>Application</source>
         <extracomment>theme an application will get</extracomment>
-        <translation>Приложение</translation>
+        <translation>Application</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="301"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Toggle Dark Mode for GTK4 libadwaita applications&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Включение/выключение темного режима для приложений GTK4 libadwaita&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Toggle Dark Mode for GTK4 libadwaita applications&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="304"/>
         <source>Dark Mode</source>
-        <translation>Темный режим</translation>
+        <translation>Dark Mode</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="311"/>
         <location filename="../tweak.ui" line="1778"/>
         <source>Window Manager</source>
         <extracomment>theme a window manager border will get</extracomment>
-        <translation>Оконный менеджер</translation>
+        <translation>Window Manager</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="331"/>
         <source>Legacy Styles</source>
-        <translation>Устаревшие стили</translation>
+        <translation>Legacy Styles</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="344"/>
         <source>Icons</source>
         <extracomment>icon theme</extracomment>
-        <translation>Значки</translation>
+        <translation>Icons</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="351"/>
         <source>Cursors</source>
         <extracomment>cursor theme</extracomment>
-        <translation>Курсоры</translation>
+        <translation>Cursors</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="358"/>
         <source>Save Current Settings as a Theme Set</source>
         <extracomment>save theme settings as a group</extracomment>
-        <translation>Сохранить текущие настройки как набор тем</translation>
+        <translation>Save Current Settings as a Theme Set</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="368"/>
         <source>Size</source>
         <extracomment>size of the cursor</extracomment>
-        <translation>Размер</translation>
+        <translation>Size</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="378"/>
         <source>default</source>
         <extracomment>default cursor size determined by X server</extracomment>
-        <translation>по умолчанию</translation>
+        <translation>default</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="401"/>
         <location filename="../tweak.ui" line="453"/>
         <source>Compositor</source>
-        <translation>Композитор</translation>
+        <translation>Compositor</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="413"/>
         <source>Changing the VBlank mode may help alleviate some screen tearing issues. See Help for more information.</source>
-        <translation>Изменение режима VBlank может уменьшить проблемы с тирингом. Доп.информацию см. в разделе «Справка».</translation>
+        <translation>Changing the VBlank mode may help alleviate some screen tearing issues. See Help for more information.</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="416"/>
@@ -256,7 +256,7 @@
     <message>
         <location filename="../tweak.ui" line="424"/>
         <source>auto</source>
-        <translation>авторежим</translation>
+        <translation>auto</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="429"/>
@@ -273,103 +273,103 @@
         <location filename="../tweak.ui" line="1022"/>
         <source>off</source>
         <extracomment>setting to 0 turns off screensaver screen blank</extracomment>
-        <translation>откл.</translation>
+        <translation>off</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="447"/>
         <source>Transparency and shadow options</source>
-        <translation>Параметры прозрачности и теней</translation>
+        <translation>Transparency and shadow options</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="463"/>
         <source>Xfce Compositor Settings</source>
-        <translation>Настройки композитора XFCE</translation>
+        <translation>Xfce Compositor Settings</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="466"/>
         <source>Xfwm Settings</source>
-        <translation>Настройки Xfmw</translation>
+        <translation>Xfwm Settings</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="476"/>
         <source>Launch compton-conf configuration tool</source>
-        <translation>Запуск инструмента конфигурации Compton</translation>
+        <translation>Launch compton-conf configuration tool</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="479"/>
         <source>Picom settings</source>
-        <translation>Настройки Picom</translation>
+        <translation>Picom settings</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="490"/>
         <source>Edit compton.conf directly in text editor</source>
-        <translation>Редактировать compton.conf в текстовом редакторе</translation>
+        <translation>Edit compton.conf directly in text editor</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="493"/>
         <source>Edit picom.conf</source>
-        <translation>Редактировать picom.conf</translation>
+        <translation>Edit picom.conf</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="540"/>
         <source>Display</source>
-        <translation>Экран</translation>
+        <translation>Display</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="546"/>
         <source>Display Tweaks</source>
-        <translation>Настройки дисплея</translation>
+        <translation>Display Tweaks</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="552"/>
         <source>Hardware Backlight</source>
         <extracomment>set the hardware backlight on monitors that have them</extracomment>
-        <translation>Аппаратная подсветка</translation>
+        <translation>Hardware Backlight</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="575"/>
         <location filename="../tweak.ui" line="706"/>
         <source>TextLabel</source>
-        <translation>Текстовая метка</translation>
+        <translation>TextLabel</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="582"/>
         <source>GTK scaling</source>
         <extracomment>gtk scale factor</extracomment>
-        <translation>Масштабирование GTK</translation>
+        <translation>GTK scaling</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="635"/>
         <source>Choose Display for xrandr tweaks</source>
         <extracomment>choose the display that the xrandr tweaks will be acted upon</extracomment>
-        <translation>Выберите экран для настроек xrandr</translation>
+        <translation>Choose Display for xrandr tweaks</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="645"/>
         <source>Resolution</source>
-        <translation>Разрешение</translation>
+        <translation>Resolution</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="662"/>
         <source>xrandr Scaling</source>
         <extracomment>xrandr scale factor</extracomment>
-        <translation>Масштабирование xrandr</translation>
+        <translation>xrandr Scaling</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="689"/>
         <source>Software (xrandr) Brightness</source>
         <extracomment>adjust brightness (not backlight) via software</extracomment>
-        <translation>Программная (xrandr) яркость</translation>
+        <translation>Software (xrandr) Brightness</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="713"/>
         <source>Saving is per display</source>
-        <translation>Сохранение происходит для каждого дисплея</translation>
+        <translation>Saving is per display</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="716"/>
         <source>Save</source>
-        <translation>Сохранить</translation>
+        <translation>Save</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="740"/>
@@ -379,28 +379,28 @@
     <message>
         <location filename="../tweak.ui" line="746"/>
         <source>Desktop</source>
-        <translation>Рабочий стол</translation>
+        <translation>Desktop</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="752"/>
         <source>Enable single-click on desktop</source>
-        <translation>Задействовать одиночный клик на рабочем столе</translation>
+        <translation>Enable single-click on desktop</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="759"/>
         <source>Enable Desktop Zoom </source>
-        <translation>Включить масштабирование рабочего стола</translation>
+        <translation>Enable Desktop Zoom </translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="766"/>
         <location filename="../tweak.ui" line="1355"/>
         <source>Show windows from all workspaces in panel</source>
-        <translation>Показывать на панели окна со всех рабочих столов</translation>
+        <translation>Show windows from all workspaces in panel</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="773"/>
         <source>Do not shorten file names on the desktop</source>
-        <translation>Не сокращайте имена файлов на рабочем столе</translation>
+        <translation>Do not shorten file names on the desktop</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="783"/>
@@ -410,47 +410,47 @@
     <message>
         <location filename="../tweak.ui" line="789"/>
         <source>Enable single-click in Thunar File Manager</source>
-        <translation>Задействовать одиночный клик в файловом менеджере Thunar</translation>
+        <translation>Enable single-click in Thunar File Manager</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="796"/>
         <source>Reset custom right-click actions to system defaults</source>
-        <translation>Сбросить пользовательские действия по щелчку правой кнопкой мыши до значений по умолчанию</translation>
+        <translation>Reset custom right-click actions to system defaults</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="803"/>
         <source>Thunar windows always open in split view</source>
-        <translation>Окна Thunar всегда открываются в режиме раздельного просмотра</translation>
+        <translation>Thunar windows always open in split view</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="810"/>
         <source>Thunar split view opens horizontal</source>
-        <translation>Разделенный просмотр Thunar открывается горизонтально</translation>
+        <translation>Thunar split view opens horizontal</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="820"/>
         <source>Show percentages in notifcations when available</source>
-        <translation>Показывать проценты в уведомлениях, если возможно</translation>
+        <translation>Show percentages in notifcations when available</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="827"/>
         <source>Show GTK File Dialog action buttons at bottom of dialogs</source>
-        <translation>Показать кнопки действий файлового диалога GTK в нижней части окон</translation>
+        <translation>Show GTK File Dialog action buttons at bottom of dialogs</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="834"/>
         <source>(also turns off Client Side Decorations for Xfce applications)</source>
-        <translation>(также отключает клиентские декорации для приложений XFCE)</translation>
+        <translation>(also turns off Client Side Decorations for Xfce applications)</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="844"/>
         <source>Enable hibernate on Log Out menu </source>
-        <translation>Добавить hibernate в меню Выхода из системы</translation>
+        <translation>Enable hibernate on Log Out menu </translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="851"/>
         <source>note: to hibernate, swap needs to be &gt;= RAM</source>
-        <translation>примечание: для гибернации swap должен быть &gt;= ОЗУ</translation>
+        <translation>note: to hibernate, swap needs to be &gt;= RAM</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="885"/>
@@ -461,111 +461,111 @@
         <location filename="../tweak.ui" line="891"/>
         <location filename="../tweak.ui" line="1365"/>
         <source>Reset Defaults</source>
-        <translation>Сброс по умолчанию</translation>
+        <translation>Reset Defaults</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="897"/>
         <source>Reset DefaultDock</source>
-        <translation>Сброс дока</translation>
+        <translation>Reset DefaultDock</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="904"/>
         <source>Reset Fluxbox Menu</source>
-        <translation>Сброс меню Fluxbox</translation>
+        <translation>Reset Fluxbox Menu</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="911"/>
         <source>Reset ALL mx-fluxbox settings</source>
-        <translation>Сбросить ВСЕ настройки mx-fluxbox</translation>
+        <translation>Reset ALL mx-fluxbox settings</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="918"/>
         <source>Add new default menu items, if any, to existing fluxbox menu.</source>
-        <translation>Добавить новые пункты меню по умолчанию, при наличии, в существующее меню Fluxbox.</translation>
+        <translation>Add new default menu items, if any, to existing fluxbox menu.</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="921"/>
         <source>Upgrade existing menu entries</source>
-        <translation>Обновить существующие пункты меню</translation>
+        <translation>Upgrade existing menu entries</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="931"/>
         <source>Desktop Icons</source>
-        <translation>Значки рабочего стола</translation>
+        <translation>Desktop Icons</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="937"/>
         <source>Toggle desktop icons</source>
-        <translation>Переключить иконки рабочего стола</translation>
+        <translation>Toggle desktop icons</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="945"/>
         <location filename="../tweak.ui" line="969"/>
         <source>On</source>
-        <translation>Вкл</translation>
+        <translation>On</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="950"/>
         <location filename="../tweak.ui" line="974"/>
         <source>Off</source>
-        <translation>Откл.</translation>
+        <translation>Off</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="958"/>
         <source>Toggle icon captions</source>
-        <translation>Включить подписи к иконкам</translation>
+        <translation>Toggle icon captions</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="979"/>
         <source>On Hover</source>
-        <translation>При наведении</translation>
+        <translation>On Hover</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1006"/>
         <source>Screensaver</source>
-        <translation>Заставка экрана</translation>
+        <translation>Screensaver</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1012"/>
         <source>Idle time (minutes)</source>
         <extracomment>set the time of inactivity  before screensaver screen blank occurs</extracomment>
-        <translation>Время простоя (минуты)</translation>
+        <translation>Idle time (minutes)</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1035"/>
         <source>Toolbar Settings</source>
-        <translation>   Настройки панели инструментов</translation>
+        <translation>Toolbar Settings</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1041"/>
         <source>Height</source>
-        <translation>Высота</translation>
+        <translation>Height</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1122"/>
         <location filename="../tweak.ui" line="1232"/>
         <source>Autohide</source>
-        <translation>Скрывать автоматически</translation>
+        <translation>Autohide</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1129"/>
         <source>Show Toolbar</source>
-        <translation>Показать панель инструментов</translation>
+        <translation>Show Toolbar</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1136"/>
         <source>Width</source>
-        <translation>Ширина</translation>
+        <translation>Width</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1152"/>
         <source>Dock Settings</source>
-        <translation>Настройки док</translation>
+        <translation>Dock Settings</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1239"/>
         <source>Manage Tint2 Panel</source>
-        <translation>Управление панелью Tint2</translation>
+        <translation>Manage Tint2 Panel</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1273"/>
@@ -575,281 +575,281 @@
     <message>
         <location filename="../tweak.ui" line="1279"/>
         <source>Affects 1st panel</source>
-        <translation>Влияет на первую панель</translation>
+        <translation>Affects 1st panel</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1296"/>
         <source>Bottom</source>
-        <translation>Внизу</translation>
+        <translation>Bottom</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1301"/>
         <source>Left</source>
-        <translation>Слева</translation>
+        <translation>Left</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1306"/>
         <source>Top</source>
-        <translation>Сверху</translation>
+        <translation>Top</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1311"/>
         <source>Right</source>
-        <translation>Справа</translation>
+        <translation>Right</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1335"/>
         <source>Workspace</source>
-        <translation>Рабочее место</translation>
+        <translation>Workspace</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1341"/>
         <source>Autostart plasma-discover system tray update notification utility</source>
         <extracomment>enable or disable autostartup of plasma-discover updater utility on login</extracomment>
-        <translation>Утилита автоматического запуска уведомлений об обновлении панели задач Plasma-Discover</translation>
+        <translation>Autostart plasma-discover system tray update notification utility</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1348"/>
         <source>Enable single-click</source>
-        <translation>Использовать одиночный клик</translation>
+        <translation>Enable single-click</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1371"/>
         <source>Reset KDE/Plasma defaults</source>
-        <translation>Сброс настроек KDE/Plasma</translation>
+        <translation>Reset KDE/Plasma defaults</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1405"/>
         <source>Super Key</source>
         <extracomment>referring to the meta or Left Super Key</extracomment>
-        <translation>Клавиша Super</translation>
+        <translation>Super Key</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1411"/>
         <source>Also known as the &quot;windows&quot; key</source>
-        <translation>Также известна как клавиша &quot;windows&quot;</translation>
+        <translation>Also known as the &quot;windows&quot; key</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1414"/>
         <source>Command to run with Super (Meta) key</source>
         <extracomment>label for the field to enter the command to use with super key</extracomment>
-        <translation>Команда для выполнения с помощью клавиши Super (Meta)</translation>
+        <translation>Command to run with Super (Meta) key</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1424"/>
         <source>xfce-superkey defaults</source>
         <extracomment>indicates that xfce-superkey will select a command by its default logic</extracomment>
-        <translation>xfce-superkey по умолчанию</translation>
+        <translation>xfce-superkey defaults</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1431"/>
         <source>Choose application</source>
         <extracomment>description of button action to launch file dialog to choose an application</extracomment>
-        <translation>Выберите приложение</translation>
+        <translation>Choose application</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1462"/>
         <source>Miscellaneous</source>
-        <translation>Разное</translation>
+        <translation>Miscellaneous</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1518"/>
         <source>Reset Lightdm (login screen) to system default theme</source>
-        <translation>Сбросить Lightdm (экран логина) к системной теме по умолчанию</translation>
+        <translation>Reset Lightdm (login screen) to system default theme</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1623"/>
         <source>Enable mounting of internal drives by non-root users</source>
-        <translation>Включить монтирование внешних носителей для не-root пользователей</translation>
+        <translation>Enable mounting of internal drives by non-root users</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1616"/>
         <source>Enable kernel sandbox</source>
-        <translation>Задействовать песочницу ядра</translation>
+        <translation>Enable kernel sandbox</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1566"/>
         <source>requires reboot</source>
-        <translation>требуется перезагрузка</translation>
+        <translation>requires reboot</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1569"/>
         <source>Enable Bluetooth adapters on boot</source>
-        <translation>Включить адаптеры Bluetooth при загрузке</translation>
+        <translation>Enable Bluetooth adapters on boot</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1694"/>
         <source>Enable Bluetooth battery info for connected devices (requires system restart)</source>
         <extracomment>expose battery info for connected bluetooth devices to the operating system via dbus</extracomment>
-        <translation>Включить информацию о батарее Bluetooth для подключенных устройств (требуется перезагрузка системы)</translation>
+        <translation>Enable Bluetooth battery info for connected devices (requires system restart)</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1491"/>
         <source>Early loading of KVM module is new to  kernel 6.12 and conflicts with some non-KVM virtual machine applications, including virtualbox</source>
         <extracomment>early loading is new on 6.12 kernel and conflicts with virtualbox</extracomment>
-        <translation>Предзагрузка модуля KVM — нововведение ядра версии 6.12, конфликтующее с приложениями виртуальных машин без KVM, в тч VirtualBox.</translation>
+        <translation>Early loading of KVM module is new to  kernel 6.12 and conflicts with some non-KVM virtual machine applications, including virtualbox</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1494"/>
         <source>Disable early KVM module load (must be disabled for Virtualbox operation on kernel 6.12 and up)</source>
         <extracomment>disable early loading of KVM module.  necessary for virtualbox to function with kernels 6.12 and up.  actually default behavior on kernels 6.11 and earlier.</extracomment>
-        <translation>Отключить предзагрузку модуля KVM (для работы Virtualbox на ядре 6.12 и выше)</translation>
+        <translation>Disable early KVM module load (must be disabled for Virtualbox operation on kernel 6.12 and up)</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1630"/>
         <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
-        <translation>Apt устанавливает дополнительные «рекомендуемые» пакеты в качестве зависимостей</translation>
+        <translation>Apt installs additional &quot;recommends&quot; packages as dependencies</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1576"/>
         <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
-        <translation>Сгенерируйте меню Все Приложения после установки, удаления и обновления пакетов.</translation>
+        <translation>Generate fluxbox All Apps menu after package installation, removal, and updates</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1609"/>
         <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
-        <translation>Использовать клиентское оформление окон (CSD) для приложений GTK3 (требуется перезапуск сеанса)</translation>
+        <translation>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1508"/>
         <source>put a hold or remove a hold on updates of Liquorix kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
-        <translation>заморозьте или активируйте обновления ядер Liquorix</translation>
+        <translation>put a hold or remove a hold on updates of Liquorix kernels</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1511"/>
         <source>Enable Automatic Liquorix Kernel Updates (MX ahs repository)</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
-        <translation>Включите автоматическое обновление ядра Liquorix (репозиторий MX ahs)</translation>
+        <translation>Enable Automatic Liquorix Kernel Updates (MX ahs repository)</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1684"/>
         <source>put a hold or remove a hold on updates of Debian  kernels</source>
         <extracomment>toggle for apt hold action on update meta packages</extracomment>
-        <translation>заморозьте или активируйте обновления ядер Debian</translation>
+        <translation>put a hold or remove a hold on updates of Debian  kernels</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1687"/>
         <source>Enable Automatic Debian Kernel Updates</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
-        <translation>Включите автоматическое обновление ядра Debian.</translation>
+        <translation>Enable Automatic Debian Kernel Updates</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1637"/>
         <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
-        <translation>Использовать драйвер Intel вместо драйвера &quot;modesetting&quot; (требуется перезапуск)</translation>
+        <translation>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1471"/>
         <source>NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
-        <translation>ПРИМЕЧАНИЕ: существующий файл /etc/X11/xorg.conf.d/20-intel.conf будет скопирован в домашнюю папку</translation>
+        <translation>NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1583"/>
         <source>Use tearfree amdgpu option</source>
-        <translation>Использовать опцию amdgpu видео без тиринга</translation>
+        <translation>Use tearfree amdgpu option</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1545"/>
         <source>NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
-        <translation>ПРИМЕЧАНИЕ: существующий файл /etc/X11/xorg.conf.d/20-amd.conf будет скопирован в домашнюю папку</translation>
+        <translation>NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1525"/>
         <source>Use tearfree radeon driver option</source>
-        <translation>Использовать опцию драйвера radeon видео без тиринга</translation>
+        <translation>Use tearfree radeon driver option</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1501"/>
         <source>NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
-        <translation>ПРИМЕЧАНИЕ: существующий файл /etc/X11/xorg.conf.d/20-radeon.conf будет скопирован в домашнюю папку</translation>
+        <translation>NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1559"/>
         <source>Change computer name (requires reboot)</source>
         <extracomment>option to change the system hostname, requires a reboot to be 100% effective</extracomment>
-        <translation>Изменить имя компьютера (требуется перезагрузка)</translation>
+        <translation>Change computer name (requires reboot)</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1552"/>
         <source>Change Default Display Manager (login screen) (requires reboot)</source>
         <extracomment>option to change display manager login screen.  present if more than one display manager is installed</extracomment>
-        <translation>Изменить Default Display Manager (экран входа) (требуется перезагрузка)</translation>
+        <translation>Change Default Display Manager (login screen) (requires reboot)</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1647"/>
         <source>Password for administrative tasks:</source>
-        <translation>Пароль для задач администрирования:</translation>
+        <translation>Password for administrative tasks:</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1654"/>
         <source>&amp;User</source>
-        <translation>&amp;Пользователь</translation>
+        <translation>&amp;User</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1661"/>
         <source>Root</source>
-        <translation>Корень</translation>
+        <translation>Root</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1701"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Init system that is used as the default on the main grub boot menu entry&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Система инициализации, используемая по умолчанию в главном меню загрузки GRUB&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Init system that is used as the default on the main grub boot menu entry&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1704"/>
         <source>Change Default Init System</source>
-        <translation>Изменить систему инициализации по умолчанию</translation>
+        <translation>Change Default Init System</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1729"/>
         <source>Xfce Settings</source>
-        <translation>Настройки Xfce</translation>
+        <translation>Xfce Settings</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1735"/>
         <source>Customize the panel</source>
-        <translation>Настройте панель</translation>
+        <translation>Customize the panel</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1745"/>
         <source>Panel</source>
-        <translation>Панель</translation>
+        <translation>Panel</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1765"/>
         <source>Configure window behavior and shortcuts</source>
-        <translation>Настройка поведения окон и сочетаний клавиш</translation>
+        <translation>Configure window behavior and shortcuts</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1798"/>
         <source>Customize the look of your desktop</source>
-        <translation>Настройте внешний вид рабочего стола</translation>
+        <translation>Customize the look of your desktop</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1811"/>
         <source>Appearance</source>
-        <translation>Внешний вид</translation>
+        <translation>Appearance</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1823"/>
         <source>About</source>
-        <translation>О</translation>
+        <translation>About</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1833"/>
         <source>Help</source>
-        <translation>Помощь</translation>
+        <translation>Help</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1891"/>
         <source>Quit application</source>
-        <translation>Выйти из приложения</translation>
+        <translation>Quit application</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1894"/>
         <source>Close</source>
-        <translation>Закрыть</translation>
+        <translation>Close</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1900"/>
@@ -859,37 +859,37 @@
     <message>
         <location filename="../tweak.cpp" line="72"/>
         <source>--display switch only valid for Xfce</source>
-        <translation>--переключатель экрана действует только в Xfce</translation>
+        <translation>--display switch only valid for Xfce</translation>
     </message>
     <message>
         <location filename="../tweak.cpp" line="241"/>
         <source>About MX Tweak</source>
-        <translation>О программе MX Tweak</translation>
+        <translation>About MX Tweak</translation>
     </message>
     <message>
         <location filename="../tweak.cpp" line="243"/>
         <source>Version: </source>
-        <translation>Версия: </translation>
+        <translation>Version: </translation>
     </message>
     <message>
         <location filename="../tweak.cpp" line="244"/>
         <source>App for quick default ui theme changes and tweaks</source>
-        <translation>Приложение для быстрой доводки штатного оформления</translation>
+        <translation>App for quick default ui theme changes and tweaks</translation>
     </message>
     <message>
         <location filename="../tweak.cpp" line="246"/>
         <source>Copyright (c) MX Linux</source>
-        <translation>Авторское право (c) MX Linux</translation>
+        <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
         <location filename="../tweak.cpp" line="247"/>
         <source>%1 License</source>
-        <translation>%1 Лицензия</translation>
+        <translation>%1 License</translation>
     </message>
     <message>
         <location filename="../tweak.cpp" line="261"/>
         <source>%1 Help</source>
-        <translation>%1 Справка</translation>
+        <translation>%1 Help</translation>
     </message>
 </context>
 <context>
@@ -897,12 +897,12 @@
     <message>
         <location filename="../tweak_compositor.cpp" line="62"/>
         <source>None</source>
-        <translation>Нет</translation>
+        <translation>None</translation>
     </message>
     <message>
         <location filename="../tweak_compositor.cpp" line="63"/>
         <source>Xfwm (Xfce) Compositor</source>
-        <translation>Композитор Xfwm (Xfce)</translation>
+        <translation>Xfwm (Xfce) Compositor</translation>
     </message>
     <message>
         <location filename="../tweak_compositor.cpp" line="64"/>
@@ -916,7 +916,7 @@
         <location filename="../tweak_misc.cpp" line="305"/>
         <source>Please enter a computer name.</source>
         <comment>question to enter a name for the computer hostname</comment>
-        <translation>Пожалуйста, введите имя компьютера.</translation>
+        <translation>Please enter a computer name.</translation>
     </message>
     <message>
         <location filename="../tweak_misc.cpp" line="309"/>
@@ -924,8 +924,9 @@
 You'll have to select a different
 name before proceeding.</source>
         <comment>unacceptable characters are found in hostname, pick a new name</comment>
-        <translation>Извините, имя компьютера содержит недопустимые символы. 
-Для продолжения выберите другое имя.</translation>
+        <translation>Sorry, your computer name contains invalid characters.
+You&apos;ll have to select a different
+name before proceeding.</translation>
     </message>
 </context>
 <context>
@@ -934,7 +935,7 @@ name before proceeding.</source>
         <location filename="../tweak_superkey.cpp" line="43"/>
         <source>Select application to run</source>
         <comment>will show in file dialog when selection an application to run</comment>
-        <translation>Выберите приложение для запуска</translation>
+        <translation>Select application to run</translation>
     </message>
 </context>
 <context>
@@ -943,24 +944,24 @@ name before proceeding.</source>
         <location filename="../tweak_theme.cpp" line="64"/>
         <source>Plasma Widget Themes</source>
         <comment>theme style of the kde plasma widgets</comment>
-        <translation>Темы виджетов Plasma</translation>
+        <translation>Plasma Widget Themes</translation>
     </message>
     <message>
         <location filename="../tweak_theme.cpp" line="65"/>
         <source>Color Schemes</source>
         <comment>plasma widget color schemes</comment>
-        <translation>Цветовые Схемы</translation>
+        <translation>Color Schemes</translation>
     </message>
     <message>
         <location filename="../tweak_theme.cpp" line="66"/>
         <source>Plasma Look &amp; Feel Global Themes</source>
         <comment>plasma global themes</comment>
-        <translation>Глобальные темы Plasma Look &amp; Feel</translation>
+        <translation>Plasma Look &amp; Feel Global Themes</translation>
     </message>
     <message>
         <location filename="../tweak_theme.cpp" line="139"/>
         <source>Choose a theme set</source>
-        <translation>Выберите набор темы</translation>
+        <translation>Choose a theme set</translation>
     </message>
 </context>
 <context>
@@ -968,22 +969,22 @@ name before proceeding.</source>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="17"/>
         <source>Horizontal (Bottom)</source>
-        <translation>Горизонтальный (нижний)</translation>
+        <translation>Horizontal (Bottom)</translation>
     </message>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="18"/>
         <source>Horizontal (Top)</source>
-        <translation>Горизонтальный (верхний)</translation>
+        <translation>Horizontal (Top)</translation>
     </message>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="20"/>
         <source>Vertical (Left)</source>
-        <translation>Вертикальный (слева)</translation>
+        <translation>Vertical (Left)</translation>
     </message>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="21"/>
         <source>Vertical (Right)</source>
-        <translation>Вертикальный (справа)</translation>
+        <translation>Vertical (Right)</translation>
     </message>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="23"/>
@@ -993,7 +994,7 @@ name before proceeding.</source>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="24"/>
         <source>Window Buttons</source>
-        <translation>Кнопки окон</translation>
+        <translation>Window Buttons</translation>
     </message>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="273"/>
@@ -1006,32 +1007,32 @@ name before proceeding.</source>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="274"/>
         <source>Plese remove special characters</source>
-        <translation>Удалите специальные символы</translation>
+        <translation>Plese remove special characters</translation>
     </message>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="274"/>
         <source>from file name</source>
-        <translation>из имени файла</translation>
+        <translation>from file name</translation>
     </message>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="280"/>
         <source>File name already exists.  Choose another name</source>
-        <translation>Файл уже существует. Выберите другое имя</translation>
+        <translation>File name already exists.  Choose another name</translation>
     </message>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="298"/>
         <source>File is not a valid tar.xz archive file</source>
-        <translation>Файл не является архивным файлом tar.xz</translation>
+        <translation>File is not a valid tar.xz archive file</translation>
     </message>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="302"/>
         <source>Archive does not contain a panel config</source>
-        <translation>Архив не содержит настройки панели</translation>
+        <translation>Archive does not contain a panel config</translation>
     </message>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="733"/>
         <source>Panel Preferences</source>
-        <translation>Настройки панели</translation>
+        <translation>Panel Preferences</translation>
     </message>
 </context>
 <context>
@@ -1039,7 +1040,7 @@ name before proceeding.</source>
     <message>
         <location filename="../brightness_small.ui" line="14"/>
         <source>MainWindow</source>
-        <translation>Главное Окно</translation>
+        <translation>MainWindow</translation>
     </message>
     <message>
         <location filename="../brightness_small.ui" line="34"/>
@@ -1049,38 +1050,38 @@ name before proceeding.</source>
     <message>
         <location filename="../brightness_small.ui" line="41"/>
         <source>Software (xrandr) Brightness</source>
-        <translation>Программная (xrandr) яркость</translation>
+        <translation>Software (xrandr) Brightness</translation>
     </message>
     <message>
         <location filename="../brightness_small.ui" line="61"/>
         <location filename="../brightness_small.ui" line="89"/>
         <source>TextLabel</source>
-        <translation>Текстовая метка</translation>
+        <translation>TextLabel</translation>
     </message>
     <message>
         <location filename="../brightness_small.ui" line="68"/>
         <source>Save</source>
-        <translation>Сохранить</translation>
+        <translation>Save</translation>
     </message>
     <message>
         <location filename="../brightness_small.ui" line="75"/>
         <source>Hardware Backlight</source>
-        <translation>Аппаратная подсветка</translation>
+        <translation>Hardware Backlight</translation>
     </message>
     <message>
         <location filename="../brightness_small.cpp" line="35"/>
         <source>Brightness</source>
-        <translation>Яркость</translation>
+        <translation>Brightness</translation>
     </message>
     <message>
         <location filename="../brightness_small.cpp" line="54"/>
         <source>Display</source>
-        <translation>Экран</translation>
+        <translation>Display</translation>
     </message>
     <message>
         <location filename="../brightness_small.cpp" line="59"/>
         <source>&amp;Quit</source>
-        <translation>&amp;Выход</translation>
+        <translation>&amp;Quit</translation>
     </message>
 </context>
 <context>
@@ -1088,7 +1089,7 @@ name before proceeding.</source>
     <message>
         <location filename="../remove_user_theme_set.ui" line="14"/>
         <source>Remove User Theme Set</source>
-        <translation>Удалить набор тем пользователя</translation>
+        <translation>Remove User Theme Set</translation>
     </message>
 </context>
 <context>
@@ -1096,12 +1097,12 @@ name before proceeding.</source>
     <message>
         <location filename="../theming_to_tweak.ui" line="14"/>
         <source>New Theme Set</source>
-        <translation>Новый набор тем пользователя</translation>
+        <translation>New Theme Set</translation>
     </message>
     <message>
         <location filename="../theming_to_tweak.ui" line="20"/>
         <source>Enter name for new theme set</source>
-        <translation>Введите имя для нового набора тем</translation>
+        <translation>Enter name for new theme set</translation>
     </message>
 </context>
 <context>
@@ -1110,137 +1111,137 @@ name before proceeding.</source>
         <location filename="../window_buttons.ui" line="14"/>
         <location filename="../window_buttons.cpp" line="38"/>
         <source>Window Buttons</source>
-        <translation>Кнопки окон</translation>
+        <translation>Window Buttons</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="23"/>
         <source>Appearance</source>
-        <translation>Внешний вид</translation>
+        <translation>Appearance</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="29"/>
         <source>Show button labels</source>
-        <translation>Показывать подписи кнопок</translation>
+        <translation>Show button labels</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="36"/>
         <source>Show flat buttons</source>
-        <translation>Показывать плоские кнопки</translation>
+        <translation>Show flat buttons</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="43"/>
         <source>Show handle</source>
-        <translation>Показывать ручку</translation>
+        <translation>Show handle</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="50"/>
         <source>Sorting Order:</source>
-        <translation>Порядок сортировки:</translation>
+        <translation>Sorting Order:</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="58"/>
         <source>Timestamp</source>
-        <translation>Метка времени</translation>
+        <translation>Timestamp</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="63"/>
         <source>Group title and timestamp</source>
-        <translation>Сгруппировать название и метку времени</translation>
+        <translation>Group title and timestamp</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="68"/>
         <source>Window Title</source>
-        <translation>Заголовок окна</translation>
+        <translation>Window Title</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="73"/>
         <source>Group title and window title</source>
-        <translation>Сгруппировать название приложения и заголовок окна</translation>
+        <translation>Group title and window title</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="78"/>
         <source>None, allow drag-and-drop</source>
-        <translation>Нет, разрешить перетаскивание</translation>
+        <translation>None, allow drag-and-drop</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="89"/>
         <source>Behavior</source>
-        <translation>Поведение</translation>
+        <translation>Behavior</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="95"/>
         <source>Window grouping:</source>
-        <translation>Группировать окна:</translation>
+        <translation>Window grouping:</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="103"/>
         <source>Never</source>
-        <translation>Никогда</translation>
+        <translation>Never</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="108"/>
         <source>Always</source>
-        <translation>Всегда</translation>
+        <translation>Always</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="116"/>
         <source>Middle click action:</source>
-        <translation>Действие по клику средней кнопкой мыши:</translation>
+        <translation>Middle click action:</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="124"/>
         <source>Nothing</source>
-        <translation>Ничего</translation>
+        <translation>Nothing</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="129"/>
         <source>Close window</source>
-        <translation>Закрыть окно</translation>
+        <translation>Close window</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="134"/>
         <source>Minimize window</source>
-        <translation>Свернуть окно</translation>
+        <translation>Minimize window</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="142"/>
         <source>Restore minimized windows to current workspace</source>
-        <translation>Разворачивать свёрнутые окна на текущий рабочий стол</translation>
+        <translation>Restore minimized windows to current workspace</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="149"/>
         <source>Draw window frame when hovering over a button</source>
-        <translation>Отображать рамку окна под курсором мыши</translation>
+        <translation>Draw window frame when hovering over a button</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="156"/>
         <source>Switch windows using the mouse wheel</source>
-        <translation>Переключать окна с помощью колёсика мыши</translation>
+        <translation>Switch windows using the mouse wheel</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="166"/>
         <source>Filtering</source>
-        <translation>Фильтрация</translation>
+        <translation>Filtering</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="172"/>
         <source>Show windows from all workspaces or viewports</source>
-        <translation>Показывать окна со всех рабочих мест или видов</translation>
+        <translation>Show windows from all workspaces or viewports</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="179"/>
         <source>Show only minimized windows</source>
-        <translation>Показывать только свёрнутые окна</translation>
+        <translation>Show only minimized windows</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="186"/>
         <source>Show windows from all monitors</source>
-        <translation>Показывать окна со всех мониторов</translation>
+        <translation>Show windows from all monitors</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="210"/>
         <source>Close</source>
-        <translation>Закрыть</translation>
+        <translation>Close</translation>
     </message>
 </context>
 <context>
@@ -1248,82 +1249,82 @@ name before proceeding.</source>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="14"/>
         <source>Dialog</source>
-        <translation>Диалоговое окно</translation>
+        <translation>Dialog</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="23"/>
         <source>Feature Settings</source>
-        <translation>Настройки функций</translation>
+        <translation>Feature Settings</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="29"/>
         <source>Display fullscreen overlay windows directly</source>
-        <translation>Напрямую отображать полноэкранные оверлей окна</translation>
+        <translation>Display fullscreen overlay windows directly</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="36"/>
         <source>Synchronize drawing to vertical blank</source>
-        <translation>Синхронизировать отрисовку по вертикальной очистке</translation>
+        <translation>Synchronize drawing to vertical blank</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="43"/>
         <source>Show windows preview in place of icons when cycling</source>
-        <translation>Показывать предпросмотр окна вместо значков при прокрутке</translation>
+        <translation>Show windows preview in place of icons when cycling</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="50"/>
         <source>Show shadows under popup windows</source>
-        <translation>Отображать тени у всплывающих окон</translation>
+        <translation>Show shadows under popup windows</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="57"/>
         <source>Show shadows under dock windows</source>
-        <translation>Отображать тени у dock окон</translation>
+        <translation>Show shadows under dock windows</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="64"/>
         <source>Show shadows under regular windows</source>
-        <translation>Отображать тени у обычных окон</translation>
+        <translation>Show shadows under regular windows</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="74"/>
         <source>Opacity Settings</source>
-        <translation>Настройки прозрачности</translation>
+        <translation>Opacity Settings</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="80"/>
         <source>Window decorations</source>
-        <translation>Оформление окон</translation>
+        <translation>Window decorations</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="103"/>
         <source>Inactive windows</source>
-        <translation>Неактивные окна</translation>
+        <translation>Inactive windows</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="126"/>
         <source>Windows during move</source>
-        <translation>Окна при перетаскивании</translation>
+        <translation>Windows during move</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="149"/>
         <source>Windows during resize</source>
-        <translation>Окна при изменении размеров</translation>
+        <translation>Windows during resize</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="172"/>
         <source>Popup Windows</source>
-        <translation>Всплывающие окна</translation>
+        <translation>Popup Windows</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="205"/>
         <source>Close</source>
-        <translation>Закрыть</translation>
+        <translation>Close</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.cpp" line="25"/>
         <source>Xfwm Compositor Settings</source>
-        <translation>Настройки композитора Xfwm</translation>
+        <translation>Xfwm Compositor Settings</translation>
     </message>
 </context>
 </TS>
