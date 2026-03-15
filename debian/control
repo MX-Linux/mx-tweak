@@ -17,7 +17,6 @@ Package: mx-tweak
 Architecture: any
 Depends: ${misc:Depends},
          ${shlibs:Depends},
-         mx-viewer | xdg-utils,
          mx-tweak-data,
          libglib2.0-bin,
          qt6-svg-plugins
