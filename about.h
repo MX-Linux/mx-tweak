@@ -1,9 +1,8 @@
-#ifndef ABOUT_H
-#define ABOUT_H
+#pragma once
 
-class QString;
+#include <QString>
 
-void displayDoc(const QString &url, const QString &title) noexcept;
-void displayAboutMsgBox(const QString &title, const QString &message, const QString &licence_url, const QString &license_title) noexcept;
-
-#endif // ABOUT_H
+void displayDoc(const QString &url, const QString &title, bool largeWindow = false);
+void displayHelpDoc(const QString &path, const QString &title);
+void displayAboutMsgBox(const QString &title, const QString &message, const QString &licence_url,
+                        const QString &license_title);
