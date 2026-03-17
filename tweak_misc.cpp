@@ -129,7 +129,7 @@ void TweakMisc::setup() noexcept
     if (QFile::exists(u"/etc/bluetooth/main.conf"_s)){
         flags.bluetoothAutoEnable = false;
         test = runCmd(u"grep -E '^(#\\s*)?AutoEnable=' /etc/bluetooth/main.conf"_s).output;
-        qDebug() << "bluetooth enable test is " << test;
+        if (verbose) qDebug() << "bluetooth enable test is " << test;
         if (test.contains('#')){
             ui->checkMiscBluetoothAutoEnable->setChecked(true);
         } else if ( test.contains("true"_L1) ){
