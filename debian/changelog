@@ -1,3 +1,9 @@
+mx-tweak (26.03.02mx5) UNRELEASED; urgency=medium
+
+  * hide bluetooth check behind vebose switch
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Mon, 16 Mar 2026 21:23:42 -0400
+
 mx-tweak (26.03.01mx25) mx; urgency=medium
   
   [ Adrian ]
