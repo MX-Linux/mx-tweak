@@ -37,5 +37,4 @@ if command -v tx >/dev/null; then
    echodo tx pull -r antix-development.$APPNAME -a
 fi
 
-lupdate ../*.pro # Update en.ts file
-lupdate ../*.cpp ../*.h ../*.ui -ts *.ts
+/usr/lib/qt6/bin/lupdate ../*.cpp ../*.h ../*.ui -ts $APPNAME_en.ts
