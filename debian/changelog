@@ -1,8 +1,10 @@
-mx-tweak (26.03.02mx5) UNRELEASED; urgency=medium
+mx-tweak (26.03.02mx25) mx; urgency=medium
 
   * hide bluetooth check behind vebose switch
+  * add --traydialog switch (launches dialog on startup of tray brightness utility
+  * update strings
 
- -- Dolphin Oracle <dolphinoracle@gmail.com>  Mon, 16 Mar 2026 21:23:42 -0400
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Wed, 18 Mar 2026 20:53:11 -0400
 
 mx-tweak (26.03.01mx25) mx; urgency=medium
   
