@@ -2,25 +2,36 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../about.cpp" line="42"/>
+        <location filename="../about.cpp" line="30"/>
+        <location filename="../about.cpp" line="99"/>
+        <source>&amp;Close</source>
+        <translation>&amp;Κλείσιμο</translation>
+    </message>
+    <message>
+        <location filename="../about.cpp" line="50"/>
+        <source>Could not load %1</source>
+        <translation>Δεν ήταν δυνατή η φόρτωση του %1</translation>
+    </message>
+    <message>
+        <location filename="../about.cpp" line="73"/>
         <source>License</source>
         <translation>Άδεια</translation>
     </message>
     <message>
-        <location filename="../about.cpp" line="43"/>
-        <location filename="../about.cpp" line="53"/>
+        <location filename="../about.cpp" line="74"/>
+        <location filename="../about.cpp" line="84"/>
         <source>Changelog</source>
         <translation>Αρχείο αλλαγών</translation>
     </message>
     <message>
-        <location filename="../about.cpp" line="44"/>
+        <location filename="../about.cpp" line="75"/>
         <source>Cancel</source>
         <translation>Άκυρο</translation>
     </message>
     <message>
-        <location filename="../about.cpp" line="64"/>
-        <source>&amp;Close</source>
-        <translation>&amp;Κλείσιμο</translation>
+        <location filename="../about.cpp" line="96"/>
+        <source>Could not load changelog.</source>
+        <translation>Δεν ήταν δυνατή η φόρτωση του αρχείου αλλαγών.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="55"/>
@@ -34,21 +45,26 @@
     </message>
     <message>
         <location filename="../main.cpp" line="59"/>
+        <source>launches brightness-systray and shows dialog on startup, implies --tray</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="60"/>
         <source>opens with display tab open.  Only valid with Xfce desktop running</source>
         <translation>ανοίγει τη καρτέλα Εμφάνιση.  Μόνο σε Xfce</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="60"/>
+        <location filename="../main.cpp" line="61"/>
         <source>Opens theme tab directly.  Valid on Xfce &amp; Fluxbox desktops</source>
         <translation>Ανοίγει άμεσα το θέμα.  Σε Xfce και Fluxbox</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="61"/>
+        <location filename="../main.cpp" line="62"/>
         <source>Display additional debug output in console</source>
         <translation>Εμφάνιση πρόσθετων στοιχείων αποσφαλμάτωσης σε τερματικό</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="62"/>
+        <location filename="../main.cpp" line="63"/>
         <source>Opens Other tab directly.  Valid on all desktops</source>
         <translation>Ανοίγει τη καρτέλα Διάφορα.  Σε όλα τα γραφικά περιβάλλοντα</translation>
     </message>
@@ -57,9 +73,9 @@
     <name>Tweak</name>
     <message>
         <location filename="../tweak.ui" line="14"/>
-        <location filename="../tweak.cpp" line="71"/>
-        <location filename="../tweak.cpp" line="242"/>
-        <location filename="../tweak.cpp" line="261"/>
+        <location filename="../tweak.cpp" line="78"/>
+        <location filename="../tweak.cpp" line="244"/>
+        <location filename="../tweak.cpp" line="263"/>
         <source>MX Tweak</source>
         <translation>MX Ρυθμίσεις</translation>
     </message>
@@ -653,35 +669,9 @@
         <translation>Διάφορα</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1518"/>
-        <source>Reset Lightdm (login screen) to system default theme</source>
-        <translation>Επαναφορά του προεπιλεγμένου θέματος στο Lightdm (οθόνη σύνδεσης)</translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1623"/>
-        <source>Enable mounting of internal drives by non-root users</source>
-        <translation>Ενεργοποίηση προσάρτησης εσωτερικών δίσκων από μη διαχειριστές</translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1616"/>
-        <source>Enable kernel sandbox</source>
-        <translation>Ενεργοποίηση sandbox του πυρήνα</translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1566"/>
-        <source>requires reboot</source>
-        <translation>απαιτείται επανεκκίνηση</translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1569"/>
-        <source>Enable Bluetooth adapters on boot</source>
-        <translation>Ενεργοποίηση οδηγών Bluetooth στην εκκίνηση</translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1694"/>
-        <source>Enable Bluetooth battery info for connected devices (requires system restart)</source>
-        <extracomment>expose battery info for connected bluetooth devices to the operating system via dbus</extracomment>
-        <translation>Ενεργοποίηση πληροφοριών μπαταρίας για τις συνδεδεμένες συσκευές Bluetooth (απαιτείται επανεκκίνηση του συστήματος)</translation>
+        <location filename="../tweak.ui" line="1471"/>
+        <source>NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
+        <translation>ΣΗΜΕΙΩΣΗ: Θα δημιουργηθεί αντίγραφο ασφαλείας του αρχείου /etc/X11/xorg.conf.d/20-intel.conf στον αρχικό φάκελο του χρήστη</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1491"/>
@@ -696,19 +686,9 @@
         <translation>Απενεργοποίηση της πρόωρης φόρτωσης μονάδων KVM (πρέπει να είναι απενεργοποιημένη για τη λειτουργία του Virtualbox σε πυρήνα 6.12 και άνω)</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1630"/>
-        <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
-        <translation>Το apt εγκαθιστά και τα &quot;προτεινόμενα&quot; πακέτα ως εξαρτήσεις</translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1576"/>
-        <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
-        <translation>Δημιουργία μενού εφαρμογών του fluxbox μετά την εγκατάσταση, την αφαίρεση και τις ενημερώσεις του πακέτου</translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1609"/>
-        <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
-        <translation>Χρήση Client Side Decorations (CSD) σε εφαρμογές GTK3 που τις υποστηρίζουν (απαιτείται επανεκκίνηση της συνεδρίας)</translation>
+        <location filename="../tweak.ui" line="1501"/>
+        <source>NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
+        <translation>ΣΗΜΕΙΩΣΗ: Θα δημιουργηθεί αντίγραφο ασφαλείας του αρχείου /etc/X11/xorg.conf.d/20-radeon.conf στον αρχικό φάκελο του χρήστη</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1508"/>
@@ -723,36 +703,9 @@
         <translation>Ενεργοποίηση αυτόματων ενημερώσεων του πυρήνα Liquorix (αποθετήριο MX ahs)</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1684"/>
-        <source>put a hold or remove a hold on updates of Debian  kernels</source>
-        <extracomment>toggle for apt hold action on update meta packages</extracomment>
-        <translation>αναμονή ή αφαίρεση αναμονής στις ενημερώσεις των πυρήνων Debian</translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1687"/>
-        <source>Enable Automatic Debian Kernel Updates</source>
-        <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
-        <translation>Ενεργοποίηση αυτόματων ενημερώσεων του πυρήνα Debian</translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1637"/>
-        <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
-        <translation>Χρήση του προγράμματος οδήγησης intel αντί του προεπιλεγμένου &quot;modesetting&quot; (απαιτείται επανεκκίνηση)</translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1471"/>
-        <source>NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
-        <translation>ΣΗΜΕΙΩΣΗ: Θα δημιουργηθεί αντίγραφο ασφαλείας του αρχείου /etc/X11/xorg.conf.d/20-intel.conf στον αρχικό φάκελο του χρήστη</translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1583"/>
-        <source>Use tearfree amdgpu option</source>
-        <translation>Χρήση της επιλογής tearfree στο πρόγραμμα οδήγησης amdgpu</translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1545"/>
-        <source>NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
-        <translation>ΣΗΜΕΙΩΣΗ: Θα δημιουργηθεί αντίγραφο ασφαλείας του αρχείου /etc/X11/xorg.conf.d/20-amd.conf  στον αρχικό φάκελο του χρήστη</translation>
+        <location filename="../tweak.ui" line="1518"/>
+        <source>Reset Lightdm (login screen) to system default theme</source>
+        <translation>Επαναφορά του προεπιλεγμένου θέματος στο Lightdm (οθόνη σύνδεσης)</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1525"/>
@@ -760,9 +713,15 @@
         <translation>Χρήση της επιλογής tearfree στο πρόγραμμα οδήγησης radeon</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1501"/>
-        <source>NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
-        <translation>ΣΗΜΕΙΩΣΗ: Θα δημιουργηθεί αντίγραφο ασφαλείας του αρχείου /etc/X11/xorg.conf.d/20-radeon.conf στον αρχικό φάκελο του χρήστη</translation>
+        <location filename="../tweak.ui" line="1545"/>
+        <source>NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
+        <translation>ΣΗΜΕΙΩΣΗ: Θα δημιουργηθεί αντίγραφο ασφαλείας του αρχείου /etc/X11/xorg.conf.d/20-amd.conf  στον αρχικό φάκελο του χρήστη</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1552"/>
+        <source>Change Default Display Manager (login screen) (requires reboot)</source>
+        <extracomment>option to change display manager login screen.  present if more than one display manager is installed</extracomment>
+        <translation>Αλλαγή προεπιλεγμένου διαχειριστή οθόνης (οθόνη σύνδεσης) (απαιτεί επανεκκίνηση)</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1559"/>
@@ -771,10 +730,49 @@
         <translation>Αλλαγή ονόματος του υπολογιστή (απαιτείται επανεκκίνηση)</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1552"/>
-        <source>Change Default Display Manager (login screen) (requires reboot)</source>
-        <extracomment>option to change display manager login screen.  present if more than one display manager is installed</extracomment>
-        <translation>Αλλαγή προεπιλεγμένου διαχειριστή οθόνης (οθόνη σύνδεσης) (απαιτεί επανεκκίνηση)</translation>
+        <location filename="../tweak.ui" line="1566"/>
+        <source>requires reboot</source>
+        <translation>απαιτείται επανεκκίνηση</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1569"/>
+        <source>Enable Bluetooth adapters on boot</source>
+        <translation>Ενεργοποίηση οδηγών Bluetooth στην εκκίνηση</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1576"/>
+        <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
+        <translation>Δημιουργία μενού εφαρμογών του fluxbox μετά την εγκατάσταση, την αφαίρεση και τις ενημερώσεις του πακέτου</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1583"/>
+        <source>Use tearfree amdgpu option</source>
+        <translation>Χρήση της επιλογής tearfree στο πρόγραμμα οδήγησης amdgpu</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1609"/>
+        <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
+        <translation>Χρήση Client Side Decorations (CSD) σε εφαρμογές GTK3 που τις υποστηρίζουν (απαιτείται επανεκκίνηση της συνεδρίας)</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1616"/>
+        <source>Enable kernel sandbox</source>
+        <translation>Ενεργοποίηση sandbox του πυρήνα</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1623"/>
+        <source>Enable mounting of internal drives by non-root users</source>
+        <translation>Ενεργοποίηση προσάρτησης εσωτερικών δίσκων από μη διαχειριστές</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1630"/>
+        <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
+        <translation>Το apt εγκαθιστά και τα &quot;προτεινόμενα&quot; πακέτα ως εξαρτήσεις</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1637"/>
+        <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
+        <translation>Χρήση του προγράμματος οδήγησης intel αντί του προεπιλεγμένου &quot;modesetting&quot; (απαιτείται επανεκκίνηση)</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1647"/>
@@ -790,6 +788,24 @@
         <location filename="../tweak.ui" line="1661"/>
         <source>Root</source>
         <translation>Root</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1684"/>
+        <source>put a hold or remove a hold on updates of Debian  kernels</source>
+        <extracomment>toggle for apt hold action on update meta packages</extracomment>
+        <translation>αναμονή ή αφαίρεση αναμονής στις ενημερώσεις των πυρήνων Debian</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1687"/>
+        <source>Enable Automatic Debian Kernel Updates</source>
+        <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
+        <translation>Ενεργοποίηση αυτόματων ενημερώσεων του πυρήνα Debian</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1694"/>
+        <source>Enable Bluetooth battery info for connected devices (requires system restart)</source>
+        <extracomment>expose battery info for connected bluetooth devices to the operating system via dbus</extracomment>
+        <translation>Ενεργοποίηση πληροφοριών μπαταρίας για τις συνδεδεμένες συσκευές Bluetooth (απαιτείται επανεκκίνηση του συστήματος)</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1701"/>
@@ -857,37 +873,37 @@
         <translation>Alt+N</translation>
     </message>
     <message>
-        <location filename="../tweak.cpp" line="72"/>
+        <location filename="../tweak.cpp" line="79"/>
         <source>--display switch only valid for Xfce</source>
         <translation>--η λειτουργία είναι διαθέσιμη μόνο για το Xfce</translation>
     </message>
     <message>
-        <location filename="../tweak.cpp" line="241"/>
+        <location filename="../tweak.cpp" line="243"/>
         <source>About MX Tweak</source>
         <translation>Περί του MX Ρυθμίσεις</translation>
     </message>
     <message>
-        <location filename="../tweak.cpp" line="243"/>
+        <location filename="../tweak.cpp" line="245"/>
         <source>Version: </source>
         <translation>Έκδοση: </translation>
     </message>
     <message>
-        <location filename="../tweak.cpp" line="244"/>
+        <location filename="../tweak.cpp" line="246"/>
         <source>App for quick default ui theme changes and tweaks</source>
         <translation>Εφαρμογή για γρήγορες αλλαγές και διορθώσεις του προεπιλεγμένου θέματος</translation>
     </message>
     <message>
-        <location filename="../tweak.cpp" line="246"/>
+        <location filename="../tweak.cpp" line="248"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Πνευματικά δικαιώματα (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../tweak.cpp" line="247"/>
+        <location filename="../tweak.cpp" line="249"/>
         <source>%1 License</source>
         <translation>Άδεια %1</translation>
     </message>
     <message>
-        <location filename="../tweak.cpp" line="261"/>
+        <location filename="../tweak.cpp" line="263"/>
         <source>%1 Help</source>
         <translation>Βοήθεια %1</translation>
     </message>

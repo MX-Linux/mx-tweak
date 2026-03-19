@@ -2,25 +2,36 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../about.cpp" line="42"/>
+        <location filename="../about.cpp" line="30"/>
+        <location filename="../about.cpp" line="99"/>
+        <source>&amp;Close</source>
+        <translation>&amp;Bezárás</translation>
+    </message>
+    <message>
+        <location filename="../about.cpp" line="50"/>
+        <source>Could not load %1</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../about.cpp" line="73"/>
         <source>License</source>
         <translation>Licenc</translation>
     </message>
     <message>
-        <location filename="../about.cpp" line="43"/>
-        <location filename="../about.cpp" line="53"/>
+        <location filename="../about.cpp" line="74"/>
+        <location filename="../about.cpp" line="84"/>
         <source>Changelog</source>
         <translation>Változások listája</translation>
     </message>
     <message>
-        <location filename="../about.cpp" line="44"/>
+        <location filename="../about.cpp" line="75"/>
         <source>Cancel</source>
         <translation>Mégsem</translation>
     </message>
     <message>
-        <location filename="../about.cpp" line="64"/>
-        <source>&amp;Close</source>
-        <translation>&amp;Bezárás</translation>
+        <location filename="../about.cpp" line="96"/>
+        <source>Could not load changelog.</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../main.cpp" line="55"/>
@@ -34,21 +45,26 @@
     </message>
     <message>
         <location filename="../main.cpp" line="59"/>
+        <source>launches brightness-systray and shows dialog on startup, implies --tray</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="60"/>
         <source>opens with display tab open.  Only valid with Xfce desktop running</source>
         <translation>a megjelenítés lappal megnyitva nyílik meg. Csak Xfce asztali környezet futása esetén érvényes</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="60"/>
+        <location filename="../main.cpp" line="61"/>
         <source>Opens theme tab directly.  Valid on Xfce &amp; Fluxbox desktops</source>
         <translation>A témák lappal nyílik meg. Csak Xfce és Fluxbox asztali környezetek esetén érvényes</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="61"/>
+        <location filename="../main.cpp" line="62"/>
         <source>Display additional debug output in console</source>
         <translation>További hibakeresési üzenetek megjelenítése a terminálban</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="62"/>
+        <location filename="../main.cpp" line="63"/>
         <source>Opens Other tab directly.  Valid on all desktops</source>
         <translation>Az egyéb lappal nyílik meg. Minden asztali környezetnél érvényes</translation>
     </message>
@@ -57,9 +73,9 @@
     <name>Tweak</name>
     <message>
         <location filename="../tweak.ui" line="14"/>
-        <location filename="../tweak.cpp" line="71"/>
-        <location filename="../tweak.cpp" line="242"/>
-        <location filename="../tweak.cpp" line="261"/>
+        <location filename="../tweak.cpp" line="78"/>
+        <location filename="../tweak.cpp" line="244"/>
+        <location filename="../tweak.cpp" line="263"/>
         <source>MX Tweak</source>
         <translation>MX finomhangoló</translation>
     </message>
@@ -653,35 +669,9 @@
         <translation>Egyebek</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1518"/>
-        <source>Reset Lightdm (login screen) to system default theme</source>
-        <translation>A Lightdm (bejelentkező képernyő) visszaállítása az alap témára</translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1623"/>
-        <source>Enable mounting of internal drives by non-root users</source>
-        <translation>A belső eszközök csatolásának engedélyezése nem-root felhasználók számára</translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1616"/>
-        <source>Enable kernel sandbox</source>
-        <translation>A kernel sandbox engedélyezése</translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1566"/>
-        <source>requires reboot</source>
-        <translation>újraindítást igényel</translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1569"/>
-        <source>Enable Bluetooth adapters on boot</source>
-        <translation>Bluetooth engedélyezése az indításkor</translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1694"/>
-        <source>Enable Bluetooth battery info for connected devices (requires system restart)</source>
-        <extracomment>expose battery info for connected bluetooth devices to the operating system via dbus</extracomment>
-        <translation>Kapcsolódott Bluetooth eszközök akkumulátorállapotának megjelenítése (újraindítást igényel)</translation>
+        <location filename="../tweak.ui" line="1471"/>
+        <source>NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
+        <translation>Megjegyzés: a meglévő /etc/X11/xorg.conf.d/20-intel.conf a saját-könyvtárban kerül mentésre</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1491"/>
@@ -696,19 +686,9 @@
         <translation>A KVM modul korai betöltésének letiltása (6.12 vagy újabb kernel esetén le kell tiltani a VirtualBox használatához)</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1630"/>
-        <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
-        <translation>Az Apt telepíti a további &quot;javasolt&quot; csomagokat, mint függőség</translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1576"/>
-        <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
-        <translation>A Fluxbox alkalmazások menüjének frissítése csomagok telepítése, eltávolítása vagy frissítése után</translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1609"/>
-        <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
-        <translation>Kliensoldali Dekorációk (CSD) használata a GTK3 alkalmazásokban, amelyek támogatják (munkafolyamat újraindítása szükséges)</translation>
+        <location filename="../tweak.ui" line="1501"/>
+        <source>NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
+        <translation>Megjegyzés: a meglévő /etc/X11/xorg.conf.d/20-radeon.conf a saját-könyvtárban kerül mentésre</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1508"/>
@@ -723,36 +703,9 @@
         <translation>Automatikus Liquorix Kernel frissítések engedélyezése (MX ahs csomagforrás)</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1684"/>
-        <source>put a hold or remove a hold on updates of Debian  kernels</source>
-        <extracomment>toggle for apt hold action on update meta packages</extracomment>
-        <translation>Debian kernel frissítések felfüggesztése vagy folytatása</translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1687"/>
-        <source>Enable Automatic Debian Kernel Updates</source>
-        <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
-        <translation>Automatikus Debian Kernel frissítések engedélyezése</translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1637"/>
-        <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
-        <translation>Az intel illesztőprogram használata az alap &quot;modesetting&quot; illesztőprogram helyett (újraindítás szükséges)</translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1471"/>
-        <source>NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
-        <translation>Megjegyzés: a meglévő /etc/X11/xorg.conf.d/20-intel.conf a saját-könyvtárban kerül mentésre</translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1583"/>
-        <source>Use tearfree amdgpu option</source>
-        <translation>A tearfree amdgpu opció használata</translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1545"/>
-        <source>NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
-        <translation>Megjegyzés: a meglévő /etc/X11/xorg.conf.d/20-amd.conf a saját-könyvtárban kerül mentésre</translation>
+        <location filename="../tweak.ui" line="1518"/>
+        <source>Reset Lightdm (login screen) to system default theme</source>
+        <translation>A Lightdm (bejelentkező képernyő) visszaállítása az alap témára</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1525"/>
@@ -760,9 +713,15 @@
         <translation>A tearfree radeon illesztőprogram opció használata</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1501"/>
-        <source>NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
-        <translation>Megjegyzés: a meglévő /etc/X11/xorg.conf.d/20-radeon.conf a saját-könyvtárban kerül mentésre</translation>
+        <location filename="../tweak.ui" line="1545"/>
+        <source>NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
+        <translation>Megjegyzés: a meglévő /etc/X11/xorg.conf.d/20-amd.conf a saját-könyvtárban kerül mentésre</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1552"/>
+        <source>Change Default Display Manager (login screen) (requires reboot)</source>
+        <extracomment>option to change display manager login screen.  present if more than one display manager is installed</extracomment>
+        <translation>Bejelentkezéskezelő megváltoztatása (bejelentkezési képernyő) (újraindítást igényel)</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1559"/>
@@ -771,10 +730,49 @@
         <translation>Számítógépnév megváltoztatása (újraindítást igényel)</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1552"/>
-        <source>Change Default Display Manager (login screen) (requires reboot)</source>
-        <extracomment>option to change display manager login screen.  present if more than one display manager is installed</extracomment>
-        <translation>Bejelentkezéskezelő megváltoztatása (bejelentkezési képernyő) (újraindítást igényel)</translation>
+        <location filename="../tweak.ui" line="1566"/>
+        <source>requires reboot</source>
+        <translation>újraindítást igényel</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1569"/>
+        <source>Enable Bluetooth adapters on boot</source>
+        <translation>Bluetooth engedélyezése az indításkor</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1576"/>
+        <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
+        <translation>A Fluxbox alkalmazások menüjének frissítése csomagok telepítése, eltávolítása vagy frissítése után</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1583"/>
+        <source>Use tearfree amdgpu option</source>
+        <translation>A tearfree amdgpu opció használata</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1609"/>
+        <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
+        <translation>Kliensoldali Dekorációk (CSD) használata a GTK3 alkalmazásokban, amelyek támogatják (munkafolyamat újraindítása szükséges)</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1616"/>
+        <source>Enable kernel sandbox</source>
+        <translation>A kernel sandbox engedélyezése</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1623"/>
+        <source>Enable mounting of internal drives by non-root users</source>
+        <translation>A belső eszközök csatolásának engedélyezése nem-root felhasználók számára</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1630"/>
+        <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
+        <translation>Az Apt telepíti a további &quot;javasolt&quot; csomagokat, mint függőség</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1637"/>
+        <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
+        <translation>Az intel illesztőprogram használata az alap &quot;modesetting&quot; illesztőprogram helyett (újraindítás szükséges)</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1647"/>
@@ -790,6 +788,24 @@
         <location filename="../tweak.ui" line="1661"/>
         <source>Root</source>
         <translation>Root</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1684"/>
+        <source>put a hold or remove a hold on updates of Debian  kernels</source>
+        <extracomment>toggle for apt hold action on update meta packages</extracomment>
+        <translation>Debian kernel frissítések felfüggesztése vagy folytatása</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1687"/>
+        <source>Enable Automatic Debian Kernel Updates</source>
+        <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
+        <translation>Automatikus Debian Kernel frissítések engedélyezése</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1694"/>
+        <source>Enable Bluetooth battery info for connected devices (requires system restart)</source>
+        <extracomment>expose battery info for connected bluetooth devices to the operating system via dbus</extracomment>
+        <translation>Kapcsolódott Bluetooth eszközök akkumulátorállapotának megjelenítése (újraindítást igényel)</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1701"/>
@@ -857,37 +873,37 @@
         <translation>Alt+N</translation>
     </message>
     <message>
-        <location filename="../tweak.cpp" line="72"/>
+        <location filename="../tweak.cpp" line="79"/>
         <source>--display switch only valid for Xfce</source>
         <translation>--display kapcsoló csak Xfce-hez érvényes</translation>
     </message>
     <message>
-        <location filename="../tweak.cpp" line="241"/>
+        <location filename="../tweak.cpp" line="243"/>
         <source>About MX Tweak</source>
         <translation>Az MX finomhangolóról</translation>
     </message>
     <message>
-        <location filename="../tweak.cpp" line="243"/>
+        <location filename="../tweak.cpp" line="245"/>
         <source>Version: </source>
         <translation>Verzió:</translation>
     </message>
     <message>
-        <location filename="../tweak.cpp" line="244"/>
+        <location filename="../tweak.cpp" line="246"/>
         <source>App for quick default ui theme changes and tweaks</source>
         <translation>Alkalmazás a felhasználó felület gyors beállításához és finomhangolásához</translation>
     </message>
     <message>
-        <location filename="../tweak.cpp" line="246"/>
+        <location filename="../tweak.cpp" line="248"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../tweak.cpp" line="247"/>
+        <location filename="../tweak.cpp" line="249"/>
         <source>%1 License</source>
         <translation>%1 licenc</translation>
     </message>
     <message>
-        <location filename="../tweak.cpp" line="261"/>
+        <location filename="../tweak.cpp" line="263"/>
         <source>%1 Help</source>
         <translation>%1 súgó</translation>
     </message>

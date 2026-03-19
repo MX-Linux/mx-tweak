@@ -2,25 +2,36 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../about.cpp" line="42"/>
+        <location filename="../about.cpp" line="30"/>
+        <location filename="../about.cpp" line="99"/>
+        <source>&amp;Close</source>
+        <translation>&amp;Chiudi</translation>
+    </message>
+    <message>
+        <location filename="../about.cpp" line="50"/>
+        <source>Could not load %1</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../about.cpp" line="73"/>
         <source>License</source>
         <translation>Licenza</translation>
     </message>
     <message>
-        <location filename="../about.cpp" line="43"/>
-        <location filename="../about.cpp" line="53"/>
+        <location filename="../about.cpp" line="74"/>
+        <location filename="../about.cpp" line="84"/>
         <source>Changelog</source>
         <translation>Registro delle modifiche</translation>
     </message>
     <message>
-        <location filename="../about.cpp" line="44"/>
+        <location filename="../about.cpp" line="75"/>
         <source>Cancel</source>
         <translation>Annulla</translation>
     </message>
     <message>
-        <location filename="../about.cpp" line="64"/>
-        <source>&amp;Close</source>
-        <translation>&amp;Chiudi</translation>
+        <location filename="../about.cpp" line="96"/>
+        <source>Could not load changelog.</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../main.cpp" line="55"/>
@@ -34,21 +45,26 @@
     </message>
     <message>
         <location filename="../main.cpp" line="59"/>
+        <source>launches brightness-systray and shows dialog on startup, implies --tray</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="60"/>
         <source>opens with display tab open.  Only valid with Xfce desktop running</source>
         <translation>si apre con la scheda di visualizzazione aperta. Valido solo con il desktop Xfce in esecuzione</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="60"/>
+        <location filename="../main.cpp" line="61"/>
         <source>Opens theme tab directly.  Valid on Xfce &amp; Fluxbox desktops</source>
         <translation>Apre direttamente la scheda del tema. Valido su desktop Xfce e Fluxbox</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="61"/>
+        <location filename="../main.cpp" line="62"/>
         <source>Display additional debug output in console</source>
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../main.cpp" line="62"/>
+        <location filename="../main.cpp" line="63"/>
         <source>Opens Other tab directly.  Valid on all desktops</source>
         <translation>Apre direttamente la scheda Altro. Valido su tutti i desktop</translation>
     </message>
@@ -57,9 +73,9 @@
     <name>Tweak</name>
     <message>
         <location filename="../tweak.ui" line="14"/>
-        <location filename="../tweak.cpp" line="71"/>
-        <location filename="../tweak.cpp" line="242"/>
-        <location filename="../tweak.cpp" line="261"/>
+        <location filename="../tweak.cpp" line="78"/>
+        <location filename="../tweak.cpp" line="244"/>
+        <location filename="../tweak.cpp" line="263"/>
         <source>MX Tweak</source>
         <translation>MX Rifiniture</translation>
     </message>
@@ -653,34 +669,8 @@
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1518"/>
-        <source>Reset Lightdm (login screen) to system default theme</source>
-        <translation>Reimposta Lightdm (shermata di login) al tema di default del sistema</translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1623"/>
-        <source>Enable mounting of internal drives by non-root users</source>
-        <translation>Permetti il montaggio delle periferiche interne agli utenti non-root</translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1616"/>
-        <source>Enable kernel sandbox</source>
-        <translation>Abilita la sandbox del kernel</translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1566"/>
-        <source>requires reboot</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1569"/>
-        <source>Enable Bluetooth adapters on boot</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1694"/>
-        <source>Enable Bluetooth battery info for connected devices (requires system restart)</source>
-        <extracomment>expose battery info for connected bluetooth devices to the operating system via dbus</extracomment>
+        <location filename="../tweak.ui" line="1471"/>
+        <source>NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -696,19 +686,9 @@
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1630"/>
-        <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
-        <translation>Apt installa pacchetti &quot;consiglia&quot; aggiuntivi come dipendenze</translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1576"/>
-        <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
-        <translation>Genera il menu Tutte le app di fluxbox dopo l&apos;installazione, la rimozione e gli aggiornamenti del pacchetto</translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1609"/>
-        <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
-        <translation>Usa le decorazioni lato client (CSD) sulle applicazioni GTK3 che le supportano (richiede il riavvio della sessione)</translation>
+        <location filename="../tweak.ui" line="1501"/>
+        <source>NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="1508"/>
@@ -723,36 +703,9 @@
         <translation>Abilita gli aggiornamenti automatici del kernel Liquorix (repository MX ahs)</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1684"/>
-        <source>put a hold or remove a hold on updates of Debian  kernels</source>
-        <extracomment>toggle for apt hold action on update meta packages</extracomment>
-        <translation>sospendere o rimuovere la sospensione sugli aggiornamenti dei kernel Debian</translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1687"/>
-        <source>Enable Automatic Debian Kernel Updates</source>
-        <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
-        <translation>Abilita gli aggiornamenti automatici del kernel Debian</translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1637"/>
-        <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
-        <translation>Usa il driver Intel invece del driver di default &quot;modesetting&quot; (richiede il riavvio)</translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1471"/>
-        <source>NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1583"/>
-        <source>Use tearfree amdgpu option</source>
-        <translation>Usa l&apos;opzione tearfree amdgpu</translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1545"/>
-        <source>NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
-        <translation type="unfinished"/>
+        <location filename="../tweak.ui" line="1518"/>
+        <source>Reset Lightdm (login screen) to system default theme</source>
+        <translation>Reimposta Lightdm (shermata di login) al tema di default del sistema</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1525"/>
@@ -760,8 +713,14 @@
         <translation>Usa l&apos;opzione driver tearfree radeon</translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1501"/>
-        <source>NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
+        <location filename="../tweak.ui" line="1545"/>
+        <source>NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1552"/>
+        <source>Change Default Display Manager (login screen) (requires reboot)</source>
+        <extracomment>option to change display manager login screen.  present if more than one display manager is installed</extracomment>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -771,10 +730,49 @@
         <translation type="unfinished"/>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1552"/>
-        <source>Change Default Display Manager (login screen) (requires reboot)</source>
-        <extracomment>option to change display manager login screen.  present if more than one display manager is installed</extracomment>
+        <location filename="../tweak.ui" line="1566"/>
+        <source>requires reboot</source>
         <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1569"/>
+        <source>Enable Bluetooth adapters on boot</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1576"/>
+        <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
+        <translation>Genera il menu Tutte le app di fluxbox dopo l&apos;installazione, la rimozione e gli aggiornamenti del pacchetto</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1583"/>
+        <source>Use tearfree amdgpu option</source>
+        <translation>Usa l&apos;opzione tearfree amdgpu</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1609"/>
+        <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
+        <translation>Usa le decorazioni lato client (CSD) sulle applicazioni GTK3 che le supportano (richiede il riavvio della sessione)</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1616"/>
+        <source>Enable kernel sandbox</source>
+        <translation>Abilita la sandbox del kernel</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1623"/>
+        <source>Enable mounting of internal drives by non-root users</source>
+        <translation>Permetti il montaggio delle periferiche interne agli utenti non-root</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1630"/>
+        <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
+        <translation>Apt installa pacchetti &quot;consiglia&quot; aggiuntivi come dipendenze</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1637"/>
+        <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
+        <translation>Usa il driver Intel invece del driver di default &quot;modesetting&quot; (richiede il riavvio)</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1647"/>
@@ -790,6 +788,24 @@
         <location filename="../tweak.ui" line="1661"/>
         <source>Root</source>
         <translation>Root</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1684"/>
+        <source>put a hold or remove a hold on updates of Debian  kernels</source>
+        <extracomment>toggle for apt hold action on update meta packages</extracomment>
+        <translation>sospendere o rimuovere la sospensione sugli aggiornamenti dei kernel Debian</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1687"/>
+        <source>Enable Automatic Debian Kernel Updates</source>
+        <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
+        <translation>Abilita gli aggiornamenti automatici del kernel Debian</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1694"/>
+        <source>Enable Bluetooth battery info for connected devices (requires system restart)</source>
+        <extracomment>expose battery info for connected bluetooth devices to the operating system via dbus</extracomment>
+        <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../tweak.ui" line="1701"/>
@@ -857,37 +873,37 @@
         <translation>Alt+N</translation>
     </message>
     <message>
-        <location filename="../tweak.cpp" line="72"/>
+        <location filename="../tweak.cpp" line="79"/>
         <source>--display switch only valid for Xfce</source>
         <translation>cambio schermo valido solo per Xfce</translation>
     </message>
     <message>
-        <location filename="../tweak.cpp" line="241"/>
+        <location filename="../tweak.cpp" line="243"/>
         <source>About MX Tweak</source>
         <translation>Informazioni su MX Rifiniture</translation>
     </message>
     <message>
-        <location filename="../tweak.cpp" line="243"/>
+        <location filename="../tweak.cpp" line="245"/>
         <source>Version: </source>
         <translation>Versione: </translation>
     </message>
     <message>
-        <location filename="../tweak.cpp" line="244"/>
+        <location filename="../tweak.cpp" line="246"/>
         <source>App for quick default ui theme changes and tweaks</source>
         <translation>Applicazione per ritocchi e rapide modifiche ai temi predefiniti dell&apos;interfaccia </translation>
     </message>
     <message>
-        <location filename="../tweak.cpp" line="246"/>
+        <location filename="../tweak.cpp" line="248"/>
         <source>Copyright (c) MX Linux</source>
         <translation>Copyright (c) MX Linux</translation>
     </message>
     <message>
-        <location filename="../tweak.cpp" line="247"/>
+        <location filename="../tweak.cpp" line="249"/>
         <source>%1 License</source>
         <translation>%1 Licenza</translation>
     </message>
     <message>
-        <location filename="../tweak.cpp" line="261"/>
+        <location filename="../tweak.cpp" line="263"/>
         <source>%1 Help</source>
         <translation>%1 Aiuto</translation>
     </message>
