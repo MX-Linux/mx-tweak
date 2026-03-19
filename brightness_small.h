@@ -33,6 +33,7 @@ public:
     QString g1;
     QString g2;
     QString g3;
+    bool closetrayapp = false;
     bool expand;
 
 private:

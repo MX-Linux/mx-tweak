@@ -71,6 +71,9 @@ brightness_small::brightness_small(QWidget *parent, const QStringList &args) noe
     connect(ui->pushExpandBacklight, &QToolButton::clicked, this, &brightness_small::pushExpandBacklight_clicked);
     if (args.contains("--traydialog"_L1)){
         iconActivated(QSystemTrayIcon::Trigger);
+        if (args.contains("--close"_L1)){
+            closetrayapp = true;  
+        }
     }
 }
 
@@ -245,6 +248,9 @@ void brightness_small::changeEvent(QEvent *event) noexcept
             qDebug() << "focusinEvent";
         } else {
             qDebug() << "focusOutEvent";
+            if (closetrayapp){
+                qApp->quit();
+            }
             this->hide();
         }
     }
