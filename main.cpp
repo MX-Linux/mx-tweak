@@ -56,6 +56,7 @@ int main(int argc, char *argv[])
     parser.addHelpOption();
     parser.addVersionOption();
     parser.addOption({u"tray"_s, QObject::tr("launches brightness-systray")});
+    parser.addOption({u"traydialog"_s, QObject::tr("launches brightness-systray and shows dialog on startup, implies --tray")});
     parser.addOption({u"display"_s, QObject::tr("opens with display tab open.  Only valid with Xfce desktop running")});
     parser.addOption({u"theme"_s, QObject::tr("Opens theme tab directly.  Valid on Xfce & Fluxbox desktops")});
     parser.addOption({u"verbose"_s, QObject::tr("Display additional debug output in console")});
@@ -63,7 +64,7 @@ int main(int argc, char *argv[])
     parser.process(a);
 
 
-    if (parser.isSet(u"tray"_s)){
+    if (parser.isSet(u"tray"_s) || parser.isSet(u"traydialog"_s)){
         brightness_small fred(nullptr,QApplication::arguments());
         return QApplication::exec();
     }
