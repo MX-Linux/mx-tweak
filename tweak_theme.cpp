@@ -3,6 +3,7 @@
 #include <QDir>
 #include <QDirIterator>
 #include <QFile>
+#include <QRegularExpression>
 #include "ui_tweak.h"
 #include "cmd.h"
 #include "theming_to_tweak.h"
@@ -584,14 +585,15 @@ void TweakTheme::pushThemeSaveSet_clicked() noexcept
         return QDir::cleanPath(path1 + QDir::separator() + path2);
     };
 
-    QString panel;
     QString data = runCmd(u"xfconf-query -c xfce4-panel -p /panels --list"_s).output;
-    int panelNum = 0;
-    for (panelNum = 1;; panelNum++) {
-        if (data.contains("panel-"_L1 + QString::number(panelNum)))
-            break;
+    QRegularExpressionMatch panelMatch =
+        QRegularExpression(u"panel-\\d+"_s).match(data);
+    if (!panelMatch.hasMatch()) {
+        QMessageBox::warning(ui->tabWidget, tr("MX Tweak"),
+                             tr("Could not determine the current Xfce panel configuration."));
+        return;
     }
-    panel = "panel-"_L1 + QString::number(panelNum);
+    const QString panel = panelMatch.captured();
 
     int backgroundStyle = 0;
     data = runCmd("xfconf-query -c xfce4-panel -p /panels/"_L1 + panel + "/background-style"_L1).output;
