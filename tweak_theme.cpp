@@ -294,9 +294,11 @@ void TweakTheme::populateThemeLists(const QString &value) noexcept
         ui->listThemeWidget->clear();
         QRegularExpression regex(u".*current.*"_s, QRegularExpression::CaseInsensitiveOption);
         int index = themelist.indexOf(regex);
-        themelist[index] = themelist[index].section('(',0,0);
+        if (index >= 0) {
+            themelist[index] = themelist[index].section('(',0,0);
+        }
         //index of theme in list
-        if (verbose) qDebug() << "index is " << index << themelist[index];
+        if (verbose) qDebug() << "index is " << index << themelist.value(index);
         ui->listThemeWidget->addItems(themelist);
         ui->listThemeWidget->setCurrentRow(index);
     }
@@ -304,9 +306,11 @@ void TweakTheme::populateThemeLists(const QString &value) noexcept
         ui->listThemeWindow->clear();
         QRegularExpression regex(u".*current.*"_s, QRegularExpression::CaseInsensitiveOption);
         int index = themelist.indexOf(regex);
-        themelist[index] = themelist[index].section('(',0,0);
+        if (index >= 0) {
+            themelist[index] = themelist[index].section('(',0,0);
+        }
         //index of theme in list
-        if (verbose) qDebug() << "index is " << index << themelist[index];
+        if (verbose) qDebug() << "index is " << index << themelist.value(index);
         ui->listThemeWindow->addItems(themelist);
         ui->listThemeWindow->setCurrentRow(index);
     }
@@ -318,7 +322,7 @@ void TweakTheme::populateThemeLists(const QString &value) noexcept
             themelist[i] = themelist[i].section('[',1,1).section(']',0,0);
         }
         //index of theme in list
-        if (verbose) qDebug() << "index is " << index << themelist[index];
+        if (verbose) qDebug() << "index is " << index << themelist.value(index);
         ui->listThemeCursors->addItems(themelist);
         ui->listThemeCursors->setCurrentRow(index);
     }
