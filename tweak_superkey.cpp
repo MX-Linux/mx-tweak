@@ -62,7 +62,7 @@ void TweakSuperKey::pushSuperKeyApply_clicked() noexcept
 {
     QString home_path = QDir::homePath();
     if (!QFile(home_path + "/.config/xfce-superkey/xfce-superkey.conf"_L1).exists()){
-        runCmd("mkdir -p "_L1 + home_path + "/.config/xfce-superkey/xfce-superkey.conf"_L1);
+        runCmd("mkdir -p "_L1 + home_path + "/.config/xfce-superkey"_L1);
         runCmd("cp /usr/share/xfce-superkey/xfce-superkey.conf "_L1 + home_path + "/.config/xfce-superkey/xfce-superkey.conf"_L1);
     }
     QString cmd = ui->textSuperKeyCommand->text();
