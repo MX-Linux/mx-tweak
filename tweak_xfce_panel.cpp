@@ -80,7 +80,10 @@ void TweakXfcePanel::setup() noexcept
     }
 
     if (!QFileInfo::exists(home_path + "/.config/gtk-3.0/xfce4-panel-tweaks.css"_L1)) {
-        runCmd("cp /usr/share/mx-tweak/xfce4-panel-tweaks.css "_L1 + home_path + "/.config/gtk-3.0/"_L1);
+        if (QFile::exists(u"/usr/share/mx-tweak/xfce4-panel-tweaks.css"_s))
+            QFile::copy(u"/usr/share/mx-tweak/xfce4-panel-tweaks.css"_s, home_path + "/.config/gtk-3.0/xfce4-panel-tweaks.css"_L1);
+        else
+            qWarning() << "Missing /usr/share/mx-tweak/xfce4-panel-tweaks.css";
     }
     //check for existence of plugins before running these commands, hide buttons and labels if not present.
     //Get value of scale

@@ -48,7 +48,10 @@ void TweakCompositor::setup() noexcept
         if (verbose) qDebug() << "picom startup file exists";
     } else {
         //copy in a startup file, startup initially disabled
-        runCmd("cp /usr/share/mx-tweak/zpicom.desktop "_L1 + file_start.absoluteFilePath());
+        if (QFile::exists(u"/usr/share/mx-tweak/zpicom.desktop"_s))
+            QFile::copy(u"/usr/share/mx-tweak/zpicom.desktop"_s, file_start.absoluteFilePath());
+        else
+            qWarning() << "Missing /usr/share/mx-tweak/zpicom.desktop";
     }
 
     //check to see if existing picom.conf file
@@ -56,7 +59,10 @@ void TweakCompositor::setup() noexcept
     if (file_conf.exists()) {
         if (verbose) qDebug() << "Found existing conf file";
     } else {
-        runCmd("cp /usr/share/mx-tweak/picom.conf "_L1 + file_conf.absoluteFilePath());
+        if (QFile::exists(u"/usr/share/mx-tweak/picom.conf"_s))
+            QFile::copy(u"/usr/share/mx-tweak/picom.conf"_s, file_conf.absoluteFilePath());
+        else
+            qWarning() << "Missing /usr/share/mx-tweak/picom.conf";
     }
 
     ui->comboCompositor->addItem(tr("None"));

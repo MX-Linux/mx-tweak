@@ -61,9 +61,14 @@ void TweakSuperKey::pushSuperKeyBrowseAppFile_clicked() noexcept
 void TweakSuperKey::pushSuperKeyApply_clicked() noexcept
 {
     QString home_path = QDir::homePath();
-    if (!QFile(home_path + "/.config/xfce-superkey/xfce-superkey.conf"_L1).exists()){
-        runCmd("mkdir -p "_L1 + home_path + "/.config/xfce-superkey"_L1);
-        runCmd("cp /usr/share/xfce-superkey/xfce-superkey.conf "_L1 + home_path + "/.config/xfce-superkey/xfce-superkey.conf"_L1);
+    if (!QFile::exists(home_path + "/.config/xfce-superkey/xfce-superkey.conf"_L1)){
+        const QString src = u"/usr/share/xfce-superkey/xfce-superkey.conf"_s;
+        if (QFile::exists(src)) {
+            QDir().mkpath(home_path + "/.config/xfce-superkey"_L1);
+            QFile::copy(src, home_path + "/.config/xfce-superkey/xfce-superkey.conf"_L1);
+        } else {
+            qWarning() << "Missing" << src;
+        }
     }
     QString cmd = ui->textSuperKeyCommand->text();
     //add command if no uncommented lines

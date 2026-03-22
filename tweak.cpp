@@ -226,13 +226,12 @@ void Tweak::setup() noexcept
     QFileInfo template_file(home_path + "/.local/share/mx-tweak-data/mx.tweak.template"_L1);
     if (template_file.exists()) {
         if (verbose) qDebug() << "template file found";
+    } else if (QFile::exists(u"/usr/share/mx-tweak-data/mx.tweak.template"_s)) {
+        QDir().mkpath(userdir.absolutePath());
+        QFile::copy(u"/usr/share/mx-tweak-data/mx.tweak.template"_s,
+            userdir.absolutePath() + "/mx.tweak.template"_L1);
     } else {
-        if (userdir.exists()) {
-            runCmd("cp /usr/share/mx-tweak-data/mx.tweak.template "_L1 + userdir.absolutePath());
-        } else {
-            runCmd("mkdir -p "_L1 + userdir.absolutePath());
-            runCmd("cp /usr/share/mx-tweak-data/mx.tweak.template "_L1 + userdir.absolutePath());
-        }
+        qWarning() << "Missing /usr/share/mx-tweak-data/mx.tweak.template";
     }
     this->adjustSize();
 }

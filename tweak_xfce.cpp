@@ -174,7 +174,14 @@ void TweakXfce::pushXfceApply_clicked() noexcept
             runCmd("echo '@import url(\"no-ellipse-desktop-filenames.css\");' >> "_L1 + home_path + "/.config/gtk-3.0/gtk.css"_L1);
         }
         //add modification config
-        runCmd("cp /usr/share/mx-tweak/no-ellipse-desktop-filenames.css "_L1 + home_path + "/.config/gtk-3.0/no-ellipse-desktop-filenames.css "_L1);
+        const QString srcCss = u"/usr/share/mx-tweak/no-ellipse-desktop-filenames.css"_s;
+        const QString destCss = home_path + "/.config/gtk-3.0/no-ellipse-desktop-filenames.css"_L1;
+        if (QFile::exists(srcCss)) {
+            QFile::remove(destCss);
+            QFile::copy(srcCss, destCss);
+        } else {
+            qWarning() << "Missing" << srcCss;
+        }
 
         //restart xfdesktop by with xfdesktop --quite && xfdesktop &
         runCmd(u"xfdesktop --quit && sleep .5 && xfdesktop &"_s);
