@@ -27,7 +27,7 @@ bool TweakCompositor::check() noexcept
 }
 void TweakCompositor::setup() noexcept
 {
-    //set comboCompositorVBlank to current setting
+    // set comboCompositorVBlank to current setting
 
     flags.vblank = false;
     initVBlank = runCmd(u"xfconf-query -c xfwm4 -p /general/vblank_mode"_s).output;
@@ -43,18 +43,18 @@ void TweakCompositor::setup() noexcept
     QString home_path = QDir::homePath();
     if (verbose) qDebug() << "Home Path =" << home_path;
     QFileInfo file_start(home_path + "/.config/autostart/zpicom.desktop"_L1);
-    //check to see if picom.desktop startup file exists
+    // check to see if picom.desktop startup file exists
     if (file_start.exists()) {
         if (verbose) qDebug() << "picom startup file exists";
     } else {
-        //copy in a startup file, startup initially disabled
+        // copy in a startup file, startup initially disabled
         if (QFile::exists(u"/usr/share/mx-tweak/zpicom.desktop"_s))
             QFile::copy(u"/usr/share/mx-tweak/zpicom.desktop"_s, file_start.absoluteFilePath());
         else
             qWarning() << "Missing /usr/share/mx-tweak/zpicom.desktop";
     }
 
-    //check to see if existing picom.conf file
+    // check to see if existing picom.conf file
     QFileInfo file_conf(home_path + "/.config/picom.conf"_L1);
     if (file_conf.exists()) {
         if (verbose) qDebug() << "Found existing conf file";
@@ -73,7 +73,7 @@ void TweakCompositor::setup() noexcept
 
 void TweakCompositor::checkPicomRunning() noexcept
 {
-    //Index for combo box:  0=none, 1=xfce, 2=picom (formerly compton)
+    // Index for combo box:  0=none, 1=xfce, 2=picom (formerly compton)
 
     if (runCmd(u"ps -ax -o comm,pid |grep -w ^picom"_s).exitCode == 0) {
         if (verbose) qDebug() << "picom is running";
@@ -82,7 +82,7 @@ void TweakCompositor::checkPicomRunning() noexcept
     } else {
         if (verbose) qDebug() << "picom is NOT running";
 
-        //check if picom is present on system, remove from choices if not
+        // check if picom is present on system, remove from choices if not
         if (!QFileInfo::exists(u"/usr/bin/picom"_s)) {
             const int i = ui->comboCompositor->findData(u"picom"_s);
             ui->comboCompositor->removeItem(i);
@@ -91,7 +91,7 @@ void TweakCompositor::checkPicomRunning() noexcept
         }
     }
 
-    //check if xfce compositor is enabled
+    // check if xfce compositor is enabled
     const QString &test = runCmd(u"xfconf-query -c xfwm4 -p /general/use_compositing"_s).output;
     if (verbose) qDebug() << "etc test is "<< test;
     int compIndex = 0; // "None"
@@ -106,7 +106,7 @@ void TweakCompositor::checkAptNotifierRunning() const noexcept
 {
     if (runCmd(u"ps -aux |grep -v grep| grep python |grep --quiet apt-notifier"_s).exitCode == 0) {
         if (verbose) qDebug() << "apt-notifier is running";
-        //check if icon is supposed to be hidden by user
+        // check if icon is supposed to be hidden by user
         if (runCmd(u"cat /home/$USER/.config/apt-notifierrc |grep --quiet DontShowIcon"_s).exitCode == 0) {
             if (verbose) qDebug() << "apt-notifier set to hide icon, do not restart";
         } else {
@@ -144,36 +144,36 @@ void TweakCompositor::comboCompositorVBlank_activated(int) noexcept
 
 void TweakCompositor::pushCompositorApply_clicked() noexcept
 {
-    //disable apply button
+    // disable apply button
     ui->pushCompositorApply->setEnabled(false);
 
     if (ui->comboCompositor->currentData() == "picom"_L1) {
-        //turn off xfce compositor
+        // turn off xfce compositor
         runCmd(u"xfconf-query -c xfwm4 -p /general/use_compositing -s false"_s);
-        //launch picom
+        // launch picom
         runProc(u"pkill"_s, {u"-x"_s, u"picom"_s});
         runCmd(u"picom-launch.sh"_s);
-        //restart apt-notifier if necessary
+        // restart apt-notifier if necessary
         checkAptNotifierRunning();
     } else if (ui->comboCompositor->currentData() == "xfwm"_L1) {
-        //turn off picom
+        // turn off picom
         runProc(u"pkill"_s, {u"-x"_s, u"picom"_s});
-        //launch xfce compositor
+        // launch xfce compositor
         runProc(u"xfconf-query"_s, {u"-c"_s, u"xfwm4"_s, u"-p"_s,
             u"/general/use_compositing"_s, u"-s"_s, u"true"_s});
-        //restart apt-notifier if necessary
+        // restart apt-notifier if necessary
         checkAptNotifierRunning();
     } else {
-        //turn off picom and xfce compositor
-        //turn off xfce compositor
+        // turn off picom and xfce compositor
+        // turn off xfce compositor
         runProc(u"xfconf-query"_s, {u"-c"_s, u"xfwm4"_s, u"-p"_s,
             u"/general/use_compositing"_s, u"-s"_s, u"false"_s});
         runProc(u"pkill"_s, {u"-x"_s, u"picom"_s});
         checkAptNotifierRunning();
     }
 
-    //figure out whether to autostart picom or not
-    //if picom is configured in the combo box, then enable.  otherwise disable
+    // figure out whether to autostart picom or not
+    // if picom is configured in the combo box, then enable.  otherwise disable
 
     QString home_path = QDir::homePath();
     QFileInfo file_start(home_path + "/.config/autostart/zpicom.desktop"_L1);
@@ -184,10 +184,10 @@ void TweakCompositor::pushCompositorApply_clicked() noexcept
     }
     if (verbose) qDebug() << "autostart set to " << runCmd("grep Hidden= "_L1 + file_start.absoluteFilePath()).output;
 
-    //deal with vblank setting
-    if ( flags.vblank ) {
+    // deal with vblank setting
+    if (flags.vblank) {
         runCmd("xfconf-query -c xfwm4 -p /general/vblank_mode -t string -s "_L1 + ui->comboCompositorVBlank->currentText() + " --create"_L1);
-        //restart xfwm4 to take advantage of the setting
+        // restart xfwm4 to take advantage of the setting
         runCmd(u"xfwm4 --replace"_s);
     }
 }

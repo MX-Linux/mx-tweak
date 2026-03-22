@@ -1,5 +1,4 @@
-#ifndef TWEAK_THEME_H
-#define TWEAK_THEME_H
+#pragma once
 
 #include <QObject>
 #include <QHash>
@@ -51,5 +50,3 @@ private:
     void listThemeCursors_currentTextChanged(const QString &currentText) noexcept;
     void checkThemeGTKDarkMode_checkStateChanged(Qt::CheckState state) const noexcept;
 };
-
-#endif // TWEAK_THEME_H

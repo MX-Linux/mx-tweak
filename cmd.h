@@ -1,5 +1,4 @@
-#ifndef CMD_H
-#define CMD_H
+#pragma once
 
 #include <QString>
 #include <QStringList>
@@ -12,5 +11,3 @@ struct Result {
 Result runProc(const QString &program, const QStringList &arguments = {}) noexcept;
 Result runCmd(const QString &cmd) noexcept;
 int runSystem(const char *command) noexcept;
-
-#endif // CMD_H

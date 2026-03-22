@@ -42,9 +42,9 @@ void TweakTheme::setup() noexcept
 {
     ui->pushThemeApply->setEnabled(false);
 
-    //reset all checkboxes to unchecked
+    // reset all checkboxes to unchecked
 
-    if (desktop==Xfce || desktop==Fluxbox){
+    if (desktop == Xfce || desktop == Fluxbox){
         populateThemeLists(u"gtk-3.0"_s);
         populateThemeLists(u"icons"_s);
         populateThemeLists(u"cursors"_s);
@@ -55,13 +55,13 @@ void TweakTheme::setup() noexcept
         }
     }
 
-    if (desktop==Xfce){
+    if (desktop == Xfce){
         populateThemeLists(u"xfwm4"_s);
-    } else if (desktop==Fluxbox) {
+    } else if (desktop == Fluxbox) {
         populateThemeLists(u"fluxbox"_s);
     }
 
-    if (desktop==Plasma) {
+    if (desktop == Plasma) {
         ui->labelThemeWidget->setText(tr("Plasma Widget Themes","theme style of the kde plasma widgets"));
         ui->labelThemeWindow->setText(tr("Color Schemes", "plasma widget color schemes"));
         ui->groupTheme->setTitle(tr("Plasma Look & Feel Global Themes", "plasma global themes"));
@@ -82,7 +82,7 @@ void TweakTheme::setupComboTheme() noexcept
     QStringList theme_list;
     ui->comboTheme->clear();
     if (desktop == Xfce) {
-        //build theme list
+        // build theme list
         QString home_path = QDir::homePath();
         if (verbose) qDebug() << "home path is " << home_path;
         bool xsettings_gtk_theme_present = false;
@@ -104,7 +104,7 @@ void TweakTheme::setupComboTheme() noexcept
             QString xfwm4_window_decorations = runCmd("cat '"_L1 + file_info.absoluteFilePath() + "' |grep xfwm4_window_decorations="_L1).output.section('=',1,1);
             if (verbose) qDebug() << "xfwm4_window_decorations = " << xfwm4_window_decorations;
 
-            //check theme existence, only list if all 3 elements present
+            // check theme existence, only list if all 3 elements present
             QFileInfo xsettings_theme("/usr/share/themes/"_L1 + xsettings_gtk_theme);
             QFileInfo xfwm4_theme("/usr/share/themes/"_L1 + xfwm4_window_decorations);
             QFileInfo icon_theme("/usr/share/icons/"_L1 + xsettings_icon_theme);
@@ -115,20 +115,20 @@ void TweakTheme::setupComboTheme() noexcept
             QFileInfo xfwm4_theme_home_alt(home_path + "/.local/share/themes/"_L1 + xfwm4_window_decorations);
             if (verbose) qDebug() << "xsettings_theme_home path" << xsettings_theme_home.absoluteFilePath();
 
-            if ( xsettings_theme.exists() || xsettings_theme_home.exists() || xsettings_theme_home_alt.exists()) {
+            if (xsettings_theme.exists() || xsettings_theme_home.exists() || xsettings_theme_home_alt.exists()) {
                 xsettings_gtk_theme_present = true;
                 if (verbose) qDebug() << "xsettings_gtk_theme_present" << xsettings_gtk_theme_present;
             }
 
-            if ( xfwm4_theme.exists() || xfwm4_theme_home.exists() || xfwm4_theme_home_alt.exists()) {
+            if (xfwm4_theme.exists() || xfwm4_theme_home.exists() || xfwm4_theme_home_alt.exists()) {
                 xfwm4_theme_present = true;
             }
 
-            if ( icon_theme.exists() || icon_theme_home.exists() ) {
+            if (icon_theme.exists() || icon_theme_home.exists()) {
                 icontheme_present = true;
             }
 
-            if ( xsettings_gtk_theme_present && xfwm4_theme_present && icontheme_present ) {
+            if (xsettings_gtk_theme_present && xfwm4_theme_present && icontheme_present) {
                 if (verbose) qDebug() << "filename is " << filename;
                 if (verbose) qDebug()<< "theme combo name" << name;
                 theme_list << name;
@@ -139,7 +139,7 @@ void TweakTheme::setupComboTheme() noexcept
         theme_list.sort();
         theme_list.insert(0, tr("Choose a theme set"));
 
-        //add user entries in ~/.local/share/mx-tweak-data
+        // add user entries in ~/.local/share/mx-tweak-data
 
         QDirIterator it2(home_path + "/.local/share/mx-tweak-data"_L1, filter, QDir::Files, QDirIterator::Subdirectories);
         while (it2.hasNext()) {
@@ -158,7 +158,7 @@ void TweakTheme::setupComboTheme() noexcept
             QString xfwm4_window_decorations = runCmd("cat '"_L1 + file_info.absoluteFilePath() + "' |grep xfwm4_window_decorations="_L1).output.section('=',1,1);
             if (verbose) qDebug() << "xfwm4_window_decorations = " << xfwm4_window_decorations;
 
-            //check theme existence, only list if all 3 elements present
+            // check theme existence, only list if all 3 elements present
             QFileInfo xsettings_theme("/usr/share/themes/"_L1 + xsettings_gtk_theme);
             QFileInfo xfwm4_theme("/usr/share/themes/"_L1 + xfwm4_window_decorations);
             QFileInfo icon_theme("/usr/share/icons/"_L1 + xsettings_icon_theme);
@@ -298,7 +298,7 @@ void TweakTheme::populateThemeLists(const QString &value) noexcept
         if (index >= 0) {
             themelist[index] = themelist[index].section('(',0,0);
         }
-        //index of theme in list
+        // index of theme in list
         if (verbose) qDebug() << "index is " << index << themelist.value(index);
         ui->listThemeWidget->addItems(themelist);
         ui->listThemeWidget->setCurrentRow(index);
@@ -310,7 +310,7 @@ void TweakTheme::populateThemeLists(const QString &value) noexcept
         if (index >= 0) {
             themelist[index] = themelist[index].section('(',0,0);
         }
-        //index of theme in list
+        // index of theme in list
         if (verbose) qDebug() << "index is " << index << themelist.value(index);
         ui->listThemeWindow->addItems(themelist);
         ui->listThemeWindow->setCurrentRow(index);
@@ -319,28 +319,28 @@ void TweakTheme::populateThemeLists(const QString &value) noexcept
         ui->listThemeCursors->clear();
         QRegularExpression regex(u".*current.*"_s, QRegularExpression::CaseInsensitiveOption);
         int index = themelist.indexOf(regex);
-        for (int i = 0; i < themelist.size(); ++i ){
+        for (int i = 0; i < themelist.size(); ++i){
             themelist[i] = themelist[i].section('[',1,1).section(']',0,0);
         }
-        //index of theme in list
+        // index of theme in list
         if (verbose) qDebug() << "index is " << index << themelist.value(index);
         ui->listThemeCursors->addItems(themelist);
         ui->listThemeCursors->setCurrentRow(index);
     }
 
-    if ( value == "gtk-3.0"_L1 ) {
+    if (value == "gtk-3.0"_L1) {
         ui->listThemeWidget->clear();
         ui->listThemeWidget->addItems(themelist);
-        //set current
+        // set current
         if (desktop == Xfce) {
             current = runCmd(u"xfconf-query -c xsettings -p /Net/ThemeName"_s).output;
         } else if (desktop == Fluxbox) {
             current = runCmd(u"grep gtk-theme-name ~/.config/gtk-3.0/settings.ini | cut -d\"=\" -f2"_s).output;
         }
-        //index of theme in list
+        // index of theme in list
         ui->listThemeWidget->setCurrentRow(themelist.indexOf(current));
     }
-    if ( value == "xfwm4"_L1) {
+    if (value == "xfwm4"_L1) {
 
         ui->listThemeWindow->clear();
         ui->listThemeWindow->addItems(themelist);
@@ -348,7 +348,7 @@ void TweakTheme::populateThemeLists(const QString &value) noexcept
         ui->listThemeWindow->setCurrentRow(themelist.indexOf(current));
     }
 
-    if ( value == "fluxbox"_L1) {
+    if (value == "fluxbox"_L1) {
 
         ui->listThemeWindow->clear();
         ui->listThemeWindow->addItems(themelist);
@@ -357,7 +357,7 @@ void TweakTheme::populateThemeLists(const QString &value) noexcept
         ui->listThemeWindow->setCurrentRow(themelist.indexOf(current));
     }
 
-    if ( value == "cursors"_L1){
+    if (value == "cursors"_L1){
         ui->listThemeCursors->clear();
         ui->listThemeCursors->addItems(themelist);
         if (desktop == Xfce) {
@@ -373,7 +373,7 @@ void TweakTheme::populateThemeLists(const QString &value) noexcept
         ui->listThemeCursors->setCurrentRow(themelist.indexOf(current));
     }
 
-    if ( value == "icons"_L1) {
+    if (value == "icons"_L1) {
         if (verbose) qDebug() << "themelist" << themelist;
         themelist.removeIf([this](const QString &icontheme) {
             if (icontheme == "default.kde4"_L1 || icontheme == "default"_L1 || icontheme == "hicolor"_L1)
@@ -386,7 +386,7 @@ void TweakTheme::populateThemeLists(const QString &value) noexcept
         });
         ui->listThemeIcons->clear();
         ui->listThemeIcons->addItems(themelist);
-        //current icon set
+        // current icon set
         if (desktop == Xfce) {
             current = runCmd(u"xfconf-query -c xsettings -p /Net/IconThemeName"_s).output;
         } else if (desktop == Fluxbox) {
@@ -401,25 +401,25 @@ void TweakTheme::populateThemeLists(const QString &value) noexcept
 }
 
 void TweakTheme::setTheme(const QString &type, const QString &theme) const noexcept
-{   //set new theme
+{   // set new theme
     QString cmd;
     QString cmd1;
 
     if (desktop == Xfce) {
-        if ( type == "gtk-3.0"_L1 ) {
+        if (type == "gtk-3.0"_L1) {
             cmd = "xfconf-query -c xsettings -p /Net/ThemeName -s \""_L1 + theme + '"';
             cmd1 ="gsettings set org.gnome.desktop.interface gtk-theme \""_L1 + theme + '"';
-            if (theme.contains("dark"_L1, Qt::CaseInsensitive) || theme.contains("Blackbird"_L1)){ //blackbird special case
+            if (theme.contains("dark"_L1, Qt::CaseInsensitive) || theme.contains("Blackbird"_L1)){ // blackbird special case
                 ui->checkThemeGTKDarkMode->setChecked(true);
             } else {
                 ui->checkThemeGTKDarkMode->setChecked(false);
             }
         }
-        if ( type == "xfwm4"_L1 ) {
+        if (type == "xfwm4"_L1) {
             cmd = "xfconf-query -c xfwm4 -p /general/theme -s \""_L1 + theme + '"';
         }
 
-        if ( type == "icons"_L1 ) {
+        if (type == "icons"_L1) {
             cmd = "xfconf-query -c xsettings -p /Net/IconThemeName -s \""_L1 + theme + '"';
         }
 
@@ -429,14 +429,14 @@ void TweakTheme::setTheme(const QString &type, const QString &theme) const noexc
         runCmd(cmd);
 
     } else if (desktop == Plasma) {
-        if ( type == "plasma"_L1 ) {
+        if (type == "plasma"_L1) {
             cmd = "LANG=C.UTF-8 plasma-apply-desktoptheme "_L1 + theme;
         }
-        if ( type == "colorscheme"_L1 ) {
+        if (type == "colorscheme"_L1) {
             cmd = "LANG=C.UTF-8 plasma-apply-colorscheme "_L1 + theme;
         }
 
-        if ( type == "icons"_L1 ) {
+        if (type == "icons"_L1) {
             cmd = "LANG=C.UTF-8 /usr/lib/x86_64-linux-gnu/libexec/plasma-changeicons "_L1 + theme;
         }
 
@@ -447,7 +447,7 @@ void TweakTheme::setTheme(const QString &type, const QString &theme) const noexc
 
     } else if (desktop == Fluxbox) {
         QString home_path = QDir::homePath();
-        if ( type == "gtk-3.0"_L1 ) {
+        if (type == "gtk-3.0"_L1) {
             if (runCmd(u"grep gtk-theme-name $HOME/.config/gtk-3.0/settings.ini"_s).exitCode == 0) {
                 cmd = "sed -i 's/gtk-theme-name=.*/gtk-theme-name="_L1 + theme + "/' $HOME/.config/gtk-3.0/settings.ini"_L1;
             } else {
@@ -463,7 +463,7 @@ void TweakTheme::setTheme(const QString &type, const QString &theme) const noexc
             runCmd(cmd);
 
             cmd1 ="gsettings set org.gnome.desktop.interface gtk-theme \""_L1 + theme + '"';
-            if (theme.contains("dark"_L1, Qt::CaseInsensitive) || theme.contains("Blackbird"_L1)){ //blackbird special case
+            if (theme.contains("dark"_L1, Qt::CaseInsensitive) || theme.contains("Blackbird"_L1)){ // blackbird special case
                 ui->checkThemeGTKDarkMode->setChecked(true);
             } else {
                 ui->checkThemeGTKDarkMode->setChecked(false);
@@ -473,8 +473,8 @@ void TweakTheme::setTheme(const QString &type, const QString &theme) const noexc
                 runCmd(u"preview-mx &"_s);
             }
         }
-        if ( type == "fluxbox"_L1 ) {
-            //always take home folder version, then mx-fluxbox version, then fluxbox version if conflicts arise
+        if (type == "fluxbox"_L1) {
+            // always take home folder version, then mx-fluxbox version, then fluxbox version if conflicts arise
             QString filepath = home_path + "/.fluxbox/styles/"_L1 + theme;
             if (QFile(filepath).exists()){
                 home_path.replace('/', "\\/"_L1);
@@ -489,8 +489,8 @@ void TweakTheme::setTheme(const QString &type, const QString &theme) const noexc
             }
             runCmd(cmd);
         }
-        //for fluxbox, edit ~/.config/gtk-3.0/settings.ini and ~/.gtkrc-2.0 has quotes
-        if ( type == "icons"_L1 ) {
+        // for fluxbox, edit ~/.config/gtk-3.0/settings.ini and ~/.gtkrc-2.0 has quotes
+        if (type == "icons"_L1) {
 
             if (runCmd(u"grep gtk-icon-theme-name $HOME/.config/gtk-3.0/settings.ini"_s).exitCode == 0) {
                 cmd = "sed -i 's/gtk-icon-theme-name=.*/gtk-icon-theme-name="_L1 + theme + "/' $HOME/.config/gtk-3.0/settings.ini"_L1;
@@ -510,8 +510,8 @@ void TweakTheme::setTheme(const QString &type, const QString &theme) const noexc
             }
         }
 
-        //for fluxbox, edit ~/.config/gtk-3.0/settings.ini, ~/.gtkrc-2.0 has quotes, and .icons/default/index.theme (create if it doesn't exist)
-        if ( type == "cursor"_L1 ) {
+        // for fluxbox, edit ~/.config/gtk-3.0/settings.ini, ~/.gtkrc-2.0 has quotes, and .icons/default/index.theme (create if it doesn't exist)
+        if (type == "cursor"_L1) {
 
             if (runCmd(u"grep gtk-cursor-theme-name $HOME/.config/gtk-3.0/settings.ini"_s).exitCode == 0) {
                 cmd = "sed -i 's/gtk-cursor-theme-name=.*/gtk-cursor-theme-name="_L1 + theme + "/' $HOME/.config/gtk-3.0/settings.ini"_L1;
@@ -525,10 +525,10 @@ void TweakTheme::setTheme(const QString &type, const QString &theme) const noexc
                 cmd = "echo gtk-cursor-theme-name=\""_L1 + theme + "\" >> $HOME/.gtkrc-2.0"_L1;
             }
             runCmd(cmd);
-            if ( theme == "default"_L1){
+            if (theme == "default"_L1){
                 runCmd(u"rm -R $HOME/.icons/default"_s);
             } else {
-                if (!QDir(home_path + "/.icons/default"_L1).exists() ){
+                if (!QDir(home_path + "/.icons/default"_L1).exists()){
                     runCmd(u"mkdir -p $HOME/.icons/default"_s);
                 }
                 runCmd(u"echo [Icon Theme] > $HOME/.icons/default/index.theme"_s);
@@ -573,7 +573,7 @@ void TweakTheme::pushThemeSaveSet_clicked() noexcept
     }
     const QString &fileName = dialog.nameEditor()->text();
 
-    //declared locally to prevent an issues with other code
+    // declared locally to prevent an issues with other code
     auto pathAppend = [](const QString& path1, const QString& path2) {
         return QDir::cleanPath(path1 + QDir::separator() + path2);
     };
@@ -590,7 +590,7 @@ void TweakTheme::pushThemeSaveSet_clicked() noexcept
 
     int backgroundStyle = 0;
     data = runCmd("xfconf-query -c xfce4-panel -p /panels/"_L1 + panel + "/background-style"_L1).output;
-    backgroundStyle = data.toInt(); //there may be newlines in output but qt ignores it
+    backgroundStyle = data.toInt(); // there may be newlines in output but qt ignores it
 
     QVector<double> backgroundColor;
     QString backgroundImage;
@@ -656,7 +656,7 @@ void TweakTheme::pushThemeSaveSet_clicked() noexcept
         fileStream << line + '\n';
     }
     file.close();
-    //Refresh
+    // Refresh
     setupComboTheme();
 }
 
@@ -681,7 +681,7 @@ void TweakTheme::pushThemeRemoveSet_clicked() noexcept
         if (verbose) qDebug() << "Removing theme set failed: exitCode: " << cmd.exitCode << " | output: " << cmd.output;
         return;
     }
-    //refresh
+    // refresh
     setupComboTheme();
 }
 
@@ -692,7 +692,7 @@ void TweakTheme::pushThemeApply_clicked() noexcept
         ui->pushThemeApply->setEnabled(false);
         QString themename = theme_info.value(ui->comboTheme->currentText());
         QFileInfo fileinfo(themename);
-        //initialize variables
+        // initialize variables
         QString backgroundColor = runCmd("cat '"_L1 + fileinfo.absoluteFilePath() + "' |grep background-rgba="_L1).output.section('=' , 1,1);
         if (verbose) qDebug() << "backgroundColor = " << backgroundColor;
         QString color1 = backgroundColor.section(',',0,0);
@@ -714,7 +714,7 @@ void TweakTheme::pushThemeApply_clicked() noexcept
         if (verbose) qDebug() << "CursorThemeName = " << cursorthemename;
         //  use xfconf system to change values
 
-        //set gtk theme
+        // set gtk theme
         runCmd("xfconf-query -c xsettings -p /Net/ThemeName -s "_L1 + xsettings_gtk_theme);
         runCmd(u"sleep .5"_s);
         runCmd("gsettings set org.gnome.desktop.interface gtk-theme \""_L1 + xsettings_gtk_theme + '"');
@@ -724,33 +724,33 @@ void TweakTheme::pushThemeApply_clicked() noexcept
             runCmd(u"gsettings set org.gnome.desktop.interface color-scheme default"_s);
         }
 
-        //set window decorations theme
+        // set window decorations theme
         runCmd("xfconf-query -c xfwm4 -p /general/theme -s "_L1 + xfwm4_window_decorations);
         runCmd(u"sleep .5"_s);
 
-        //set icon theme
+        // set icon theme
         runCmd("xfconf-query -c xsettings -p /Net/IconThemeName -s "_L1 + xsettings_icon_theme);
         runCmd(u"sleep .5"_s);
 
-        //set cursor theme if exists
-        if ( ! cursorthemename.isEmpty()){
+        // set cursor theme if exists
+        if (! cursorthemename.isEmpty()){
             runCmd("xfconf-query -c xsettings -p /Gtk/CursorThemeName -s "_L1 + cursorthemename);
         }
 
-        //deal with panel customizations for each panel
+        // deal with panel customizations for each panel
         assert(tweakXfcePanel != nullptr);
         QStringListIterator changeIterator(tweakXfcePanel->panelIDs);
         while (changeIterator.hasNext()) {
             QString value = changeIterator.next();
 
-            //set panel background mode
+            // set panel background mode
             if (background_style == "1"_L1 || background_style == "2"_L1 || background_style == "0"_L1) {
                 runCmd("xfconf-query -c xfce4-panel -p /panels/panel-"_L1 + value + "/background-style -t int -s "_L1 + background_style + " --create"_L1);
             } else {
                 runCmd("xfconf-query -c xfce4-panel -p /panels/panel-"_L1 + value + "/background-style -t int -s 0 --create"_L1);
             }
 
-            //set panel background image
+            // set panel background image
             QFileInfo image(background_image);
             if (image.exists()) {
                 runCmd("xfconf-query -c xfce4-panel -p /panels/panel-"_L1 + value + "/background-image -t string -s "_L1 + background_image + " --create"_L1);
@@ -758,19 +758,19 @@ void TweakTheme::pushThemeApply_clicked() noexcept
                 runCmd("xfconf-query -c xfce4-panel -p /panels/panel-"_L1 + value + "/background-image --reset"_L1);
             }
 
-            //set panel color
+            // set panel color
             if (!backgroundColor.isEmpty()) {
                 runCmd("xfconf-query -c xfce4-panel -p /panels/panel-"_L1 + value + "/background-rgba -t double -t double -t double -t double -s "_L1 + color1 + " -s "_L1 + color2 + " -s "_L1 + color3 + " -s "_L1 + color4 + " --create"_L1);
             }
         }
 
-        //set whisker themeing
+        // set whisker themeing
         QString home_path = QDir::homePath();
         QFileInfo whisker_check(home_path + "/.config/gtk-3.0/gtk.css"_L1);
         if (whisker_check.exists()) {
             if (verbose) qDebug() << "existing gtk.css found";
             QString cmd = "cat "_L1 + home_path + "/.config/gtk-3.0/gtk.css |grep -q whisker-tweak.css"_L1;
-            if (runCmd(cmd).exitCode == 0 ) {
+            if (runCmd(cmd).exitCode == 0) {
                 if (verbose) qDebug() << "include statement found";
             } else {
                 if (verbose) qDebug() << "adding include statement";
@@ -781,10 +781,10 @@ void TweakTheme::pushThemeApply_clicked() noexcept
             runCmd("echo '@import url(\"whisker-tweak.css\");' >> "_L1 + home_path + "/.config/gtk-3.0/gtk.css"_L1);
         }
 
-        //add whisker info
+        // add whisker info
         runCmd("awk '/<begin_gtk_whisker_theme_code>/{flag=1;next}/<end_gtk_whisker_theme_code>/{flag=0}flag' \""_L1 +fileinfo.absoluteFilePath() +"\" > "_L1 + home_path + "/.config/gtk-3.0/whisker-tweak.css"_L1);
 
-        //restart xfce4-panel
+        // restart xfce4-panel
         runProc(u"xfce4-panel"_s, {u"--restart"_s});
     } else if (desktop == Plasma) {
         runCmd("plasma-apply-lookandfeel --apply "_L1 + ui->comboTheme->currentText());
@@ -865,7 +865,7 @@ void TweakTheme::spinThemeCursorSize_valueChanged(int value) noexcept
     }
 
     runCmd(cmd);
-    //restart fluxbox after set
+    // restart fluxbox after set
     if (desktop == Fluxbox) {
         runCmd(u"xrdb -merge $HOME/.Xresources && fluxbox-remote restart"_s);
         runCmd(u"touch /tmp/fluxboxconkytweak"_s);

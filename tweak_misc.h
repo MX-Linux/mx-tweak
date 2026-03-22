@@ -1,5 +1,4 @@
-#ifndef TWEAK_MISC_H
-#define TWEAK_MISC_H
+#pragma once
 
 #include <QObject>
 
@@ -50,5 +49,3 @@ private:
     void checkMiscTearfreeAMD_clicked() noexcept;
     void checkMiscTearfreeRadeon_clicked() noexcept;
 };
-
-#endif // TWEAK_MISC_H

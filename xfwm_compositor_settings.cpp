@@ -19,12 +19,12 @@ xfwm_compositor_settings::~xfwm_compositor_settings() noexcept
     delete ui;
 }
 
-//setup some initial values
+// setup some initial values
 void xfwm_compositor_settings::setup() noexcept
 {
-    this->setWindowTitle(tr("Xfwm Compositor Settings"));
+    setWindowTitle(tr("Xfwm Compositor Settings"));
 
-    //initial settings
+    // initial settings
 
     QString value;
     value = runCmd(u"xfconf-query -c xfwm4 -p /general/unredirect_overlays"_s).output;

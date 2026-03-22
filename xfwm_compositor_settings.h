@@ -1,5 +1,4 @@
-#ifndef XFWM_COMPOSITOR_SETTINGS_H
-#define XFWM_COMPOSITOR_SETTINGS_H
+#pragma once
 
 #include <QDialog>
 
@@ -12,7 +11,7 @@ class xfwm_compositor_settings : public QDialog
     Q_OBJECT
 
 public:
-    explicit xfwm_compositor_settings(QWidget *parent = 0) noexcept;
+    explicit xfwm_compositor_settings(QWidget *parent = nullptr) noexcept;
     ~xfwm_compositor_settings() noexcept;
 
     void setup() noexcept;
@@ -32,5 +31,3 @@ private:
     void sliderWindowsMove_valueChanged(int value) noexcept;
     void sliderWindowsResize_valueChanged(int value) noexcept;
 };
-
-#endif // XFWM_COMPOSITOR_SETTINGS_H

@@ -32,14 +32,14 @@ void TweakThunar::setup() noexcept
     ui->checkThunarResetCustomActions->setChecked(false);
     QString test;
 
-    //check single click thunar status
+    // check single click thunar status
     test = runCmd(u"xfconf-query  -c thunar -p /misc-single-click"_s).output;
     ui->checkThunarSingleClick->setChecked(test == "true"_L1);
 
-    //check split window status
+    // check split window status
     test = runCmd(u"xfconf-query  -c thunar -p /misc-open-new-windows-in-split-view"_s).output;
     ui->checkThunarSplitView->setChecked(test == "true"_L1);
-    //check split view horizontal or vertical.  default false is vertical, true is horizontal;
+    // check split view horizontal or vertical.  default false is vertical, true is horizontal;
     test = runCmd(u"xfconf-query  -c thunar -p /misc-vertical-split-pane"_s).output;
     ui->checkThunarSplitViewHorizontal->setChecked(test == "true"_L1);
 }

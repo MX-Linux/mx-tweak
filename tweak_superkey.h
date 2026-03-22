@@ -1,5 +1,4 @@
-#ifndef TWEAK_SUPERKEY_H
-#define TWEAK_SUPERKEY_H
+#pragma once
 
 #include <QObject>
 
@@ -24,5 +23,3 @@ private:
     void pushSuperKeyBrowseAppFile_clicked() noexcept;
     void pushSuperKeyApply_clicked() noexcept;
 };
-
-#endif // TWEAK_SUPERKEY_H

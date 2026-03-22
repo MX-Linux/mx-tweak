@@ -1,5 +1,4 @@
-#ifndef BRIGHTNESS_SMALL_H
-#define BRIGHTNESS_SMALL_H
+#pragma once
 
 #include <QMainWindow>
 #include <QProcess>
@@ -19,7 +18,7 @@ class brightness_small : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit brightness_small(QWidget *parent = 0, const QStringList &args = QStringList()) noexcept;
+    explicit brightness_small(QWidget *parent = nullptr, const QStringList &args = QStringList()) noexcept;
     ~brightness_small() noexcept;
     void setmissingxfconfvariables(const QString &activeprofile, const QString &resolution) noexcept;
     void setupbacklight() noexcept;
@@ -52,5 +51,3 @@ private:
     void sliderBrightness_valueChanged(int value) noexcept;
     void pushExpandBacklight_clicked() noexcept;
 };
-
-#endif // BRIGHTNESS_SMALL_H

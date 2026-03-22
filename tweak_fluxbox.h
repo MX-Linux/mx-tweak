@@ -1,5 +1,4 @@
-#ifndef TWEAK_FLUXBOX_H
-#define TWEAK_FLUXBOX_H
+#pragma once
 
 #include <QObject>
 
@@ -42,5 +41,3 @@ private:
     void changeInitVariable(const QString &initline, const QString &value) const noexcept;
     void changeDock() const noexcept;
 };
-
-#endif // TWEAK_FLUXBOX_H

@@ -1,5 +1,4 @@
-#ifndef TWEAK_DISPLAY_H
-#define TWEAK_DISPLAY_H
+#pragma once
 
 #include <QObject>
 
@@ -45,5 +44,3 @@ private:
     void comboDisplay_currentIndexChanged(int  /*index*/) noexcept;
     void sliderDisplayBrightness_valueChanged(int value) noexcept;
 };
-
-#endif // TWEAK_DISPLAY_H

@@ -136,7 +136,7 @@ void Tweak::checkSession() noexcept
 void Tweak::setup() noexcept
 {
     QString home_path = QDir::homePath();
-    //load saved settings, for now only fluxbox legacy styles checkbox
+    // load saved settings, for now only fluxbox legacy styles checkbox
     loadSettings();
 
     if (themetabflag) ui->tabWidget->setCurrentIndex(Tab::Theme);
@@ -147,7 +147,7 @@ void Tweak::setup() noexcept
         ui->pushXfcePanelSettings->setIcon(QIcon::fromTheme(u"org.xfce.panel"_s));
         ui->pushXfceAppearance->setIcon(QIcon::fromTheme(u"org.xfce.settings.appearance"_s));
         ui->pushXfceWindowManager->setIcon(QIcon::fromTheme(u"org.xfce.xfwm4"_s));
-        //set first tab as default
+        // set first tab as default
         if (!displayflag && !themetabflag && !othertabflag) {
             ui->tabWidget->setCurrentIndex(Tab::Panel);
         }
@@ -172,7 +172,7 @@ void Tweak::setup() noexcept
         }
     }
 
-    //setup fluxbox
+    // setup fluxbox
     else if (isFluxbox) {
         ui->comboTheme->hide();
         ui->groupTheme->hide();
@@ -194,8 +194,8 @@ void Tweak::setup() noexcept
             tweakThunar = new TweakThunar(ui, true, this);
         }
     }
-//Panel, Theme, Compositor, Display, Config, Fluxbox, Plasma, Superkey, Others
-    //setup plasma
+// Panel, Theme, Compositor, Display, Config, Fluxbox, Plasma, Superkey, Others
+    // setup plasma
     else if (isKDE) {
         ui->pushThemeRemoveSet->hide();
         ui->groupXFCESettings->hide();
@@ -210,7 +210,7 @@ void Tweak::setup() noexcept
         ui->tabWidget->removeTab(Tab::Panel);
         tweakPlasma = new TweakPlasma(ui, verbose, this);
         tweakTheme = new TweakTheme(ui, verbose, TweakTheme::Plasma, this);
-    //for other non-supported desktops, show only
+    // for other non-supported desktops, show only
     } else {
         ui->groupXFCESettings->hide();
         ui->tabWidget->setCurrentIndex(Tab::Others);
@@ -221,7 +221,7 @@ void Tweak::setup() noexcept
 
     tweakMisc = new TweakMisc(ui, verbose, this);
 
-    //copy template file to ~/.local/share/mx-tweak-data if it doesn't exist
+    // copy template file to ~/.local/share/mx-tweak-data if it doesn't exist
     QDir userdir(home_path + "/.local/share/mx-tweak-data"_L1);
     QFileInfo template_file(home_path + "/.local/share/mx-tweak-data/mx.tweak.template"_L1);
     if (template_file.exists()) {
@@ -233,20 +233,20 @@ void Tweak::setup() noexcept
     } else {
         qWarning() << "Missing /usr/share/mx-tweak-data/mx.tweak.template";
     }
-    this->adjustSize();
+    adjustSize();
 }
 
 void Tweak::pushAbout_clicked() noexcept
 {
-    this->hide();
+    hide();
     displayAboutMsgBox(tr("About MX Tweak"),
                        "<p align=\"center\"><b><h2>"_L1 + tr("MX Tweak") + "</h2></b></p><p align=\"center\">"_L1 +
                        tr("Version: ") + qApp->applicationVersion() + "</p><p align=\"center\"><h3>"_L1 +
                        tr("App for quick default ui theme changes and tweaks") +
                        "</h3></p><p align=\"center\"><a href=\"http://mxlinux.org\">http://mxlinux.org</a><br /></p>"_L1
                        "<p align=\"center\">"_L1 + tr("Copyright (c) MX Linux") + "<br /><br /></p>"_L1,
-                       u"/usr/share/doc/mx-tweak/license.html"_s, tr("%1 License").arg(this->windowTitle()));
-    this->show();
+                       u"/usr/share/doc/mx-tweak/license.html"_s, tr("%1 License").arg(windowTitle()));
+    show();
 }
 
 void Tweak::pushHelp_clicked() noexcept

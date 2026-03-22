@@ -63,12 +63,12 @@ void TweakXfcePanel::setup() noexcept
         runCmd(u"rm -R $HOME/.restore/.config/xfce4/panel $HOME/.restore/.config/xfce4/xfconf"_s);
     }
 
-    //setup pulseaudio plugin scale functoin
-    //get files setup if they don't exist
+    // setup pulseaudio plugin scale functoin
+    // get files setup if they don't exist
     if (QFileInfo::exists(home_path + "/.config/gtk-3.0/gtk.css"_L1)) {
         if (verbose) qDebug() << "existing gtk.css found";
         QString cmd = "cat "_L1 + home_path + "/.config/gtk-3.0/gtk.css |grep -q xfce4-panel-tweaks.css"_L1;
-        if (runCmd(cmd).exitCode == 0 ) {
+        if (runCmd(cmd).exitCode == 0) {
             if (verbose) qDebug() << "include statement found";
         } else {
             if (verbose) qDebug() << "adding include statement";
@@ -85,8 +85,8 @@ void TweakXfcePanel::setup() noexcept
         else
             qWarning() << "Missing /usr/share/mx-tweak/xfce4-panel-tweaks.css";
     }
-    //check for existence of plugins before running these commands, hide buttons and labels if not present.
-    //Get value of scale
+    // check for existence of plugins before running these commands, hide buttons and labels if not present.
+    // Get value of scale
     QString plugins = runCmd("grep plugin "_L1 + home_path + "/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml"_L1).output;
     bool volumeplugin;
     bool powerplugin;
@@ -121,21 +121,21 @@ void TweakXfcePanel::setup() noexcept
 
     bool tasklist = true;
     bool docklike = true;
-    if (runCmd(u"xfconf-query -c xfce4-panel -p /plugins -lv |grep tasklist"_s).exitCode != 0 ) {
+    if (runCmd(u"xfconf-query -c xfce4-panel -p /plugins -lv |grep tasklist"_s).exitCode != 0) {
         tasklist = false;
     }
-    if (runCmd(u"xfconf-query -c xfce4-panel -p /plugins -lv |grep docklike"_s).exitCode != 0 ) {
+    if (runCmd(u"xfconf-query -c xfce4-panel -p /plugins -lv |grep docklike"_s).exitCode != 0) {
         docklike = false;
     }
 
-    //check status of docklike external package, hide chooser if not installed
+    // check status of docklike external package, hide chooser if not installed
     QString check = runCmd(u"LANG=c dpkg-query -s xfce4-docklike-plugin |grep Status"_s).output;
     if (!check.contains("installed"_L1)){
         docklike = true;
     }
 
-    //display tasklist plugin selector if only one tasklist in use
-    if ( tasklist && docklike ){
+    // display tasklist plugin selector if only one tasklist in use
+    if (tasklist && docklike){
         ui->labelXfcePanelTasklist->hide();
         ui->comboXfcePanelTasklistPlugin->hide();
     } else if (tasklist) {
@@ -145,15 +145,15 @@ void TweakXfcePanel::setup() noexcept
     } else {
         ui->groupXfcePanelTasklist->hide();
     }
-    //hide tasklist or docklike buttons if not present
+    // hide tasklist or docklike buttons if not present
     ui->pushXfcePanelTasklistOptions->setVisible(tasklist);
     ui->pushXfcePanelDocklikeOptions->setVisible(docklike);
 
     flags.tasklist = false;
 
-    //only enable options that make sense
+    // only enable options that make sense
 
-    //if panel is already horizontal, set vertical option available, and vice versa  "" and "0" are horizontal
+    // if panel is already horizontal, set vertical option available, and vice versa  "" and "0" are horizontal
 
     QString test = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-"_L1 + panel + "/mode"_L1).output;
     QString test2 = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-"_L1 + panel + "/position"_L1).output.section(u";"_s, 0,0);
@@ -255,9 +255,9 @@ void TweakXfcePanel::pushXfcePanelDocklikeOptions_clicked() noexcept
 // backs up the current panel configuration
 void TweakXfcePanel::pushXfcePanelBackup_clicked() noexcept
 {
-    //ensure .restore folder exists
+    // ensure .restore folder exists
     QString home_path = QDir::homePath();
-    if ( ! QDir(home_path + "/.restore/"_L1).exists()){
+    if (! QDir(home_path + "/.restore/"_L1).exists()){
         runCmd("mkdir -p "_L1 + home_path + "/.restore/"_L1);
     }
     // Auto-generate file name if empty.
@@ -265,20 +265,20 @@ void TweakXfcePanel::pushXfcePanelBackup_clicked() noexcept
         const QString &stamp = QDateTime::currentDateTime().toString(u"dd.MM.yyyy.hh.mm.ss"_s);
         ui->textXfcePanelBackupName->setText("panel_backup_"_L1 + stamp);
     }
-    //validate file name
+    // validate file name
     qDebug() << "ui file name " << ui->textXfcePanelBackupName->text();
-    //QRegExp rx("(@|\\$|%|\\&|\\*|(|)|{|}|[|]|/|\\|\\?");
+    // QRegExp rx("(@|\\$|%|\\&|\\*|(|)|{|}|[|]|/|\\|\\?");
     QRegularExpression rx(u"\\$|@|%|\\&|\\*|\\(|\\)|\\[|\\]|\\{|\\}|\\||\\?"_s);
     QRegularExpressionMatch match = rx.match(ui->textXfcePanelBackupName->text());
     int rxtest = match.hasMatch() ? match.capturedStart(0) : -1;
     qDebug() << "rxtest" << rxtest;
-    if ( rxtest > 0 ){
+    if (rxtest > 0){
         QMessageBox::information(nullptr, tr("MX Tweak"),
             tr("Plese remove special characters") + "@,$,%,&,*,(,),[,],{,},|,\\,?"_L1 + tr("from file name"));
     } else {
         QString path = home_path + "/.restore/"_L1 + ui->textXfcePanelBackupName->text() + ".tar.xz"_L1;
         qDebug() << path;
-        //check filename existence
+        // check filename existence
         if (QFileInfo::exists(path)) {
             QMessageBox::information(nullptr, tr("MX Tweak"), tr("File name already exists.  Choose another name"));
         } else {
@@ -289,7 +289,7 @@ void TweakXfcePanel::pushXfcePanelBackup_clicked() noexcept
 }
 void TweakXfcePanel::pushXfcePanelRestore_clicked() noexcept
 {
-    //validate file first
+    // validate file first
     switch(validateArchive("$HOME/.restore/\""_L1 + ui->comboXfcePanelBackups->currentText() + ".tar.xz\""_L1)){
     case 0:
         runCmd("xfce4-panel --quit; pkill xfconfd; rm -Rf ~/.config/xfce4/panel ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml; "_L1
@@ -331,21 +331,21 @@ int TweakXfcePanel::populateBackups() noexcept
 int TweakXfcePanel::validateArchive(const QString &path) const noexcept
 {
     QString test = runCmd("file --mime-type --brief "_L1 + path).output;
-    if ( verbose ) qDebug() << test;
-    //validate mime type
-    if ( test != "application/x-xz"_L1){
+    if (verbose) qDebug() << test;
+    // validate mime type
+    if (test != "application/x-xz"_L1){
         return 1;
     }
-    //validate contents
+    // validate contents
     test = runCmd("tar --list --file "_L1 + path).output;
-    if ( verbose ) qDebug() << test;
+    if (verbose) qDebug() << test;
     if (!test.contains("xfconf/xfce-perchannel-xml/xfce4-panel.xml"_L1)) {
         return 2;
     }
     return 0;
 }
 
-//returns first tasklist or docklike id
+// returns first tasklist or docklike id
 QString TweakXfcePanel::getTasklistID() const noexcept
 {
     QString id = runCmd(u"grep -m 1 tasklist ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml"_s).output;
@@ -360,7 +360,7 @@ QString TweakXfcePanel::getTasklistID() const noexcept
 }
 void TweakXfcePanel::tasklistChange() noexcept
 {
-    //choice of tasklist
+    // choice of tasklist
     const QString &choice = ui->comboXfcePanelTasklistPlugin->currentData().toString();
     QString tasklistid = getTasklistID();
     if (verbose) {
@@ -374,16 +374,16 @@ void TweakXfcePanel::tasklistChange() noexcept
     } else if (choice == "tasklist"_L1){
         runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-"_L1 + tasklistid + "/show-handle -t bool -s false --create"_L1);
         QString test = runCmd("xfconf-query -c xfce4-panel -p /panels/panel-"_L1 + panel +"/mode"_L1).output;
-        if (test.isEmpty() || test == "0"_L1) { //horizontal panel
+        if (test.isEmpty() || test == "0"_L1) { // horizontal panel
             runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-"_L1 + tasklistid + "/show-labels -t bool -s true --create"_L1);
         } else {
-            runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-"_L1 + tasklistid + "/show-labels -t bool -s false --create"_L1);  //vertical panel
+            runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-"_L1 + tasklistid + "/show-labels -t bool -s false --create"_L1);  // vertical panel
         }
     }
 
-    //switch plugin
+    // switch plugin
     runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-"_L1 + tasklistid + " -t string -s "_L1 + choice + " --create"_L1);
-    //reset panel
+    // reset panel
     runCmd(u"xfce4-panel --restart"_s);
     sleep(500);
 }
@@ -422,11 +422,11 @@ void TweakXfcePanel::flipToHorizontal() noexcept
     // if systray exists, do a bunch of stuff to relocate it a list of plugins.  If not present, do nothing to list
     if (!systrayID.isEmpty()) {
 
-        //get tasklist index in list
+        // get tasklist index in list
         int tasklistindex = pluginIDs.indexOf(tasklistID);
         if (verbose) qDebug() << "tasklistIDindex 1" << tasklistindex;
 
-        //check next plugin in list to see if its an expanding separator
+        // check next plugin in list to see if its an expanding separator
         int expsepindex = tasklistindex + 1;
         if (verbose) qDebug() << "expsepindex" << expsepindex;
         QString expsepID = pluginIDs.value(expsepindex);
@@ -434,7 +434,7 @@ void TweakXfcePanel::flipToHorizontal() noexcept
         QString test = runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-"_L1 + expsepID + "/expand"_L1).output;
         if (verbose) qDebug() << "test parm" << test;
 
-        //move the notification area (systray) to above window buttons (tasklist) in the list if tasklist exists
+        // move the notification area (systray) to above window buttons (tasklist) in the list if tasklist exists
 
         if (!tasklistID.isEmpty()) {
             pluginIDs.removeAll(systrayID);
@@ -443,7 +443,7 @@ void TweakXfcePanel::flipToHorizontal() noexcept
             pluginIDs.insert(tasklistindex, systrayID);
             if (verbose) qDebug() << "reordered list" << pluginIDs;
 
-            //move the expanding separator
+            // move the expanding separator
 
             if (test == "true"_L1) {
                 pluginIDs.removeAll(expsepID);
@@ -454,11 +454,11 @@ void TweakXfcePanel::flipToHorizontal() noexcept
             }
         }
 
-        //if the tasklist isn't present, try to make a decision about where to put the systray
+        // if the tasklist isn't present, try to make a decision about where to put the systray
 
         if (tasklistID.isEmpty()) {
 
-            //try to move to in front of clock if present
+            // try to move to in front of clock if present
 
             QString clockID = runCmd(uR"(grep -m1 "clock\|datetime" ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml)"_s).output;
             QString switchID;
@@ -467,7 +467,7 @@ void TweakXfcePanel::flipToHorizontal() noexcept
             if (!clockID.isEmpty()) {
                 switchID = clockID;
 
-                //if clock found check if next plugin down is a separator and if so put it there
+                // if clock found check if next plugin down is a separator and if so put it there
 
                 int clocksepindex = pluginIDs.indexOf(clockID) + 1;
                 QString clocksepcheck = runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-"_L1 + pluginIDs.value(clocksepindex)).output;
@@ -492,7 +492,7 @@ void TweakXfcePanel::flipToHorizontal() noexcept
             if (verbose) qDebug() << "reordered list" << pluginIDs;
         }
 
-        //if pulsaudio plugin is present, move it to in front of systray
+        // if pulsaudio plugin is present, move it to in front of systray
         if (!pulseaudioID.isEmpty()) {
             int switchIDindex = 0;
             pluginIDs.removeAll(pulseaudioID);
@@ -500,7 +500,7 @@ void TweakXfcePanel::flipToHorizontal() noexcept
             pluginIDs.insert(switchIDindex, pulseaudioID);
             if (verbose) qDebug() << "reorderd PA list" << pluginIDs;
         }
-        //if power-manager plugin is present, move it to in behind of systray
+        // if power-manager plugin is present, move it to in behind of systray
         if (!powerID.isEmpty()) {
             int switchIDindex = 0;
             pluginIDs.removeAll(powerID);
@@ -510,11 +510,11 @@ void TweakXfcePanel::flipToHorizontal() noexcept
         }
     }
 
-    //now reverse the list
+    // now reverse the list
     std::reverse(pluginIDs.begin(), pluginIDs.end());
     if (verbose) qDebug() << "reversed list" << pluginIDs;
 
-    //now build xfconf command
+    // now build xfconf command
     QStringListIterator changeIterator(pluginIDs);
     QString cmdstring;
     while (changeIterator.hasNext()) {
@@ -523,22 +523,22 @@ void TweakXfcePanel::flipToHorizontal() noexcept
         if (verbose) qDebug() << cmdstring;
     }
 
-    //flip the panel plugins and hold on, it could be a bumpy ride
+    // flip the panel plugins and hold on, it could be a bumpy ride
     runCmd("xfconf-query -c xfce4-panel -p /panels/panel-"_L1 + panel +"/plugin-ids "_L1 + cmdstring);
 
-    //change orientation to horizontal
+    // change orientation to horizontal
     runCmd("xfconf-query -c xfce4-panel -p /panels/panel-"_L1 + panel +"/mode -s 0"_L1);
 
-    //change mode of tasklist labels if it exists
+    // change mode of tasklist labels if it exists
     if (!tasklistID.isEmpty()) {
         runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-"_L1 + tasklistID + "/show-labels -s true"_L1);
     }
 
-    //change mode of pager if exists
-    //xfconf-query -c xfce4-panel --property /plugins/plugin-" + workspaceID + "/rows --type int --set 1"
-    //check current workspaces rows
+    // change mode of pager if exists
+    // xfconf-query -c xfce4-panel --property /plugins/plugin-" + workspaceID + "/rows --type int --set 1"
+    // check current workspaces rows
     QString workspacesrows = runCmd("xfconf-query -c xfce4-panel --property /plugins/plugin-"_L1 + workspacesID + "/rows"_L1).output;
-    if ( workspacesrows == "1"_L1 || workspacesrows == "2"_L1) {
+    if (workspacesrows == "1"_L1 || workspacesrows == "2"_L1) {
         runCmd("xfconf-query -c xfce4-panel --property /plugins/plugin-"_L1 + workspacesID + "/rows --type int --set 1"_L1);
     }
 }
@@ -570,7 +570,7 @@ void TweakXfcePanel::flipToVertical() noexcept
     workspacesID=workspacesID.remove(u"\""_s).section(u"-"_s,1,1).section(u" "_s,0,0);
     if (verbose) qDebug() << "workspacesID: " << workspacesID;
 
-    //if systray exists, do a bunch of stuff to try to move it in a logical way
+    // if systray exists, do a bunch of stuff to try to move it in a logical way
 
     if (!systrayID.isEmpty()) {
         // figure out whiskerID, appmenuID, systrayID, tasklistID, and pagerID
@@ -586,11 +586,11 @@ void TweakXfcePanel::flipToVertical() noexcept
         appmenuID=appmenuID.remove(u"\""_s).section(u"-"_s,1,1).section(u" "_s,0,0);
         if (verbose) qDebug() << "appmenuID: " << appmenuID;
 
-        //get tasklist index in list
+        // get tasklist index in list
         int tasklistindex = pluginIDs.indexOf(tasklistID);
         if (verbose) qDebug() << "tasklistIDindex 1" << tasklistindex;
 
-        //check next plugin in list to see if its an expanding separator
+        // check next plugin in list to see if its an expanding separator
         int expsepindex = tasklistindex + 1;
         if (verbose) qDebug() << "expsepindex" << expsepindex;
         QString expsepID = pluginIDs.value(expsepindex);
@@ -598,9 +598,9 @@ void TweakXfcePanel::flipToVertical() noexcept
         QString testexpandsep = runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-"_L1 + expsepID + "/expand"_L1).output;
         if (verbose) qDebug() << "test parm" << testexpandsep;
 
-        //move the notification area (systray) to an appropriate area.
+        // move the notification area (systray) to an appropriate area.
 
-        //1.  determine if menu is present, place in front of menu
+        // 1.  determine if menu is present, place in front of menu
 
         QString switchID;
         if (!whiskerID.isEmpty()) {
@@ -613,7 +613,7 @@ void TweakXfcePanel::flipToVertical() noexcept
             }
         }
 
-        //        //2.  if so, check second plugin is separator, if so place in front of separator
+        //        // 2.  if so, check second plugin is separator, if so place in front of separator
 
         //        if (switchID != "") {
         //            QString test = runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-" + pluginIDs.value(1)).output;
@@ -624,7 +624,7 @@ void TweakXfcePanel::flipToVertical() noexcept
         //            }
         //        }
 
-        //3.  if so, check third plugin is pager.  if so, place tasklist in front of pager
+        // 3.  if so, check third plugin is pager.  if so, place tasklist in front of pager
 
         if (!switchID.isEmpty()) {
             QString test = runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-"_L1 + pluginIDs.value(1)).output;
@@ -641,14 +641,14 @@ void TweakXfcePanel::flipToVertical() noexcept
             if (verbose) qDebug() << "switchID default: " << switchID;
         }
 
-        //4.  move the systray
+        // 4.  move the systray
         pluginIDs.removeAll(systrayID);
         int switchindex = pluginIDs.indexOf(switchID) + 1;
         if (verbose) qDebug() << "switchindex" << switchindex;
         pluginIDs.insert(switchindex, systrayID);
         if (verbose) qDebug() << "reordered list" << pluginIDs;
 
-        //if pulsaudio plugin is present, move it to in front of systray
+        // if pulsaudio plugin is present, move it to in front of systray
         if (!pulseaudioID.isEmpty()) {
             int switchIDindex = 0;
             pluginIDs.removeAll(pulseaudioID);
@@ -657,7 +657,7 @@ void TweakXfcePanel::flipToVertical() noexcept
             if (verbose) qDebug() << "reorderd PA list" << pluginIDs;
         }
 
-        //if powerID plugin is present, move it to in behind of systray
+        // if powerID plugin is present, move it to in behind of systray
         if (!powerID.isEmpty()) {
             int switchIDindex = 0;
             pluginIDs.removeAll(powerID);
@@ -665,7 +665,7 @@ void TweakXfcePanel::flipToVertical() noexcept
             pluginIDs.insert(switchIDindex, powerID);
             if (verbose) qDebug() << "reorderd PA list" << pluginIDs;
         }
-        //move the expanding separator
+        // move the expanding separator
         if (testexpandsep == "true"_L1) {
             pluginIDs.removeAll(expsepID);
             tasklistindex = pluginIDs.indexOf(tasklistID);
@@ -675,11 +675,11 @@ void TweakXfcePanel::flipToVertical() noexcept
         }
     }
 
-    //now reverse the list
+    // now reverse the list
     std::reverse(pluginIDs.begin(), pluginIDs.end());
     if (verbose) qDebug() << "reversed list" << pluginIDs;
 
-    //now build xfconf command
+    // now build xfconf command
     QStringListIterator changeIterator(pluginIDs);
     QString cmdstring;
     while (changeIterator.hasNext()) {
@@ -687,28 +687,28 @@ void TweakXfcePanel::flipToVertical() noexcept
         cmdstring = QString(cmdstring + "-s "_L1 + value + " "_L1);
         if (verbose) qDebug() << cmdstring;
     }
-    //flip the panel plugins and pray for a miracle
+    // flip the panel plugins and pray for a miracle
     runCmd("xfconf-query -c xfce4-panel -p /panels/panel-"_L1 + panel +"/plugin-ids "_L1 + cmdstring);
 
-    //change orientation to vertical
+    // change orientation to vertical
     runCmd("xfconf-query -c xfce4-panel -p /panels/panel-"_L1 + panel + "/mode -n -t int -s 2"_L1);
 
-    //change mode of tasklist labels if they exist
+    // change mode of tasklist labels if they exist
     if (!tasklistID.isEmpty()) {
         runCmd("xfconf-query -c xfce4-panel -p /plugins/plugin-"_L1 + tasklistID + "/show-labels -s false"_L1);
     }
 
-    //change mode of pager if exists
-    //xfconf-query -c xfce4-panel --property /plugins/plugin-" + workspaceID + "/rows --type int --set 2"
-    //check current workspaces rows
+    // change mode of pager if exists
+    // xfconf-query -c xfce4-panel --property /plugins/plugin-" + workspaceID + "/rows --type int --set 2"
+    // check current workspaces rows
     QString workspacesrows = runCmd("xfconf-query -c xfce4-panel --property /plugins/plugin-"_L1 + workspacesID + "/rows"_L1).output;
-    if ( workspacesrows == "1"_L1 || workspacesrows == "2"_L1) {
+    if (workspacesrows == "1"_L1 || workspacesrows == "2"_L1) {
         runCmd("xfconf-query -c xfce4-panel --property /plugins/plugin-"_L1 + workspacesID + "/rows --type int --set 2"_L1);
     }
 }
 void TweakXfcePanel::setPosition() noexcept
 {
-    //move to user selected top or bottom border per mx-16 defaults
+    // move to user selected top or bottom border per mx-16 defaults
     QString newPos = ui->comboXfcePanelPlacement->currentData().toString();
     if (newPos == "horz-bottom"_L1) {
         newPos = u"12"_s;
@@ -735,7 +735,7 @@ void TweakXfcePanel::pushXfcePanelSettings_clicked() noexcept
     // The above returns immediately, so block while that window is still active.
     runProc(u"xprop"_s, {u"-spy"_s, u"-name"_s, tr("Panel Preferences")});
 
-    //restart panel if background style of any panel is 1 - solid color, affects transparency
+    // restart panel if background style of any panel is 1 - solid color, affects transparency
     const QStringList &properties = runCmd(u"xfconf-query -c xfce4-panel --list"_s
         u" |grep background-style"_s).output.split('\n', Qt::SkipEmptyParts);
 

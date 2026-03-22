@@ -1,5 +1,4 @@
-#ifndef TWEAK_PLASMA_H
-#define TWEAK_PLASMA_H
+#pragma once
 
 #include <QObject>
 
@@ -43,5 +42,3 @@ private:
     void writePlasmaPanelConfig(const QString &key, const QString &value) const noexcept;
     void writeTaskmanagerConfig(const QString &key, const QString &value) const noexcept;
 };
-
-#endif // TWEAK_PLASMA_H

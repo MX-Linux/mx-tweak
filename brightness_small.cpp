@@ -1,10 +1,10 @@
-#include "QDebug"
-#include "QDialog"
-#include "QDir"
-#include "QKeyEvent"
-#include "QMenu"
-#include "QScreen"
-#include "QSystemTrayIcon"
+#include <QDebug>
+#include <QDialog>
+#include <QDir>
+#include <QKeyEvent>
+#include <QMenu>
+#include <QScreen>
+#include <QSystemTrayIcon>
 
 #include "brightness_small.h"
 #include "cmd.h"
@@ -16,10 +16,10 @@ brightness_small::brightness_small(QWidget *parent, const QStringList &args) noe
     QMainWindow(parent),
     ui(new Ui::brightness_small)
 {
-    //check to see if running, if so, exit quick
+    // check to see if running, if so, exit quick
     QString check = runCmd(u"ps -aux |grep -E 'mx-tweak.*--tray'|grep -v grep|wc -l"_s).output;
 
-    if ( check.toInt() >= 2) {
+    if (check.toInt() >= 2) {
         qDebug() << "check is " << check;
         exit(EXIT_FAILURE);
     }
@@ -46,7 +46,7 @@ brightness_small::brightness_small(QWidget *parent, const QStringList &args) noe
     trayicon->setIcon(icon);
     trayicon->show();
 
-    this->adjustSize();
+    adjustSize();
 
     menu = new QMenu(this);
 
@@ -84,9 +84,9 @@ void brightness_small::iconActivated(QSystemTrayIcon::ActivationReason reason) n
         setupBrightness();
         setupGamma();
         setupbacklight();
-        this->adjustSize();
+        adjustSize();
         setPosition();
-        this->show();
+        show();
         break;
     default:
         ;
@@ -97,11 +97,11 @@ void brightness_small::setPosition() noexcept
 {
     QPoint pos = QCursor::pos();
     QScreen *screen = QGuiApplication::screenAt(pos);
-    if (pos.y() + this->size().height() > screen->availableVirtualGeometry().height())
-        pos.setY(screen->availableVirtualGeometry().height() - this->size().height());
-    if (pos.x() + this->size().width() > screen->availableVirtualGeometry().width())
-        pos.setX(screen->availableVirtualGeometry().width() - this->size().width());
-    this->move(pos);
+    if (pos.y() + size().height() > screen->availableVirtualGeometry().height())
+        pos.setY(screen->availableVirtualGeometry().height() - size().height());
+    if (pos.x() + size().width() > screen->availableVirtualGeometry().width())
+        pos.setX(screen->availableVirtualGeometry().width() - size().width());
+    move(pos);
 }
 
 brightness_small::~brightness_small() noexcept
@@ -109,27 +109,27 @@ brightness_small::~brightness_small() noexcept
     delete ui;
 }
 
-//following function is not actually used by the tray application
+// following function is not actually used by the tray application
 void brightness_small::setmissingxfconfvariables(const QString &activeprofile, const QString &resolution) noexcept
 {
-    //set resolution, set active, set scales, set display name
+    // set resolution, set active, set scales, set display name
 
-    //set display name
+    // set display name
     runCmd("xfconf-query --channel displays -p /"_L1 + activeprofile + '/' + ui->comboDisplay->currentText() + " -t string -s "_L1 + ui->comboDisplay->currentText() + " --create"_L1);
 
-    //set resolution
+    // set resolution
     runCmd("xfconf-query --channel displays -p /"_L1 + activeprofile + '/' + ui->comboDisplay->currentText() + "/Resolution -t string -s "_L1 + resolution.simplified() + " --create"_L1);
 
-    //set active profile
+    // set active profile
     runCmd("xfconf-query --channel displays -p /"_L1 + activeprofile + '/' + ui->comboDisplay->currentText() + "/Active -t bool -s true --create"_L1);
 }
 
 void brightness_small::setupbacklight() noexcept
 {
-    //check for backlights
+    // check for backlights
     QString test = runCmd(u"ls /sys/class/backlight"_s).output;
-    if ( ! test.isEmpty()) {
-        //get backlight value for currently
+    if (! test.isEmpty()) {
+        // get backlight value for currently
         QString backlight=runCmd(u"sudo /usr/lib/mx-tweak/backlight-brightness -g"_s).output;
         int backlight_slider_value = backlight.toInt();
         ui->sliderHardwareBacklight->setValue(backlight_slider_value);
@@ -154,7 +154,7 @@ void brightness_small::setbacklight() noexcept
 
 void brightness_small::setupBrightness() noexcept
 {
-    //get brightness value for currently shown display
+    // get brightness value for currently shown display
     QString brightness=runCmd("LANG=C xrandr --verbose | awk '/"_L1 + ui->comboDisplay->currentText()
         + "/{flag=1;next}/Clones/{flag=0}flag'|grep Brightness|cut -d' ' -f2"_L1).output;
     int brightness_slider_value = static_cast<int>(brightness.toFloat() * 100);
@@ -184,10 +184,10 @@ void brightness_small::sliderBrightness_valueChanged(int value) noexcept
     QString slider_value = QString::number(value);
     ui->sliderBrightness->setToolTip(slider_value);
     ui->labelBrightness->setText(slider_value);
-    if ( brightnessflag ) {
-        //setupBrightness();
-        //setupGamma();
-        //setupbacklight();
+    if (brightnessflag) {
+        // setupBrightness();
+        // setupGamma();
+        // setupbacklight();
         setBrightness();
     }
 }
@@ -205,17 +205,17 @@ void brightness_small::setBrightness() noexcept
 
 void brightness_small::pushSave_clicked() noexcept
 {
-    //save cmd used in user's home file under .config
-    //make directory when its not present
+    // save cmd used in user's home file under .config
+    // make directory when its not present
     double num = ui->sliderBrightness->value() / 100.0;
     qDebug() << "num is :" << num;
     QString brightness = QString::number(num, 'G', 5);
     QString home_path = QDir::homePath();
     QString config_file_path = home_path + "/.config/MX-Linux/MX-Tweak/brightness"_L1;
-    if ( ! QFileInfo::exists(config_file_path)) {
+    if (! QFileInfo::exists(config_file_path)) {
         runCmd("mkdir -p "_L1 + config_file_path);
     }
-    //save config in file named after the display
+    // save config in file named after the display
     runCmd("echo 'xrandr --output "_L1 + ui->comboDisplay->currentText()
         + " --brightness "_L1 + brightness + " --gamma "_L1 + g1 + ':' + g2 + ':' + g3
         + "'>"_L1 + config_file_path + '/' + ui->comboDisplay->currentText());
@@ -231,7 +231,7 @@ void brightness_small::comboDisplay_currentIndexChanged(int) noexcept
 
 void brightness_small::setupDisplay() noexcept
 {
-    //populate combobox
+    // populate combobox
     QString displaydata = runCmd(u"LANG=C xrandr |grep -w connected | cut -d' ' -f1"_s).output;
     QStringList displaylist = displaydata.split('\n');
     ui->comboDisplay->clear();
@@ -244,14 +244,14 @@ void brightness_small::changeEvent(QEvent *event) noexcept
 {
     QWidget::changeEvent(event);
     if (event->type() == QEvent::ActivationChange) {
-        if (this->isActiveWindow()) {
+        if (isActiveWindow()) {
             qDebug() << "focusinEvent";
         } else {
             qDebug() << "focusOutEvent";
             if (closetrayapp){
                 qApp->quit();
             }
-            this->hide();
+            hide();
         }
     }
 }
@@ -260,7 +260,7 @@ void brightness_small::changeEvent(QEvent *event) noexcept
 void brightness_small::keyPressEvent(QKeyEvent *event) noexcept
 {
     if (event->key() == Qt::Key_Escape) {
-        this->hide();
+        hide();
     }
 }
 
@@ -272,7 +272,7 @@ void brightness_small::launchfulldisplaydialog() noexcept
 void brightness_small::pushExpandBacklight_clicked() noexcept
 {
     QString config_file_path = QDir::homePath() + "/.config/MX-Linux/MX-Tweak/expand"_L1;
-    //expand toggle
+    // expand toggle
     expand = !expand;
     if (! expand) {
         QFile::remove(config_file_path);

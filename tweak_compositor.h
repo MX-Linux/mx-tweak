@@ -1,5 +1,4 @@
-#ifndef TWEAK_COMPOSITOR_H
-#define TWEAK_COMPOSITOR_H
+#pragma once
 
 #include <QObject>
 
@@ -36,5 +35,3 @@ private:
     void pushCompositorEditPicomConf_clicked() noexcept;
     void pushCompositorApply_clicked() noexcept;
 };
-
-#endif // TWEAK_COMPOSITOR_H

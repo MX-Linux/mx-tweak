@@ -1,5 +1,4 @@
-#ifndef TWEAK_XFCE_PANEL_H
-#define TWEAK_XFCE_PANEL_H
+#pragma once
 
 #include <QObject>
 
@@ -55,5 +54,3 @@ private:
 
     void sleep(int msec) noexcept;
 };
-
-#endif // TWEAK_XFCE_PANEL_H

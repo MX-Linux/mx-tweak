@@ -15,7 +15,7 @@ enum {Top = 3, Bottom, Left, Right};
 }
 
 TweakPlasma::TweakPlasma(Ui::Tweak *ui, bool verbose, QObject *parent) noexcept
-    : QObject(parent), ui(ui), verbose(verbose)
+    : QObject{parent}, ui{ui}, verbose{verbose}
 {
     connect(ui->pushApplyPlasma, &QPushButton::clicked, this, &TweakPlasma::pushApplyPlasma_clicked);
     setup();
@@ -24,7 +24,7 @@ TweakPlasma::TweakPlasma(Ui::Tweak *ui, bool verbose, QObject *parent) noexcept
 void TweakPlasma::setup() noexcept
 {
     QString home_path = QDir::homePath();
-    //get panel ID
+    // get panel ID
     panelID = runCmd(u"grep --max-count 1 -B 8 panel $HOME/.config/plasma-org.kde.plasma.desktop-appletsrc |grep Containment"_s).output;
     QString panellocation = readPlasmaPanelConfig(u"location"_s);
 
@@ -44,10 +44,10 @@ void TweakPlasma::setup() noexcept
     default: ui->comboPlasmaPanelLocation->setCurrentIndex(PanelIndex::Bottom);
     }
 
-    //setup plasma-discover autostart
+    // setup plasma-discover autostart
     if (QFile::exists(u"/usr/lib/x86_64-linux-gnu/libexec/DiscoverNotifier"_s)){
         QString plasmadiscoverautostart = home_path + "/.config/autostart/org.kde.discover.notifier.desktop"_L1;
-        if (runCmd("grep Hidden=true "_L1 + plasmadiscoverautostart).exitCode == 0 ){
+        if (runCmd("grep Hidden=true "_L1 + plasmadiscoverautostart).exitCode == 0){
             ui->checkPlasmaDiscoverUpdater->setChecked(false);
         } else {
             ui->checkPlasmaDiscoverUpdater->setChecked(true);
@@ -56,11 +56,11 @@ void TweakPlasma::setup() noexcept
         ui->checkPlasmaDiscoverUpdater->hide();
     }
 
-    //setup singleclick
+    // setup singleclick
     QString singleclick = runCmd(u"kreadconfig6 --group KDE --key SingleClick"_s).output;
     ui->checkPlasmaSingleClick->setChecked(singleclick != "false");
 
-    //get taskmanager ID and setup showOnlyCurrentDesktop
+    // get taskmanager ID and setup showOnlyCurrentDesktop
     taskManagerID = runCmd(u"grep --max-count 1 -B 2 taskmanager $HOME/.config/plasma-org.kde.plasma.desktop-appletsrc |grep Containment"_s).output;
     QString showOnlyCurrentDesktop = readTaskmanagerConfig(u"showOnlyCurrentDesktop"_s);
     if (showOnlyCurrentDesktop == "true"_L1) {
@@ -96,7 +96,7 @@ QString TweakPlasma::readTaskmanagerConfig(const QString &key) const noexcept
         qDebug() << "plasma taskmanager ID is " << panID;
         qDebug() << "plasma taskmanger Applet ID is " << applet;
     }
-    //read key
+    // read key
     QString value = runCmd("kreadconfig6 --file plasma-org.kde.plasma.desktop-appletsrc --group Containments --group "_L1 + panID + " --group Applets --group "_L1 + applet + " --key "_L1 + key).output;
     if (value.isEmpty()) {
         value = u"false"_s;
@@ -109,7 +109,7 @@ QString TweakPlasma::readPlasmaPanelConfig(const QString &key) const noexcept
 {
     const QString &panID = panelID.section('[',2,2).section(']',0,0);
     if (verbose) qDebug() << "plasma panel ID" << panID;
-    //read key
+    // read key
     QString value = runCmd("kreadconfig6 --file plasma-org.kde.plasma.desktop-appletsrc --group Containments --group "_L1 + panID + " --key "_L1 + key).output;
     if (verbose) qDebug() << "key is " << value;
     return value;
@@ -163,7 +163,7 @@ void TweakPlasma::pushApplyPlasma_clicked() noexcept
         flags.placement = false;
         flags.singleClick = false;
         flags.workspaces = false;
-        //reset plasma script Adrian
+        // reset plasma script Adrian
         runCmd(u"/usr/lib/mx-tweak/reset-kde-mx"_s);
     }
     if (flags.placement) {
@@ -198,29 +198,29 @@ void TweakPlasma::pushApplyPlasma_clicked() noexcept
         writeTaskmanagerConfig(u"showOnlyCurrentDesktop"_s, value);
     }
 
-    //plasma-discover autostart
+    // plasma-discover autostart
     if (flags.autoStartDiscover){
         QString plasmadiscoverautostart = home_path + "/.config/autostart/org.kde.discover.notifier.desktop"_L1;
         qDebug() << "discover autostart path is " << plasmadiscoverautostart;
         if (ui->checkPlasmaDiscoverUpdater->isChecked()){
-            //delete any Hidden=true lines to make sure its processed by xdg autostart
+            // delete any Hidden=true lines to make sure its processed by xdg autostart
             runCmd("sed -i /Hidden=true/d "_L1 + plasmadiscoverautostart);
         } else {
-            //copy if it doesn't exist already
+            // copy if it doesn't exist already
             if (!QFile(plasmadiscoverautostart).exists()){
                 if (QFile::exists(u"/etc/xdg/autostart/org.kde.discover.notifier.desktop"_s)){
                     runCmd("cp /etc/xdg/autostart/org.kde.discover.notifier.desktop "_L1 + plasmadiscoverautostart);
                 }
             }
-            //remove any previous Hidden= attribute, then add Hidden=true to make it not autostart
+            // remove any previous Hidden= attribute, then add Hidden=true to make it not autostart
             runCmd("sed -i /Hidden=*/d "_L1 + plasmadiscoverautostart);
-            runCmd("echo Hidden=true >> "_L1 + plasmadiscoverautostart); //this also creates file if the /etc/xdg version is missing
+            runCmd("echo Hidden=true >> "_L1 + plasmadiscoverautostart); // this also creates file if the /etc/xdg version is missing
         }
     }
 
-    //time to reset kwin and plasmashell
+    // time to reset kwin and plasmashell
     if (flags.workspaces || flags.singleClick || flags.placement || flags.reset || flags.sysTrayIconSize) {
-        //restart plasma, quit plasmashell, then restart it
+        // restart plasma, quit plasmashell, then restart it
         runCmd(u"sleep 1; kquitapp6 plasmashell; sleep 1;"_s);
         runSystem("kstart plasmashell");
     }

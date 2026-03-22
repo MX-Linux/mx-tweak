@@ -1,5 +1,4 @@
-#ifndef TWEAK_THUNAR_H
-#define TWEAK_THUNAR_H
+#pragma once
 
 #include <QObject>
 
@@ -24,5 +23,3 @@ private:
     void slotSettingChanged() noexcept;
     void slotApplyClicked() noexcept;
 };
-
-#endif // TWEAK_THUNAR_H

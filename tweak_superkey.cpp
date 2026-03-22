@@ -43,7 +43,7 @@ void TweakSuperKey::pushSuperKeyBrowseAppFile_clicked() noexcept
     const QString &command = QFileDialog::getOpenFileName(ui->tabWidget, tr("Select application to run",
             "will show in file dialog when selection an application to run"), u"/usr/bin"_s);
 
-    //process file
+    // process file
     QString cmd;
     if (QFileInfo(command).fileName().endsWith(".desktop"_L1)) {
         cmd = runCmd("grep Exec= "_L1 + command).output.section(u'=',1,1).section(u'%',0,0).trimmed();
@@ -71,13 +71,13 @@ void TweakSuperKey::pushSuperKeyApply_clicked() noexcept
         }
     }
     QString cmd = ui->textSuperKeyCommand->text();
-    //add command if no uncommented lines
+    // add command if no uncommented lines
     if (runCmd(u"grep -m1 -v -e '^#' -e '^$' $HOME/.config/xfce-superkey/xfce-superkey.conf"_s).output.isEmpty()){
         runCmd("echo "_L1 + cmd + ">> $HOME/.config/xfce-superkey/xfce-superkey.conf"_L1);
-    } else { //replace first uncommented line with new command
+    } else { // replace first uncommented line with new command
         runCmd("sed -i '/^[^#]/s;.*;"_L1 + cmd + ";' $HOME/.config/xfce-superkey/xfce-superkey.conf"_L1);
     }
-    //restart xfce-superkey
+    // restart xfce-superkey
     runCmd(u"pkill xfce-superkey"_s);
     runCmd(u"xfce-superkey-launcher"_s);
     setup();

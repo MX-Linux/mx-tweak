@@ -22,8 +22,7 @@
  * along with mx-tweak.  If not, see <http://www.gnu.org/licenses/>.
  **********************************************************************/
 
-#ifndef TWEAK_H
-#define TWEAK_H
+#pragma once
 
 #include <QDialog>
 #include <QFile>
@@ -50,7 +49,7 @@ class Tweak : public QDialog
     Q_OBJECT
 
 public:
-    explicit Tweak(QWidget *parent = 0, const QStringList &args = QStringList()) noexcept;
+    explicit Tweak(QWidget *parent = nullptr, const QStringList &args = QStringList()) noexcept;
     ~Tweak() noexcept;
     bool verbose = false;
     bool displayflag = false;
@@ -85,5 +84,3 @@ private:
 
     void tabWidget_currentChanged(int index) noexcept;
 };
-
-#endif // TWEAK_H

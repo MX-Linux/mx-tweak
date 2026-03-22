@@ -21,7 +21,7 @@ TweakDisplay::TweakDisplay(Ui::Tweak *ui, bool verbose, QObject *parent) noexcep
 
 void TweakDisplay::setup() noexcept
 {
-    //populate combobox
+    // populate combobox
     QString displaydata = runCmd(u"LANG=C xrandr |grep -w connected | cut -d' ' -f1"_s).output;
     QStringList displaylist = displaydata.split(u"\n"_s);
     ui->comboDisplay->clear();
@@ -33,21 +33,21 @@ void TweakDisplay::setup() noexcept
     setupResolutions();
     flags.brightness = true;
 
-    //get gtk scaling value
+    // get gtk scaling value
     QString GTKScale = runCmd(u"LANG=C xfconf-query --channel xsettings -p /Gdk/WindowScalingFactor"_s).output;
     ui->spinDisplayGTKScaling->setValue(GTKScale.toInt());
-    //disable resolution stuff
+    // disable resolution stuff
 }
 
 void TweakDisplay::setMissingXfconfVariables(const QString &activeProfile, const QString &resolution) noexcept
 {
-    //set display name
+    // set display name
     runCmd("xfconf-query --channel displays -p /"_L1 + activeProfile + '/' + ui->comboDisplay->currentText() + " -t string -s "_L1 + ui->comboDisplay->currentText() + " --create"_L1);
 
-    //set resolution
+    // set resolution
     runCmd("xfconf-query --channel displays -p /"_L1 + activeProfile + '/' + ui->comboDisplay->currentText() + "/Resolution -t string -s "_L1 + resolution.simplified() + " --create"_L1);
 
-    //set active profile
+    // set active profile
     runCmd("xfconf-query --channel displays -p /"_L1 + activeProfile + '/' + ui->comboDisplay->currentText() + "/Active -t bool -s true --create"_L1);
 }
 
@@ -60,7 +60,7 @@ void TweakDisplay::setupResolutions() noexcept
     const QString &resolutions = runCmd(cmd).output;
     if (verbose) qDebug() << "resolutions are :" << resolutions;
     ui->comboDisplayResolutions->addItems(resolutions.split(u'\n'));
-    //set current resolution as default
+    // set current resolution as default
     const QString &resolution = runCmd("xrandr |grep "_L1 + display + " |cut -d+ -f1 |grep -oE '[^ ]+$'"_L1).output;
     if (verbose) qDebug() << "resolution is : " << resolution;
     ui->comboDisplayResolutions->setCurrentText(resolution);
@@ -79,15 +79,15 @@ void TweakDisplay::setResolution() noexcept
 
 void TweakDisplay::setupScale() noexcept
 {
-    //setup scale for currently shown display and in the active profile
+    // setup scale for currently shown display and in the active profile
     QString xscale = u"1"_s;
     double scale = 1;
 
-    //get active profile
+    // get active profile
     const QString &activeProfile = runCmd(u"LANG=C xfconf-query --channel displays -p /ActiveProfile"_s).output;
     const QString &cmdquery = "LANG=C xfconf-query --channel displays -p /"_L1
         + activeProfile + '/' + ui->comboDisplay->currentText();
-    //get scales for display show in combobox
+    // get scales for display show in combobox
     Result res = runCmd(cmdquery + "/Scale"_L1);
     if (res.exitCode == 0) {
         xscale = res.output;
@@ -106,7 +106,7 @@ void TweakDisplay::setupScale() noexcept
 }
 void TweakDisplay::setScale() noexcept
 {
-    //get active profile and desired scale for given resolution
+    // get active profile and desired scale for given resolution
     double scale = 1 / ui->spinDisplayScale->value();
     const QString &resolution = runCmd("xrandr |grep "_L1
         + ui->comboDisplay->currentText() + " |cut -d' ' -f3 |cut -d'+' -f1"_L1).output;
@@ -114,16 +114,16 @@ void TweakDisplay::setScale() noexcept
     const QString &scaleString = QString::number(scale, 'G', 5);
     const QString &activeProfile = runCmd(u"LANG=C xfconf-query --channel displays -p /ActiveProfile"_s).output;
 
-    //set missing variables
+    // set missing variables
     setMissingXfconfVariables(activeProfile, resolution);
 
-    //set scale value
+    // set scale value
     const QStringList args1{u"--channel"_s, u"displays"_s, u"-p"_s,
         '/' + activeProfile + '/' + ui->comboDisplay->currentText() + "/Scale"};
     const QStringList args2{u"-t"_s, u"double"_s, u"-s"_s, scaleString, u"--create"_s};
     runProc(u"xfconf-query"_s, QStringList() << args1 << args2);
 
-    //set initial scale with xrandr
+    // set initial scale with xrandr
     runProc(u"xrandr"_s, {u"--output"_s, ui->comboDisplay->currentText(),
        u"--scale"_s, scaleString + 'x' + scaleString});
 }
@@ -143,10 +143,10 @@ void TweakDisplay::setRefreshRate(const QString &display, const QString &resolut
 
 void TweakDisplay::setupBacklight() noexcept
 {
-    //check for backlights
+    // check for backlights
     const QString &test = runCmd(u"ls /sys/class/backlight"_s).output;
     if (!test.isEmpty()) {
-        //get backlight value for currently
+        // get backlight value for currently
         const QString &backlight = runCmd(u"sudo /usr/lib/mx-tweak/backlight-brightness -g"_s).output;
         ui->sliderDisplayHardwareBacklight->setValue(backlight.toInt());
         ui->sliderDisplayHardwareBacklight->setToolTip(backlight);
@@ -175,7 +175,7 @@ void TweakDisplay::setGTKScaling() noexcept
 
 void TweakDisplay::setupBrightness() noexcept
 {
-    //get brightness value for currently shown display
+    // get brightness value for currently shown display
     const QString &brightness = runCmd("LANG=C xrandr --verbose | awk '/"_L1 + ui->comboDisplay->currentText()
         + "/{flag=1;next}/Clones/{flag=0}flag'|grep Brightness|cut -d' ' -f2"_L1).output;
     const int value = static_cast<int>(brightness.toFloat() * 100);
@@ -199,15 +199,15 @@ void TweakDisplay::setBrightness() noexcept
 }
 void TweakDisplay::saveBrightness() noexcept
 {
-    //save cmd used in user's home file under .config
-    //make directory when its not present
+    // save cmd used in user's home file under .config
+    // make directory when its not present
     const double num = ui->sliderDisplayBrightness->value() / 100.0;
     if (verbose) qDebug() << "num is :" << num;
     const QString &configPath = QDir::homePath() + "/.config/MX-Linux/MX-Tweak/brightness"_L1;
     if (!QFileInfo::exists(configPath)) {
         runCmd("mkdir -p "_L1 + configPath);
     }
-    //save config in file named after the display
+    // save config in file named after the display
     runCmd("echo 'xrandr --output "_L1 + ui->comboDisplay->currentText()
         + " --brightness "_L1 + QString::number(num, 'G', 5)
         + " --gamma "_L1 + strGamma1 + ':' + strGamma2 + ':' + strGamma3

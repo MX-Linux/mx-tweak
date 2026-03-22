@@ -30,7 +30,7 @@ TweakFluxbox::TweakFluxbox(Ui::Tweak *ui, bool verbose, QObject *parent) noexcep
 
 void TweakFluxbox::setup() noexcept
 {
-    //resets
+    // resets
     if (!QFile::exists(u"/usr/bin/menu-migrate"_s)) {
         ui->checkFluxboxMenuMigrate->setDisabled(true);
     }
@@ -68,12 +68,12 @@ void TweakFluxbox::setup() noexcept
     flags.icons = false;
     flags.captions =false;
 
-    //screenblanking value;
+    // screenblanking value;
     const QString &itime = runCmd(u"xset q |grep timeout | awk '{print $2}'"_s).output.trimmed();
     ui->spinFluxboxScreenIdleTime->setValue(itime.toInt()/60);
     ui->spinFluxboxScreenIdleTime->setToolTip(u"set to 0 minutes to disable screensaver"_s);
 
-    //toolbar autohide
+    // toolbar autohide
     QString toolbarautohide = runCmd(u"grep screen0.toolbar.autoHide $HOME/.fluxbox/init"_s).output.section(u":"_s,1,1).trimmed();
     if (verbose) qDebug() << "Toolbar autohide" << toolbarautohide;
     if (toolbarautohide == "true"_L1) {
@@ -88,23 +88,23 @@ void TweakFluxbox::setup() noexcept
     } else {
         ui->checkFluxboxShowToolbar->setChecked(false);
     }
-    //toolbar location
+    // toolbar location
     QString toolbarlocation = runCmd(u"grep screen0.toolbar.placement $HOME/.fluxbox/init"_s).output.section(u":"_s,1,1).trimmed();
     if (verbose) qDebug() << "Toolbar location" << toolbarlocation;
     ui->comboFluxboxToolbarLocation->setCurrentText(toolbarlocation);
-    //slit location
+    // slit location
     QString slitlocation = runCmd(u"grep screen0.slit.placement $HOME/.fluxbox/init"_s).output.section(u":"_s,1,1).trimmed();
     if (verbose) qDebug() << "Slit location" << slitlocation;
     ui->comboFluxboxSlitLocation->setCurrentText(slitlocation);
-    //toolbar width;
+    // toolbar width;
     QString toolbarwidth = runCmd(u"grep screen0.toolbar.widthPercent $HOME/.fluxbox/init"_s).output.section(u":"_s,1,1).trimmed();
     if (verbose) qDebug() << "Toolbar width" << toolbarwidth;
     ui->spinFluxboxToolbarWidth->setValue(toolbarwidth.toInt());
-    //toolbar height
+    // toolbar height
     QString toolbarheight = runCmd(u"grep screen0.toolbar.height $HOME/.fluxbox/init"_s).output.section(u":"_s,1,1).trimmed();
     if (verbose) qDebug() << "Toolbar height" << toolbarheight;
     ui->spinFluxboxToolbarHeight->setValue(toolbarheight.toInt());
-    //slit autohide
+    // slit autohide
     QString slitautohide = runCmd(u"grep screen0.slit.autoHide $HOME/.fluxbox/init"_s).output.section(u":"_s,1,1).trimmed();
     if (verbose) qDebug() << "slit autohide" << slitautohide;
     ui->checkFluxboxSlitAutoHide->setChecked(slitautohide == "true"_L1);
@@ -122,7 +122,7 @@ void TweakFluxbox::changeInitVariable(const QString &initline, const QString &va
 {
     if (verbose) qDebug() << "checking for init value changes";
     QString initialvalue = initline.section(':',1,1).trimmed();
-    if ( initialvalue != value) {
+    if (initialvalue != value) {
         QString cmd = "sed -i 's/^"_L1 + initline +'/' + initline.section(':',0,0).trimmed() + ":    "_L1 + value + "/' $HOME/.fluxbox/init"_L1;
         if (verbose) qDebug() << "init change command " << cmd;
         runCmd(cmd);
@@ -179,8 +179,8 @@ void TweakFluxbox::pushFluxboxApply_clicked() noexcept
         }
     }
 
-    //setup slit autohide
-    //get slit line
+    // setup slit autohide
+    // get slit line
     QString initline;
     QString value;
     if (ui->checkFluxboxSlitAutoHide->isChecked()) {
@@ -191,14 +191,14 @@ void TweakFluxbox::pushFluxboxApply_clicked() noexcept
     initline = runCmd(u"grep screen0.slit.autoHide  $HOME/.fluxbox/init"_s).output;
     changeInitVariable(initline,value);
 
-    //set slit placement
-    //setup toolbar location
+    // set slit placement
+    // setup toolbar location
     value = ui->comboFluxboxSlitLocation->currentText();
     initline = runCmd(u"grep screen0.slit.placement  $HOME/.fluxbox/init"_s).output;
     changeInitVariable(initline,value);
     changeDock();
 
-    //setup toolbar autohide
+    // setup toolbar autohide
     if (ui->checkFluxboxToolbarAutoHide->isChecked()) {
         value = u"true"_s;
     } else {
@@ -207,7 +207,7 @@ void TweakFluxbox::pushFluxboxApply_clicked() noexcept
     initline = runCmd(u"grep screen0.toolbar.autoHide  $HOME/.fluxbox/init"_s).output;
     changeInitVariable(initline,value);
 
-    //setup toolbar visible
+    // setup toolbar visible
     if (ui->checkFluxboxShowToolbar->isChecked()) {
         value = u"true"_s;
     } else {
@@ -216,22 +216,22 @@ void TweakFluxbox::pushFluxboxApply_clicked() noexcept
     initline = runCmd(u"grep session.screen0.toolbar.visible  $HOME/.fluxbox/init"_s).output;
     changeInitVariable(initline,value);
 
-    //setup toolbar location
+    // setup toolbar location
     value = ui->comboFluxboxToolbarLocation->currentText();
     initline = runCmd(u"grep screen0.toolbar.placement  $HOME/.fluxbox/init"_s).output;
     changeInitVariable(initline,value);
 
-    //setup toolbar widthpercent
+    // setup toolbar widthpercent
     value = QString::number(ui->spinFluxboxToolbarWidth->value(), 'G', 5);
     initline = runCmd(u"grep screen0.toolbar.widthPercent  $HOME/.fluxbox/init"_s).output;
     changeInitVariable(initline,value);
 
-    //setup toolbar height
+    // setup toolbar height
     value = QString::number(ui->spinFluxboxToolbarHeight->value(), 'G', 5);
     initline = runCmd(u"grep screen0.toolbar.height  $HOME/.fluxbox/init"_s).output;
     changeInitVariable(initline,value);
 
-    //Reset Everything
+    // Reset Everything
     if (ui->checkFluxboxResetEverything->isChecked()) {
         ui->checkFluxboxResetDock->setChecked(false);
         ui->checkFluxboxResetMenu->setChecked(false);
@@ -241,48 +241,48 @@ void TweakFluxbox::pushFluxboxApply_clicked() noexcept
         runCmd(u"$HOME/.fluxbox/scripts/DefaultDock.mxdk"_s);
     }
 
-    //Reset Menu
+    // Reset Menu
     if (ui->checkFluxboxResetMenu->isChecked() && !ui->checkFluxboxResetEverything->isChecked()) {
-        //determine menu in use
+        // determine menu in use
         QString menumx = runCmd(u"grep session.menuFile $HOME/.fluxbox/init"_s).output.section(u":"_s,1,1).trimmed();
         if (verbose) qDebug() << "menu mx is " << menumx;
-        //backup menu
+        // backup menu
         runCmd("cp "_L1 + menumx + ' ' + menumx + ".$(date +%Y%m%d%H%M%S)"_L1);
-        //copy menu-mx from /etc/skel/.fluxbox
+        // copy menu-mx from /etc/skel/.fluxbox
         runCmd(u"cp /etc/skel/.fluxbox/menu-mx $HOME/.fluxbox"_s);
-        //run localize-fluxbox-menu to generate new menu
+        // run localize-fluxbox-menu to generate new menu
         runCmd(u"localize_fluxbox_menu-mx"_s);
     }
 
-    //Migrate Menu
+    // Migrate Menu
     if (ui->checkFluxboxMenuMigrate->isChecked() && !ui->checkFluxboxResetEverything->isChecked()) {
-        //run menu-migrate script
+        // run menu-migrate script
         runCmd(u"/usr/bin/menu-migrate"_s);
     }
 
-    //Reset Dock
+    // Reset Dock
     if (ui->checkFluxboxResetDock->isChecked() && !ui->checkFluxboxResetEverything->isChecked()) {
-        //copy backup dock and copy one from usr/share/mxflux/.fluxbox/scripts
+        // copy backup dock and copy one from usr/share/mxflux/.fluxbox/scripts
         runCmd(u"cp $HOME/.fluxbox/scripts/DefaultDock.mxdk $HOME/.fluxbox/scripts/DefaultDock.mxdk.$(date +%Y%m%d%H%M%S)"_s);
         runCmd(u"cp /etc/skel/.fluxbox/scripts/DefaultDock.mxdk $HOME/.fluxbox/scripts/DefaultDock.mxdk"_s);
         runCmd(u"pkill wmalauncher"_s);
         runCmd(u"$HOME/.fluxbox/scripts/DefaultDock.mxdk"_s);
     }
 
-    //screenblanking
+    // screenblanking
     if (flags.screenIdle){
-        //comment default line if it exists
+        // comment default line if it exists
         runCmd(u"sed -i 's/^[[:blank:]]*xset[[:blank:]].*dpms.*/#&/' $HOME/.fluxbox/startup"_s);
-        //add new values to fluxbox startup menu if don't exist
+        // add new values to fluxbox startup menu if don't exist
         QString test = runCmd(u"grep '$HOME/.config/MX-Linux/screenblanking-mxtweak' $HOME/.fluxbox/startup"_s).output;
         if (test.isEmpty()){
-            //add comment and new config file
+            // add comment and new config file
             runCmd(u"sed -i '/^exec.*/i#screenblanking added by mx-tweak' $HOME/.fluxbox/startup"_s);
             runCmd(u"sed -i '/^exec.*/i$HOME\\/.config\\/MX-Linux\\/screenblanking-mxtweak &' $HOME/.fluxbox/startup"_s);
-            //blank space before exec
+            // blank space before exec
             runCmd(u"sed -i '/^exec.*/i\\\\' $HOME/.fluxbox/startup"_s);
         }
-        //set new value
+        // set new value
         int value = ui->spinFluxboxScreenIdleTime->value() * 60;
         runCmd(u"echo \\#\\!/bin/bash >$HOME/.config/MX-Linux/screenblanking-mxtweak"_s);
         QString cmd = "xset dpms "_L1 + QString::number(value) + ' ' + QString::number(value) + ' ' + QString::number(value);
@@ -291,11 +291,11 @@ void TweakFluxbox::pushFluxboxApply_clicked() noexcept
         cmd = "xset s "_L1 + QString::number(value);
         runCmd(cmd);
         runCmd("echo "_L1 + cmd + " >>$HOME/.config/MX-Linux/screenblanking-mxtweak"_L1);
-        //make sure script is executable
+        // make sure script is executable
         runCmd(u"chmod a+x $HOME/.config/MX-Linux/screenblanking-mxtweak"_s);
     }
 
-    //when all done, restart fluxbox
+    // when all done, restart fluxbox
     ui->checkFluxboxResetDock->setChecked(false);
     ui->checkFluxboxResetMenu->setChecked(false);
     ui->checkFluxboxResetEverything->setChecked(false);

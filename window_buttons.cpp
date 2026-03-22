@@ -41,7 +41,7 @@ void window_buttons::setup() noexcept
     plugintasklist = runCmd(uR"(cat ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml | grep \"tasklist\"|cut -d '=' -f2 | cut -d '' -f1| cut -d '"' -f2)"_s).output;
     qDebug() << "tasklist is " << plugintasklist;
 
-    //setup initial values
+    // setup initial values
 
     // use Xfce defaults for "do not exist" values"
 
@@ -63,7 +63,7 @@ void window_buttons::setup() noexcept
     test = runCmd("LANG=C xfconf-query -c xfce4-panel -p /plugins/"_L1 + plugintasklist + "/sort-order"_L1).output;
     qDebug() << "sort order is: " << test;
 
-    if ( test.contains("does not exist"_L1)) {
+    if (test.contains("does not exist"_L1)) {
         ui->comboSortingOrder->setCurrentIndex(1);
     } else {
         ui->comboSortingOrder->setCurrentIndex(test.toInt());
@@ -72,7 +72,7 @@ void window_buttons::setup() noexcept
     test = runCmd("LANG=C xfconf-query -c xfce4-panel -p /plugins/"_L1 + plugintasklist + "/grouping"_L1).output;
     qDebug() << "grouping is: " << test;
 
-    if ( test.contains("does not exist"_L1)) {
+    if (test.contains("does not exist"_L1)) {
         ui->comboWindowGrouping->setCurrentIndex(0);
     } else {
         ui->comboWindowGrouping->setCurrentIndex(test.toInt());
@@ -82,7 +82,7 @@ void window_buttons::setup() noexcept
     test = runCmd("LANG=C xfconf-query -c xfce4-panel -p /plugins/"_L1 + plugintasklist + "/middle-click"_L1).output;
     qDebug() << "middle-click is: " << test;
 
-    if ( test.contains("does not exist"_L1)) {
+    if (test.contains("does not exist"_L1)) {
         ui->comboMiddleClickAction->setCurrentIndex(0);
     } else {
         ui->comboMiddleClickAction->setCurrentIndex(test.toInt());

@@ -1,5 +1,4 @@
-#ifndef TWEAK_XFCE_H
-#define TWEAK_XFCE_H
+#pragma once
 
 #include <QObject>
 
@@ -34,5 +33,3 @@ private:
     void pushXfceAppearance_clicked() noexcept;
     void pushXfceWindowManager_clicked() noexcept;
 };
-
-#endif // TWEAK_XFCE_H

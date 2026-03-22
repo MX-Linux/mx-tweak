@@ -1,5 +1,4 @@
-#ifndef WINDOW_BUTTONS_H
-#define WINDOW_BUTTONS_H
+#pragma once
 
 #include <QDialog>
 
@@ -12,7 +11,7 @@ class window_buttons : public QDialog
     Q_OBJECT
 
 public:
-    explicit window_buttons(QWidget *parent = 0) noexcept;
+    explicit window_buttons(QWidget *parent = nullptr) noexcept;
     ~window_buttons() noexcept;
     void setup() noexcept;
     QString plugintasklist;
@@ -36,5 +35,3 @@ private:
     void comboSortingOrder_currentIndexChanged(int index) const noexcept;
     void comboWindowGrouping_currentIndexChanged(int index) const noexcept;
 };
-
-#endif // WINDOW_BUTTONS_H
