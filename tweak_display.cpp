@@ -94,7 +94,9 @@ void TweakDisplay::setupScale() noexcept
     }
 
     // since we want scales equal, set the scale spin box to xscale.  invert so that 2 = .5
-    scale = 1 / xscale.toDouble();
+    double xscaleVal = xscale.toDouble();
+    if (xscaleVal != 0.0)
+        scale = 1 / xscaleVal;
     if (verbose) {
         qDebug() << "active profile is: " << activeProfile
             << " xscale is " << xscale << " scale is: " << scale;
