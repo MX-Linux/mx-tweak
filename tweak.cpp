@@ -103,16 +103,16 @@ Tweak::~Tweak() noexcept
         runCmd("rm /tmp/fluxboxconkytweak");
         runCmd("killall -SIGUSR1 conky");
     }
-    if (tweakTheme) delete tweakTheme;
-    if (tweakPlasma) delete tweakPlasma;
-    if (tweakXfce) delete tweakXfce;
-    if (tweakFluxbox) delete tweakFluxbox;
-    if (tweakXfcePanel) delete tweakXfcePanel;
-    if (tweakThunar) delete tweakThunar;
-    if (tweakCompositor) delete tweakCompositor;
-    if (tweakDisplay) delete tweakDisplay;
-    if (tweakSuperKey) delete tweakSuperKey;
-    if (tweakMisc) delete tweakMisc;
+    delete tweakTheme;
+    delete tweakPlasma;
+    delete tweakXfce;
+    delete tweakFluxbox;
+    delete tweakXfcePanel;
+    delete tweakThunar;
+    delete tweakCompositor;
+    delete tweakDisplay;
+    delete tweakSuperKey;
+    delete tweakMisc;
     delete ui;
 }
 

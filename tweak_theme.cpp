@@ -407,7 +407,6 @@ void TweakTheme::setTheme(const QString &type, const QString &theme) const noexc
 {   //set new theme
     QString cmd;
     QString cmd1;
-    QString cmd2;
 
     if (desktop == Xfce) {
         if ( type == "gtk-3.0"_L1 ) {
@@ -546,9 +545,6 @@ void TweakTheme::setTheme(const QString &type, const QString &theme) const noexc
     }
     if (!cmd1.isEmpty()){
         runCmd(cmd1);
-    }
-    if (!cmd2.isEmpty()){
-        runCmd(cmd2);
     }
 }
 
