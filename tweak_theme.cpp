@@ -375,18 +375,15 @@ void TweakTheme::populateThemeLists(const QString &value) noexcept
 
     if ( value == "icons"_L1) {
         if (verbose) qDebug() << "themelist" << themelist;
-        QStringList iconthemelist = themelist;
-        for (const QString &item : iconthemelist) {
-            const QString& icontheme = item;
-            if (verbose) qDebug() << "icontheme" << icontheme;
-            QString test = runCmd("find /usr/share/icons/"_L1 + icontheme + " -maxdepth 1 -mindepth 1 -type d |cut -d\"/\" -f6"_L1).output;
-            if ( test == "cursors"_L1 ) {
-                themelist.removeAll(icontheme);
-            }
-        }
-        themelist.removeAll(u"default.kde4"_s);
-        themelist.removeAll(u"default"_s);
-        themelist.removeAll(u"hicolor"_s);
+        themelist.removeIf([this](const QString &icontheme) {
+            if (icontheme == "default.kde4"_L1 || icontheme == "default"_L1 || icontheme == "hicolor"_L1)
+                return true;
+            // Remove cursor-only icon themes (single subdirectory named "cursors")
+            QDir dir(u"/usr/share/icons/"_s + icontheme);
+            const QStringList subdirs = dir.entryList(QDir::Dirs | QDir::NoDotAndDotDot);
+            if (verbose) qDebug() << "icontheme" << icontheme << subdirs;
+            return subdirs.size() == 1 && subdirs.first() == "cursors"_L1;
+        });
         ui->listThemeIcons->clear();
         ui->listThemeIcons->addItems(themelist);
         //current icon set
