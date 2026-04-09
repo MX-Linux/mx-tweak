@@ -46,7 +46,7 @@
     <message>
         <location filename="../main.cpp" line="59"/>
         <source>launches brightness-systray and shows dialog on startup, implies --tray</source>
-        <translation type="unfinished"/>
+        <translation>Abre o ajuste de brilho da bandeja do sistema e mostra um diálogo ao inicializar. Implica --tray</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="60"/>

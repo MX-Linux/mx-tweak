@@ -46,7 +46,7 @@
     <message>
         <location filename="../main.cpp" line="59"/>
         <source>launches brightness-systray and shows dialog on startup, implies --tray</source>
-        <translation type="unfinished"/>
+        <translation>startet Helligkeits-Systray und zeigt beim Start den Dialog an, impliziert --tray </translation>
     </message>
     <message>
         <location filename="../main.cpp" line="60"/>

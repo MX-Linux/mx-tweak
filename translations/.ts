@@ -81,8 +81,8 @@
     <message>
         <location filename="../tweak.ui" line="14"/>
         <location filename="../tweak.cpp" line="78"/>
-        <location filename="../tweak.cpp" line="244"/>
-        <location filename="../tweak.cpp" line="263"/>
+        <location filename="../tweak.cpp" line="243"/>
+        <location filename="../tweak.cpp" line="262"/>
         <source>MX Tweak</source>
         <translation type="unfinished"></translation>
     </message>
@@ -885,32 +885,32 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../tweak.cpp" line="243"/>
+        <location filename="../tweak.cpp" line="242"/>
         <source>About MX Tweak</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../tweak.cpp" line="245"/>
+        <location filename="../tweak.cpp" line="244"/>
         <source>Version: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../tweak.cpp" line="246"/>
+        <location filename="../tweak.cpp" line="245"/>
         <source>App for quick default ui theme changes and tweaks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../tweak.cpp" line="248"/>
+        <location filename="../tweak.cpp" line="247"/>
         <source>Copyright (c) MX Linux</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../tweak.cpp" line="249"/>
+        <location filename="../tweak.cpp" line="248"/>
         <source>%1 License</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../tweak.cpp" line="263"/>
+        <location filename="../tweak.cpp" line="262"/>
         <source>%1 Help</source>
         <translation type="unfinished"></translation>
     </message>
@@ -918,17 +918,17 @@
 <context>
     <name>TweakCompositor</name>
     <message>
-        <location filename="../tweak_compositor.cpp" line="62"/>
+        <location filename="../tweak_compositor.cpp" line="68"/>
         <source>None</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../tweak_compositor.cpp" line="63"/>
+        <location filename="../tweak_compositor.cpp" line="69"/>
         <source>Xfwm (Xfce) Compositor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../tweak_compositor.cpp" line="64"/>
+        <location filename="../tweak_compositor.cpp" line="70"/>
         <source>Picom</source>
         <translation type="unfinished"></translation>
     </message>
@@ -962,26 +962,36 @@ name before proceeding.</source>
 <context>
     <name>TweakTheme</name>
     <message>
-        <location filename="../tweak_theme.cpp" line="64"/>
+        <location filename="../tweak_theme.cpp" line="65"/>
         <source>Plasma Widget Themes</source>
         <comment>theme style of the kde plasma widgets</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../tweak_theme.cpp" line="65"/>
+        <location filename="../tweak_theme.cpp" line="66"/>
         <source>Color Schemes</source>
         <comment>plasma widget color schemes</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../tweak_theme.cpp" line="66"/>
+        <location filename="../tweak_theme.cpp" line="67"/>
         <source>Plasma Look &amp; Feel Global Themes</source>
         <comment>plasma global themes</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../tweak_theme.cpp" line="139"/>
+        <location filename="../tweak_theme.cpp" line="140"/>
         <source>Choose a theme set</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tweak_theme.cpp" line="585"/>
+        <source>MX Tweak</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tweak_theme.cpp" line="586"/>
+        <source>Could not determine the current Xfce panel configuration.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1018,40 +1028,40 @@ name before proceeding.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../tweak_xfce_panel.cpp" line="273"/>
-        <location filename="../tweak_xfce_panel.cpp" line="280"/>
-        <location filename="../tweak_xfce_panel.cpp" line="297"/>
-        <location filename="../tweak_xfce_panel.cpp" line="301"/>
+        <location filename="../tweak_xfce_panel.cpp" line="276"/>
+        <location filename="../tweak_xfce_panel.cpp" line="283"/>
+        <location filename="../tweak_xfce_panel.cpp" line="300"/>
+        <location filename="../tweak_xfce_panel.cpp" line="304"/>
         <source>MX Tweak</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../tweak_xfce_panel.cpp" line="274"/>
+        <location filename="../tweak_xfce_panel.cpp" line="277"/>
         <source>Plese remove special characters</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../tweak_xfce_panel.cpp" line="274"/>
+        <location filename="../tweak_xfce_panel.cpp" line="277"/>
         <source>from file name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../tweak_xfce_panel.cpp" line="280"/>
+        <location filename="../tweak_xfce_panel.cpp" line="283"/>
         <source>File name already exists.  Choose another name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../tweak_xfce_panel.cpp" line="298"/>
+        <location filename="../tweak_xfce_panel.cpp" line="301"/>
         <source>File is not a valid tar.xz archive file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../tweak_xfce_panel.cpp" line="302"/>
+        <location filename="../tweak_xfce_panel.cpp" line="305"/>
         <source>Archive does not contain a panel config</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../tweak_xfce_panel.cpp" line="733"/>
+        <location filename="../tweak_xfce_panel.cpp" line="736"/>
         <source>Panel Preferences</source>
         <translation type="unfinished"></translation>
     </message>
