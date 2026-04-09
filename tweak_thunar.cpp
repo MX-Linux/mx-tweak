@@ -65,9 +65,9 @@ void TweakThunar::slotApplyClicked() noexcept
     }
     // Split view
     if (ui->checkThunarSplitView->isChecked()) {
-        runCmd(u"xfconf-query  -c thunar -p /misc-open-new-windows-in-split-view -t bool -s true --create"_s);
+        runCmd(u"xfconf-query  -c thunar -p /misc-open-new-windows-in-split-view -t bool -s true --create; xfconf-query -c thunar -p /misc-always-enable-split-view -t bool -s true --create"_s);
     } else {
-        runCmd(u"xfconf-query  -c thunar -p /misc-open-new-windows-in-split-view --reset"_s);
+        runCmd(u"xfconf-query  -c thunar -p /misc-open-new-windows-in-split-view --reset; xfconf-query -c thunar -p /misc-always-enable-split-view --reset"_s);
     }
     // Split view thunar horizontal or vertical
     if (ui->checkThunarSplitViewHorizontal->isChecked()) {
