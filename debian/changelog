@@ -1,3 +1,10 @@
+mx-tweak (26.04.01mx25) mx; urgency=medium
+
+  * fix thunar split view function
+  * update translations
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Thu, 09 Apr 2026 19:48:51 -0400
+
 mx-tweak (26.03.04mx25) mx; urgency=medium
 
   * add --close switch (requires --traydialog)
