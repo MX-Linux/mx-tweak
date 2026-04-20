@@ -13,13 +13,6 @@ TweakMisc::TweakMisc(Ui::Tweak *ui, bool verbose, QObject *parent) noexcept
     if (!QFileInfo::exists(u"/usr/sbin/lightdm"_s)) {
         ui->checkMiscLightdmReset->hide();
     }
-    // These will be shown by setup() if they make sense.
-    ui->checkMiscIntelDriver->hide();
-    ui->labelMiscIntelDriver->hide();
-    ui->checkMiscTearfreeAMD->hide();
-    ui->labelMiscTearfreeAMD->hide();
-    ui->checkMiscTearfreeRadeon->hide();
-    ui->labelMiscTearfreeRadeon->hide();
 
     setup();
 
@@ -236,38 +229,28 @@ void TweakMisc::setup() noexcept
         ui->checkMiscCSD->setChecked(true);
     }
 
+    //graphics driver modifications are depcrecated
+    //we will let the user cancel the already setup files, but won't allow re-enable
+
     flags.intel = false;
     flags.amdgpu = false;
     flags.radeon =false;
     flags.enableRecommends = false;
-    // setup Intel checkbox
 
-    QString partcheck = runCmd(uR"(for i in $(lspci -n | awk '{print $2,$1}' | grep -E '^(0300|0302|0380)' | cut -f2 -d\ ); do lspci -kns "$i"; done)"_s).output;
-    if (verbose) qDebug()<< "partcheck = " << partcheck;
-
-    if (partcheck.contains("i915"_L1)) {
-        ui->checkMiscIntelDriver->show();
-        ui->labelMiscIntelDriver->show();
-    }
-
-    if (partcheck.contains("Kernel driver in use: amdgpu"_L1)) {
-        ui->checkMiscTearfreeAMD->show();
-        ui->labelMiscTearfreeAMD->show();
-    }
-
-    if (partcheck.contains("Kernel driver in use: radeon"_L1)) {
-        ui->checkMiscTearfreeRadeon->show();
-        ui->labelMiscTearfreeRadeon->show();
-    }
-
+    //only show if the files exist already
+    //we will let the user cancel the already setup files, but won't allow re-enable
     QFileInfo intelfile(u"/etc/X11/xorg.conf.d/20-intel.conf"_s);
-    ui->checkMiscIntelDriver->setChecked(intelfile.exists());
-
+        ui->checkMiscIntelDriver->setChecked(intelfile.exists());
+        ui->checkMiscIntelDriver->setVisible(intelfile.exists());
+        ui->labelMiscIntelDriver->setVisible(intelfile.exists());
     QFileInfo amdfile(u"/etc/X11/xorg.conf.d/20-amd.conf"_s);
-    ui->checkMiscTearfreeAMD->setChecked(amdfile.exists());
-
+        ui->checkMiscTearfreeAMD->setChecked(amdfile.exists());
+        ui->checkMiscTearfreeAMD->setVisible(amdfile.exists());
+        ui->labelMiscTearfreeAMD->setVisible(amdfile.exists());
     QFileInfo radeonfile(u"/etc/X11/xorg.conf.d/20-radeon.conf"_s);
-    ui->checkMiscTearfreeRadeon->setChecked(radeonfile.exists());
+        ui->checkMiscTearfreeRadeon->setVisible(radeonfile.exists());
+        ui->labelMiscTearfreeRadeon->setVisible(radeonfile.exists());
+        ui->checkMiscTearfreeRadeon->setChecked(radeonfile.exists());
 
     // setup display manager combo box
     QString displaymanagers=runCmd(u"dpkg --list sddm gdm3 lightdm slim slimski xdm wdm lxdm nodm 2>/dev/null |grep ii | awk '{print $2}'"_s).output;
