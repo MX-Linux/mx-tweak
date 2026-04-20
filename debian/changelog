@@ -1,3 +1,10 @@
+mx-tweak (26.04.02mx25) mx; urgency=medium
+
+  * deprecate X11 graphics driver override options
+  * present options if files exist so they can be removed
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 19 Apr 2026 21:03:21 -0400
+
 mx-tweak (26.04.01mx25) mx; urgency=medium
 
   * fix thunar split view function
