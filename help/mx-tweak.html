@@ -165,10 +165,9 @@ cards.</p>
 >	</ul>
 	
 	
-	<p>The graphics driver entries vary depending on what video adapter is installed on the system.  If a intel graphics board is detected, the user will be presented with the option show above, which will force the system to use the &#8220;intel&#8221; driver rather than the debian default &#8220;modesetting&#8221; driver.  The &#8220;intel&#8221; configuration also includes a &#8220;tear free&#8221; option that many find helps with screen tearing.   </p>
-
-<p>If the user has an amd graphics part, then the user will be offered a choice to enable the &#8220;tear free&#8221; option for the radeon or amdgpu drivers, which ever is in current use.  The actual driver choice will not be changed, just the &#8220;tear free&#8221; option.<br></p>
-
+	<p>The graphics driver overrides available in previous versions are now deprecated.  In particular, Intel graphics users should be using the default modesetting drivers as the older "intel" driver is not supported in then modern MESA graphics stack.</p>
+	<p>If a override currently exists, the options will be present to allow the user to disable them. </p>
+	
 <h2>Superkey</h2>
 
 <img src="superkey.png" alt="superkey" width="600"/>
