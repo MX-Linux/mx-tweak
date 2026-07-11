@@ -1,3 +1,9 @@
+mx-tweak (26.07.01mx25) mx; urgency=medium
+
+  * throw away arguements passed to root check utilities
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 11 Jul 2026 08:09:10 -0400
+
 mx-tweak (26.04.02mx25) mx; urgency=medium
 
   * deprecate X11 graphics driver override options
