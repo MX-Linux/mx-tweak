@@ -1,3 +1,9 @@
+mx-tweak (26.07.01mx23) mx; urgency=medium
+
+  * throw away arguements passed to root check utilities
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 11 Jul 2026 09:24:28 -0400
+
 mx-tweak (25.04.05mx23) mx; urgency=medium
 
   * fix permissions and compton-launch.sh
