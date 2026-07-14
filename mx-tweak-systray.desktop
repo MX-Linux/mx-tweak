@@ -68,6 +68,7 @@ Terminal=false
 Type=Application
 Icon=brightness-systray
 Categories=XFCE;Settings;DesktopSettings;X-MX-Setup;
+NotShowIn=KDE;
 Keywords[am]=ዴስክቶፕ
 Keywords[ar]=سطح مكتب
 Keywords[ca]=Escriptori
