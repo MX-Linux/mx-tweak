@@ -1,4 +1,4 @@
-mx-tweak (26.07.02mx26) mx; urgency=medium
+mx-tweak (26.07.02mx25) mx; urgency=medium
 
   * send a restart signal to conky and idesk when restarting fluxbox 
   * themes and fluxbox tab 
