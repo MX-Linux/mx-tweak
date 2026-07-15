@@ -1,6 +1,6 @@
 mx-tweak (26.07.02mx25) UNRELEASED; urgency=medium
 
-  * send a restart signal to conky when restarting fluxbox
+  * send a restart signal to conky and idesk when restarting fluxbox 
 
  -- Dolphin Oracle <dolphinoracle@gmail.com>  Tue, 14 Jul 2026 20:48:17 -0400
 
