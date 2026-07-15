@@ -1754,9 +1754,9 @@ void defaultlook::set_cursor_size() {
         }
 
         system(cmd.toUtf8());
-        //restart fluxbox after set
+        //restart fluxbox after set & also restart conky
         if (isFluxbox){
-            system("xrdb -merge $HOME/.Xresources && fluxbox-remote restart");
+            system("xrdb -merge $HOME/.Xresources && fluxbox-remote restart && killall -SIGUSR1 conky");
         }
     }
 
@@ -3535,7 +3535,7 @@ void defaultlook::on_ApplyFluxboxResets_clicked()
     ui->checkboxfluxresetmenu->setChecked(false);
     ui->checkboxfluxreseteverything->setChecked(false);
     ui->checkBoxMenuMigrate->setChecked(false);
-    runCmd(QStringLiteral("sleep 2; /usr/bin/fluxbox-remote restart"));
+    runCmd(QStringLiteral("sleep 2; /usr/bin/fluxbox-remote restart && killall -SIGUSR1 conky"));
     setupFluxbox();
 }
 
@@ -4070,7 +4070,7 @@ void defaultlook::settheme(const QString &type, const QString &theme, const QStr
                 runCmd("echo Comment=Default Cursor Theme >> $HOME/.icons/default/index.theme");
                 runCmd("echo Inherits=" + theme + " >> $HOME/.icons/default/index.theme");
             }
-            cmd = "fluxbox-remote restart";
+            cmd = "fluxbox-remote restart && killall -SIGUSR1 conky";
             system(cmd.toUtf8());
         }
     }
