@@ -1,4 +1,4 @@
-mx-tweak (26.07.01mx26) UNRELEASED; urgency=medium
+mx-tweak (26.07.02mx25) UNRELEASED; urgency=medium
 
   * send a restart signal to conky when restarting fluxbox
 
