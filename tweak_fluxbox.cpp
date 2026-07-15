@@ -2,6 +2,7 @@
 #include "ui_tweak.h"
 #include "cmd.h"
 #include "tweak_fluxbox.h"
+#include <QFileInfo>
 
 using namespace Qt::Literals::StringLiterals;
 
@@ -300,7 +301,12 @@ void TweakFluxbox::pushFluxboxApply_clicked() noexcept
     ui->checkFluxboxResetMenu->setChecked(false);
     ui->checkFluxboxResetEverything->setChecked(false);
     ui->checkFluxboxMenuMigrate->setChecked(false);
-    runCmd(u"sleep 2; /usr/bin/fluxbox-remote restart; killall -SIGUSR1 conky"_s);
+    runCmd(u"sleep 2; /usr/bin/fluxbox-remote restart"_s);
+    if (QFile("/usr/bin/idesktoggle").exists()){
+        if (QFileInfo("/usr/bin/idesktoggle").isExecutable()){
+            runCmd(u"idesktoggle idesk refresh"_s);
+        }
+    }
     setup();
 
     ui->tabFluxbox->setEnabled(true);
