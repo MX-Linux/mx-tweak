@@ -302,11 +302,10 @@ void TweakFluxbox::pushFluxboxApply_clicked() noexcept
     ui->checkFluxboxResetEverything->setChecked(false);
     ui->checkFluxboxMenuMigrate->setChecked(false);
     runCmd(u"sleep 2; /usr/bin/fluxbox-remote restart"_s);
-    if (QFile("/usr/bin/idesktoggle").exists()){
-        if (QFileInfo("/usr/bin/idesktoggle").isExecutable()){
-            runCmd(u"idesktoggle idesk refresh"_s);
-        }
-    }
+    runCmd(u"fluxbox-remote restart"_s);
+    //also restart conky
+    runCmd(u"killall -SIGUSR1 conky"_s);
+
     setup();
 
     ui->tabFluxbox->setEnabled(true);

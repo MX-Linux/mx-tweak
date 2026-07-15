@@ -538,7 +538,10 @@ void TweakTheme::setTheme(const QString &type, const QString &theme) const noexc
                 runCmd("echo Inherits="_L1 + theme + " >> $HOME/.icons/default/index.theme"_L1);
             }
             runCmd(u"fluxbox-remote restart"_s);
+            //also restart conky
+            runCmd(u"killall -SIGUSR1 conky"_s);
         }
+
     }
     if (!cmd1.isEmpty()){
         runCmd(cmd1);
