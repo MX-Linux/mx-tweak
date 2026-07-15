@@ -300,7 +300,7 @@ void TweakFluxbox::pushFluxboxApply_clicked() noexcept
     ui->checkFluxboxResetMenu->setChecked(false);
     ui->checkFluxboxResetEverything->setChecked(false);
     ui->checkFluxboxMenuMigrate->setChecked(false);
-    runCmd(u"sleep 2; /usr/bin/fluxbox-remote restart"_s);
+    runCmd(u"sleep 2; /usr/bin/fluxbox-remote restart; killall -SIGUSR1 conky"_s);
     setup();
 
     ui->tabFluxbox->setEnabled(true);
