@@ -28,6 +28,7 @@ private:
         bool enableRecommends : 1;
         bool updateKernelDebian : 1;
         bool updateKernelLiquorix : 1;
+        bool updateKernelSiduction : 1;
         bool kvm : 1;
     } flags = {};
     QString kvmConfFile;
@@ -44,6 +45,7 @@ private:
     void checkMiscKVMVirtLoad_clicked() noexcept;
     void checkMiscInstallRecommends_clicked() noexcept;
     void checkMiscLiqKernelUpdates_clicked() noexcept;
+    void checkMiscSiductionKernelUpdates_clicked() noexcept;
     void checkMiscDebianKernelUpdates_clicked() noexcept;
     void checkMiscIntelDriver_clicked() noexcept;
     void checkMiscTearfreeAMD_clicked() noexcept;

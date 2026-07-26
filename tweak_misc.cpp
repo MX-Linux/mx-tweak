@@ -36,6 +36,7 @@ TweakMisc::TweakMisc(Ui::Tweak *ui, bool verbose, QObject *parent) noexcept
     connect(ui->checkMiscInstallRecommends, &QCheckBox::clicked, this, &TweakMisc::checkMiscInstallRecommends_clicked);
     connect(ui->checkMiscLiqKernelUpdates, &QCheckBox::clicked, this, &TweakMisc::checkMiscLiqKernelUpdates_clicked);
     connect(ui->checkMiscDebianKernelUpdates, &QCheckBox::clicked, this, &TweakMisc::checkMiscDebianKernelUpdates_clicked);
+    connect(ui->checkMiscSiductionKernelUpdates, &QCheckBox::clicked, this, &TweakMisc::checkMiscSiductionKernelUpdates_clicked);
     connect(ui->checkMiscIntelDriver, &QCheckBox::clicked, this, &TweakMisc::checkMiscIntelDriver_clicked);
     connect(ui->checkMiscTearfreeAMD, &QCheckBox::clicked, this, &TweakMisc::checkMiscTearfreeAMD_clicked);
     connect(ui->checkMiscTearfreeRadeon, &QCheckBox::clicked, this, &TweakMisc::checkMiscTearfreeRadeon_clicked);
@@ -184,6 +185,7 @@ void TweakMisc::setup() noexcept
     }
 
     // setup kernel auto updates
+    //debian, liquorix, and siduction
 
     if (runCmd(u"LC_ALL=C dpkg --status linux-image-amd64 linux-image-686 linux-image-686-pae 2>/dev/null |grep 'ok installed'"_s).output.isEmpty()){
         ui->checkMiscDebianKernelUpdates->setChecked(false);
@@ -196,6 +198,12 @@ void TweakMisc::setup() noexcept
         ui->checkMiscLiqKernelUpdates->hide();
     } else {
         ui->checkMiscLiqKernelUpdates->setChecked(true);
+    }
+    if (runCmd(u"LC_ALL=C dpkg --status linux-image-siduction-amd64 2>/dev/null |grep 'ok installed'"_s).output.isEmpty()){
+        ui->checkMiscSiductionKernelUpdates->setChecked(false);
+        ui->checkMiscSiductionKernelUpdates->hide();
+    } else {
+        ui->checkMiscSiductionKernelUpdates->setChecked(true);
     }
     QString autoupdate = runCmd(u"apt-mark showhold"_s).output;
     if (autoupdate.contains("linux-image-686"_L1) || autoupdate.contains("linux-image-amd64"_L1)){
@@ -309,6 +317,7 @@ void TweakMisc::pushMiscApply_clicked() noexcept
     QString recommends_option;
     QString debian_kernel_updates_option;
     QString liq_kernel_updates_option;
+    QString siduction_kernel_updates_option;
     QString DESKTOP = runCmd(u"echo $XDG_SESSION_DESKTOP"_s).output;
     QString home_path = QDir::homePath();
     ui->pushMiscApply->setEnabled(false);
@@ -504,6 +513,15 @@ void TweakMisc::pushMiscApply_clicked() noexcept
         }
     }
 
+    // siduction kernel updates
+    if (flags.updateKernelSiduction){
+        if (ui->checkMiscSiductionKernelUpdates->isChecked()){
+            siduction_kernel_updates_option = "unhold_siduction_kernel_updates"_L1;
+        } else {
+            siduction_kernel_updates_option = "hold_siduction_kernel_updates"_L1;
+        }
+    }
+
     // hostname setting
     // if name doesn't validate, don't make any changes to any options, and don't reset gui.
     if (ui->checkMiscHostName->isChecked()){
@@ -539,8 +557,8 @@ void TweakMisc::pushMiscApply_clicked() noexcept
     // check options
     qDebug() << "options list" << udisks_option << sudo_override_option << user_name_space_override_option << intel_option << lightdm_option << amd_option << radeon_option << bluetooth_option << recommends_option << debian_kernel_updates_option << liq_kernel_updates_option;
     // checkbox options
-    if (! udisks_option.isEmpty() || ! sudo_override_option.isEmpty() || ! user_name_space_override_option.isEmpty() || ! intel_option.isEmpty() || ! lightdm_option.isEmpty() || ! amd_option.isEmpty() || ! radeon_option.isEmpty() || !bluetooth_option.isEmpty() || !recommends_option.isEmpty() || !debian_kernel_updates_option.isEmpty() || !liq_kernel_updates_option.isEmpty()){
-        runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + udisks_option + ' ' + sudo_override_option + ' ' + user_name_space_override_option + ' ' + intel_option + ' ' + amd_option + ' ' + radeon_option + ' ' + bluetooth_option + ' ' + recommends_option + ' ' + lightdm_option + ' ' + debian_kernel_updates_option + ' ' + liq_kernel_updates_option);
+    if (! udisks_option.isEmpty() || ! sudo_override_option.isEmpty() || ! user_name_space_override_option.isEmpty() || ! intel_option.isEmpty() || ! lightdm_option.isEmpty() || ! amd_option.isEmpty() || ! radeon_option.isEmpty() || !bluetooth_option.isEmpty() || !recommends_option.isEmpty() || !debian_kernel_updates_option.isEmpty() || !liq_kernel_updates_option.isEmpty() || !siduction_kernel_updates_option.isEmpty()){
+        runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + udisks_option + ' ' + sudo_override_option + ' ' + user_name_space_override_option + ' ' + intel_option + ' ' + amd_option + ' ' + radeon_option + ' ' + bluetooth_option + ' ' + recommends_option + ' ' + lightdm_option + ' ' + debian_kernel_updates_option + ' ' + liq_kernel_updates_option + ' ' + siduction_kernel_updates_option);
     }
     // reset gui
     setup();
@@ -578,6 +596,12 @@ void TweakMisc::checkMiscInstallRecommends_clicked() noexcept
 void TweakMisc::checkMiscLiqKernelUpdates_clicked() noexcept
 {
     flags.updateKernelLiquorix = true;
+    ui->pushMiscApply->setEnabled(true);
+}
+
+void TweakMisc::checkMiscSiductionKernelUpdates_clicked() noexcept
+{
+    flags.updateKernelSiduction = true;
     ui->pushMiscApply->setEnabled(true);
 }
 void TweakMisc::checkMiscDebianKernelUpdates_clicked() noexcept

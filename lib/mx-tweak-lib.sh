@@ -236,11 +236,28 @@ if [ -n "$(LC_ALL=C dpkg --status linux-image-liquorix-amd64 2>/dev/null| grep '
 	apt-mark hold linux-image-liquorix-amd64 linux-headers-liquorix-amd64 2>/dev/null
 fi
 }
+
 unhold_liquorix_kernel_updates()
 {
 if [ -n "$(LC_ALL=C dpkg --status linux-image-liquorix-amd64 2>/dev/null| grep 'ok installed')" ]; then
 	echo "found linux-image-liquorix-amd64"
 	apt-mark unhold linux-image-liquorix-amd64 linux-headers-liquorix-amd64 2>/dev/null
+fi
+}
+
+hold_siduction_kernel_updates()
+{
+if [ -n "$(LC_ALL=C dpkg --status linux-image-siduction-amd64 2>/dev/null| grep 'ok installed')" ]; then
+	echo "found linux-image-siduction-amd64"
+	apt-mark hold linux-image-siduction-amd64 linux-headers-siduction-amd64 2>/dev/null
+fi
+}
+
+unhold_siduction_kernel_updates()
+{
+if [ -n "$(LC_ALL=C dpkg --status linux-image-siduction-amd64 2>/dev/null| grep 'ok installed')" ]; then
+	echo "found linux-image-siduction-amd64"
+	apt-mark unhold linux-image-siduction-amd64 linux-headers-siduction-amd64 2>/dev/null
 fi
 }
 
