@@ -193,10 +193,7 @@ public:
     void setmissingxfconfvariables(const QString &activeprofile, const QString &resolution);
     void fluxboxchangeinitvariable(const QString &initline, const QString &value) const;
     void fluxboxchangedock() const;
-    void changecomputername(QString hostname);
     bool validatecomputername(QString hostname);
-    void changedisplaymanager(QString dm);
-    void kvm_early_switch(QString action, QString file);
 
 private slots:
     static void on_buttonCancel_clicked();
