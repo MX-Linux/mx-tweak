@@ -355,40 +355,54 @@ kvm_early_switch(){
 
 main()
 {
-$CMD1
-$CMD2
-$CMD3
-$CMD4
-$CMD5
-$CMD6
-$CMD7
-$CMD8
-$CMD9
+#read in parameters
+j=0
+for i in $@; do
+	local CMD
+	CMD[$j]=$i
+	#echo "CMD$j" is ${CMD[$j]}
+	j=$((j+1))
+done
+
+#run commands from p=0 to j
+
+for ((p=0; p<=j; p++)); do
+
+	if [ -n "${CMD[$p]}" ]; then
+
+		case "${CMD[$p]}" in
+			hostname)  #next variable is the param
+			   p=$((p+1))
+		   	   #change_hostname ${CMD[$p]}
+		   	   echo "change_hostname  ${CMD[$p]}"
+			;;
+			bluetooth_battery) #next variable is the param
+		       p=$((p+1))
+		       bluetooth_battery ${CMD[$p]}
+			;;
+			displaymanager) #next variable is the param
+			   p=$((p+1))
+			   change_display_manager ${CMD[$p]}
+			;;
+			kvm_early_switch) #next 2 variables are parameters 
+			   #increment p first time
+			   p=$((p+1))
+			   x=$((p+1))
+			   kvm_early_switch ${CMD[$p]} ${CMD[$x]}
+			   #increment p again to go to next command
+			   p=$((p+1))
+			;;
+			initchange)  #next variable is the param
+			   p=$((p+1))
+			   initchange ${CMD[$p]}
+			;;
+			*) ${CMD[$p]} #no parameter function, value increments in the for loop
+			;;
+		esac
+	fi
+done
 }
 
-CMD1=$1
-CMD2=$2
-CMD3=$3
-CMD4=$4
-CMD5=$5
-CMD6=$6
-CMD7=$7
-CMD8=$8
-CMD9=$9
-
-case "$CMD1" in
-	hostname) change_hostname "$CMD2"
-	;;
-	bluetooth_battery) bluetooth_battery "$CMD2"
-	;;
-	displaymanager) change_display_manager "$CMD2"
-	;;
-	kvm_early_switch) kvm_early_switch "$CMD2" "$CMD3"
-	;;
-	initchange) initchange "$CMD2"
-	;;
-	*) main
-	;;
-esac
+main "$@"
 
 exit 0
