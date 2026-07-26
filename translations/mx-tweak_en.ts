@@ -676,8 +676,86 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1718"/>
-        <source>NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
+        <location filename="../tweak.ui" line="1487"/>
+        <source>requires reboot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1490"/>
+        <source>Enable Bluetooth adapters on boot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1497"/>
+        <source>put a hold or remove a hold on updates of Debian  kernels</source>
+        <extracomment>toggle for apt hold action on update meta packages</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1500"/>
+        <source>Enable Automatic Debian Kernel Updates</source>
+        <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1507"/>
+        <source>Enable kernel sandbox</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1514"/>
+        <source>Enable mounting of internal drives by non-root users</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1521"/>
+        <source>NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1528"/>
+        <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1535"/>
+        <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1552"/>
+        <source>Reset Lightdm (login screen) to system default theme</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1559"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Init system that is used as the default on the main grub boot menu entry&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1562"/>
+        <source>Change Default Init System</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1583"/>
+        <source>NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1603"/>
+        <source>Enable Bluetooth battery info for connected devices (requires system restart)</source>
+        <extracomment>expose battery info for connected bluetooth devices to the operating system via dbus</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1610"/>
+        <source>Use tearfree amdgpu option</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1620"/>
+        <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -693,8 +771,8 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1521"/>
-        <source>NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
+        <location filename="../tweak.ui" line="1637"/>
+        <source>Use tearfree radeon driver option</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -710,70 +788,9 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1552"/>
-        <source>Reset Lightdm (login screen) to system default theme</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1637"/>
-        <source>Use tearfree radeon driver option</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1583"/>
-        <source>NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../tweak.ui" line="1654"/>
         <source>Change Default Display Manager (login screen) (requires reboot)</source>
         <extracomment>option to change display manager login screen.  present if more than one display manager is installed</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1711"/>
-        <source>Change computer name (requires reboot)</source>
-        <extracomment>option to change the system hostname, requires a reboot to be 100% effective</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1487"/>
-        <source>requires reboot</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1490"/>
-        <source>Enable Bluetooth adapters on boot</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1620"/>
-        <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1610"/>
-        <source>Use tearfree amdgpu option</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1535"/>
-        <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1507"/>
-        <source>Enable kernel sandbox</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1514"/>
-        <source>Enable mounting of internal drives by non-root users</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1528"/>
-        <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -797,31 +814,14 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1497"/>
-        <source>put a hold or remove a hold on updates of Debian  kernels</source>
-        <extracomment>toggle for apt hold action on update meta packages</extracomment>
+        <location filename="../tweak.ui" line="1711"/>
+        <source>Change computer name (requires reboot)</source>
+        <extracomment>option to change the system hostname, requires a reboot to be 100% effective</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../tweak.ui" line="1500"/>
-        <source>Enable Automatic Debian Kernel Updates</source>
-        <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1603"/>
-        <source>Enable Bluetooth battery info for connected devices (requires system restart)</source>
-        <extracomment>expose battery info for connected bluetooth devices to the operating system via dbus</extracomment>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1559"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Init system that is used as the default on the main grub boot menu entry&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../tweak.ui" line="1562"/>
-        <source>Change Default Init System</source>
+        <location filename="../tweak.ui" line="1718"/>
+        <source>NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
