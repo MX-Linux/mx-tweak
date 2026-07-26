@@ -2636,11 +2636,13 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     }
 
     //bluetooth battery info
+    QString bluetooth_battery_option;
+    QString bluetooth_battery_param;
     if (bluetoothbatteryflag){
         if (ui->checkBoxBluetoothBattery->isChecked()){
-            runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh bluetooth_battery true");
+            bluetooth_battery_param = "true";
         } else {
-            runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh bluetooth_battery false");
+            bluetooth_battery_param = "false";
         }
     }
 
@@ -2745,13 +2747,14 @@ void defaultlook::on_ButtonApplyEtc_clicked()
 
     // check options
         qDebug() << "options list" << udisks_option << sudo_override_option << user_name_space_override_option << intel_option << lightdm_option << amd_option << radeon_option << bluetooth_option << recommends_option << debian_kernel_updates_option << liq_kernel_updates_option << siduction_kernel_updates_option << hostname_option << hostname_param
-                 << displaymanager_option << displaymanager_param << kvm_early_option << kvm_param1 << kvm_param2;
+             << displaymanager_option << displaymanager_param << kvm_early_option << kvm_param1 << kvm_param2 << bluetooth_battery_option << bluetooth_battery_param;
         // checkbox options
         if (! udisks_option.isEmpty() || ! sudo_override_option.isEmpty() || ! user_name_space_override_option.isEmpty() || ! intel_option.isEmpty() || ! lightdm_option.isEmpty() || ! amd_option.isEmpty() || ! radeon_option.isEmpty() || !bluetooth_option.isEmpty() || !recommends_option.isEmpty() || !hostname_option.isEmpty()
-            || !debian_kernel_updates_option.isEmpty() || !liq_kernel_updates_option.isEmpty() || !siduction_kernel_updates_option.isEmpty() || !displaymanager_option.isEmpty()  || !kvm_early_option.isEmpty())
+            || !debian_kernel_updates_option.isEmpty() || !liq_kernel_updates_option.isEmpty() || !siduction_kernel_updates_option.isEmpty() || !displaymanager_option.isEmpty()  || !kvm_early_option.isEmpty() || !bluetooth_battery_option.isEmpty())
         {       runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + udisks_option + ' ' + sudo_override_option + ' ' + user_name_space_override_option + ' ' + intel_option + ' ' + amd_option + ' ' + radeon_option + ' ' + bluetooth_option + ' ' + recommends_option + ' ' + lightdm_option + ' ' + debian_kernel_updates_option + ' ' + liq_kernel_updates_option + ' '
                        + siduction_kernel_updates_option + ' ' + hostname_option + ' ' + hostname_param
-                       + ' ' + displaymanager_option + ' ' + displaymanager_param + ' '  + kvm_early_option + ' ' + kvm_param1 + ' ' + kvm_param2);
+                       + ' ' + displaymanager_option + ' ' + displaymanager_param + ' '  + kvm_early_option + ' ' + kvm_param1 + ' ' + kvm_param2
+                       + ' ' + bluetooth_battery_option + ' ' + bluetooth_battery_param);
             }
     //reset gui
     setupEtc();
