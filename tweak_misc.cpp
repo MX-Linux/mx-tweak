@@ -213,7 +213,7 @@ void TweakMisc::setup() noexcept
     if (autoupdate.contains("linux-image-liquorix-amd64"_L1)){
         ui->checkMiscLiqKernelUpdates->setChecked(false);
     }
-    if (autoupdate.contains("linux-image-siducation-amd64"_L1)){
+    if (autoupdate.contains("linux-image-siduction-amd64"_L1)){
         ui->checkMiscSiductionKernelUpdates->setChecked(false);
     }
     flags.updateKernelDebian = false;
