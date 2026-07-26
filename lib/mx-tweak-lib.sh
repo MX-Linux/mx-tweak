@@ -50,11 +50,13 @@ disable_libinput_touchpad()
 
 enable_bluetooth()
 {
+sed -i 's/#AutoEnable=.*/AutoEnable=true/' /etc/bluetooth/main.conf
 sed -i 's/^AutoEnable=.*/AutoEnable=true/' /etc/bluetooth/main.conf
 }
 
 disable_bluetooth()
 {
+sed -i 's/#AutoEnable=.*/AutoEnable=false/' /etc/bluetooth/main.conf
 sed -i 's/^AutoEnable=.*/AutoEnable=false/' /etc/bluetooth/main.conf
 }
 
@@ -95,7 +97,11 @@ fi
 lightdm_reset()
 {
 cp /etc/lightdm/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf.$(date +%Y%m%H%M%S)
-cp /etc/lightdm/mx$(grep DISTRIB_RELEASE /etc/lsb-release |cut -d\= -f2|cut -d\. -f1)/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf
+if [ -d /usr/share/lightdm-gtk-greeter-mx ]; then
+	cp /usr/share/lightdm-gtk-greeter-mx/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf
+else
+	cp /etc/lightdm/mx$(grep DISTRIB_RELEASE /etc/lsb-release |cut -d\= -f2|cut -d\. -f1)/lightdm-gtk-greeter.conf /etc/lightdm/lightdm-gtk-greeter.conf
+fi
 
 }
 
@@ -230,11 +236,28 @@ if [ -n "$(LC_ALL=C dpkg --status linux-image-liquorix-amd64 2>/dev/null| grep '
 	apt-mark hold linux-image-liquorix-amd64 linux-headers-liquorix-amd64 2>/dev/null
 fi
 }
+
 unhold_liquorix_kernel_updates()
 {
 if [ -n "$(LC_ALL=C dpkg --status linux-image-liquorix-amd64 2>/dev/null| grep 'ok installed')" ]; then
 	echo "found linux-image-liquorix-amd64"
 	apt-mark unhold linux-image-liquorix-amd64 linux-headers-liquorix-amd64 2>/dev/null
+fi
+}
+
+hold_siduction_kernel_updates()
+{
+if [ -n "$(LC_ALL=C dpkg --status linux-image-siduction-amd64 2>/dev/null| grep 'ok installed')" ]; then
+	echo "found linux-image-siduction-amd64"
+	apt-mark hold linux-image-siduction-amd64 linux-headers-siduction-amd64 2>/dev/null
+fi
+}
+
+unhold_siduction_kernel_updates()
+{
+if [ -n "$(LC_ALL=C dpkg --status linux-image-siduction-amd64 2>/dev/null| grep 'ok installed')" ]; then
+	echo "found linux-image-siduction-amd64"
+	apt-mark unhold linux-image-siduction-amd64 linux-headers-siduction-amd64 2>/dev/null
 fi
 }
 
@@ -295,6 +318,25 @@ for i in $installed_dm
 DEBIAN_FRONTEND=noninteractive /usr/sbin/dpkg-reconfigure $newdm
 }
 
+initchange(){
+local init="$1" 
+local dir="$1"
+if [ "$init" = "sysVinit" ]; then
+	init="init"
+	dir="sysvinit"
+fi
+echo "switching default init to /usr/lib/$dir/$init"
+ln -rsf /usr/lib/$dir/$init /usr/sbin/init
+#test for live system, exit if found  (check used below)
+LIVE_CHECK=$(df -T / |tail -n1 |awk '{print $2}')
+#only update on non-live systems and when there is an actual change 
+if [ "$LIVE_CHECK" != "overlay" ] && [ -x /usr/sbin/update-grub ]; then
+	if [ -e /boot/grub/grub.cfg ]; then
+		/usr/sbin/update-grub
+	fi
+fi
+}
+
 kvm_early_switch(){
 	local action="$1" file="$2"
 
@@ -313,38 +355,54 @@ kvm_early_switch(){
 
 main()
 {
-$CMD1
-$CMD2
-$CMD3
-$CMD4
-$CMD5
-$CMD6
-$CMD7
-$CMD8
-$CMD9
+#read in parameters
+j=0
+for i in $@; do
+	local CMD
+	CMD[$j]=$i
+	#echo "CMD$j" is ${CMD[$j]}
+	j=$((j+1))
+done
+
+#run commands from p=0 to j
+
+for ((p=0; p<=j; p++)); do
+
+	if [ -n "${CMD[$p]}" ]; then
+
+		case "${CMD[$p]}" in
+			hostname)  #next variable is the param
+			   p=$((p+1))
+		   	   #change_hostname ${CMD[$p]}
+		   	   echo "change_hostname  ${CMD[$p]}"
+			;;
+			bluetooth_battery) #next variable is the param
+		       p=$((p+1))
+		       bluetooth_battery ${CMD[$p]}
+			;;
+			displaymanager) #next variable is the param
+			   p=$((p+1))
+			   change_display_manager ${CMD[$p]}
+			;;
+			kvm_early_switch) #next 2 variables are parameters 
+			   #increment p first time
+			   p=$((p+1))
+			   x=$((p+1))
+			   kvm_early_switch ${CMD[$p]} ${CMD[$x]}
+			   #increment p again to go to next command
+			   p=$((p+1))
+			;;
+			initchange)  #next variable is the param
+			   p=$((p+1))
+			   initchange ${CMD[$p]}
+			;;
+			*) ${CMD[$p]} #no parameter function, value increments in the for loop
+			;;
+		esac
+	fi
+done
 }
 
-CMD1=$1
-CMD2=$2
-CMD3=$3
-CMD4=$4
-CMD5=$5
-CMD6=$6
-CMD7=$7
-CMD8=$8
-CMD9=$9
-
-case "$CMD1" in
-	hostname) change_hostname "$CMD2"
-	;;
-	bluetooth_battery) bluetooth_battery "$CMD2"
-	;;
-	displaymanager) change_display_manager "$CMD2"
-	;;
-	kvm_early_switch) kvm_early_switch "$CMD2" "$CMD3"
-	;;
-	*) main
-	;;
-esac
+main "$@"
 
 exit 0

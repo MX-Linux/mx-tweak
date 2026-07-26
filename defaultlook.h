@@ -117,6 +117,7 @@ public:
     bool isLightdm = false;
     bool isSuperkey = false;
     bool liqKernelUpdateFlag = false;
+    bool siductionKernelUpdateFlag = false;
     bool debianKernelUpdateFlag = false;
     bool plasmadisoverautostartflag = false;
     bool graphicssetupflag=true;
@@ -335,6 +336,8 @@ private slots:
     void on_checkBoxDisplayManager_clicked();
 
     void on_checkBoxKVMVirtLoad_clicked();
+
+    void on_checkMiscSiductionKernelUpdates_clicked();
 
 private:
     Ui::defaultlook *ui;

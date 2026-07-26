@@ -1545,6 +1545,14 @@ void defaultlook::setupEtc()
     } else {
         ui->checkBoxLiqKernelUpdates->setChecked(true);
     }
+
+    if (runCmd("LC_ALL=C dpkg --status linux-image-siduction-amd64 2>/dev/null |grep 'ok installed'").output.isEmpty()){
+        ui->checkMiscSiductionKernelUpdates->setChecked(false);
+        ui->checkMiscSiductionKernelUpdates->hide();
+    } else {
+        ui->checkMiscSiductionKernelUpdates->setChecked(true);
+    }
+
     QString autoupdate = runCmd("apt-mark showhold").output;
     if ( autoupdate.contains("linux-image-686") || autoupdate.contains("linux-image-amd64") ){
         ui->checkBoxDebianKernelUpdates->setChecked(false);
@@ -1555,6 +1563,7 @@ void defaultlook::setupEtc()
     }
     debianKernelUpdateFlag = false;
     liqKernelUpdateFlag = false;
+    siductionKernelUpdateFlag = false;
 
     //hostname
     ui->checkBoxComputerName->setChecked(false);
@@ -2485,6 +2494,7 @@ void defaultlook::on_ButtonApplyEtc_clicked()
     QString bluetooth_option;
     QString recommends_option;
     QString debian_kernel_updates_option;
+    QString siduction_kernel_updates_option;
     QString liq_kernel_updates_option;
     QString DESKTOP = runCmd(QStringLiteral("echo $XDG_SESSION_DESKTOP")).output;
     QString home_path = QDir::homePath();
@@ -2684,6 +2694,16 @@ void defaultlook::on_ButtonApplyEtc_clicked()
             liq_kernel_updates_option = "hold_liquorix_kernel_updates";
         }
     }
+
+    //siduction kernel updates
+    if (siductionKernelUpdateFlag){
+        if (ui->checkMiscSiductionKernelUpdates->isChecked()){
+            siduction_kernel_updates_option = "unhold_siduction_kernel_updates";
+        } else {
+            siduction_kernel_updates_option = "hold_siduction_kernel_updates";
+        }
+    }
+
 
     //hostname setting
     //if name doesn't validate, don't make any changes to any options, and don't reset gui.
@@ -4506,5 +4526,16 @@ void defaultlook::on_checkBoxKVMVirtLoad_clicked()
 {
     ui->ButtonApplyEtc->setEnabled(true);
     kvmflag = !kvmflag;
+}
+
+void defaultlook::on_checkMiscSiductionKernelUpdates_clicked()
+{
+    // set action flag, actions only happen if flag is true when apply is clicked.
+    if (siductionKernelUpdateFlag){
+        siductionKernelUpdateFlag = false;
+    } else {
+        siductionKernelUpdateFlag = true;
+    }
+    ui->ButtonApplyEtc->setEnabled(true);
 }
 
