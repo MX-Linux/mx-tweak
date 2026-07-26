@@ -1561,6 +1561,10 @@ void defaultlook::setupEtc()
     if ( autoupdate.contains("linux-image-liquorix-amd64") ){
         ui->checkBoxLiqKernelUpdates->setChecked(false);
     }
+    if ( autoupdate.contains("linux-image-siducation-amd64") ){
+        ui->checkMiscSiductionKernelUpdates->setChecked(false);
+    }
+
     debianKernelUpdateFlag = false;
     liqKernelUpdateFlag = false;
     siductionKernelUpdateFlag = false;
