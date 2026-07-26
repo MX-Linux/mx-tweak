@@ -524,41 +524,63 @@ void TweakMisc::pushMiscApply_clicked() noexcept
 
     // hostname setting
     // if name doesn't validate, don't make any changes to any options, and don't reset gui.
+    QString hostname_option;
+    QString hostname_param;
     if (ui->checkMiscHostName->isChecked()){
         if (validateHostName(ui->textMiscHostName->text())){
-            runProc(u"pkexec"_s, {u"/usr/lib/mx-tweak/mx-tweak-lib.sh"_s,
-                u"hostname"_s, ui->textMiscHostName->text()});
+            hostname_option = "hostname";
+            hostname_param = ui->textMiscHostName->text();
+            //runProc(u"pkexec"_s, {u"/usr/lib/mx-tweak/mx-tweak-lib.sh"_s,u"hostname"_s, ui->textMiscHostName->text()});
         } else {
             return;
         }
     }
     // display manager change
+    QString displaymanager_option;
+    QString displaymanager_param;
     if (ui->checkMiscDisplayManager->isChecked()){
         // don't do anything if selection is still default
         if (ui->comboBoxDisplayManager->currentText() != currentDisplayManager) {
-            runProc(u"pkexec"_s, {u"/usr/lib/mx-tweak/mx-tweak-lib.sh"_s,
-                u"displaymanager"_s, ui->comboBoxDisplayManager->currentText()});
+            //runProc(u"pkexec"_s, {u"/usr/lib/mx-tweak/mx-tweak-lib.sh"_s,
+            //    u"displaymanager"_s, ui->comboBoxDisplayManager->currentText()});
+            displaymanager_option = "displaymanager";
+            displaymanager_param = ui->comboBoxDisplayManager->currentText();
         }
         ui->checkMiscDisplayManager->setChecked(false);
     }
 
     // init system change
+    QString init_option;
+    QString init_param;
     if (ui->checkboxChangeInitSystem->isChecked()){
-        runProc(u"pkexec"_s, {u"/usr/lib/mx-tweak/mx-tweak-lib.sh"_s,u"initchange"_s,ui->comboxBoxInitSystems->currentText()});
+        //runProc(u"pkexec"_s, {u"/usr/lib/mx-tweak/mx-tweak-lib.sh"_s,u"initchange"_s,ui->comboxBoxInitSystems->currentText()});
+        init_option = "initchange";
+        init_param = ui->comboxBoxInitSystems->currentText();
         ui->checkboxChangeInitSystem->setChecked(false);
     }
 
     // kvm_early_switch
+    QString kvm_early_option;
+    QString kvm_param1;
+    QString kvm_param2;
     if (flags.kvm) {
-        runProc(u"pkexec"_s, {u"/usr/lib/mx-tweak/mx-tweak-lib.sh"_s, u"kvm_early_switch"_s,
-            (ui->checkMiscKVMVirtLoad->isChecked() ? u"on"_s : u"off"_s), kvmConfFile});
+        //runProc(u"pkexec"_s, {u"/usr/lib/mx-tweak/mx-tweak-lib.sh"_s, u"kvm_early_switch"_s,
+          //  (ui->checkMiscKVMVirtLoad->isChecked() ? u"on"_s : u"off"_s), kvmConfFile});
+        kvm_early_option = "kvm_early_switch";
+        kvm_param1 =(ui->checkMiscKVMVirtLoad->isChecked() ? u"on"_s : u"off"_s);
+        kvm_param2 =kvmConfFile;
     }
 
     // check options
-    qDebug() << "options list" << udisks_option << sudo_override_option << user_name_space_override_option << intel_option << lightdm_option << amd_option << radeon_option << bluetooth_option << recommends_option << debian_kernel_updates_option << liq_kernel_updates_option;
+    qDebug() << "options list" << udisks_option << sudo_override_option << user_name_space_override_option << intel_option << lightdm_option << amd_option << radeon_option << bluetooth_option << recommends_option << debian_kernel_updates_option << liq_kernel_updates_option << siduction_kernel_updates_option << hostname_option << hostname_param
+             << displaymanager_option << displaymanager_param << init_option << init_param << kvm_early_option << kvm_param1 << kvm_param2;
     // checkbox options
-    if (! udisks_option.isEmpty() || ! sudo_override_option.isEmpty() || ! user_name_space_override_option.isEmpty() || ! intel_option.isEmpty() || ! lightdm_option.isEmpty() || ! amd_option.isEmpty() || ! radeon_option.isEmpty() || !bluetooth_option.isEmpty() || !recommends_option.isEmpty() || !debian_kernel_updates_option.isEmpty() || !liq_kernel_updates_option.isEmpty() || !siduction_kernel_updates_option.isEmpty()){
-        runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + udisks_option + ' ' + sudo_override_option + ' ' + user_name_space_override_option + ' ' + intel_option + ' ' + amd_option + ' ' + radeon_option + ' ' + bluetooth_option + ' ' + recommends_option + ' ' + lightdm_option + ' ' + debian_kernel_updates_option + ' ' + liq_kernel_updates_option + ' ' + siduction_kernel_updates_option);
+    if (! udisks_option.isEmpty() || ! sudo_override_option.isEmpty() || ! user_name_space_override_option.isEmpty() || ! intel_option.isEmpty() || ! lightdm_option.isEmpty() || ! amd_option.isEmpty() || ! radeon_option.isEmpty() || !bluetooth_option.isEmpty() || !recommends_option.isEmpty() || !hostname_option.isEmpty()
+        || !debian_kernel_updates_option.isEmpty() || !liq_kernel_updates_option.isEmpty() || !siduction_kernel_updates_option.isEmpty() || !displaymanager_option.isEmpty() || !init_option.isEmpty() || !kvm_early_option.isEmpty())
+    {
+        runCmd("pkexec /usr/lib/mx-tweak/mx-tweak-lib.sh " + udisks_option + ' ' + sudo_override_option + ' ' + user_name_space_override_option + ' ' + intel_option + ' ' + amd_option + ' ' + radeon_option + ' ' + bluetooth_option + ' ' + recommends_option + ' ' + lightdm_option + ' ' + debian_kernel_updates_option + ' ' + liq_kernel_updates_option + ' '
+               + siduction_kernel_updates_option + ' ' + hostname_option + ' ' + hostname_param
+               + ' ' + displaymanager_option + ' ' + displaymanager_param + ' ' + init_option + ' ' + init_param + ' ' + kvm_early_option + ' ' + kvm_param1 + ' ' + kvm_param2);
     }
     // reset gui
     setup();
