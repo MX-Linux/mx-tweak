@@ -1,58 +1,1073 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="el">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="el">
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../about.cpp" line="41"/>
-        <source>License</source>
-        <translation>Άδεια</translation>
-    </message>
-    <message>
-        <location filename="../about.cpp" line="42"/>
-        <location filename="../about.cpp" line="52"/>
-        <source>Changelog</source>
-        <translation>Αρχείο αλλαγών</translation>
-    </message>
-    <message>
-        <location filename="../about.cpp" line="43"/>
-        <source>Cancel</source>
-        <translation>Άκυρο</translation>
-    </message>
-    <message>
-        <location filename="../about.cpp" line="64"/>
+        <location filename="../about.cpp" line="30"/>
+        <location filename="../about.cpp" line="99"/>
         <source>&amp;Close</source>
         <translation>&amp;Κλείσιμο</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="47"/>
+        <location filename="../about.cpp" line="50"/>
+        <source>Could not load %1</source>
+        <translation>Δεν ήταν δυνατή η φόρτωση του %1</translation>
+    </message>
+    <message>
+        <location filename="../about.cpp" line="73"/>
+        <source>License</source>
+        <translation>Άδεια</translation>
+    </message>
+    <message>
+        <location filename="../about.cpp" line="74"/>
+        <location filename="../about.cpp" line="84"/>
+        <source>Changelog</source>
+        <translation>Αρχείο αλλαγών</translation>
+    </message>
+    <message>
+        <location filename="../about.cpp" line="75"/>
+        <source>Cancel</source>
+        <translation>Άκυρο</translation>
+    </message>
+    <message>
+        <location filename="../about.cpp" line="96"/>
+        <source>Could not load changelog.</source>
+        <translation>Δεν ήταν δυνατή η φόρτωση του αρχείου αλλαγών.</translation>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="55"/>
         <source>GUI for applying assorted useful tweaks</source>
         <translation>Γραφικό περιβάλλον για την εφαρμογή χρήσιμων βελτιώσεων</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="50"/>
+        <location filename="../main.cpp" line="58"/>
         <source>launches brightness-systray</source>
-        <translation>εμφάνιση εικονιδίου στο σύστημα</translation>
+        <translation>εμφανίζει το εικονίδιο φωτεινότητας της οθόνης του συστήματος</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="51"/>
+        <location filename="../main.cpp" line="59"/>
+        <source>launches brightness-systray and shows dialog on startup, implies --tray</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="60"/>
+        <source>close application after action instead of minimize to tray.  Requires --traydialog</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../main.cpp" line="61"/>
         <source>opens with display tab open.  Only valid with Xfce desktop running</source>
-        <translation>ανοίγει την εμφάνιση.  Μόνο σε Xfce</translation>
+        <translation>ανοίγει τη καρτέλα Εμφάνιση.  Μόνο σε Xfce</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="52"/>
+        <location filename="../main.cpp" line="62"/>
         <source>Opens theme tab directly.  Valid on Xfce &amp; Fluxbox desktops</source>
-        <translation>Ανοίγει άμεσα το θέμα. Σε Xfce και Fluxbox</translation>
+        <translation>Ανοίγει άμεσα το θέμα.  Σε Xfce και Fluxbox</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="53"/>
+        <location filename="../main.cpp" line="63"/>
         <source>Display additional debug output in console</source>
-        <translation>Εμφάνιση εντοπισμού σφαλμάτων στην κονσόλα</translation>
+        <translation>Εμφάνιση πρόσθετων στοιχείων αποσφαλμάτωσης σε τερματικό</translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="54"/>
+        <location filename="../main.cpp" line="64"/>
         <source>Opens Other tab directly.  Valid on all desktops</source>
-        <translation>Ανοίγει τη καρτέλα Άλλα.  Σε όλα τα γραφικά περιβάλλοντα</translation>
+        <translation>Ανοίγει τη καρτέλα Διάφορα.  Σε όλα τα γραφικά περιβάλλοντα</translation>
+    </message>
+</context>
+<context>
+    <name>Tweak</name>
+    <message>
+        <location filename="../tweak.ui" line="14"/>
+        <location filename="../tweak.cpp" line="78"/>
+        <location filename="../tweak.cpp" line="243"/>
+        <location filename="../tweak.cpp" line="262"/>
+        <source>MX Tweak</source>
+        <translation>MX Ρυθμίσεις</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="33"/>
+        <source>Xfce Panel</source>
+        <translation>Ταμπλό xfce</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="39"/>
+        <location filename="../tweak.ui" line="233"/>
+        <location filename="../tweak.ui" line="520"/>
+        <location filename="../tweak.ui" line="599"/>
+        <location filename="../tweak.ui" line="655"/>
+        <location filename="../tweak.ui" line="682"/>
+        <location filename="../tweak.ui" line="874"/>
+        <location filename="../tweak.ui" line="1265"/>
+        <location filename="../tweak.ui" line="1394"/>
+        <location filename="../tweak.ui" line="1441"/>
+        <location filename="../tweak.ui" line="1542"/>
+        <source>Apply</source>
+        <extracomment>apply changes</extracomment>
+        <translation>Εφαρμογή</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="58"/>
+        <source>Tasklist</source>
+        <translation>Λίστα εργασιών</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="64"/>
+        <source>Set Tasklist plugin to:</source>
+        <translation>Ρύθμιση πρόσθετου λίστας εργασιών σε:</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="71"/>
+        <source>Docklike is the modern dock plugin for the panel. Window Buttons is the classic tasklist without dock features.</source>
+        <translation>Το πρόσθετο docklike είναι ένα σύγχρονο dock για το ταμπλό. Τα κουμπιά των παραθύρων είναι η κλασική λίστα εργασιών χωρίς άλλες δυνατότητες.</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="78"/>
+        <source>Tasklist Options</source>
+        <translation>Επιλογές λίστας εργασιών</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="85"/>
+        <source>Docklike Options</source>
+        <translation>Επιλογές docklike</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="95"/>
+        <source>Affects 1st Panel</source>
+        <translation>Επηρεάζει το 1ο ταμπλό</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="101"/>
+        <location filename="../tweak.ui" line="1048"/>
+        <location filename="../tweak.ui" line="1158"/>
+        <location filename="../tweak.ui" line="1285"/>
+        <source>Placement</source>
+        <translation>Τοποθέτηση</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="114"/>
+        <source>Backup/Restore Configuration (all panels)</source>
+        <translation>Αποθήκευση/Επαναφορά διαμόρφωσης (όλα τα ταμπλό)</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="127"/>
+        <source>Backup current panel configuration</source>
+        <translation>Αποθήκευση της τρέχουσας διαμόρφωσης του ταμπλό</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="141"/>
+        <source>Restore selected panel configuration</source>
+        <translation>Επαναφορά της επιλεγμένης διαμόρφωσης του ταμπλό</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="148"/>
+        <source>Restore default panel</source>
+        <translation>Επαναφορά προεπιλεγμένου ταμπλό</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="158"/>
+        <source>Panel Plugin Scales</source>
+        <translation>Κλίμακα αντικειμένων στο ταμπλό</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="164"/>
+        <source>Volume</source>
+        <extracomment>volume plugin scale factor</extracomment>
+        <translation>Μέγεθος</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="184"/>
+        <source>Power Manager</source>
+        <extracomment>power manager plugin scale factor</extracomment>
+        <translation>Του πρόσθετου διαχειριστή ρεύματος</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="221"/>
+        <source>Theme</source>
+        <translation>Θέμα</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="227"/>
+        <source>Theme Options</source>
+        <translation>Επιλογές θέματος</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="262"/>
+        <source>Remove User Theme Set</source>
+        <translation>Αφαίρεση θέματος</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="275"/>
+        <source>Themes</source>
+        <translation>Θέματα</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="281"/>
+        <source>Application</source>
+        <extracomment>theme an application will get</extracomment>
+        <translation>Στυλ</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="301"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Toggle Dark Mode for GTK4 libadwaita applications&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Ενεργοποίηση σκοτεινού στυλ για εφαρμογές GTK4 libadwaita&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="304"/>
+        <source>Dark Mode</source>
+        <translation>Σκοτεινό</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="311"/>
+        <location filename="../tweak.ui" line="1785"/>
+        <source>Window Manager</source>
+        <extracomment>theme a window manager border will get</extracomment>
+        <translation>Διαχειριστής παραθύρων</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="331"/>
+        <source>Legacy Styles</source>
+        <translation>Κλασικά στυλ</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="344"/>
+        <source>Icons</source>
+        <extracomment>icon theme</extracomment>
+        <translation>Εικονίδια</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="351"/>
+        <source>Cursors</source>
+        <extracomment>cursor theme</extracomment>
+        <translation>Δείκτες ποντικιού</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="358"/>
+        <source>Save Current Settings as a Theme Set</source>
+        <extracomment>save theme settings as a group</extracomment>
+        <translation>Αποθήκευση των ρυθμίσεων σαν θέμα</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="368"/>
+        <source>Size</source>
+        <extracomment>size of the cursor</extracomment>
+        <translation>Μέγεθος</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="378"/>
+        <source>default</source>
+        <extracomment>default cursor size determined by X server</extracomment>
+        <translation>προεπιλογή</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="401"/>
+        <location filename="../tweak.ui" line="453"/>
+        <source>Compositor</source>
+        <translation>Συνθέτης</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="413"/>
+        <source>Changing the VBlank mode may help alleviate some screen tearing issues. See Help for more information.</source>
+        <translation>Η αλλαγή ρύθμισης VBlank μπορεί να βοηθήσει στην αντιμετώπιση ορισμένων ζητημάτων απεικόνισης. Δείτε τη βοήθεια για περισσότερες πληροφορίες.</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="416"/>
+        <source>VBlank</source>
+        <translation>VBlank</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="424"/>
+        <source>auto</source>
+        <translation>auto</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="429"/>
+        <source>glx</source>
+        <translation>glx</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="434"/>
+        <source>xpresent</source>
+        <translation>xpresent</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="439"/>
+        <location filename="../tweak.ui" line="1022"/>
+        <source>off</source>
+        <extracomment>setting to 0 turns off screensaver screen blank</extracomment>
+        <translation>off</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="447"/>
+        <source>Transparency and shadow options</source>
+        <translation>Επιλογές διαφάνειας και σκιάς</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="463"/>
+        <source>Xfce Compositor Settings</source>
+        <translation>Ρυθμίσεις συνθέτη xfce</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="466"/>
+        <source>Xfwm Settings</source>
+        <translation>Ρυθμίσεις Xfwm</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="476"/>
+        <source>Launch compton-conf configuration tool</source>
+        <translation>Άνοιγμα του εργαλείου Compton-conf</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="479"/>
+        <source>Picom settings</source>
+        <translation>Ρυθμίσεις picom</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="490"/>
+        <source>Edit compton.conf directly in text editor</source>
+        <translation>Επεξεργασία του compton.conf με τον επεξεργαστή κειμένου</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="493"/>
+        <source>Edit picom.conf</source>
+        <translation>Επεξεργασία του picom.conf</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="540"/>
+        <source>Display</source>
+        <translation>Οθόνη</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="546"/>
+        <source>Display Tweaks</source>
+        <translation>Εμφάνιση ρυθμίσεων</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="552"/>
+        <source>Hardware Backlight</source>
+        <extracomment>set the hardware backlight on monitors that have them</extracomment>
+        <translation>Οπίσθιος φωτισμός</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="575"/>
+        <location filename="../tweak.ui" line="706"/>
+        <source>TextLabel</source>
+        <translation>Επικεφαλίδα</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="582"/>
+        <source>GTK scaling</source>
+        <extracomment>gtk scale factor</extracomment>
+        <translation>Κλίμακα GTK</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="635"/>
+        <source>Choose Display for xrandr tweaks</source>
+        <extracomment>choose the display that the xrandr tweaks will be acted upon</extracomment>
+        <translation>Επιλογή οθόνης για τροποποιήσεις xrandr</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="645"/>
+        <source>Resolution</source>
+        <translation>Ανάλυση</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="662"/>
+        <source>xrandr Scaling</source>
+        <extracomment>xrandr scale factor</extracomment>
+        <translation>Κλίμακα xrandr</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="689"/>
+        <source>Software (xrandr) Brightness</source>
+        <extracomment>adjust brightness (not backlight) via software</extracomment>
+        <translation>Φωτεινότητα (xrandr)</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="713"/>
+        <source>Saving is per display</source>
+        <translation>Αποθήκευση ανά οθόνη</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="716"/>
+        <source>Save</source>
+        <translation>Αποθήκευση</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="740"/>
+        <source>Xfce</source>
+        <translation>Xfce</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="746"/>
+        <source>Desktop</source>
+        <translation>Επιφάνεια εργασίας</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="752"/>
+        <source>Enable single-click on desktop</source>
+        <translation>Ενεργοποίηση του μονό κλικ στην επιφάνεια εργασίας</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="759"/>
+        <source>Enable Desktop Zoom </source>
+        <translation>Ενεργοποίηση μεγένθυνσης της επιφάνειας εργασίας </translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="766"/>
+        <location filename="../tweak.ui" line="1355"/>
+        <source>Show windows from all workspaces in panel</source>
+        <translation>Εμφάνιση παραθύρων από όλους τους χώρους εργασίας στο ταμπλό</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="773"/>
+        <source>Do not shorten file names on the desktop</source>
+        <translation>Απενεργοποίηση σύμπτυξης ονομάτων των αρχείων στην επιφάνεια εργασίας</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="783"/>
+        <source>Thunar</source>
+        <translation>Thunar</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="789"/>
+        <source>Enable single-click in Thunar File Manager</source>
+        <translation>Ενεργοποίηση του μονό κλικ στο διαχειριστή αρχείων Thunar</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="796"/>
+        <source>Reset custom right-click actions to system defaults</source>
+        <translation>Επαναφορά των προσαρμοσμένων ενεργειών του δεξιού κλικ στις προεπιλογές του συστήματος</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="803"/>
+        <source>Thunar windows always open in split view</source>
+        <translation>Τα παράθυρα του Thunar ανοίγουν πάντα σε διαχωρισμένη προβολή</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="810"/>
+        <source>Thunar split view opens horizontal</source>
+        <translation>Οριζόντιο άνοιγμα διαχωρισμένης προβολής στο Thunar</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="820"/>
+        <source>Show percentages in notifcations when available</source>
+        <translation>Εμφάνιση ποσοστών στις ειδοποιήσεις όταν αυτό είναι διαθέσιμο</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="827"/>
+        <source>Show GTK File Dialog action buttons at bottom of dialogs</source>
+        <translation>Στα παράθυρα GTK εμφάνιση των κουμπιών στο κάτω μέρος</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="834"/>
+        <source>(also turns off Client Side Decorations for Xfce applications)</source>
+        <translation>(και κλείσιμο του Client Side Decorations στις εφαρμογές του Xfce)</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="844"/>
+        <source>Enable hibernate on Log Out menu </source>
+        <translation>Ενεργοποίηση της αδρανοποίησης στο μενού αποσύνδεσης </translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="851"/>
+        <source>note: to hibernate, swap needs to be &gt;= RAM</source>
+        <translation>σημείωση: για την αδρανοποίηση πρέπει το swap να είναι &gt;= RAM</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="885"/>
+        <source>Fluxbox</source>
+        <translation>Fluxbox</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="891"/>
+        <location filename="../tweak.ui" line="1365"/>
+        <source>Reset Defaults</source>
+        <translation>Επαναφορά προεπιλογών</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="897"/>
+        <source>Reset DefaultDock</source>
+        <translation>Επαναφορά προεπιλεγμένου Dock</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="904"/>
+        <source>Reset Fluxbox Menu</source>
+        <translation>Επαναφορά μενού του Fluxbox</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="911"/>
+        <source>Reset ALL mx-fluxbox settings</source>
+        <translation>Επαναφορά ΟΛΩΝ των ρυθμίσεων του mx-fluxbox</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="918"/>
+        <source>Add new default menu items, if any, to existing fluxbox menu.</source>
+        <translation>Προσθήκη νέων καταχωρήσεων στο μενού του fluxbox, αν υπάρχουν.</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="921"/>
+        <source>Upgrade existing menu entries</source>
+        <translation>Αναβάθμιση καταχωρήσεων μενού</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="931"/>
+        <source>Desktop Icons</source>
+        <translation>Εικονίδια επιφάνειας εργασίας</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="937"/>
+        <source>Toggle desktop icons</source>
+        <translation>Εναλλαγή εικονιδίων στην επιφάνεια εργασίας</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="945"/>
+        <location filename="../tweak.ui" line="969"/>
+        <source>On</source>
+        <translation>Ενεργοποίηση</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="950"/>
+        <location filename="../tweak.ui" line="974"/>
+        <source>Off</source>
+        <translation>Απενεργοποίηση</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="958"/>
+        <source>Toggle icon captions</source>
+        <translation>Εναλλαγή λεζάντας εικονιδίων</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="979"/>
+        <source>On Hover</source>
+        <translation>Σε πέρασμα του δείκτη</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1006"/>
+        <source>Screensaver</source>
+        <translation>Προφύλαξη οθόνης</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1012"/>
+        <source>Idle time (minutes)</source>
+        <extracomment>set the time of inactivity  before screensaver screen blank occurs</extracomment>
+        <translation>Χρόνος αδράνειας (λεπτά)</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1035"/>
+        <source>Toolbar Settings</source>
+        <translation>Ρυθμίσεις εργαλειοθήκης</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1041"/>
+        <source>Height</source>
+        <translation>Ύψος</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1122"/>
+        <location filename="../tweak.ui" line="1232"/>
+        <source>Autohide</source>
+        <translation>Αυτόματη απόκρυψη</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1129"/>
+        <source>Show Toolbar</source>
+        <translation>Εμφάνιση εργαλειοθήκης</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1136"/>
+        <source>Width</source>
+        <translation>Πλάτος</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1152"/>
+        <source>Dock Settings</source>
+        <translation>Ρυθμίσεις Dock</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1239"/>
+        <source>Manage Tint2 Panel</source>
+        <translation>Διαχείρηση ταμπλό Tint2</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1273"/>
+        <source>Plasma</source>
+        <translation>Plasma</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1279"/>
+        <source>Affects 1st panel</source>
+        <translation>Επηρεάζει το 1ο ταμπλό</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1296"/>
+        <source>Bottom</source>
+        <translation>Κάτω</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1301"/>
+        <source>Left</source>
+        <translation>Αριστερά</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1306"/>
+        <source>Top</source>
+        <translation>Επάνω</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1311"/>
+        <source>Right</source>
+        <translation>Δεξιά</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1335"/>
+        <source>Workspace</source>
+        <translation>Χώρος εργασίας</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1341"/>
+        <source>Autostart plasma-discover system tray update notification utility</source>
+        <extracomment>enable or disable autostartup of plasma-discover updater utility on login</extracomment>
+        <translation>Αυτόματη εκκίνηση του βοηθητικού προγράμματος του δοχείου συστήματος plasma-discover για ειδοποιήσεις και ενημερώσεις</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1348"/>
+        <source>Enable single-click</source>
+        <translation>Ενεργοποίηση του απλό κλικ</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1371"/>
+        <source>Reset KDE/Plasma defaults</source>
+        <translation>Επαναφορά προεπιλογών KDE/Plasma</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1405"/>
+        <source>Super Key</source>
+        <extracomment>referring to the meta or Left Super Key</extracomment>
+        <translation>Super Key</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1411"/>
+        <source>Also known as the &quot;windows&quot; key</source>
+        <translation>Γνωστό και ως πλήκτρο &quot;windows&quot;</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1414"/>
+        <source>Command to run with Super (Meta) key</source>
+        <extracomment>label for the field to enter the command to use with super key</extracomment>
+        <translation>Εντολή που θέλετε να εκτελεί το κουμπί Super (Meta)</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1424"/>
+        <source>xfce-superkey defaults</source>
+        <extracomment>indicates that xfce-superkey will select a command by its default logic</extracomment>
+        <translation>Επαναφορά προεπιλογής του xfce στο κουμπί super</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1431"/>
+        <source>Choose application</source>
+        <extracomment>description of button action to launch file dialog to choose an application</extracomment>
+        <translation>Επιλογή εφαρμογής</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1462"/>
+        <source>Miscellaneous</source>
+        <translation>Διάφορα</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1487"/>
+        <source>requires reboot</source>
+        <translation>απαιτείται επανεκκίνηση</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1490"/>
+        <source>Enable Bluetooth adapters on boot</source>
+        <translation>Ενεργοποίηση οδηγών Bluetooth στην εκκίνηση</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1497"/>
+        <source>put a hold or remove a hold on updates of Debian  kernels</source>
+        <extracomment>toggle for apt hold action on update meta packages</extracomment>
+        <translation>αναμονή ή αφαίρεση αναμονής στις ενημερώσεις των πυρήνων Debian</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1500"/>
+        <source>Enable Automatic Debian Kernel Updates</source>
+        <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
+        <translation>Ενεργοποίηση αυτόματων ενημερώσεων του πυρήνα Debian</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1507"/>
+        <source>Enable kernel sandbox</source>
+        <translation>Ενεργοποίηση sandbox του πυρήνα</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1514"/>
+        <source>Enable mounting of internal drives by non-root users</source>
+        <translation>Ενεργοποίηση προσάρτησης εσωτερικών δίσκων από μη διαχειριστές</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1521"/>
+        <source>NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
+        <translation>ΣΗΜΕΙΩΣΗ: Θα δημιουργηθεί αντίγραφο ασφαλείας του αρχείου /etc/X11/xorg.conf.d/20-radeon.conf στον αρχικό φάκελο του χρήστη</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1528"/>
+        <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
+        <translation>Το apt εγκαθιστά και τα &quot;προτεινόμενα&quot; πακέτα ως εξαρτήσεις</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1535"/>
+        <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
+        <translation>Χρήση Client Side Decorations (CSD) σε εφαρμογές GTK3 που τις υποστηρίζουν (απαιτείται επανεκκίνηση της συνεδρίας)</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1552"/>
+        <source>Reset Lightdm (login screen) to system default theme</source>
+        <translation>Επαναφορά του προεπιλεγμένου θέματος στο Lightdm (οθόνη σύνδεσης)</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1559"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Init system that is used as the default on the main grub boot menu entry&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Σύστημα εκκίνησης που χρησιμοποιείται ως προεπιλογή στην κύρια καταχώριση του μενού εκκίνησης grub&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1562"/>
+        <source>Change Default Init System</source>
+        <translation>Αλλαγή προεπιλεγμένου συστήματος εκκίνησης</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1583"/>
+        <source>NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
+        <translation>ΣΗΜΕΙΩΣΗ: Θα δημιουργηθεί αντίγραφο ασφαλείας του αρχείου /etc/X11/xorg.conf.d/20-amd.conf  στον αρχικό φάκελο του χρήστη</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1603"/>
+        <source>Enable Bluetooth battery info for connected devices (requires system restart)</source>
+        <extracomment>expose battery info for connected bluetooth devices to the operating system via dbus</extracomment>
+        <translation>Ενεργοποίηση πληροφοριών μπαταρίας για τις συνδεδεμένες συσκευές Bluetooth (απαιτείται επανεκκίνηση του συστήματος)</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1610"/>
+        <source>Use tearfree amdgpu option</source>
+        <translation>Χρήση της επιλογής tearfree στο πρόγραμμα οδήγησης amdgpu</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1620"/>
+        <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
+        <translation>Δημιουργία μενού εφαρμογών του fluxbox μετά την εγκατάσταση, την αφαίρεση και τις ενημερώσεις του πακέτου</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1627"/>
+        <source>Early loading of KVM module is new to  kernel 6.12 and conflicts with some non-KVM virtual machine applications, including virtualbox</source>
+        <extracomment>early loading is new on 6.12 kernel and conflicts with virtualbox</extracomment>
+        <translation>Η πρόωρη φόρτωση της μονάδας KVM είναι νέα στον πυρήνα 6.12 και συγκρούεται με ορισμένες εφαρμογές εικονικών μηχανών που δεν είναι KVM, συμπεριλαμβανομένου του virtuabox</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1630"/>
+        <source>Disable early KVM module load (must be disabled for Virtualbox operation on kernel 6.12 and up)</source>
+        <extracomment>disable early loading of KVM module.  necessary for virtualbox to function with kernels 6.12 and up.  actually default behavior on kernels 6.11 and earlier.</extracomment>
+        <translation>Απενεργοποίηση της πρόωρης φόρτωσης μονάδων KVM (πρέπει να είναι απενεργοποιημένη για τη λειτουργία του Virtualbox σε πυρήνα 6.12 και άνω)</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1637"/>
+        <source>Use tearfree radeon driver option</source>
+        <translation>Χρήση της επιλογής tearfree στο πρόγραμμα οδήγησης radeon</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1644"/>
+        <source>put a hold or remove a hold on updates of Liquorix kernels</source>
+        <extracomment>toggle for apt hold action on update meta packages</extracomment>
+        <translation>αναμονή ή αφαίρεση αναμονής στις ενημερώσεις των πυρήνων Liquorix</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1647"/>
+        <source>Enable Automatic Liquorix Kernel Updates (MX ahs repository)</source>
+        <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
+        <translation>Ενεργοποίηση αυτόματων ενημερώσεων του πυρήνα Liquorix (αποθετήριο MX ahs)</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1654"/>
+        <source>Change Default Display Manager (login screen) (requires reboot)</source>
+        <extracomment>option to change display manager login screen.  present if more than one display manager is installed</extracomment>
+        <translation>Αλλαγή προεπιλεγμένου διαχειριστή οθόνης (οθόνη σύνδεσης) (απαιτεί επανεκκίνηση)</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1661"/>
+        <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
+        <translation>Χρήση του προγράμματος οδήγησης intel αντί του προεπιλεγμένου &quot;modesetting&quot; (απαιτείται επανεκκίνηση)</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1674"/>
+        <source>Password for administrative tasks:</source>
+        <translation>Κωδικός πρόσβασης για εργασίες διαχειριστή:</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1681"/>
+        <source>&amp;User</source>
+        <translation>&amp;Χρήστης</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1688"/>
+        <source>Root</source>
+        <translation>Root</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1711"/>
+        <source>Change computer name (requires reboot)</source>
+        <extracomment>option to change the system hostname, requires a reboot to be 100% effective</extracomment>
+        <translation>Αλλαγή ονόματος του υπολογιστή (απαιτείται επανεκκίνηση)</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1718"/>
+        <source>NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
+        <translation>ΣΗΜΕΙΩΣΗ: Θα δημιουργηθεί αντίγραφο ασφαλείας του αρχείου /etc/X11/xorg.conf.d/20-intel.conf στον αρχικό φάκελο του χρήστη</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1725"/>
+        <source>Enable Automatic Siduction Kernel Updates</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1736"/>
+        <source>Xfce Settings</source>
+        <translation>Ρυθμίσεις Xfce</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1742"/>
+        <source>Customize the panel</source>
+        <translation>Προσαρμογή ταμπλό</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1752"/>
+        <source>Panel</source>
+        <translation>Ταμπλό</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1772"/>
+        <source>Configure window behavior and shortcuts</source>
+        <translation>Ρύθμιση της συμπεριφοράς παραθύρων και συντομεύσεων</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1805"/>
+        <source>Customize the look of your desktop</source>
+        <translation>Προσαρμογή εμφάνισης στην επιφάνειας εργασίας σας</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1818"/>
+        <source>Appearance</source>
+        <translation>Εμφάνιση</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1830"/>
+        <source>About</source>
+        <translation>Περί</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1840"/>
+        <source>Help</source>
+        <translation>Βοήθεια</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1898"/>
+        <source>Quit application</source>
+        <translation>Κλείσιμο εφαρμογής</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1901"/>
+        <source>Close</source>
+        <translation>Κλείσιμο</translation>
+    </message>
+    <message>
+        <location filename="../tweak.ui" line="1907"/>
+        <source>Alt+N</source>
+        <translation>Alt+N</translation>
+    </message>
+    <message>
+        <location filename="../tweak.cpp" line="79"/>
+        <source>--display switch only valid for Xfce</source>
+        <translation>--η λειτουργία είναι διαθέσιμη μόνο για το Xfce</translation>
+    </message>
+    <message>
+        <location filename="../tweak.cpp" line="242"/>
+        <source>About MX Tweak</source>
+        <translation>Περί του MX Ρυθμίσεις</translation>
+    </message>
+    <message>
+        <location filename="../tweak.cpp" line="244"/>
+        <source>Version: </source>
+        <translation>Έκδοση: </translation>
+    </message>
+    <message>
+        <location filename="../tweak.cpp" line="245"/>
+        <source>App for quick default ui theme changes and tweaks</source>
+        <translation>Εφαρμογή για γρήγορες αλλαγές και διορθώσεις του προεπιλεγμένου θέματος</translation>
+    </message>
+    <message>
+        <location filename="../tweak.cpp" line="247"/>
+        <source>Copyright (c) MX Linux</source>
+        <translation>Πνευματικά δικαιώματα (c) MX Linux</translation>
+    </message>
+    <message>
+        <location filename="../tweak.cpp" line="248"/>
+        <source>%1 License</source>
+        <translation>Άδεια %1</translation>
+    </message>
+    <message>
+        <location filename="../tweak.cpp" line="262"/>
+        <source>%1 Help</source>
+        <translation>Βοήθεια %1</translation>
+    </message>
+</context>
+<context>
+    <name>TweakCompositor</name>
+    <message>
+        <location filename="../tweak_compositor.cpp" line="68"/>
+        <source>None</source>
+        <translation>Κανένα</translation>
+    </message>
+    <message>
+        <location filename="../tweak_compositor.cpp" line="69"/>
+        <source>Xfwm (Xfce) Compositor</source>
+        <translation>Xfwm (Xfce)</translation>
+    </message>
+    <message>
+        <location filename="../tweak_compositor.cpp" line="70"/>
+        <source>Picom</source>
+        <translation>Picom</translation>
+    </message>
+</context>
+<context>
+    <name>TweakMisc</name>
+    <message>
+        <location filename="../tweak_misc.cpp" line="300"/>
+        <source>Please enter a computer name.</source>
+        <comment>question to enter a name for the computer hostname</comment>
+        <translation>Εισαγάγετε ένα όνομα υπολογιστή.</translation>
+    </message>
+    <message>
+        <location filename="../tweak_misc.cpp" line="304"/>
+        <source>Sorry, your computer name contains invalid characters.
+You'll have to select a different
+name before proceeding.</source>
+        <comment>unacceptable characters are found in hostname, pick a new name</comment>
+        <translation>Το όνομα του υπολογιστή σας περιέχει μη έγκυρους χαρακτήρες.
+Θα πρέπει πριν προχωρήσετε να επιλέξετε διαφορετικό.</translation>
+    </message>
+</context>
+<context>
+    <name>TweakSuperKey</name>
+    <message>
+        <location filename="../tweak_superkey.cpp" line="43"/>
+        <source>Select application to run</source>
+        <comment>will show in file dialog when selection an application to run</comment>
+        <translation>Επιλογή εφαρμογής για εκτέλεση</translation>
+    </message>
+</context>
+<context>
+    <name>TweakTheme</name>
+    <message>
+        <location filename="../tweak_theme.cpp" line="65"/>
+        <source>Plasma Widget Themes</source>
+        <comment>theme style of the kde plasma widgets</comment>
+        <translation>Θέματα Widget Plasma</translation>
+    </message>
+    <message>
+        <location filename="../tweak_theme.cpp" line="66"/>
+        <source>Color Schemes</source>
+        <comment>plasma widget color schemes</comment>
+        <translation>Χρωματικά σχήματα</translation>
+    </message>
+    <message>
+        <location filename="../tweak_theme.cpp" line="67"/>
+        <source>Plasma Look &amp; Feel Global Themes</source>
+        <comment>plasma global themes</comment>
+        <translation>Plasma Look &amp; Feel Παγκόσμια θέματα</translation>
+    </message>
+    <message>
+        <location filename="../tweak_theme.cpp" line="140"/>
+        <source>Choose a theme set</source>
+        <translation>Επιλογή θέματος</translation>
+    </message>
+    <message>
+        <location filename="../tweak_theme.cpp" line="588"/>
+        <source>MX Tweak</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location filename="../tweak_theme.cpp" line="589"/>
+        <source>Could not determine the current Xfce panel configuration.</source>
+        <translation type="unfinished"/>
+    </message>
+</context>
+<context>
+    <name>TweakXfcePanel</name>
+    <message>
+        <location filename="../tweak_xfce_panel.cpp" line="17"/>
+        <source>Horizontal (Bottom)</source>
+        <translation>Οριζόντια (κάτω)</translation>
+    </message>
+    <message>
+        <location filename="../tweak_xfce_panel.cpp" line="18"/>
+        <source>Horizontal (Top)</source>
+        <translation>Οριζόντια (επάνω)</translation>
+    </message>
+    <message>
+        <location filename="../tweak_xfce_panel.cpp" line="20"/>
+        <source>Vertical (Left)</source>
+        <translation>Κάθετα (αριστερά)</translation>
+    </message>
+    <message>
+        <location filename="../tweak_xfce_panel.cpp" line="21"/>
+        <source>Vertical (Right)</source>
+        <translation>Κάθετα (δεξιά)</translation>
+    </message>
+    <message>
+        <location filename="../tweak_xfce_panel.cpp" line="23"/>
+        <source>docklike</source>
+        <translation>docklike</translation>
+    </message>
+    <message>
+        <location filename="../tweak_xfce_panel.cpp" line="24"/>
+        <source>Window Buttons</source>
+        <translation>Κουμπιά παραθύρων</translation>
+    </message>
+    <message>
+        <location filename="../tweak_xfce_panel.cpp" line="276"/>
+        <location filename="../tweak_xfce_panel.cpp" line="283"/>
+        <location filename="../tweak_xfce_panel.cpp" line="300"/>
+        <location filename="../tweak_xfce_panel.cpp" line="304"/>
+        <source>MX Tweak</source>
+        <translation>MX Ρυθμίσεις</translation>
+    </message>
+    <message>
+        <location filename="../tweak_xfce_panel.cpp" line="277"/>
+        <source>Plese remove special characters</source>
+        <translation>Παρακαλώ αφαιρέστε τους ειδικούς χαρακτήρες</translation>
+    </message>
+    <message>
+        <location filename="../tweak_xfce_panel.cpp" line="277"/>
+        <source>from file name</source>
+        <translation>από το όνομα του αρχείου</translation>
+    </message>
+    <message>
+        <location filename="../tweak_xfce_panel.cpp" line="283"/>
+        <source>File name already exists.  Choose another name</source>
+        <translation>Το όνομα του αρχείου υπάρχει.  Επιλέξτε άλλο όνομα</translation>
+    </message>
+    <message>
+        <location filename="../tweak_xfce_panel.cpp" line="301"/>
+        <source>File is not a valid tar.xz archive file</source>
+        <translation>Δεν είναι έγκυρο αρχείο μορφής tar.xz</translation>
+    </message>
+    <message>
+        <location filename="../tweak_xfce_panel.cpp" line="305"/>
+        <source>Archive does not contain a panel config</source>
+        <translation>Το αρχείο δεν περιέχει ρυθμίσεις ταμπλό</translation>
+    </message>
+    <message>
+        <location filename="../tweak_xfce_panel.cpp" line="736"/>
+        <source>Panel Preferences</source>
+        <translation>Προτιμήσεις ταμπλό</translation>
     </message>
 </context>
 <context>
@@ -63,1010 +1078,45 @@
         <translation>Κυρίως παράθυρο</translation>
     </message>
     <message>
-        <location filename="../brightness_small.ui" line="39"/>
-        <source>Save</source>
-        <translation>Αποθήκευση</translation>
-    </message>
-    <message>
-        <location filename="../brightness_small.ui" line="59"/>
-        <source>Software (xrandr) Brightness</source>
-        <translation>Φωτεινότητα (xrandr)</translation>
-    </message>
-    <message>
-        <location filename="../brightness_small.ui" line="66"/>
-        <location filename="../brightness_small.ui" line="87"/>
-        <source>TextLabel</source>
-        <translation>Επικεφαλίδα</translation>
-    </message>
-    <message>
-        <location filename="../brightness_small.ui" line="80"/>
-        <source>Hardware Backlight</source>
-        <translation>Οπίσθιος φωτισμός</translation>
-    </message>
-    <message>
-        <location filename="../brightness_small.ui" line="94"/>
+        <location filename="../brightness_small.ui" line="34"/>
         <source>&gt;&gt;</source>
         <translation>&gt;&gt;</translation>
     </message>
     <message>
-        <location filename="../brightness_small.cpp" line="33"/>
-        <source>MX-Tweak</source>
-        <translation>MX Ρυθμίσεις</translation>
+        <location filename="../brightness_small.ui" line="41"/>
+        <source>Software (xrandr) Brightness</source>
+        <translation>Φωτεινότητα (xrandr)</translation>
     </message>
     <message>
-        <location filename="../brightness_small.cpp" line="58"/>
-        <source>Display</source>
-        <translation>Οθόνη</translation>
+        <location filename="../brightness_small.ui" line="61"/>
+        <location filename="../brightness_small.ui" line="89"/>
+        <source>TextLabel</source>
+        <translation>Κείμενο ετικέτας</translation>
     </message>
     <message>
-        <location filename="../brightness_small.cpp" line="63"/>
-        <source>&amp;Quit</source>
-        <translation>&amp;Έξοδος</translation>
-    </message>
-</context>
-<context>
-    <name>defaultlook</name>
-    <message>
-        <location filename="../defaultlook.ui" line="20"/>
-        <location filename="../defaultlook.cpp" line="60"/>
-        <location filename="../defaultlook.cpp" line="108"/>
-        <location filename="../defaultlook.cpp" line="674"/>
-        <location filename="../defaultlook.cpp" line="693"/>
-        <location filename="../defaultlook.cpp" line="702"/>
-        <location filename="../defaultlook.cpp" line="749"/>
-        <location filename="../defaultlook.cpp" line="757"/>
-        <location filename="../defaultlook.cpp" line="784"/>
-        <location filename="../defaultlook.cpp" line="787"/>
-        <source>MX Tweak</source>
-        <translation>MX Ρυθμίσεις</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="41"/>
-        <source>Xfce Settings</source>
-        <translation>Ρυθμίσεις Xfce</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="107"/>
-        <source>About</source>
-        <translation>Περί</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="118"/>
-        <source>Help</source>
-        <translation>Βοήθεια</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="135"/>
-        <source>Quit application</source>
-        <translation>Κλείσιμο εφαρμογής</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="138"/>
-        <source>Close</source>
-        <translation>Κλείσιμο</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="145"/>
-        <source>Alt+N</source>
-        <translation>Alt+N</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="165"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the panel&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Προτιμήσεις ταμπλό&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="175"/>
-        <location filename="../defaultlook.ui" line="259"/>
-        <source>Panel</source>
-        <translation>Ταμπλό</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="195"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configure window behavior and shortcuts&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ρύθμιση παραθύρων και συντομεύσεων&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="209"/>
-        <source>Window Manager</source>
-        <translation>Διαχειριστής παραθύρων</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="229"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Customize the look of your desktop&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Προσαρμογή εμφάνισης της επιφάνειας εργασίας&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="243"/>
-        <source>Appearance</source>
-        <translation>Εμφάνιση</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="270"/>
-        <source>Display panel horizontally</source>
-        <extracomment>panel will be shown in a horizontal configuration</extracomment>
-        <translation>Οριζόντια απεικόνιση του ταμπλό</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="280"/>
-        <source>Volume</source>
-        <extracomment>volume plugin scale factor</extracomment>
-        <translation>Μέγεθος</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="287"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <extracomment>affects the docklike plugin</extracomment>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Docklike&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="294"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Affects all panels&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Επηρεάζει όλα τα ταμπλό&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="314"/>
-        <location filename="../defaultlook.ui" line="1798"/>
-        <source>Bottom</source>
-        <translation>Κάτω</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="319"/>
-        <location filename="../defaultlook.ui" line="1808"/>
-        <source>Top</source>
-        <translation>Επάνω</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="327"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Tasklist&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Λίστα εργασιών&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="334"/>
-        <source>Display panel vertically</source>
-        <extracomment>panel will be shown in a vertical configuration</extracomment>
-        <translation>Κάθετη απεικόνιση του ταμπλό</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="349"/>
-        <location filename="../defaultlook.ui" line="1787"/>
-        <source>Affects 1st panel</source>
-        <extracomment>acts on the first poanel found in Xfce panel xml fle</extracomment>
-        <translation>Επηρεάζει το 1ο ταμπλό</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="356"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Panel Plugin Scales&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Κλίμακες προσθέτων στο ταμπλό&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="376"/>
-        <source>Backup current panel configuration</source>
-        <extracomment>backup existing panel configuration</extracomment>
-        <translation>Αποθήκευση της τρέχουσας διαμόρφωσης του ταμπλό</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="386"/>
-        <location filename="../defaultlook.ui" line="446"/>
-        <source>Options</source>
-        <translation>Επιλογές</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="406"/>
-        <source>Power Manager</source>
-        <extracomment>power manager plugin scale factor</extracomment>
-        <translation>Του πρόσθετου διαχειριστή ρεύματος</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="413"/>
-        <source>Restore backup panel configuration</source>
-        <extracomment>restore a panel backup</extracomment>
-        <translation>Επαναφορά της αποθηκευμένης διαμόρφωσης του ταμπλό</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="436"/>
-        <source>Set Scales</source>
-        <extracomment>set a scale factor</extracomment>
-        <translation>Κλίμακα</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="466"/>
-        <location filename="../defaultlook.ui" line="1803"/>
-        <source>Left</source>
-        <translation>Αριστερά</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="471"/>
-        <location filename="../defaultlook.ui" line="1813"/>
-        <source>Right</source>
-        <translation>Δεξιά</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="479"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Buttons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <extracomment>affects the window button plugin</extracomment>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Κουμπιά παραθύρων&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="500"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Docklike is the modern dock plugin for the panel.  Window Buttons is the classic tasklist without dock features.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Το πρόσθετο Docklike είναι ένα σύγχρονο dock για το ταμπλό.  Τα κουμπιά των παραθύρων είναι η κλασική λίστα εργασιών χωρίς άλλες δυνατότητες.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="523"/>
-        <location filename="../defaultlook.ui" line="722"/>
-        <location filename="../defaultlook.ui" line="896"/>
-        <location filename="../defaultlook.ui" line="1064"/>
-        <location filename="../defaultlook.ui" line="1071"/>
-        <location filename="../defaultlook.ui" line="1078"/>
-        <location filename="../defaultlook.ui" line="1145"/>
-        <location filename="../defaultlook.ui" line="1290"/>
-        <location filename="../defaultlook.ui" line="1839"/>
-        <location filename="../defaultlook.ui" line="1898"/>
-        <location filename="../defaultlook.ui" line="2045"/>
-        <source>Apply</source>
-        <extracomment>apply changes</extracomment>
-        <translation>Εφαρμογή</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="543"/>
-        <source>Restore default panel</source>
-        <extracomment>affects any panel that is curently configured</extracomment>
-        <translation>Επαναφορά προεπιλεγμένου ταμπλό</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="553"/>
-        <source>Set Tasklist plugin to:</source>
-        <extracomment>change the tasklist plugin</extracomment>
-        <translation>Καθορισμός πρόσθετου λίστας εργασιών σε:</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="567"/>
-        <source>Theme</source>
-        <translation>Θέμα</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="575"/>
-        <source>Preview</source>
-        <translation>Προεπισκόπηση</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="582"/>
-        <source>Remove User Theme Set</source>
-        <translation>Αφαίρεση θέματος</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="593"/>
-        <source>Save Current Settings as a Theme Set</source>
-        <extracomment>save theme settings as a group</extracomment>
-        <translation>Αποθήκευση των ρυθμίσεων σαν θέμα</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="604"/>
-        <source>default</source>
-        <extracomment>default pointer size determined by X server</extracomment>
-        <translation>προεπιλογή</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="617"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Themes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Θέματα&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="624"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <extracomment>icon theme</extracomment>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Εικονίδια&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="631"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Cursors&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <extracomment>cursor theme</extracomment>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Δείκτες ποντικιού&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="638"/>
-        <source>Size</source>
-        <extracomment>size of the mouse pointer or cursor</extracomment>
-        <translation>Μέγεθος</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="651"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Window Manager&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <extracomment>theme a window manager border will get</extracomment>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Διαχειριστής παραθύρων&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="666"/>
-        <source>Theme Options</source>
-        <translation>Επιλογές</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="682"/>
-        <source>Undo</source>
-        <translation>Αναίρεση</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="689"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Application&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <extracomment>theme an application will get</extracomment>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Εφαρμογή&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="745"/>
-        <location filename="../defaultlook.ui" line="756"/>
-        <source>Compositor</source>
-        <translation>Συνθέτης</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="763"/>
-        <source>Transparency and shadow options</source>
-        <translation>Επιλογές διαφάνειας και σκιάς</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="783"/>
-        <source>None</source>
-        <translation>Κανένας</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="788"/>
-        <source>Xfwm (Xfce) Compositor</source>
-        <translation>Xfwm (Xfce)</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="793"/>
-        <source>Compton </source>
-        <translation>Compton </translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="802"/>
-        <source>auto</source>
-        <translation>auto</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="807"/>
-        <source>glx</source>
-        <translation>glx</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="812"/>
-        <source>xpresent</source>
-        <translation>xpresent</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="817"/>
-        <location filename="../defaultlook.ui" line="1403"/>
-        <source>off</source>
-        <extracomment>setting to 0 turns off screensaver screen blank</extracomment>
-        <translation>off</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="838"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Changing the VBlank mode may help alleviate some screen tearing issues.  See Help for more information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Η αλλαγή στη λειτουργία VBlank μπορεί να βοηθήσει στην επίλυση ορισμένων ζητημάτων απεικόνισης. Δείτε τη βοήθεια για περισσότερες πληροφορίες.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="841"/>
-        <source>VBlank</source>
-        <translation>VBlank</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="848"/>
-        <source>Launch compton-conf configuration tool</source>
-        <translation>Άνοιγμα του εργαλείου Compton-conf</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="851"/>
-        <source>Compton settings</source>
-        <translation>Ρυθμίσεις Compton</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="862"/>
-        <source>Edit compton.conf directly in text editor</source>
-        <translation>Επεξεργασία του compton.conf με τον επεξεργαστή κειμένου</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="865"/>
-        <source>Edit compton.conf</source>
-        <translation>Επεξεργασία του compton.conf</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="876"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Xfce Compositor Settings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ρυθμίσεις συνθέτη Xfce&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="879"/>
-        <source>Xfwm Settings</source>
-        <translation>Ρυθμίσεις Xfwm</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="919"/>
-        <source>Display</source>
-        <translation>Οθόνη</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="930"/>
-        <source>Hardware Backlight</source>
-        <extracomment>set the hardware backlight on monitors that have them</extracomment>
-        <translation>Οπίσθιος φωτισμός</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="937"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Display Tweaks&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ρυθμίσεις οθόνης&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="964"/>
-        <source>Choose Display for xrandr tweaks</source>
-        <extracomment>choose the display that the xrandr tweaks will be acted upon</extracomment>
-        <translation>Επιλογή οθόνης για τροποποιήσεις xrandr</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="974"/>
-        <source>Resolution</source>
-        <translation>Ανάλυση</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="981"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Saving is per display&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Αποθήκευση ανά οθόνη&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="984"/>
+        <location filename="../brightness_small.ui" line="68"/>
         <source>Save</source>
         <translation>Αποθήκευση</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="991"/>
-        <source>Software (xrandr) Brightness</source>
-        <extracomment>adjust brightness (not backlight) via software</extracomment>
-        <translation>Φωτεινότητα (xrandr)</translation>
+        <location filename="../brightness_small.ui" line="75"/>
+        <source>Hardware Backlight</source>
+        <translation>Οπίσθιος φωτισμός</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="998"/>
-        <location filename="../defaultlook.ui" line="1095"/>
-        <source>TextLabel</source>
-        <translation>Επικεφαλίδα</translation>
+        <location filename="../brightness_small.cpp" line="35"/>
+        <source>Brightness</source>
+        <translation>Φωτεινότητα</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1005"/>
-        <source>GTK scaling</source>
-        <extracomment>gtk scale factor</extracomment>
-        <translation>Κλίμακα GTK</translation>
+        <location filename="../brightness_small.cpp" line="54"/>
+        <source>Display</source>
+        <translation>Οθόνη</translation>
     </message>
     <message>
-        <location filename="../defaultlook.ui" line="1025"/>
-        <source>xrandr Scaling</source>
-        <extracomment>xrandr scale factor</extracomment>
-        <translation>Κλίμακα xrandr</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1121"/>
-        <source>Config Options</source>
-        <translation>Επιλογές ρυθμίσεων</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1132"/>
-        <source>Disable shortening of long filenames on the desktop</source>
-        <translation>Απενεργοποίηση σύμπτυξης μεγάλων ονομάτων αρχείων στην επιφάνεια εργασίας</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1156"/>
-        <source>                   note: to hibernate, swap needs to be &gt;= RAM</source>
-        <translation>                   σημείωση: για την αδρανοποίηση πρέπει το swap να είναι &gt;= RAM</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1176"/>
-        <source>Enable single-click on desktop</source>
-        <translation>Ενεργοποίηση του μονό κλικ στην επιφάνεια εργασίας</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1183"/>
-        <source>Enable hibernate on Log Out menu </source>
-        <translation>Ενεργοποίηση της αδρανοποίησης στο μενού αποσύνδεσης </translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1190"/>
-        <location filename="../defaultlook.ui" line="1324"/>
-        <source>Reset Thunar custom right-click actions to system defaults</source>
-        <translation>Επαναφορά των προσαρμοσμένων ενεργειών του δεξιού κλικ στο Thunar στις προεπιλογές του συστήματος</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1197"/>
-        <location filename="../defaultlook.ui" line="1375"/>
-        <source>Enable single-click in Thunar File Manager</source>
-        <translation>Ενεργοποίηση του μονό κλικ στο διαχειριστή αρχείων Thunar</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1204"/>
-        <location filename="../defaultlook.ui" line="1636"/>
-        <source>Thunar windows always open in split view</source>
-        <translation>Τα παράθυρα του Thunar ανοίγουν πάντα σε διαχωρισμένη προβολή</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1211"/>
-        <location filename="../defaultlook.ui" line="1568"/>
-        <source>Thunar split view opens horizontal</source>
-        <translation>Οριζόντιο άνοιγμα διαχωρισμένης προβολής στο Thunar</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1218"/>
-        <source>Show percentages in notifcations when available</source>
-        <translation>Εμφάνιση ποσοστών στις ειδοποιήσεις όταν αυτό είναι διαθέσιμο</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1225"/>
-        <source>Enable Desktop Zoom </source>
-        <translation>Ενεργοποίηση μεγένθυνσης της επιφάνειας εργασίας </translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1232"/>
-        <location filename="../defaultlook.ui" line="1754"/>
-        <source>Show windows from all workspaces in panel</source>
-        <translation>Εμφάνιση των παραθύρων από όλους τους χώρους εργασίας στο ταμπλό</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1239"/>
-        <source>Show GTK File Dialog action buttons at bottom of dialogs</source>
-        <translation>Στα παράθυρα GTK εμφάνιση των κουμπιών στο κάτω μέρος</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1246"/>
-        <source>( also turns off Client Side Decorations for Xfce applications)</source>
-        <translation>(και κλείσιμο του Client Side Decorations στις εφαρμογές του Xfce)</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1259"/>
-        <source>Fluxbox</source>
-        <translation>Fluxbox</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1271"/>
-        <location filename="../defaultlook.ui" line="1611"/>
-        <source>On</source>
-        <translation>Ενεργοποίηση</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1276"/>
-        <location filename="../defaultlook.ui" line="1616"/>
-        <source>Off</source>
-        <translation>Απενεργοποίηση</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1297"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Thunar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Thunar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1304"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Toolbar Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ρυθμίσεις γραμμής εργαλείων&lt;/span&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1344"/>
-        <source>Toggle icon captions</source>
-        <translation>Εναλλαγή λεζάντας εικονιδίων</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1351"/>
-        <source>Reset Fluxbox Menu</source>
-        <translation>Επαναφορά μενού του Fluxbox</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1368"/>
-        <source>Width</source>
-        <translation>Πλάτος</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1382"/>
-        <source>Toggle desktop icons</source>
-        <translation>Εναλλαγή εικονιδίων στην επιφάνεια εργασίας</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1389"/>
-        <location filename="../defaultlook.ui" line="1413"/>
-        <source>Autohide</source>
-        <translation>Αυτόματη απόκρυψη</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1396"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Dock Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ρυθμίσεις dock&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1487"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Desktop Icons&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Εικονίδια επιφάνειας εργασίας&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1561"/>
-        <source>Reset DefaultDock</source>
-        <translation>Επαναφορά DefaultDock</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1575"/>
-        <source>Manage Tint2 Panel</source>
-        <translation>Διαχείρηση ταμπλό Tint2</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1586"/>
-        <source>Height</source>
-        <translation>Ύψος</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1593"/>
-        <location filename="../defaultlook.ui" line="1629"/>
-        <location filename="../defaultlook.ui" line="1761"/>
-        <source>Placement</source>
-        <translation>Τοποθέτηση</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1600"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Screensaver&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <extracomment>screensaver screen blank settings</extracomment>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Προφύλαξη οθόνης&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1621"/>
-        <source>On Hover</source>
-        <translation>Σε πέρασμα του δείκτη</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1643"/>
-        <location filename="../defaultlook.ui" line="1721"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reset Defaults&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Επαναφορά προεπιλογών&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1650"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add new default menu items, if any, to existing fluxbox menu.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Προσθήκη νέων καταχωρήσεων στο μενού του fluxbox, αν υπάρχουν.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1653"/>
-        <source>Upgrade existing menu entries</source>
-        <translation>Αναβάθμιση καταχωρήσεων μενού</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1673"/>
-        <source>Show Toolbar</source>
-        <translation>Εμφάνιση εργαλειοθήκης</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1690"/>
-        <source>Reset ALL mx-fluxbox settings</source>
-        <translation>Επαναφορά ΟΛΩΝ των ρυθμίσεων του mx-fluxbox</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1697"/>
-        <source>Idle time (minutes)</source>
-        <extracomment>set the time of inactivity  before screensaver screen blank occurs</extracomment>
-        <translation>Χρόνος αδράνειας (λεπτά)</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1710"/>
-        <source>Plasma</source>
-        <translation>Plasma</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1768"/>
-        <source>Enable single-click</source>
-        <translation>Ενεργοποίηση του απλό κλικ</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1775"/>
-        <source>Reset KDE/Plasma defaults</source>
-        <translation>Επαναφορά προεπιλογών KDE/Plasma</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1826"/>
-        <source>Workspace</source>
-        <translation>Χώρος εργασίας</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1850"/>
-        <source>Autostart plasma-discover system tray update notification utility</source>
-        <extracomment>enable or disable autostartup of plasma-discover updater utility on login</extracomment>
-        <translation>Αυτόματη εκκίνηση του βοηθητικού προγράμματος του δοχείου συστήματος plasma-discover για ειδοποιήσεις και ενημερώσεις</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1860"/>
-        <source>Super Key</source>
-        <extracomment>referring to the meta or Left Super Key</extracomment>
-        <translation>Super Key</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1868"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Choose application&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <extracomment>description of button action to launch file dialog to choose an application</extracomment>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Επιλογή εφαρμογής&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1881"/>
-        <source>Xfce-superkey defaults</source>
-        <extracomment>indicates that xfce-superkey will select a command by its default logic</extracomment>
-        <translation>Προεπιλεγμένη εντολή του Xfce για το superkey</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1888"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Also known as the &amp;quot;windows&amp;quot; key&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Γνωστό και ως κουμπί των &amp;quot;windows&amp;quot;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1891"/>
-        <source>Command to run with Super (Meta) key</source>
-        <extracomment>label for the field to enter the command to use with super key</extracomment>
-        <translation>Εντολή που θέλετε να εκτελεί το κουμπί Super (Meta)</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1921"/>
-        <source>Other</source>
-        <translation>Άλλα</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1929"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;requires reboot&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;απαιτείται επανεκκίνηση&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1932"/>
-        <source>Enable Bluetooth adapters on boot</source>
-        <translation>Ενεργοποίηση οδηγών Bluetooth στην εκκίνηση</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1939"/>
-        <source>Use intel driver instead of default &quot;modesetting&quot; driver (requires restart)</source>
-        <translation>Χρήση του προγράμματος οδήγησης intel αντί του προεπιλεγμένου &quot;modesetting&quot; (απαιτείται επανεκκίνηση)</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1946"/>
-        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
-        <translation>          ΣΗΜΕΙΩΣΗ: Θα δημιουργηθεί αντίγραφο ασφαλείας του αρχείου /etc/X11/xorg.conf.d/20-radeon.conf στον αρχικό φάκελο του χρήστη</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1953"/>
-        <source>Reset Lightdm (login screen) to system default theme</source>
-        <translation>Επαναφορά του προεπιλεγμένου θέματος στο Lightdm (οθόνη σύνδεσης)</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1960"/>
-        <source>Root</source>
-        <translation>Root</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1970"/>
-        <source>Change computer name (requires reboot)</source>
-        <extracomment>option to change the system hostname, requires a reboot to be 100% effective</extracomment>
-        <translation>Αλλαγή ονόματος του υπολογιστή (απαιτείται επανεκκίνηση)</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1977"/>
-        <source>Enable kernel sandbox</source>
-        <translation>Ενεργοποίηση sandbox του πυρήνα</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1984"/>
-        <source>Enable mounting of internal drives by non-root users</source>
-        <translation>Ενεργοποίηση προσάρτησης εσωτερικών δίσκων από μη διαχειριστές</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1991"/>
-        <source>Enable Bluetooth battery info for connected devices (requires system restart)</source>
-        <extracomment>expose battery info for connected bluetooth devices to the operating system via dbus</extracomment>
-        <translation>Ενεργοποίηση πληροφοριών μπαταρίας για τις συνδεδεμένες συσκευές Bluetooth (απαιτείται επανεκκίνηση του συστήματος)</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="1998"/>
-        <source>Apt installs additional &quot;recommends&quot; packages as dependencies</source>
-        <translation>Το apt εγκαθιστά και τα &quot;προτεινόμενα&quot; πακέτα ως εξαρτήσεις</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2015"/>
-        <source>Password for administrative tasks:</source>
-        <translation>Κωδικός πρόσβασης για εργασίες διαχειριστή:</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2022"/>
-        <source>put a hold or remove a hold on updates of Liquorix kernels</source>
-        <extracomment>toggle for apt hold action on update meta packages</extracomment>
-        <translation>αναμονή ή αφαίρεση αναμονής στις ενημερώσεις των πυρήνων Liquorix</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2025"/>
-        <source>Enable Automatic Liquorix Kernel Updates (MX ahs repository)</source>
-        <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
-        <translation>Ενεργοποίηση αυτόματων ενημερώσεων του πυρήνα Liquorix (αποθετήριο MX ahs)</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2032"/>
-        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
-        <translation>          ΣΗΜΕΙΩΣΗ: Θα δημιουργηθεί αντίγραφο ασφαλείας του αρχείου /etc/X11/xorg.conf.d/20-amd.conf  στον αρχικό φάκελο του χρήστη</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2056"/>
-        <source>Use tearfree radeon driver option</source>
-        <translation>Χρήση της επιλογής tearfree στο πρόγραμμα οδήγησης radeon</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2063"/>
-        <source>Use tearfree amdgpu option</source>
-        <translation>Χρήση της επιλογής tearfree στο πρόγραμμα οδήγησης amdgpu</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2070"/>
-        <source>Change Default Display Manager (login screen) (requires reboot)</source>
-        <extracomment>option to change display manager login screen.  present if more than one display manager is installed</extracomment>
-        <translation>Αλλαγή προεπιλεγμένου διαχειριστή οθόνης (οθόνη σύνδεσης) (απαιτεί επανεκκίνηση)</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2077"/>
-        <source>Use Client Side Decorations (CSD) on GTK3 applications that support them (requires session restart)</source>
-        <translation>Χρήση Client Side Decorations (CSD) σε εφαρμογές GTK3 που τις υποστηρίζουν (απαιτείται επανεκκίνηση της συνεδρίας)</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2084"/>
-        <source>&amp;User</source>
-        <translation>&amp;Χρήστης</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2091"/>
-        <source>put a hold or remove a hold on updates of Debian  kernels</source>
-        <extracomment>toggle for apt hold action on update meta packages</extracomment>
-        <translation>αναμονή ή αφαίρεση αναμονής στις ενημερώσεις των πυρήνων Debian</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2094"/>
-        <source>Enable Automatic Debian Kernel Updates</source>
-        <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
-        <translation>Ενεργοποίηση αυτόματων ενημερώσεων του πυρήνα Debian</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2114"/>
-        <source>          NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
-        <translation>          ΣΗΜΕΙΩΣΗ: Θα δημιουργηθεί αντίγραφο ασφαλείας του αρχείου /etc/X11/xorg.conf.d/20-intel.conf στον αρχικό φάκελο του χρήστη</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2121"/>
-        <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
-        <translation>Δημιουργία μενού εφαρμογών του fluxbox μετά την εγκατάσταση, την αφαίρεση και τις ενημερώσεις του πακέτου</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2128"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Early loading of KVM module is new to  kernel 6.12 and conflicts with some non-KVM virtual machine applications, including virtualbox &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <extracomment>early loading is new on 6.12 kernel and conflicts with virtualbox</extracomment>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Η πρόωρη φόρτωση της μονάδας KVM είναι νέα στον πυρήνα 6.12 και συγκρούεται με ορισμένες εφαρμογές εικονικών μηχανών που δεν είναι KVM, συμπεριλαμβανομένου του virtuabox &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.ui" line="2131"/>
-        <source>Disable early KVM module load (must be disabled for Virtualbox operation on kernel 6.12 and up)</source>
-        <extracomment>disable early loading of KVM module.  necessary for virtualbox to function with kernels 6.12 and up.  actually default behavior on kernels 6.11 and earlier.</extracomment>
-        <translation>Απενεργοποίηση της πρόωρης φόρτωσης μονάδων KVM (πρέπει να είναι απενεργοποιημένη για τη λειτουργία του Virtualbox σε πυρήνα 6.12 και άνω)</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.cpp" line="61"/>
-        <source>--display switch only valid for Xfce</source>
-        <translation>--διακόπτης οθόνης μόνο για το Xfce</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.cpp" line="673"/>
-        <source>About MX Tweak</source>
-        <translation>Περί του MX Ρυθμίσεις</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.cpp" line="675"/>
-        <source>Version: </source>
-        <translation>Έκδοση: </translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.cpp" line="676"/>
-        <source>App for quick default ui theme changes and tweaks</source>
-        <translation>Εφαρμογή για γρήγορες αλλαγές και διορθώσεις του προεπιλεγμένου θέματος</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.cpp" line="678"/>
-        <source>Copyright (c) MX Linux</source>
-        <translation>Πνευματικά δικαιώματα (c) MX Linux</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.cpp" line="679"/>
-        <source>%1 License</source>
-        <translation>Άδεια %1</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.cpp" line="693"/>
-        <source>%1 Help</source>
-        <translation>Βοήθεια %1</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.cpp" line="703"/>
-        <source>Finished! Firefox may require a restart for changes to take effect</source>
-        <translation>Ολοκληρώθηκε! Το Firefox μπορεί να χρειαστεί επανεκκίνηση για να ισχύσουν οι αλλαγές</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.cpp" line="750"/>
-        <source>Plese remove special characters</source>
-        <translation>Παρακαλώ αφαιρέστε τους ειδικούς χαρακτήρες</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.cpp" line="750"/>
-        <source>from file name</source>
-        <translation>από το όνομα του αρχείου</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.cpp" line="757"/>
-        <source>File name already exists.  Choose another name</source>
-        <translation>Υπάρχει το όνομα του αρχείου.  Επιλέξτε άλλο όνομα</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.cpp" line="785"/>
-        <source>File is not a valid tar.xz archive file</source>
-        <translation>Το αρχείο δεν είναι έγκυρο αρχείο αρχειοθέτησης tar.xz</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.cpp" line="788"/>
-        <source>Archive does not contain a panel config</source>
-        <translation>Το αρχείο δεν περιέχει ρυθμίσεις του ταμπλό</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.cpp" line="963"/>
-        <source>Panel settings</source>
-        <translation>Ρυθμίσεις ταμπλό</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.cpp" line="964"/>
-        <source>Your current panel settings have been backed up in a hidden folder called .restore in your home folder (~/.restore/)</source>
-        <translation>Οι τρέχουσες ρυθμίσεις του ταμπλό σας αποθηκεύτηκαν σαν αντίγραφο ασφαλείας, σε έναν κρυφό φάκελο με όνομα .restore στον αρχικό κατάλογο του χρήστη (~/.restore /)</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.cpp" line="1665"/>
-        <source>Plasma Widget Themes</source>
-        <comment>theme style of the kde plasma widgets</comment>
-        <translation>Θέματα Widget Plasma</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.cpp" line="1666"/>
-        <source>Color Schemes</source>
-        <comment>plasma widget color schemes</comment>
-        <translation>Χρωματικά σχήματα</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.cpp" line="1667"/>
-        <source>Plasma Look &amp; Feel Global Themes</source>
-        <comment>plasma global themes</comment>
-        <translation>Plasma Look &amp; Feel Παγκόσμια θέματα</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.cpp" line="1935"/>
-        <source>settings</source>
-        <translation>ρυθμίσεις</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.cpp" line="2276"/>
-        <source>Choose a theme set</source>
-        <translation>Επιλογή θέματος</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.cpp" line="2740"/>
-        <source>Please enter a computer name.</source>
-        <comment>question to enter a name for the computer hostname</comment>
-        <translation>Εισαγάγετε ένα όνομα υπολογιστή.</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.cpp" line="2744"/>
-        <source>Sorry, your computer name contains invalid characters.
-You&apos;ll have to select a different
-name before proceeding.</source>
-        <comment>unacceptable characters are found in hostname, pick a new name</comment>
-        <translation>Λυπούμαστε, το όνομα του υπολογιστή σας περιέχει μη έγκυρους χαρακτήρες.
-Θα πρέπει να επιλέξετε διαφορετικό
-πριν προχωρήσετε.</translation>
-    </message>
-    <message>
-        <location filename="../defaultlook.cpp" line="4386"/>
-        <source>Select application to run</source>
-        <comment>will show in file dialog when selection an application to run</comment>
-        <translation>Επιλογή εφαρμογής για εκτέλεση</translation>
+        <location filename="../brightness_small.cpp" line="59"/>
+        <source>&amp;Quit</source>
+        <translation>&amp;Έξοδος</translation>
     </message>
 </context>
 <context>
@@ -1094,137 +1144,137 @@ name before proceeding.</source>
     <name>window_buttons</name>
     <message>
         <location filename="../window_buttons.ui" line="14"/>
-        <location filename="../window_buttons.cpp" line="24"/>
+        <location filename="../window_buttons.cpp" line="38"/>
         <source>Window Buttons</source>
         <translation>Κουμπιά παραθύρων</translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="28"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Appearance&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Εμφάνιση&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <location filename="../window_buttons.ui" line="23"/>
+        <source>Appearance</source>
+        <translation>Εμφάνιση</translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="35"/>
+        <location filename="../window_buttons.ui" line="29"/>
         <source>Show button labels</source>
-        <translation>Εμφάνιση ετικετών στα κουμπιά</translation>
+        <translation>Εμφάνιση ετικέτας στα κουμπιά</translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="42"/>
+        <location filename="../window_buttons.ui" line="36"/>
         <source>Show flat buttons</source>
         <translation>Χρήση επίπεδων κουμπιών</translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="49"/>
+        <location filename="../window_buttons.ui" line="43"/>
         <source>Show handle</source>
         <translation>Εμφάνιση χειρολαβής</translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="56"/>
+        <location filename="../window_buttons.ui" line="50"/>
         <source>Sorting Order:</source>
         <translation>Σειρά ταξινόμησης:</translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="64"/>
+        <location filename="../window_buttons.ui" line="58"/>
         <source>Timestamp</source>
         <translation>Χρονοσήμανση</translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="69"/>
+        <location filename="../window_buttons.ui" line="63"/>
         <source>Group title and timestamp</source>
         <translation>Ομαδοποίηση τίτλου και χρόνου</translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="74"/>
+        <location filename="../window_buttons.ui" line="68"/>
         <source>Window Title</source>
         <translation>Τίτλος παραθύρου</translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="79"/>
+        <location filename="../window_buttons.ui" line="73"/>
         <source>Group title and window title</source>
         <translation>Ομαδοποίηση τίτλου και τίτλου παραθύρου</translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="84"/>
+        <location filename="../window_buttons.ui" line="78"/>
         <source>None, allow drag-and-drop</source>
         <translation>Κανένα, να επιτρέπεται η μεταφορά και απόθεση (drag-and-drop)</translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="92"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Behavior&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Συμπεριφορά&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <location filename="../window_buttons.ui" line="89"/>
+        <source>Behavior</source>
+        <translation>Συμπεριφορά</translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="99"/>
+        <location filename="../window_buttons.ui" line="95"/>
         <source>Window grouping:</source>
         <translation>Ομαδοποίηση παραθύρων:</translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="107"/>
+        <location filename="../window_buttons.ui" line="103"/>
         <source>Never</source>
         <translation>Ποτέ</translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="112"/>
+        <location filename="../window_buttons.ui" line="108"/>
         <source>Always</source>
         <translation>Πάντα</translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="120"/>
+        <location filename="../window_buttons.ui" line="116"/>
         <source>Middle click action:</source>
         <translation>Ενέργεια μεσαίου κλικ:</translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="128"/>
+        <location filename="../window_buttons.ui" line="124"/>
         <source>Nothing</source>
         <translation>Τίποτα</translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="133"/>
+        <location filename="../window_buttons.ui" line="129"/>
         <source>Close window</source>
         <translation>Κλείσιμο παραθύρου</translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="138"/>
+        <location filename="../window_buttons.ui" line="134"/>
         <source>Minimize window</source>
         <translation>Ελαχιστοποίηση παραθύρου</translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="146"/>
+        <location filename="../window_buttons.ui" line="142"/>
         <source>Restore minimized windows to current workspace</source>
         <translation>Επαναφορά ελαχιστοποίησης των παραθύρων στο τωρινό χώρο εργασίας</translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="153"/>
+        <location filename="../window_buttons.ui" line="149"/>
         <source>Draw window frame when hovering over a button</source>
         <translation>Σχεδίαση του περιγράμματος παραθύρου όταν ο δείκτης περνάει πάνω από ένα κουμπί</translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="160"/>
+        <location filename="../window_buttons.ui" line="156"/>
         <source>Switch windows using the mouse wheel</source>
         <translation>Εναλλαγή παραθύρων με το τροχό του ποντικιού</translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="167"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Filtering&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Φιλτράρισμα&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <location filename="../window_buttons.ui" line="166"/>
+        <source>Filtering</source>
+        <translation>Φιλτράρισμα</translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="174"/>
+        <location filename="../window_buttons.ui" line="172"/>
         <source>Show windows from all workspaces or viewports</source>
         <translation>Εμφάνιση παραθύρων από όλους τους χώρους εργασίας ή τα παράθυρα προβολής</translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="181"/>
+        <location filename="../window_buttons.ui" line="179"/>
         <source>Show only minimized windows</source>
         <translation>Εμφάνιση μόνο ελαχιστοποιημένων παραθύρων</translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="188"/>
+        <location filename="../window_buttons.ui" line="186"/>
         <source>Show windows from all monitors</source>
         <translation>Προβολή παραθύρων από όλες τις οθόνες</translation>
     </message>
     <message>
-        <location filename="../window_buttons.ui" line="238"/>
+        <location filename="../window_buttons.ui" line="210"/>
         <source>Close</source>
         <translation>Κλείσιμο</translation>
     </message>
@@ -1237,77 +1287,77 @@ name before proceeding.</source>
         <translation>Παράθυρο</translation>
     </message>
     <message>
-        <location filename="../xfwm_compositor_settings.ui" line="42"/>
-        <source>Popup Windows</source>
-        <translation>Διαφάνεια αναδυόμενων παραθύρων</translation>
+        <location filename="../xfwm_compositor_settings.ui" line="23"/>
+        <source>Feature Settings</source>
+        <translation>Ρυθμίσεις χαρακτηριστικών</translation>
     </message>
     <message>
-        <location filename="../xfwm_compositor_settings.ui" line="49"/>
-        <source>Windows during move</source>
-        <translation>Διαφάνεια παραθύρων κατά τη μετακίνηση</translation>
-    </message>
-    <message>
-        <location filename="../xfwm_compositor_settings.ui" line="56"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Opacity Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ρυθμίσεις διαφάνειας&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../xfwm_compositor_settings.ui" line="79"/>
-        <source>Window decorations</source>
-        <translation>Διαφάνεια περιγραμμάτων παραθύρων</translation>
-    </message>
-    <message>
-        <location filename="../xfwm_compositor_settings.ui" line="86"/>
-        <source>Show shadows under dock windows</source>
-        <translation>Εμφάνιση σκιών κάτω από τα παράθυρα dock</translation>
-    </message>
-    <message>
-        <location filename="../xfwm_compositor_settings.ui" line="93"/>
-        <source>Show shadows under popup windows</source>
-        <translation>Εμφάνιση σκιών στα αναδυόμενα παράθυρα</translation>
-    </message>
-    <message>
-        <location filename="../xfwm_compositor_settings.ui" line="100"/>
-        <source>Windows during resize</source>
-        <translation>Διαφάνεια παραθύρων κατά την αλλαγή μεγέθους</translation>
-    </message>
-    <message>
-        <location filename="../xfwm_compositor_settings.ui" line="123"/>
-        <source>Show shadows under regular windows</source>
-        <translation>Εμφάνιση σκιών στα κανονικά παράθυρα</translation>
-    </message>
-    <message>
-        <location filename="../xfwm_compositor_settings.ui" line="130"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Feature Settings&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ρυθμίσεις δυνατοτήτων&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../xfwm_compositor_settings.ui" line="137"/>
-        <source>Show windows preview in place of icons when cycling</source>
-        <translation>Εμφάνιση επισκόπησης των παραθύρων στη θέση των εικονιδίων κατά τη κυκλική εναλλαγή</translation>
-    </message>
-    <message>
-        <location filename="../xfwm_compositor_settings.ui" line="144"/>
+        <location filename="../xfwm_compositor_settings.ui" line="29"/>
         <source>Display fullscreen overlay windows directly</source>
         <translation>Άμεση απεικόνιση των επικαλυπτόμενων παραθύρων πλήρους οθόνης</translation>
     </message>
     <message>
-        <location filename="../xfwm_compositor_settings.ui" line="183"/>
-        <source>Inactive windows</source>
-        <translation>Διαφάνεια ανενεργών παραθύρων</translation>
-    </message>
-    <message>
-        <location filename="../xfwm_compositor_settings.ui" line="190"/>
+        <location filename="../xfwm_compositor_settings.ui" line="36"/>
         <source>Synchronize drawing to vertical blank</source>
         <translation>Συγχρονισμός σχεδίασης σε vblank</translation>
     </message>
     <message>
-        <location filename="../xfwm_compositor_settings.ui" line="212"/>
+        <location filename="../xfwm_compositor_settings.ui" line="43"/>
+        <source>Show windows preview in place of icons when cycling</source>
+        <translation>Εμφάνιση επισκόπησης των παραθύρων στη θέση των εικονιδίων κατά τη κυκλική εναλλαγή</translation>
+    </message>
+    <message>
+        <location filename="../xfwm_compositor_settings.ui" line="50"/>
+        <source>Show shadows under popup windows</source>
+        <translation>Εμφάνιση σκιών στα αναδυόμενα παράθυρα</translation>
+    </message>
+    <message>
+        <location filename="../xfwm_compositor_settings.ui" line="57"/>
+        <source>Show shadows under dock windows</source>
+        <translation>Εμφάνιση σκιών στα παράθυρα του dock</translation>
+    </message>
+    <message>
+        <location filename="../xfwm_compositor_settings.ui" line="64"/>
+        <source>Show shadows under regular windows</source>
+        <translation>Εμφάνιση σκιών στα κανονικά παράθυρα</translation>
+    </message>
+    <message>
+        <location filename="../xfwm_compositor_settings.ui" line="74"/>
+        <source>Opacity Settings</source>
+        <translation>Ρυθμίσεις διαφάνειας</translation>
+    </message>
+    <message>
+        <location filename="../xfwm_compositor_settings.ui" line="80"/>
+        <source>Window decorations</source>
+        <translation>Διαφάνεια περιγραμμάτων παραθύρων</translation>
+    </message>
+    <message>
+        <location filename="../xfwm_compositor_settings.ui" line="103"/>
+        <source>Inactive windows</source>
+        <translation>Διαφάνεια ανενεργών παραθύρων</translation>
+    </message>
+    <message>
+        <location filename="../xfwm_compositor_settings.ui" line="126"/>
+        <source>Windows during move</source>
+        <translation>Διαφάνεια παραθύρων κατά τη μετακίνηση</translation>
+    </message>
+    <message>
+        <location filename="../xfwm_compositor_settings.ui" line="149"/>
+        <source>Windows during resize</source>
+        <translation>Διαφάνεια παραθύρων κατά την αλλαγή μεγέθους</translation>
+    </message>
+    <message>
+        <location filename="../xfwm_compositor_settings.ui" line="172"/>
+        <source>Popup Windows</source>
+        <translation>Διαφάνεια αναδυόμενων παραθύρων</translation>
+    </message>
+    <message>
+        <location filename="../xfwm_compositor_settings.ui" line="205"/>
         <source>Close</source>
         <translation>Κλείσιμο</translation>
     </message>
     <message>
-        <location filename="../xfwm_compositor_settings.cpp" line="23"/>
+        <location filename="../xfwm_compositor_settings.cpp" line="25"/>
         <source>Xfwm Compositor Settings</source>
         <translation>Ρυθμίσεις συνθέτη Xfwm</translation>
     </message>
