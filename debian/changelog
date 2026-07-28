@@ -2,8 +2,10 @@ mx-tweak (26.07.03mx25) mx; urgency=medium
 
   * add siducation disable updates option
   * retool library script to handle all Misc. options selections in one pass
+  * update transations
+  * xdg compliant menu category name
 
- -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 26 Jul 2026 09:11:53 -0400
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Mon, 27 Jul 2026 21:27:44 -0400
 
 mx-tweak (26.07.02mx25) mx; urgency=medium
 
