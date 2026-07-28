@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Vinzenz Vietzke <vinz@vinzv.de>, 2022
+# Vinzenz Vietzke <vv@muibox.de>, 2022
 # Dolphin Oracle <dolphinoracle@gmail.com>, 2022
 # Der Dings, 2023
 # aer, 2023
