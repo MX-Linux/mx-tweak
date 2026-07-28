@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Wallon Wallon, 2023
+# Wallon Wallon, 2026
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-12-03 12:46-0500\n"
 "PO-Revision-Date: 2022-12-03 16:44+0000\n"
-"Last-Translator: Wallon Wallon, 2023\n"
+"Last-Translator: Wallon Wallon, 2026\n"
 "Language-Team: French (Belgium) (https://app.transifex.com/anticapitalista/teams/10162/fr_BE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,7 +24,7 @@ msgstr ""
 #. The desktop entry name will be displayed within the menu.
 #: desktop-in/mx-tweak.desktop.in:5
 msgid "MX Tweak"
-msgstr "MX Ajustements - Tweak"
+msgstr "MX Ajustements - MX Tweak"
 
 #. # The desktop entry comment will be shown within the menu.
 #: desktop-in/mx-tweak.desktop.in:7
@@ -48,14 +48,15 @@ msgstr "application Luminosité dans la barre d’état système / systray"
 #. The desktop entry name will be displayed within the menu.
 #: desktop-in/mx-tweak-tray-app-autostart.desktop.in:7
 msgid "mx-tweak brightness systray"
-msgstr "mx-ajustement de la luminosité dans la barre d’état système / systray"
+msgstr ""
+"icône de luminosité MX Ajustements - MX Tweak dans la zone de notification"
 
 #. # The desktop entry comment will be shown within the menu.
 #: desktop-in/mx-tweak-tray-app-autostart.desktop.in:9
 msgid "starts mx-tweak brightness systray app"
 msgstr ""
-"Lance l’application mx-ajustement de la luminosité dans la barre d’état "
-"système / systray"
+"lance l’application de réglage de la luminosité MX Ajustements - MX Tweak "
+"dans la zone de notification"
 
 #. The desktop entry name will be displayed within the menu.
 #: desktop-in/zcompton.desktop.in:7
@@ -77,4 +78,4 @@ msgstr "restauration-logiciel-luminosité"
 msgid "restore xrandr brightness values stored mx-tweak display tab"
 msgstr ""
 "restaurer les valeurs de luminosité xrandr stockées dans l’onglet "
-"d’affichage mx-ajustement"
+"d’affichage MX Ajustements - MX Tweak"

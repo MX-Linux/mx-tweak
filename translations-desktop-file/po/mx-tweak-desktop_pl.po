@@ -7,6 +7,7 @@
 # Dolphin Oracle <dolphinoracle@gmail.com>, 2022
 # anticapitalista <anticapitalista@riseup.net>, 2022
 # MX Linux Polska <mxlinuxpl@gmail.com>, 2023
+# Marek Adamski, 2025
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-12-03 12:46-0500\n"
 "PO-Revision-Date: 2022-12-03 16:44+0000\n"
-"Last-Translator: MX Linux Polska <mxlinuxpl@gmail.com>, 2023\n"
+"Last-Translator: Marek Adamski, 2025\n"
 "Language-Team: Polish (https://app.transifex.com/anticapitalista/teams/10162/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -40,7 +41,7 @@ msgstr "Pulpit"
 #. The desktop entry name will be displayed within the menu.
 #: desktop-in/mx-tweak-systray.desktop.in:5
 msgid "Brightness Systray"
-msgstr "Jasność Systray"
+msgstr "Jasność w zasobniku systemowym"
 
 #. # The desktop entry comment will be shown within the menu.
 #: desktop-in/mx-tweak-systray.desktop.in:7

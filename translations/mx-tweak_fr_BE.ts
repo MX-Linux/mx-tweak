@@ -51,7 +51,7 @@
     <message>
         <location filename="../main.cpp" line="60"/>
         <source>close application after action instead of minimize to tray.  Requires --traydialog</source>
-        <translation type="unfinished"/>
+        <translation>fermer l’application après l’action au lieu de la réduire dans la zone de notification. Nécessite --traydialog</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="61"/>
@@ -825,7 +825,7 @@
     <message>
         <location filename="../tweak.ui" line="1725"/>
         <source>Enable Automatic Siduction Kernel Updates</source>
-        <translation type="unfinished"/>
+        <translation>Activer les mises à jour automatiques du noyau Siduction</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1736"/>
@@ -991,12 +991,12 @@ Veuillez choisir un nom différent avant de continuer.</translation>
     <message>
         <location filename="../tweak_theme.cpp" line="588"/>
         <source>MX Tweak</source>
-        <translation type="unfinished"/>
+        <translation>MX Ajustements - MX Tweak</translation>
     </message>
     <message>
         <location filename="../tweak_theme.cpp" line="589"/>
         <source>Could not determine the current Xfce panel configuration.</source>
-        <translation type="unfinished"/>
+        <translation>Impossible de déterminer la configuration actuelle du panneau Xfce.</translation>
     </message>
 </context>
 <context>

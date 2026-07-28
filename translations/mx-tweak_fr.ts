@@ -51,7 +51,7 @@
     <message>
         <location filename="../main.cpp" line="60"/>
         <source>close application after action instead of minimize to tray.  Requires --traydialog</source>
-        <translation type="unfinished"/>
+        <translation>fermer l’application après l’action au lieu de la réduire dans la zone de notification. Nécessite --traydialog</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="61"/>
@@ -113,7 +113,7 @@
     <message>
         <location filename="../tweak.ui" line="64"/>
         <source>Set Tasklist plugin to:</source>
-        <translation>Régler le plugin Tasklist sur :</translation>
+        <translation>Régler le plugin Tasklist sur :</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="71"/>
@@ -471,7 +471,7 @@
     <message>
         <location filename="../tweak.ui" line="851"/>
         <source>note: to hibernate, swap needs to be &gt;= RAM</source>
-        <translation>remarque : pour mettre en hibernation, la mémoire swap doit être ⩾ RAM</translation>
+        <translation>remarque : pour mettre en hibernation, la mémoire swap doit être ⩾ RAM</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="885"/>
@@ -708,7 +708,7 @@
     <message>
         <location filename="../tweak.ui" line="1521"/>
         <source>NOTE: existing /etc/X11/xorg.conf.d/20-radeon.conf will be backed up to home folder</source>
-        <translation>REMARQUE : le fichier existant /etc/X11/xorg.conf.d/20-radeon.conf sera sauvegardé dans le dossier home.</translation>
+        <translation>REMARQUE : le fichier existant /etc/X11/xorg.conf.d/20-radeon.conf sera sauvegardé dans le dossier home.</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1528"/>
@@ -738,7 +738,7 @@
     <message>
         <location filename="../tweak.ui" line="1583"/>
         <source>NOTE: existing /etc/X11/xorg.conf.d/20-amd.conf will be backed up to home folder</source>
-        <translation>REMARQUE : le fichier existant /etc/X11/xorg.conf.d/20-amd.conf sera sauvegardé dans le dossier home</translation>
+        <translation>REMARQUE : le fichier existant /etc/X11/xorg.conf.d/20-amd.conf sera sauvegardé dans le dossier home</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1603"/>
@@ -799,7 +799,7 @@
     <message>
         <location filename="../tweak.ui" line="1674"/>
         <source>Password for administrative tasks:</source>
-        <translation>Mot de passe pour les tâches administratives :</translation>
+        <translation>Mot de passe pour les tâches administratives :</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1681"/>
@@ -820,12 +820,12 @@
     <message>
         <location filename="../tweak.ui" line="1718"/>
         <source>NOTE: existing /etc/X11/xorg.conf.d/20-intel.conf will be backed up to home folder</source>
-        <translation>REMARQUE : le fichier existant /etc/X11/xorg.conf.d/20-intel.conf sera sauvegardé dans le dossier home</translation>
+        <translation>REMARQUE : le fichier existant /etc/X11/xorg.conf.d/20-intel.conf sera sauvegardé dans le dossier home</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1725"/>
         <source>Enable Automatic Siduction Kernel Updates</source>
-        <translation type="unfinished"/>
+        <translation>Activer les mises à jour automatiques du noyau Siduction</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1736"/>
@@ -895,7 +895,7 @@
     <message>
         <location filename="../tweak.cpp" line="244"/>
         <source>Version: </source>
-        <translation>Version : </translation>
+        <translation>Version : </translation>
     </message>
     <message>
         <location filename="../tweak.cpp" line="245"/>
@@ -991,12 +991,12 @@ Veuillez choisir un nom différent avant de continuer.</translation>
     <message>
         <location filename="../tweak_theme.cpp" line="588"/>
         <source>MX Tweak</source>
-        <translation type="unfinished"/>
+        <translation>MX Ajustements - MX Tweak</translation>
     </message>
     <message>
         <location filename="../tweak_theme.cpp" line="589"/>
         <source>Could not determine the current Xfce panel configuration.</source>
-        <translation type="unfinished"/>
+        <translation>Impossible de déterminer la configuration actuelle du panneau Xfce.</translation>
     </message>
 </context>
 <context>
