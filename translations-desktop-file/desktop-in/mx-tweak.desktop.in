@@ -8,7 +8,7 @@ Exec=mx-tweak
 Terminal=false
 Type=Application
 Icon=mx-tweak
-Categories=XFCE;Settings;DesktopSettings;X-XFCE-SettingsDialog;X-XFCE-PersonalSettings;MX-Setup;
+Categories=XFCE;Settings;DesktopSettings;X-XFCE-SettingsDialog;X-XFCE-PersonalSettings;X-MX-Setup;
 Keywords=Desktop
 NoDisplay=false
 

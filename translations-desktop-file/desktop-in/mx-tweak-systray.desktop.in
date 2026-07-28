@@ -8,7 +8,7 @@ Exec=mx-tweak --tray &
 Terminal=false
 Type=Application
 Icon=brightness-systray
-Categories=XFCE;Settings;DesktopSettings;MX-Setup;
+Categories=XFCE;Settings;DesktopSettings;X-MX-Setup;
 Keywords=Desktop
 NoDisplay=false
 
