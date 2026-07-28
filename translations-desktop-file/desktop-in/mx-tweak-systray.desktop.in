@@ -8,6 +8,7 @@ Exec=mx-tweak --tray &
 Terminal=false
 Type=Application
 Icon=brightness-systray
+NotShowIn=KDE;
 Categories=XFCE;Settings;DesktopSettings;X-MX-Setup;
 Keywords=Desktop
 NoDisplay=false
