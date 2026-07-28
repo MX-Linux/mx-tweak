@@ -2,8 +2,10 @@ mx-tweak (26.07.03mx23) mx; urgency=medium
 
   * add siduction kernel autoupdates disable function
   * do root actions on misc. tab in one pass
+  * update translations
+  * xdg-compliant custom category
 
- -- Dolphin Oracle <dolphinoracle@gmail.com>  Sun, 26 Jul 2026 16:05:27 -0400
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Mon, 27 Jul 2026 21:27:07 -0400
 
 mx-tweak (26.07.02mx23) mx; urgency=medium
 
