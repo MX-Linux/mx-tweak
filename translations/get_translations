@@ -37,4 +37,7 @@ if command -v tx >/dev/null; then
    echodo tx pull -r antix-development.$APPNAME -a
 fi
 
+# en_US duplicates the English source catalog and should not be shipped.
+rm -f "${APPNAME}_en_US.ts"
+
 /usr/lib/qt6/bin/lupdate ../*.cpp ../*.h ../*.ui -ts $APPNAME_en.ts
