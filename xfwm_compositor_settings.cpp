@@ -145,6 +145,6 @@ void xfwm_compositor_settings::sliderWindowsResize_valueChanged(int value) noexc
 void xfwm_compositor_settings::sliderPopup_valueChanged(int value) noexcept
 {
     QString param = QString::number(value);
-    ui->sliderWindowDecorations->setToolTip(param);
+    ui->sliderPopup->setToolTip(param);
     runProc(u"xfconf-query"_s, {u"-c"_s, u"xfwm4"_s, u"-p"_s, u"/general/popup_opacity"_s, u"-s"_s, param});
 }
