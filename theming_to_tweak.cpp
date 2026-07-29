@@ -1,5 +1,6 @@
 #include "theming_to_tweak.h"
 #include "ui_theming_to_tweak.h"
+#include <qregularexpression.h>
 
 theming_to_tweak::theming_to_tweak(QWidget *parent) noexcept
     : QDialog(parent), ui(new Ui::theming_to_tweak)
@@ -10,7 +11,7 @@ theming_to_tweak::theming_to_tweak(QWidget *parent) noexcept
     connect(ui->buttonBox, &QDialogButtonBox::rejected, this, &theming_to_tweak::reject);
     connect(ui->lineEdit_Name, &QLineEdit::textChanged, this, [this](){
         QString text = ui->lineEdit_Name->text();
-        text.remove(u'\'');
+        text.remove(QRegularExpression("(['$()`;&])"));
         ui->lineEdit_Name->setText(text);
     });
 }
