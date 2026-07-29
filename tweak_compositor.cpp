@@ -152,7 +152,7 @@ void TweakCompositor::pushCompositorApply_clicked() noexcept
         runCmd(u"xfconf-query -c xfwm4 -p /general/use_compositing -s false"_s);
         // launch picom
         runProc(u"pkill"_s, {u"-x"_s, u"picom"_s});
-        runCmd(u"picom-launch.sh"_s);
+        runCmd(u"picom-launch"_s);
         // restart apt-notifier if necessary
         checkAptNotifierRunning();
     } else if (ui->comboCompositor->currentData() == "xfwm"_L1) {

@@ -1,0 +1,47 @@
+.TH MX-TWEAK 1 "2026-07-29" "MX Linux" "MX Tweak Manual"
+.SH NAME
+mx-tweak \- GUI for applying assorted useful tweaks in MX Linux
+.SH SYNOPSIS
+.B mx-tweak
+.RI [ options ]
+.SH DESCRIPTION
+.B mx-tweak
+is a graphical utility that allows users to easily customize and configure
+the desktop environment in MX Linux. It provides configuration options for
+XFCE, KDE Plasma, Fluxbox, and other desktop environments, with tabs for
+panel settings, themes, compositor settings, display configuration, and
+various other tweaks.
+.SH OPTIONS
+.TP
+.B \-\-tray
+Launches brightness-systray.
+.TP
+.B \-\-traydialog
+Launches brightness-systray and shows dialog on startup, implies
+.BR \-\-tray .
+.TP
+.B \-\-close
+Close application after action instead of minimize to tray. Requires
+.BR \-\-traydialog .
+.TP
+.B \-\-display
+Opens with display tab open. Only valid with Xfce desktop running.
+.TP
+.B \-\-theme
+Opens theme tab directly. Valid on Xfce & Fluxbox desktops.
+.TP
+.B \-\-other
+Opens Other tab directly. Valid on all desktops.
+.TP
+.B \-\-verbose
+Display additional debug output in console.
+.TP
+.B \-h, \-\-help
+Displays help on commandline options.
+.TP
+.B \-v, \-\-version
+Displays version information.
+.SH SEE ALSO
+.BR picom-launch (1)
+.SH AUTHOR
+MX Linux <http://mxlinux.org>

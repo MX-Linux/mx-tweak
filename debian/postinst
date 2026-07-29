@@ -15,4 +15,6 @@ if [ -e  /etc/tweak-udisks.chk ]; then
 	rm /etc/tweak-udisks.chk
 fi
 
+#DEBHELPER#
+
 exit 0

@@ -1,7 +1,7 @@
 Source: mx-tweak
 Section: admin
 Priority: optional
-Maintainer: dolphinoracle <dolphinoracle@gmail.com>
+Maintainer: Dolphin Oracle <dolphinoracle@gmail.com>
 Build-Depends: debhelper-compat (= 13),
                cmake (>= 3.31),
                ninja-build (>= 1.12),

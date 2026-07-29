@@ -1,0 +1,18 @@
+.TH PICOM-LAUNCH 1 "2026-07-29" "MX Linux" "MX Tweak Manual"
+.SH NAME
+picom-launch \- launch the picom compositor for MX Tweak
+.SH SYNOPSIS
+.B picom-launch
+.SH DESCRIPTION
+.B picom-launch
+disables the Xfwm compositor if it is running, then starts
+.BR picom (1)
+using the user's configuration file. It is invoked by
+.BR mx-tweak (1)
+when the picom compositor is selected on the Compositor tab, and is not
+intended to be run directly by users.
+.SH SEE ALSO
+.BR mx-tweak (1),
+.BR picom (1)
+.SH AUTHOR
+MX Linux <http://mxlinux.org>

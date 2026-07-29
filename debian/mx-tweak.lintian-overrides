@@ -1,0 +1,4 @@
+# These are historical changelog entries from old contributor machines.
+# Rewriting them would falsify the package history and doesn't gain
+# anything since these addresses are never used to send mail.
+mx-tweak: bogus-mail-host-in-debian-changelog * [usr/share/doc/mx-tweak/changelog.gz:*]

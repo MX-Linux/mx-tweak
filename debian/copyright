@@ -1,12 +1,16 @@
-Copyright (2016 by Dolphin Oracle; MX Community <http://forum.mxlinux.org>
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: mx-tweak
+Source: https://github.com/MX-Linux/mx-tweak
 
-and released under the GPL 3
+Files: *
+Copyright: 2016 Dolphin Oracle; MX Community <http://forum.mxlinux.org>
+License: GPL-3
 
+Files: debian/*
+Copyright: 2014-2026 Steven Pusser <maintainer@mepiscommunity.org>
+License: GPL-3
 
-Files: debian/* 
-
-Packaging copyright 2014-2026 by Steven Pusser [maintainer@mepiscommunity.org]
-
-and is released under the GPL 3 license. 
-
-
+License: GPL-3
+ On Debian systems, the complete text of the GNU General
+ Public License version 3 can be found in
+ "/usr/share/common-licenses/GPL-3".

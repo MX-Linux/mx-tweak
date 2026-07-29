@@ -1,0 +1,18 @@
+.TH RESTORE-SOFTWARE-BRIGHTNESS 1 "2026-07-29" "MX Linux" "MX Tweak Manual"
+.SH NAME
+restore-software-brightness \- restore saved per-display brightness on login
+.SH SYNOPSIS
+.B restore-software-brightness
+.SH DESCRIPTION
+.B restore-software-brightness
+restores the brightness levels previously saved by
+.BR mx-tweak (1)
+for each connected display. It reads the saved brightness commands from
+.IR ~/.config/MX-Linux/MX-Tweak/brightness ,
+and applies the one matching each currently connected display.
+It is run automatically at desktop login via an XDG autostart entry and is
+not intended to be run directly by users.
+.SH SEE ALSO
+.BR mx-tweak (1)
+.SH AUTHOR
+MX Linux <http://mxlinux.org>
