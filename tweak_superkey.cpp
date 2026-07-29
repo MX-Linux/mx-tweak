@@ -46,10 +46,10 @@ void TweakSuperKey::pushSuperKeyBrowseAppFile_clicked() noexcept
     // process file
     QString cmd;
     if (QFileInfo(command).fileName().endsWith(".desktop"_L1)) {
-        cmd = runCmd("grep Exec= "_L1 + command).output.section(u'=',1,1).section(u'%',0,0).trimmed();
-        cmd = runCmd("which "_L1 + cmd).output;
+        cmd = runProc("grep",{"Exec= ", command}).output.section(u'=',1,1).section(u'%',0,0).trimmed();
+        cmd = runProc("which",{cmd}).output;
     } else {
-        cmd = runCmd("which "_L1 + command).output;
+        cmd = runProc("which",{command}).output;
     }
     if (verbose) {
         qDebug() << "custom command is " << cmd;
