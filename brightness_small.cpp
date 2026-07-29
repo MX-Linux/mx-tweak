@@ -111,6 +111,7 @@ void brightness_small::setPosition() noexcept
 brightness_small::~brightness_small() noexcept
 {
     delete ui;
+    delete trayicon;
 }
 
 // following function is not actually used by the tray application
