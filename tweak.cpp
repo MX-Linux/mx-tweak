@@ -214,7 +214,7 @@ void Tweak::setup() noexcept
     } else {
         ui->groupXFCESettings->hide();
         ui->tabWidget->setCurrentIndex(Tab::Others);
-        for (int i = 6; i >= 0; --i) {
+        for (int i = 7; i >= 0; --i) {
             ui->tabWidget->removeTab(i);
         }
     }
