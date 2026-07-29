@@ -91,7 +91,7 @@ bool TweakPlasma::checkPlasma() const noexcept
 QString TweakPlasma::readTaskmanagerConfig(const QString &key) const noexcept
 {
     const QString &panID = taskManagerID.section('[',2,2).section(']',0,0);
-    const QString &applet = taskManagerID.section('[',4,4).section(']',0,0);
+    const QString &applet = taskManagerID.section('[',6,6).section(']',0,0);
     if (verbose) {
         qDebug() << "plasma taskmanager ID is " << panID;
         qDebug() << "plasma taskmanger Applet ID is " << applet;
@@ -124,7 +124,7 @@ void TweakPlasma::writePlasmaPanelConfig(const QString &key, const QString &valu
 void TweakPlasma::writeTaskmanagerConfig(const QString &key, const QString &value) const noexcept
 {
     const QString &panID = taskManagerID.section('[',2,2).section(']',0,0);
-    const QString &applet = taskManagerID.section('[',4,4).section(']',0,0);
+    const QString &applet = taskManagerID.section('[',6,6).section(']',0,0);
     runCmd("kwriteconfig6 --file plasma-org.kde.plasma.desktop-appletsrc --group Containments --group "_L1 + panID + " --group Applets --group "_L1 + applet + " --key "_L1 + key + ' ' + value);
 }
 
