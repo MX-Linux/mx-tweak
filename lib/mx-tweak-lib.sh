@@ -108,7 +108,7 @@ fi
 #the purpose is to enable/disable user mounting of internal devices
 enable_user_mount()
 {
-    if [ -d /etc/polkit-1/rules.d]; then
+    if [ -d /etc/polkit-1/rules.d ]; then
     echo "/etc/polkit-1/rules.d found"
     else
     mkdir -p /etc/polkit-1/rules.d
