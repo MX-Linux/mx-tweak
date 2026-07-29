@@ -272,7 +272,7 @@ void TweakXfcePanel::pushXfcePanelBackup_clicked() noexcept
     QRegularExpressionMatch match = rx.match(ui->textXfcePanelBackupName->text());
     int rxtest = match.hasMatch() ? match.capturedStart(0) : -1;
     qDebug() << "rxtest" << rxtest;
-    if (rxtest > 0){
+    if (rxtest >= 0){
         QMessageBox::information(nullptr, tr("MX Tweak"),
             tr("Plese remove special characters") + "@,$,%,&,*,(,),[,],{,},|,\\,?"_L1 + tr("from file name"));
     } else {
