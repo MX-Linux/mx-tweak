@@ -97,11 +97,15 @@ void brightness_small::setPosition() noexcept
 {
     QPoint pos = QCursor::pos();
     QScreen *screen = QGuiApplication::screenAt(pos);
+    if (screen != nullptr ){
+        screen=QGuiApplication::primaryScreen();
+    }
     if (pos.y() + size().height() > screen->availableVirtualGeometry().height())
         pos.setY(screen->availableVirtualGeometry().height() - size().height());
     if (pos.x() + size().width() > screen->availableVirtualGeometry().width())
         pos.setX(screen->availableVirtualGeometry().width() - size().width());
     move(pos);
+
 }
 
 brightness_small::~brightness_small() noexcept
