@@ -81,8 +81,8 @@ void brightness_small::iconActivated(QSystemTrayIcon::ActivationReason reason) n
 {
     switch (reason) {
     case QSystemTrayIcon::Trigger:
-        setupBrightness();
         setupGamma();
+        setupBrightness();
         setupbacklight();
         adjustSize();
         setPosition();
