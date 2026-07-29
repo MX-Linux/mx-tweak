@@ -353,6 +353,17 @@ kvm_early_switch(){
 	fi
 }
 
+ntsync_load(){
+	#ensure directory exists
+	mkdir -p /etc/modules-load.d/
+	echo "ntsync" > /etc/modules-load.d/ntsync.conf
+}
+
+ntsync_noload(){
+	rm -f /etc/modules-load.d/ntsync.conf
+}
+
+
 main()
 {
 #read in parameters
