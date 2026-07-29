@@ -86,7 +86,7 @@ kwriteconfig6 --file ~/.config/kdeglobals --group Colors:Tooltip --key Foregroun
 kwriteconfig6 --file ~/.config/kdeglobals --group Colors:Tooltip --key ForegroundNeutral 246,116,0
 kwriteconfig6 --file ~/.config/kdeglobals --group Colors:Tooltip --key ForegroundNormal 252,252,252
 kwriteconfig6 --file ~/.config/kdeglobals --group Colors:Tooltip --key ForegroundPositive 39,174,96
-kwriteconfig6 --file ~/.config/kdeglobals --group Colors:Tooltip --key ForegroundVisited 127,140,141=
+kwriteconfig6 --file ~/.config/kdeglobals --group Colors:Tooltip --key ForegroundVisited 127,140,141
 
 kwriteconfig6 --file ~/.config/kdeglobals --group Colors:View --key BackgroundAlternate 239,240,241
 kwriteconfig6 --file ~/.config/kdeglobals --group Colors:View --key BackgroundNormal 252,252,252
