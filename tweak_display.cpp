@@ -133,12 +133,15 @@ void TweakDisplay::setRefreshRate(const QString &display, const QString &resolut
     const QString &rate = runCmd("/usr/lib/mx-tweak/mx-tweak-lib-randr.sh "_L1 + display + " refreshrate"_L1).output;
     QStringList rates = rate.split(QRegularExpression(u"\\s"_s), Qt::SkipEmptyParts);
     rates.removeAll(resolution);
-    if (verbose) {
-        qDebug() << "defualt refreshreate list is :" << rates.at(0).section('*',0,0);
+    if (!rates.isEmpty()){
+        qDebug() << "default refreshreate list is :" << rates.at(0).section('*',0,0);
+
+        runProc(u"xfconf-query"_s, {u"--channel"_s, u"displays"_s, u"-p"_s,
+                                    (u'/' + activeProfile + u'/' + display + "/RefreshRate"_L1),
+                                    u"-t"_s, u"double"_s, u"-s"_s, rates.at(0).section('*',0,0), u"--create"_s});
+    } else {
+        qDebug() << "default refreshreate is empty";
     }
-    runProc(u"xfconf-query"_s, {u"--channel"_s, u"displays"_s, u"-p"_s,
-        (u'/' + activeProfile + u'/' + display + "/RefreshRate"_L1),
-        u"-t"_s, u"double"_s, u"-s"_s, rates.at(0).section('*',0,0), u"--create"_s});
 }
 
 void TweakDisplay::setupBacklight() noexcept
