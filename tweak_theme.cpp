@@ -451,7 +451,7 @@ void TweakTheme::setTheme(const QString &type, const QString &theme) const noexc
             if (runCmd(u"grep gtk-theme-name $HOME/.config/gtk-3.0/settings.ini"_s).exitCode == 0) {
                 cmd = "sed -i 's/gtk-theme-name=.*/gtk-theme-name="_L1 + theme + "/' $HOME/.config/gtk-3.0/settings.ini"_L1;
             } else {
-                cmd = "echo gtk-theme-name="_L1 + theme + "\" >> $HOME/.config/gtk-3.0/settings.ini"_L1;
+                cmd = "echo gtk-theme-name="_L1 + theme + " >> $HOME/.config/gtk-3.0/settings.ini"_L1;
             }
             runCmd(cmd);
 
@@ -495,7 +495,7 @@ void TweakTheme::setTheme(const QString &type, const QString &theme) const noexc
             if (runCmd(u"grep gtk-icon-theme-name $HOME/.config/gtk-3.0/settings.ini"_s).exitCode == 0) {
                 cmd = "sed -i 's/gtk-icon-theme-name=.*/gtk-icon-theme-name="_L1 + theme + "/' $HOME/.config/gtk-3.0/settings.ini"_L1;
             } else {
-                cmd = "echo gtk-icon-theme-name="_L1 + theme + "\" >> $HOME/.config/gtk-3.0/settings.ini"_L1;
+                cmd = "echo gtk-icon-theme-name="_L1 + theme + " >> $HOME/.config/gtk-3.0/settings.ini"_L1;
             }
             runCmd(cmd);
             if (runCmd(u"grep gtk-icon-theme-name $HOME/.gtkrc-2.0"_s).exitCode == 0) {
@@ -516,7 +516,7 @@ void TweakTheme::setTheme(const QString &type, const QString &theme) const noexc
             if (runCmd(u"grep gtk-cursor-theme-name $HOME/.config/gtk-3.0/settings.ini"_s).exitCode == 0) {
                 cmd = "sed -i 's/gtk-cursor-theme-name=.*/gtk-cursor-theme-name="_L1 + theme + "/' $HOME/.config/gtk-3.0/settings.ini"_L1;
             } else {
-                cmd = "echo gtk-cursor-theme-name="_L1 + theme + "\" >> $HOME/.config/gtk-3.0/settings.ini"_L1;
+                cmd = "echo gtk-cursor-theme-name="_L1 + theme + " >> $HOME/.config/gtk-3.0/settings.ini"_L1;
             }
             runCmd(cmd);
             if (runCmd(u"grep gtk-cursor-theme-name $HOME/.gtkrc-2.0"_s).exitCode == 0) {
