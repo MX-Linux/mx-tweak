@@ -718,7 +718,7 @@ void TweakTheme::pushThemeApply_clicked() noexcept
         //  use xfconf system to change values
 
         // set gtk theme
-        runCmd("xfconf-query -c xsettings -p /Net/ThemeName -s "_L1 + xsettings_gtk_theme);
+        runCmd("xfconf-query -c xsettings -p /Net/ThemeName -s \""_L1 + xsettings_gtk_theme + '"');
         runCmd(u"sleep .5"_s);
         runCmd("gsettings set org.gnome.desktop.interface gtk-theme \""_L1 + xsettings_gtk_theme + '"');
         if (xsettings_gtk_theme.contains("dark"_L1, Qt::CaseInsensitive)){
@@ -728,16 +728,16 @@ void TweakTheme::pushThemeApply_clicked() noexcept
         }
 
         // set window decorations theme
-        runCmd("xfconf-query -c xfwm4 -p /general/theme -s "_L1 + xfwm4_window_decorations);
+        runCmd("xfconf-query -c xfwm4 -p /general/theme -s \""_L1 + xfwm4_window_decorations + '"');
         runCmd(u"sleep .5"_s);
 
         // set icon theme
-        runCmd("xfconf-query -c xsettings -p /Net/IconThemeName -s "_L1 + xsettings_icon_theme);
+        runCmd("xfconf-query -c xsettings -p /Net/IconThemeName -s \""_L1 + xsettings_icon_theme + '"');
         runCmd(u"sleep .5"_s);
 
         // set cursor theme if exists
         if (! cursorthemename.isEmpty()){
-            runCmd("xfconf-query -c xsettings -p /Gtk/CursorThemeName -s "_L1 + cursorthemename);
+            runCmd("xfconf-query -c xsettings -p /Gtk/CursorThemeName -s \""_L1 + cursorthemename + '"');
         }
 
         // deal with panel customizations for each panel
@@ -756,7 +756,7 @@ void TweakTheme::pushThemeApply_clicked() noexcept
             // set panel background image
             QFileInfo image(background_image);
             if (image.exists()) {
-                runCmd("xfconf-query -c xfce4-panel -p /panels/panel-"_L1 + value + "/background-image -t string -s "_L1 + background_image + " --create"_L1);
+                runCmd("xfconf-query -c xfce4-panel -p /panels/panel-"_L1 + value + "/background-image -t string -s \""_L1 + background_image + "\" --create"_L1);
             } else {
                 runCmd("xfconf-query -c xfce4-panel -p /panels/panel-"_L1 + value + "/background-image --reset"_L1);
             }
