@@ -44,7 +44,7 @@ void remove_user_theme_set::setupThemeSelector() noexcept
         bool xfwm4_theme_present = false;
         QFileInfo file_info(it2.next());
         QString filename = file_info.absoluteFilePath();
-        QString name = runCmd("cat '"_L1 + filename + "'|grep Name="_L1).output.section('=',1,1);
+        QString name = runCmd("cat '"_L1 + filename + "'|grep ^Name="_L1).output.section('=',1,1);
 
         QString xsettings_gtk_theme = runCmd("cat '"_L1 + file_info.absoluteFilePath() + "' |grep xsettings_gtk_theme="_L1).output.section('=',1,1);
         qDebug() << "xsettings_gtk_theme = " << xsettings_gtk_theme;
