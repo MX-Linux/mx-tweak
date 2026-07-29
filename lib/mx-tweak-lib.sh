@@ -183,7 +183,7 @@ disable_sudo_override()
 enable_sandbox()
 {
 	if [ ! -d /etc/sysctl.d/ ]; then
-		mkdir -p /etc/systclt.d
+		mkdir -p /etc/sysctl.d
 	fi
 	sysctl kernel.unprivileged_userns_clone=1
 	#sysctl kernel.yama.ptrace_scope=1
