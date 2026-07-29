@@ -268,7 +268,7 @@ void TweakXfcePanel::pushXfcePanelBackup_clicked() noexcept
     // validate file name
     qDebug() << "ui file name " << ui->textXfcePanelBackupName->text();
     // QRegExp rx("(@|\\$|%|\\&|\\*|(|)|{|}|[|]|/|\\|\\?");
-    QRegularExpression rx(u"\\$|@|%|\\&|\\*|\\(|\\)|\\[|\\]|\\{|\\}|\\||\\?"_s);
+    QRegularExpression rx(u"\\\"|\\'|\\ |\\;|\\?\\$|@|%|\\&|\\*|\\(|\\)|\\[|\\]|\\{|\\}|\\||\\?"_s);
     QRegularExpressionMatch match = rx.match(ui->textXfcePanelBackupName->text());
     int rxtest = match.hasMatch() ? match.capturedStart(0) : -1;
     qDebug() << "rxtest" << rxtest;
