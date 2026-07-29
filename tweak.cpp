@@ -257,7 +257,7 @@ void Tweak::pushHelp_clicked() noexcept
     QString url = u"file:///usr/share/doc/mx-tweak/mx-tweak.html"_s;
 
     if (lang.startsWith("fr"_L1)) {
-        url = u"https://mxlinux.org/wiki/help-files/help-tweak-ajustements"_s;
+        url = u"file:///usr/share/doc/mx-tweak/mx-tweak_fr.html"_s;
     }
     displayDoc(url, tr("%1 Help").arg(tr("MX Tweak")));
 }

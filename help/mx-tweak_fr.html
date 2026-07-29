@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>AIDE : Tweak &#8211; Ajustements</title>
+</head>
+<body>
+<h1>AIDE : Tweak &#8211; Ajustements</h1>
+<p>MX Ajustements regroupe plusieurs petits outils de personnalisation souvent utilisés. Les applications de param&#233;trage associ&#233;es, natives &#224; Xfce, sont pr&#233;sent&#233;es ci-dessous pour la commodit&#233; de l&#8217;utilisateur.</p>
+
+<h2>Tableau de bord</h2>
+
+<p>Permet de proc&#233;der &#224; de rapides changements des choix par d&#233;faut de l&#8217;interface utilisateur.</p>
+
+<img src="1-2a.png" alt="MX Ajustements" width="600" />
+
+<p>L&#8217;utilisateur peut choisir d&#8217;afficher le tableau de bord par d&#233;faut horizontalement (en haut ou en bas) ou verticalement (gauche&#8211;d&#233;faut&#8211;ou droite). Les personnalisations, y compris les plug-ins du tableau de bord, seront conserv&#233;es, bien que l&#8217;emplacement des plug-ins puisse &#234;tre modifi&#233;.</p>
+
+<p>Une sauvegarde du tableau de bord actuel est plac&#233;e dans ~/.restore/. Cette sauvegarde est cr&#233;&#233;e au premier lancement de l&#8217;application, et une nouvelle sauvegarde peut &#234;tre faite &#224; n&#8217;importe quel moment.</p>
+
+<p>L&#8217;utilisateur peut utiliser &#8220;R&#233;tablir le tableau de bord par d&#233;faut&#8221; pour revenir au tableau de bord d&#8217;origine.</p>
+
+<h3>Trucs et astuces</h3>
+
+	<ul>
+		<li>Si vous voulez exporter la configuration d&#8217;un tableau de bord d&#8217;un ordinateur &#224; un autre, copiez le fichier tar.xz voulu depuis le dossier &#8220;~/.restore/&#8221; de l&#8217;ordinateur d&#8217;origine et collez-le dans &#8220;~/.restore/&#8221; du second ordinateur, puis utilisez l&#8217;option &#8220;Restaurer la configuration de sauvegarde du tableau de bord&#8221; pour &#8220;importer&#8221; le tableau de bord migr&#233;.</li>
+	</ul>
+
+<h2>Th&#232;me</h2>
+
+<img src="tweak-theme-1.png" alt="Options de th&#232;me Xfce" width="600"/>
+
+<p>Dans cet onglet, l&#8217;utilisateur peut d&#233;cider de changer le th&#232;me actuel par le th&#232;me par d&#233;faut de MX sombre (dark), MX clair (light), Nichi (tableau de bord horizontal), Nichi (tableau de bord vertical) ou Numix. Cela aura pour effet de changer le style de gtk, le style du gestionnaire de fen&#234;tre, et le th&#232;me d&#8217;ic&#244;ne.</p>
+
+<p>L&#8217;ajustement pour Firefox va imposer un th&#232;me clair pour Firefox, ce qui permettra de r&#233;soudre un probl&#232;me avec certains sites web, y compris Netflix et YouTube, o&#249; les champs de texte ne s&#8217;affichent pas correctement lors de l&#8217;utilisation d&#8217;un th&#232;me sombre.</p>
+
+<p>L&#8217;ajustement pour HexChat va modifier la configuration de HexChat afin de rendre plus lisible le texte dans la zone de saisie du chat.</p>
+
+<h3>Trucs et astuces</h3>
+
+	<ul>
+		<li>L&#8217;ajustement du th&#232;me sombre dans Firefox fonctionnera avec les th&#232;mes autres que ceux par d&#233;faut du syst&#232;me.</li>
+		<li>L&#8217;ajustement pour HexChat fonctionnera avec les th&#232;mes autres que ceux par d&#233;faut du syst&#232;me.</li>
+	</ul>
+
+<h2>Compositeur</h2>
+
+<p>Ici l&#8217;utilisateur peut choisir d&#8217;utiliser un <a href="https://fr.wikipedia.org/wiki/Compositeur_(logiciel)">gestionnaire de composition de fen&#234;tre</a>, et le compositeur &#224; utiliser.</p>
+
+<img src="tweak-compositor-2.png" alt="Compositeur" width="600"/>
+
+<h3>Compositeur Xfwm (Xfce)</h3>
+
+<p>Xfwm est le gestionnaire de fen&#234;tre par d&#233;faut de Xfce, et il int&#232;gre son propre compositeur. Par d&#233;faut, ce compositeur est d&#233;sactiv&#233; dans MX Linux car il peut causer divers probl&#232;mes sur les machines les plus anciennes. Lorsque vous s&#233;lectionnez son compositeur via le menu d&#233;roulant, le bouton &#8220;Param&#232;tres de Xfwm&#8221; devient actif et, lorsque vous cliquez dessus, vous donne acc&#232;s &#224; des param&#232;tres de base. Pour plus de d&#233;tails, consultez le <a href="https://wiki.xfce.org/start?id=fr/howto/xfwm4_theme">wiki de Xfce</a>.</p>
+
+<h3>Compositeur Compton</h3>
+
+<p><a href="https://github.com/chjj/compton">Compton</a> est souvent utilis&#233; &#224; la place de Xfwm pour r&#233;duire les ph&#233;nom&#232;nes de <a href="https://en.wikipedia.org/wiki/Screen_tearing">d&#233;chirements d&#8217;&#233;cran</a> qui g&#234;nent quelquefois les compositeurs l&#233;gers comme Xfwm. MX Ajustements vous offre un moyen simple de lancer, arr&#234;ter et configurer le compositeur Compton.</p>
+
+<p>Au d&#233;marrage, un fichier de configuration compton.conf sera cr&#233;&#233; dans ~/.config s&#8217;il n&#8217;est pas encore pr&#233;sent.</p>
+
+<p>Le bouton &#8220;Arr&#234;ter Compton&#8221; deviendra &#8220;Lancer Compton&#8221; s&#8217;il n&#8217;est pas d&#233;j&#224; lanc&#233;.</p>
+
+<p>Le bouton &#8220;Param&#232;tres de Compton&#8221; lancera compton-conf, un outil de configuration du projet LXqt pour compton. L&#8217;outil de configuration compton-conf fonctionne de mani&#232;re optimale avec le fichier compton.conf inclus avec le paquet. Les changements effectu&#233;s par compton-conf prendront effet apr&#232;s avoir cliqu&#233; sur &#8220;apply&#8221;.</p>
+
+<img src="mxcompton-2-1.jpg" alt="" />
+
+<p>Si vous avez d&#233;j&#224; un fichier compton.conf, ou que vous souhaitez changer des param&#232;tres non disponibles dans l&#8217;interface graphique, le bouton &#8220;&#201;diter compton.conf&#8221; ouvrira ~/.compton.conf dans un &#233;diteur de texte pour que vous l&#8217;&#233;ditiez directement. Utilisez le bouton Lancer-Arr&#234;ter pour relancer compton afin que les changements manuels prennent effet.</p>
+
+<p>Cocher &#8220;lancer &#224; la connexion&#8221; activera le d&#233;marrage automatique de compton. Cela fonctionne si le fichier compton se trouve &#224; l&#8217;emplacement par d&#233;faut de ~/.config/compton.conf.</p>
+
+<h3>Trucs et astuces</h3>
+
+	<ul>
+		<li>Le compositeur de Xfce sera d&#233;sactiv&#233; au lancement de compton avec le gestionnaire compton de MX.</li>
+		<li>Si vous poss&#233;dez d&#233;j&#224; un fichier compton.conf, l&#8217;outil graphique compton-conf pourrait ne pas fonctionner.</li>
+	</ul>
+
+<h2>Divers</h2>
+
+	<ul>
+		<li>La plupart des entr&#233;es de &#8220;Divers&#8221; se passent de commentaires.</li>
+		<li>Activer le montage de disques internes requerra le mot de passe root de l&#8217;utilisateur.</li>
+		<li>Activer l&#8217;hibernation dans le menu de d&#233;connexion n&#233;cessitera aussi le mot de passe root de l&#8217;utilisateur.</li>
+	</ul>
+
+<h3>D&#233;tails</h3>
+
+	<ul>
+		<li>Un fichier mod&#232;le dans /usr/share/mx-tweak-data peut &#234;tre utilis&#233; pour fabriquer des ensembles de th&#232;mes. Le fichier doit aussi &#234;tre copi&#233; dans ~/.local/share/mx-tweak-data. Les fichiers utilisateur stock&#233;s dans ~/.local/share/mx-tweak-data seront &#233;galement pris en compte par MX Ajustements au d&#233;marrage de l&#8217;application.</li>
+	</ul>
+
+</body>
+</html>
