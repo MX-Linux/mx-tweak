@@ -889,7 +889,7 @@ void TweakTheme::checkThemeGTKDarkMode_checkStateChanged(Qt::CheckState state) c
         if (runCmd(u"grep gtk-application-prefer-dark-theme $HOME/.config/gtk-3.0/settings.ini"_s).exitCode == 0) {
             runCmd(u"sed -i 's/gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=true/' $HOME/.config/gtk-3.0/settings.ini"_s);
         } else {
-            runCmd(u"echo gtk-application-prefer-dark-theme=true/' >> $HOME/.config/gtk-3.0/settings.ini"_s);
+            runCmd(u"echo gtk-application-prefer-dark-theme=true' >> $HOME/.config/gtk-3.0/settings.ini"_s);
         }
     } else {
         if (runCmd(u"grep gtk-application-prefer-dark-theme $HOME/.config/gtk-3.0/settings.ini"_s).exitCode == 0) {
