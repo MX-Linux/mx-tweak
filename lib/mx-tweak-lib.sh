@@ -108,7 +108,7 @@ fi
 #the purpose is to enable/disable user mounting of internal devices
 enable_user_mount()
 {
-    if [ -d /etc/polkit-1/rules.d]; then
+    if [ -d /etc/polkit-1/rules.d ]; then
     echo "/etc/polkit-1/rules.d found"
     else
     mkdir -p /etc/polkit-1/rules.d
@@ -183,7 +183,7 @@ disable_sudo_override()
 enable_sandbox()
 {
 	if [ ! -d /etc/sysctl.d/ ]; then
-		mkdir -p /etc/systclt.d
+		mkdir -p /etc/sysctl.d
 	fi
 	sysctl kernel.unprivileged_userns_clone=1
 	#sysctl kernel.yama.ptrace_scope=1
@@ -352,6 +352,17 @@ kvm_early_switch(){
 		echo "options kvm enable_virt_at_load=0" >> "$file"
 	fi
 }
+
+ntsync_load(){
+	#ensure directory exists
+	mkdir -p /etc/modules-load.d/
+	echo "ntsync" > /etc/modules-load.d/ntsync.conf
+}
+
+ntsync_noload(){
+	rm -f /etc/modules-load.d/ntsync.conf
+}
+
 
 main()
 {
