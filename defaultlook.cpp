@@ -219,7 +219,7 @@ void defaultlook::setup()
         ui->toolButtonXFCEWMsettings->hide();
         ui->toolButtonXFCEpanelSettings->hide();
         ui->tabWidget->setCurrentIndex(Tab::Others);
-        for (int i = 6; i >= 0; --i)
+        for (int i = 7; i >= 0; --i)
             ui->tabWidget->removeTab(i);
         //setup other tab;
         setupEtc();
@@ -742,7 +742,7 @@ void defaultlook::backupPanel()
     //validate file name
     qDebug() << "ui file name " << ui->lineEditBackupName->text();
     //QRegExp rx("(@|\\$|%|\\&|\\*|(|)|{|}|[|]|/|\\|\\?");
-    QRegExp rx("\\$|@|%|\\&|\\*|\\(|\\)|\\[|\\]|\\{|\\}|\\||\\?");
+    QRegExp rx("\\\"|\\'|\\ |\\;|\\?\\$|@|%|\\&|\\*|\\(|\\)|\\[|\\]|\\{|\\}|\\||\\?");
     int rxtest = rx.indexIn(ui->lineEditBackupName->text());
     qDebug() << "rxtest" << rxtest;
     if ( rxtest > 0 ){
@@ -2062,8 +2062,8 @@ void defaultlook::setupDisplay()
     QStringList displaylist = displaydata.split(QStringLiteral("\n"));
     ui->comboBoxDisplay->clear();
     ui->comboBoxDisplay->addItems(displaylist);
-    setupBrightness();
     setupGamma();
+    setupBrightness();
     setupscale();
     setupbacklight();
     setupresolutions();
@@ -2126,8 +2126,12 @@ void defaultlook::setrefreshrate(const QString &display, const QString &resoluti
     refreshrate=refreshrate.simplified();
     QStringList refreshratelist = refreshrate.split(QRegExp("\\s"));
     refreshratelist.removeAll(resolution);
+    if (!refreshratelist.isEmpty()){
     if (verbose) qDebug() << "defualt refreshreate list is :" << refreshratelist.at(0).section(QStringLiteral("*"),0,0);
     runCmd("xfconf-query --channel displays -p /" + activeprofile + "/" + display + "/RefreshRate -t double -s " + refreshratelist.at(0).section(QStringLiteral("*"),0,0) + " --create; sleep 1");
+    } else {
+           qDebug() << "default refreshreate is empty";
+    }
 }
 
 void defaultlook::setupbacklight()
@@ -2403,26 +2407,25 @@ void defaultlook::on_buttonThemeApply_clicked()
         message_flag = true;
 
         //set gtk theme
-        runCmd("xfconf-query -c xsettings -p /Net/ThemeName -s " + xsettings_gtk_theme);
-        runCmd(QStringLiteral("sleep .5"));
-        runCmd("gsettings set org.gnome.desktop.interface gtk-theme \"" + xsettings_gtk_theme + "\"");
-        if (xsettings_gtk_theme.toLower().contains("dark")){
+        runCmd("xfconf-query -c xsettings -p /Net/ThemeName -s \""+ xsettings_gtk_theme + '"');
+        runCmd("sleep .5");
+        runCmd("gsettings set org.gnome.desktop.interface gtk-theme \"" + xsettings_gtk_theme + '"');
+        if (xsettings_gtk_theme.contains("dark", Qt::CaseInsensitive)){
             runCmd("gsettings set org.gnome.desktop.interface color-scheme prefer-dark");
         } else {
             runCmd("gsettings set org.gnome.desktop.interface color-scheme default");
         }
+        // set window decorations theme
+        runCmd("xfconf-query -c xfwm4 -p /general/theme -s \"" + xfwm4_window_decorations + '"');
+        runCmd("sleep .5");
 
-        //set window decorations theme
-        runCmd("xfconf-query -c xfwm4 -p /general/theme -s " + xfwm4_window_decorations);
-        runCmd(QStringLiteral("sleep .5"));
+        // set icon theme
+        runCmd("xfconf-query -c xsettings -p /Net/IconThemeName -s \"" + xsettings_icon_theme + '"');
+        runCmd("sleep .5");
 
-        //set icon theme
-        runCmd("xfconf-query -c xsettings -p /Net/IconThemeName -s " + xsettings_icon_theme);
-        runCmd(QStringLiteral("sleep .5"));
-
-        //set cursor theme if exists
-        if ( ! cursorthemename.isEmpty()){
-            runCmd("xfconf-query -c xsettings -p /Gtk/CursorThemeName -s " + cursorthemename);
+        // set cursor theme if exists
+        if (! cursorthemename.isEmpty()){
+            runCmd("xfconf-query -c xsettings -p /Gtk/CursorThemeName -s \"" + cursorthemename + '"');
         }
 
         //deal with panel customizations for each panel
@@ -2442,12 +2445,11 @@ void defaultlook::on_buttonThemeApply_clicked()
             //set panel background image
 
             QFileInfo image(background_image);
-
-            if (image.exists()) {
-                runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-image -t string -s " + background_image + " --create");
-            } else {
-                runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-image --reset");
-            }
+                        if (image.exists()) {
+                            runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-image -t string -s \"" + background_image + "\" --create");
+                        } else {
+                            runCmd("xfconf-query -c xfce4-panel -p /panels/panel-" + value + "/background-image --reset");
+                        }
 
             //set panel color
 
@@ -4002,7 +4004,7 @@ void defaultlook::settheme(const QString &type, const QString &theme, const QStr
             if (runCmd("grep gtk-theme-name $HOME/.config/gtk-3.0/settings.ini").exitCode == 0) {
                 cmd = "sed -i 's/gtk-theme-name=.*/gtk-theme-name=" + theme + "/' $HOME/.config/gtk-3.0/settings.ini";
             } else {
-                cmd = "echo gtk-theme-name=" + theme + "\" >> $HOME/.config/gtk-3.0/settings.ini";
+                cmd = "echo gtk-theme-name=" + theme + " >> $HOME/.config/gtk-3.0/settings.ini";
             }
             system(cmd.toUtf8());
 
@@ -4019,14 +4021,14 @@ void defaultlook::settheme(const QString &type, const QString &theme, const QStr
                 if (runCmd("grep gtk-application-prefer-dark-theme $HOME/.config/gtk-3.0/settings.ini").exitCode == 0) {
                     runCmd("sed -i 's/gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=true/' $HOME/.config/gtk-3.0/settings.ini");
                 } else {
-                    runCmd("echo gtk-application-prefer-dark-theme=true/' >> $HOME/.config/gtk-3.0/settings.ini");
+                    runCmd("echo gtk-application-prefer-dark-theme=true' >> $HOME/.config/gtk-3.0/settings.ini");
                 }
             } else {
                 cmd2="gsettings set org.gnome.desktop.interface color-scheme default";
                 if (runCmd("grep gtk-application-prefer-dark-theme $HOME/.config/gtk-3.0/settings.ini").exitCode == 0) {
                     runCmd("sed -i 's/gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=false/' $HOME/.config/gtk-3.0/settings.ini");
                 } else {
-                    runCmd("echo gtk-application-prefer-dark-theme=false/' >> $HOME/.config/gtk-3.0/settings.ini");
+                    runCmd("echo gtk-application-prefer-dark-theme=false' >> $HOME/.config/gtk-3.0/settings.ini");
                 }
             }
 
@@ -4057,7 +4059,7 @@ void defaultlook::settheme(const QString &type, const QString &theme, const QStr
             if (runCmd("grep gtk-icon-theme-name $HOME/.config/gtk-3.0/settings.ini").exitCode == 0) {
                 cmd = "sed -i 's/gtk-icon-theme-name=.*/gtk-icon-theme-name=" + theme + "/' $HOME/.config/gtk-3.0/settings.ini";
             } else {
-                cmd = "echo gtk-icon-theme-name=" + theme + "\" >> $HOME/.config/gtk-3.0/settings.ini";
+                cmd = "echo gtk-icon-theme-name=" + theme + " >> $HOME/.config/gtk-3.0/settings.ini";
             }
             system(cmd.toUtf8());
             if (runCmd("grep gtk-icon-theme-name $HOME/.gtkrc-2.0").exitCode == 0) {
@@ -4079,7 +4081,7 @@ void defaultlook::settheme(const QString &type, const QString &theme, const QStr
             if (runCmd("grep gtk-cursor-theme-name $HOME/.config/gtk-3.0/settings.ini").exitCode == 0) {
                 cmd = "sed -i 's/gtk-cursor-theme-name=.*/gtk-cursor-theme-name=" + theme + "/' $HOME/.config/gtk-3.0/settings.ini";
             } else {
-                cmd = "echo gtk-cursor-theme-name=" + theme + "\" >> $HOME/.config/gtk-3.0/settings.ini";
+                cmd = "echo gtk-cursor-theme-name=" + theme + " >> $HOME/.config/gtk-3.0/settings.ini";
             }
             system(cmd.toUtf8());
             if (runCmd("grep gtk-cursor-theme-name $HOME/.gtkrc-2.0").exitCode == 0) {
@@ -4420,9 +4422,9 @@ void defaultlook::on_toolButtonSuperFileBrowser_clicked()
     QFileInfo customcommandcheck(customcommand);
     if (customcommandcheck.fileName().endsWith(".desktop")){
         cmd = runCmd("grep Exec= " + customcommand).output.section("=",1,1).section("%",0,0).trimmed();
-        cmd = runCmd("which " + cmd).output;
+        cmd = runCmd("which '" + cmd + "'").output;
     } else {
-        cmd = runCmd("which " + customcommand).output;
+        cmd = runCmd("which '" + customcommand + "'").output;
     }
     if (verbose) {
         qDebug() << "custom command is " << cmd;

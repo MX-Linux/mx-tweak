@@ -90,10 +90,13 @@ void brightness_small::setPosition()
 {
     QPoint pos = QCursor::pos();
     QScreen *screen = QGuiApplication::screenAt(pos);
-    if (pos.y() + this->size().height() > screen->availableVirtualGeometry().height())
-        pos.setY(screen->availableVirtualGeometry().height() - this->size().height());
-    if (pos.x() + this->size().width() > screen->availableVirtualGeometry().width())
-        pos.setX(screen->availableVirtualGeometry().width() - this->size().width());
+    if (screen != nullptr ){
+        screen=QGuiApplication::primaryScreen();
+    }
+    if (pos.y() + size().height() > screen->availableVirtualGeometry().height())
+        pos.setY(screen->availableVirtualGeometry().height() - size().height());
+    if (pos.x() + size().width() > screen->availableVirtualGeometry().width())
+        pos.setX(screen->availableVirtualGeometry().width() - size().width());
     this->move(pos);
 }
 
@@ -105,6 +108,7 @@ void brightness_small::messageClicked()
 brightness_small::~brightness_small()
 {
     delete ui;
+    delete trayicon;
 }
 
 //following function is not actually used by the tray application
