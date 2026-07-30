@@ -51,7 +51,7 @@
     <message>
         <location filename="../main.cpp" line="60"/>
         <source>close application after action instead of minimize to tray.  Requires --traydialog</source>
-        <translation type="unfinished"/>
+        <translation>stäng applikation efter i sttället för att minimera i brickan.  Kräver --traydialog</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="61"/>
@@ -825,7 +825,7 @@
     <message>
         <location filename="../tweak.ui" line="1725"/>
         <source>Enable Automatic Siduction Kernel Updates</source>
-        <translation type="unfinished"/>
+        <translation>Aktivera Automatiska Siduction Kärn-uppdateringar</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1736"/>
@@ -992,12 +992,12 @@ namn innan du fortsätter.</translation>
     <message>
         <location filename="../tweak_theme.cpp" line="588"/>
         <source>MX Tweak</source>
-        <translation type="unfinished"/>
+        <translation>MX Tweak</translation>
     </message>
     <message>
         <location filename="../tweak_theme.cpp" line="589"/>
         <source>Could not determine the current Xfce panel configuration.</source>
-        <translation type="unfinished"/>
+        <translation>Kunde inte bestämma nuvarande Xfce panelkonfiguration.</translation>
     </message>
 </context>
 <context>

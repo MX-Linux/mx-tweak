@@ -5,33 +5,33 @@
     <name>QObject</name>
     <message>
         <location filename="../about.cpp" line="30"/>
-        <location filename="../about.cpp" line="99"/>
+        <location filename="../about.cpp" line="98"/>
         <source>&amp;Close</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../about.cpp" line="50"/>
+        <location filename="../about.cpp" line="49"/>
         <source>Could not load %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../about.cpp" line="73"/>
+        <location filename="../about.cpp" line="72"/>
         <source>License</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../about.cpp" line="74"/>
-        <location filename="../about.cpp" line="84"/>
+        <location filename="../about.cpp" line="73"/>
+        <location filename="../about.cpp" line="83"/>
         <source>Changelog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../about.cpp" line="75"/>
+        <location filename="../about.cpp" line="74"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../about.cpp" line="96"/>
+        <location filename="../about.cpp" line="95"/>
         <source>Could not load changelog.</source>
         <translation type="unfinished"></translation>
     </message>
