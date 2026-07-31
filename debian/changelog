@@ -5,6 +5,7 @@ mx-tweak (26.07.03mx25) mx; urgency=medium
   * update translations
   * xdg compliant menu category name
   * misc bug fixes from code review process
+  * fix buggy dark-mode setting on fluxbox
 
  -- Dolphin Oracle <dolphinoracle@gmail.com>  Wed, 29 Jul 2026 20:56:56 -0400
 
