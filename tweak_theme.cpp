@@ -887,7 +887,7 @@ void TweakTheme::checkThemeGTKDarkMode_checkStateChanged(Qt::CheckState state) c
         runSystem(cmd);
         qDebug() << "dark mode is " << cmd << "mode is " << mode;
     }
-    if (desktop == Fluxbox || desktop == Plasma){
+    if (desktop == Fluxbox){
         if (runCmd(u"grep gtk-application-prefer-dark-theme $HOME/.config/gtk-3.0/settings.ini"_s).exitCode == 0) {
             runCmd("sed -i 's/gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=" + mode +  "/' $HOME/.config/gtk-3.0/settings.ini");
         } else {
