@@ -877,25 +877,27 @@ void TweakTheme::spinThemeCursorSize_valueChanged(int value) noexcept
 
 void TweakTheme::checkThemeGTKDarkMode_checkStateChanged(Qt::CheckState state) const noexcept
 {
+    QString mode = "false";
     if (desktop == Xfce || desktop == Fluxbox) {
         const char *cmd = "gsettings set org.gnome.desktop.interface color-scheme default";
         if (state == Qt::Checked){
             cmd = "gsettings set org.gnome.desktop.interface color-scheme prefer-dark";
+            mode = "true";
         }
         runSystem(cmd);
-        qDebug() << "dark mode is " << cmd;
+        qDebug() << "dark mode is " << cmd << "mode is " << mode;
     }
     if (desktop == Fluxbox){
         if (runCmd(u"grep gtk-application-prefer-dark-theme $HOME/.config/gtk-3.0/settings.ini"_s).exitCode == 0) {
-            runCmd(u"sed -i 's/gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=true/' $HOME/.config/gtk-3.0/settings.ini"_s);
+            runCmd("sed -i 's/gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=" + mode +  "/' $HOME/.config/gtk-3.0/settings.ini");
         } else {
-            runCmd(u"echo gtk-application-prefer-dark-theme=true' >> $HOME/.config/gtk-3.0/settings.ini"_s);
+            runCmd("echo gtk-application-prefer-dark-theme=" + mode + ">> $HOME/.config/gtk-3.0/settings.ini");
         }
     } else {
         if (runCmd(u"grep gtk-application-prefer-dark-theme $HOME/.config/gtk-3.0/settings.ini"_s).exitCode == 0) {
-            runCmd(u"sed -i 's/gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=false/' $HOME/.config/gtk-3.0/settings.ini"_s);
+            runCmd("sed -i 's/gtk-application-prefer-dark-theme=.*/gtk-application-prefer-dark-theme=" + mode +  "/' $HOME/.config/gtk-3.0/settings.ini");
         } else {
-            runCmd(u"echo gtk-application-prefer-dark-theme=false >> $HOME/.config/gtk-3.0/settings.ini"_s);
+            runCmd("echo gtk-application-prefer-dark-theme=" + mode + ">> $HOME/.config/gtk-3.0/settings.ini");
         }
     }
 }
