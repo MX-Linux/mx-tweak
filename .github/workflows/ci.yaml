@@ -5,6 +5,12 @@ on:
     branches: [main]
   pull_request:
 
+# mx-tweak requires Qt6 >= 6.8 (CMakeLists.txt), which is newer than what
+# Ubuntu's apt repos ship (6.4.2 as of noble), so Qt is installed via
+# aqtinstall here instead of apt. This also means debuild's internal CMake
+# configure would hit the same version wall, so there is no
+# debian-package-check job for this repo — real packaging validation
+# happens via OBS, which has an up-to-date Qt.
 jobs:
   build-test:
     name: build-test (${{ matrix.compiler }})
@@ -16,16 +22,19 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v3
+        with:
+          version: "6.8.2"
+          host: linux
+          target: desktop
+          dir: ${{ runner.temp }}
+          setup-python: false
+
       - name: Install common build dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y \
-            cmake \
-            ninja-build \
-            qt6-base-dev \
-            qt6-base-dev-tools \
-            qt6-tools-dev \
-            qt6-tools-dev-tools
+          sudo apt-get install -y cmake ninja-build
 
       - name: Install GCC 14
         if: matrix.compiler == 'gcc'
@@ -41,7 +50,8 @@ jobs:
           cmake -S . -B build -G Ninja \
             -DCMAKE_BUILD_TYPE=Release \
             -DCMAKE_C_COMPILER=gcc-14 \
-            -DCMAKE_CXX_COMPILER=g++-14
+            -DCMAKE_CXX_COMPILER=g++-14 \
+            -DCMAKE_PREFIX_PATH=$QT_ROOT_DIR
 
       - name: Configure (Clang)
         if: matrix.compiler == 'clang'
@@ -49,30 +59,8 @@ jobs:
           cmake -S . -B build -G Ninja \
             -DCMAKE_BUILD_TYPE=Release \
             -DCMAKE_C_COMPILER=clang \
-            -DCMAKE_CXX_COMPILER=clang++
+            -DCMAKE_CXX_COMPILER=clang++ \
+            -DCMAKE_PREFIX_PATH=$QT_ROOT_DIR
 
       - name: Build
         run: cmake --build build --parallel
-
-  debian-package-check:
-    name: debian package build canary
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v5
-
-      - name: Install packaging dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y \
-            devscripts \
-            debhelper \
-            build-essential \
-            cmake \
-            ninja-build \
-            qt6-base-dev \
-            qt6-base-dev-tools \
-            qt6-tools-dev \
-            qt6-tools-dev-tools
-
-      - name: Build binary package (unsigned)
-        run: debuild -us -uc -b
