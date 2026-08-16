@@ -36,11 +36,16 @@ void setupDocDialog(QDialog &dialog, QTextBrowser *browser, const QString &title
     layout->addWidget(btnClose);
 }
 
-void showHtmlDoc(const QString &url, const QString &title, bool largeWindow)
+void showHtmlDoc(const QString &url, const QString &title, bool largeWindow, QWidget *parent)
 {
-    QDialog dialog;
-    auto *browser = new QTextBrowser(&dialog);
-    setupDocDialog(dialog, browser, title, largeWindow);
+    // Heap-allocated and non-modal so the dialog doesn't block the rest of the app;
+    // parented to the caller so it closes along with it, and deletes itself once
+    // the user closes it directly.
+    auto *dialog = new QDialog(parent);
+    dialog->setAttribute(Qt::WA_DeleteOnClose);
+
+    auto *browser = new QTextBrowser(dialog);
+    setupDocDialog(*dialog, browser, title, largeWindow);
 
     const QUrl sourceUrl = QUrl::fromUserInput(url);
     if (!sourceUrl.isLocalFile() || QFileInfo::exists(sourceUrl.toLocalFile())) {
@@ -49,26 +54,26 @@ void showHtmlDoc(const QString &url, const QString &title, bool largeWindow)
         browser->setText(QObject::tr("Could not load %1").arg(url));
         qDebug() << "Could not load HTML document" << url;
     }
-    dialog.exec();
+    dialog->show();
 }
 } // namespace
 
-void displayDoc(const QString &url, const QString &title, bool largeWindow)
+void displayDoc(const QString &url, const QString &title, bool largeWindow, QWidget *parent)
 {
-    showHtmlDoc(url, title, largeWindow);
+    showHtmlDoc(url, title, largeWindow, parent);
 }
 
-void displayHelpDoc(const QString &path, const QString &title)
+void displayHelpDoc(const QString &path, const QString &title, QWidget *parent)
 {
-    showHtmlDoc(path, title, true);
+    showHtmlDoc(path, title, true, parent);
 }
 
 void displayAboutMsgBox(const QString &title, const QString &message, const QString &licence_url,
-                        const QString &license_title)
+                        const QString &license_title, QWidget *parent)
 {
     const auto width = 600;
     const auto height = 500;
-    QMessageBox msgBox(QMessageBox::NoIcon, title, message);
+    QMessageBox msgBox(QMessageBox::NoIcon, title, message, QMessageBox::NoButton, parent);
     auto *btnLicense = msgBox.addButton(QObject::tr("License"), QMessageBox::HelpRole);
     auto *btnChangelog = msgBox.addButton(QObject::tr("Changelog"), QMessageBox::HelpRole);
     auto *btnCancel = msgBox.addButton(QObject::tr("Cancel"), QMessageBox::NoRole);
@@ -77,9 +82,9 @@ void displayAboutMsgBox(const QString &title, const QString &message, const QStr
     msgBox.exec();
 
     if (msgBox.clickedButton() == btnLicense) {
-        displayDoc(licence_url, license_title);
+        displayDoc(licence_url, license_title, false, parent);
     } else if (msgBox.clickedButton() == btnChangelog) {
-        QDialog changelog;
+        QDialog changelog(parent);
         changelog.setWindowTitle(QObject::tr("Changelog"));
         changelog.resize(width, height);
 

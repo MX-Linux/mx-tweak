@@ -245,7 +245,7 @@ void Tweak::pushAbout_clicked() noexcept
                        tr("App for quick default ui theme changes and tweaks") +
                        "</h3></p><p align=\"center\"><a href=\"http://mxlinux.org\">http://mxlinux.org</a><br /></p>"_L1
                        "<p align=\"center\">"_L1 + tr("Copyright (c) MX Linux") + "<br /><br /></p>"_L1,
-                       u"/usr/share/doc/mx-tweak/license.html"_s, tr("%1 License").arg(windowTitle()));
+                       u"/usr/share/doc/mx-tweak/license.html"_s, tr("%1 License").arg(windowTitle()), this);
     show();
 }
 
@@ -259,7 +259,7 @@ void Tweak::pushHelp_clicked() noexcept
     if (lang.startsWith("fr"_L1)) {
         url = u"file:///usr/share/doc/mx-tweak/mx-tweak_fr.html"_s;
     }
-    displayDoc(url, tr("%1 Help").arg(tr("MX Tweak")));
+    displayDoc(url, tr("%1 Help").arg(tr("MX Tweak")), false, this);
 }
 
 void Tweak::tabWidget_currentChanged(int index) noexcept

@@ -2,7 +2,9 @@
 
 #include <QString>
 
-void displayDoc(const QString &url, const QString &title, bool largeWindow = false);
-void displayHelpDoc(const QString &path, const QString &title);
+class QWidget;
+
+void displayDoc(const QString &url, const QString &title, bool largeWindow = false, QWidget *parent = nullptr);
+void displayHelpDoc(const QString &path, const QString &title, QWidget *parent = nullptr);
 void displayAboutMsgBox(const QString &title, const QString &message, const QString &licence_url,
-                        const QString &license_title);
+                        const QString &license_title, QWidget *parent = nullptr);
