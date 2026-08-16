@@ -1,3 +1,9 @@
+mx-tweak (26.08.01mx25) mx; urgency=medium
+
+  * make help browser non-modal
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 15 Aug 2026 20:35:36 -0400
+
 mx-tweak (26.07.03mx25) mx; urgency=medium
 
   * add siducation disable updates option
