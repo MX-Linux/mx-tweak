@@ -1,0 +1,107 @@
+# Maintainer: Adrian <adrian@mxlinux.org>
+
+# PKGBUILD for building on the Open Build Service.
+#
+# mx-tweak is not in AUR and has no committed source tarball, so the OBS
+# tar_scm service packs the checkout into one. That tarball has a constant name
+# rather than a versioned one, so pkgver here is free to track debian/changelog
+# and a release does not require editing the OBS service as well.
+#
+# OBS build VMs have no network, so nothing may be fetched during the build:
+# everything this recipe reads is either in that tarball or produced by build().
+
+pkgname=mx-tweak
+pkgver=26.08.01mx25
+pkgrel=1
+pkgdesc="Desktop configuration tool for MX Linux"
+arch=('x86_64')
+url="https://github.com/MX-Linux/mx-tweak"
+license=('GPL3')
+depends=('qt6-base' 'qt6-svg' 'glib2' 'xfconf' 'polkit' 'sudo' 'bash'
+         'xorg-xrandr' 'xorg-xset' 'xorg-xrdb')
+makedepends=('cmake' 'ninja' 'qt6-base' 'qt6-tools')
+optdepends=('picom: window compositor configured by the Compositor tab'
+            'xfce4-panel: panel tweaks'
+            'xfwm4: window manager and window button tweaks'
+            'xfdesktop: desktop icon tweaks'
+            'plasma-workspace: KDE Plasma tweaks')
+source=("${pkgname}-source.tar")
+sha256sums=('SKIP')
+
+# tar_scm unpacks to <repository>-<versionformat>; both are fixed here.
+_srcdir="${pkgname}-source"
+PKGEXT='.pkg.tar.zst'
+
+build() {
+    cd "${srcdir}/${_srcdir}"
+
+    # build.cmake reads the version from debian/changelog by running
+    # dpkg-parsechangelog, which does not exist on Arch. When that call fails it
+    # falls back to the project() version - a stale "3.0" - and the binary then
+    # reports a version unrelated to the package. Unlike its siblings mx-tweak
+    # has no -DPROJECT_VERSION_OVERRIDE, so answer the query with a stand-in on
+    # PATH that prints pkgver. This keeps binary and package versions identical.
+    install -dm755 "${srcdir}/version-shim"
+    printf '#!/bin/sh\nprintf %%s "%s"\n' "${pkgver}" \
+        > "${srcdir}/version-shim/dpkg-parsechangelog"
+    chmod 755 "${srcdir}/version-shim/dpkg-parsechangelog"
+    export PATH="${srcdir}/version-shim:${PATH}"
+
+    # The upstream CMake presets use Ninja Multi-Config and an "_build_" tree;
+    # plain Ninja into "build" keeps the output paths flat and is all the
+    # in-source-build guard in build.cmake requires.
+    cmake -G Ninja \
+        -B build \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_INSTALL_PREFIX=/usr
+
+    cmake --build build --parallel
+}
+
+package() {
+    cd "${srcdir}/${_srcdir}"
+
+    install -Dm755 build/mx-tweak "${pkgdir}/usr/bin/mx-tweak"
+    install -Dm755 picom-launch "${pkgdir}/usr/bin/picom-launch"
+    ln -s picom-launch "${pkgdir}/usr/bin/picom-launch.sh"
+    install -Dm755 -t "${pkgdir}/usr/bin/" bin/*
+
+    # Helper scripts the GUI calls by absolute path (/usr/lib/mx-tweak/...).
+    install -Dm755 -t "${pkgdir}/usr/lib/mx-tweak/" lib/*
+
+    install -Dm644 -t "${pkgdir}/usr/share/applications/" \
+        mx-tweak.desktop mx-tweak-systray.desktop
+
+    install -Dm644 -t "${pkgdir}/usr/share/mx-tweak/locale/" build/*.qm
+    install -Dm644 -t "${pkgdir}/usr/share/mx-tweak/icons/" icons/*
+    install -Dm644 -t "${pkgdir}/usr/share/mx-tweak/" share/*
+
+    # Theme-set template; copied into ~/.local/share/mx-tweak-data on first run.
+    install -Dm644 mx.tweak.template \
+        "${pkgdir}/usr/share/mx-tweak-data/mx.tweak.template"
+
+    install -Dm644 -t "${pkgdir}/usr/share/polkit-1/actions/" actions/*
+
+    install -Dm644 mx-tweak.png \
+        "${pkgdir}/usr/share/icons/hicolor/64x64/apps/mx-tweak.png"
+    install -Dm644 mx-tweak.svg \
+        "${pkgdir}/usr/share/icons/hicolor/scalable/apps/mx-tweak.svg"
+    install -Dm644 brightness-systray.png \
+        "${pkgdir}/usr/share/icons/hicolor/48x48/apps/brightness-systray.png"
+    install -Dm644 brightness-systray.png \
+        "${pkgdir}/usr/share/pixmaps/brightness-systray.png"
+
+    install -Dm644 -t "${pkgdir}/etc/xdg/autostart/" \
+        zrestore-software-brightness.desktop mx-tweak-tray-app-autostart.desktop
+    install -Dm440 -t "${pkgdir}/etc/sudoers.d/" sudoers/*
+    install -Dm644 02gtk3-nocsd-mx "${pkgdir}/etc/X11/Xsession.d/02gtk3-nocsd-mx"
+
+    install -Dm644 -t "${pkgdir}/usr/share/man/man1/" man/*.1
+
+    # The Help and About dialogs read these back out of /usr/share/doc.
+    install -Dm644 license.html "${pkgdir}/usr/share/doc/mx-tweak/license.html"
+    install -Dm644 -t "${pkgdir}/usr/share/doc/mx-tweak/" help/*
+    gzip -c debian/changelog > "${pkgdir}/usr/share/doc/mx-tweak/changelog.gz"
+
+    install -Dm644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+}
