@@ -10,7 +10,7 @@
     <message>
         <location filename="../about.cpp" line="50"/>
         <source>Could not load %1</source>
-        <translation type="unfinished"/>
+        <translation>%1 kon niet worden geladen</translation>
     </message>
     <message>
         <location filename="../about.cpp" line="73"/>
@@ -31,7 +31,7 @@
     <message>
         <location filename="../about.cpp" line="96"/>
         <source>Could not load changelog.</source>
-        <translation type="unfinished"/>
+        <translation>De changelog kon niet worden geladen.</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="55"/>

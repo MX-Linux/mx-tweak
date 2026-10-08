@@ -529,7 +529,7 @@
         <location filename="../tweak.ui" line="950"/>
         <location filename="../tweak.ui" line="974"/>
         <source>Off</source>
-        <translation type="unfinished"/>
+        <translation>关闭</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="958"/>

@@ -46,12 +46,12 @@
     <message>
         <location filename="../main.cpp" line="59"/>
         <source>launches brightness-systray and shows dialog on startup, implies --tray</source>
-        <translation type="unfinished"/>
+        <translation>εμφανίζει το εικονίδιο φωτεινότητας της οθόνης του συστήματος και εμφανίζει παράθυρο κατά την εκκίνηση, που σημαίνει ότι ενεργοποιείται το --tray</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="60"/>
         <source>close application after action instead of minimize to tray.  Requires --traydialog</source>
-        <translation type="unfinished"/>
+        <translation>κλείσιμο της εφαρμογής μετά την εκτέλεση της ενέργειας, αντί για ελαχιστοποίηση στη γραμμή εργασιών. Απαιτείται η επιλογή --traydialog</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="61"/>
@@ -825,7 +825,7 @@
     <message>
         <location filename="../tweak.ui" line="1725"/>
         <source>Enable Automatic Siduction Kernel Updates</source>
-        <translation type="unfinished"/>
+        <translation>Ενεργοποίηση αυτόματων ενημερώσεων του πυρήνα Siduction</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1736"/>
@@ -991,12 +991,12 @@ name before proceeding.</source>
     <message>
         <location filename="../tweak_theme.cpp" line="588"/>
         <source>MX Tweak</source>
-        <translation type="unfinished"/>
+        <translation>MX Ρυθμίσεις</translation>
     </message>
     <message>
         <location filename="../tweak_theme.cpp" line="589"/>
         <source>Could not determine the current Xfce panel configuration.</source>
-        <translation type="unfinished"/>
+        <translation>Δεν ήταν δυνατό να προσδιοριστεί η τρέχουσα διαμόρφωση του ταμπλό Xfce.</translation>
     </message>
 </context>
 <context>

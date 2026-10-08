@@ -87,7 +87,7 @@
     <message>
         <location filename="../tweak.ui" line="33"/>
         <source>Xfce Panel</source>
-        <translation type="unfinished"/>
+        <translation>Xfce パネル</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="39"/>
@@ -204,7 +204,7 @@
         <location filename="../tweak.ui" line="281"/>
         <source>Application</source>
         <extracomment>theme an application will get</extracomment>
-        <translation type="unfinished"/>
+        <translation>アプリケーション</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="301"/>
@@ -214,7 +214,7 @@
     <message>
         <location filename="../tweak.ui" line="304"/>
         <source>Dark Mode</source>
-        <translation type="unfinished"/>
+        <translation>ダークモード</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="311"/>
@@ -238,7 +238,7 @@
         <location filename="../tweak.ui" line="351"/>
         <source>Cursors</source>
         <extracomment>cursor theme</extracomment>
-        <translation type="unfinished"/>
+        <translation>カーソル</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="358"/>
@@ -395,7 +395,7 @@
     <message>
         <location filename="../tweak.ui" line="740"/>
         <source>Xfce</source>
-        <translation type="unfinished"/>
+        <translation>Xfce</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="746"/>
@@ -426,7 +426,7 @@
     <message>
         <location filename="../tweak.ui" line="783"/>
         <source>Thunar</source>
-        <translation type="unfinished"/>
+        <translation>Thunar</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="789"/>
@@ -482,7 +482,7 @@
         <location filename="../tweak.ui" line="891"/>
         <location filename="../tweak.ui" line="1365"/>
         <source>Reset Defaults</source>
-        <translation type="unfinished"/>
+        <translation>初期設定へ戻す</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="897"/>
@@ -512,7 +512,7 @@
     <message>
         <location filename="../tweak.ui" line="931"/>
         <source>Desktop Icons</source>
-        <translation type="unfinished"/>
+        <translation>デスクトップのアイコン</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="937"/>
@@ -555,7 +555,7 @@
     <message>
         <location filename="../tweak.ui" line="1035"/>
         <source>Toolbar Settings</source>
-        <translation type="unfinished"/>
+        <translation>ツールバーの設定</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1041"/>
@@ -581,7 +581,7 @@
     <message>
         <location filename="../tweak.ui" line="1152"/>
         <source>Dock Settings</source>
-        <translation type="unfinished"/>
+        <translation>Dock の設定</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1239"/>
@@ -671,7 +671,7 @@
     <message>
         <location filename="../tweak.ui" line="1462"/>
         <source>Miscellaneous</source>
-        <translation type="unfinished"/>
+        <translation>その他</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1487"/>
@@ -733,7 +733,7 @@
     <message>
         <location filename="../tweak.ui" line="1562"/>
         <source>Change Default Init System</source>
-        <translation type="unfinished"/>
+        <translation>既定の Init システムを変更する</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1583"/>
@@ -835,7 +835,7 @@
     <message>
         <location filename="../tweak.ui" line="1742"/>
         <source>Customize the panel</source>
-        <translation type="unfinished"/>
+        <translation>パネルのカスタマイズ</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1752"/>
@@ -991,7 +991,7 @@ name before proceeding.</source>
     <message>
         <location filename="../tweak_theme.cpp" line="588"/>
         <source>MX Tweak</source>
-        <translation type="unfinished"/>
+        <translation>MX Tweak</translation>
     </message>
     <message>
         <location filename="../tweak_theme.cpp" line="589"/>
@@ -1004,22 +1004,22 @@ name before proceeding.</source>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="17"/>
         <source>Horizontal (Bottom)</source>
-        <translation type="unfinished"/>
+        <translation>横方向 (下端)</translation>
     </message>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="18"/>
         <source>Horizontal (Top)</source>
-        <translation type="unfinished"/>
+        <translation>横方向 (上端)</translation>
     </message>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="20"/>
         <source>Vertical (Left)</source>
-        <translation type="unfinished"/>
+        <translation>縦方向 (左端)</translation>
     </message>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="21"/>
         <source>Vertical (Right)</source>
-        <translation type="unfinished"/>
+        <translation>縦方向 (右端)</translation>
     </message>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="23"/>
@@ -1106,7 +1106,7 @@ name before proceeding.</source>
     <message>
         <location filename="../brightness_small.cpp" line="35"/>
         <source>Brightness</source>
-        <translation type="unfinished"/>
+        <translation>明るさ</translation>
     </message>
     <message>
         <location filename="../brightness_small.cpp" line="54"/>
@@ -1201,7 +1201,7 @@ name before proceeding.</source>
     <message>
         <location filename="../window_buttons.ui" line="89"/>
         <source>Behavior</source>
-        <translation type="unfinished"/>
+        <translation>振る舞い</translation>
     </message>
     <message>
         <location filename="../window_buttons.ui" line="95"/>
@@ -1324,7 +1324,7 @@ name before proceeding.</source>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="74"/>
         <source>Opacity Settings</source>
-        <translation type="unfinished"/>
+        <translation>不透明度の設定</translation>
     </message>
     <message>
         <location filename="../xfwm_compositor_settings.ui" line="80"/>

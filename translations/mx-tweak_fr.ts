@@ -87,7 +87,7 @@
     <message>
         <location filename="../tweak.ui" line="33"/>
         <source>Xfce Panel</source>
-        <translation>Panneau Xfce</translation>
+        <translation>Tableau de bord Xfce</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="39"/>
@@ -118,7 +118,7 @@
     <message>
         <location filename="../tweak.ui" line="71"/>
         <source>Docklike is the modern dock plugin for the panel. Window Buttons is the classic tasklist without dock features.</source>
-        <translation>Docklike est le plugin moderne de type dock pour le panneau. Window Buttons est la liste des tâches classique, sans les fonctionnalités de dock.</translation>
+        <translation>Docklike est le plugin moderne de type dock pour le tableau de bord. Window Buttons est la liste de tâches classique, sans les fonctionnalités de dock.</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="78"/>
@@ -133,7 +133,7 @@
     <message>
         <location filename="../tweak.ui" line="95"/>
         <source>Affects 1st Panel</source>
-        <translation>Affecte le 1er panneau</translation>
+        <translation>Affecte le 1er tableau de bord</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="101"/>
@@ -146,27 +146,27 @@
     <message>
         <location filename="../tweak.ui" line="114"/>
         <source>Backup/Restore Configuration (all panels)</source>
-        <translation>Sauvegarde/Restauration de la configuration (tous les panneaux)</translation>
+        <translation>Sauvegarder/Restaurer la configuration (tous les tableaux de bord)</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="127"/>
         <source>Backup current panel configuration</source>
-        <translation>Enregistrer la configuration actuelle du panneau</translation>
+        <translation>Enregistrer la configuration du tableau de bord actuel</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="141"/>
         <source>Restore selected panel configuration</source>
-        <translation>Restaurer la configuration du panneau sélectionné</translation>
+        <translation>Restaurer la configuration du tableau de bord sélectionné</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="148"/>
         <source>Restore default panel</source>
-        <translation>Rétablir le panneau par défaut</translation>
+        <translation>Restaurer le tableau de bord par défaut</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="158"/>
         <source>Panel Plugin Scales</source>
-        <translation>Échelles du plugin du panneau</translation>
+        <translation>Échelles des plugins du tableau de bord</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="164"/>
@@ -416,7 +416,7 @@
         <location filename="../tweak.ui" line="766"/>
         <location filename="../tweak.ui" line="1355"/>
         <source>Show windows from all workspaces in panel</source>
-        <translation>Afficher les fenêtres de tous les espaces de travail dans le panneau</translation>
+        <translation>Afficher les fenêtres de tous les espaces de travail dans le tableau de bord</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="773"/>
@@ -596,7 +596,7 @@
     <message>
         <location filename="../tweak.ui" line="1279"/>
         <source>Affects 1st panel</source>
-        <translation>Effets sur le 1er panneau</translation>
+        <translation>Affecte le 1er tableau de bord</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1296"/>
@@ -835,12 +835,12 @@
     <message>
         <location filename="../tweak.ui" line="1742"/>
         <source>Customize the panel</source>
-        <translation>Personnaliser le panneau</translation>
+        <translation>Personnaliser le tableau de bord</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1752"/>
         <source>Panel</source>
-        <translation>Panneau</translation>
+        <translation>Tableau de bord</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1772"/>
@@ -996,7 +996,7 @@ Veuillez choisir un nom différent avant de continuer.</translation>
     <message>
         <location filename="../tweak_theme.cpp" line="589"/>
         <source>Could not determine the current Xfce panel configuration.</source>
-        <translation>Impossible de déterminer la configuration actuelle du panneau Xfce.</translation>
+        <translation>Impossible de déterminer la configuration actuelle du tableau de bord Xfce.</translation>
     </message>
 </context>
 <context>
@@ -1062,7 +1062,7 @@ Veuillez choisir un nom différent avant de continuer.</translation>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="305"/>
         <source>Archive does not contain a panel config</source>
-        <translation>L’archive ne contient pas de configuration de panneau</translation>
+        <translation>L’archive ne contient pas de configuration de tableau de bord</translation>
     </message>
     <message>
         <location filename="../tweak_xfce_panel.cpp" line="736"/>

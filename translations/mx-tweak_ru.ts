@@ -905,7 +905,7 @@
     <message>
         <location filename="../tweak.cpp" line="247"/>
         <source>Copyright (c) MX Linux</source>
-        <translation>Copyright (c) MX Linux</translation>
+        <translation>Авторское право (c) MX Linux</translation>
     </message>
     <message>
         <location filename="../tweak.cpp" line="248"/>

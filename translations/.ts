@@ -5,73 +5,73 @@
     <name>QObject</name>
     <message>
         <location filename="../about.cpp" line="30"/>
-        <location filename="../about.cpp" line="98"/>
+        <location filename="../about.cpp" line="103"/>
         <source>&amp;Close</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../about.cpp" line="49"/>
+        <location filename="../about.cpp" line="54"/>
         <source>Could not load %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../about.cpp" line="72"/>
+        <location filename="../about.cpp" line="77"/>
         <source>License</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../about.cpp" line="73"/>
-        <location filename="../about.cpp" line="83"/>
+        <location filename="../about.cpp" line="78"/>
+        <location filename="../about.cpp" line="88"/>
         <source>Changelog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../about.cpp" line="74"/>
+        <location filename="../about.cpp" line="79"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../about.cpp" line="95"/>
+        <location filename="../about.cpp" line="100"/>
         <source>Could not load changelog.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="55"/>
+        <location filename="../main.cpp" line="62"/>
         <source>GUI for applying assorted useful tweaks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="58"/>
+        <location filename="../main.cpp" line="65"/>
         <source>launches brightness-systray</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="59"/>
+        <location filename="../main.cpp" line="66"/>
         <source>launches brightness-systray and shows dialog on startup, implies --tray</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="60"/>
+        <location filename="../main.cpp" line="67"/>
         <source>close application after action instead of minimize to tray.  Requires --traydialog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="61"/>
+        <location filename="../main.cpp" line="68"/>
         <source>opens with display tab open.  Only valid with Xfce desktop running</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="62"/>
+        <location filename="../main.cpp" line="69"/>
         <source>Opens theme tab directly.  Valid on Xfce &amp; Fluxbox desktops</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="63"/>
+        <location filename="../main.cpp" line="70"/>
         <source>Display additional debug output in console</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../main.cpp" line="64"/>
+        <location filename="../main.cpp" line="71"/>
         <source>Opens Other tab directly.  Valid on all desktops</source>
         <translation type="unfinished"></translation>
     </message>

@@ -46,12 +46,12 @@
     <message>
         <location filename="../main.cpp" line="59"/>
         <source>launches brightness-systray and shows dialog on startup, implies --tray</source>
-        <translation>запускает brightness-systray и показывает диалоговое окно при запуске, подразумевающее --tray</translation>
+        <translation>запускает brightness-systray и показывает диалоговое окно при запуске, подразумевает --tray</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="60"/>
         <source>close application after action instead of minimize to tray.  Requires --traydialog</source>
-        <translation type="unfinished"/>
+        <translation>закрыть приложение после действия вместо сворачивания в трей. Требует --traydialog</translation>
     </message>
     <message>
         <location filename="../main.cpp" line="61"/>
@@ -627,7 +627,7 @@
         <location filename="../tweak.ui" line="1341"/>
         <source>Autostart plasma-discover system tray update notification utility</source>
         <extracomment>enable or disable autostartup of plasma-discover updater utility on login</extracomment>
-        <translation>Утилита автоматического запуска уведомлений об обновлении панели задач Plasma-Discover</translation>
+        <translation>Автоматический запуск утилиты уведомлений об обновлениях plasma-discover в системном трее</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1348"/>
@@ -693,7 +693,7 @@
         <location filename="../tweak.ui" line="1500"/>
         <source>Enable Automatic Debian Kernel Updates</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
-        <translation>Включите автоматическое обновление ядра Debian.</translation>
+        <translation>Включить автоматическое обновление ядра Debian</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1507"/>
@@ -703,7 +703,7 @@
     <message>
         <location filename="../tweak.ui" line="1514"/>
         <source>Enable mounting of internal drives by non-root users</source>
-        <translation>Включить монтирование внешних носителей для не-root пользователей</translation>
+        <translation>Включить монтирование внутренних дисков для не-root пользователей</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1521"/>
@@ -754,7 +754,7 @@
     <message>
         <location filename="../tweak.ui" line="1620"/>
         <source>Generate fluxbox All Apps menu after package installation, removal, and updates</source>
-        <translation>Сгенерируйте меню Все Приложения после установки, удаления и обновления пакетов.</translation>
+        <translation>Создавать меню Все Приложения Fluxbox после установки, удаления и обновления пакетов</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1627"/>
@@ -783,13 +783,13 @@
         <location filename="../tweak.ui" line="1647"/>
         <source>Enable Automatic Liquorix Kernel Updates (MX ahs repository)</source>
         <extracomment>uses apt-mark to hold or unhold updates to kernel metapackages</extracomment>
-        <translation>Включите автоматическое обновление ядра Liquorix (репозиторий MX ahs)</translation>
+        <translation>Включить автоматическое обновление ядра Liquorix (репозиторий MX ahs)</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1654"/>
         <source>Change Default Display Manager (login screen) (requires reboot)</source>
         <extracomment>option to change display manager login screen.  present if more than one display manager is installed</extracomment>
-        <translation>Изменить Default Display Manager (экран входа) (требуется перезагрузка)</translation>
+        <translation>Изменить менеджер входа по умолчанию (экран входа) (требуется перезагрузка)</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1661"/>
@@ -825,7 +825,7 @@
     <message>
         <location filename="../tweak.ui" line="1725"/>
         <source>Enable Automatic Siduction Kernel Updates</source>
-        <translation type="unfinished"/>
+        <translation>Включить автоматическое обновление ядра Siduction</translation>
     </message>
     <message>
         <location filename="../tweak.ui" line="1736"/>
@@ -991,12 +991,12 @@ name before proceeding.</source>
     <message>
         <location filename="../tweak_theme.cpp" line="588"/>
         <source>MX Tweak</source>
-        <translation type="unfinished"/>
+        <translation>MX Твикер</translation>
     </message>
     <message>
         <location filename="../tweak_theme.cpp" line="589"/>
         <source>Could not determine the current Xfce panel configuration.</source>
-        <translation type="unfinished"/>
+        <translation>Не удалось определить текущую конфигурацию панели Xfce.</translation>
     </message>
 </context>
 <context>
