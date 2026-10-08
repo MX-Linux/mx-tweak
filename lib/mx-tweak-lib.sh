@@ -384,7 +384,7 @@ for ((p=0; p<=j; p++)); do
 		case "${CMD[$p]}" in
 			hostname)  #next variable is the param
 			   p=$((p+1))
-		   	   #change_hostname ${CMD[$p]}
+		   	   change_hostname ${CMD[$p]}
 		   	   echo "change_hostname  ${CMD[$p]}"
 			;;
 			bluetooth_battery) #next variable is the param
