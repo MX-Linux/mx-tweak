@@ -263,7 +263,7 @@ fi
 
 change_hostname()
 {
-local original="$(hostname)" new="$1"
+local original="$(/usr/bin/hostname)" new="$1"
 
 echo "$original"
 echo "$new"
@@ -378,14 +378,15 @@ done
 #run commands from p=0 to j
 
 for ((p=0; p<=j; p++)); do
+echo "${CMD[$p]} "${CMD[$((p+1))]}
 
 	if [ -n "${CMD[$p]}" ]; then
 
 		case "${CMD[$p]}" in
 			hostname)  #next variable is the param
 			   p=$((p+1))
-		   	   #change_hostname ${CMD[$p]}
 		   	   echo "change_hostname  ${CMD[$p]}"
+		   	   change_hostname ${CMD[$p]}
 			;;
 			bluetooth_battery) #next variable is the param
 		       p=$((p+1))
