@@ -1,3 +1,10 @@
+mx-tweak (26.10.01mx25) mx; urgency=medium
+
+  * fix change_hostname function
+  * update translations
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Thu, 08 Oct 2026 15:59:45 -0400
+
 mx-tweak (26.08.01mx25) mx; urgency=medium
 
   * make help browser non-modal
