@@ -1,3 +1,9 @@
+mx-tweak (26.10.02mx25) mx; urgency=medium
+
+  * improve change_hostname function
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Sat, 10 Oct 2026 13:03:05 -0400
+
 mx-tweak (26.10.01mx25) mx; urgency=medium
 
   * fix change_hostname function
