@@ -271,15 +271,13 @@ echo "$new"
 #cleanup old hostname target on loopback address, typicall 127.0.0.1
 LOOPBACK=$(ip -o -4 addr show dev lo | awk '{split($4, a, "/"); print a[1]}')
 #delete such lines that do not include localhost
-sed -i "/^${LOOPBACK}/{/localhost/"'!'"d}" hosts
+sed -i "/^${LOOPBACK}/{/localhost/"'!'"d}" /etc/hosts
+
 if [ -z "$(grep ^127.0.1.1 /etc/hosts)" ];
-	#write new corrected entry if not present already
+	#write new corrected entry if not present already, don't worry about domain name since entry didn't exist, use the default example.dom
 	sudo awk -i inplace -v d="${new}.exmaple.dom" -v h="$new" '{print} /127\.0\.0\.1/ && /localhost/ {print "127.0.1.1 " d " " h}' /etc/hosts
 fi
 
-if [ -e "/etc/hostname" ]; then
-	sed -i "s/$original/$new/" /etc/hostname
-fi
 #run sed twice on /etc/hosts as dual format line contains two entries in one line
 if [ -e "/etc/hosts" ]; then
 	sed -i "s/$original/$new/" /etc/hosts
@@ -287,6 +285,12 @@ fi
 if [ -e "/etc/hosts" ]; then
 	sed -i "s/$original/$new/" /etc/hosts
 fi
+
+if [ -e "/etc/hostname" ]; then
+	sed -i "s/$original/$new/" /etc/hostname
+fi
+
+# simple sed replacemsnts other files
 if [ -e "/etc/mailname" ]; then
 	sed -i "s/$original/$new/" /etc/mailname
 fi
@@ -294,6 +298,7 @@ if [ -e "/etc/dhcp/dhclient.conf" ]; then
 	sed -i "s/$original/$new/" /etc/dhcp/dhclient.conf
 fi
 
+#notify system of hostname change
 hostname "$new"
 }
 
