@@ -274,21 +274,16 @@ echo "Loopback/Localhost is $LOOPBACK"
 #delete such lines that do not include localhost
 sed -i "/^${LOOPBACK}/{/localhost/"'!'"d}" /etc/hosts
 
-if [ -z "$(grep ^127.0.1.1 /etc/hosts)" ]; then
-	#write new corrected entry if not present already, don't worry about domain name since entry didn't exist, use the default example.dom
-	awk -i inplace -v d="${new}.exmaple.dom" -v h="$new" '{print} /127\.0\.0\.1/ && /localhost/ {print "127.0.1.1 " d " " h}' /etc/hosts
-else
-	#get existing domain name, if any
-	DOMAIN=$(awk '$1=="127.0.1.1" && $2 ~ /\..*\./ {print $2}' /etc/hosts | cut -d'.' -f2-)
-	if [ -z "$DOMAIN" ]; then
-		DOMAIN="example.dom"
-	fi
-	echo "Domain is $DOMAIN"
-	#delete old line
-	sed -i '/127.0.1.1/d' /etc/hosts
-	#write new line after loopback entry
-	awk -i inplace -v d="${new}.${DOMAIN}" -v h="$new" '{print} /127\.0\.0\.1/ && /localhost/ {print "127.0.1.1 " d " " h}' /etc/hosts
+#get existing domain name, if any
+DOMAIN=$(awk '$1=="127.0.1.1" && $2 ~ /\..*\./ {print $2}' /etc/hosts | cut -d'.' -f2-)
+if [ -z "$DOMAIN" ]; then
+	DOMAIN="example.dom"
 fi
+echo "Domain is $DOMAIN"
+#delete old line
+sed -i '/127.0.1.1/d' /etc/hosts
+#write new line after loopback entry
+awk -i inplace -v d="${new}.${DOMAIN}" -v h="$new" '{print} /127\.0\.0\.1/ && /localhost/ {print "127.0.1.1 " d " " h}' /etc/hosts
 
 if [ -e "/etc/hostname" ]; then
 	sed -i "s/$original/$new/" /etc/hostname
