@@ -290,14 +290,6 @@ else
 	awk -i inplace -v d="${new}.${DOMAIN}" -v h="$new" '{print} /127\.0\.0\.1/ && /localhost/ {print "127.0.1.1 " d " " h}' /etc/hosts
 fi
 
-#run sed twice on /etc/hosts as dual format line contains two entries in one line
-if [ -e "/etc/hosts" ]; then
-	sed -i "s/$original/$new/" /etc/hosts
-fi
-if [ -e "/etc/hosts" ]; then
-	sed -i "s/$original/$new/" /etc/hosts
-fi
-
 if [ -e "/etc/hostname" ]; then
 	sed -i "s/$original/$new/" /etc/hostname
 fi
