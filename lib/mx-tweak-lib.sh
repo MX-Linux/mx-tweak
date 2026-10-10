@@ -272,7 +272,7 @@ echo "$new"
 LOOPBACK=$(ip -o -4 addr show dev lo | awk '{split($4, a, "/"); print a[1]}')
 #delete such lines that do not include localhost
 sed -i "/^${LOOPBACK}/{/localhost/"'!'"d}" hosts
-if [ -z "$(grep 127.0.1.1 /etc/hosts)" ];
+if [ -z "$(grep ^127.0.1.1 /etc/hosts)" ];
 	#write new corrected entry if not present already
 	sudo awk -i inplace -v d="${new}.exmaple.dom" -v h="$new" '{print} /127\.0\.0\.1/ && /localhost/ {print "127.0.1.1 " d " " h}' /etc/hosts
 fi
