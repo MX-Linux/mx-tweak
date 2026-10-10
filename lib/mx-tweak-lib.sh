@@ -268,16 +268,14 @@ local original="$(/usr/bin/hostname)" new="$1"
 echo "Current hostnmae is $original"
 echo "New Hostname is $new"
 
-#cleanup old hostname target on loopback address, typicall 127.0.0.1
-LOOPBACK=$(ip -o -4 addr show dev lo | awk '{split($4, a, "/"); print a[1]}')
-echo "Loopback/Localhost is $LOOPBACK"
-#delete such lines that do not include localhost
-sed -i "/^${LOOPBACK}/{/localhost/"'!'"d}" /etc/hosts
+#process changes in /etc/hosts
+if [ -e "/etc/hosts" ]; then
+	#cleanup old hostname target on loopback address, typicall 127.0.0.1
+	LOOPBACK=$(ip -o -4 addr show dev lo | awk '{split($4, a, "/"); print a[1]}')
+	echo "Loopback/Localhost is $LOOPBACK"
+	#delete such lines that do not include localhost
+	sed -i "/^${LOOPBACK}/{/localhost/"'!'"d}" /etc/hosts
 
-if [ -z "$(grep ^127.0.1.1 /etc/hosts)" ]; then
-	#write new corrected entry if not present already, don't worry about domain name since entry didn't exist, use the default example.dom
-	awk -i inplace -v d="${new}.exmaple.dom" -v h="$new" '{print} /127\.0\.0\.1/ && /localhost/ {print "127.0.1.1 " d " " h}' /etc/hosts
-else
 	#get existing domain name, if any
 	DOMAIN=$(awk '$1=="127.0.1.1" && $2 ~ /\..*\./ {print $2}' /etc/hosts | cut -d'.' -f2-)
 	if [ -z "$DOMAIN" ]; then
@@ -288,14 +286,6 @@ else
 	sed -i '/127.0.1.1/d' /etc/hosts
 	#write new line after loopback entry
 	awk -i inplace -v d="${new}.${DOMAIN}" -v h="$new" '{print} /127\.0\.0\.1/ && /localhost/ {print "127.0.1.1 " d " " h}' /etc/hosts
-fi
-
-#run sed twice on /etc/hosts as dual format line contains two entries in one line
-if [ -e "/etc/hosts" ]; then
-	sed -i "s/$original/$new/" /etc/hosts
-fi
-if [ -e "/etc/hosts" ]; then
-	sed -i "s/$original/$new/" /etc/hosts
 fi
 
 if [ -e "/etc/hostname" ]; then
@@ -309,6 +299,9 @@ fi
 if [ -e "/etc/dhcp/dhclient.conf" ]; then
 	sed -i "s/$original/$new/" /etc/dhcp/dhclient.conf
 fi
+
+#notify system of hostname change
+hostname "$new"
 }
 
 bluetooth_battery(){
