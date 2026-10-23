@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ -n "$@" ]; then
+if [[ -n "$@" ]]; then
     echo "no arguements accepted"
 	exit 2
 fi
