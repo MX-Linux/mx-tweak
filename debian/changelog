@@ -1,3 +1,9 @@
+mx-tweak (26.10.04mx25) mx; urgency=medium
+
+  * fix for check for locked root accounts
+
+ -- Dolphin Oracle <dolphinoracle@gmail.com>  Fri, 23 Oct 2026 19:14:53 -0400
+
 mx-tweak (26.10.03mx25) mx; urgency=medium
 
   * fix setup check for root account vs. sudo for authentication
