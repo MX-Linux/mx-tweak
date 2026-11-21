@@ -68,3 +68,13 @@ include(GNUInstallDirs)
 install(TARGETS mx-tweak
 	RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
+
+include(CTest)
+if(BUILD_TESTING)
+    foreach(option IN ITEMS -h --help --help-all -v --version)
+        add_test(NAME cli${option} COMMAND ${CMAKE_COMMAND} -E env
+            --unset=DISPLAY --unset=WAYLAND_DISPLAY --unset=QT_QPA_PLATFORM
+            $<TARGET_FILE:mx-tweak> ${option})
+        set_tests_properties(cli${option} PROPERTIES TIMEOUT 10)
+    endforeach()
+endif()

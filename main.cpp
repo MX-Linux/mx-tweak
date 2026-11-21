@@ -23,10 +23,13 @@
  **********************************************************************/
 
 #include <unistd.h>
+#include <memory>
+
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QLocale>
 #include <QTranslator>
+
 #include "brightness_small.h"
 #include "tweak.h"
 
@@ -39,15 +42,24 @@ using namespace Qt::Literals::StringLiterals;
 
 int main(int argc, char *argv[])
 {
-    if (qEnvironmentVariableIsEmpty("DISPLAY") && qEnvironmentVariableIsEmpty("WAYLAND_DISPLAY")
-        && qEnvironmentVariableIsEmpty("QT_QPA_PLATFORM")) {
-        qWarning("mx-tweak: no display available (DISPLAY and WAYLAND_DISPLAY are both unset); "
-                "a graphical session is required to run this program.");
-        return EXIT_FAILURE;
+    const QByteArray option = argc == 2 ? QByteArray(argv[1]) : QByteArray();
+    const bool informational = option == "-h" || option == "--help" || option == "--help-all"
+                               || option == "-v" || option == "--version";
+    std::unique_ptr<QCoreApplication> app;
+    if (informational) {
+        app = std::make_unique<QCoreApplication>(argc, argv);
+    } else {
+        if (qEnvironmentVariableIsEmpty("DISPLAY") && qEnvironmentVariableIsEmpty("WAYLAND_DISPLAY")
+            && qEnvironmentVariableIsEmpty("QT_QPA_PLATFORM")) {
+            qWarning("mx-tweak: no display available (DISPLAY and WAYLAND_DISPLAY are both unset); "
+                    "a graphical session is required to run this program.");
+            return EXIT_FAILURE;
+        }
+
+        app = std::make_unique<QApplication>(argc, argv);
     }
 
-    QApplication a(argc, argv);
-    a.setApplicationVersion(QStringLiteral(VERSION));
+    app->setApplicationVersion(QStringLiteral(VERSION));
 
     QTranslator qtTran;
     (void)qtTran.load("qt_"_L1 + QLocale::system().name());
@@ -69,7 +81,7 @@ int main(int argc, char *argv[])
     parser.addOption({u"theme"_s, QObject::tr("Opens theme tab directly.  Valid on Xfce & Fluxbox desktops")});
     parser.addOption({u"verbose"_s, QObject::tr("Display additional debug output in console")});
     parser.addOption({u"other"_s, QObject::tr("Opens Other tab directly.  Valid on all desktops")});
-    parser.process(a);
+    parser.process(*app);
 
 
     if (parser.isSet(u"tray"_s) || parser.isSet(u"traydialog"_s)){
